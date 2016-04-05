@@ -1,4 +1,4 @@
-package steelzak;
+package com.steelzack.b2b2java8.main;
 
 import org.apache.camel.main.Main;
 
