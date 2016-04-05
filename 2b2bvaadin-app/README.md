@@ -1,3 +1,16 @@
+# 2B2B Vaadin app
+
+## This was mostly an automated generation.
+
+* Archetype Reference from (https://vaadin.com/maven):
+
+
+```
+$ mvn -B archetype:generate -DarchetypeGroupId=com.vaadin -DarchetypeArtifactId=vaadin-archetype-application -DarchetypeVersion=7.6.4 -DgroupId=org.test -DartifactId=vaadin-app -Dversion=1.0-SNAPSHOT
+$ cd vaadin-app
+$ mvn package jetty:run
+```
+
 vaadin-app
 ==============
 
