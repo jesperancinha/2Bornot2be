@@ -40,4 +40,15 @@ public class Collections1Test {
         assertEquals("Pertinent",result1.get(1));
         assertEquals(2, result1.size());
     }
+
+    @Test
+    public void mapToUppercaseOnlyFiletr() throws Exception {
+        final Collections1 collections1 = new Collections1(testArrayOfStrings);
+
+        List<String> result1 = collections1.mapToUppercaseOnlyFiletr("er");
+
+        assertEquals("DevelopERs DevelopERs",result1.get(4));
+        assertEquals("PERtinent",result1.get(6));
+        assertEquals(7, result1.size());
+    }
 }

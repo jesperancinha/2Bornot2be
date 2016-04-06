@@ -20,9 +20,13 @@ public class Collections1 {
         return stream.filter(item -> item.startsWith(filter)).collect(Collectors.toList());
     }
 
-    protected  List<String> getStringsThatContain(String filter)
-    {
+    protected List<String> getStringsThatContain(String filter) {
         Stream<String> stream = testArrayOfStrings.stream();
-        return stream.filter( item -> item.contains(filter)).collect(Collectors.toList());
+        return stream.filter(item -> item.contains(filter)).collect(Collectors.toList());
+    }
+
+    protected List<String> mapToUppercaseOnlyFiletr(String filter) {
+        Stream<String> stream = testArrayOfStrings.stream();
+        return stream.map(item -> item.replace(filter, filter.toUpperCase())).collect(Collectors.toList());
     }
 }
