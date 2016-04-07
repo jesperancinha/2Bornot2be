@@ -16,6 +16,7 @@
         <hamcrest.library>1.3</hamcrest.library>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <assert.j>3.4.0</assert.j>
     </properties>
 
     <dependencies>
@@ -54,6 +55,12 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-library</artifactId>
             <version>${hamcrest.library}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assert.j}</version>
         </dependency>
 
     </dependencies>
