@@ -14,5 +14,6 @@
         <module>2b2bpostgres</module>
         <module>2b2bvaadin-app</module>
         <module>2b2bjava8</module>
+        <module>2b2bdesignpatterns</module>
     </modules>
 </project>
