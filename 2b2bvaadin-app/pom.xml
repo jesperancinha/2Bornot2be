@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>vaadin-app</artifactId>
+	<artifactId>2b2bvaadin-app</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>vaadin-app</name>
+	<name>2b2bvaadin-app</name>
 
 	<properties>
 		<vaadin.version>7.6.4</vaadin.version>
