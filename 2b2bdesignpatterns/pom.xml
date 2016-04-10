@@ -12,5 +12,31 @@
     <groupId>steelzack</groupId>
     <artifactId>2b2bdesignpatterns</artifactId>
 
+    <properties>
+        <maven.plugin>3.5.1</maven.plugin>
+        <java.version>1.8</java.version>
+        <junit>4.12</junit>
+    </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.plugin}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit}</version>
+        </dependency>
+    </dependencies>
 </project>
