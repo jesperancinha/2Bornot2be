@@ -1,8 +1,8 @@
-package com.steelzack.b2b2designpatterns.facade.maker;
+package com.steelzack.b2b2designpatterns.facadepattern.maker;
 
-import com.steelzack.b2b2designpatterns.facade.entities.Cancer;
-import com.steelzack.b2b2designpatterns.facade.entities.Pegasus;
-import com.steelzack.b2b2designpatterns.facade.entities.Sagittarius;
+import com.steelzack.b2b2designpatterns.facadepattern.entities.Cancer;
+import com.steelzack.b2b2designpatterns.facadepattern.entities.Pegasus;
+import com.steelzack.b2b2designpatterns.facadepattern.entities.Sagittarius;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

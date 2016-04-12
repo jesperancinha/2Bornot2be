@@ -1,4 +1,4 @@
-package com.steelzack.b2b2designpatterns.facade.entities;
+package com.steelzack.b2b2designpatterns.facadepattern.entities;
 
 import java.util.logging.Logger;
 
