@@ -9,10 +9,15 @@ It will use a standar front end, Angular JS, but for the backend the idea is to 
 
 1. **2b2bhadoop** - Tests for big data access
 2. **2b2postgres** - Tests for postgres access
-3. **2b2vaadin-app** - Tests for archetype web-app for vaadin
+3. **2b2bvaadin-app** - Tests for archetype web-app for vaadin
+4. **2b2bjava8** - Tests for the Java 8 API
+5. **2b2bpostgres** - Tests for PostgreSQL
+6. **2b2bdesignpatterns** - Tests Design Patterns in java 8
 
 ## References:
 
 * http://www.fitnesse.org/FrontPage
 
 * https://cucumber.io/
+
+* http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm
