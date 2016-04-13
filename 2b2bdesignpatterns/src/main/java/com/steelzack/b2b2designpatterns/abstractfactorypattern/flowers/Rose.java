@@ -1,6 +1,6 @@
-package com.steelzack.b2b2designpatterns.abstractfactorydesignpattern.flowers;
+package com.steelzack.b2b2designpatterns.abstractfactorypattern.flowers;
 
-import com.steelzack.b2b2designpatterns.abstractfactorydesignpattern.entities.FlowerImpl;
+import com.steelzack.b2b2designpatterns.abstractfactorypattern.entities.FlowerImpl;
 
 /**
  * Created by joaofilipesabinoesperancinha on 10-04-16.
