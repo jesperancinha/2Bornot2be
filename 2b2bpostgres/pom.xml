@@ -7,6 +7,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>2b2bpostgres Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,6 +16,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
     <finalName>2b2bpostgres</finalName>
   </build>
