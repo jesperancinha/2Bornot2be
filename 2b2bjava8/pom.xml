@@ -19,6 +19,7 @@
         <assert.j>3.4.0</assert.j>
         <lombok>1.16.8</lombok>
         <java.version>1.8</java.version>
+        <junit>4.12</junit>
     </properties>
 
     <dependencies>
@@ -67,7 +68,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

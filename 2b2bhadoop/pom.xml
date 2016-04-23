@@ -3,15 +3,8 @@
    <groupId>steelzack</groupId>
    <version>1.0</version>
    <artifactId>2b2bhadoop</artifactId>
-   <packaging>pom</packaging>
+   <packaging>jar</packaging>
    <name>project</name>
-   <modules>
-      <module>projects</module>
-      <module>primary-source</module>
-      <module>servlets</module>
-      <module>ejbs</module>
-      <module>ear</module>
-   </modules>
    <build>
       <pluginManagement>
          <plugins>

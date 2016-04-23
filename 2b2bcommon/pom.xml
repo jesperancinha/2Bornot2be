@@ -11,6 +11,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <junit>4.12</junit>
+        <hamcrest.library>1.3</hamcrest.library>
     </properties>
 
     <build>
@@ -27,5 +29,22 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Hamcrest library -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${hamcrest.library}</version>
+        </dependency>
+    </dependencies>
 
 </project>

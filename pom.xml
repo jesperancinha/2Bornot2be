@@ -17,4 +17,24 @@
         <module>2b2bdesignpatterns</module>
         <module>2b2bcommon</module>
     </modules>
+
+    <properties>
+        <maven.plugin>3.5.1</maven.plugin>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.plugin}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
