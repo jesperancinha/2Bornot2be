@@ -17,6 +17,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <assert.j>3.4.0</assert.j>
+        <lombok>1.16.8</lombok>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
@@ -68,20 +70,28 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok}</version>
+        </dependency>
+        <dependency>
+            <groupId>steelzack</groupId>
+            <artifactId>2b2bcommon</artifactId>
+            <version>LATEST</version>
+        </dependency>
     </dependencies>
 
     <build>
         <defaultGoal>install</defaultGoal>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>

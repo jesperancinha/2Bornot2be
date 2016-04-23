@@ -1,5 +1,6 @@
 package com.steelzack.b2b2designpatterns.chainofresponsibility;
 
+import com.steelzack.tests.logs.LoggerInfoTest;
 import org.junit.Test;
 
 import static com.steelzack.b2b2designpatterns.chainofresponsibility.ArmadaAbstract.FORMATION1;
@@ -16,6 +17,11 @@ public class ArmadaAbstractTest extends LoggerInfoTest {
     private final ArmadaAbstract arado = new Arado(FORMATION1);
     private final ArmadaAbstract bell = new Bell(FORMATION3);
     private final ArmadaAbstract caproni = new Caproni(FORMATION6);
+
+    ArmadaAbstractTest()
+    {
+        super(Arado.class, Bell.class, Caproni.class);
+    }
 
     @Test
     public void testChainOfResponsibilityFull() {
