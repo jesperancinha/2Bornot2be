@@ -17,7 +17,7 @@ public abstract class ArmadaAbstract {
     }
 
     public void issueFighters(int issuedLevel, String ref) {
-        if (issuedLevel <= this.chainLevel) {
+        if (this.chainLevel <= issuedLevel) {
             makeFightersExitHanger(ref);
         }
         if (nextFormation != null) {

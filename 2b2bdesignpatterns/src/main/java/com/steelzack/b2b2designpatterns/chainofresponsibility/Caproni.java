@@ -1,15 +1,16 @@
 package com.steelzack.b2b2designpatterns.chainofresponsibility;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.text.MessageFormat;
-import java.util.logging.Logger;
 
 /**
  * Created by joaofilipesabinoesperancinha on 23-04-16.
  */
 public class Caproni extends ArmadaAbstract {
-    final static Logger logger = Logger.getLogger(Caproni.class.getName());
-
-    public Caproni(int chainLevel){
+    final static Logger logger = LoggerFactory.getLogger(Caproni.class);
+    public Caproni(int chainLevel) {
         this.chainLevel = chainLevel;
     }
 
