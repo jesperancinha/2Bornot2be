@@ -18,3 +18,5 @@ This submodule intends to explore Java8
 * http://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
 
 * http://www.tutorialspoint.com/java8/java8_functional_interfaces.htm
+
+* http://jscience.org/api/org/jscience/physics/amount/Constants.html
