@@ -20,6 +20,7 @@
         <lombok>1.16.8</lombok>
         <java.version>1.8</java.version>
         <junit>4.12</junit>
+        <jscience>4.3.1</jscience>
     </properties>
 
     <dependencies>
@@ -71,15 +72,25 @@
             <version>${junit}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok}</version>
         </dependency>
+
+        <!-- JScience -->
+        <dependency>
+            <groupId>org.jscience</groupId>
+            <artifactId>jscience</artifactId>
+            <version>${jscience}</version>
+        </dependency>
+
         <dependency>
             <groupId>steelzack</groupId>
             <artifactId>2b2bcommon</artifactId>
-            <version>LATEST</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
