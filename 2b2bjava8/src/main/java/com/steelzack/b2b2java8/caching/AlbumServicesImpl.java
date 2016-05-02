@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository("albumService")
-public class AlbumServiceImpl implements AlbumService {
+public class AlbumServicesImpl implements AlbumService {
 
     @Cacheable(value="albumCache", key="#album")
     public Album findByAlbum(String album) {
