@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
  * Created by joaofilipesabinoesperancinha on 02-05-16.
  */
 
-@Repository("videoService")
-public class VideoServiceImpl implements VideoService{
+@Repository("albumService")
+public class AlbumServiceImpl implements AlbumService {
 
-    @Cacheable(value="videoCache", key="#album")
+    @Cacheable(value="albumCache", key="#album")
     public Album findByAlbum(String album) {
         try {
             Thread.sleep(5000L);
