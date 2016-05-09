@@ -1,11 +1,11 @@
 package com.steelzack.b2b2designpatterns.chainofresponsibility;
 
-import com.steelzack.tests.logs.LoggerInfoTest;
-import org.junit.Test;
-
 import static com.steelzack.b2b2designpatterns.chainofresponsibility.ArmadaAbstract.FORMATION1;
 import static com.steelzack.b2b2designpatterns.chainofresponsibility.ArmadaAbstract.FORMATION3;
 import static com.steelzack.b2b2designpatterns.chainofresponsibility.ArmadaAbstract.FORMATION6;
+
+import com.steelzack.tests.logs.LoggerInfoTest;
+import org.junit.Test;
 
 /**
  * Created by joaofilipesabinoesperancinha on 23-04-16.
@@ -15,7 +15,7 @@ public class ArmadaAbstractTest extends LoggerInfoTest {
     private final ArmadaAbstract bell = new Bell(FORMATION3);
     private final ArmadaAbstract caproni = new Caproni(FORMATION6);
 
-    ArmadaAbstractTest()
+    public ArmadaAbstractTest()
     {
         super(Arado.class, Bell.class, Caproni.class);
     }
