@@ -19,6 +19,7 @@
         <assert.j>3.4.0</assert.j>
         <lombok>1.16.8</lombok>
         <java.version>1.8</java.version>
+        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
         <junit>4.12</junit>
         <jscience>4.3.1</jscience>
         <spring.version>4.2.5.RELEASE</spring.version>
@@ -137,7 +138,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
