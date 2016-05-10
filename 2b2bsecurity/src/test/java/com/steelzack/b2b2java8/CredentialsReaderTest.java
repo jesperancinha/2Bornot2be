@@ -3,7 +3,6 @@ package com.steelzack.b2b2java8;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
 
 import java.io.InputStream;
 import java.security.cert.Certificate;
@@ -39,16 +38,11 @@ public class CredentialsReaderTest {
         assertThat(certificateList.size(), equalTo(1));
     }
 
-    @Test
+    @Test(expected = Exception.class)
     public void readAllCredentials_nullPassowrd() throws Exception {
         final InputStream fileInputStreamWithOneKeyStore = getClass().getResourceAsStream("/keyStore_nopass.pfx");
         final CredentialsReader credentialsReader = new CredentialsReader();
-        try {
             credentialsReader.readAllCredentials(fileInputStreamWithOneKeyStore, null);
-            fail("Should have thrown!");
-        } catch (Exception e) {
-
-        }
     }
 
 }
