@@ -13,6 +13,17 @@ This submodule intends to explore Java8
 * lambdas
 * repeatable annotations
 
+# Special project details
+
+## I. fileaccess
+
+There is a unt test for this project. Run it and check the timestamps
+
+### Windows:
+
+```
+> fsutil behavior set DisableLastAccess 0
+```
 ## References
 
 * http://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
