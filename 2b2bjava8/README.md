@@ -20,3 +20,5 @@ This submodule intends to explore Java8
 * http://www.tutorialspoint.com/java8/java8_functional_interfaces.htm
 
 * http://jscience.org/api/org/jscience/physics/amount/Constants.html
+
+* https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html

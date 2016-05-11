@@ -10,11 +10,10 @@ import java.io.StringWriter;
 public class SystemOut {
 
     public ByteArrayOutputStream testSystemOut(){
-        StringWriter stringWriter = new StringWriter();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        final PrintStream out = new PrintStream(ps);
-        System.setOut(out);
-        return baos;
+        final StringWriter stringWriter = new StringWriter();
+        final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        final PrintStream printStream = new PrintStream(byteArrayOutputStream);
+        System.setOut(printStream);
+        return byteArrayOutputStream;
     }
 }
