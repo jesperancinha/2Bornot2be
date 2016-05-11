@@ -2,7 +2,6 @@ package com.steelzack.b2b2designpatterns.flyweightpattern.entities;
 
 import java.awt.*;
 import java.text.MessageFormat;
-import java.text.NumberFormat;
 import java.util.Locale;
 
 /**
@@ -33,15 +32,14 @@ public class Car implements FourWheels {
     }
 
     @Override
-    public String rideTheCar()
-    {
-        MessageFormat messageFormat = new MessageFormat( "Car {0} is riding up to  {1} km/h with a fine {2} color tone", Locale.GERMANY);
-        return messageFormat.format(//
-               new Object[]{
-                       knownName, //
-                       maxSpeed, //
-                       NumberFormat.getNumberInstance().format(color.getRGB()) //
-               }
+    public String rideTheCar() {
+        MessageFormat messageFormat = new MessageFormat("Car {0} is riding up to  {1} km/h with a fine {2} color tone", Locale.GERMANY);
+        return messageFormat.format(
+                new Object[]{
+                        knownName,
+                        maxSpeed,
+                        color.getRGB()
+                }
         );
     }
 }
