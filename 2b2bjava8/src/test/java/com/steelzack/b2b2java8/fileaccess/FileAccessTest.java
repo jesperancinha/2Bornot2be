@@ -42,6 +42,6 @@ public class FileAccessTest {
     public void readFile_JustRun() throws Exception {
         final FileAccess fileAccess = new FileAccess();
 
-        fileAccess.checkIfLastAccessChangesForVariable(new File(TEST_ABSOLUTE_PATH_FILE_ACCESS));
+        fileAccess.checkIfLastAccessChangesForVariable(TEST_ABSOLUTE_PATH_FILE_ACCESS);
     }
 }
