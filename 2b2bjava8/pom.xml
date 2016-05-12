@@ -25,6 +25,7 @@
         <spring.version>4.2.5.RELEASE</spring.version>
         <mockito.version>1.9.5</mockito.version>
         <ehcache.version>2.9.1</ehcache.version>
+        <commons.lang>3.4</commons.lang>
     </properties>
 
     <dependencies>
@@ -135,6 +136,13 @@
             <groupId>org.kohsuke.args4j</groupId>
             <artifactId>args4j-maven-plugin</artifactId>
             <version>2.33</version>
+        </dependency>
+
+        <!-- Commons Lang -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3}</version>
         </dependency>
 
     </dependencies>
