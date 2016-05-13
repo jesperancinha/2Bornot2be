@@ -30,4 +30,5 @@ public class Date {
     public static LocalDate getStartOfCurrentYearLastWeek(LocalDate currentDate) {
         return currentDate.with(TemporalAdjusters.lastDayOfYear()).with(TemporalAdjusters.previousOrSame(MONDAY));
     }
+
 }
