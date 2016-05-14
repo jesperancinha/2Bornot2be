@@ -14,7 +14,7 @@ import org.springframework.core.io.ClassPathResource;
  */
 @Configuration
 @EnableCaching
-@ComponentScan({"com.steelzack.b2b2java8.*"})
+@ComponentScan({"com.steelzack.b2b2java8.caching"})
 public class ApplicationConfiguration {
 
     @Bean
