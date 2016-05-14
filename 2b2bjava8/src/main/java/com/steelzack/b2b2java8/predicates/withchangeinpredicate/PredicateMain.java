@@ -2,20 +2,21 @@ package com.steelzack.b2b2java8.predicates.withchangeinpredicate;
 
 import com.steelzack.b2b2java8.predicates.PredicateInterface;
 import com.steelzack.b2b2java8.predicates.Something;
-import org.springframework.stereotype.Component;
+import lombok.Builder;
 
-import java.util.HashSet;
 import java.util.Set;
 
 /**
  * Created by joao on 13-5-16.
  */
-@Component
-public class PredicateMain  implements PredicateInterface {
-    final private SomethingService somethingService = new SomethingService();
+@Builder
+public class PredicateMain implements PredicateInterface {
 
-    final private Set<String> recipients = new HashSet<>();
-    final private Set<String> doneWith = new HashSet<>();
+    private final SomethingService somethingService = new SomethingService();
+
+    private Set<String> recipients;
+
+    private Set<String> doneWith;
 
     @Override
     public void doThePredicateMethod(Iterable<Something> records) {
