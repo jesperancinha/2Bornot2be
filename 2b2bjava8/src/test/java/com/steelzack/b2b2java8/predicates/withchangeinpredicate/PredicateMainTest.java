@@ -56,6 +56,7 @@ public class PredicateMainTest {
         assertThat(recipients.size(), is(3));
         doneWith.stream().forEach(s -> assertThat(s, equalTo(stackTestName.pop())));
         recipients.stream().forEach(s -> assertThat(stackTestRecipients, hasItem(s)));
+
     }
 
 }
