@@ -38,6 +38,10 @@ public class DetailControllerIntTest {
     @Before
     public void setUp() {
         detailRepository.deleteAll();
+        addOneElement();
+    }
+
+    private void addOneElement() {
         final DetailEntity detailEntity = DetailEntity.builder().id(1).name(NAME_1).city(CITY_1).build();
         detailRepository.save(detailEntity);
     }
@@ -47,6 +51,17 @@ public class DetailControllerIntTest {
         final Detail result = detailController.findDetailById(1);
         assertThat(result.getName(), equalTo(NAME_1));
         assertThat(result.getCity(), nullValue());
+
+        detailRepository.deleteAll();
+
+        DetailEntity checkForNone = detailRepository.findOne(1);
+        assertThat(checkForNone, nullValue());
+
+        final Detail resultCached = detailController.findDetailById(1);
+        assertThat(resultCached.getName(), equalTo(NAME_1));
+        assertThat(resultCached.getCity(), nullValue());
+
+        addOneElement();
 
         DetailEntity result2 = detailRepository.findOne(1);
         assertThat(result2.getName(), equalTo(NAME_1));
