@@ -3,6 +3,10 @@ package com.steelzack.b2b2bwebapp.config;
 import com.steelzack.b2b2bwebapp.service.DetailController;
 import com.steelzack.b2b2bwebapp.service.DetailService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCache;
+import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.util.Arrays;
 import java.util.Properties;
 
 /**
@@ -31,9 +36,18 @@ import java.util.Properties;
 @Configuration
 @EnableJpaRepositories(basePackages = "com.steelzack.b2b2bwebapp")
 @EnableTransactionManagement
+@EnableCaching
 @PropertySource({"classpath:config.properties", "classpath:db.properties"})
 @ComponentScan
 public class DetailConfig {
+
+    @Bean
+    CacheManager cacheManager() {
+        SimpleCacheManager cacheManager = new SimpleCacheManager();
+        cacheManager.setCaches(Arrays.asList(new ConcurrentMapCache("detailCache")));
+        return cacheManager;
+    }
+
 
     @Bean
     public DetailService detailService() {
@@ -75,7 +89,6 @@ public class DetailConfig {
     private String useSecondLevelCache;
 
 
-
     @Bean
     public EntityManagerFactory entityManagerFactory() {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -87,7 +100,9 @@ public class DetailConfig {
         final Properties connectionProperties = new Properties();
         connectionProperties.setProperty("hibernate.connection.autocommit", "true");
         connectionProperties.setProperty("hibernate.hbm2ddl.auto", "create");
-        connectionProperties.setProperty("hibernate.cache.region.factory_class", "net.sf.ehcache.hibernate.EhCacheRegionFactory");
+        connectionProperties.setProperty("hibernate.cache.provider_class", "org.hibernate.cache.EhCacheProvider");
+        connectionProperties.setProperty("hibernate.cache.use_structured_entries", "true");
+        connectionProperties.setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory");
         connectionProperties.setProperty("hibernate.cache.use_second_level_cache", this.useSecondLevelCache);
         factory.setJpaProperties(connectionProperties);
         factory.afterPropertiesSet();

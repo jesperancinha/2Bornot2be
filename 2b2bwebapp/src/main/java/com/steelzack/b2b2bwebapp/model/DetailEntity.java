@@ -21,8 +21,8 @@ import javax.persistence.Transient;
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
-@Cacheable
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@Cacheable("detailCache")
+@Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL)
 @Table(name = "detail", catalog = "test", schema = "public")
 public class DetailEntity {
 
