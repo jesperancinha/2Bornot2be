@@ -24,4 +24,5 @@ public class DetailController {
         return DetailConverter.toDetail(detailService.findBetailById(id));
 
     }
+
 }
