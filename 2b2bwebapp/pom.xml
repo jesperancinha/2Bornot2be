@@ -133,13 +133,13 @@
                 </configuration>
             </plugin>
 
-<plugin>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>2.6</version>
-    <configuration>
-        <packagingExcludes>WEB-INF/classes/com/steelzack/b2b2bwebapp/excludefolder/**</packagingExcludes>
-    </configuration>
-</plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <packagingExcludes>WEB-INF/classes/com/steelzack/b2b2bwebapp/excludefolder/**,WEB-INF/classes/com/steelzack/b2b2bwebapp/excludefolder2/**</packagingExcludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
