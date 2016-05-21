@@ -3,11 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>steelzack</groupId>
+    <parent>
+        <groupId>steelzack</groupId>
+        <artifactId>2Bornot2be</artifactId>
+        <relativePath>../pom.xml</relativePath>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <artifactId>2b2bcommon</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -30,6 +33,24 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>http://maven.aspose.com/artifactory/simple/ext-release-local/</url>
+        </repository>
+        <repository>
+            <id>com.springsource.repository.bundles.release</id>
+            <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+            <url>http://repository.springsource.com/maven/bundles/release</url>
+        </repository>
+        <repository>
+            <id>com.springsource.repository.bundles.external</id>
+            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+            <url>http://repository.springsource.com/maven/bundles/external</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- JUnit -->
         <dependency>
@@ -45,6 +66,12 @@
             <artifactId>hamcrest-library</artifactId>
             <version>${hamcrest.library}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-pdf</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
