@@ -118,7 +118,6 @@
             <version>${hibernate-entitymanager.version}</version>
         </dependency>
 
-
     </dependencies>
     <build>
         <finalName>2b2bwebapp</finalName>
@@ -133,7 +132,6 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>${maven-war-plugin.version}</version>
