@@ -16,6 +16,7 @@
         <module>2b2bjava8</module>
         <module>2b2bdesignpatterns</module>
         <module>2b2bwebapp</module>
+        <module>2b2bspring-boot</module>
     </modules>
 
     <properties>
