@@ -1,21 +1,35 @@
 package com.steelzack.b2b2springboot.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * Created by joao on 24-5-16.
  */
 
 @Getter
+@Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class SpaceRocket {
+
+    @Id
+    private Integer id;
 
     private String name;
 
-    private String length;
+    // In meters
+    private double height;
 
-    private String throttleType;
+    private String engineType;
 
-    private String engineNumber;
+    // In Kg
+    private double payLoad;
 
-    private int nThrusters;
 }
