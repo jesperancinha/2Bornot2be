@@ -36,8 +36,8 @@ public class FullSetRetrieval2WithLambdaMethodTest {
     public void getAllLeaves2Parallel() throws Exception {
 
         final FullSetRetrieval2WithLambdaMethod.TreeNode<String> rootNode = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("ROOT");
-        final FullSetRetrieval2WithLambdaMethod.TreeNode<String> treeNode = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("ROOT");
-        final FullSetRetrieval2WithLambdaMethod.TreeNode<String> treeNode2 = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("ROOT");
+        final FullSetRetrieval2WithLambdaMethod.TreeNode<String> treeNode = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("CHILD1-0");
+        final FullSetRetrieval2WithLambdaMethod.TreeNode<String> treeNode2 = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("CHILD2-0");
         rootNode.setChildrenStrem(Arrays.asList(treeNode, treeNode2).stream());
         FullSetRetrieval2WithLambdaMethod.TreeNode<String> currentTreeNode = treeNode;
         FullSetRetrieval2WithLambdaMethod.TreeNode<String> currentTreeNode2 = treeNode2;
@@ -45,8 +45,8 @@ public class FullSetRetrieval2WithLambdaMethodTest {
         add10Leaves(currentTreeNode2, 0);
 
         for (int i = 1; i < 100; i++) {
-            final FullSetRetrieval2WithLambdaMethod.TreeNode<String> newTeeNode = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("CHILD" + i);
-            final FullSetRetrieval2WithLambdaMethod.TreeNode<String> newTeeNode2 = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("CHILD" + i);
+            final FullSetRetrieval2WithLambdaMethod.TreeNode<String> newTeeNode = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("CHILD1-" + i);
+            final FullSetRetrieval2WithLambdaMethod.TreeNode<String> newTeeNode2 = new FullSetRetrieval2WithLambdaMethod.TreeNode<>("CHILD2-" + i);
             currentTreeNode.setChildrenStrem(Stream.of(newTeeNode));
             currentTreeNode2.setChildrenStrem(Stream.of(newTeeNode2));
             add10Leaves(currentTreeNode, i);
