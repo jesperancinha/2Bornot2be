@@ -6,9 +6,9 @@
         <artifactId>2Bornot2be</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>2b2webapp-jee</artifactId>
+    <artifactId>2b2bwebapp-jee</artifactId>
     <packaging>war</packaging>
-    <name>2b2webapp-jee Maven Webapp</name>
+    <name>2b2bwebapp-jee Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <properties>
