@@ -17,8 +17,8 @@ It will use a standar front end, Angular JS, but for the backend the idea is to 
 5. **2b2bjava8** - Tests for the Java 8 API
 6. **2b2bpostgres** - Tests for PostgreSQL
 7. **2b2bdesignpatterns** - Tests Design Patterns in java 8
-8. **2b2bwebapp** - Tests for Spring framework 
-
+8. **2b2bwebapp** - Tests for Spring framework
+9. **2b2bwebapp-jee** - Tests for J2EE framework
 ## Know how:
 
 1. This project uses Lombok libraries. These provide extra annotations which can only be read through a plugin installation.
