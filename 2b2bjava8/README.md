@@ -19,6 +19,10 @@ This submodule intends to explore Java8
 
 There is a unt test for this project. Run it and check the timestamps
 
+## Troubleshooting
+
+* This experimental project still isn't working with java9 because of it's dependency with the java toolkit
+
 ### Windows:
 
 ```
