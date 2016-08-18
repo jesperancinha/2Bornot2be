@@ -3,21 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>steelzack</groupId>
-    <artifactId>2Bornot2be</artifactId>
+    <groupId>jesper</groupId>
+    <artifactId>java-test-drives</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>2b2bcommon</module>
-        <module>2b2bsecurity</module>
-        <module>2b2bhadoop</module>
-        <module>2b2bpostgres</module>
-        <module>2b2bjava8</module>
-        <module>2b2bdesignpatterns</module>
-        <module>2b2bwebapp</module>
-        <module>2b2bspring-boot</module>
-        <module>2b2bwebapp-jee</module>
+        <module>java-test-drives-commons</module>
+        <module>java-test-drives-design-patterns</module>
+        <module>java-test-drives-hadoop</module>
+        <module>java-test-drives-java-8</module>
+        <module>java-test-drives-postgres</module>
+        <module>java-test-drives-security</module>
+        <module>java-test-drives-spring-boot</module>
+        <module>java-test-drives-webapp</module>
+        <module>java-test-drives-webapp-jee</module>
     </modules>
 
     <properties>

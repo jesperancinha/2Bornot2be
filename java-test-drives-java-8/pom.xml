@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>steelzack</groupId>
-        <artifactId>2Bornot2be</artifactId>
+        <groupId>jesper</groupId>
+        <artifactId>java-test-drives</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>2b2bjava8</artifactId>
+    <artifactId>java-test-drives-java-8</artifactId>
     <packaging>jar</packaging>
 
     <properties>
