@@ -25,7 +25,7 @@
         <aspose-pdf.version>11.5.0</aspose-pdf.version>
         <lombok.version>1.16.8</lombok.version>
         <spring-data-releasetrain.version>Gosling-RELEASE</spring-data-releasetrain.version>
-        <spring-boot-starter-data-jpa.version>1.5.0.RELEASE</spring-boot-starter-data-jpa.version>
+        <spring-boot-starter-data-jpa.version>2.0.3.RELEASE</spring-boot-starter-data-jpa.version>
         <h2.version>1.4.191</h2.version>
         <junit.version>4.12</junit.version>
         <spring.test.version>4.2.6.RELEASE</spring.test.version>
