@@ -9,13 +9,8 @@ It will use a standar front end, Angular JS, but for the backend the idea is to 
 ## Contents:
 
 1. **java-test-drives-common** - Just a bundle of common libraries
-2. **java-test-drives-hadoop** - Tests for big data access
-3. **java-test-drives-postgres** - Tests for postgres access
-4. **java-test-drivesvaadin-app** - Tests for archetype web-app for vaadin (temporarily removed)
 5. **java-test-drives-java-8** - Tests for the Java 8 API
-6. **java-test-drives-postgres** - Tests for PostgreSQL
 7. **java-test-drives-designpatterns** - Tests Design Patterns in java 8
-8. **java-test-drives-webapp** - Tests for Spring framework
 9. **java-test-drives-webapp-jee** - Tests for J2EE framework
 
 ## Know how:
@@ -53,6 +48,9 @@ limitations under the License.
 ## About me
 
 -   [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=joaofilipesabinoesperancinha.nl&color=informational)](http://joaofilipesabinoesperancinha.nl)
+<a href="https://dev.to/jofisaes">
+  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="João Esperancinha's DEV Profile" height="30" width="30">
+</a>
 
 -   [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=jesperancinha&style=social)](https://github.com/jesperancinha)
 
