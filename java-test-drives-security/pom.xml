@@ -14,8 +14,6 @@
 
     <properties>
         <commons.codec>1.10</commons.codec>
-        <junit>4.12</junit>
-        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
     </properties>
 
     <dependencies>
@@ -42,10 +40,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>${maven-compiler-plugin.source}</source>
+                    <target>${maven-compiler-plugin.target}</target>
                 </configuration>
             </plugin>
         </plugins>

@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <assert.j.core.version>3.4.0</assert.j.core.version>
+        <assert.j.core.version>3.13.2</assert.j.core.version>
         <lombok>1.18.10</lombok>
         <jscience>4.3.1</jscience>
         <spring.version>4.2.5.RELEASE</spring.version>

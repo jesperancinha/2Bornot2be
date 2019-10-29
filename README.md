@@ -2,14 +2,12 @@
 
 ---
 
-This project is only about experimented Java based technologies.
-
-It will use a standar front end, Angular JS, but for the backend the idea is to try different technologies ranging from Oracle, to Hadoop, Puppet, Wildfly, Jetty, Maven, Spring and any IoT based in Java.
+Java 11 Prep project
 
 ## Contents:
 
 1. **java-test-drives-common** - Just a bundle of common libraries
-5. **java-test-drives-java-8** - Tests for the Java 8 API
+5. **java-test-drives-java-11** - Tests for the Java 11 SDK
 7. **java-test-drives-designpatterns** - Tests Design Patterns in java 8
 9. **java-test-drives-webapp-jee** - Tests for J2EE framework
 

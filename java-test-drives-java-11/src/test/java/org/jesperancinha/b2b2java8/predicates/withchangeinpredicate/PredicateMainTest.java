@@ -11,8 +11,6 @@ import java.util.Stack;
 import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
-import static org.hamcrest.CoreMatchers.hasItem;
-import static org.hamcrest.core.Is.is;
 
 /**
  * Created by joao on 14-5-16.
