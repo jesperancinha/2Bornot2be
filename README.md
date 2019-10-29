@@ -14,31 +14,26 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
 [![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
 
-
 ---
+
+## Description
 
 Java 11 Prep project
 
 ## Contents:
 
-1. **java-test-drives-common** - Just a bundle of common libraries
-5. **java-test-drives-java-11** - Tests for the Java 11 SDK
-7. **java-test-drives-designpatterns** - Tests Design Patterns in java 8
-9. **java-test-drives-webapp-jee** - Tests for J2EE framework
-
-## Know how:
-
-* To run the unit tests, the application context runs with a database access. This is a temporary situation.
-
-> You need to grate an empty postgres database with a postgres user with a postgres password.
+-   java-test-drives-common - Just a bundle of common libraries
+-   java-test-drives-java-11 - Tests for the Java 11 SDK
+-   java-test-drives-designpatterns - Tests Design Patterns in java 8
+-   java-test-drives-webapp-jee - Tests for J2EE framework
 
 ## References:
 
-* http://www.fitnesse.org/FrontPage
+-   [Fitnesse](http://www.fitnesse.org/FrontPage)
 
-* https://cucumber.io/
+-   [Cucumber](https://cucumber.io/)
 
-* http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm
+-   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
 
 ## License
 
