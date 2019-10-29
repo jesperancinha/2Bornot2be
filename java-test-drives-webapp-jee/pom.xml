@@ -19,7 +19,7 @@
         <jersey-container-servlet.version>2.23</jersey-container-servlet.version>
         <json.version>20160212</json.version>
         <jetty-maven-plugin.version>9.3.9.v20160517</jetty-maven-plugin.version>
-        <weld-se-core.version>2.3.4.Final</weld-se-core.version>
+        <weld-se-core.version>2.4.0.Final</weld-se-core.version>
         <jersey-media-moxy.version>2.15</jersey-media-moxy.version>
         <genson.version>1.4</genson.version>
     </properties>
