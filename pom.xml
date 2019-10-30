@@ -10,7 +10,6 @@
     <modules>
         <module>java-test-drives-commons</module>
         <module>java-test-drives-design-patterns</module>
-        <module>java-test-drives-java-11</module>
         <module>java-test-drives-security</module>
         <module>java-test-drives-webapp-jee</module>
     </modules>

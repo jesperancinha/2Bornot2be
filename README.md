@@ -18,14 +18,16 @@
 
 ## Description
 
-Java 11 Prep project
+Java study project.
+
+This project is intended as a study tool for the latest Java version. To find out the current version in study please check the details in the [pom.xml](pom.xml) file
 
 ## Contents:
 
--   java-test-drives-common - Just a bundle of common libraries
--   java-test-drives-java-11 - Tests for the Java 11 SDK
--   java-test-drives-designpatterns - Tests Design Patterns in java 8
--   java-test-drives-webapp-jee - Tests for J2EE framework
+-   java-test-drives-common - Java commons
+-   java-test-drives-designpatterns - Java design patterns
+-   java-test-drives-security - Java Security
+-   java-test-drives-webapp-jee - JavaEE
 
 ## References:
 
@@ -55,8 +57,7 @@ limitations under the License.
 
 ## About me
 
--   [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=joaofilipesabinoesperancinha.nl&color=informational)](http://joaofilipesabinoesperancinha.nl)
-<a href="https://dev.to/jofisaes">
+-   [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=joaofilipesabinoesperancinha.nl&color=informational)](http://joaofilipesabinoesperancinha.nl) <a href="https://dev.to/jofisaes">
   <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="João Esperancinha's DEV Profile" height="30" width="30">
 </a>
 
