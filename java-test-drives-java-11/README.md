@@ -30,6 +30,8 @@ There is a unt test for this project. Run it and check the timestamps
 ```
 ## References
 
+*  [CircleCI Images](https://circleci.com/docs/2.0/circleci-images/)
+
 * http://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
 
 * http://www.tutorialspoint.com/java8/java8_functional_interfaces.htm
