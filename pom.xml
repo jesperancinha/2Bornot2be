@@ -19,10 +19,6 @@
         <lombok.version>1.18.10</lombok.version>
         <mockito.all>1.9.5</mockito.all>
 
-        <!-- Logs -->
-        <slf4j>1.7.21</slf4j>
-        <logback>1.1.7</logback>
-
         <!-- Internal -->
         <b2b2common>1.0.0-SNAPSHOT</b2b2common>
 
