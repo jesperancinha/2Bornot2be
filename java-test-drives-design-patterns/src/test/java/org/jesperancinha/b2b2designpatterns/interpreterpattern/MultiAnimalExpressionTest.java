@@ -15,7 +15,7 @@ public class MultiAnimalExpressionTest {
     public static final String WOMBAT = "Wombat";
 
     @Test
-    public void interpret() throws Exception {
+    public void interpret() {
         final AnimalMaxWeightExpression expression1 = new AnimalOneExpression(MONKEY, 100);
         final AnimalMaxWeightExpression expression2 = new AnimalOneExpression(GORILLA, 400);
         final AnimalMaxWeightExpression expression3 = new AnimalOneExpression(ORANGUTAN, 600);
@@ -35,7 +35,7 @@ public class MultiAnimalExpressionTest {
     }
 
     @Test
-    public void interpret_false() throws Exception {
+    public void interpret_false() {
         final AnimalMaxWeightExpression expression1 = new AnimalOneExpression(MONKEY, 100);
         final AnimalMaxWeightExpression expression2 = new AnimalOneExpression(GORILLA, 400);
         final AnimalMaxWeightExpression expression3 = new AnimalOneExpression(ORANGUTAN, 600);

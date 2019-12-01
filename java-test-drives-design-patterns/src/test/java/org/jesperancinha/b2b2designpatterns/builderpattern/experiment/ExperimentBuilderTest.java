@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class ExperimentBuilderTest {
     @Test
-    public void createAerosphaeraTaetraExperiment() throws Exception {
+    public void createAerosphaeraTaetraExperiment() {
         final ExperimentBuilder experimentBuilder = new ExperimentBuilder();
 
         final Experiment experiment = experimentBuilder.createAerosphaeraTaetraExperiment();
@@ -31,7 +31,7 @@ public class ExperimentBuilderTest {
     }
 
     @Test
-    public void createCarnococcusAllantoicusExperiment() throws Exception {
+    public void createCarnococcusAllantoicusExperiment() {
         final ExperimentBuilder experimentBuilder = new ExperimentBuilder();
 
         final Experiment experiment = experimentBuilder.createCarnococcusAllantoicusExperiment();

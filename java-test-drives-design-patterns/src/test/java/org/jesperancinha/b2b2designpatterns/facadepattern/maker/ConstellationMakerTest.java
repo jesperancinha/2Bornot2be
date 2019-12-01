@@ -22,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class ConstellationMakerTest {
     @Test
-    public void drawCancer() throws Exception {
+    public void drawCancer() throws InterruptedException {
         Logger logger = Logger.getLogger(Cancer.class.getName());
         Formatter formatter = new SimpleFormatter();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -43,7 +43,7 @@ public class ConstellationMakerTest {
     }
 
     @Test
-    public void drawPegasus() throws Exception {
+    public void drawPegasus() throws InterruptedException {
         Logger logger = Logger.getLogger(Pegasus.class.getName());
         Formatter formatter = new SimpleFormatter();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -63,7 +63,7 @@ public class ConstellationMakerTest {
     }
 
     @Test
-    public void drawSagittarius() throws Exception {
+    public void drawSagittarius() throws InterruptedException {
         Logger logger = Logger.getLogger(Sagittarius.class.getName());
         Formatter formatter = new SimpleFormatter();
         ByteArrayOutputStream out = new ByteArrayOutputStream();

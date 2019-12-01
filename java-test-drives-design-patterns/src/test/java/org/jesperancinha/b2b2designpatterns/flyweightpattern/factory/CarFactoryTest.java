@@ -17,7 +17,7 @@ public class CarFactoryTest {
     }
 
     @Test
-    public void getFourWheelsMap() throws Exception {
+    public void getFourWheelsMap() {
         final CarFactory carFactory = new CarFactory();
 
         final FourWheels car1a = carFactory.getFourWheels("Flash");

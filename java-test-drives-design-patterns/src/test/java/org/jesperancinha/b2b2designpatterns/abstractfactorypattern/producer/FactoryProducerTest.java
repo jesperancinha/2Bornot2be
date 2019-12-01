@@ -34,17 +34,17 @@ public class FactoryProducerTest {
     private FactoryProducer factoryProducer;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp() {
         factoryProducer = new FactoryProducer();
     }
 
     @AfterEach
-    public void tearDown() throws Exception {
+    public void tearDown() {
         factoryProducer = null;
     }
 
     @Test
-    public void getFactory() throws Exception {
+    public void getFactory() {
         final AbstractFactory mammalFactory = factoryProducer.getFactory(MAMMAL);
         final AbstractFactory flowerFactory = factoryProducer.getFactory(FLOWER);
         final AbstractFactory nothingFactory = factoryProducer.getFactory(NOTHING);

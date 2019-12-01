@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class CheeseTest {
     @Test
-    public void makeCheese() throws Exception {
+    public void makeCheese() {
         final Logger loggerCabrales = Logger.getLogger(CabralesCheese.class.getName());
         final Logger loggerGouda = Logger.getLogger(GoudaCheese.class.getName());
         final Logger loggerIlha = Logger.getLogger(IlhaCheese.class.getName());

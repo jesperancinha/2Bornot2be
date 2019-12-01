@@ -2,8 +2,13 @@ package org.jesperancinha.b2b2java8;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
 import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class CredentialsReaderTest {
 
     @Test
-    public void readAllCredentials() throws Exception {
+    public void readAllCredentials() throws UnrecoverableKeyException, CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException {
         final CredentialsReader credentialsReader = new CredentialsReader();
         final InputStream fileInputStreamWithOneKeyStore = getClass().getResourceAsStream("/keyStore.p12");
 
