@@ -35,7 +35,7 @@ $ openssl req -new -x509 -nodes -sha1 -days 365 -key server.key > server.cert
 
 * http://www.panojohnson.com/misc/java-cert-parsing.html
 
-## About me
+## About me 👨🏽‍💻🚀
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social)](https://twitter.com/joaofse)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=jesperancinha&style=social)](https://github.com/jesperancinha)
