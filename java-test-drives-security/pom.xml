@@ -13,7 +13,7 @@
     <artifactId>java-test-drives-security</artifactId>
 
     <properties>
-        <commons.codec>1.10</commons.codec>
+        <commons.codec>1.13</commons.codec>
     </properties>
 
     <dependencies>
