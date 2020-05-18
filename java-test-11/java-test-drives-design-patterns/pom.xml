@@ -6,10 +6,10 @@
 
     <parent>
         <groupId>org.jesperancinha.jtd</groupId>
-        <artifactId>java-test-drives</artifactId>
+        <artifactId>java-test-11</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
+    <name>Java 11 Design patterns</name>
     <artifactId>java-test-drives-design-patterns</artifactId>
 
     <build>
