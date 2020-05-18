@@ -9,11 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-test-15</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>java-test-hidden</artifactId>
 
-    <modules>
-        <module>java-test-instanceof</module>
-        <module>java-test-hidden</module>
-    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
