@@ -19,5 +19,6 @@
         <module>java-test-hidden</module>
         <module>java-test-hidden-gen</module>
         <module>java-test-text-blocks</module>
+<!--        <module>java-test-sealed-classes</module>-->
     </modules>
 </project>

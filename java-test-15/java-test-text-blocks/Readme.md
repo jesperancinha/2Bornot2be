@@ -7,9 +7,7 @@
 
 ## Running demo
 
-```bash
-~/Downloads/jdk-15.jdk/Contents/Home/bin/java -jar --enable-preview java-test-15/java-test-instanceof/target/java-test-instanceof-1.0.0-SNAPSHOT.jar
-```
+Run this from Intellij and configure Java 15 for it.
 
 ## About me 👨🏽‍💻🚀
 
