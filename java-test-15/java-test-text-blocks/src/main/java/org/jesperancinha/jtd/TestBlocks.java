@@ -1,8 +1,7 @@
 package org.jesperancinha.jtd;
 
-
-public class Hidden {
-
+public class TestBlocks {
     public static void main(String[] args) {
+
     }
 }

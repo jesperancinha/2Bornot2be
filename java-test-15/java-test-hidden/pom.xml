@@ -11,6 +11,7 @@
 
     <artifactId>java-test-hidden</artifactId>
 
+    <name>Java 15 Hidden Class Test</name>
     <build>
         <plugins>
             <plugin>

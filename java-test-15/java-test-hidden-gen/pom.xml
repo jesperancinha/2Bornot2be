@@ -9,15 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-test-15</artifactId>
-    <packaging>pom</packaging>
+    <name>Java 15 Hidden Class Generator</name>
+    <artifactId>java-test-hidden-gen</artifactId>
 
-    <name>Java 15 Test Drives</name>
-
-    <modules>
-        <module>java-test-instanceof</module>
-        <module>java-test-hidden</module>
-        <module>java-test-hidden-gen</module>
-        <module>java-test-text-blocks</module>
-    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

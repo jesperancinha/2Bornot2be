@@ -10,7 +10,6 @@
     <modules>
         <module>java-test-11</module>
         <module>java-test-15</module>
-        <module>java-test-15/java-test-instanceof</module>
     </modules>
     <name>Java Test Drives</name>
     <properties>

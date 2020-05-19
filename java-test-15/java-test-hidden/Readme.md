@@ -1,19 +1,9 @@
-# java-test-15
+# java-test-hidden
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/projects/jdk/15/)
 
-## Install JDK 15 [EAB](http://jdk.java.net/15/)
+## [JEP 371: Hidden Classes](https://openjdk.java.net/jeps/371)
 
-1. Go to: http://jdk.java.net/15/
-2. Download: [JDK 15](https://download.java.net/java/early_access/jdk15/23/GPL/openjdk-15-ea+23_osx-x64_bin.tar.gz)
-
-## References
-
--   [JDK 15 Early-Access Builds](http://jdk.java.net/15/)
--   [JDK 15 Early-Access Release Notes](http://jdk.java.net/15/release-notes)
--   [Java 15 by Shibboleth](https://wiki.shibboleth.net/confluence/display/DEV/Java+15)
--   [Java 15 Text Blocks](https://openjdk.java.net/jeps/378)
--   [Java 15 – What we know by JaxEnter](https://jaxenter.com/java-15-news-170322.html)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/jeps/371)
 
 ## About me 👨🏽‍💻🚀
 
