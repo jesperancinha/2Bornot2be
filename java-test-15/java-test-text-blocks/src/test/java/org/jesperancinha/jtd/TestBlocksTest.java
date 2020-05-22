@@ -55,6 +55,18 @@ public class TestBlocksTest {
     }
 
     @Test
+    void testLineTerminator_whenIdentation2_thenOk() throws IOException {
+        final String text = IOUtils.toString(getClass().getResourceAsStream("/test3.txt"));
+
+        assertThat(text).isEqualTo(
+                """
+                        Cat One
+                          Cat Two
+                        Cat Three
+                          """);
+    }
+
+    @Test
     void testLineTerminator_whenIdentationFromEnd_thenOk() throws IOException {
         final String text = IOUtils.toString(getClass().getResourceAsStream("/test4.txt"));
 
