@@ -28,6 +28,13 @@ Java study project.
 
 This project is intended as a study tool for the latest Java version. To find out the current version in study please check the details in the [pom.xml](pom.xml) file
 
+It is the support project of the following articles on my blog:
+
+| Location | Title |
+|----------|-------|
+|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
+|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
+
 ## Contents:
 
 -   java-test-drives-common - Java commons
