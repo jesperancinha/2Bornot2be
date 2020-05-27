@@ -1,13 +1,4 @@
-# java-test-text-blocks
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-
-## [JEP 378: Text Blocks](https://openjdk.java.net/jeps/378)
-
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/jeps/378)
-
-## Running demo
-
-Run this from Intellij and configure Java 15 for it.
+# Java 15 Sealed classes
 
 ## About me 👨🏽‍💻🚀
 
