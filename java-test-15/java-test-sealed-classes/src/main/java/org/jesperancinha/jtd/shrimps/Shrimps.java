@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.shrimps;
 
-public sealed interface Shrimps permits CookedPrawns, GrilledPrawns, GrilledTigerShrimps {
+public sealed interface Shrimps permits CookedShrimps, GrilledShrimps {
 
     String wrapInABox();
 }
