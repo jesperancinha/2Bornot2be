@@ -8,7 +8,7 @@
 
 This module is the supporting module of my article on sealed classes:
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-27) [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-27)
 
 
 ## Compile and run
