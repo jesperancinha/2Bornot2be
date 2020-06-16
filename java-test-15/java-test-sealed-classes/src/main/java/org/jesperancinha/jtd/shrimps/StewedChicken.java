@@ -1,4 +1,8 @@
 package org.jesperancinha.jtd.shrimps;
 
-public class StewedChicken implements ShrimpPackage{
+public record StewedChicken() {
+    @Override
+    public String toString() {
+        return "I'm a chicken. Why am I even involved in this?";
+    }
 }

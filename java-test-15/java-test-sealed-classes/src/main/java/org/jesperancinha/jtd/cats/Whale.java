@@ -1,4 +1,4 @@
 package org.jesperancinha.jtd.cats;
 
-public class Whale implements Feline {
+public record Whale implements Feline {
 }

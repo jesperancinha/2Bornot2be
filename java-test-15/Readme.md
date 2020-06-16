@@ -9,6 +9,7 @@
 
 ## References
 
+-   [Исследуем sealed классы в Java 15](https://habr.com/ru/post/505696/)
 -   [JDK 15 Early-Access Builds](http://jdk.java.net/15/)
 -   [JDK 15 Early-Access Release Notes](http://jdk.java.net/15/release-notes)
 -   [Java 15 by Shibboleth](https://wiki.shibboleth.net/confluence/display/DEV/Java+15)

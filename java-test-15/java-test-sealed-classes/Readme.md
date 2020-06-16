@@ -1,4 +1,19 @@
 # Java 15 Sealed classes
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
+
+## [JEP 360: Sealed classes](https://openjdk.java.net/jeps/360)
+
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/jeps/360)
+
+
+This module is the supporting module of my article on sealed classes:
+
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
+
+
+## References
+
+-   [Исследуем sealed классы в Java 15](https://habr.com/ru/post/505696/)
 
 ## About me 👨🏽‍💻🚀
 

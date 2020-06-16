@@ -20,3 +20,6 @@ hs_err_pid*
 
 # vaadin
 **/*.scss
+
+## Compiler
+*.class
