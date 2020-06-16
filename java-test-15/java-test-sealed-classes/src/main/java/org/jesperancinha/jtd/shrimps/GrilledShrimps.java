@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.shrimps;
 
-public record GrilledPrawns() implements Prawns {
+public record GrilledShrimps() implements Shrimps {
     @Override
     public String toString() {
         return "I'm a prawn and I'm grilled!";

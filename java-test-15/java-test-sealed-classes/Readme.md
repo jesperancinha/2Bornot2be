@@ -11,9 +11,25 @@ This module is the supporting module of my article on sealed classes:
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
 
 
+## Compile and run
+
+In order to compile:
+
+```bash
+javac  --enable-preview --release 15 src/main/java/org/jesperancinha/jtd/shrimps/*.java
+```
+
+
+In order to run:
+
+```bash
+java  --enable-preview -cp src/main/java org.jesperancinha.jtd.shrimps.ShrimpsLauncher 
+```
+
 ## References
 
 -   [Исследуем sealed классы в Java 15](https://habr.com/ru/post/505696/)
+-   [Healthy Shrimp and Grits with Rosé](https://www.foodandwine.com/seafood/shellfish/shrimp/9-best-shrimp-pastas)
 
 ## About me 👨🏽‍💻🚀
 

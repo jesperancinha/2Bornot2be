@@ -7,9 +7,9 @@ public class ShrimpsLauncher {
     private static Logger logger = Logger.getLogger(ShrimpsLauncher.class.getName());
 
     public static void main(String[] args) {
-        final var cookedPrawns = new CookedPrawns();
-        final var grilledPrawns = new GrilledPrawns();
-        final var grilledTigerShrimps = new GrilledTigerShrimps();
+        final var cookedPrawns = new CookedShrimps();
+        final var grilledPrawns = new GrilledShrimps();
+        final var grilledTigerShrimps = new GrilledTigerPrawns();
         final var stewedChicken = new StewedChicken();
 
         logger.info(cookedPrawns.toString());
