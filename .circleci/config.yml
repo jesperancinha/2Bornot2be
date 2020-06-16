@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:13-jdk-buster
+      - image: jesperancinha/je-all-build-jdk-15:0.0.1
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -30,4 +30,5 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: cd java-test-11 && mvn clean install
+      - run: mvn clean install
+

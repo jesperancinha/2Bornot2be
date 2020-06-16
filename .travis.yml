@@ -2,5 +2,4 @@ os: osx
 language: java
 jdk: openjdk11
 script:
-  - cd java-test-11
   - mvn clean install
