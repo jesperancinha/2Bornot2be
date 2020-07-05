@@ -4,13 +4,9 @@
 ## [JEP 360: Sealed classes](https://openjdk.java.net/jeps/360)
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/jeps/360)
-
-
 This module is the supporting module of my article on sealed classes:
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-27) [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-27)
-
-
 ## Compile and run
 
 In order to compile:
@@ -18,8 +14,6 @@ In order to compile:
 ```bash
 javac  --enable-preview --release 15 src/main/java/org/jesperancinha/jtd/shrimps/*.java
 ```
-
-
 In order to run:
 
 ```bash
