@@ -1,9 +1,20 @@
-# ocp11
-## Introduction
+# auto-closeable
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+In this module we can see different important situations about the AutoCloseable and Closeable interfaces:
 
+1. Autocloseable may throw an Exception upon close
+2. Closeable extends Autocloseable and can throw an IOException
+3. The order the object creation is opposite to the object closing.
+
+```bash
+org.jesperancinha.ocp11.autocloseable.LVBagCloseable@3b81a1bc-org.jesperancinha.ocp11.autocloseable.ViperBagAutocloseable@64616ca2
+Your Viper Bag has been closed!
+Your LV Bag has been closed!
+Done Whatever!
+Check the closing order!
+
+Process finished with exit code 0
+```
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
