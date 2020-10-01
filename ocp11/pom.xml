@@ -15,6 +15,7 @@
     <modules>
         <module>file-copy</module>
         <module>auto-closeable</module>
+        <module>for-each</module>
     </modules>
 
     <properties>
