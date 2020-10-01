@@ -16,6 +16,7 @@
         <module>file-copy</module>
         <module>auto-closeable</module>
         <module>for-each</module>
+        <module>stream-sum</module>
     </modules>
 
     <properties>
