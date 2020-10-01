@@ -4,6 +4,11 @@
 OCP 11 studies. 
 In this project you will find all my study materials for the OCP 11.
 
+
+## Collect and Count
+
+Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

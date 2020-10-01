@@ -21,6 +21,8 @@
         <module>modularity</module>
         <module>relativize</module>
         <module>primitives</module>
+        <module>file-paths</module>
+        <module>file-paths</module>
     </modules>
 
     <properties>
