@@ -20,6 +20,7 @@
         <module>consumer</module>
         <module>modularity</module>
         <module>relativize</module>
+        <module>primitives</module>
     </modules>
 
     <properties>
