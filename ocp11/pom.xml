@@ -18,6 +18,7 @@
         <module>for-each</module>
         <module>stream-sum</module>
         <module>consumer</module>
+        <module>modularity</module>
     </modules>
 
     <properties>
