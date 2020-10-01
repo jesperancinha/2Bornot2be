@@ -17,6 +17,7 @@
         <module>auto-closeable</module>
         <module>for-each</module>
         <module>stream-sum</module>
+        <module>consumer</module>
     </modules>
 
     <properties>
