@@ -22,6 +22,7 @@
         <module>relativize</module>
         <module>primitives</module>
         <module>file-paths</module>
+        <module>multi-modules</module>
     </modules>
 
     <properties>
