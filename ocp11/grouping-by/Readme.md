@@ -1,21 +1,20 @@
-# auto-closeable
+# grouping-by
 
-In this module we can see different important situations about the AutoCloseable and Closeable interfaces:
+## People in tech and GroupingBy
 
-1. Autocloseable may throw an Exception upon close
-2. Closeable extends Autocloseable and can throw an IOException
-3. The order the object creation is opposite to the object closing.
+So I have decided to make a grouping by example with names of famous people in TECH and STEM:
 
-```bash
-org.jesperancinha.ocp11.autocloseable.LVBagCloseable@3b81a1bc-org.jesperancinha.ocp11.autocloseable.ViperBagAutocloseable@64616ca2
-Your Viper Bag has been closed!
-Your LV Bag has been closed!
-Done Whatever!
-Check the closing order!
+The documentation is taken from Wikipedia on the 3rd of October 2020:
 
-Process finished with exit code 0
-```
-
+[Dorothy Denning](https://en.wikipedia.org/wiki/Dorothy_E._Denning)
+[Joan Clarke](https://en.wikipedia.org/wiki/Joan_Clarke)
+[Margaret Rock](https://en.wikipedia.org/wiki/Margaret_Rock)
+[Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson)
+[Mary Lou Jepsen](https://en.wikipedia.org/wiki/Mary_Lou_Jepsen)
+[Shafi Goldwasser](https://en.wikipedia.org/wiki/Shafi_Goldwasser)
+[Annie Easley](https://en.wikipedia.org/wiki/Annie_Easley)
+[Danielle George](https://en.wikipedia.org/wiki/Danielle_George)
+ 
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

@@ -23,6 +23,7 @@
         <module>primitives</module>
         <module>file-paths</module>
         <module>multi-modules</module>
+        <module>grouping-by</module>
     </modules>
 
     <properties>
