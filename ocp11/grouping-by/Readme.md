@@ -6,14 +6,14 @@ So I have decided to make a grouping by example with names of famous people in T
 
 The documentation is taken from Wikipedia on the 3rd of October 2020:
 
-[Dorothy Denning](https://en.wikipedia.org/wiki/Dorothy_E._Denning)
-[Joan Clarke](https://en.wikipedia.org/wiki/Joan_Clarke)
-[Margaret Rock](https://en.wikipedia.org/wiki/Margaret_Rock)
-[Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson)
-[Mary Lou Jepsen](https://en.wikipedia.org/wiki/Mary_Lou_Jepsen)
-[Shafi Goldwasser](https://en.wikipedia.org/wiki/Shafi_Goldwasser)
-[Annie Easley](https://en.wikipedia.org/wiki/Annie_Easley)
-[Danielle George](https://en.wikipedia.org/wiki/Danielle_George)
+-   [Dorothy Denning](https://en.wikipedia.org/wiki/Dorothy_E._Denning)
+-   [Joan Clarke](https://en.wikipedia.org/wiki/Joan_Clarke)
+-   [Margaret Rock](https://en.wikipedia.org/wiki/Margaret_Rock)
+-   [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson)
+-   [Mary Lou Jepsen](https://en.wikipedia.org/wiki/Mary_Lou_Jepsen)
+-   [Shafi Goldwasser](https://en.wikipedia.org/wiki/Shafi_Goldwasser)
+-   [Annie Easley](https://en.wikipedia.org/wiki/Annie_Easley)
+-   [Danielle George](https://en.wikipedia.org/wiki/Danielle_George)
  
 ## About me 👨🏽‍💻🚀
 
