@@ -9,6 +9,13 @@ In this project you will find all my study materials for the OCP 11.
 
 Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
 
+## References
+
+-   [OCP11 1z0-817](https://education.oracle.com/oracle-certified-professional-java-se-11-developer-upgrade-from-ocp-java-6-7-8/trackp_817)
+-   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+-   [Enthuware](https://enthuware.com/)
+-   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
