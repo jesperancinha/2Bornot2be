@@ -1,9 +1,23 @@
-# ocp11
+# ocp11 (Oracle Certified Professional Java SE 11)
+
 ## Introduction
 
 OCP 11 studies. 
 In this project you will find all my study materials for the OCP 11.
 
+## Topics and coverage
+
+-   [Autocloseable](./auto-closeable)
+-   [Consumer](./consumer)
+-   [File Copy](./file-copy)
+-   [File Paths](./file-paths)
+-   [For Each](./for-each)
+-   [Modularity](./modularity)
+-   [Multi modules](./multi-modules)
+-   [Primitive Values](./primitives)
+-   [Relativize](./relativize)
+-   groupingBy
+-   partitioningBy
 
 ## Collect and Count
 
