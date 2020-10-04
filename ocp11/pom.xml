@@ -26,6 +26,7 @@
         <module>grouping-by</module>
         <module>partition-by</module>
         <module>lambda-celestial</module>
+        <module>lambda-film</module>
     </modules>
 
     <properties>
