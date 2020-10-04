@@ -16,7 +16,7 @@ In this project you will find all my study materials for the OCP 11.
 -   [Multi modules](./multi-modules)
 -   [Primitive Values](./primitives)
 -   [Relativize](./relativize)
--   groupingBy
+-   [groupingBy](./grouping-by)
 -   partitioningBy
 
 ## Collect and Count

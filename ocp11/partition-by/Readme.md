@@ -1,4 +1,4 @@
-# grouping-by
+# partition-by
 
 ## People in tech and GroupingBy
 

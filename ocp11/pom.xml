@@ -24,6 +24,7 @@
         <module>file-paths</module>
         <module>multi-modules</module>
         <module>grouping-by</module>
+        <module>partition-by</module>
     </modules>
 
     <properties>
