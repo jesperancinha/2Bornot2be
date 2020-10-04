@@ -25,6 +25,7 @@
         <module>multi-modules</module>
         <module>grouping-by</module>
         <module>partition-by</module>
+        <module>lambda-celestial</module>
     </modules>
 
     <properties>
