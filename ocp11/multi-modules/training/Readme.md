@@ -1,5 +1,33 @@
 # training
 
+## Training Module
+
+In this training module, you are supposed to call the right runnable module from a selection of two.
+
+## Solutions
+
+-   How not to run 🔴
+
+```bash
+java --module-path course-1.0.0-SNAPSHOT.jar;training-1.0.0-SNAPSHOT.jar --module training/org.jesperancinha.ocp11.training.TrainingRunner
+java --module-path "course-1.0.0-SNAPSHOT.jar;training-1.0.0-SNAPSHOT.jar" --module training/org.jesperancinha.ocp11.training.TrainingRunner
+java --module-path "course-1.0.0-SNAPSHOT.jar,training-1.0.0-SNAPSHOT.jar" --module training/org.jesperancinha.ocp11.training.TrainingRunner
+java --module-path course-1.0.0-SNAPSHOT.jar,training-1.0.0-SNAPSHOT.jar --module training/org.jesperancinha.ocp11.training.TrainingRunner
+java --module-path training-1.0.0-SNAPSHOT.jar -classpath course-1.0.0-SNAPSHOT.jar --main-class org.jesperancinha.ocp11.training.TrainingRunner
+java --module-path course-1.0.0-SNAPSHOT.jar:training-1.0.0-SNAPSHOT.jar --module training
+```
+
+-   How to run 🟢
+
+```bash
+java --module-path . --module training/org.jesperancinha.ocp11.training.TrainingRunner
+java --module-path course-1.0.0-SNAPSHOT.jar:training-1.0.0-SNAPSHOT.jar --module training/org.jesperancinha.ocp11.training.TrainingRunner
+```
+
+## References
+
+-   [Nicole-Reine Lepaute](https://en.wikipedia.org/wiki/Nicole-Reine_Lepaute)
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
