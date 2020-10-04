@@ -17,7 +17,7 @@ In this project you will find all my study materials for the OCP 11.
 -   [Primitive Values](./primitives)
 -   [Relativize](./relativize)
 -   [groupingBy](./grouping-by)
--   partitioningBy
+-   [partitioningBy](./partition-by)
 
 ## Collect and Count
 

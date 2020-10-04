@@ -1,10 +1,10 @@
 # Java 11 Test Drives
 
-## Contents:
+## Contents
 
--   java-test-drives-common - Java commons
--   java-test-drives-designpatterns - Java design patterns
--   java-test-drives-security - Java Security
+-   [java-test-drives-common](./java-test-drives-design-patterns) - Java commons
+-   [java-test-drives-designpatterns](./java-test-drives-design-patterns) - Java design patterns
+-   [java-test-drives-security](./java-test-drives-security) - Java Security
 
 ## About me 👨🏽‍💻🚀
 

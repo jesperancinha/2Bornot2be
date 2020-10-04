@@ -35,6 +35,12 @@ It is the support project of the following articles on my blog:
 |[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
 |[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
 
+## Contents
+
+-   [java-test-11](./java-test-11) - Java 11 test mini projects
+-   [java-test-15](./java-test-15) - Java 15 test mini projects
+-   [OCP-11](./ocp11) - OCP SE 11 Exam preparation
+
 ## Achievements
 
 [![alt text](./badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
