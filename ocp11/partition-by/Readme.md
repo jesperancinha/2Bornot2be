@@ -2,7 +2,7 @@
 
 ## People in tech and PartitionBy
 
-So I have decided to make a grouping by example with names of famous people in TECH and STEM:
+So I have decided to make a partitionBy example with names of famous people in TECH and STEM:
 
 The documentation is taken from Wikipedia on the 3rd of October 2020:
 
