@@ -16,6 +16,7 @@ The documentation is taken from Wikipedia on the 3rd of October 2020:
 -   [Danielle George](https://en.wikipedia.org/wiki/Danielle_George)
  
 We will look at a number of IT personalities and the count of their key awards received throughout their lives.
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
