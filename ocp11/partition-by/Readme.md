@@ -1,6 +1,6 @@
 # partition-by
 
-## People in tech and GroupingBy
+## People in tech and PartitionBy
 
 So I have decided to make a grouping by example with names of famous people in TECH and STEM:
 
