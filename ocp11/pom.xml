@@ -28,6 +28,7 @@
         <module>lambda-celestial</module>
         <module>lambda-film</module>
         <module>grouping-by-math</module>
+        <module>flat-mapping-books</module>
     </modules>
 
     <properties>
