@@ -22,7 +22,6 @@ public class FilePathsRunner {
         Path p2 = Paths.get("/home/../temp/test.txt");
         System.out.println(p2.normalize().toUri());
 
-
         System.out.println("\nExercise-3");
         Path p3 = Paths.get("/home/test");
         System.out.println(p3.getName(0).toString());
