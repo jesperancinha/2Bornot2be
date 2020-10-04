@@ -4,7 +4,7 @@ public class CourseRunner {
     public static void main(String[] args) {
         System.out.println("Hi there!!!\n" +
                 "In your assignment, you are supposed to call Nicole-Reine Lepaute, not me.\n" +
-                "I'm just a bot programmed by her and I can't do anything. " +
+                "I'm just a bot programmed by her and I have been instructed to guard this module " +
                 "Sorry. Please try again.");
     }
 
