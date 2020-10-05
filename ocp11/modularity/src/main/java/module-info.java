@@ -9,6 +9,7 @@ import org.jesperancinha.ocp11.modularity.ModuleInterface;
  */
 module org.jesperancinha.ocp.modularity {
     requires java.compiler;
+    requires java.base;
     // provides ModuleRunner;
     uses ModuleInterface;
     provides ModuleInterface with ModuleImpl;
