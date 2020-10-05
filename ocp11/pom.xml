@@ -30,6 +30,7 @@
         <module>grouping-by-math</module>
         <module>flat-mapping-books</module>
         <module>bi-function-couples</module>
+        <module>iterator-remembered</module>
     </modules>
 
     <properties>
