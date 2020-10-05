@@ -16,6 +16,11 @@ Check the closing order!
 Process finished with exit code 0
 ```
 
+## References
+
+-   [Jacqueline Susann's 1966 novel Valley of the Dolls](https://www.goodreads.com/book/show/581811.Valley_of_the_Dolls)
+-   [Lady Gaga - 911 Video Explained](https://www.insider.com/lady-gaga-911-video-details-you-missed-explanation-2020-9#this-scene-embodies-the-lyric-keep-my-dolls-inside-diamond-boxes-15)
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

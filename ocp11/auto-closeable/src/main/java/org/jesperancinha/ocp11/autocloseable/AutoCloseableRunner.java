@@ -5,8 +5,8 @@ public class AutoCloseableRunner {
     public static void main(String[] args) throws Exception {
 
         try (
-                var lvBag = new LVBagCloseable();
-                var viperBag = new ViperBagAutocloseable()) {
+            var lvBag = new LVBagCloseable();
+            var viperBag = new ViperBagAutocloseable()) {
             System.out.println("" + lvBag + "-" + viperBag);
         } finally {
             System.out.println("Done Whatever!");
