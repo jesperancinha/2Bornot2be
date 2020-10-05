@@ -1,5 +1,9 @@
 # primitives
 
+## References
+
+-   [Java: Primitive data types](https://cs.fit.edu/~ryan/java/language/java-data.html)
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
