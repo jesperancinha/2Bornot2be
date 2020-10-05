@@ -84,7 +84,7 @@ public class IteratorRememberedRunner {
         al.add(d);
         d = new Astronaut("Ellen Ochoa");
         al.add(d);
-        filterDataWithPredicate(al, x-> x.name.contains("Ch"));
+        filterDataWithPredicate(al, x -> x.name.contains("Ch"));
         System.out.println(al);
     }
 }

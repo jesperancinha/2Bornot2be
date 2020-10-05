@@ -31,6 +31,7 @@
         <module>flat-mapping-books</module>
         <module>bi-function-couples</module>
         <module>iterator-remembered</module>
+        <module>predicates</module>
     </modules>
 
     <properties>
