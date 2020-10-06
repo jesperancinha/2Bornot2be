@@ -33,6 +33,7 @@
         <module>iterator-remembered</module>
         <module>predicates</module>
         <module>inferences</module>
+        <module>java-compile</module>
     </modules>
 
     <properties>
