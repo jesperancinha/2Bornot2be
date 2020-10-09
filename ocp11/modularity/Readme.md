@@ -1,4 +1,10 @@
 # modularity
+## JDeps test
+
+```bash
+mvn clean install
+jdeps --list-deps target/modularity-1.0.0-SNAPSHOT.jar
+```
 
 ## About me 👨🏽‍💻🚀
 

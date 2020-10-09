@@ -8,16 +8,27 @@ In this project you will find all my study materials for the OCP 11.
 ## Topics and coverage
 
 -   [Autocloseable](./auto-closeable)
+-   [BiFunction](./bi-function-couples)
 -   [Consumer](./consumer)
 -   [File Copy](./file-copy)
 -   [File Paths](./file-paths)
+-   [Flat Mapping books](./flat-mapping-books)
 -   [For Each](./for-each)
--   [Modularity](./modularity)
+-   [GroupingBy](./grouping-by)
+-   [GroupingBy with Math](./grouping-by-math)
+-   [Inferences](./inferences)
+-   [Iterator Remembered](./iterator-remembered)
+-   [Java Compile](./java-compile)
+-   [Lambda Celestial](./lambda-celestial)
+-   [Lambda Film](./lambda-film)
+-   [Modularity](./modularity)  
 -   [Multi modules](./multi-modules)
+-   [PartitionBy](./partition-by)
+-   [Predicates](./predicates)
 -   [Primitive Values](./primitives)
+-   [Reducing Stats](./reducing-stats)
 -   [Relativize](./relativize)
--   [groupingBy](./grouping-by)
--   [partitioningBy](./partition-by)
+-   [Stream Sum](./stream-sum)
 
 ## Collect and Count
 
@@ -29,6 +40,7 @@ Collect and count are methods of the Stream interface which use reduce operation
 -   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
 -   [Enthuware](https://enthuware.com/)
 -   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+-   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ## About me 👨🏽‍💻🚀
 

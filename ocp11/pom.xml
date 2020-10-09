@@ -35,6 +35,7 @@
         <module>inferences</module>
         <module>java-compile</module>
         <module>reducing-stats</module>
+        <module>file-atomic-move</module>
     </modules>
 
     <properties>

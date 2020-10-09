@@ -1,18 +1,16 @@
-# reducing-stats
+# fiile-atomic-move
 
-## Exercice
+## Preparation
 
-In this exercise we will have a look at way to process statistiscs.
-We will dive into the reduce operations providec by the IntStream interface.
-We can extrapolate this to other types of interfaces.
+Run [setup.sh](./setup.sh).
 
-Data was taken from the statistics on Lung cancer in Europe for 2017 on the 6th of October 2020. The source is [Eurostat - Statistics Explained](https://ec.europa.eu/eurostat/statistics-explained/index.php/Main_Page)
+Alternative you can run the following set of commands
 
-[Causes of death — malignant neoplasms of trachea, bronchus and lung, residents, 2017](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Causes_of_death_%E2%80%94_malignant_neoplasms_of_trachea,_bronchus_and_lung,_residents,_2017_Health20.png)
-## References
-
--   [Causes of death — malignant neoplasms of trachea, bronchus and lung, residents, 2017](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Causes_of_death_%E2%80%94_malignant_neoplasms_of_trachea,_bronchus_and_lung,_residents,_2017_Health20.png)
-
+```bash
+cp atomic-file-1.txt /tmp
+mkdir -p /tmp/new-folder
+cp atomic-file-1.txt /tmp/new-folder
+```
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
