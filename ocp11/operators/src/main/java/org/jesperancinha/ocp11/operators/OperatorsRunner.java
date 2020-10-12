@@ -1,7 +1,6 @@
 package org.jesperancinha.ocp11.operators;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.function.BinaryOperator;
 import java.util.function.DoubleBinaryOperator;
@@ -24,7 +23,7 @@ public class OperatorsRunner {
             DoubleBinaryOperator bo = (a, b) -> a + b;
             OptionalDouble total = bkStrm.mapToDouble(Book::getPrice).reduce(bo);
             System.out.printf("Test 3 - This is the total using DoubleBinaryOperator and no reducing start, %f\n", total.orElse(0d));
-        }catch (java.lang.ClassCastException e){
+        } catch (java.lang.ClassCastException e) {
             System.out.printf("Test 3 - We cannot cast a DoubleBinaryOperator into a BinaryOperator. They sound a like that they are the same, but they are not: %s\n", e.getMessage());
         }
     }
@@ -37,7 +36,7 @@ public class OperatorsRunner {
             BinaryOperator<Double> bo = (a, b) -> a + b;
             double total = bkStrm.map(Book::getPrice).reduce(0.0, bo);
             System.out.printf("Test 2 - This is the total using BinaryOperator, %f\n", total);
-        }catch (java.lang.ClassCastException e){
+        } catch (java.lang.ClassCastException e) {
             System.out.printf("Test 2 - We cannot cast a DoubleBinaryOperator into a BinaryOperator. They sound a like that they are the same, but they are not: %s\n", e.getMessage());
         }
     }
@@ -51,7 +50,7 @@ public class OperatorsRunner {
             DoubleBinaryOperator dbo = (a, b) -> a + b;
             double total = bkStrm.mapToDouble(Book::getPrice).reduce(0.0, dbo);
             System.out.printf("Test 1 - This is the total using DoubleBinaryOperator, %f\n", total);
-        }catch (java.lang.ClassCastException e){
+        } catch (java.lang.ClassCastException e) {
             System.out.printf("Test 1 - We cannot cast a DoubleBinaryOperator into a BinaryOperator. They sound a like that they are the same, but they are not: %s\n", e.getMessage());
         }
 

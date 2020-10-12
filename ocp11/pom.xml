@@ -38,6 +38,7 @@
         <module>file-atomic-move</module>
         <module>service-provider</module>
         <module>operators</module>
+        <module>supressed-exception</module>
     </modules>
 
     <properties>
