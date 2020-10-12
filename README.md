@@ -39,7 +39,8 @@ It is the support project of the following articles on my blog:
 
 -   [java-test-11](./java-test-11) - Java 11 test mini projects
 -   [java-test-15](./java-test-15) - Java 15 test mini projects
--   [OCP-11](./ocp11) - OCP SE 11 Exam preparation
+-   [OCP-11 - 1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819](./ocp11) - OCP SE 11 Exam preparation
+-   [JEE 7 - 1z0-900](./jee7) - Java EE 7 Application Developer Exam Preparation
 
 ## Achievements
 
@@ -48,54 +49,13 @@ It is the support project of the following articles on my blog:
 [![alt text](./badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
 
 ---
-## Hints and tricks
-
-### Migration from Hamcrest to AssertJ
-
-#### From equalTo() to isEqualTo()
-```text
-assertThat\(([0-9A-Za-z \(\)\. ã\ë"]*), equalTo\(([0-9A-Za-z .\(,\)\"_\\]*)\)\);
-```
-to
-```text
-assertThat($1).isEqualTo($2);
-```
-
-#### From nullValue() to isNull()
-```text
-assertThat\(([0-9A-Za-z \(\)\. ã\ë"]*), nullValue\(([0-9A-Za-z .\(,\)\"_\\]*)\)\);
-```
-to
-```text
-assertThat($1).isNull();
-```
-
-#### From hasSize() to hasSize()
-```text
-assertThat\(([0-9A-Za-z \(\)\. ã\ë"]*), hasSize\(([0-9A-Za-z .\(,\)\"_\\]*)\)\);
-```
-to
-```text
-assertThat($1).hasSize($2);
-```
-
-### Imports from Junit assertThat to AssertJ assertThart
-
-```text
-import static org.junit.Assert.assertThat;
-```
-to
-```text
-import static org.assertj.core.api.Assertions.assertThat;
-```
 
 ## References:
 
 -   [Fitnesse](http://www.fitnesse.org/FrontPage)
-
 -   [Cucumber](https://cucumber.io/)
-
 -   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
+-   [Hints & Tricks](./Hints&Tricks.md)
 
 ## About me 👨🏽‍💻🚀
 
