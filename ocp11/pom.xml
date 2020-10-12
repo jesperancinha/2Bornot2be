@@ -36,6 +36,7 @@
         <module>java-compile</module>
         <module>reducing-stats</module>
         <module>file-atomic-move</module>
+        <module>service-provider</module>
     </modules>
 
     <properties>

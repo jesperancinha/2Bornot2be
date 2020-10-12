@@ -1,17 +1,8 @@
-# fiile-atomic-move
+# jee7
 
-## Preparation
+## Introduction
 
-Run [setup.sh](./setup.sh).
-
-Alternative you can run the following set of commands
-
-```bash
-cp atomic-file-1.txt /tmp
-mkdir -p /tmp/new-folder
-cp atomic-file-1.txt /tmp/new-folder
-```
-
+This is a set of study modules that I'm using to pass exam Oracle's exam 1z0-900
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

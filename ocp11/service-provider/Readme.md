@@ -1,16 +1,4 @@
-# fiile-atomic-move
-
-## Preparation
-
-Run [setup.sh](./setup.sh).
-
-Alternative you can run the following set of commands
-
-```bash
-cp atomic-file-1.txt /tmp
-mkdir -p /tmp/new-folder
-cp atomic-file-1.txt /tmp/new-folder
-```
+# service-provider
 
 ## About me 👨🏽‍💻🚀
 
