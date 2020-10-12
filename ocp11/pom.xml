@@ -37,6 +37,7 @@
         <module>reducing-stats</module>
         <module>file-atomic-move</module>
         <module>service-provider</module>
+        <module>operators</module>
     </modules>
 
     <properties>
