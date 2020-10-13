@@ -40,6 +40,7 @@
         <module>operators</module>
         <module>supressed-exception</module>
         <module>file-move</module>
+        <module>static-modular-filter</module>
     </modules>
 
     <properties>
