@@ -41,6 +41,7 @@
         <module>supressed-exception</module>
         <module>file-move</module>
         <module>static-modular-filter</module>
+        <module>for-each-ordered</module>
     </modules>
 
     <properties>

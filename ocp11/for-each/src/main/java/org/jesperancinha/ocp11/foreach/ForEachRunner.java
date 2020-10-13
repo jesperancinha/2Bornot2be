@@ -2,7 +2,7 @@ package org.jesperancinha.ocp11.foreach;
 
 import java.util.ArrayList;
 
-public class FroEachRunner {
+public class ForEachRunner {
     public static void main(String[] args) {
         var values = new ArrayList<String>();
 
