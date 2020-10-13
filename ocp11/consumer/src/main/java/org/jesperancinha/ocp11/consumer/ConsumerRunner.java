@@ -1,7 +1,7 @@
 package org.jesperancinha.ocp11.consumer;
 
-import com.sun.tools.javac.util.List;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ConsumerRunner {
@@ -17,7 +17,7 @@ public class ConsumerRunner {
     }
 
     private static void alternative6(String[] args) {
-        Consumer<String[]> x = (String[] msg) -> { System.out.println(msg);};
+        Consumer<String> x = (String msg) -> { System.out.println(msg);};
         List.of(args).forEach(x);
     }
 
