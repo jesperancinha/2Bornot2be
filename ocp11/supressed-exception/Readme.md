@@ -1,8 +1,4 @@
-# jee7
-
-## Introduction
-
-This is a set of study modules that I'm using to pass exam Oracle's exam 1z0-900
+# supressed-exception
 
 ## About me 👨🏽‍💻🚀
 

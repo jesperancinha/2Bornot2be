@@ -39,6 +39,7 @@
         <module>service-provider</module>
         <module>operators</module>
         <module>supressed-exception</module>
+        <module>file-move</module>
     </modules>
 
     <properties>
