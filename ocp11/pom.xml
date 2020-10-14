@@ -43,6 +43,7 @@
         <module>static-modular-filter</module>
         <module>for-each-ordered</module>
         <module>files</module>
+        <module>compute-if-present</module>
     </modules>
 
     <properties>
