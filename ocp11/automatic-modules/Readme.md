@@ -1,4 +1,8 @@
-# automated-modules
+# automatic-modules
+
+## A modular exercise
+
+Refer to [application](./application/Readme.md) for complete exercise description.
 
 ## About me 👨🏽‍💻🚀
 

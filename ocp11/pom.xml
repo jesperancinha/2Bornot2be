@@ -44,7 +44,7 @@
         <module>for-each-ordered</module>
         <module>files</module>
         <module>compute-if-present</module>
-        <module>automated-modules</module>
+        <module>automatic-modules</module>
     </modules>
 
     <properties>

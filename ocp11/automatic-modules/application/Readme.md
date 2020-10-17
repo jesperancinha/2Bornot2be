@@ -1,11 +1,38 @@
 # application
 
-## How to compile
+
+## Exercise
+
+We are going to look deeply how to make a modularized jar using external non-modularized modules.
+They will become automatic modules in our exercise.
+Maven alone won't be enough to make successful build.
+
+-   Non modular packages
+
+    -   [analytics](../analytics)
+    -   [database](../database)
+
+-   Modular package
+
+    -   [application](../application)
+
+## First Build the jars
 
 ```bash
-chmod u+x database/target/database-1.0.0-SNAPSHOT.jar
-chmod u+x analytics/target/analytics-1.0.0-SNAPSHOT.jar
-java --module-path application/target;analytics/target/analytics-1.0.0-SNAPSHOT.jar;database/target/database-1.0.0-SNAPSHOT.jar --module org.jesperancinha.ocp11.automated.modules.application.Application
+mvn clean install
+```
+
+## How to compile
+
+We compile our classes (Optionally we can make a jar file)
+```bash
+javac --module-path ../analytics/target:../database/target -d out src/main/application/module-info.java src/main/application/org/jesperancinha/ocp11/automated/modules/application/Application.java
+```
+
+We run our classes
+## How to run
+```bash
+java  --module-path out:../analytics/target:../database/target  --module application/org.jesperancinha.ocp11.automated.modules.application.Application
 ```
 
 ## About me 👨🏽‍💻🚀

@@ -12,6 +12,7 @@
     <artifactId>application</artifactId>
 
     <build>
+        <sourceDirectory>src/main/application</sourceDirectory>
         <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
