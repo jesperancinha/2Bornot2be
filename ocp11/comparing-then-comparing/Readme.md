@@ -1,40 +1,17 @@
-# application
-## Exercise
+# comparing-then-comparing
 
-We are going to look deeply how to make a modularized jar using external non-modularized modules.
-They will become automatic modules in our exercise.
-Maven alone won't be enough to make successful build.
+## References
 
--   Non modular packages
-
-    -   [analytics](../analytics)
-    -   [database](../database)
-
--   Modular package
-
-    -   [application](../application)
-
-## First Build the jars
-
-```bash
-mvn clean install
-```
-
-## How to compile
-
-We compile our classes (Optionally we can make a jar file)
-```bash
-javac --module-path ../analytics/target:../database/target -d out src/main/application/module-info.java src/main/application/org/jesperancinha/ocp11/automated/modules/application/Application.java
-```
-
-We run our classes
-## How to run
-```bash
-java  --class-path out:../analytics/target/analytics-1.0.0-SNAPSHOT.jar:../database/target/database-1.0.0-SNAPSHOT.jar org.jesperancinha.ocp11.automated.modules.application.Application
-java  --module-path out:../analytics/target:../database/target  --module application/org.jesperancinha.ocp11.automated.modules.application.Application
-```
-
-To test that this effectively worked, check the contents of the out folder. You'll see no jars or classes from the modules used to run the apllication. We referenced them running the java command line.
+-   [Madonna Filmography](https://en.wikipedia.org/wiki/Madonna_filmography)
+-   [Jodie Foster Filmography](https://nl.wikipedia.org/wiki/Jodie_Foster)
+-   [The silence of the Lambs](https://www.rottentomatoes.com/m/silence_of_the_lambs)
+-   [Who's that Girl](https://www.rottentomatoes.com/m/whos_that_girl)
+-   [Evita](https://www.rottentomatoes.com/m/evita)
+-   [Shadows and the Fog](https://www.rottentomatoes.com/m/shadows_and_fog)
+-   [Body of Evidence](https://www.rottentomatoes.com/m/body_of_evidence)
+-   [Nell](https://www.rottentomatoes.com/m/nell)
+-   [Maverick](https://www.rottentomatoes.com/m/maverick)
+-   [Dangerous Game](https://www.rottentomatoes.com/m/1047940-dangerous_game)
 
 ## About me 👨🏽‍💻🚀
 

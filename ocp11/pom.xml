@@ -45,6 +45,7 @@
         <module>files</module>
         <module>compute-if-present</module>
         <module>automatic-modules</module>
+        <module>comparing-then-comparing</module>
     </modules>
 
     <properties>
