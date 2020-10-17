@@ -35,6 +35,8 @@ We run our classes
 java  --module-path out:../analytics/target:../database/target  --module application/org.jesperancinha.ocp11.automated.modules.application.Application
 ```
 
+To test that this effectively worked, check the contents of the out folder. You'll see no jars or classes from the modules used to run the apllication. We referenced them running the java command line.
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
