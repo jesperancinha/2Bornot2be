@@ -32,6 +32,7 @@ javac --module-path ../analytics/target:../database/target -d out src/main/appli
 We run our classes
 ## How to run
 ```bash
+java  --class-path out:../analytics/target/analytics-1.0.0-SNAPSHOT.jar:../database/target/database-1.0.0-SNAPSHOT.jar org.jesperancinha.ocp11.automated.modules.application.Application
 java  --module-path out:../analytics/target:../database/target  --module application/org.jesperancinha.ocp11.automated.modules.application.Application
 ```
 
