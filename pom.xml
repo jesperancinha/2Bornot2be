@@ -11,6 +11,7 @@
         <module>java-test-11</module>
         <module>ocp11</module>
         <module>jee7</module>
+        <module>static-revised</module>
         <!--        <module>java-test-15</module>-->
     </modules>
     <name>Java Test Drives</name>
