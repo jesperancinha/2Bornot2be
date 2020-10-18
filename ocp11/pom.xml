@@ -50,6 +50,7 @@
         <module>numbers</module>
         <module>intermediate-operations</module>
         <module>primitive-streams</module>
+        <module>supressed-exception-2</module>
     </modules>
 
     <properties>
