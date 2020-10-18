@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.function.BinaryOperator;
 import java.util.function.DoubleBinaryOperator;
+import java.util.function.DoubleFunction;
+import java.util.function.DoubleUnaryOperator;
 import java.util.stream.Stream;
 
 public class OperatorsRunner {
@@ -13,6 +15,24 @@ public class OperatorsRunner {
         test1();
         test2();
         test3();
+        test4();
+    }
+
+    /**
+     * Let's double the book prices!
+     */
+    private static void test4() {
+        try {
+            var books = List.of(new Book("The Golden Notebook", 11.99), new Book("Beloved", 8.9), new Book("The Left Hand Of Darkness", 10.99), new Book("Mrs Dalloway", 11.99));
+            Stream<Book> bkStrm = books.stream();
+
+            DoubleFunction<DoubleUnaryOperator> doublePrice = m-> n-> n * m;
+            DoubleBinaryOperator bo = (a, b) -> a + b;
+            OptionalDouble total = bkStrm.mapToDouble(Book::getPrice).map(doublePrice.apply(2)).reduce(bo);
+            System.out.printf("Test 4 - This is the total doubling prices, %f\n", total.orElse(0d));
+        } catch (java.lang.ClassCastException e) {
+            System.out.printf("Test 4 - We cannot cast a DoubleBinaryOperator into a BinaryOperator. They sound a like that they are the same, but they are not: %s\n", e.getMessage());
+        }
     }
 
     private static void test3() {
