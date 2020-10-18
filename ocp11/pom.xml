@@ -47,6 +47,7 @@
         <module>automatic-modules</module>
         <module>comparing-then-comparing</module>
         <module>static-revised</module>
+        <module>numbers</module>
     </modules>
 
     <properties>
