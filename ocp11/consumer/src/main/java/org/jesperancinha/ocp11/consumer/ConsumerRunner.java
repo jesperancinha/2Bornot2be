@@ -1,6 +1,7 @@
 package org.jesperancinha.ocp11.consumer;
 
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -14,6 +15,10 @@ public class ConsumerRunner {
         option5(args);
 
         alternative6(args);
+
+        List<Integer> numberList = Arrays.asList(1,2,3,4,5);
+        numberList.forEach(n->n=n+1);
+        numberList.forEach(System.out::println);
     }
 
     private static void alternative6(String[] args) {
