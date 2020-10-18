@@ -46,6 +46,7 @@
         <module>compute-if-present</module>
         <module>automatic-modules</module>
         <module>comparing-then-comparing</module>
+        <module>static-revised</module>
     </modules>
 
     <properties>
