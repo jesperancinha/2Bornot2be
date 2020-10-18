@@ -49,6 +49,7 @@
         <module>static-revised</module>
         <module>numbers</module>
         <module>intermediate-operations</module>
+        <module>primitive-streams</module>
     </modules>
 
     <properties>
