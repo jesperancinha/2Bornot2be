@@ -48,6 +48,7 @@
         <module>comparing-then-comparing</module>
         <module>static-revised</module>
         <module>numbers</module>
+        <module>intermediate-operations</module>
     </modules>
 
     <properties>
