@@ -1,71 +1,29 @@
-# modularity-2
+# jdeps-avocado
 
-## Notes
-
-Always start on the root folder of this module.
-
-## How not to
-
----
-```bash
-javac --module-source-path src src/*/*.java
-```
-Remember that -d is mandatory when using `--module-source-path`.
-Otherwise, we get the following error:
-
-```text
-error: class output directory must be specified if -m option is used
-```
----
-```
-javac --module-source-path src -d out src/tomato/*/*.java
-```
-There is also no wildcard for folders.
-Otherwise, we get the following error:
-
-```text
-error: file not found: src/tomato/*/*.java
-Usage: javac <options> <source files>
-use --help for a list of possible options
-```
----
-```
-javac --module-source-path src -d out src/tomato
-```
-
-What also doesn't work is specifying a package.
-That's not how the command works.
-We need to specify classes. If we have a module though, we can specify it.
-Otherwise, we get the following error:
-
-```text
-error: module not found: src
-error: Class names, 'src/tomato', are only accepted if annotation processing is explicitly requested
-2 errors
-```
-Notice that it interprets src as a whole module.
-Also `src/tomato` and so `tomato` is interpreted as a class.
-
----
+## How to run
 
 ```bash
-javac --module-source-path src --module tomato
+mvn clean install
+cd avocado/src/main
+javac -d target --module-source-path . --module-path ../../../pit/target  $(find avocado -name *.java)
+mkdir out
+jar --create --file out/avocado.jar -C target/avocado .
 ```
 
-Never forget that '-d' is mandatory when using 'm'. 
-Otherwise, we get the following error:
-
-```text
-error: class output directory must be specified if -m option is used
-```
-
----
-
-## How to
+## How to analyse jdeps
 
 ```bash
-javac --module-source-path src -d out --module tomato
+jdeps --class-path out/avocado.jar ../../../pit/target/pit-1.0.0-SNAPSHOT.jar 
 ```
+
+This will result in:
+```text
+pit-1.0.0-SNAPSHOT.jar -> java.base
+   org.jesperancinha.ocp11.pit                        -> java.io                                            java.base
+   org.jesperancinha.ocp11.pit                        -> java.lang                                          java.base
+```
+
+This means that avocado containsa put  which uses two packages. `java.io` and `java.lang`.
 
 ## About me 👨🏽‍💻🚀
 

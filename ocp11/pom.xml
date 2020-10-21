@@ -52,6 +52,7 @@
         <module>primitive-streams</module>
         <module>supressed-exception-2</module>
         <module>modularity-2</module>
+        <module>jdeps-avocado</module>
     </modules>
 
     <properties>
