@@ -41,6 +41,7 @@ Collect and count are methods of the Stream interface which use reduce operation
 -   [Enthuware](https://enthuware.com/)
 -   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
 -   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+-   [Whizlabs](https://www.whizlabs.com/)
 
 ## About me 👨🏽‍💻🚀
 

@@ -51,7 +51,7 @@
         <module>intermediate-operations</module>
         <module>primitive-streams</module>
         <module>supressed-exception-2</module>
-        <module>modulariy-2</module>
+        <module>modularity-2</module>
     </modules>
 
     <properties>
