@@ -54,6 +54,7 @@
         <module>modularity-2</module>
         <module>jdeps-avocado</module>
         <module>resolve</module>
+        <module>reduce-parallel-sinner</module>
     </modules>
 
     <properties>

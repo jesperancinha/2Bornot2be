@@ -1,14 +1,117 @@
-# consumer
+# reduce-parallel-sinner
+
+## Exercise
+
+We will now see that how reduce operations work in parallel.
+Although the reduce operations can be performed in parallel, it's results are not.
+We'll pick up names from the TV series [The Sinner](https://en.wikipedia.org/wiki/The_Sinner_(TV_series)).
 
 ## Output
 
 ```text
-1
-2
-3
-4
-5
+**************************** Try number 1
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 2
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 3
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 4
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 5
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 6
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 7
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 8
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 9
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** Try number 10
+
+He was a victim -> Nick Haas
+He was a victim -> Jamie Burns
+**************************** Done!
+**************************** It probably didn't work! Let's simulate a delay now...
+**************************** Try number 1
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Found Nick HaasJamie Burns!
+**************************** Let's try to reverse the order..
+**************************** Try number 1
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 2
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 3
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 4
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 5
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 6
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 7
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 8
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 9
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** Try number 10
+
+He was a victim -> Nick HaasJamie Burns
+**************************** Done!
+**************************** As you can see, we couldn't create Jamie BurnsNick Haas
 ```
+
+## References
+
+-   [The Sinner](https://en.wikipedia.org/wiki/The_Sinner_(TV_series))
 
 ## About me 👨🏽‍💻🚀
 
