@@ -30,9 +30,13 @@ In this project you will find all my study materials for the OCP 11.
 -   [Relativize](./relativize)
 -   [Stream Sum](./stream-sum)
 
+---
+
 ## Collect and Count
 
 Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+
+---
 
 ## References
 
@@ -43,15 +47,29 @@ Collect and count are methods of the Stream interface which use reduce operation
 -   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 -   [Whizlabs](https://www.whizlabs.com/)
 
+---
+
 ## Java 11 Specs
 
 -   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
 -   [The modular JDK](https://openjdk.java.net/jeps/200)
 
+---
+
 ## The module graph
 
 [![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
-    
+ 
+---
+
+## Achievements
+
+[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+  
+---
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

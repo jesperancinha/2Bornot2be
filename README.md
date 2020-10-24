@@ -22,6 +22,8 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 
+---
+
 ## Description
 
 Java study project.
@@ -42,6 +44,8 @@ It is the support project of the following articles on my blog:
 -   [OCP-11 - 1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819](./ocp11) - OCP SE 11 Exam preparation
 -   [JEE 7 - 1z0-900](./jee7) - Java EE 7 Application Developer Exam Preparation
 
+---
+
 ## Achievements
 
 [![alt text](./badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
@@ -56,6 +60,8 @@ It is the support project of the following articles on my blog:
 -   [Cucumber](https://cucumber.io/)
 -   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
 -   [Hints & Tricks](./Hints&Tricks.md)
+
+---
 
 ## About me 👨🏽‍💻🚀
 
