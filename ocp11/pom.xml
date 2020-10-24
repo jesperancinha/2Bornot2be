@@ -55,6 +55,7 @@
         <module>jdeps-avocado</module>
         <module>resolve</module>
         <module>reduce-parallel-sinner</module>
+        <module>for-each-ordered-2</module>
     </modules>
 
     <properties>
