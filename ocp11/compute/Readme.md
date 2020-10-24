@@ -1,85 +1,47 @@
-# for-each-ordered-2
+# compute
 
 ## Exercise
 
-We will play with for each loops to master our craft.
+We will play with compute this,compute that to master our craft.
 In order to do this we will play with a list of the characters playing in the [pilot episode](https://www.imdb.com/title/tt0087757/) of the [Murder, She wrote](https://en.wikipedia.org/wiki/Murder,_She_Wrote) series.
 We will include the main character, [Jessica Fletcher](https://en.wikipedia.org/wiki/Jessica_Fletcher), played by [Angela Lansbury](https://en.wikipedia.org/wiki/Angela_Lansbury).  
 
 ## Output
 
 ```text
-**** Ordered, but names are inserted in the wrong order ****
-Ashley Vickers
-Bernie
-Caleb McCallum
-Chief Roy Gunderson
-Dexter Baxendale
-Doctor
-Eleanor Thompson
-George
-Grady Fletcher
-Jessica Fletcher
-Kitty Donovan
-Lois Hoey
-Louise McCallum
-Peter Brill
-Preston Giles
-**** Unordered ****
-Ashley Vickers
-Lois Hoey
-Kitty Donovan
-Grady Fletcher
-Preston Giles
-Caleb McCallum
-Bernie
-Jessica Fletcher
-Chief Roy Gunderson
-George
-Louise McCallum
-Doctor
-Eleanor Thompson
-Peter Brill
-Dexter Baxendale
-**** Ordered, and names are inserted in the right order ****
-Ashley Vickers
-Bernie
-Caleb McCallum
-Chief Roy Gunderson
-Dexter Baxendale
-Doctor
-Eleanor Thompson
-George
-Grady Fletcher
-Jessica Fletcher
-Kitty Donovan
-Lois Hoey
-Louise McCallum
-Peter Brill
-Preston Giles
-**** Ordered  ****
-Ashley Vickers
-Bernie
-Caleb McCallum
-Chief Roy Gunderson
-Dexter Baxendale
-Doctor
-Eleanor Thompson
-George
-Grady Fletcher
-Jessica Fletcher
-Kitty Donovan
-Lois Hoey
-Louise McCallum
-Peter Brill
-Preston Giles
+This is the pilot episode
+{The Murder of Sherlock Holmes=[Jessica Fletcher, Bernie, Kitty Donovan, Peter Brill, George, Louise McCallum, Grady Fletcher, Ashley Vickers, Dexter Baxendale, Doctor, Chief Roy Gunderson, Preston Giles, Caleb McCallum, Eleanor Thompson, Lois Hoey]}
+We now compute it and reset the episod to the main character
+>>>The Murder of Sherlock Holmes
+{The Murder of Sherlock Holmes=[Jessica Fletcher]}
+We try to make episode 1, but only if it exists. It will probably not work
+{The Murder of Sherlock Holmes=[Jessica Fletcher]}
+As you can see, it didn't!
+null
+And of course since we couldn't do anything with IfPresent, we didn't get our first episode with the character list
+Let's compute it!
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+>>>Deadly Lady
+{Deadly Lady=[Jessica Fletcher, Capt. Ethan Cragg, Sheriff Amos Tupper, Nancy Earl, Ralph / Stephen Earl, Maggie Earl, Terry Jones, Grace Earl Lamont, Brian Shelby, Lisa Earl Shelby, Jonathan Bailey, Emma, Nils Andersen, Elias Cobb], The Murder of Sherlock Holmes=[Jessica Fletcher]}
 
 Process finished with exit code 0
 ```
-
 ## References
 
--   [Murder, She wrote - Pilot Episodes](https://www.imdb.com/title/tt0087757/)
+-   [Murder, She wrote - The Murder of Sherlock Holmes](https://www.imdb.com/title/tt0087757/)
+-   [Murder, She wrote - Deadly Lady](https://www.imdb.com/title/tt0653488/)
 
 ## About me 👨🏽‍💻🚀
 
