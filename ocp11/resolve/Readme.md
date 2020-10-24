@@ -1,29 +1,15 @@
-# jdeps-avocado
+# resolve
 
-## How to run
+## Exercise
 
-```bash
-mvn clean install
-cd avocado/src/main
-javac -d target --module-source-path . --module-path ../../../pit/target  $(find avocado -name *.java)
-mkdir out
-jar --create --file out/avocado.jar -C target/avocado .
-```
+Resolve can be complicated understand to newbies. 
+One great way to think about it is to [CD](https://en.wikipedia.org/wiki/Cd_(command)) it. 
+Can you guess why I'm saying this❔
+We'll use names from [The Sinner](https://en.wikipedia.org/wiki/The_Sinner_(TV_series)) TV series to make our example easier to understand.
 
-## How to analyse jdeps
+## References
 
-```bash
-jdeps --class-path out/avocado.jar ../../../pit/target/pit-1.0.0-SNAPSHOT.jar 
-```
-
-This will result in:
-```text
-pit-1.0.0-SNAPSHOT.jar -> java.base
-   org.jesperancinha.ocp11.pit                        -> java.io                                            java.base
-   org.jesperancinha.ocp11.pit                        -> java.lang                                          java.base
-```
-
-This means that avocado contains uses a pit which uses two packages. `java.io` and `java.lang`.
+-   [The Sinner](https://en.wikipedia.org/wiki/The_Sinner_(TV_series))
 
 ## About me 👨🏽‍💻🚀
 

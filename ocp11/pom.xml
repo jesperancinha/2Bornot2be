@@ -53,6 +53,7 @@
         <module>supressed-exception-2</module>
         <module>modularity-2</module>
         <module>jdeps-avocado</module>
+        <module>resolve</module>
     </modules>
 
     <properties>
