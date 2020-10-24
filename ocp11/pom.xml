@@ -62,6 +62,7 @@
         <module>average</module>
         <module>predicates-2</module>
         <module>modularity-oysters</module>
+        <module>max-calc</module>
     </modules>
 
     <properties>

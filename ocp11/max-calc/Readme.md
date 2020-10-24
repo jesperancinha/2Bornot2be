@@ -1,20 +1,4 @@
-# modularity-oysters
-
-## How not to
-
-```bash
-java -p ./beach/src/main:./pearl-finder/src/main:./sand/src/main -cp oyster/target -m pearl.finder/org.jesperancinha.ocp11.pearl.finder.PearlFinderRunner
-java --module-source-path ./pearl-finder/src/main -cp ./oyster/target -m pearl.finder/org.jesperancinha.ocp11.pearl.finder.PearlFinderRunner
-```
-
-## How to
-
-```bash
-javac --module-source-path ./sand/src/main -p ./oyster/target -d out --module sand
-javac --module-source-path ./beach/src/main -p ./out -d out --module beach
-javac --module-source-path ./pearl-finder/src/main -p ./out -d out --module pearl.finder
-java -p ./out:./oyster/target -m pearl.finder/org.jesperancinha.ocp11.pearl.finder.PearlFinderRunner
-```
+# max-calc
 
 ## About me 👨🏽‍💻🚀
 
