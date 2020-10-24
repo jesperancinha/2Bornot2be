@@ -31,6 +31,8 @@
         <module>filter</module>
         <module>usage</module>
         <module>api</module>
+        <module>usage-impl</module>
+        <module>filter-impl</module>
     </modules>
 
 </project>

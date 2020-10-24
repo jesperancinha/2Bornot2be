@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>filter</artifactId>
+    <artifactId>usage-impl</artifactId>
 
     <build>
         <defaultGoal>install</defaultGoal>
@@ -28,7 +28,7 @@
     <dependencies>
         <dependency>
             <groupId>org.jesperancinha.jtd</groupId>
-            <artifactId>api</artifactId>
+            <artifactId>filter-impl</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

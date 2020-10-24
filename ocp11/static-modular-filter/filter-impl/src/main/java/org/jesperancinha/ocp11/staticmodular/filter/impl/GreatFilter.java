@@ -1,4 +1,4 @@
-package org.jesperancinha.ocp11.staticmodular.filter;
+package org.jesperancinha.ocp11.staticmodular.filter.impl;
 
 import org.jesperancinha.ocp11.staticmodular.api.Filter;
 

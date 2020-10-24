@@ -1,11 +1,4 @@
-# static-modular-filter
-
-## Exercise
-
-We will have a look at two ways of providing implementations using modularity:
-
-1. Using `implements`
-2. Using static `provider`'s
+# filter-impl
 
 ## About me 👨🏽‍💻🚀
 
