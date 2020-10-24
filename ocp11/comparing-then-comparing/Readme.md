@@ -1,5 +1,19 @@
 # comparing-then-comparing
 
+## Output
+
+```text
+[Film{title='Shadows and the Fog', leadingRole='Jodie Foster', year=1991, rottenTomatoes=52.0}
+, Film{title='Silence of the Lambs', leadingRole='Jodie Foster', year=1991, rottenTomatoes=96.0}
+, Film{title='Nell', leadingRole='Jodie Foster', year=1994, rottenTomatoes=55.0}
+, Film{title='Maverick', leadingRole='Jodie Foster', year=1994, rottenTomatoes=66.0}
+, Film{title='Who's That Girl', leadingRole='Madonna', year=1987, rottenTomatoes=38.0}
+, Film{title='Body of Evidence', leadingRole='Madonna', year=1993, rottenTomatoes=8.0}
+, Film{title='Dangerous Game', leadingRole='Madonna', year=1993, rottenTomatoes=31.0}
+, Film{title='Evita', leadingRole='Madonna', year=1996, rottenTomatoes=63.0}
+]
+```
+
 ## References
 
 -   [Madonna Filmography](https://en.wikipedia.org/wiki/Madonna_filmography)

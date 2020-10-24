@@ -7,6 +7,19 @@ One great way to think about it is to [CD](https://en.wikipedia.org/wiki/Cd_(com
 Can you guess why I'm saying this❔
 We'll use names from [The Sinner](https://en.wikipedia.org/wiki/The_Sinner_(TV_series)) TV series to make our example easier to understand.
 
+## Output
+
+```text
+HarryAmbrose  resolves /tmp/thesinner
+/tmp/thesinner
+/tmp/thesinner  resolves HarryAmbrose
+/tmp/thesinner/HarryAmbrose
+/tmp/thesinner/NickHaas  resolves /tmp/thesinner
+/tmp/thesinner
+/tmp/thesinner  resolves /tmp/thesinner/NickHaas
+/tmp/thesinner/NickHaas
+```
+
 ## References
 
 -   [The Sinner](https://en.wikipedia.org/wiki/The_Sinner_(TV_series))

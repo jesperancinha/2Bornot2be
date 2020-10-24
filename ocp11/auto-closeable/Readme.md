@@ -6,6 +6,8 @@ In this module we can see different important situations about the AutoCloseable
 2. Closeable extends Autocloseable and can throw an IOException
 3. The order the object creation is opposite to the object closing.
 
+## Output
+
 ```bash
 org.jesperancinha.ocp11.autocloseable.LVBagCloseable@3b81a1bc-org.jesperancinha.ocp11.autocloseable.ViperBagAutocloseable@64616ca2
 Your Viper Bag has been closed!

@@ -9,6 +9,17 @@ We can extrapolate this to other types of interfaces.
 Data was taken from the statistics on Lung cancer in Europe for 2017 on the 6th of October 2020. The source is [Eurostat - Statistics Explained](https://ec.europa.eu/eurostat/statistics-explained/index.php/Main_Page)
 
 [Causes of death — malignant neoplasms of trachea, bronchus and lung, residents, 2017](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Causes_of_death_%E2%80%94_malignant_neoplasms_of_trachea,_bronchus_and_lung,_residents,_2017_Health20.png)
+
+## Output
+
+```text
+OptionalInt[5856]
+307349
+307349
+307349
+307349
+```
+
 ## References
 
 -   [Causes of death — malignant neoplasms of trachea, bronchus and lung, residents, 2017](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Causes_of_death_%E2%80%94_malignant_neoplasms_of_trachea,_bronchus_and_lung,_residents,_2017_Health20.png)

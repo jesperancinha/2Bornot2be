@@ -1,5 +1,14 @@
 # consumer
 
+## Output
+
+```text
+1
+2
+3
+4
+5
+```
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
