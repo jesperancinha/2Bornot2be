@@ -58,6 +58,7 @@
         <module>for-each-ordered-2</module>
         <module>compute</module>
         <module>any-match</module>
+        <module>disambiguity-beans</module>
     </modules>
 
     <properties>

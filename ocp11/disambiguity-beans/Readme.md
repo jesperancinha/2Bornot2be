@@ -1,14 +1,20 @@
-# any-match
+# disambiguity-beans
 
 ## Exercise
 
-We just want to test anyMatch in this case.
-Remember that it only returns if it has found any match for the given predicate.
+In this exercise we'll see how Java solves ambiguities.
+In this case one class is trying to implement two interfaces which share the same default method.
+It is impossible to solve ambiguities if two default interface methods have the same signature.
+However, if the subclass implements the same method, it will override the other two and therefore disambiguate the situation and allow a successful compilation.
 
-## References
+## Output 
 
--   [The quick brown fox jumps over the lazy dog](https://en.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog)
+```text
+This is a great Bean Plant Color!
+green
 
+Process finished with exit code 0
+```
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
