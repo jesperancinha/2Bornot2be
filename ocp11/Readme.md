@@ -53,6 +53,7 @@ Collect and count are methods of the Stream interface which use reduce operation
 
 -   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
 -   [The modular JDK](https://openjdk.java.net/jeps/200)
+-   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 
