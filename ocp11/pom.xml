@@ -61,6 +61,7 @@
         <module>disambiguity-beans</module>
         <module>average</module>
         <module>predicates-2</module>
+        <module>modularity-oysters</module>
     </modules>
 
     <properties>
