@@ -1,20 +1,9 @@
-# disambiguity-beans
+# average
 
 ## Exercise
 
-In this exercise we'll see how Java solves ambiguities.
-In this case one class is trying to implement two interfaces which share the same default method.
-It is impossible to solve ambiguities if two default interface methods have the same signature.
-However, if the subclass implements the same method, it will override the other two and therefore disambiguate the situation and allow a successful compilation.
-
-## Output 
-
-```text
-This is a great Bean Plant Color!
-green
-
-Process finished with exit code 0
-```
+How can we calculate averages?
+Can we get a result different than double using streams?
 
 ## About me 👨🏽‍💻🚀
 

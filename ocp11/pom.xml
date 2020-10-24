@@ -59,6 +59,7 @@
         <module>compute</module>
         <module>any-match</module>
         <module>disambiguity-beans</module>
+        <module>average</module>
     </modules>
 
     <properties>
