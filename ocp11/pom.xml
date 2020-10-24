@@ -57,6 +57,7 @@
         <module>reduce-parallel-sinner</module>
         <module>for-each-ordered-2</module>
         <module>compute</module>
+        <module>any-match</module>
     </modules>
 
     <properties>
