@@ -60,6 +60,7 @@
         <module>any-match</module>
         <module>disambiguity-beans</module>
         <module>average</module>
+        <module>predicates-2</module>
     </modules>
 
     <properties>
