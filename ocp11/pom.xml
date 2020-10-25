@@ -70,6 +70,7 @@
         <module>modularity-one</module>
         <module>flat-mapping-arrays-lists</module>
         <module>optional</module>
+        <module>collectors-count</module>
     </modules>
 
     <properties>
