@@ -69,6 +69,7 @@
         <module>switch-casing</module>
         <module>modularity-one</module>
         <module>flat-mapping-arrays-lists</module>
+        <module>optional</module>
     </modules>
 
     <properties>
