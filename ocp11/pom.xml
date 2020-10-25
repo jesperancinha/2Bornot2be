@@ -71,6 +71,7 @@
         <module>flat-mapping-arrays-lists</module>
         <module>optional</module>
         <module>collectors-count</module>
+        <module>collectors-partition-order</module>
     </modules>
 
     <properties>
