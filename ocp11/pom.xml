@@ -63,6 +63,7 @@
         <module>predicates-2</module>
         <module>modularity-oysters</module>
         <module>max-calc</module>
+        <module>system-properties</module>
     </modules>
 
     <properties>
