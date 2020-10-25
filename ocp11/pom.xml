@@ -68,6 +68,7 @@
         <module>file-paths-2</module>
         <module>switch-casing</module>
         <module>modularity-one</module>
+        <module>flat-mapping-arrays-lists</module>
     </modules>
 
     <properties>
