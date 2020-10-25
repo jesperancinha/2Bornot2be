@@ -1,11 +1,18 @@
-# stream-sum
+# switch-casing
+
+## References
+
+-   [The greatest films by year](https://www.filmsite.org/greatestfilms-byyear.html)
+-   [Broken Blossoms](https://www.imdb.com/title/tt0009968)
+-   [Alibi](https://www.imdb.com/title/tt0019630)
 
 ## Output
 
 ```text
-listIntegers.stream().reduce(0, (a, b) -> a + b); 6,000000 
-listIntegers.stream().mapToInt(x -> x).sum(); 6,000000
-doubleStream.filter(x -> x % 3 == 0).sum(); 18,000000
+We found this film as being the best film of 1919 using different methods
+- Switching Integer -> Broken Blossoms
+- Switching Short -> Broken Blossoms
+- Switching Conversion From String to Integer -> Broken Blossoms
 ```
 
 ## About me 👨🏽‍💻🚀

@@ -65,6 +65,8 @@
         <module>max-calc</module>
         <module>system-properties</module>
         <module>streams-filter</module>
+        <module>file-paths-2</module>
+        <module>switch-casing</module>
     </modules>
 
     <properties>

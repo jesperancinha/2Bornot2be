@@ -1,11 +1,14 @@
-# stream-sum
+# file-paths-2
 
 ## Output
 
 ```text
-listIntegers.stream().reduce(0, (a, b) -> a + b); 6,000000 
-listIntegers.stream().mapToInt(x -> x).sum(); 6,000000
-doubleStream.filter(x -> x % 3 == 0).sum(); 18,000000
+For file /tmp/blueberries/acacias/goats, these are its properties:
+Root -> /
+Number of names -> 4
+Fist name-> tmp
+Second name-> blueberries
+First to Third (remember its exclusive) name-> blueberries/acacias
 ```
 
 ## About me 👨🏽‍💻🚀
