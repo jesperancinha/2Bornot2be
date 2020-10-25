@@ -72,6 +72,7 @@
         <module>optional</module>
         <module>collectors-count</module>
         <module>collectors-partition-order</module>
+        <module>functions</module>
     </modules>
 
     <properties>

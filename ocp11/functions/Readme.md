@@ -1,8 +1,16 @@
-# collectors-partition-order
+# functions
+
+## Exercise
+
+We want to understand more about functions.
+For this we will use data from the amazing landscapes of South Africa.
+We will use the Helderberg Mountainand the Flag Boshielo Dam for our calculations and examples.
+
 ## References
 
--   [Meaning of numbers in The Bible](https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/introduction.html)
--   [42](https://en.wikipedia.org/wiki/42_(number))
+-   [Helderberg South Africa](https://www.zuid-afrika.nl/zuid-afrika/reisgids/west-kaap/helderberg/)
+-   [Schuinsdraai Nature Reserve - South Africa](https://www.sa-venues.com/game-reserves/schuinsdraai.php)
+-   [Flag Boshielo/Arabie Dam](http://www.rccdams.co.uk/dams/flag-boshielo---formerly-arabie/)
 
 ## About me 👨🏽‍💻🚀
 
