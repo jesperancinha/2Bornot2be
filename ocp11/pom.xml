@@ -67,6 +67,7 @@
         <module>streams-filter</module>
         <module>file-paths-2</module>
         <module>switch-casing</module>
+        <module>modularity-one</module>
     </modules>
 
     <properties>
