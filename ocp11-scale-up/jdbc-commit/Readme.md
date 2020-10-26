@@ -1,64 +1,16 @@
-# concurrency-callable
+# jdbc-commit
 
 ## Exercise
 
-A callable doesn't have to know what to do with itself. Neither does a runnable.
-However a callable can be, as the name implies, called! 📞
-A Runnable cannot ✋.
-
+Examining default configurations for the JDBC libraries provided in the SDK
 ## Output
 
 ```text
------- Starting callable...
------- Failing callable...
------- Starting runnable...
-java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$0(CallableRunner.java:16)
-	at org.jesperancinha.ocp11.callable.CallableRunner.main(CallableRunner.java:35)
------- Failing runnable...
------- I don't know if Runnable was a success...
-Let's try all of this with executors...
------- Starting callable...
------- Starting runnable...
-java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$1(CallableRunner.java:28)
-	at org.jesperancinha.ocp11.callable.CallableRunner.main(CallableRunner.java:44)
------- Failing callable...
------- Failing runnable...
-java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$1(CallableRunner.java:28)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-******************* When there is an exception we can re-throw it via the callable future:
-******************* When there is an exception we get just a null fia the runnable future
-null
-Exception in thread "main" java.util.concurrent.ExecutionException: java.lang.Exception: I don't know what to do with myself
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.jesperancinha.ocp11.callable.CallableRunner.main(CallableRunner.java:57)
-Caused by: java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$0(CallableRunner.java:16)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
+Connection: H2 / UNNAMED
+Current auto-commit setting: true
+
+Process finished with exit code 0
 ```
-
-## References
-
--   [Dusty Springfield - I don't know what to do with myself](https://www.youtube.com/watch?v=aNdOlOXPtRI)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=aNdOlOXPtRI">
-     <img 
-      src="https://img.youtube.com/vi/aNdOlOXPtRI/0.jpg" 
-      style="width:10%;">
-      </a>
-    </div>
-
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

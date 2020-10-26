@@ -12,8 +12,10 @@
     <artifactId>ocp11-scale-up</artifactId>
 
     <packaging>pom</packaging>
+
     <modules>
         <module>concurrency-callable</module>
+        <module>jdbc-commit</module>
     </modules>
 
 </project>
