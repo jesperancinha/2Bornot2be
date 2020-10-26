@@ -1,67 +1,96 @@
-# java-test-drives
+# ocp11-scale-up (Oracle Certified Professional Java SE 11)
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives) 
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
+## Introduction
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
+OCP 11 studies - Level 2
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
+## Topics and coverage
+
+Given that the topics covered on [oc11](../ocp11) are very basic, I have decided to create this extra repository in order to further deepen my knowledge on the OCP11.
+
+From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
+
+Subjects covered:
+
+1. Working with Java data types
+    - Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting
+    - Handle text using String and StringBuilder classes
+    - Use local variable type inference, including as lambda parameters
+2. Java Object-Oriented Approach
+    - Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection)
+    - Define and use fields and methods, including instance, static and overloaded methods
+    - Initialize objects and their members using instance and static initialiser statements and constructors
+    - Understand variable scopes, apply encapsulation and make objects immutable
+    - Create and use subclasses and superclasses, including abstract classes
+    - Utilize polymorphism and casting to call methods, differentiate object type versus reference type
+    - Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods
+    - Create and use enumerations
+3. Working with Arrays and Collections
+    - Use generics, including wildcards
+    - Use a Java array and List, Set, Map and Deque collections, including convenience methods
+    - Sort collections and arrays using Comparator and Comparable interfaces
+4. Java Platform Module System
+    - Deploy and execute modular applications, including automatic modules
+    - Declare, use, and expose modules, including the use of services
+5. Java I/O API
+    - Read and write console and file data using I/O Streams
+    - Implement serialization and deserialization techniques on Java objects
+    - Handle file system objects using java.nio.file API
+6. Database Applications with JDBC
+    - Connect to and perform database SQL operations, process query results using JDBC API
+7. Annotations
+    - Create, apply, and process annotations
+8. Controlling Program Flow
+    - Create and use loops, if/else, and switch statements
+9. Exception Handling
+    - Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
+    - Create and use custom exceptions
+10. Working with Streams and Lambda expressions
+    - Implement functional interfaces using lambda expressions, including interfaces from the java.util.function package
+    - Use Java Streams to filter, transform and process data
+    - Perform decomposition and reduction, including grouping and partitioning on sequential and parallel streams
+11. Concurrency
+    - Create worker threads using Runnable and Callable, and manage concurrency using an ExecutorService and java.util.concurrent API
+    - Develop thread-safe code, using different locking mechanisms and java.util.concurrent API
+12. Secure Coding in Java SE Application
+    - Develop code that mitigates security threats such as denial of service, code injection, input validation and ensure data integrity
+    - Secure resource access including filesystems, manage policies and execute privileged code
+13. Localization
+    - Implement Localization using Locale, resource bundles, and Java APIs to parse and format messages, dates, and numbers
 
 ---
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
+## References
+
+-   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+-   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+-   [Enthuware](https://enthuware.com/)
+-   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+-   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+-   [Whizlabs](https://www.whizlabs.com/)
 
 ---
 
-## Description
+## Java 11 Specs
 
-Java study project.
+-   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+-   [The modular JDK](https://openjdk.java.net/jeps/200)
+-   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
-This project is intended as a study tool for the latest Java version. To find out the current version in study please check the details in the [pom.xml](pom.xml) file
+---
 
-It is the support project of the following articles on my blog:
+## The module graph
 
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
-
-## Contents
-
--   [java-test-11](./java-test-11) - Java 11 test mini projects
--   [java-test-15](./java-test-15) - Java 15 test mini projects
--   [OCP-11 - 1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819](./ocp11) - OCP SE 11 Exam preparation
--   [OCP-11 - 1z0-819](./ocp11-scale-up) - OCP SE 11 Exam preparation specific for 1z0-819
--   [JEE 7 - 1z0-900](./jee7) - Java EE 7 Application Developer Exam Preparation
-
+[![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
+ 
 ---
 
 ## Achievements
 
-[![alt text](./badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](./badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](./badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
-
----
-
-## References:
-
--   [Fitnesse](http://www.fitnesse.org/FrontPage)
--   [Cucumber](https://cucumber.io/)
--   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
--   [Hints & Tricks](./Hints&Tricks.md)
-
+[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+  
 ---
 
 ## About me 👨🏽‍💻🚀

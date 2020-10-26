@@ -1,69 +1,23 @@
-# java-test-drives
+# concurrency-callable
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives) 
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
+## Exercise
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
+A callable doesn't have to know what to do with itself. Neither does a runnable.
+However a callable can be, as the name implies, called! 📞
+A Runnable cannot ✋.
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
+## References
 
----
+-   [Dusty Springfield - I don't know what to do with myself](https://www.youtube.com/watch?v=aNdOlOXPtRI)
 
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
-
----
-
-## Description
-
-Java study project.
-
-This project is intended as a study tool for the latest Java version. To find out the current version in study please check the details in the [pom.xml](pom.xml) file
-
-It is the support project of the following articles on my blog:
-
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
-
-## Contents
-
--   [java-test-11](./java-test-11) - Java 11 test mini projects
--   [java-test-15](./java-test-15) - Java 15 test mini projects
--   [OCP-11 - 1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819](./ocp11) - OCP SE 11 Exam preparation
--   [OCP-11 - 1z0-819](./ocp11-scale-up) - OCP SE 11 Exam preparation specific for 1z0-819
--   [JEE 7 - 1z0-900](./jee7) - Java EE 7 Application Developer Exam Preparation
-
----
-
-## Achievements
-
-[![alt text](./badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](./badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](./badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
-
----
-
-## References:
-
--   [Fitnesse](http://www.fitnesse.org/FrontPage)
--   [Cucumber](https://cucumber.io/)
--   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
--   [Hints & Tricks](./Hints&Tricks.md)
-
----
-
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=aNdOlOXPtRI">
+     <img 
+      src="https://img.youtube.com/vi/aNdOlOXPtRI/0.jpg" 
+      style="width:10%;">
+      </a>
+    </div>
+    
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
