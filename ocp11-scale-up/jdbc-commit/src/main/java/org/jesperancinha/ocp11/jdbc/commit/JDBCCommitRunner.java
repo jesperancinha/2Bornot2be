@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 /**
- * Remember that autocommit is always true
+ * Remember that autocommit is always true by default
  */
 public class JDBCCommitRunner {
     public static void main(String[] args) {
