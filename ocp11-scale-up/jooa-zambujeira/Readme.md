@@ -38,7 +38,6 @@ Process finished with exit code 0
 -   [Zambujeira do Mar - Portugal](https://goo.gl/maps/qoBx2ZHSGeLHWEGb9)
 -   [MEO Sudoeste](https://sudoeste.meo.pt/en)
 
-
 <div align="center">
       <a href="https://www.youtube.com/watch?v=iUgIL5pbb0M">
      <img 

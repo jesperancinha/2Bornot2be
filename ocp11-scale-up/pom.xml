@@ -20,6 +20,7 @@
         <module>annotations-books</module>
         <module>cpf-bills</module>
         <module>jooa-zambujeira</module>
+        <module>wwjdt-safari</module>
     </modules>
 
 </project>
