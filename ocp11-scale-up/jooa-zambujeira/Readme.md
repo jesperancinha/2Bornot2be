@@ -38,6 +38,15 @@ Process finished with exit code 0
 -   [Zambujeira do Mar - Portugal](https://goo.gl/maps/qoBx2ZHSGeLHWEGb9)
 -   [MEO Sudoeste](https://sudoeste.meo.pt/en)
 
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=iUgIL5pbb0M">
+     <img 
+      src="https://img.youtube.com/vi/iUgIL5pbb0M/0.jpg" 
+      style="width:10%;">
+      </a>
+    </div>
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
