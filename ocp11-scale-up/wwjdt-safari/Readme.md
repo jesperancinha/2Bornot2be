@@ -202,8 +202,6 @@ Finally Palesa decides to go back to Cape Town.
 With so much baggage on her and the muscles much stronger than ever, the walk of ٌ km, seem peanuts for her now.
 First, she takes another glass of whine, with her sister Nyarai, and finally Palesa returns home to her beloved Raithby district.
 The Helderberg mountain in the distance gives her a very heart warming feeling during the sunset.
-
-
 Process finished with exit code 0
 ```
 ##  References

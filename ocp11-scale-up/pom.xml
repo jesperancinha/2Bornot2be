@@ -21,6 +21,7 @@
         <module>cpf-bills</module>
         <module>jooa-zambujeira</module>
         <module>wwjdt-safari</module>
+        <module>wwac-navigation</module>
     </modules>
 
 </project>
