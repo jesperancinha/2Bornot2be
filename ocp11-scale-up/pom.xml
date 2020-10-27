@@ -19,6 +19,7 @@
         <module>jooa-roast</module>
         <module>annotations-books</module>
         <module>cpf-bills</module>
+        <module>jooa-zambujeira</module>
     </modules>
 
 </project>

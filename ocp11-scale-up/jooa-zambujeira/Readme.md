@@ -1,36 +1,42 @@
-# cpf-bills
+# jooa-zambujeira
 
 ## Exercise
 
-Let's just check this assignment options. 
-There are a lot, but the complicated ones are fairly forgotten most of the time.
-Let's revive this using data from [Destiny's Child](https://en.wikipedia.org/wiki/Destiny%27s_Child) video for [Bills, Bills Bills](https://en.wikipedia.org/wiki/Bills,_Bills,_Bills).
+We will revise here the concepts of shadowing within the inner and outer classes realm.
+Our data will be coming from the worldwide well known [MEO Sudoeste](https://sudoeste.meo.pt/en) and we will be looking at the predicted listings for 2021.
+This data was taken on the 27th October 2020.
 
 ## Output
 
 ```text
-Destiny's Child single Bills, Bills, Bills stayed on the charts for 20 weeks
-It's peak year was 1999
-It's peak month was 7
-Do people still listen to this single? true
-Our variables are a=20, b=1999, c=7, d=Bills, Bills, Bills, f=true
+Concert MEO Sudoeste 2021 has started 
+Artist Bad Bunny has started playing at 2020-08-04 in festival MEO Sudoeste 2021
+Artist Bad Bunny has stopped playing at 2020-08-04 in festival MEO Sudoeste 2021
+Artist Profjam has started playing at 2020-08-04 in festival MEO Sudoeste 2021
+Artist Profjam has stopped playing at 2020-08-04 in festival MEO Sudoeste 2021
+Artist Major Lazer has started playing at 2020-08-05 in festival Zambujeira do mar 2021
+Artist Major Lazer has stopped playing at 2020-08-05 in festival Zambujeira do mar 2021
+Artist Meduza has started playing at 2020-08-05 in festival MEO Sudoeste 2021
+Artist Meduza has stopped playing at 2020-08-05 in festival MEO Sudoeste 2021
+Artist Deejay Telio has started playing at 2020-08-05 in festival MEO Sudoeste 2021
+Artist Deejay Telio has stopped playing at 2020-08-05 in festival MEO Sudoeste 2021
+Artist Melim has started playing at 2020-08-06 in festival MEO Sudoeste 2021
+Artist Melim has stopped playing at 2020-08-06 in festival MEO Sudoeste 2021
+Artist Ozuna has started playing at 2020-08-06 in festival MEO Sudoeste 2021
+Artist Ozuna has stopped playing at 2020-08-06 in festival MEO Sudoeste 2021
+Artist Timmy Trumpet has started playing at 2020-08-07 in festival MEO Sudoeste 2021
+Artist Timmy Trumpet has stopped playing at 2020-08-07 in festival MEO Sudoeste 2021
+Artist Bispo has started playing at 2020-08-07 in festival MEO Sudoeste 2021
+Artist Bispo has stopped playing at 2020-08-07 in festival MEO Sudoeste 2021
+Concert MEO Sudoeste 2021 has stopped 
 
 Process finished with exit code 0
 ```
 
 ## References
 
--   [Bills, Bills Bills on the Bilboard Charts in 1999](https://www.billboard.com/music/destinys-child/chart-history/HSI/song/63311)
--   [Bills, Bills Bills](https://en.wikipedia.org/wiki/Bills,_Bills,_Bills)
--   [Destiny's Child - Bills, Bills, Bills (Official Video)](https://www.youtube.com/watch?v=NiF6-0UTqtc)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=NiF6-0UTqtc">
-     <img 
-      src="https://img.youtube.com/vi/NiF6-0UTqtc/0.jpg" 
-      style="width:10%;">
-      </a>
-    </div>
+-   [Zambujeira do Mar - Portugal](https://goo.gl/maps/qoBx2ZHSGeLHWEGb9)
+-   [MEO Sudoeste](https://sudoeste.meo.pt/en)
 
 ## About me 👨🏽‍💻🚀
 
