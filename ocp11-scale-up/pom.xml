@@ -18,6 +18,7 @@
         <module>jdbc-commit</module>
         <module>jooa-roast</module>
         <module>annotations-books</module>
+        <module>cpf-bills</module>
     </modules>
 
 </project>
