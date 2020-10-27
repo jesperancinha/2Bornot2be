@@ -10,24 +10,24 @@ This data was taken on the 27th October 2020.
 
 ```text
 Concert MEO Sudoeste 2021 has started 
-Artist Bad Bunny has started playing at 2020-08-04 in festival MEO Sudoeste 2021
-Artist Bad Bunny has stopped playing at 2020-08-04 in festival MEO Sudoeste 2021
-Artist Profjam has started playing at 2020-08-04 in festival MEO Sudoeste 2021
-Artist Profjam has stopped playing at 2020-08-04 in festival MEO Sudoeste 2021
-Artist Major Lazer has started playing at 2020-08-05 in festival Zambujeira do mar 2021
-Artist Major Lazer has stopped playing at 2020-08-05 in festival Zambujeira do mar 2021
-Artist Meduza has started playing at 2020-08-05 in festival MEO Sudoeste 2021
-Artist Meduza has stopped playing at 2020-08-05 in festival MEO Sudoeste 2021
-Artist Deejay Telio has started playing at 2020-08-05 in festival MEO Sudoeste 2021
-Artist Deejay Telio has stopped playing at 2020-08-05 in festival MEO Sudoeste 2021
-Artist Melim has started playing at 2020-08-06 in festival MEO Sudoeste 2021
-Artist Melim has stopped playing at 2020-08-06 in festival MEO Sudoeste 2021
-Artist Ozuna has started playing at 2020-08-06 in festival MEO Sudoeste 2021
-Artist Ozuna has stopped playing at 2020-08-06 in festival MEO Sudoeste 2021
-Artist Timmy Trumpet has started playing at 2020-08-07 in festival MEO Sudoeste 2021
-Artist Timmy Trumpet has stopped playing at 2020-08-07 in festival MEO Sudoeste 2021
-Artist Bispo has started playing at 2020-08-07 in festival MEO Sudoeste 2021
-Artist Bispo has stopped playing at 2020-08-07 in festival MEO Sudoeste 2021
+Artist Bad Bunny has started playing at 2021-08-04 in festival MEO Sudoeste 2021
+Artist Bad Bunny has stopped playing at 2021-08-04 in festival MEO Sudoeste 2021
+Artist Profjam has started playing at 2021-08-04 in festival MEO Sudoeste 2021
+Artist Profjam has stopped playing at 2021-08-04 in festival MEO Sudoeste 2021
+Artist Major Lazer has started playing at 2021-08-05 in festival Zambujeira do mar 2021
+Artist Major Lazer has stopped playing at 2021-08-05 in festival Zambujeira do mar 2021
+Artist Meduza has started playing at 2021-08-05 in festival MEO Sudoeste 2021
+Artist Meduza has stopped playing at 2021-08-05 in festival MEO Sudoeste 2021
+Artist Deejay Telio has started playing at 2021-08-05 in festival MEO Sudoeste 2021
+Artist Deejay Telio has stopped playing at 2021-08-05 in festival MEO Sudoeste 2021
+Artist Melim has started playing at 2021-08-06 in festival MEO Sudoeste 2021
+Artist Melim has stopped playing at 2021-08-06 in festival MEO Sudoeste 2021
+Artist Ozuna has started playing at 2021-08-06 in festival MEO Sudoeste 2021
+Artist Ozuna has stopped playing at 2021-08-06 in festival MEO Sudoeste 2021
+Artist Timmy Trumpet has started playing at 2021-08-07 in festival MEO Sudoeste 2021
+Artist Timmy Trumpet has stopped playing at 2021-08-07 in festival MEO Sudoeste 2021
+Artist Bispo has started playing at 2021-08-07 in festival MEO Sudoeste 2021
+Artist Bispo has stopped playing at 2021-08-07 in festival MEO Sudoeste 2021
 Concert MEO Sudoeste 2021 has stopped 
 
 Process finished with exit code 0

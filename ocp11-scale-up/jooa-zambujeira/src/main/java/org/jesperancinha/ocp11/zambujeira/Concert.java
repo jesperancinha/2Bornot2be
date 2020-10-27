@@ -97,15 +97,15 @@ public class Concert {
     public static void startTheFestival(){
         final var concert = new Concert("MEO Sudoeste 2021");
 
-        var artist1 = concert.new Act("Major Lazer", LocalDate.of(2020,8,5), "Zambujeira do mar 2021");
-        var artist2 = concert.new FestivalAct("Bad Bunny", LocalDate.of(2020,8,4));
-        var artist3 = concert.new FestivalAct("Meduza", LocalDate.of(2020,8,5));
-        var artist4 = concert.new FestivalAct("Profjam", LocalDate.of(2020,8,4));
-        var artist5 = concert.new FestivalAct("Bispo", LocalDate.of(2020,8,7));
-        var artist6 = concert.new FestivalAct("Deejay Telio", LocalDate.of(2020,8,5));
-        var artist7 = concert.new FestivalAct("Melim", LocalDate.of(2020,8,6));
-        var artist8 = concert.new FestivalAct("Timmy Trumpet", LocalDate.of(2020,8,7));
-        var artist9 = concert.new FestivalAct("Ozuna", LocalDate.of(2020,8,6));
+        var artist1 = concert.new Act("Major Lazer", LocalDate.of(2021,8,5), "Zambujeira do mar 2021");
+        var artist2 = concert.new FestivalAct("Bad Bunny", LocalDate.of(2021,8,4));
+        var artist3 = concert.new FestivalAct("Meduza", LocalDate.of(2021,8,5));
+        var artist4 = concert.new FestivalAct("Profjam", LocalDate.of(2021,8,4));
+        var artist5 = concert.new FestivalAct("Bispo", LocalDate.of(2021,8,7));
+        var artist6 = concert.new FestivalAct("Deejay Telio", LocalDate.of(2021,8,5));
+        var artist7 = concert.new FestivalAct("Melim", LocalDate.of(2021,8,6));
+        var artist8 = concert.new FestivalAct("Timmy Trumpet", LocalDate.of(2021,8,7));
+        var artist9 = concert.new FestivalAct("Ozuna", LocalDate.of(2021,8,6));
 
         concert.start();
 
