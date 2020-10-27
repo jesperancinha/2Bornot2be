@@ -1,44 +1,25 @@
-# jooa-roast
+# annotations-books
 
 ## Exercise
 
-On this exercise we will understand whats are inner classes, inner static classes and multiple instances of inner classes.
-For our data source we will use all protagonists of [Comedy Central Roast of Rob Lowe](https://www.imdb.com/title/tt6038506).
-We will use all the roaster names, the roastee, and [Comedy Central](http://www.cc.com/) itself to structure our data.
+We will now have a look at how retention works. 
+`@Retention` by itself, is not a difficult annotation to learn.
+It's important though to know what is the scope of the basic ones.
+The most common retention scopes are:
+
+1. `SOURCE`
+2. `RUNTIME`
 
 ## Output
 
 ```text
-Starting Comedy Central Roast of Rob Lowe
-With Roast Master David Spade
-Peyton Manning roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Rob Riggle roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Pete Davidson roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Ann Coulter roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Jimmy Carr roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Jeffrey Ross roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Nikki Glaser roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Ralph Macchio roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Jewel Kilcher roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-David Spade roasted Rob Lowe on the Comedy Central Roast of Rob Lowe with roast master David Spade
-Master David Spade is doing mastery things now...
-Stopping Comedy Central Roast of Rob Lowe
-
+This is the collected values for the annotations of the MysteryBook. It should be empty: 
+This is the collected values for the annotations of the SdkMysteryBook. It should also be empty: 
+Even the Override on the method should now see no annotations: This is the collected values for the annotations of the SdkRealBook. It should have two annotations: @java.lang.FunctionalInterface(),@java.lang.Deprecated(forRemoval=false, since="")
+This is the collected values for the annotations of the SdkRealBook. It should also be empty  purely because there are no annotations on a class level: 
+The check on the method varagSafeMethod should now on annotation. Do remember that Override is removed: @java.lang.SafeVarargs()
 Process finished with exit code 0
 ```
-
-## References
-
--   [Comedy Central Roast of Rob Lowe](https://www.imdb.com/title/tt6038506)
--   [Jeff Ross](https://en.wikipedia.org/wiki/Jeff_Ross)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=m1Or4LA3fNo">
-     <img 
-      src="https://img.youtube.com/vi/m1Or4LA3fNo/0.jpg" 
-      style="width:10%;">
-      </a>
-    </div>
 
 ## About me 👨🏽‍💻🚀
 

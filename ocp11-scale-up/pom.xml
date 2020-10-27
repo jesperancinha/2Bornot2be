@@ -17,6 +17,7 @@
         <module>concurrency-callable</module>
         <module>jdbc-commit</module>
         <module>jooa-roast</module>
+        <module>annotations-books</module>
     </modules>
 
 </project>
