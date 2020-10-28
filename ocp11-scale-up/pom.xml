@@ -29,6 +29,7 @@
         <module>wwjdt-conversions</module>
         <module>jooa-royals</module>
         <module>wwjdt-operators</module>
+        <module>cpf-switches</module>
     </modules>
 
 </project>
