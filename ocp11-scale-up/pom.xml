@@ -27,6 +27,7 @@
         <module>wwjdt-chartat</module>
         <module>cpf-rem</module>
         <module>wwjdt-conversions</module>
+        <module>jooa-royals</module>
     </modules>
 
 </project>
