@@ -55,6 +55,11 @@ Process finished with exit code 0
         src="https://img.youtube.com/vi/nlcIKh6sBtc/0.jpg" 
         style="width:10%;">
     </a>
+    <a href="https://www.youtube.com/watch?v=VBT68a56s70">
+        <img 
+        src="https://img.youtube.com/vi/VBT68a56s70/0.jpg" 
+        style="width:10%;">
+    </a>
 </div>
 
 ## About me 👨🏽‍💻🚀
