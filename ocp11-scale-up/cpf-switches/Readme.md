@@ -7,6 +7,15 @@ Just checking constant switches.
 Why? Because we can.
 Why not? Because it has virtually no use.
 
+## Output
+
+```text
+GOTCHA!!
+You escape this time!! BONUS: Guess which number...
+
+Process finished with exit code 0
+```
+
 ## References
 
 -   [Mabinogion](https://en.wikipedia.org/wiki/Mabinogion)

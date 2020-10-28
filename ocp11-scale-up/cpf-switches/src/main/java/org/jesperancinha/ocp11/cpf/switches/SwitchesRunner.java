@@ -6,6 +6,5 @@ public class SwitchesRunner {
             case "Mabinogion": System.out.println("GOTCHA!!");
             default: System.out.println("You escape this time!! BONUS: Guess which number...");
         }
-
     }
 }
