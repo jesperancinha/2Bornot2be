@@ -26,6 +26,7 @@
         <module>eh0-catching-crows</module>
         <module>wwjdt-chartat</module>
         <module>cpf-rem</module>
+        <module>wwjdt-conversions</module>
     </modules>
 
 </project>
