@@ -1,47 +1,30 @@
-# wwac-navigation
+# wwjdt-for-labels
 
 ## Exercise
 
-In this exercise, we'll have a look at the extraordinary adventure two amazing women which led them to achieve a Guinness Book of Records entry.
-They achieved this by cycling through 25 different countries.
-Our data is the list of the countries they visited:
+Let's see how labels work and how can we break loops with them.
+We will use  [Evil Numbers](https://en.wikipedia.org/wiki/Evil_number) as our data source.
+Let's not confuse this with the biblical numbers that "are evil".
 
--   UK
--   France
--   Monaco
--   Italy
--   Slovenia
--   Croatia
--   Bosnia and Herzegovina
--   Montenegro
--   Albania
--   North Macedonia
--   Greece
--   Turkey
--   Georgia
--   India
--   Myanmar
--   Thailand
--   Malaysia
--   Singapore
--   Australia
--   New Zealand
--   USA
--   Mexico
--   Morocco
--   Spain
--   Gibraltar
+## Output
+
+```text
+17
+12 Found!
+12 Found!
+17
+12 Found!
+12 Found!
+17
+12 Found!
+12 Found!
+
+Process finished with exit code 0
+```
+
 ## References
 
--   [Guinness World Record: Women circumnavigate world on tandem bicycle](https://www.bbc.com/news/uk-england-oxfordshire-53567668)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=Y2FreGXnju8">
-     <img 
-      src="https://img.youtube.com/vi/Y2FreGXnju8/0.jpg" 
-      style="width:10%;">
-      </a>
-    </div>
+-   [Evil Numbers](https://en.wikipedia.org/wiki/Evil_number)
 
 ## About me 👨🏽‍💻🚀
 
