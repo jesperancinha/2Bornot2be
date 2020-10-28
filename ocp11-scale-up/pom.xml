@@ -28,6 +28,7 @@
         <module>cpf-rem</module>
         <module>wwjdt-conversions</module>
         <module>jooa-royals</module>
+        <module>wwjdt-operators</module>
     </modules>
 
 </project>
