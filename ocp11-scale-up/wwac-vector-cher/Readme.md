@@ -1,54 +1,32 @@
-# wwjdt-chartat
-We will look at the critically acclaimed song "[Annie Lennox - No More "I Love You's"](https://www.youtube.com/watch?v=NSkboTTTmpg)".
-In concrete we will just play with the song title.
-We are going to discover some tricks regarding charAt which could be applied to any other method.
-When working with primitive types we need to have present a couple of things:
+# wwac-vector-cher
 
-1. Primitive values inside the range do not need cast (e.g. int to float does not need casting)
-2. Primitive values outside the range imperatively need casting (e.g. float to int needs casting)
-3. When the range is similar, but do not match, then a cast must happen regardless of the order (e.g. short to char and vice-versa)
+## Exercise
 
-## Tips
-
-Remember that it is not a good idea to catch the utmost subclass of Exceptions.
-Always better to catch the subclass more common to what we are doing.
-In our case we will be catching StringIndexOutOfBoundsException... Well I did, you may actually catch ArrayIndexOutOfBoundsException.
-Let me know on my twitter handle if you do! [@joaofse](https://twitter.com/joaofse). [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social "Twitter")](https://twitter.com/joaofse).
-We know to a certain degree that the implementations may change but not exactly if they are commonb enough.
-These are case by case issues, so we have just have to know them.
-
-## Output
-
-```text
-**** The language is leaving me
-java.lang.StringIndexOutOfBoundsException: String index out of range: 100000
-	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
-	at java.base/java.lang.String.charAt(String.java:693)
-	at org.jesperancinha.ocp11.charat.CharAtRunner.main(CharAtRunner.java:17)
-**** Character is off the string. Exception: String index out of range: 100000
-**** Exception type: class java.lang.StringIndexOutOfBoundsException
-**** Character is off the string. Exception: String index out of range: 47
-**** Exception type: class java.lang.StringIndexOutOfBoundsException
----- First character using int is N and the first character using char is N
----- 32nd character using int is e and the 32nd character using char is e
----- 46nd character using int is e and the 46nd character using char is e
-java.lang.StringIndexOutOfBoundsException: String index out of range: 47
-	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
-	at java.base/java.lang.String.charAt(String.java:693)
-	at org.jesperancinha.ocp11.charat.CharAtRunner.main(CharAtRunner.java:25)
-
-Process finished with exit code 0
-```
+We have gathered all first 26 Cher albums.
+This is one of my favourite artists of all time.
+We pick them up and then we fiercly add them to a Vector.
+In the same way we add them to an ArrayList.
+Fiercely here means that we will add 26 x 100 times!!
+We will do thar by spawning different threads for each single addition.
+We will then measure how long it took.
+You should see a significant performance improvement in adding to an ArrayList.
+This is because lists are asynchronous and vectors are synchronous.
+There are other numerous advantages/disadvantages in using one or the other.
+I advise you stringly to goto this brilliant page written by [Geek4Geeks](https://www.geeksforgeeks.org/): [Difference Between Vector and List](https://www.geeksforgeeks.org/difference-between-vector-and-list/)
+However for the purpose of this exercise we are just insterested in investigating the synchronous/asynchronous difference between the two collection types.
 
 ## References
 
--   [IndexOutOfBounds Exception Java String Class charAt Method]()https://stackoverflow.com/questions/27523604/indexoutofbounds-exception-java-string-class-charat-method
--   [ASCII table](https://inf14manonr.weebly.com/binaire-getallen.html)
+-   [Difference Between Vector and List](https://www.geeksforgeeks.org/difference-between-vector-and-list/#:~:text=Vector%20may%20have%20a%20default,previous%20elements%20in%20the%20list.)
+-   [Cher Homepage](https://www.cher.com/#!/ "Cher Homepage")
+
+[![alt text](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200526224614/Vector-vs-List.png "Vector VS list")](https://www.geeksforgeeks.org/difference-between-vector-and-list/)
+
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=NSkboTTTmpg">
+      <a href="https://www.youtube.com/watch?v=7T4rz4NsYjk">
      <img 
-          src="https://img.youtube.com/vi/NSkboTTTmpg/0.jpg" 
+          src="https://img.youtube.com/vi/7T4rz4NsYjk/0.jpg" 
           style="width:10%;">
       </a>
 </div>

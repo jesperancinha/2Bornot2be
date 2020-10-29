@@ -7,6 +7,18 @@ The important thing to consider is the encapsulating class.
 Static classes do not encapsulate while simple ones do.
 In our example, we'll see a break in access data using as data source [The Wanda Sykes Show](https://www.imdb.com/title/tt1441222/).
 
+## Output
+
+```text
+Guest Wesley Snipes is being hosting by Wanda Sykes but we can't get the show's name
+Guest Nick Cannon is being hosting by Wanda Sykes but we can't get the show's name
+Guest Gina Gershon is being hosting by Wanda Sykes but we can't get the show's name
+Guest Greg Giraldo is being hosting by Wanda Sykes but we can't get the show's name
+Luckily our opening record shows that the show is The Wanda Sykes Show, episode 15
+
+Process finished with exit code 0
+```
+
 ## References
 
 -    [The Wanda Sykes Show](https://www.imdb.com/title/tt1441222/)
@@ -18,7 +30,6 @@ In our example, we'll see a break in access data using as data source [The Wanda
         style="width:10%;">
     </a>
 </div>
-
 
 ## About me 👨🏽‍💻🚀
 

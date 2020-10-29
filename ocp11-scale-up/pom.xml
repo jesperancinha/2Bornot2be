@@ -31,6 +31,7 @@
         <module>wwjdt-operators</module>
         <module>cpf-switches</module>
         <module>jooa-wanda-classes</module>
+        <module>wwac-vector-cher</module>
     </modules>
 
 </project>
