@@ -33,6 +33,7 @@
         <module>jooa-wanda-classes</module>
         <module>wwac-vector-cher</module>
         <module>wwjdt-operators-2</module>
+        <module>concurrency-the-fugitive</module>
     </modules>
 
 </project>

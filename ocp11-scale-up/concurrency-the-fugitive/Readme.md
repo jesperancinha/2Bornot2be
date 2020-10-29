@@ -1,33 +1,46 @@
-# cpf-bills
+# concurrency-the-fugitive
 
 ## Exercise
 
-Let's just check this assignment options. 
-There are a lot, but the complicated ones are fairly forgotten most of the time.
-Let's revive this using data from [Destiny's Child](https://en.wikipedia.org/wiki/Destiny%27s_Child) video for [Bills, Bills Bills](https://en.wikipedia.org/wiki/Bills,_Bills,_Bills).
+In this exercise we'll make a simulation about the character intepreted by Harrison Ford in the 1993's Film [The Fugitive](https://www.imdb.com/title/tt0106977/).
+
+What is important to understand here is two basic concepts:
+
+1. A thead can acquire multiple locks and does not block itself.
+2. One thread cannot get a lock if there is already one or more locks acquired from another thread.
+3. A thread waits for the lock to be available with the simple lock call.
+4. A thread gets the result of getting the lock (true/false) with the tryLock method.
+
+Both methods have names that are self-explanatory and this way we should be able to remember what they do everytime we look at such code.
 
 ## Output
 
 ```text
-Destiny's Child single Bills, Bills, Bills stayed on the charts for 20 weeks
-It's peak year was 1999
-It's peak month was 7
-Do people still listen to this single? true
-Our variables are a=20, b=1999, c=7, d=Bills, Bills, Bills, f=true
+Lock1
+Lock2
+true
+true
+The current thread that achieves locking, can acquire a lock multiple times.
+It must also release it that many multiple times.
+***** The Fugitive One ****
+Richard Kimble - I'm Richard Kimble and I've locked the door!
+RK - I'm Richard Kimble and I'm going for a stroll!
+Criminal - I'm the criminal and I've locked the door! Won't unlock it until I'm done
+***** The Fugitive Two ****
+RK - I'm Richard Kimble and I've locked the door!
+C - Oh Oh, I have to escape, he is still in there!
+RK - I'm Richard Kimble and I'm going for a stroll!
 
 Process finished with exit code 0
 ```
-
 ## References
 
--   [Bills, Bills Bills on the Bilboard Charts in 1999](https://www.billboard.com/music/destinys-child/chart-history/HSI/song/63311)
--   [Bills, Bills Bills](https://en.wikipedia.org/wiki/Bills,_Bills,_Bills)
--   [Destiny's Child - Bills, Bills, Bills (Official Video)](https://www.youtube.com/watch?v=NiF6-0UTqtc)
+-   [The Fugitive](https://www.imdb.com/title/tt0106977/)
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=NiF6-0UTqtc">
+      <a href="https://www.youtube.com/watch?v=ETPVU0acnrE">
      <img 
-          src="https://img.youtube.com/vi/NiF6-0UTqtc/0.jpg" 
+          src="https://img.youtube.com/vi/ETPVU0acnrE/0.jpg" 
           style="width:10%;">
       </a>
 </div>
