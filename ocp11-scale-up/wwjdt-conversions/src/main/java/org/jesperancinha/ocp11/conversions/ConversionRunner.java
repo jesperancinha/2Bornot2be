@@ -4,7 +4,7 @@ package org.jesperancinha.ocp11.conversions;
  * Remember that we can convert from short to char and vice versa only through the use of constants.
  * <p>
  * The char range the same as of a unsigned 16-bit integer -> 0 to 65535
- * The shor range is the same as a signed 16-bit integer -> -32768 to 32767
+ * The short range is the same as a signed 16-bit integer -> -32768 to 32767
  * <p>
  * Since the windows don't match, a cast is always necessary in case of variables because the compiler doesn't know their value
  * A constant on the other hand is an immutable and predictable value.

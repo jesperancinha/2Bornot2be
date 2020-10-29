@@ -30,6 +30,7 @@
         <module>jooa-royals</module>
         <module>wwjdt-operators</module>
         <module>cpf-switches</module>
+        <module>jooa-wanda-classes</module>
     </modules>
 
 </project>
