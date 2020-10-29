@@ -1,32 +1,46 @@
-# wwac-vector-cher
+# wwjdt-operators-2
 
 ## Exercise
 
-We have gathered all first 26 Cher albums.
-This is one of my favourite artists of all time.
-We pick them up and then we fiercly add them to a Vector.
-In the same way we add them to an ArrayList.
-Fiercely here means that we will add 26 x 100 times!!
-We will do thar by spawning different threads for each single addition.
-We will then measure how long it took.
-You should see a significant performance improvement in adding to an ArrayList.
-This is because lists are asynchronous and vectors are synchronous.
-There are other numerous advantages/disadvantages in using one or the other.
-I advise you stringly to goto this brilliant page written by [Geek4Geeks](https://www.geeksforgeeks.org/): [Difference Between Vector and List](https://www.geeksforgeeks.org/difference-between-vector-and-list/)
-However for the purpose of this exercise we are just insterested in investigating the synchronous/asynchronous difference between the two collection types.
+We are going to go through some arithmetic operations using java operators.
+Let's just have some fun.
+Try to be focus listening to the music at the bottom.
+[Midnight Star - "Operator"](https://www.youtube.com/watch?v=hTFu1ns-fJ4), can feel very distracting.
+However this is the point.
+If you know enough about operators, you should make no mistake interpretingthe code.
+Wish you great success!
+
+## Output
+
+```text
+doubleNumber % 2 = 0,123455
+doubleNumber % 2 = 0,000000
+floatNumber % 2 = 1,234314
+floatNumber % 2 = 0,000000
+intNumber % 2 = Remember that formats can be strict! Your result is an integer. In that case %f won't work!: Exception: f != java.lang.IntegerintNumber % 2 = 0,000000
+intNumber % 2 = 0,001000
+For number 100 the opposite in binary would be -101
+Checking in binary: For number 1100100 the opposite in binary would be 11111111111111111111111110011011
+Here is the operator & (bitwise and), with two integral operands:
+100 & 122 = 96
+1100100 & 1111010 = 1100000
+
+Process finished with exit code 0
+```
 
 ## References
 
--   [Difference Between Vector and List](https://www.geeksforgeeks.org/difference-between-vector-and-list/#:~:text=Vector%20may%20have%20a%20default,previous%20elements%20in%20the%20list.)
--   [Cher Homepage](https://www.cher.com/#!/ "Cher Homepage")
-
-[![alt text](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200526224614/Vector-vs-List.png "Vector VS list")](https://www.geeksforgeeks.org/difference-between-vector-and-list/)
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=7T4rz4NsYjk">
+    <a href="https://www.youtube.com/watch?v=hTFu1ns-fJ4">
      <img 
-          src="https://img.youtube.com/vi/7T4rz4NsYjk/0.jpg" 
+          src="https://img.youtube.com/vi/hTFu1ns-fJ4/0.jpg" 
           style="width:10%;">
-      </a>
+    </a>
+    <a href="https://www.youtube.com/watch?v=BT2al2t2jnU">
+       <img 
+            src="https://img.youtube.com/vi/BT2al2t2jnU/0.jpg" 
+            style="width:10%;">
+    </a>
 </div>
 
 ## About me 👨🏽‍💻🚀
