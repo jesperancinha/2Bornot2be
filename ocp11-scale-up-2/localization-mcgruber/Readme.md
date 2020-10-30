@@ -5,6 +5,43 @@
 We are looking at the different types of date and time formats.
 To make it fun, we will present [McGruber](https://en.wikipedia.org/wiki/MacGruber) 's [film](https://www.imdb.com/title/tt1470023/) timeline in different formats.
 
+## Output 
+
+```text
+Note that 'e' is not accepted in SimpledDateFormat resulting in exception
+-  Illegal pattern character 'e'
+-- //  --
+--- We start out with McGruber's birth date ---
+Format: h s y d m
+Result: 12 0 1963 17 0
+Format: hh ss yy dd mmm
+Result: 12 00 63 17 000
+Format: hhh sss yyy ddd mmmm
+Result: 012 000 1963 017 0000
+Format: hhhh ssss yyyy dddd mmmmm
+Result: 0012 0000 1963 0017 00000
+Format: hhhhhh sssss yyyyy ddddd mmmmmmmmm
+Result: 000012 00000 01963 00017 000000000
+Format: z H S D M
+Result: CET 0 0 76 3
+Format: zz HH SS DD MM
+Result: CET 00 00 76 03
+Format: zzz HHH SSS DDD MMM
+Result: CET 000 000 076 Mar
+Format: zzzz HHHH SSSS DDDD MMMM
+Result: Central European Standard Time 0000 0000 0076 March
+Format: zzzzz HHHHHH SSSSSSSS DDDDDDDD MMMMMMMMMM
+Result: Central European Standard Time 000000 00000000 00000076 March
+--- // ---
+--- We now find more interesting dates---
+1. McGruber was probably born more exactly on the day 76 of year 1963 on month March(03) which the day was 17 on a Sunday around 10:15:30.999, CET
+2. Casey Janine Fitzpatrick was probably born more exactly on the April and that was month 4 of year 1963 and it was day 24 of that month, which was also day 114 of that year and so the birth time was at 10 and 15 minutes with the chronometers marking 30 seconds and 999 milliseconds, CET.
+3. Casey Janine Fitzpatrick died on (notice the daylight savings change): 1999-07-04 at 11:15:30.000999 CEST
+4. McGruber gets his passport): issued on the: 20010526111530999 Central European Summer Time
+
+Process finished with exit code 0
+```
+
 ## References
 
 -   [The Movie Timeline - MacGruber](http://www.themovietimeline.com/film8353)
