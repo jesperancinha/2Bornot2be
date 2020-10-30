@@ -1,43 +1,129 @@
-# jooa-boxing-operations
+# wwac-record-artist
 
 ## Exercise
 
-We will use the data from a fairly unknown group from the 80's called [Living in a Box](https://en.wikipedia.org/wiki/Living_in_a_Box).
+We are going to look at some of the Hot albums of 2020 and make maps with them.
+Our map will allow us to check immediately to which artist does the album belongs to.
+We are going to understand what the [NavigableMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/NavigableMap.html), [SortedMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/SortedMap.html) and [Map](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html) interfaces have to provide.
+Two classes implement these interfaces: [ConcurrentSkipListMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ConcurrentSkipListMap.html) and [TreeMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/TreeMap.html). 
+We will be looking at the TreeMap.
 
 ## Output
 
 ```text
-Gatecrashing came out in June 1989 and it sold 100,000000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100,000000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold d copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100,000000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100,000000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold d copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100000 copies earning the album the gold certification
-Gatecrashing came out in June 1989 and it sold 100000 copies earning the album the gold certification. Notice that we didn't use L before and in this case we do!
-Gatecrashing came out in June 1989 and it sold 100 copies earning the album the gold certification
+++++++++++++++++++++++++++ Map Operations ++++++++++++++++++++++++++
+[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
+Smashing Pumpkins
+[Dua Lipa, Smashing Pumpkins, Kylie Minogue, Cher, Gorillaz]
+Lana Del Rey
+[Dua Lipa, Smashing Pumpkins, Kylie Minogue, Cher, Gorillaz, Lana Del Rey]
+Roisin Murphy
+[Dua Lipa, Smashing Pumpkins, Kylie Minogue, Roisin Murphy, Gorillaz, Lana Del Rey]
+true
+[Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey]
+Smashing Pumpkins
+Madonna
+false
+[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez, Violet Bent Backwards over the Grass]
+Maroon 5
+Ellie Goulding
+{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+false
+true
+{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+null
+John Legend
+John Legend
+[Bigger Love=John Legend, Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey]
+John Legend
+null
+{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+false
+{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+true
+{Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+null
+Kylie Minogue
+{Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Madonna, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+true
+{Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
+6
+Album: Club Future Nostalgia, Artist: Dua Lipa
+Album: Cyr, Artist: Smashing Pumpkins
+Album: Disco, Artist: Kylie Minogue
+Album: Róisín Machine, Artist: Roisin Murphy
+Album: Song Machine: Season One - Strange Timez, Artist: Gorillaz
+Album: Violet Bent Backwards over the Grass, Artist: Lana Del Rey
+++++++++++++++++++++++++++ SortedMap Operations ++++++++++++++++++++++++++
+null
+[Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher, Song Machine: Season One - Strange Timez=Gorillaz]
+Club Future Nostalgia
+{Club Future Nostalgia=Dua Lipa, Cyr=Madonna}
+[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez]
+Song Machine: Season One - Strange Timez
+{Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Song Machine: Season One - Strange Timez=Gorillaz}
+[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
+++++++++++++++++++++++++++ NavigableMap Operations ++++++++++++++++++++++++++
+[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
+Disco=Kylie Minogue
+Disco
+[Song Machine: Season One - Strange Timez, Róisín Machine, Disco, Cyr, Club Future Nostalgia]
+{Song Machine: Season One - Strange Timez=Gorillaz, Róisín Machine=Cher, Disco=Kylie Minogue, Cyr=Madonna, Club Future Nostalgia=Dua Lipa}
+Club Future Nostalgia=Dua Lipa
+Disco=Kylie Minogue
+Disco
+{Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue}
+{Club Future Nostalgia=Dua Lipa, Cyr=Madonna}
+Róisín Machine=Cher
+Róisín Machine
+Song Machine: Season One - Strange Timez=Gorillaz
+Cyr=Madonna
+Cyr
+[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez]
+Club Future Nostalgia=Dua Lipa
+Song Machine: Season One - Strange Timez=Gorillaz
+{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Disco=Kylie Minogue, Róisín Machine=Cher}
+{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Disco=Kylie Minogue, Róisín Machine=Cher}
+++++++++++++++++++++++++++ TreeMap Operations ++++++++++++++++++++++++++
+[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
+Disco=Kylie Minogue
+Disco
+[Song Machine: Season One - Strange Timez, Róisín Machine, Disco, Cyr, Club Future Nostalgia]
+{Song Machine: Season One - Strange Timez=Gorillaz, Róisín Machine=Cher, Disco=Kylie Minogue, Cyr=Madonna, Club Future Nostalgia=Dua Lipa}
+Club Future Nostalgia=Dua Lipa
+Disco=Kylie Minogue
+Disco
+{Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue}
+{Club Future Nostalgia=Dua Lipa, Cyr=Madonna}
+Róisín Machine=Cher
+Róisín Machine
+Song Machine: Season One - Strange Timez=Gorillaz
+Cyr=Madonna
+Cyr
+[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez]
+Club Future Nostalgia=Dua Lipa
+Song Machine: Season One - Strange Timez=Gorillaz
+{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Disco=Kylie Minogue, Róisín Machine=Cher}
+{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
+{Disco=Kylie Minogue, Róisín Machine=Cher}
 
 Process finished with exit code 0
 ```
 
 ## References
 
--   [Living In A Box - Living In A Box (Official Video)](https://www.youtube.com/watch?v=mHzfhU8t5i8)
--   [WHERE ARE THEY NOW? LIVING IN A BOX](https://talkaboutpopmusic.com/2019/02/16/where-are-they-now-living-in-a-box/)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=mHzfhU8t5i8">
-         <img 
-              src="https://img.youtube.com/vi/mHzfhU8t5i8/0.jpg" 
-              style="width:10%;">
-      </a> 
-</div>
+-   [List of 2020 albums](https://en.wikipedia.org/wiki/List_of_2020_albums)
+-   [Cyr](https://en.wikipedia.org/wiki/Cyr_(album))
+-   [Disco](https://en.wikipedia.org/wiki/Disco_(Kylie_Minogue_album))
+-   [Song Machine: Season One - Strange Timez](https://en.wikipedia.org/wiki/Song_Machine,_Season_One:_Strange_Timez)
+-   [Róisín Machine](https://en.wikipedia.org/wiki/R%C3%B3is%C3%ADn_Machine)
+-   [Club Future Nostalgia](https://en.wikipedia.org/wiki/Club_Future_Nostalgia)
 
 ## About me 👨🏽‍💻🚀
 

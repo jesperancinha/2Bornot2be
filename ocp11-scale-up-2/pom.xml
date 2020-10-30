@@ -17,5 +17,6 @@
         <module>localization-mcgruber</module>
         <module>jooa-constructor</module>
         <module>jooa-boxing-operations</module>
+        <module>wwac-record-artist</module>
     </modules>
 </project>
