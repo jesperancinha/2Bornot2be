@@ -46,7 +46,7 @@ import java.util.Locale;
  * <p>
  * Saturday 24th August: Macgruber's passport expires.
  */
-public class McGruberRunner {
+public class MacGruberRunner {
     public static void main(String[] args) {
         try {
             new SimpleDateFormat("e m", Locale.FRANCE);
@@ -65,7 +65,7 @@ public class McGruberRunner {
         SimpleDateFormat simpleDateFormat10 = new SimpleDateFormat("zzzzz HHHHHH SSSSSSSS DDDDDDDD MMMMMMMMMM", Locale.ENGLISH);
 
 
-        System.out.println("--- We start out with McGruber's birth date ---");
+        System.out.println("--- We start out with MacGruber's birth date ---");
         System.out.printf("Format: %s\nResult: %s\n", simpleDateFormat1.toPattern(), simpleDateFormat1.format(Date.valueOf(LocalDate.of(1963, 3, 17))));
         System.out.printf("Format: %s\nResult: %s\n", simpleDateFormat2.toPattern(), simpleDateFormat2.format(Date.valueOf(LocalDate.of(1963, 3, 17))));
         System.out.printf("Format: %s\nResult: %s\n", simpleDateFormat3.toPattern(), simpleDateFormat3.format(Date.valueOf(LocalDate.of(1963, 3, 17))));
@@ -81,7 +81,7 @@ public class McGruberRunner {
 
         final LocalDateTime mcgruberBDate = LocalDateTime.of(1963, 3, 17, 9, 15, 30, 999999999);
         SimpleDateFormat simpleDateFormatBDay = new SimpleDateFormat("'day 'D' of year 'y' on month 'MMMM(MM)' which the day was 'dd' on a 'EEEE' around 'hh:mm:ss.SSS, zzz", Locale.ENGLISH);
-        System.out.printf("1. McGruber was probably born more exactly on the %s\n", simpleDateFormatBDay.format(Date.from(mcgruberBDate.toInstant(ZoneOffset.UTC))));
+        System.out.printf("1. MacGruber was probably born more exactly on the %s\n", simpleDateFormatBDay.format(Date.from(mcgruberBDate.toInstant(ZoneOffset.UTC))));
 
         final LocalDateTime caseyBDate = LocalDateTime.of(1963, 4, 24, 9, 15, 30, 999999999);
         SimpleDateFormat simpledateFormatBDsideKick = new SimpleDateFormat("MMMM' and that was month 'M' of year 'y' and it was day 'dd' of that month, which was also day 'DD' of that year and so the birth time was at 'H' and 'm' minutes with the chronometers marking 's' seconds and 'S' milliseconds,' zz.");
@@ -93,6 +93,6 @@ public class McGruberRunner {
 
         final LocalDateTime macgrubersPassport = LocalDateTime.of(2001, 5, 26, 9, 15, 30, 999999999);
         SimpleDateFormat simpledateFormatPassport = new SimpleDateFormat("'issued on the: 'yyyyMMddHHmmssSSS zzzzz");
-        System.out.printf("4. McGruber gets his passport): %s\n", simpledateFormatPassport.format(Date.from(macgrubersPassport.toInstant(ZoneOffset.UTC))));
+        System.out.printf("4. MacGruber gets his passport): %s\n", simpledateFormatPassport.format(Date.from(macgrubersPassport.toInstant(ZoneOffset.UTC))));
     }
 }
