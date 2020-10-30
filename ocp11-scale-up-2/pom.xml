@@ -16,5 +16,6 @@
     <modules>
         <module>localization-mcgruber</module>
         <module>jooa-constructor</module>
+        <module>jooa-boxing-operations</module>
     </modules>
 </project>
