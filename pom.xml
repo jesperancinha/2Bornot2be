@@ -12,6 +12,7 @@
         <module>ocp11</module>
         <module>jee7</module>
         <module>ocp11-scale-up</module>
+        <module>ocp11-scale-up-2</module>
         <!--        <module>java-test-15</module>-->
     </modules>
     <name>Java Test Drives</name>

@@ -1,63 +1,30 @@
-# concurrency-callable
+# localization-mcgruber
 
 ## Exercise
 
-A callable doesn't have to know what to do with itself. Neither does a runnable.
-However a callable can be, as the name implies, called! 📞
-A Runnable cannot ✋.
-
-## Output
-
-```text
------- Starting callable...
------- Failing callable...
------- Starting runnable...
-java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$0(CallableRunner.java:16)
-	at org.jesperancinha.ocp11.callable.CallableRunner.main(CallableRunner.java:35)
------- Failing runnable...
------- I don't know if Runnable was a success...
-Let's try all of this with executors...
------- Starting callable...
------- Starting runnable...
-java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$1(CallableRunner.java:28)
-	at org.jesperancinha.ocp11.callable.CallableRunner.main(CallableRunner.java:44)
------- Failing callable...
------- Failing runnable...
-java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$1(CallableRunner.java:28)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-******************* When there is an exception we can re-throw it via the callable future:
-******************* When there is an exception we get just a null fia the runnable future
-null
-Exception in thread "main" java.util.concurrent.ExecutionException: java.lang.Exception: I don't know what to do with myself
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.jesperancinha.ocp11.callable.CallableRunner.main(CallableRunner.java:57)
-Caused by: java.lang.Exception: I don't know what to do with myself
-	at org.jesperancinha.ocp11.callable.CallableRunner.lambda$main$0(CallableRunner.java:16)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-```
+We are looking at the different types of date and time formats.
+To make it fun, we will present [McGruber](https://en.wikipedia.org/wiki/MacGruber) 's [film](https://www.imdb.com/title/tt1470023/) timeline in different formats.
 
 ## References
 
--   [Dusty Springfield - I don't know what to do with myself](https://www.youtube.com/watch?v=aNdOlOXPtRI)
+-   [The Movie Timeline - MacGruber](http://www.themovietimeline.com/film8353)
+-   [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html)
+-   [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
+-   [Making life saving inventions out of household materials](https://www.youtube.com/watch?v=jsWs5Kd-qD8)
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=aNdOlOXPtRI">
-     <img 
-          src="https://img.youtube.com/vi/aNdOlOXPtRI/0.jpg" 
-          style="width:10%;">
+      <a href="https://www.youtube.com/watch?v=xQHHHBkigDY">
+         <img 
+              src="https://img.youtube.com/vi/xQHHHBkigDY/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=jsWs5Kd-qD8">
+         <img 
+              src="https://img.youtube.com/vi/jsWs5Kd-qD8/0.jpg" 
+              style="width:10%;">
       </a>
 </div>
+
 
 ## About me 👨🏽‍💻🚀
 
