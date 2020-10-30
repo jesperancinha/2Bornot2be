@@ -1,63 +1,35 @@
-# localization-mcgruber
+# jooa-constructor
 
 ## Exercise
 
-We are looking at the different types of date and time formats.
-To make it fun, we will present [MacGruber](https://en.wikipedia.org/wiki/MacGruber) 's [film](https://www.imdb.com/title/tt1470023/) timeline in different formats.
+How do we work with constructors?
+It sounds simple right?
+Let's make it more complex shall we?
+We'll use the hit singles [We Built This City](https://en.wikipedia.org/wiki/We_Built_This_City) from [Starship](https://en.wikipedia.org/wiki/Starship_(band)) and [Manic Monday](https://en.wikipedia.org/wiki/Manic_Monday) from the [The Bangles](https://nl.wikipedia.org/wiki/The_Bangles) for our data source.
 
-## Output 
+## Output
 
 ```text
-Note that 'e' is not accepted in SimpledDateFormat resulting in exception
--  Illegal pattern character 'e'
--- //  --
---- We start out with MacGruber's birth date ---
-Format: h s y d m
-Result: 12 0 1963 17 0
-Format: hh ss yy dd mmm
-Result: 12 00 63 17 000
-Format: hhh sss yyy ddd mmmm
-Result: 012 000 1963 017 0000
-Format: hhhh ssss yyyy dddd mmmmm
-Result: 0012 0000 1963 0017 00000
-Format: hhhhhh sssss yyyyy ddddd mmmmmmmmm
-Result: 000012 00000 01963 00017 000000000
-Format: z H S D M
-Result: CET 0 0 76 3
-Format: zz HH SS DD MM
-Result: CET 00 00 76 03
-Format: zzz HHH SSS DDD MMM
-Result: CET 000 000 076 Mar
-Format: zzzz HHHH SSSS DDDD MMMM
-Result: Central European Standard Time 0000 0000 0076 March
-Format: zzzzz HHHHHH SSSSSSSS DDDDDDDD MMMMMMMMMM
-Result: Central European Standard Time 000000 00000000 00000076 March
---- // ---
---- We now find more interesting dates---
-1. MacGruber was probably born more exactly on the day 76 of year 1963 on month March(03) which the day was 17 on a Sunday around 10:15:30.999, CET
-2. Casey Janine Fitzpatrick was probably born more exactly on the April and that was month 4 of year 1963 and it was day 24 of that month, which was also day 114 of that year and so the birth time was at 10 and 15 minutes with the chronometers marking 30 seconds and 999 milliseconds, CET.
-3. Casey Janine Fitzpatrick died on (notice the daylight savings change): 1999-07-04 at 11:15:30.000999 CEST
-4. MacGruber gets his passport): issued on the: 20010526111530999 Central European Summer Time
-
-Process finished with exit code 0
+See, I get called anyway!! No need for super!
+See, I get called anyway!! No need for super!
+GroupBand{name='The Bangles', activity='manic monday!!!'}  - activity=manic monday!!!, name=The Bangles
+GroupBand{name='Starships', activity='building this city'}  - activity=building this city, name=Starships
 ```
 
 ## References
 
--   [The Movie Timeline - MacGruber](http://www.themovietimeline.com/film8353)
--   [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html)
--   [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
--   [Making life saving inventions out of household materials](https://www.youtube.com/watch?v=jsWs5Kd-qD8)
+-   [Starship - We Built This City (Na, sowas!, 11.01.1986)](https://www.youtube.com/watch?v=Diroq2sYMOw)
+-   [The Bangles - Manic Monday](https://www.youtube.com/watch?v=SsmVgoXDq2w)
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=xQHHHBkigDY">
+      <a href="https://www.youtube.com/watch?v=Diroq2sYMOw">
          <img 
-              src="https://img.youtube.com/vi/xQHHHBkigDY/0.jpg" 
+              src="https://img.youtube.com/vi/Diroq2sYMOw/0.jpg" 
               style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=jsWs5Kd-qD8">
+      <a href="https://www.youtube.com/watch?v=SsmVgoXDq2w">
          <img 
-              src="https://img.youtube.com/vi/jsWs5Kd-qD8/0.jpg" 
+              src="https://img.youtube.com/vi/SsmVgoXDq2w/0.jpg" 
               style="width:10%;">
       </a>
 </div>

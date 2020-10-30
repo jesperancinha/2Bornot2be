@@ -15,5 +15,6 @@
 
     <modules>
         <module>localization-mcgruber</module>
+        <module>jooa-constructor</module>
     </modules>
 </project>
