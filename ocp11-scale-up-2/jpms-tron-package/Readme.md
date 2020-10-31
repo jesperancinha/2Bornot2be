@@ -1,101 +1,178 @@
-# wwjdt-time-from
+# jpms-tron-package
 
 ## Exercise
 
-Do you remember Earth Angel from Back to the Future I?
-This exercise will focus on some very important dates from the movie [Back to the Future I](https://www.imdb.com/title/tt0088763/).
-We will examine three different packages.
+In this exercise we'll have a look at different command line possibilities provided by the jdk.
+We'll use TRON as a reference.
+We'll explore modularity specifically.
+The commands we'll explore are as follows:
 
-The old and the new:
+```mysql based
+java ...
+javac ...
+jar ...
+jmods ...
+jdeps ...
+```
 
-1. java.util.*
-2. java.sql.*
-3. java.time.*
+## How to
+
+-   We compile our module
+
+```bash
+cd ocp11-scale-up-2/jpms-tron-package
+cd src/main
+javac --module-source-path . -m tron -d ./out
+java --module-path out --module tron/org.jesperancinha.ocp11.tron.TronRunner
+mkdir jars
+jar --create --file ./jars/tron.jar --main-class org.jesperancinha.ocp11.tron.TronRunner -C ./out/tron .
+java --module-path jars --module tron/org.jesperancinha.ocp11.tron.TronRunner
+```
+
+-   We run our module
+
+```bash
+java --module-path jars --module tron/org.jesperancinha.ocp11.tron.TronRunner
+```
+
+-   We run our module showing resolution
+
+```bash
+java --module-path jars --module tron/org.jesperancinha.ocp11.tron.TronRunner --show-module-resolution
+```
+
+-   To create a mod  file
+
+```bash
+mkdir mods
+cp resources/resource.txt out/tron
+jmod create --class-path out/tron/ mods/tron.mod
+```
 
 ## Output
 
-```text
---------- java.time..* ---------
---------- java.time.format.* ---------
---------- java.time.temporal.* ---------
-Marty McFly arrives in Hill Valley on: Year=1955 Month=Nov Day=05 Month=11 Day of Week=6 Quarter=4
---------- java.util.Date ---------
-This fails because Instance does not contain zone information. In the next example we'll use a trick to do so: Unsupported field: YearOfEra
-java.time.temporal.UnsupportedTemporalTypeException: Unsupported field: YearOfEra
-	at java.base/java.time.Instant.getLong(Instant.java:602)
-	at java.base/java.time.format.DateTimePrintContext.getValue(DateTimePrintContext.java:308)
-	at java.base/java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2696)
-	at java.base/java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2335)
-	at java.base/java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1843)
-	at java.base/java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1817)
-	at org.jesperancinha.ocp11.time.from.TimeFromRunner.main(TimeFromRunner.java:60)
-java.lang.UnsupportedOperationException
-	at java.sql/java.sql.Date.toInstant(Date.java:316)
-	at org.jesperancinha.ocp11.time.from.TimeFromRunner.main(TimeFromRunner.java:73)
-1900 - The Enchantment Under The Sea Dance happens on: Year=1955 Month=Dec Day=12 Month=12 Day of Week=1 Quarter=4
---------- java.sql.Date ---------
-This fails because java.sql.Date does not support time components. In the next example we'll use a trick to do so: null
-1900 - Marty is chased by Libyans on: Year=1985 Month=Nov Day=26 Month=11 Day of Week=2 Quarter=4
+-   Program run
 
-Process finished with exit code 0
+```bash
+java --module-path out --module tron/org.jesperancinha.ocp11.tron.TronRunner
+ACCESS CODE 6
+PASSWORD SERIES PS 17
+REINDEER FLOTILLA
+YOU SHOULDN'T HAVE COME BACK FLYNN
+CODE SERIES LSU-123
+...ACTIVATE
+THAT ISN'T GOING TO DO YOU ANY
+GOOD, FLYNN. I'M AFRAID YOU...
+MAG IOX
+MODE: SCAN
+TARGETING
+SERVO PWR
+PWR CPLING
+LOGIC BYPS
+MCP CNTRL
+ACTIVE INPT
+SERVO CNTR
+GRID MATRIX
+FRG MNTR
+KCW CNTRL
+GDNCE INPT
+STRGE CLRD
+THERMO TRGT
+THERMO TRGT
+MODE: LOCK
+TARGET
+LOCK ON
+ACTIVATE
 ```
+
+-   jdeps
+
+```bash
+jdeps jars/tron.jar 
+tron
+ [file:///Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11-scale-up-2/jpms-tron-package/src/main/jars/tron.jar]
+   requires mandated java.base (@15-ea)
+tron -> java.base
+   org.jesperancinha.ocp11.tron                       -> java.io                                            java.base
+   org.jesperancinha.ocp11.tron                       -> java.lang                                          java.base
+   org.jesperancinha.ocp11.tron                       -> java.lang.invoke                                   java.base
+   org.jesperancinha.ocp11.tron                       -> java.util                                          java.base
+```
+
+```bash
+jdeps -verbose jars/tron.jar
+tron
+ [file:///Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11-scale-up-2/jpms-tron-package/src/main/jars/tron.jar]
+   requires mandated java.base (@15-ea)
+tron -> java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> java.lang.Class                                    java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> java.lang.Object                                   java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> java.lang.String                                   java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> java.util.Objects                                  java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> java.util.Optional                                 java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> java.util.ServiceLoader                            java.base
+   org.jesperancinha.ocp11.tron.TronRunner            -> org.jesperancinha.ocp11.tron.TronService           tron
+   org.jesperancinha.ocp11.tron.TronService           -> java.lang.InterruptedException                     java.base
+   org.jesperancinha.ocp11.tron.TronService           -> java.lang.Object                                   java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.io.InputStream                                java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.io.PrintStream                                java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.InterruptedException                     java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.Object                                   java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.String                                   java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.System                                   java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.Thread                                   java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.invoke.CallSite                          java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.invoke.LambdaMetafactory                 java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.invoke.MethodHandle                      java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.invoke.MethodHandles                     java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.invoke.MethodHandles$Lookup              java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.lang.invoke.MethodType                        java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> java.util.Scanner                                  java.base
+   org.jesperancinha.ocp11.tron.TronServiceImpl       -> org.jesperancinha.ocp11.tron.TronService           tron
+```
+
+-   jmod describe
+
+```bash
+jmod describe mods/tron.mod 
+tron
+exports org.jesperancinha.ocp11.tron
+requires java.base mandated
+uses org.jesperancinha.ocp11.tron.TronService
+provides org.jesperancinha.ocp11.tron.TronService with org.jesperancinha.ocp11.tron.TronServiceImpl
+```
+
+## How NOT to
+
+```bash
+java --class-path 'jars/*' org.jesperancinha.ocp11.tron.TronRunner
+```
+
+NOTE: Although we can run jars in a non-modular way, come things like ServiceLoader, won't function anymore.
 
 ## References
 
--   [Back to the Future I - Timeline](http://www.themovietimeline.com/film106)
--   [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
+-   [Tron](https://www.imdb.com/title/tt0084827/)
+-   [Java Modules Cheat Sheet](https://nipafx.dev/build-modules/)
+-   [How to print color in console using System.out.println?](https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println)
+-   [jmod](https://docs.oracle.com/javase/9/tools/jmod.htm)
+-   [Tron Wiki](https://en.wikipedia.org/wiki/Tron)
+-   [Herong Yang's jmod tool page](http://www.herongyang.com/Java-Tools/jmod-The-JMOD-File-Tool.html)
+-   [khmarbaisere/jdk9-jlink-jmod-example](https://github.com/khmarbaise/jdk9-jlink-jmod-example/blob/master/jmod-create.sh)
+-   [Ant Apache Mod](https://ant.apache.org/manual/Tasks/jmod.html)
+-   [Coloring the Console by vratiu](https://gist.github.com/vratiu/9780109)
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=T_WSXXPQYeY">
+      <a href="https://www.youtube.com/watch?v=fFgayA0YAfk">
          <img 
-              src="https://img.youtube.com/vi/T_WSXXPQYeY/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=xyJZH2UPifo">
-         <img 
-              src="https://img.youtube.com/vi/xyJZH2UPifo/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=ydJtrly7Gwo">
-         <img 
-              src="https://img.youtube.com/vi/ydJtrly7Gwo/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=54KFiVxej0M">
-         <img 
-              src="https://img.youtube.com/vi/54KFiVxej0M/0.jpg" 
+              src="https://img.youtube.com/vi/fFgayA0YAfk/0.jpg" 
               style="width:10%;">
       </a>
 </div>
 
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=VJcGi4-n_Yw">
-         <img 
-              src="https://img.youtube.com/vi/VJcGi4-n_Yw/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
+From [How to print color in console using System.out.println?](https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println):
 
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=AChCcVIJaCE">
-         <img 
-              src="https://img.youtube.com/vi/AChCcVIJaCE/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=AmZ3AUvNYHQ">
-         <img 
-              src="https://img.youtube.com/vi/AmZ3AUvNYHQ/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
 
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=wBl2QGAIx1s">
-         <img 
-              src="https://img.youtube.com/vi/wBl2QGAIx1s/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
 
 ## About me 👨🏽‍💻🚀
 
