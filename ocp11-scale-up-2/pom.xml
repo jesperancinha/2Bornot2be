@@ -21,5 +21,6 @@
         <module>wwjdt-time-from</module>
         <module>jpms-tron-package</module>
         <module>wwjdt-twisting-pool</module>
+        <module>wwjdt-carmen-sandiego</module>
     </modules>
 </project>
