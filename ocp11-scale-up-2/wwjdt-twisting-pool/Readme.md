@@ -13,6 +13,14 @@ Strings holiday and holiday match! Assigning a constant has the same effect. The
 Strings holiday do not match holiday!
 When String refers to objects(i.e. new String(...)), the comparison uses references instead of constants.
 This results in a typical object reference comparison
+4 times:
+You got me twisting by the pool
+You got me twisting by the pool
+You got me twisting by the pool
+You got me twisting by the pool
+Although we write differently, if we say "Dance to the Euro beat" or if we say "dance to the euro beat", isn't that the same? 0(0 means they are the same)
+Although we write differently, if we say "Dance to the Euro beat" or if we say "dance to the euro beat", isn't that the same? true(true means they are the same)
+Although we write differently, if we say "Dance to the Euro beat" or if we say "dance to the euro beat", isn't that the same? -32(anything different than 0 just means how distant the first String is from the second String)
 
 Process finished with exit code 0
 ```
