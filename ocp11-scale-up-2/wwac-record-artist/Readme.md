@@ -125,6 +125,37 @@ Process finished with exit code 0
 -   [Róisín Machine](https://en.wikipedia.org/wiki/R%C3%B3is%C3%ADn_Machine)
 -   [Club Future Nostalgia](https://en.wikipedia.org/wiki/Club_Future_Nostalgia)
 
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=2AN_GRWlU7k">
+         <img 
+              src="https://img.youtube.com/vi/2AN_GRWlU7k/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=l73FJBnjp28">
+         <img 
+              src="https://img.youtube.com/vi/l73FJBnjp28/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=bbA5p54Rw2M">
+         <img 
+              src="https://img.youtube.com/vi/bbA5p54Rw2M/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=oEzBd-UCtNQ">
+         <img 
+              src="https://img.youtube.com/vi/oEzBd-UCtNQ/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=m5lp8S-YgrQ">
+         <img 
+              src="https://img.youtube.com/vi/m5lp8S-YgrQ/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
