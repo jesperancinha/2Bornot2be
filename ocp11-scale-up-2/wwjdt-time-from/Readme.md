@@ -12,6 +12,34 @@ The old and the new:
 2. java.sql.*
 3. java.time.*
 
+## Output
+
+```text
+--------- java.time..* ---------
+--------- java.time.format.* ---------
+--------- java.time.temporal.* ---------
+Marty McFly arrives in Hill Valley on: Year=1955 Month=Nov Day=05 Month=11 Day of Week=6 Quarter=4
+--------- java.util.Date ---------
+This fails because Instance does not contain zone information. In the next example we'll use a trick to do so: Unsupported field: YearOfEra
+java.time.temporal.UnsupportedTemporalTypeException: Unsupported field: YearOfEra
+	at java.base/java.time.Instant.getLong(Instant.java:602)
+	at java.base/java.time.format.DateTimePrintContext.getValue(DateTimePrintContext.java:308)
+	at java.base/java.time.format.DateTimeFormatterBuilder$NumberPrinterParser.format(DateTimeFormatterBuilder.java:2696)
+	at java.base/java.time.format.DateTimeFormatterBuilder$CompositePrinterParser.format(DateTimeFormatterBuilder.java:2335)
+	at java.base/java.time.format.DateTimeFormatter.formatTo(DateTimeFormatter.java:1843)
+	at java.base/java.time.format.DateTimeFormatter.format(DateTimeFormatter.java:1817)
+	at org.jesperancinha.ocp11.time.from.TimeFromRunner.main(TimeFromRunner.java:60)
+java.lang.UnsupportedOperationException
+	at java.sql/java.sql.Date.toInstant(Date.java:316)
+	at org.jesperancinha.ocp11.time.from.TimeFromRunner.main(TimeFromRunner.java:73)
+1900 - The Enchantment Under The Sea Dance happens on: Year=1955 Month=Dec Day=12 Month=12 Day of Week=1 Quarter=4
+--------- java.sql.Date ---------
+This fails because java.sql.Date does not support time components. In the next example we'll use a trick to do so: null
+1900 - Marty is chased by Libyans on: Year=1985 Month=Nov Day=26 Month=11 Day of Week=2 Quarter=4
+
+Process finished with exit code 0
+```
+
 ## References
 
 -   [Back to the Future I - Timeline](http://www.themovietimeline.com/film106)
