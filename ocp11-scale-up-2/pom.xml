@@ -18,5 +18,6 @@
         <module>jooa-constructor</module>
         <module>jooa-boxing-operations</module>
         <module>wwac-record-artist</module>
+        <module>wwjdt-time-from</module>
     </modules>
 </project>

@@ -1,155 +1,69 @@
-# wwac-record-artist
+# wwjdt-time-from
 
 ## Exercise
 
-We are going to look at some of the Hot albums of 2020 and make maps with them.
-Our map will allow us to check immediately to which artist does the album belongs to.
-We are going to understand what the [NavigableMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/NavigableMap.html), [SortedMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/SortedMap.html) and [Map](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html) interfaces have to provide.
-Two classes implement these interfaces: [ConcurrentSkipListMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ConcurrentSkipListMap.html) and [TreeMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/TreeMap.html). 
-We will be looking at the TreeMap.
+Do you remember Earth Angel from Back to the Future I?
+This exercise will focus on some very important dates from the movie [Back to the Future I](https://www.imdb.com/title/tt0088763/).
+We will examine three different packages.
 
-## Output
+The old and the new:
 
-```text
-++++++++++++++++++++++++++ Map Operations ++++++++++++++++++++++++++
-[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
-Smashing Pumpkins
-[Dua Lipa, Smashing Pumpkins, Kylie Minogue, Cher, Gorillaz]
-Lana Del Rey
-[Dua Lipa, Smashing Pumpkins, Kylie Minogue, Cher, Gorillaz, Lana Del Rey]
-Roisin Murphy
-[Dua Lipa, Smashing Pumpkins, Kylie Minogue, Roisin Murphy, Gorillaz, Lana Del Rey]
-true
-[Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey]
-Smashing Pumpkins
-Madonna
-false
-[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez, Violet Bent Backwards over the Grass]
-Maroon 5
-Ellie Goulding
-{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-false
-true
-{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-null
-John Legend
-John Legend
-[Bigger Love=John Legend, Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey]
-John Legend
-null
-{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-false
-{Brightest Blue=Ellie Goulding, Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-true
-{Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-null
-Kylie Minogue
-{Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Madonna, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-true
-{Club Future Nostalgia=Dua Lipa, Cyr=Smashing Pumpkins, Disco=Kylie Minogue, Róisín Machine=Roisin Murphy, Song Machine: Season One - Strange Timez=Gorillaz, Violet Bent Backwards over the Grass=Lana Del Rey}
-6
-Album: Club Future Nostalgia, Artist: Dua Lipa
-Album: Cyr, Artist: Smashing Pumpkins
-Album: Disco, Artist: Kylie Minogue
-Album: Róisín Machine, Artist: Roisin Murphy
-Album: Song Machine: Season One - Strange Timez, Artist: Gorillaz
-Album: Violet Bent Backwards over the Grass, Artist: Lana Del Rey
-++++++++++++++++++++++++++ SortedMap Operations ++++++++++++++++++++++++++
-null
-[Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher, Song Machine: Season One - Strange Timez=Gorillaz]
-Club Future Nostalgia
-{Club Future Nostalgia=Dua Lipa, Cyr=Madonna}
-[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez]
-Song Machine: Season One - Strange Timez
-{Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Song Machine: Season One - Strange Timez=Gorillaz}
-[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
-++++++++++++++++++++++++++ NavigableMap Operations ++++++++++++++++++++++++++
-[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
-Disco=Kylie Minogue
-Disco
-[Song Machine: Season One - Strange Timez, Róisín Machine, Disco, Cyr, Club Future Nostalgia]
-{Song Machine: Season One - Strange Timez=Gorillaz, Róisín Machine=Cher, Disco=Kylie Minogue, Cyr=Madonna, Club Future Nostalgia=Dua Lipa}
-Club Future Nostalgia=Dua Lipa
-Disco=Kylie Minogue
-Disco
-{Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue}
-{Club Future Nostalgia=Dua Lipa, Cyr=Madonna}
-Róisín Machine=Cher
-Róisín Machine
-Song Machine: Season One - Strange Timez=Gorillaz
-Cyr=Madonna
-Cyr
-[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez]
-Club Future Nostalgia=Dua Lipa
-Song Machine: Season One - Strange Timez=Gorillaz
-{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Disco=Kylie Minogue, Róisín Machine=Cher}
-{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Disco=Kylie Minogue, Róisín Machine=Cher}
-++++++++++++++++++++++++++ TreeMap Operations ++++++++++++++++++++++++++
-[Dua Lipa, Madonna, Kylie Minogue, Cher, Gorillaz]
-Disco=Kylie Minogue
-Disco
-[Song Machine: Season One - Strange Timez, Róisín Machine, Disco, Cyr, Club Future Nostalgia]
-{Song Machine: Season One - Strange Timez=Gorillaz, Róisín Machine=Cher, Disco=Kylie Minogue, Cyr=Madonna, Club Future Nostalgia=Dua Lipa}
-Club Future Nostalgia=Dua Lipa
-Disco=Kylie Minogue
-Disco
-{Club Future Nostalgia=Dua Lipa, Cyr=Madonna, Disco=Kylie Minogue}
-{Club Future Nostalgia=Dua Lipa, Cyr=Madonna}
-Róisín Machine=Cher
-Róisín Machine
-Song Machine: Season One - Strange Timez=Gorillaz
-Cyr=Madonna
-Cyr
-[Club Future Nostalgia, Cyr, Disco, Róisín Machine, Song Machine: Season One - Strange Timez]
-Club Future Nostalgia=Dua Lipa
-Song Machine: Season One - Strange Timez=Gorillaz
-{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Disco=Kylie Minogue, Róisín Machine=Cher}
-{Cyr=Madonna, Disco=Kylie Minogue, Róisín Machine=Cher}
-{Disco=Kylie Minogue, Róisín Machine=Cher}
-
-Process finished with exit code 0
-```
+1. java.util.*
+2. java.sql.*
+3. java.time.*
 
 ## References
 
--   [List of 2020 albums](https://en.wikipedia.org/wiki/List_of_2020_albums)
--   [Cyr](https://en.wikipedia.org/wiki/Cyr_(album))
--   [Disco](https://en.wikipedia.org/wiki/Disco_(Kylie_Minogue_album))
--   [Song Machine: Season One - Strange Timez](https://en.wikipedia.org/wiki/Song_Machine,_Season_One:_Strange_Timez)
--   [Róisín Machine](https://en.wikipedia.org/wiki/R%C3%B3is%C3%ADn_Machine)
--   [Club Future Nostalgia](https://en.wikipedia.org/wiki/Club_Future_Nostalgia)
+-   [Back to the Future I - Timeline](http://www.themovietimeline.com/film106)
+-   [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
+
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=2AN_GRWlU7k">
+      <a href="https://www.youtube.com/watch?v=T_WSXXPQYeY">
          <img 
-              src="https://img.youtube.com/vi/2AN_GRWlU7k/0.jpg" 
+              src="https://img.youtube.com/vi/T_WSXXPQYeY/0.jpg" 
               style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=l73FJBnjp28">
+      <a href="https://www.youtube.com/watch?v=xyJZH2UPifo">
          <img 
-              src="https://img.youtube.com/vi/l73FJBnjp28/0.jpg" 
+              src="https://img.youtube.com/vi/xyJZH2UPifo/0.jpg" 
               style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=bbA5p54Rw2M">
+      <a href="https://www.youtube.com/watch?v=ydJtrly7Gwo">
          <img 
-              src="https://img.youtube.com/vi/bbA5p54Rw2M/0.jpg" 
+              src="https://img.youtube.com/vi/ydJtrly7Gwo/0.jpg" 
               style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=oEzBd-UCtNQ">
+      <a href="https://www.youtube.com/watch?v=54KFiVxej0M">
          <img 
-              src="https://img.youtube.com/vi/oEzBd-UCtNQ/0.jpg" 
+              src="https://img.youtube.com/vi/54KFiVxej0M/0.jpg" 
               style="width:10%;">
       </a>
 </div>
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=m5lp8S-YgrQ">
+      <a href="https://www.youtube.com/watch?v=VJcGi4-n_Yw">
          <img 
-              src="https://img.youtube.com/vi/m5lp8S-YgrQ/0.jpg" 
+              src="https://img.youtube.com/vi/VJcGi4-n_Yw/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=AChCcVIJaCE">
+         <img 
+              src="https://img.youtube.com/vi/AChCcVIJaCE/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=AmZ3AUvNYHQ">
+         <img 
+              src="https://img.youtube.com/vi/AmZ3AUvNYHQ/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=wBl2QGAIx1s">
+         <img 
+              src="https://img.youtube.com/vi/wBl2QGAIx1s/0.jpg" 
               style="width:10%;">
       </a>
 </div>
