@@ -23,9 +23,6 @@ More concretely we will look at the [NumberFormat](https://docs.oracle.com/en/ja
               src="https://img.youtube.com/vi/f_j3CRmyPxI/0.jpg" 
               style="width:10%;">
       </a>
-</div>
-
-<div align="center">
       <a href="https://www.youtube.com/watch?v=s1EIUP8tvbE">
          <img 
               src="https://img.youtube.com/vi/s1EIUP8tvbE/0.jpg" 
@@ -39,9 +36,6 @@ More concretely we will look at the [NumberFormat](https://docs.oracle.com/en/ja
               src="https://img.youtube.com/vi/NgWWube0M1c/0.jpg" 
               style="width:10%;">
       </a>
-</div>
-
-<div align="center">
       <a href="https://www.youtube.com/watch?v=xoyoJGzITPA">
          <img 
               src="https://img.youtube.com/vi/xoyoJGzITPA/0.jpg" 
