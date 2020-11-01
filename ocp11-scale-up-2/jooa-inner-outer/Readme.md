@@ -9,9 +9,13 @@ We will be using data from [Peter Gabriel](https://en.wikipedia.org/wiki/Peter_G
 ## Output
 
 ```text
+//// Analysing our anonymous class of FruitCake
+org.jesperancinha.ocp11.inner.outer.SledgeHammer$1@6b71769e
+Instance of  SledgeHammer.FruitCake? true
 --- baking fruit cage ---
+org.jesperancinha.ocp11.inner.outer.SledgeHammer$1
 Dates default constructor called!
-//// Outside the package we cannot access number 1 hit dates org.jesperancinha.ocp11.inner.outer.canada.Dates@26f67b76
+//// Outside the package we cannot access number 1 hit dates org.jesperancinha.ocp11.inner.outer.canada.Dates@153f5a29
 Dates default constructor called!
 //// However with a subclass we can access the protected member for Canada 1986-07-21
 Dates default constructor called!
@@ -24,6 +28,8 @@ I kicked the habit
 Dates specific constructor called!
 Super is called!
 Shed my skin - This is the new stuff
+//// Effectively final used in inner anonymous classes
+--- This is another fruit cage baking..."Open up your fruit cakes" ---
 
 Process finished with exit code 0
 ```

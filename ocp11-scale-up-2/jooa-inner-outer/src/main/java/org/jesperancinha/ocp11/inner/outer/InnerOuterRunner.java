@@ -7,9 +7,14 @@ public class InnerOuterRunner {
     public static void main(String[] args) {
 
         SledgeHammer sledgeHammer = new SledgeHammer();
-        SledgeHammer.FruitCage fruitCage = sledgeHammer.getFruitCage();
+        SledgeHammer.FruitCake fruitCage = sledgeHammer.getFruitCake();
 
+        System.out.println("//// Analysing our anonymous class of FruitCake");
+
+        System.out.println(fruitCage);
+        System.out.printf("Instance of  SledgeHammer.FruitCake? %s\n", fruitCage instanceof SledgeHammer.FruitCake);
         System.out.println(fruitCage.bake());
+        System.out.println(fruitCage.getClass().getTypeName());
 
         var dates = new Dates();
         System.out.printf("//// Outside the package we cannot access number 1 hit dates %s\n", dates);
@@ -29,5 +34,8 @@ public class InnerOuterRunner {
         System.out.println("//// Creating CanadaDates using super");
         var dates3 = new CanadaDates("Shed my skin", " - This is the new stuff");
         System.out.println(dates3.value);
+
+        System.out.println("//// Effectively final used in inner anonymous classes");
+        sledgeHammer.letsTestInnerEffectivelyFinal();
     }
 }

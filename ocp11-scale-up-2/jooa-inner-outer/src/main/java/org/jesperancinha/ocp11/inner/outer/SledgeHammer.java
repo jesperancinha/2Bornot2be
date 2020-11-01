@@ -6,9 +6,9 @@ package org.jesperancinha.ocp11.inner.outer;
 public class SledgeHammer {
 
     /**
-     * FruitCage
+     * FruitCake
      */
-    public abstract class FruitCage{
+    public abstract class FruitCake {
         // Inner classes cannot have static declarations
         // public static  int year = 1985;
         public static final int year = 1985;
@@ -20,13 +20,30 @@ public class SledgeHammer {
      * Anonymous classes cannot be static
      * Anonymous must follow construction rules of the super class
      * Anonymous classes cannot define their own constructors
-     * @return {@link FruitCage}
+     *
+     * @return {@link FruitCake}
      */
-    public FruitCage getFruitCage(){
-        return new FruitCage() {
-            public String bake(){
+    public FruitCake getFruitCake() {
+        return new FruitCake() {
+            public String bake() {
                 return "--- baking fruit cage ---";
             }
         };
+    }
+
+    public void letsTestInnerEffectivelyFinal() {
+        //
+        var fruitCakes = "Open up your fruit cakes";
+        var fruitCakes2 = "Open up your fruit cakes";
+        fruitCakes2 = "Where the fruit is as sweet as can be";
+        var newFruitCake = new FruitCake() {
+            @Override
+            String bake() {
+                // Variable 'fruitCakes2' is accessed from within inner class, needs to be final or effectively final
+                // return String.format("--- This is another fruit cage baking...\"%s\" ---", fruitCakes2);
+                return String.format("--- This is another fruit cage baking...\"%s\" ---", fruitCakes);
+            }
+        };
+        System.out.println(newFruitCake.bake());
     }
 }
