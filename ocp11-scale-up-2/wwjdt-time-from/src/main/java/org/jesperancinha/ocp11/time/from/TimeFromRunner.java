@@ -55,7 +55,7 @@ public class TimeFromRunner {
         System.out.println("--------- java.util.Date ---------");
 
         try {
-            java.util.Date date = new Date(1955 - 1900, 11, 12);
+            java.util.Date date = new Date(1955 - 1900, 10, 12);
             // System.out.printf("The Enchantment Under The Sea Dance happens on on: %s\n", df.format(date));
             System.out.printf("The Enchantment Under The Sea Dance happens on: %s\n", dateTimeFormatter.format(date.toInstant()));
         } catch (UnsupportedTemporalTypeException e) {
@@ -63,13 +63,13 @@ public class TimeFromRunner {
             System.out.printf("This fails because Instance does not contain zone information. In the next example we'll use a trick to do so: %s\n", e.getMessage());
         }
 
-        java.util.Date date = new Date(1955 - 1900, 11, 12);
+        java.util.Date date = new Date(1955 - 1900, 10, 12);
         LocalDateTime localDateTime = LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
         System.out.printf("1900 - The Enchantment Under The Sea Dance happens on: %s\n", dateTimeFormatter.format(localDateTime));
 
         System.out.println("--------- java.sql.Date ---------");
         try {
-            java.sql.Date date2 = new java.sql.Date(1985 - 1900, 10, 26);
+            java.sql.Date date2 = new java.sql.Date(1985 - 1900, 9, 26);
             LocalDateTime localDateTime2 = LocalDateTime.ofInstant(date2.toInstant(), ZoneId.systemDefault());
             System.out.printf("1900 - Marty is chased by Libyans on: %s\n", dateTimeFormatter.format(localDateTime2));
         } catch (UnsupportedOperationException e) {
@@ -77,7 +77,7 @@ public class TimeFromRunner {
             System.out.printf("This fails because java.sql.Date does not support time components. In the next example we'll use a trick to do so: %s\n", e.getMessage());
         }
 
-        java.sql.Date date2 = new java.sql.Date(1985 - 1900, 10, 26);
+        java.sql.Date date2 = new java.sql.Date(1985 - 1900, 9, 26);
         LocalDateTime localDateTime2 = LocalDateTime.ofInstant(Instant.ofEpochMilli(date2.getTime()), ZoneId.systemDefault());
         System.out.printf("1900 - Marty is chased by Libyans on: %s\n", dateTimeFormatter.format(localDateTime2));
     }

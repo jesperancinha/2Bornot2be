@@ -2,19 +2,49 @@
 
 ## Exercise
 
-Carmen Sandiego was a show from the early 90's.
-We are going to create a setting with spies all over the world and explore the world of i18n (short for internationalization).
+Carmen Sandiego was a show from the early 90's, which had a recend re-run in 2019.
+We are going to explore the world of i18n (short for internationalization) using data from the episodes.
 More concretely we will look at the [NumberFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/NumberFormat.html) and [DateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DateFormat.html) class types.
  
-(coming soon...)
 ## References
 
+-   [Becoming Carmen Sandiego Part I Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_I)
+-   [Becoming Carmen Sandiego Part II Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_II)
+-   [The Sticky Rice Caper](https://transcripts.fandom.com/wiki/The_Sticky_Rice_Caper)
+-   [Carmen Sandiego Transcripts](https://transcripts.fandom.com/wiki/Carmen_Sandiego)
+-   [Carmen Sandiego](https://en.wikipedia.org/wiki/Carmen_Sandiego)
 -   [Where in the World Is Carmen Sandiego? (game show)](https://en.wikipedia.org/wiki/Where_in_the_World_Is_Carmen_Sandiego%3F_(game_show))
+-   [GGA](https://nl.wikipedia.org/wiki/Color_Graphics_Adapter)
+-   [FLOZz' MISC » bash:tip_colors_and_formatting](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=f_j3CRmyPxI">
+         <img 
+              src="https://img.youtube.com/vi/f_j3CRmyPxI/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=s1EIUP8tvbE">
          <img 
               src="https://img.youtube.com/vi/s1EIUP8tvbE/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=NgWWube0M1c">
+         <img 
+              src="https://img.youtube.com/vi/NgWWube0M1c/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=xoyoJGzITPA">
+         <img 
+              src="https://img.youtube.com/vi/xoyoJGzITPA/0.jpg" 
               style="width:10%;">
       </a>
 </div>
