@@ -1,33 +1,88 @@
-# dawj-driver
+# wwac-la-casa-azul
 
 ## Exercise
 
-How can we load the driver with the new JDBC 4.0 framework?
-For this module we keep it simple.
+In this exercise we want to discover how deterministic hash maps really are.
+
+By this, we mean, how can we predict the iteration order of their elements.
+
+We know that [HashMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/HashMap.html) and [HashTable](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Hashtable.html) are non-deterministic.
+
+We know that [LinkedHashMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedHashMap.html) iterates according to insertion order.
+
+We know that [TreeMap](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/TreeMap.html) iterates following a natural order.
+
+The last two are deterministic.
+
+We will check this with our exercise.
+
+## References
+
+-   [La Casa Azul Discography](https://en.wikipedia.org/wiki/La_Casa_Azul)
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=WdvKgZVgWWg">
+         <img 
+              src="https://img.youtube.com/vi/WdvKgZVgWWg/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=juNxwa6H3lI">
+         <img 
+              src="https://img.youtube.com/vi/juNxwa6H3lI/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 
 ## Output
 
 ```text
-Connection: H2 / UNNAMED
-Current auto-commit setting: true
+////////////////////// HashMap //////////////////////
+In 2009, the band La Casa Azul release singles: La nueva Yma Sumac
+In 2008, the band La Casa Azul release singles: Esta noche solo cantan para mí
+In 2019, the band La Casa Azul release singles: El Final del Amor Eterno, El Momento, Ivy Mike
+In 2007, the band La Casa Azul release singles: La revolución sexual
+In 2018, the band La Casa Azul release singles: A T A R A X I A, Nunca Nadie Pudo Volar
+In 2006, the band La Casa Azul release singles: El sol no brilará nunca más
+In 2005, the band La Casa Azul release singles: Como un fan
+In 2004, the band La Casa Azul release singles: Superguay
+In 2012, the band La Casa Azul release singles: La Polinesia Meridional, La Fiesta Universal
+In 2010, the band La Casa Azul release singles: Todas tus amigas
+////////////////////// Hashtable //////////////////////
+In 2012, the band La Casa Azul release singles: La Polinesia Meridional, La Fiesta Universal
+In 2009, the band La Casa Azul release singles: La nueva Yma Sumac
+In 2008, the band La Casa Azul release singles: Esta noche solo cantan para mí
+In 2010, the band La Casa Azul release singles: Todas tus amigas
+In 2007, the band La Casa Azul release singles: La revolución sexual
+In 2006, the band La Casa Azul release singles: El sol no brilará nunca más
+In 2005, the band La Casa Azul release singles: Como un fan
+In 2004, the band La Casa Azul release singles: Superguay
+In 2019, the band La Casa Azul release singles: El Final del Amor Eterno, El Momento, Ivy Mike
+In 2018, the band La Casa Azul release singles: A T A R A X I A, Nunca Nadie Pudo Volar
+////////////////////// LinkedHashMap //////////////////////
+In 2005, the band La Casa Azul release singles: Como un fan
+In 2004, the band La Casa Azul release singles: Superguay
+In 2006, the band La Casa Azul release singles: El sol no brilará nunca más
+In 2007, the band La Casa Azul release singles: La revolución sexual
+In 2008, the band La Casa Azul release singles: Esta noche solo cantan para mí
+In 2009, the band La Casa Azul release singles: La nueva Yma Sumac
+In 2010, the band La Casa Azul release singles: Todas tus amigas
+In 2012, the band La Casa Azul release singles: La Polinesia Meridional, La Fiesta Universal
+In 2018, the band La Casa Azul release singles: A T A R A X I A, Nunca Nadie Pudo Volar
+In 2019, the band La Casa Azul release singles: El Final del Amor Eterno, El Momento, Ivy Mike
+////////////////////// TreeMap //////////////////////
+In 2004, the band La Casa Azul release singles: Superguay
+In 2005, the band La Casa Azul release singles: Como un fan
+In 2006, the band La Casa Azul release singles: El sol no brilará nunca más
+In 2007, the band La Casa Azul release singles: La revolución sexual
+In 2008, the band La Casa Azul release singles: Esta noche solo cantan para mí
+In 2009, the band La Casa Azul release singles: La nueva Yma Sumac
+In 2010, the band La Casa Azul release singles: Todas tus amigas
+In 2012, the band La Casa Azul release singles: La Polinesia Meridional, La Fiesta Universal
+In 2018, the band La Casa Azul release singles: A T A R A X I A, Nunca Nadie Pudo Volar
+In 2019, the band La Casa Azul release singles: El Final del Amor Eterno, El Momento, Ivy Mike
 
 Process finished with exit code 0
 ```
-
-## References
-
--   [What the JDBC™ 4.3 API Includes](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/package-summary.html)
--   How JDBC 4.0 works in a nutshell
-   
-       [![alt text](../../docs/jtd-sql-driver-jdbc-4.png "Java")](../../docs/jtd-sql-driver-jdbc-4.png)
--   [Powerful MongoDB JDBC Driver](https://www.progress.com/jdbc/mongodb)
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=0vPt7GI-2kc">
-         <img 
-              src="https://img.youtube.com/vi/0vPt7GI-2kc/0.jpg" 
-              style="width:10%;">
-      </a> 
-</div>
 
 ## About me 👨🏽‍💻🚀
 
