@@ -25,5 +25,6 @@
         <module>dawj-driver</module>
         <module>wwac-la-casa-azul</module>
         <module>wwac-interfaces</module>
+        <module>jooa-inner-outer</module>
     </modules>
 </project>
