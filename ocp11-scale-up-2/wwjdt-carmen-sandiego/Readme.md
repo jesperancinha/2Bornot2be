@@ -5,7 +5,26 @@
 Carmen Sandiego was a show from the early 90's, which had a recend re-run in 2019.
 We are going to explore the world of i18n (short for internationalization) using data from the episodes.
 More concretely we will look at the [NumberFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/NumberFormat.html) and [DateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DateFormat.html) class types.
- 
+
+## Output
+
+```text
+---- WHERE IN THE WORLD IS CARMEN SANDIEGO ----
+- In "Becoming Carmen Sandiego Part I", Carmen needs to jump around 50 yards in Poitiers city of France.
+Let's see how does that look like in french notation:
+Carmen jumped: 4 572,056 cm
+The clip on YouTube has been uploaded on the: 22 janvier 2019.
+- In "The Sticky Rice Caper", Carmen mentions the most produced product in Indonesia: Rice.
+Let's see how does that look like in indonesian notation:
+Indonesia produces 70.000.000 tons of rice per year according to Carmen.
+The transcript was placed on Fandom on the: 6 Oktober 2019.
+- And you? Where are you now? Language=English, Country=Netherlands Let's see how does that look like in your notation:
+You live on a planet which has a radius of 6.371 Km.
+You are reading this on the: 1 November 2020.
+
+Process finished with exit code 0
+```
+
 ## References
 
 -   [Becoming Carmen Sandiego Part I Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_I)

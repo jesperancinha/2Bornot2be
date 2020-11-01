@@ -27,5 +27,12 @@ public class CarmenSandiegoRunner {
         printInputText(CarmenSandiegoColor.BRIGHT_CYAN, String.format("Indonesia produces %s tons of rice per year according to Carmen.\n", numberFormatIndo.format(70_000_000)));
         printInputText(CarmenSandiegoColor.BRIGHT_RED, String.format("The transcript was placed on Fandom on the: %s.\n", dateFormatIndo.format(new Date(2019 - 1900, 9, 6))));
 
+        NumberFormat numberFormatDefault = NumberFormat.getNumberInstance(Locale.getDefault());
+        DateFormat dateFormatDefault = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
+        printInputText(CarmenSandiegoColor.BRIGHT_MAGENTA, String.format("- And you? Where are you now? Language=%s, Country=%s", Locale.getDefault().getDisplayLanguage(), Locale.getDefault().getDisplayCountry()));
+        printInputText(CarmenSandiegoColor.BRIGHT_GREEN, "Let's see how does that look like in your notation:\n");
+        printInputText(CarmenSandiegoColor.BRIGHT_CYAN, String.format("You live on a planet which has a radius of %s Km.\n", numberFormatDefault.format(6_371)));
+        printInputText(CarmenSandiegoColor.BRIGHT_RED, String.format("You are reading this on the: %s.\n", dateFormatDefault.format(new Date())));
+
     }
 }
