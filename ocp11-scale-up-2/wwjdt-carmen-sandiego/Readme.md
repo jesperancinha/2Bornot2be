@@ -18,7 +18,8 @@ The clip on YouTube has been uploaded on the: 22 janvier 2019.
 Let's see how does that look like in indonesian notation:
 Indonesia produces 70.000.000 tons of rice per year according to Carmen.
 The transcript was placed on Fandom on the: 6 Oktober 2019.
-- And you? Where are you now? Language=English, Country=Netherlands Let's see how does that look like in your notation:
+- And you? Where are you now? Language=English, Country=Netherlands 
+Let's see how does that look like in your notation:
 You live on a planet which has a radius of 6.371 Km.
 You are reading this on the: 1 November 2020.
 
