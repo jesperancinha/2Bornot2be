@@ -18,7 +18,8 @@ Process finished with exit code 0
 
 -   [What the JDBC™ 4.3 API Includes](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/package-summary.html)
 -   How JDBC 4.0 works in a nutshell
-[![alt text](../../docs/jtd-sql-driver-jdbc-4.png "Java")](../../docs/jtd-sql-driver-jdbc-4.png)
+   
+       [![alt text](../../docs/jtd-sql-driver-jdbc-4.png "Java")](../../docs/jtd-sql-driver-jdbc-4.png)
 -   [Powerful MongoDB JDBC Driver](https://www.progress.com/jdbc/mongodb)
 
 
