@@ -22,5 +22,6 @@
         <module>jpms-tron-package</module>
         <module>wwjdt-twisting-pool</module>
         <module>wwjdt-carmen-sandiego</module>
+        <module>dawj-driver</module>
     </modules>
 </project>
