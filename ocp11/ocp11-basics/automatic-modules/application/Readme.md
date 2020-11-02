@@ -1,53 +1,40 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# application
+## Exercise
 
-## Introduction
+We are going to look deeply how to make a modularized jar using external non-modularized modules.
+They will become automatic modules in our exercise.
+Maven alone won't be enough to make successful build.
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+-   Non modular packages
 
-## Topics and coverage
+    -   [analytics](../analytics)
+    -   [database](../database)
 
--   [OCP-11 - 1z0-819](./ocp11-scale-up) - OCP SE 11 Exam preparation specific for 1z0-819
----
+-   Modular package
 
-## Collect and Count
+    -   [application]()
 
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+## First Build the jars
 
----
+```bash
+mvn clean install
+```
 
-## References
+## How to compile
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [Enthuware](https://enthuware.com/)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
--   [Whizlabs](https://www.whizlabs.com/)
+We compile our classes (Optionally we can make a jar file)
+```bash
+javac --module-path ../analytics/target:../database/target -d out src/main/application/module-info.java src/main/application/org/jesperancinha/ocp11/automated/modules/application/Application.java
+```
 
----
+We run our classes
+## How to run
+```bash
+java  --class-path out:../analytics/target/analytics-1.0.0-SNAPSHOT.jar:../database/target/database-1.0.0-SNAPSHOT.jar org.jesperancinha.ocp11.automated.modules.application.Application
+java  --module-path out:../analytics/target:../database/target  --module application/org.jesperancinha.ocp11.automated.modules.application.Application
+```
 
-## Java 11 Specs
-
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
-
----
-
-## The module graph
-
-[![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
- 
----
-
-## Achievements
-
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
-  
----
+To test that this effectively worked, check the contents of the out folder. You'll see no jars or classes from the modules used to run the apllication. We referenced them running the java command line.
 
 ## About me 👨🏽‍💻🚀
 

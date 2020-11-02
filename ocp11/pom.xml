@@ -12,68 +12,7 @@
     <artifactId>ocp11</artifactId>
 
     <packaging>pom</packaging>
-    <modules>
-        <module>file-copy</module>
-        <module>auto-closeable</module>
-        <module>for-each</module>
-        <module>stream-sum</module>
-        <module>consumer</module>
-        <module>modularity</module>
-        <module>relativize</module>
-        <module>primitives</module>
-        <module>file-paths</module>
-        <module>multi-modules</module>
-        <module>grouping-by</module>
-        <module>partition-by</module>
-        <module>lambda-celestial</module>
-        <module>lambda-film</module>
-        <module>grouping-by-math</module>
-        <module>flat-mapping-books</module>
-        <module>bi-function-couples</module>
-        <module>iterator-remembered</module>
-        <module>predicates</module>
-        <module>inferences</module>
-        <module>java-compile</module>
-        <module>reducing-stats</module>
-        <module>file-atomic-move</module>
-        <module>service-provider</module>
-        <module>operators</module>
-        <module>supressed-exception</module>
-        <module>file-move</module>
-        <module>static-modular-filter</module>
-        <module>for-each-ordered</module>
-        <module>files</module>
-        <module>compute-if-present</module>
-        <module>automatic-modules</module>
-        <module>comparing-then-comparing</module>
-        <module>static-revised</module>
-        <module>numbers</module>
-        <module>intermediate-operations</module>
-        <module>primitive-streams</module>
-        <module>supressed-exception-2</module>
-        <module>modularity-2</module>
-        <module>jdeps-avocado</module>
-        <module>resolve</module>
-        <module>reduce-parallel-sinner</module>
-        <module>for-each-ordered-2</module>
-        <module>compute</module>
-        <module>any-match</module>
-        <module>disambiguity-beans</module>
-        <module>average</module>
-        <module>predicates-2</module>
-        <module>modularity-oysters</module>
-        <module>max-calc</module>
-        <module>system-properties</module>
-        <module>streams-filter</module>
-        <module>file-paths-2</module>
-        <module>switch-casing</module>
-        <module>modularity-one</module>
-        <module>flat-mapping-arrays-lists</module>
-        <module>optional</module>
-        <module>collectors-count</module>
-        <module>collectors-partition-order</module>
-        <module>functions</module>
-    </modules>
+
 
     <properties>
         <!-- Plugins -->
@@ -93,5 +32,12 @@
             <artifactId>assertj-core</artifactId>
         </dependency>
     </dependencies>
+
+    <modules>
+        <module>ocp11-basics</module>
+        <module>ocp11-scale-up</module>
+        <module>ocp11-scale-up-2</module>
+        <module>ocp11-mastery-1</module>
+    </modules>
 
 </project>
