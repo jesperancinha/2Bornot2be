@@ -28,8 +28,6 @@ OCP 11 studies - Level 1 - Foundation Level
 -   [Reducing Stats](./reducing-stats)
 -   [Relativize](./relativize)
 -   [Stream Sum](./stream-sum)
-
-
 From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
 
 Subjects covered:
