@@ -38,6 +38,7 @@
         <module>ocp11-scale-up</module>
         <module>ocp11-scale-up-2</module>
         <module>ocp11-mastery-1</module>
+        <module>ocp11-mastery-2</module>
     </modules>
 
 </project>

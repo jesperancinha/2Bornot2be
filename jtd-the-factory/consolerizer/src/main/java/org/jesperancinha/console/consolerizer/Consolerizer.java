@@ -52,6 +52,11 @@ public class Consolerizer {
         printPrivateText(text);
     }
 
+    public static void printYellowGeneric(String text) {
+        System.out.print(ConColor.YELLOW.getConsoleColor());
+        printPrivateText(text);
+    }
+
     public void printColorText(final ConColor conColor, String text) {
         System.out.print(conColor.getConsoleColor());
         printPrivateText(text);
@@ -77,6 +82,17 @@ public class Consolerizer {
         printPrivateText(text);
     }
 
+    public static void printBrightCyanGeneric(String text) {
+        System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
+        printPrivateText(text);
+    }
+
+
+    public static void printBrightCyanGeneric(String text, String... args) {
+        System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
+        printPrivateText(text, args);
+    }
+
     public void printBrightCyan(String text) {
         System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
         printPrivateText(text);
@@ -86,8 +102,6 @@ public class Consolerizer {
         System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
         printPrivateText(text, args);
     }
-
-
     public void printText(String text) {
         System.out.print(conColor.getConsoleColor());
         printPrivateText(text);
