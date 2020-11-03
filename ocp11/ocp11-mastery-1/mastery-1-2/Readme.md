@@ -1,38 +1,28 @@
-# mastery-1-1 - Mastery Module 1.1.
+# mastery-1-2 - Mastery Module 1.2.
 
 ## Exercise
 
-In this first mastery exercise we'll look at a few important key aspects:
+In this second mastery exercise we'll look at a few important key aspects:
 
-1. What are top-level classes
-2. Anonymous classes
-3. Package member classes
-4. Static classes
-5. Array growth
-6. Array length
-7. Array cloning
-8. String immutability
-9. String assignment
-10. Interface static members
-11. Defaults in interfaces
-12. Defaults in classes
-13. Final methods in abstractions
-14. Accessors within inner classes created within member methods (static and instance)
-15. Variable naming with class names and keywords
-16. Explicit initialization
-17. Read/Write paradigm with Locks
-18. Common annotations @SupressWarnings, @SafeVarags and @Override
-19. Creating ArrayLists
-20. Map vs ConcurrentMap
+1. Root Interfaces Collection and Map
+2. Thread-safe and thread-unsafe standard collections
+3. Valid module names
+4. Default methods multi-implementation
+5. Return type in overriden methods
+6. Properties of a JDBC connection
+7. The `protected` nuances
+8. Nested class inheritance
+9. Conversion information losses
+
 
 ## References
 
--   [The Flinstones](https://en.wikipedia.org/wiki/The_Flintstones)
+-   [Teenage Mutant Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles)
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=cBco_DApZVY">
+      <a href="https://www.youtube.com/watch?v=AxuvUAjHYWQ">
      <img 
-          src="https://img.youtube.com/vi/cBco_DApZVY/0.jpg" 
+          src="https://img.youtube.com/vi/AxuvUAjHYWQ/0.jpg" 
           style="width:10%;">
       </a>
 </div>
