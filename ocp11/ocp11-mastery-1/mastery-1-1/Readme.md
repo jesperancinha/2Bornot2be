@@ -25,6 +25,82 @@ In this first mastery exercise we'll look at a few important key aspects:
 19. Creating ArrayLists
 20. Map vs ConcurrentMap
 
+## Output
+
+```bash
+/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=51815:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -p /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-1/mastery-1-1/target/classes:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar -m mastery1dot1/org.jesperancinha.ocp11.mastery1dot1.runner.Mastery1Dot1Runner
+The Flinstones: Fred Flinstone, Wilma Flinstone, Pebbles Flinstone, Dino, Baby Puss
+Size is 5
+A clone would be Fred Flinstone, Wilma Flinstone, Pebbles Flinstone, Dino, Baby Puss
+The Rubbles [Barney Rubble, Betty Rubble, Bamm-Bamm Rubble, Hoppy]
+Size is 4
+The Gruesomes [Schneider, Schneider, Occy, Uncle Ghastly, Goblin "Gobby" Gruesome, Creepella Gruesome, Weirdly Gruesome ]
+Size is 7. The difference is that up until 10 elements, no resizing will occur 
+This is Fred Flinstone
+This is Wilma Flinstone
+Yabadabadoo!!
+Bedrock
+These variables are visible.
+Variable a is inside the inner class, static class method.
+10
+Variable c is effectively final.
+10000
+Variable f is accepted because it is local a.k.a. automatic variable. It also is effectively final
+18
+%%%%%%%%% Welcome to you new rock house! %%%%%%%%%
+%%% Your house has been initialized to 0 rocks %%%
+%%% Your house has been initialized to cost 0,000000 pebbles %%%
+%%% The current boss of the house is null  %%%
+%%% It is suggested that you build your house with 140000 rocks %%%
+%%%%%% Look at this. Fred Flinstone is a String! %%%%%%
+Fred Flinstone
+14
+class java.lang.String
+%%%%%% Look at this. The Rubbles are an Integer ! %%%%%%
+[Barney Rubble, Betty Rubble, Bamm-Bamm Rubble, Hoppy]
+class java.util.Arrays$ArrayList
+STOP! Dino goes to the bathroom...
+Stop! Go home!
+Dino sees Pebbles Flinstone passing by...
+Dino sees Pebbles Flinstone passing by...
+Dino sees Wilma Flinstone passing by...
+Dino sees Wilma Flinstone passing by...
+Dino sees Wilma Flinstone passing by...
+Dino sees Wilma Flinstone passing by...
+Dino sees Fred Flinstone passing by...
+Dino sees Fred Flinstone passing by...
+Dino sees Fred Flinstone passing by...
+STOP! Dino goes to the bathroom...
+Stop! Go home!
+Stop! Go home!
+Dino sees Fred Flinstone passing by...
+Dino sees Fred Flinstone passing by...
+Dino sees Wilma Flinstone passing by...
+Dino sees Fred Flinstone passing by...
+Dino sees Fred Flinstone passing by...
+Dino sees Dino passing by...
+Stop! Go home!
+Stop! Go home!
+Stop! Go home!
+Stop! Go home!
+Stop! Go home!
+Dino sees Fred Flinstone passing by...
+Dino sees Pebbles Flinstone passing by...
+Dino sees Wilma Flinstone passing by...
+Stop! Go home!
+Stop! Go home!
+Stop! Go home!
+Stop! Go home!
+{Gravella Hatrock=The Hatrocks, Slab Hatrock=The Hatrocks, Percy=The Hatrocks, Jethro Hatrock=The Hatrocks, Granny Hatrock=The Hatrocks, Benji Hatrock=The Hatrocks, Zack Hatrock=The Hatrocks}
+Filling Map of type class java.util.concurrent.ConcurrentHashMap$KeySetView completed in 2 seconds
+{Gravella Hatrock=The Hatrocks, Slab Hatrock=The Hatrocks, Percy=The Hatrocks, Jethro Hatrock=The Hatrocks, Granny Hatrock=The Hatrocks, Benji Hatrock=The Hatrocks, Zack Hatrock=The Hatrocks}
+Filling Map of type class java.util.AbstractMap$SimpleImmutableEntry completed in 13 seconds
+{Gravella Hatrock=The Hatrocks, Slab Hatrock=The Hatrocks, Percy=The Hatrocks, Granny Hatrock=The Hatrocks, Benji Hatrock=The Hatrocks, Zack Hatrock=The Hatrocks}
+See? It's not thread-safe. It also takes longer to fill up during a ramp up.
+
+Process finished with exit code 0
+```
+
 ## References
 
 -   [The Flinstones](https://en.wikipedia.org/wiki/The_Flintstones)

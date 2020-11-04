@@ -14,6 +14,65 @@ In this second mastery exercise we'll look at a few important key aspects:
 8. Nested class inheritance
 9. Conversion information losses
 
+## Output
+
+```bash
+/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=51827:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-1/mastery-1-2/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery1dot2.runner.Mastery1Dot2Runner
+@@@@@@@@@ Welcome to Heroes in a half shell. Turtle power! @@@@@@@@@
+WOW!
+These all report to Splinter:
+{Leonardo=Splinter, Raphael=Splinter, Donatello=Splinter, Michelangelo=Splinter}
+@@ As you can see a Map is no collection!
+var mapTurtles = new HashMap<String, String>() {{
+            String splinter = splinterMain;
+            put("Leonardo", splinter);
+            put("Raphael", splinter);
+            put("Michelangelo", splinter);
+            put("Donatello", splinter);
+        }};
+Collection test2 = mapTurtles;
+Map test = mapTurtles;
+These all report to Shredder
+[The Shredder, Karai, Baxter Stockman, Krang, Bebop, Rocksteady]
+@@ As you can see a List is no Map!
+ var villains = List.of(
+                "The Shredder",
+                "Karai",
+                "Baxter Stockman",
+                "Krang",
+                "Bebop",
+                "Rocksteady");
+Map test= villains;
+Collection test2 = villains;
+@@ Same collections but with thread unsafe instances
+We remove Donatello from the Hashtable to see what happens
+A ConcurrentModificationException has occurred! It's not safe!null
+We remove Krang from the Vector to see what happens
+A ConcurrentModificationException has occurred! It's not safe!null
+@@ As a cherry on the cake let's modify an unmodifiable list
+var villainsUnmodifiable = Collections.unmodifiableCollection(villains);
+We cannot modify, unmodifiable collections ok?
+@@ With default methods, we can provide multiple implementations
+@@ We want a hard shell, but also to be able to have some movement in it
+We now are properly protected with CalcifiedShell and Skin
+@@ We create the Splinter lab and create a turtle
+We are creating a mutant! Connection: H2 / UNNAMED
+Current auto-commit setting: true
+@@ With protected we can only sneaky feel the other turtle's hand from the outside
+Here we don't need to be sneaky!
+Not neaky!
+Feels alive!
+Feels alive!
+@@ Here is a secret lab and its our own!
+This lab is your lab so you are calling your own lab! 
+@@ One final sprint!
+Left side as float 1098765440,000000
+Left side 1098765432
+Right side 1098765440,000000
+Right side casted to int 1098765440
+-8 
+Process finished with exit code 0
+```
 
 ## References
 
