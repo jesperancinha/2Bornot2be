@@ -7,8 +7,11 @@ import org.jesperancinha.ocp11.mastery2dot2.animals.BirdCharacter;
 import org.jesperancinha.ocp11.mastery2dot2.animals.CatCharacter;
 import org.jesperancinha.ocp11.mastery2dot2.animals.DuckCharacter;
 import org.jesperancinha.ocp11.mastery2dot2.animals.Feline;
+import org.jesperancinha.ocp11.mastery2dot2.animals.FluteService;
+import org.jesperancinha.ocp11.mastery2dot2.animals.OboeService;
 import org.jesperancinha.ocp11.mastery2dot2.animals.Wolf;
 import org.jesperancinha.ocp11.mastery2dot2.animals.WolfCharacter;
+import org.jesperancinha.ocp11.mastery2dot2.animals.WolfCharacter.Food;
 import org.jesperancinha.ocp11.mastery2dot2.ost.manager.FileManager;
 
 import java.io.BufferedReader;
@@ -17,10 +20,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.ServiceLoader;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,11 +36,12 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGener
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery2Dot2Runner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Consolerizer.typingWaitGlobal = 0;
         // 1. Interface Inheritance
         printRainbowLn("==");
@@ -201,6 +210,113 @@ public class Mastery2Dot2Runner {
 
         // 10. provider() in modularity
         printRainbowLn("==");
+        printYellowGenericLn("### Key things to remember:");
+        printYellowGenericLn("### There is no implements in module!");
+        printYellowGenericLn("### provides is always followed by with");
+        printYellowGenericLn("### using a service requires you to use it in the module definition");
+        printYellowGenericLn("### to be able to implement a service outside the source module you need requires");
+        printYellowGenericLn("### You can provide an implementation statically or with an instance");
+        printYellowGenericLn("### Flute service is static");
+        printYellowGenericLn("### Oboe service is an instance");
+
+        ServiceLoader<FluteService> loader = ServiceLoader.load(FluteService.class);
+        FluteService fluteService = loader.findFirst().orElseThrow(() -> new Exception("Fail!"));
+        fluteService.play();
+        ServiceLoader<OboeService> loader2 = ServiceLoader.load(OboeService.class);
+        OboeService oboeService = loader2.findFirst().orElseThrow(() -> new Exception("Fail!"));
+        oboeService.play();
+
+        // 11. `IndexOutOfBoundsException`
+        printRainbowLn("==");
+        printYellowGenericLn("### ArrayIndexOutOfBoundsException is not thrown by a charAt.");
+        printYellowGenericLn("### IndexOutOfBoundsException is  thrown by a charAt.");
+        printYellowGenericLn("### StringIndexOutOfBoundsException may be thrown by a charAt (It is implementation dependent).");
+
+        var testString = "Can't make it? Oh. Huh.";
+        try {
+            testString.charAt(10000);
+        } catch (IndexOutOfBoundsException e) {
+            printGreenGenericLn("If parameter of charAt surpasses the length of the String, it results in: %s", e.getClass());
+        }
+
+        // 12. `allMatch` in stream
+        printRainbowLn("==");
+        printYellowGenericLn("### allMatch means that one doesn't match, it will return false, otherwise true");
+        printYellowGenericLn("### It is prone to fail fast, given that the false condition determines when the filtering stops");
+        printYellowGenericLn("### This operation depends opn how many cores your machine is running on");
+
+        AtomicInteger atomicInteger = new AtomicInteger();
+        var streamOfCharacters = Stream.of(wolf, cat, bird, duck);
+        var allMatchesForA = streamOfCharacters.allMatch(
+                character -> {
+                    atomicInteger.incrementAndGet();
+                    printGreenGenericLn(character);
+                    return character.getName().contains("o");
+                });
+        printGreenGenericLn("We have iterated %d times! This is unpredictable", atomicInteger.get());
+        printGreenGenericLn("Has the condition matched? %s", allMatchesForA);
+
+
+        // 10. provider() in modularity
+        printRainbowLn("==");
+        printYellowGenericLn("### Double providers in modularity");
+        ServiceLoader<FluteService> loader2Times = ServiceLoader.load(FluteService.class);
+        Iterator<FluteService> iterator = loader.iterator();
+        FluteService fluteServiceOne = iterator.next();
+        FluteService fluteServiceTwo = iterator.next();
+        fluteServiceOne.play();
+        fluteServiceTwo.play();
+
+        // 14. One line assignment operations
+        printRainbowLn("==");
+        printYellowGenericLn("### One liner operators and different assignments");
+        int a = 10;
+        int b = 20;
+        boolean c = a == b;
+        boolean d = a != b;
+        int f = a = b;
+        printBlueGenericLn("        int a = 10; => %d\n" +
+                "        int b = 20; => %d \n" +
+                "        boolean c = a == b; => %s\n" +
+                "        boolean d = a != b; => %s\n" +
+                "        int f = a = b; => %d", a, b, c, d, f);
+
+        // 15. Method calling and inner class instantiation
+        printRainbowLn("==");
+        printYellowGenericLn("### Static imports are also possible for static inner classes");
+        var food = new Food();
+        printBlueGenericLn("var food  = new Food();");
+
+        // 16. `null` role in collection copies
+        printRainbowLn("==");
+        printYellowGenericLn("### Copies of null values from Arrays to immutable Lists  always fail");
+        printYellowGenericLn("### Copies of null values from Arrays always to Unmodifiable lists don't fail");
+        printYellowGenericLn("### Unmodifiable means you have a reference that doesn't allow you to modify the list");
+        printYellowGenericLn("### Although if you have the reference to the original List, then you can change it that way");
+        printYellowGenericLn("### Immutable means you cannot modify the list");
+        var animals = new Animal[]{wolf, duck, null, bird, null, cat};
+        try {
+            var listOfAnimals = List.of(animals);
+        } catch (NullPointerException e) {
+            printRedGenericLn("NullPointerException was thrown on trying to copu the array into a List");
+        }
+        try {
+            List<Animal> animalList = List.of(wolf, duck, null, bird, null, cat);
+        } catch (NullPointerException e) {
+            printRedGenericLn("NullPointerException was thrown on trying to copu the array into an immutable list");
+        }
+
+        List<Animal> animalList = Arrays.asList(wolf, duck, null, bird, null, cat);
+
+        var listOfAnimalsViaCollectionSync = Collections.synchronizedList(animalList);
+        var listOfAnimalsViaCollectionUnmod = Collections.unmodifiableList(animalList);
+        printGreenGenericLn(listOfAnimalsViaCollectionSync);
+        printGreenGenericLn(listOfAnimalsViaCollectionUnmod);
+
+        // 17. `String`'s `isBlank`
+        printRainbowLn("==");
+
+
     }
 
 }

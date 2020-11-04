@@ -59,9 +59,13 @@ public class Consolerizer {
         printGreenGeneric(text.toString().trim().concat("\n"));
     }
 
-    public static void printGreenGeneric(String text) {
+    public static void printGreenGeneric(Object text) {
         System.out.print("\033[0;32m");
-        printPrivateText(text);
+        printPrivateText(text.toString());
+    }
+
+    public static void printGreenGenericLn(String text, Object... args) {
+        printGreenGeneric(text.concat("\n"), args);
     }
 
     public static void printGreenGeneric(String text, Object... args) {
@@ -75,7 +79,7 @@ public class Consolerizer {
     }
 
     public static void printRedGenericLn(String text) {
-        printRedGeneric(text);
+        printRedGeneric(text.concat("\n"));
     }
 
     public static void printRedGeneric(String text) {
@@ -200,11 +204,12 @@ public class Consolerizer {
         }
     }
 
-    public static void printRainbowLn(final String theme){
+    public static void printRainbowLn(final String theme) {
         printRainbow(theme);
         System.out.print("\n");
     }
-    public static void printRainbow(final String theme){
+
+    public static void printRainbow(final String theme) {
         System.out.print(ConColor.RED.getConsoleColor());
         System.out.print(theme);
         System.out.print(ConColor.ORANGE.getConsoleColor());

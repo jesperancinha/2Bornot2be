@@ -16,7 +16,6 @@ In this third mastery exercise we'll look at a few important key aspects:
 10. provider() in modularity
 11. `IndexOutOfBoundsException`
 12. `allMatch` in stream
-13. `provides`, `with` and `uses`
 14. One line assignment operations
 15. Method calling and inner class instantiation
 16. `null` role in collection copies
