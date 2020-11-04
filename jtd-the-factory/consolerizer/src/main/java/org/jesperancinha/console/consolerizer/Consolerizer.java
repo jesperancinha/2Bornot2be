@@ -73,9 +73,13 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
+    public static void printRedGenericLn(String text, Object... args) {
+        printRedGeneric(text.concat("\n"), args);
+    }
+
     public static void printRedGeneric(String text, Object... args) {
         System.out.print("\033[0;31m");
-        printPrivateText(text);
+        printPrivateText(text, args);
     }
 
     public static void printRedGenericLn(String text) {
