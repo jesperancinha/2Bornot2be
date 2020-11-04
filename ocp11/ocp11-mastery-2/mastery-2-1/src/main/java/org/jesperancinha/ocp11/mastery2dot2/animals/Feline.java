@@ -2,28 +2,33 @@ package org.jesperancinha.ocp11.mastery2dot2.animals;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
-public abstract class Bird implements Animal {
+public abstract class Feline extends Mamal{
 
     private String instrument;
     public String name;
 
-    @Override
-    public void saySomething() {
-        Consolerizer.printGreenGeneric("You still didn't implement me!");
-
-    }
-
-    public Bird(final String instrument) {
+    public Feline(String instrument) {
         this.instrument = instrument;
     }
 
+    @Override
+    public void saySomething() {
+        Consolerizer.printGreenGeneric("Miau!!!!\n");
+    }
+
+    @Override
+    public String found() {
+        return "forest";
+    }
+
+    @Override
     public String getInstrument() {
         return instrument;
     }
 
     @Override
     public String toString() {
-        return "Bird{" +
+        return "Feline{" +
                 "instrument='" + instrument + '\'' +
                 ", name='" + name + '\'' +
                 '}';

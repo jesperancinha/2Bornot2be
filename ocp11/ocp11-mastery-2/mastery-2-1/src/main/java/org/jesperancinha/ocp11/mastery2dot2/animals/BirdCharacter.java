@@ -4,9 +4,8 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 
 public class BirdCharacter extends Bird {
 
-    public final String name;
-
     public BirdCharacter(String name) {
+        super("Flute");
         this.name = name;
     }
 

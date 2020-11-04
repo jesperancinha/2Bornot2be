@@ -18,8 +18,8 @@ In this third mastery exercise we'll look at a few important key aspects:
 12. `allMatch` in stream
 13. `provides`, `with` and `uses`
 14. One line assignment operations
-15. Method callind and inner class instantiation
-16. `null` role in collectioon copies
+15. Method calling and inner class instantiation
+16. `null` role in collection copies
 17. `String`'s `isBlank`
 18. Flow control ans specification of Exceptions
 19. Constructor rules vs Method rules in overriding
@@ -33,8 +33,10 @@ In this third mastery exercise we'll look at a few important key aspects:
 
 ## References
 
+-   [Peter and The Wolf Lyrics](https://www.azlyrics.com/lyrics/weirdalyankovic/peterandthewolf.html)
 -   [Scientific Classification of Wolves](https://wolf.org/wolf-info/basic-wolf-info/types-of-wolves/)
 -   [Peter and the Wolf](https://en.wikipedia.org/wiki/Peter_and_the_Wolf)
+-   [Build your own Command Line with ANSI escape codes](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html#256-colors)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=2EPl8zAsq8A">
@@ -58,6 +60,25 @@ In this third mastery exercise we'll look at a few important key aspects:
      <img 
           src="https://img.youtube.com/vi/diJeT5o0Ji8/0.jpg" 
           style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=Va8Uz6MoKLg">
+         <img 
+              src="https://img.youtube.com/vi/Va8Uz6MoKLg/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=jlFPKXaHPSU">
+         <img 
+              src="https://img.youtube.com/vi/jlFPKXaHPSU/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=bsfTzpFXNuI">
+         <img 
+              src="https://img.youtube.com/vi/bsfTzpFXNuI/0.jpg" 
+              style="width:10%;">
       </a>
 </div>
 
