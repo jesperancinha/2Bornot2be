@@ -124,6 +124,21 @@ public class Master2Dot2Runner {
         double dNumber = 100.45677;
         printBlueGenericLn(dNumber);
 
+        printRainbowTitleLn("7. Multi interface inheritance");
+        printRainbowLn("==");
+        printYellowGenericLn("### Check the two interfaces. There is a subclass which overrides the superclass method. This is Ok");
+        printBlueGenericLn("public interface BriefingTrajectory {\n" +
+                "    String getOriginLocation();\n" +
+                "    String getDestinationLocation();\n" +
+                "}");
+        printYellowGenericLn("### And this is the sub interface");
+        printBlueGenericLn("public interface MissionBriefingControl extends BriefingDate, BriefingTrajectory {\n" +
+                "    String getDestinationLocation();\n" +
+                "    String getDestinationLocation(MissionData missionData);\n" +
+                "    LocalDateTime getBriefingDate();\n" +
+                "    String getOriginLocation();\n" +
+                "}");
+
         printUnicornsLn(100);
     }
 }
