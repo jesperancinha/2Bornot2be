@@ -1,31 +1,26 @@
-# mastery-2-2 - Mastery Module 2.2.
+# mastery-2-2-deserializer - Mastery Module 2.2.deserializer
 
 ## Exercise
 
-In this fourth mastery exercise we'll look at a few important key aspects:
+This module is the deserializer module with an upgraded class in the same package.
+It answers question one of module [mastery-2-2](../mastery-2-2).
 
-1. Serializing `FileOutputStream` and `FileInputStream`
-
-(coming soon...)
 ## Output
 
 ```bash
+/Users/jofisaes/Downloads/jdk-15.jdk2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=59689:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-2/mastery-2-2-deserializer/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery2dot2.Master2Dot2Runner
+================== Master Module mastery-2-2-deserializer ==================
+1. Serializing `FileOutputStream` and `FileInputStream`
+============
+### Creating Apollo 13 Mission but missing a few details
+File has been read from this location -> /tmp/destination
+Data -> MissionCompleteData{cost=0.0, mission='Apollo 13', year=0, month=0, day=0, destination='The Moon', origin='Earth'}
+Please run module mastery-2-2-deserializer to realize that default field are read with Java default values and no the assigned ones,
+if they are not part of the serialized data
+A new data would look like this -> MissionCompleteData{cost=283.0, mission='null', year=1970, month=4, day=11, destination='null', origin='null'}
+
+Process finished with exit code 0
 ```
-
-## References
-
--   [https://en.wikipedia.org/wiki/Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
--   [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
--   [Creative Commons](https://creativecommons.org/)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=MdvoA-sjs0A">
-     <img 
-          src="https://img.youtube.com/vi/MdvoA-sjs0A/0.jpg" 
-          style="width:10%;">
-      </a>
-
-</div>
 
 ## About me 👨🏽‍💻🚀
 

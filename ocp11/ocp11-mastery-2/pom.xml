@@ -15,6 +15,7 @@
     <modules>
         <module>mastery-2-1</module>
         <module>mastery-2-2</module>
+        <module>mastery-2-2-deserializer</module>
     </modules>
 
 </project>

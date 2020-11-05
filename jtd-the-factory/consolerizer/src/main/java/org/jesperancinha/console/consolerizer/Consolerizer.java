@@ -1,6 +1,7 @@
 package org.jesperancinha.console.consolerizer;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static java.lang.Thread.sleep;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
@@ -224,24 +225,36 @@ public class Consolerizer {
         }
     }
 
+    public static void printRainbowTitleLn(final String title) {
+        printRainbowTitle(title);
+        System.out.print("\n");
+    }
+
+    public static void printRainbowTitle(final String title) {
+        List<String> consoleRainbow = ConColor.getConsoleRainbow();
+        var k = 0;
+        for (var i = 0; i < title.length(); i++) {
+            if (k == consoleRainbow.size()) {
+                k = 0;
+            }
+            System.out.print(consoleRainbow.get(k));
+            System.out.print(title.charAt(i));
+            if (title.charAt(i) != ' ') {
+                k++;
+            }
+        }
+    }
+
     public static void printRainbowLn(final String theme) {
         printRainbow(theme);
         System.out.print("\n");
     }
 
     public static void printRainbow(final String theme) {
-        System.out.print(ConColor.RED.getConsoleColor());
-        System.out.print(theme);
-        System.out.print(ConColor.ORANGE.getConsoleColor());
-        System.out.print(theme);
-        System.out.print(ConColor.YELLOW.getConsoleColor());
-        System.out.print(theme);
-        System.out.print(ConColor.GREEN.getConsoleColor());
-        System.out.print(theme);
-        System.out.print(ConColor.BLUE.getConsoleColor());
-        System.out.print(theme);
-        System.out.print(ConColor.MAGENTA.getConsoleColor());
-        System.out.print(theme);
+        ConColor.getConsoleRainbow().forEach(color -> {
+            System.out.print(color);
+            System.out.print(theme);
+        });
     }
 
 }
