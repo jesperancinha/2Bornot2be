@@ -8,6 +8,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 2. `compare` and `mismatch` in arrays
 3. TYPE_USE and TYPE_PARAMETER
 4. Switch valid numeric types and their limits
+5. Float value declaration
 
 (coming soon...)
 ## Output

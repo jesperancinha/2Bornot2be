@@ -112,6 +112,17 @@ public class Master2Dot2Runner {
         printRedGenericLn("### double");
         printRedGenericLn("%s <= double <= %s", Double.MIN_VALUE, Double.MAX_VALUE);
 
+        printRainbowTitleLn("5. Float value declaration");
+        printRainbowLn("==");
+        printYellowGenericLn("### We try to assign an absolute number");
+        float fNumber = 1000;
+        printBlueGenericLn(fNumber);
+        printYellowGenericLn("### We try to assign a number with decimals. Think that by default they are double");
+        fNumber = 100.12345f;
+        printBlueGenericLn(fNumber);
+        printYellowGenericLn("### With a double, we do not need to cast");
+        double dNumber = 100.45677;
+        printBlueGenericLn(dNumber);
 
         printUnicornsLn(100);
     }

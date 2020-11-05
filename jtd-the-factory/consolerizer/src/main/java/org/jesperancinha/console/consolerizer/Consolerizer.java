@@ -96,8 +96,8 @@ public class Consolerizer {
         printPrivateText(text);
     }
 
-    public static void printYellowGenericLn(String text) {
-        printYellowGeneric(text.concat("\n"));
+    public static void printYellowGenericLn(Object text) {
+        printYellowGeneric(text.toString().concat("\n"));
 
     }
 
