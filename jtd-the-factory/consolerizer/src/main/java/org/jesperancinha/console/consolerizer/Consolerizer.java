@@ -1,5 +1,7 @@
 package org.jesperancinha.console.consolerizer;
 
+import java.util.Arrays;
+
 import static java.lang.Thread.sleep;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
 
@@ -171,6 +173,20 @@ public class Consolerizer {
 
 
     private static void printPrivateText(String text, Object... vars) {
+
+        for (int i = 0; i < vars.length; i++) {
+            var variable = vars[i];
+            if (variable instanceof Exception) {
+                var e = (Exception) variable;
+                var stackTrace = e.getStackTrace();
+                var sb = new StringBuilder(e.getClass().getCanonicalName());
+                Arrays.stream(stackTrace).forEach(stackTraceElement -> {
+                    sb.append("\n\t");
+                    sb.append(stackTraceElement.toString());
+                });
+                vars[i] = sb.toString();
+            }
+        }
         printPrivateText(text, typingWaitGlobal, vars);
     }
 

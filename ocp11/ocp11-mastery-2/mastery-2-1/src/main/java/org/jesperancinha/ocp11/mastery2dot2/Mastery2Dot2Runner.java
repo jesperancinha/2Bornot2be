@@ -306,12 +306,12 @@ public class Mastery2Dot2Runner {
         try {
             var listOfAnimals = List.of(animals);
         } catch (NullPointerException e) {
-            printRedGenericLn("NullPointerException was thrown on trying to copu the array into a List");
+            printRedGenericLn("%s was thrown on trying to copy the array into an immutableList -> var listOfAnimals = List.of(animals);", e);
         }
         try {
             List<Animal> animalList = List.of(wolf, duck, null, bird, null, cat);
         } catch (NullPointerException e) {
-            printRedGenericLn("NullPointerException was thrown on trying to copu the array into an immutable list");
+            printRedGenericLn("%s was thrown on trying to create an immutable list directly -> List<Animal> animalList = List.of(wolf, duck, null, bird, null, cat);", e);
         }
 
         List<Animal> animalList = Arrays.asList(wolf, duck, null, bird, null, cat);
@@ -399,7 +399,7 @@ public class Mastery2Dot2Runner {
         try {
             p1.relativize(p2);
         } catch (java.lang.IllegalArgumentException e) {
-            printRedGenericLn("Process failed for p1=%s and p2=%s", p1, p2);
+            printRedGenericLn("%s -> Process failed for p1=%s and p2=%s", e ,p1, p2);
         }
         p2 = Path.of("tmp");
         printGreenGenericLn("Process didn't fail for p1=%s and p2=%s and the result for p2.relativize(p1) is: %s", p1, p2, p2.relativize(p1));
