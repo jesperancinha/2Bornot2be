@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Arrays;
+import java.util.function.Function;
 
 import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
@@ -38,7 +39,7 @@ public class Master2Dot2Runner {
             objectOutputStream.writeObject(missionData);
             printGreenGenericLn("File has been created on this location -> %s", fileName);
             printGreenGenericLn("Data -> %s", missionData);
-            printGreenGenericLn("Please run module %s to realize that default field are read with Java default values and no the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
+            printGreenGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,6 +74,21 @@ public class Master2Dot2Runner {
         printGreenGenericLn("mismatching %s with %s -> result is: %s", badCounting, goodCounting, Arrays.mismatch(badCounting, goodCounting));
         printGreenGenericLn("comparing %s with %s -> result is: %s", badCounting2, goodCounting, Arrays.compare(badCounting2, goodCounting));
         printGreenGenericLn("comparing %s with %s -> result is: %s", badCounting2AndShort, goodCounting, Arrays.compare(badCounting2AndShort, goodCounting));
+
+        printRainbowTitleLn("3. TYPE_USE and TYPE_PARAMETER");
+        printRainbowLn("==");
+        printYellowGenericLn("### A TYPE_USE case");
+        printBlueGenericLn("@Rocket String rocket1 = \"Saturn V\";");
+        @Rocket String rocket1 = "Saturn V";
+        printBlueGenericLn("var rocket2 = (@Rocket String) \"Saturn V\";");
+        var rocket2 = (@Rocket String) "Saturn V";
+        printBlueGenericLn("Function<Integer, String> f = ( @Rocket Integer val ) -> Integer.toHexString(val);");
+        Function<Integer, String> f = (@Rocket Integer val) -> Integer.toHexString(val);
+        printYellowGenericLn("### A TYPE_PARAMETER case");
+        var missionModified = new MissionDataTyped<String>();
+        printBlueGenericLn("var missionModified = new MissionDataTyped<String>();");
+        printYellowGenericLn("### Not that TYPE_PARAMETER is a part of TYPE_USE. If you have TYPE_USE, you don't need TYPE_PARAMETER");
+
         printUnicornsLn(100);
     }
 }

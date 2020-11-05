@@ -28,7 +28,7 @@ public class Master2Dot2Runner {
             var missionData = (MissionData) objectInputStream.readObject();
             printGreenGenericLn("File has been read from this location -> %s", fileName);
             printGreenGenericLn("Data -> %s", missionData);
-            printGreenGenericLn("Please run module %s to realize that default field are read with Java default values and no the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
+            printGreenGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
             printGreenGenericLn("A new data would look like this -> %s", new MissionData());
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

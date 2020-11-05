@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.mastery2dot2;
 
 import java.io.Serializable;
 
+@Rocket
 public class MissionData implements Serializable {
 
     public static final long serialVersionUID = 1;
