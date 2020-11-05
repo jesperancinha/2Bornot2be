@@ -7,6 +7,8 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 1. Serializing `FileOutputStream` and `FileInputStream`
 2. `compare` and `mismatch` in arrays
 3. TYPE_USE and TYPE_PARAMETER
+4. Switch valid numeric types and their limits
+
 (coming soon...)
 ## Output
 

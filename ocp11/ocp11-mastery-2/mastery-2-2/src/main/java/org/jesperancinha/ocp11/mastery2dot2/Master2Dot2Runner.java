@@ -15,6 +15,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCya
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -88,6 +89,29 @@ public class Master2Dot2Runner {
         var missionModified = new MissionDataTyped<String>();
         printBlueGenericLn("var missionModified = new MissionDataTyped<String>();");
         printYellowGenericLn("### Not that TYPE_PARAMETER is a part of TYPE_USE. If you have TYPE_USE, you don't need TYPE_PARAMETER");
+
+        printRainbowTitleLn("4. Switch valid numeric types and their limits");
+        printRainbowLn("==");
+        printYellowGenericLn("### Permitted Values");
+        printYellowGenericLn("### short");
+        printGreenGenericLn("%s <= byte <= %s", Byte.MIN_VALUE, Byte.MAX_VALUE);
+        printYellowGenericLn("### byte");
+        printGreenGenericLn("%s <= short <= %s", Short.MIN_VALUE, Short.MAX_VALUE);
+        printYellowGenericLn("### int");
+        printGreenGenericLn("%s <= short <= %s", Integer.MIN_VALUE, Integer.MAX_VALUE);
+        printYellowGenericLn("### char");
+        printGreenGenericLn("%d <= char <= %d", (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
+        printGreenGenericLn("%c <= char <= %c", Character.MIN_VALUE, Character.MAX_VALUE);
+        printRedGenericLn("### Not permitted Values");
+        printRedGenericLn("### bool");
+        printRedGenericLn("%s <= bool <= %s", Boolean.FALSE, Boolean.TRUE);
+        printRedGenericLn("### long");
+        printRedGenericLn("%s <= long <= %s", Long.MIN_VALUE, Long.MAX_VALUE);
+        printRedGenericLn("### float");
+        printRedGenericLn("%s <= float <= %s", Float.MIN_VALUE, Float.MAX_VALUE);
+        printRedGenericLn("### double");
+        printRedGenericLn("%s <= double <= %s", Double.MIN_VALUE, Double.MAX_VALUE);
+
 
         printUnicornsLn(100);
     }
