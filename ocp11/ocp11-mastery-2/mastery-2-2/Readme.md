@@ -5,6 +5,7 @@
 In this fourth mastery exercise we'll look at a few important key aspects:
 
 1. Serializing `FileOutputStream` and `FileInputStream`
+2. `compare` and `mismatch` in arrays
 
 (coming soon...)
 ## Output
@@ -14,7 +15,8 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 
 ## References
 
--   [https://en.wikipedia.org/wiki/Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
+-   [Apollo 13 (film)](https://nl.wikipedia.org/wiki/Apollo_13_(film))
+-   [Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
 -   [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
 -   [Creative Commons](https://creativecommons.org/)
 
@@ -24,7 +26,6 @@ In this fourth mastery exercise we'll look at a few important key aspects:
           src="https://img.youtube.com/vi/MdvoA-sjs0A/0.jpg" 
           style="width:10%;">
       </a>
-
 </div>
 
 ## About me 👨🏽‍💻🚀

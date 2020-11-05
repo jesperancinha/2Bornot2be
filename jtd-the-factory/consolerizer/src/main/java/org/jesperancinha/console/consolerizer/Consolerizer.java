@@ -2,6 +2,8 @@ package org.jesperancinha.console.consolerizer;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.lang.Thread.sleep;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
@@ -187,6 +189,12 @@ public class Consolerizer {
                 });
                 vars[i] = sb.toString();
             }
+            if (variable instanceof String[]) {
+                vars[i] = "[".concat(String.join(",", (String[]) variable)).concat("]");
+            }
+            if (variable instanceof int[]) {
+                vars[i] = "[".concat(IntStream.of((int[]) variable).mapToObj(Integer::toString).collect(Collectors.joining(",")).concat("]"));
+            }
         }
         printPrivateText(text, typingWaitGlobal, vars);
     }
@@ -257,4 +265,10 @@ public class Consolerizer {
         });
     }
 
+    public static void printUnicornsLn(final int nUnicorns) {
+        for (int i = 0; i < nUnicorns; i++) {
+            System.out.print("🦄");
+        }
+        System.out.println("\n");
+    }
 }
