@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.mastery2dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -168,10 +169,44 @@ public class Master2Dot2Runner {
         printYellowGenericLn("### The name is self-exlanatory. <>Function's always receive a primitive type");
         printGreenGenericLn(doubleFunction.apply(4371));
         printGreenGenericLn(doubleFunction.apply(2222));
-        printUnicornsLn(100);
 
         printRainbowTitleLn("9. `--add-exports` and `--add-reads` in modularization");
         printRainbowLn("==");
         printYellowGenericLn("### Check module mastery-2-2-modularity for an example in action");
+
+        printRainbowTitleLn("10. Security guidelines");
+        printRainbowLn("==");
+        printYellowGenericLn("### Check https://www.oracle.com/java/technologies/javase/seccodeguide.html for more info on java security");
+
+        printRainbowTitleLn("11. Project Jigsaw");
+        printRainbowLn("==");
+        printYellowGenericLn("### Check http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html for more info on java.base");
+
+        printRainbowTitleLn("12. `AutoCloseable`close method and exception handling");
+        printRainbowLn("==");
+        printYellowGenericLn("### AutoCloseable interface and exception handling");
+        var rocketInfoFile = "/tmp/rocket-info.txt";
+        try (FileOutputStream fos = new FileOutputStream(rocketInfoFile)) {
+            fos.write("2,949,136".getBytes());
+            throw new NullPointerException("See? I can throw NullPointerException whenever I want!");
+        } catch (IOException | NullPointerException e) {
+            printRedGenericLn("%s", e);
+        }
+        FileInputStream fisOut = null;
+        try (FileInputStream fis = new FileInputStream(rocketInfoFile)) {
+            byte[] bytes = fis.readAllBytes();
+            printGreenGenericLn(new String(bytes));
+            fisOut = fis;
+        } catch (IOException e) {
+            printRedGenericLn("%s", e);
+        }
+        try {
+            fisOut.close();
+            printYellowGenericLn("### We re-close the FileInputStream, but note that, that one also throws IOException.");
+        } catch (IOException e) {
+            printRedGenericLn("%s", e);
+        }
+
+        printUnicornsLn(100);
     }
 }

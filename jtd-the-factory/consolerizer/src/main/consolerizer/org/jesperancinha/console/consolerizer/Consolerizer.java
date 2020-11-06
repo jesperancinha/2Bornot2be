@@ -2,6 +2,7 @@ package org.jesperancinha.console.consolerizer;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -183,6 +184,10 @@ public class Consolerizer {
                 var e = (Exception) variable;
                 var stackTrace = e.getStackTrace();
                 var sb = new StringBuilder(e.getClass().getCanonicalName());
+                if (Objects.nonNull(e.getMessage())) {
+                    sb.append("\n\t");
+                    sb.append(e.getMessage());
+                }
                 Arrays.stream(stackTrace).forEach(stackTraceElement -> {
                     sb.append("\n\t");
                     sb.append(stackTraceElement.toString());

@@ -1,4 +1,4 @@
-# mastery-2-2-modularity
+# mastery-2-2-modularity - Mastery Module 2.2.modularity
 
 ## How to run
 
@@ -24,6 +24,19 @@ java --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --mod
 cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
 javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module -d out --module rocket
 java --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+```
+
+## Output
+
+```bash
+10:26 $ java --add-reads rocket=consolerizer --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner rocket=lunar.module --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+============ Welcome to the Apollo 13's mission launch of 1970 ============
+Apollo 13 - Rocket Launched!...
+Send hello!
+Apollo 13 - Service Module detached...
+Apollo 13 - Lunar Module detached...
+Mission complete
+Done!!
 ```
 
 ## About me 👨🏽‍💻🚀

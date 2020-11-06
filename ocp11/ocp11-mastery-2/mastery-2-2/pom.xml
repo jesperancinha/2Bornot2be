@@ -12,6 +12,8 @@
     <artifactId>mastery-2-2</artifactId>
 
     <build>
+
+        <sourceDirectory>src/main/mastery2dot2</sourceDirectory>
         <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
@@ -38,5 +40,9 @@
             <version>1.4.200</version>
         </dependency>
     </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>

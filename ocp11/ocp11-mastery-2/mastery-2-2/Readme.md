@@ -13,8 +13,12 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 7. Multi interface inheritance
 8. `Function`'s and `ToFunction`'s
 9. `--add-exports` and `--add-reads` in modularization
+10. Security guidelines: [Read, Write, Memorize, Understand (R.W.M.U.)](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+11. Project Jigsaw: [R.W.M.U](http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html)
+12. `AutoCloseable`close method and exception handling
 
 (coming soon...)
+
 ## Output
 
 ```bash
@@ -27,6 +31,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 -   [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
 -   [Creative Commons](https://creativecommons.org/)
 -   [Five Command Line Options To Hack The Java Module System](https://nipafx.dev/five-command-line-options-hack-java-module-system)
+-   [Secure Coding Guidelines for Java SE](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=MdvoA-sjs0A">
