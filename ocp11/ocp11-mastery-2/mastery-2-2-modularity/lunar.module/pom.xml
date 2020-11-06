@@ -37,6 +37,6 @@
             <artifactId>h2</artifactId>
             <version>1.4.200</version>
         </dependency>
-    </dependencies>s
+    </dependencies>
 
 </project>
