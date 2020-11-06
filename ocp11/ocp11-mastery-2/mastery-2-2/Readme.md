@@ -16,6 +16,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 10. Security guidelines: [Read, Write, Memorize, Understand (R.W.M.U.)](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 11. Project Jigsaw: [R.W.M.U](http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html)
 12. `AutoCloseable`close method and exception handling
+13. `Files` list and walk
 
 (coming soon...)
 

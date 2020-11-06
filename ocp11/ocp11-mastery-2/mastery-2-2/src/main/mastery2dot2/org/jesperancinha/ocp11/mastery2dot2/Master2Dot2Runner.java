@@ -6,16 +6,22 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.function.DoubleFunction;
 import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -203,6 +209,42 @@ public class Master2Dot2Runner {
         try {
             fisOut.close();
             printYellowGenericLn("### We re-close the FileInputStream, but note that, that one also throws IOException.");
+        } catch (IOException e) {
+            printRedGenericLn("%s", e);
+        }
+
+        printRainbowTitleLn("13. `Files` list and walk");
+        printRainbowLn("==");
+        printYellowGenericLn("### In the following sequence of examples we'll see how to list and now not to list files");
+        Stream<Path> allFiles1;
+        try {
+            printOrangeGenericLn("### Stream<Path> allFiles1 = Files.list(Paths.get(\"/**/rocket*.txt\")); -> should fail!");
+            printOrangeGenericLn("### It may throw an InvalidPathException which is a RuntimeException. This depends on your FileSystems");
+            allFiles1 = Files.list(Paths.get("/**/rocket*.txt"));
+        } catch (IOException e) {
+            printYellowGenericLn("### It is also safer to assume that if something goes on reading, it will throw a IOException, instead of possibly the NoSuchFileException");
+            printRedGenericLn("%s", e);
+            try {
+                allFiles1 = Files.list(Paths.get("/tmp"));
+                printGreenGenericLn("These are the files with list: %s", allFiles1.collect(Collectors.toList()));
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        }
+        // Cannot resolve method 'find(java.nio.file.Path)'
+        // allFiles1 = Files.find(Paths.get("/tmp/rocket-info.txt"));
+        try {
+            allFiles1 = Files.find(Paths.get("/tmp/rocket-info.txt"), 0, (p, a)
+                    -> p.endsWith("rocket-info.txt") && a.isRegularFile());
+            printGreenGenericLn("These are the files with find: %s", allFiles1.collect(Collectors.toList()));
+        } catch (IOException e) {
+            printRedGenericLn("%s", e);
+        }
+        // Cannot resolve method 'walk(java.nio.file.Path, java.lang.String)'
+        // allFiles1= Files.walk(Paths.get("/tmp/rocket-info.txt"), "test.txt");
+        try {
+            allFiles1= Files.walk(Paths.get("/tmp/rocket-info.txt"),0);
+            printGreenGenericLn("These are the files with walk: %s", allFiles1.collect(Collectors.toList()));
         } catch (IOException e) {
             printRedGenericLn("%s", e);
         }
