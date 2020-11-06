@@ -12,12 +12,12 @@ This module is the supporting module of my article on sealed classes:
 In order to compile:
 
 ```bash
-javac  --enable-preview --release 15 src/main/java/org/jesperancinha/jtd/shrimps/*.java
+javac --enable-preview --release 15 src/main/java/org/jesperancinha/jtd/shrimps/*.java
 ```
 In order to run:
 
 ```bash
-java  --enable-preview -cp src/main/java org.jesperancinha.jtd.shrimps.ShrimpsLauncher 
+java --enable-preview -cp src/main/java org.jesperancinha.jtd.shrimps.ShrimpsLauncher 
 ```
 
 ## References

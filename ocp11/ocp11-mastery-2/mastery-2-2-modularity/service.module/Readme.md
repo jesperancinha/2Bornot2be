@@ -1,40 +1,4 @@
-# mastery-2-2 - Mastery Module 2.2.
-
-## Exercise
-
-In this fourth mastery exercise we'll look at a few important key aspects:
-
-1. Serializing `FileOutputStream` and `FileInputStream` -> [mastery-2-2-deserializer](../mastery-2-2-deserializer) and [mastery-2-2](.)
-2. `compare` and `mismatch` in arrays
-3. TYPE_USE and TYPE_PARAMETER
-4. Switch valid numeric types and their limits
-5. Float value declaration
-6. Conflicting exports in modularization
-7. Multi interface inheritance
-8. `Function`'s and `ToFunction`'s
-9. `--add-exports` and `--add-reads` in modularization
-
-(coming soon...)
-## Output
-
-```bash
-```
-
-## References
-
--   [Apollo 13 (film)](https://nl.wikipedia.org/wiki/Apollo_13_(film))
--   [Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
--   [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
--   [Creative Commons](https://creativecommons.org/)
--   [Five Command Line Options To Hack The Java Module System](https://nipafx.dev/five-command-line-options-hack-java-module-system)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=MdvoA-sjs0A">
-     <img 
-          src="https://img.youtube.com/vi/MdvoA-sjs0A/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
+# service.module
 
 ## About me 👨🏽‍💻🚀
 

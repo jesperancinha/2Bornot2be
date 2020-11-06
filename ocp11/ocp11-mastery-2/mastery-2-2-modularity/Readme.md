@@ -1,40 +1,30 @@
-# mastery-2-2 - Mastery Module 2.2.
+# mastery-2-2-modularity
 
-## Exercise
+## How to run
 
-In this fourth mastery exercise we'll look at a few important key aspects:
-
-1. Serializing `FileOutputStream` and `FileInputStream` -> [mastery-2-2-deserializer](../mastery-2-2-deserializer) and [mastery-2-2](.)
-2. `compare` and `mismatch` in arrays
-3. TYPE_USE and TYPE_PARAMETER
-4. Switch valid numeric types and their limits
-5. Float value declaration
-6. Conflicting exports in modularization
-7. Multi interface inheritance
-8. `Function`'s and `ToFunction`'s
-9. `--add-exports` and `--add-reads` in modularization
-
-(coming soon...)
-## Output
+- Forcing requires and exports (--add-reads and --add-exports respectively)
 
 ```bash
+cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --add-reads rocket=consolerizer -d out --module rocket
+java --add-reads rocket=consolerizer --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner rocket=lunar.module --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
 ```
 
-## References
+- Forcing exports, with all uncommented modules in [rocket](./rocket/rocket/module-info.java).
 
--   [Apollo 13 (film)](https://nl.wikipedia.org/wiki/Apollo_13_(film))
--   [Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
--   [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
--   [Creative Commons](https://creativecommons.org/)
--   [Five Command Line Options To Hack The Java Module System](https://nipafx.dev/five-command-line-options-hack-java-module-system)
+```bash
+cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket -d out --module rocket
+java --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+```
 
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=MdvoA-sjs0A">
-     <img 
-          src="https://img.youtube.com/vi/MdvoA-sjs0A/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
+- The typical compilation with all uncommented modules in [lunar.module](./lunar.module/lunar.module/module-info.java) and in [rocket](./rocket/rocket/module-info.java).
+
+```bash
+cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module -d out --module rocket
+java --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+```
 
 ## About me 👨🏽‍💻🚀
 

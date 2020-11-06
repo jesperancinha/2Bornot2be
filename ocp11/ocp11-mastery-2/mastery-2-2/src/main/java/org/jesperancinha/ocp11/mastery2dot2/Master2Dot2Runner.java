@@ -126,6 +126,10 @@ public class Master2Dot2Runner {
         double dNumber = 100.45677;
         printBlueGenericLn(dNumber);
 
+        printRainbowTitleLn("6. Conflicting exports in modularization");
+        printRainbowLn("==");
+        printYellowGenericLn("### Check the module definitions of this module");
+
         printRainbowTitleLn("7. Multi interface inheritance");
         printRainbowLn("==");
         printYellowGenericLn("### Check the two interfaces. There is a subclass which overrides the superclass method. This is Ok");
@@ -165,5 +169,9 @@ public class Master2Dot2Runner {
         printGreenGenericLn(doubleFunction.apply(4371));
         printGreenGenericLn(doubleFunction.apply(2222));
         printUnicornsLn(100);
+
+        printRainbowTitleLn("9. `--add-exports` and `--add-reads` in modularization");
+        printRainbowLn("==");
+        printYellowGenericLn("### Check module mastery-2-2-modularity for an example in action");
     }
 }
