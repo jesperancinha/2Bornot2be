@@ -11,6 +11,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 5. Float value declaration
 6. Conflicting exports in modularization
 7. Multi interface inheritance
+8. `Function`'s and `ToFunction`'s
 
 (coming soon...)
 ## Output

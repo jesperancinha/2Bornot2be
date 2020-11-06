@@ -6,7 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Arrays;
+import java.util.function.DoubleFunction;
 import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
 
 import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
@@ -139,6 +141,29 @@ public class Master2Dot2Runner {
                 "    String getOriginLocation();\n" +
                 "}");
 
+
+        printRainbowTitleLn("8. `Function`'s and `ToFunction`'s");
+        printRainbowLn("==");
+        ToDoubleFunction<String> toDoubleFunction = a -> {
+            if (a.equals("SATCAT")) {
+                return 4371;
+            }
+            return -1;
+        };
+        DoubleFunction<String> doubleFunction = a -> {
+            if (a == 4371) {
+                return "SATCAT";
+            }
+            return null;
+        };
+        printYellowGenericLn("### A ToDoubleFunction uses an Object parameter, but always returns a primitve");
+        printYellowGenericLn("### The name is self-exlanatory. To<>Function's always return a primitive type");
+        printGreenGenericLn(toDoubleFunction.applyAsDouble("SATCAT"));
+        printGreenGenericLn(toDoubleFunction.applyAsDouble("AAAAAA"));
+        printYellowGenericLn("### A DoubleFunction uses an double parameter, but always returns an object");
+        printYellowGenericLn("### The name is self-exlanatory. <>Function's always receive a primitive type");
+        printGreenGenericLn(doubleFunction.apply(4371));
+        printGreenGenericLn(doubleFunction.apply(2222));
         printUnicornsLn(100);
     }
 }

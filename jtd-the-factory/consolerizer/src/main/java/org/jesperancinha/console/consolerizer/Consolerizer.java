@@ -61,7 +61,7 @@ public class Consolerizer {
 
 
     public static void printGreenGenericLn(Object text) {
-        printGreenGeneric(text.toString().trim().concat("\n"));
+        printGreenGeneric(("" + text).trim().concat("\n"));
     }
 
     public static void printGreenGeneric(Object text) {
