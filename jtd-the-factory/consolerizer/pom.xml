@@ -12,6 +12,7 @@
     <artifactId>consolerizer</artifactId>
 
     <build>
+        <sourceDirectory>src/main/consolerizer</sourceDirectory>
         <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
