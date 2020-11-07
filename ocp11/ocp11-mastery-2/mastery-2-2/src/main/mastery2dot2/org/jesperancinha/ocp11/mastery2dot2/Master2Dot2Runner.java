@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.mastery2dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -243,11 +244,34 @@ public class Master2Dot2Runner {
         // Cannot resolve method 'walk(java.nio.file.Path, java.lang.String)'
         // allFiles1= Files.walk(Paths.get("/tmp/rocket-info.txt"), "test.txt");
         try {
-            allFiles1= Files.walk(Paths.get("/tmp/rocket-info.txt"),0);
+            allFiles1 = Files.walk(Paths.get("/tmp/rocket-info.txt"), 0);
             printGreenGenericLn("These are the files with walk: %s", allFiles1.collect(Collectors.toList()));
         } catch (IOException e) {
             printRedGenericLn("%s", e);
         }
+
+        printRainbowTitleLn("14. Reading sub-paths `Path.subpath`");
+        printRainbowLn("==");
+        printYellowGenericLn("### A few things to remember:");
+        printYellowGenericLn("### 1. The root is never element 0");
+        printYellowGenericLn("### 2. First index is inclusive, last index is exclusive (just like almost every index in Java");
+        printYellowGenericLn("### 3. Individual paths do not start or end with path separator");
+        var lunarPath = new File("/tmp/controller/lunar");
+        var orbitPath = new File("/tmp/controller/orbit");
+        var launcherPath = new File("/tmp/controller/launcher");
+        lunarPath.mkdirs();
+        orbitPath.mkdirs();
+        launcherPath.mkdirs();
+        var pathLunar = Paths.get("/tmp/controller/lunar");
+        var pathOrbit = Paths.get("/tmp/controller/orbit");
+        var pathLauncher = Paths.get("/tmp/controller/launcher");
+        printOrangeGenericLn("A subpath 0 to 1 of %s is %s", pathLunar, pathLunar.subpath(0, 1));
+        printOrangeGenericLn("A subpath 0 to 2 of %s is %s", pathLunar, pathLunar.subpath(0, 2));
+        printOrangeGenericLn("Path 0 of %s is %s", pathLunar, pathLunar.getName(0));
+        printOrangeGenericLn("Root of %s is %s", pathLunar, pathLunar.getRoot());
+        printOrangeGenericLn("A subpath 0 to 3 of %s is %s", pathOrbit, pathOrbit.subpath(0, 3));
+        printOrangeGenericLn("A subpath 1 to 3 of %s is %s", pathLauncher, pathLauncher.subpath(1, 3));
+
 
         printUnicornsLn(100);
     }

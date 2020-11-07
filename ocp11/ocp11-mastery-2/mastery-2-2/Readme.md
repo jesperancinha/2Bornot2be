@@ -17,6 +17,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 11. Project Jigsaw: [R.W.M.U](http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html)
 12. `AutoCloseable`close method and exception handling
 13. `Files` list and walk
+14. Reading sub-paths `Path.subpath`
 
 (coming soon...)
 
