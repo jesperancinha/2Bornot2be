@@ -219,6 +219,14 @@ This will never break
 This will never break
 We leave the countdown with i=2, j=1, k=5
 The next text won't print
+18. Overriding 'CharSequence'
+============
+### How do we override a CharSequence for different classes?
+### Here are some examples
+We now print the moon-base with -> public <T extends String> Collection<String> translateData(List<T> list)
+We now print the moon with -> public <T extends String> Collection<String> translateData(List<T> list)
+We now print the moon-base with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)
+We now print the moon with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 
 
