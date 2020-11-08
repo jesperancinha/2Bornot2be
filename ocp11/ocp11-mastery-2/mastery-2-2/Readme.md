@@ -21,6 +21,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 15. Prepared statement different types `BLOB` and `CLOB`
 16. Non-deterministic nature of `findAny`
 17. Loops and Labels for `do`, `while`, `for` and `if`
+18. Overriding `CharSequence`
 
 (coming soon...)
 

@@ -15,8 +15,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Vector;
 import java.util.function.DoubleFunction;
 import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
@@ -364,9 +367,10 @@ public class Master2Dot2Runner {
                     printRedGenericLn("This will never break");
                     if (k == 5) {
                         printOrangeGenericLn("We leave the countdown with i=%d, j=%d, k=%d", i, j, k);
-                        DODO: do {
+                        DODO:
+                        do {
                             printGreenGenericLn("The next text won't print");
-                            if(true)
+                            if (true)
                                 break DODO;
                             printGreenGenericLn("The next text won't print");
                         } while (false);
@@ -377,6 +381,38 @@ public class Master2Dot2Runner {
                 }
             }
         }
+
+        printRainbowTitleLn("18. Overriding `CharSequence`");
+        printRainbowLn("==");
+        printYellowGenericLn("### How do we override a CharSequence for different classes?");
+        printYellowGenericLn("### Here are some examples");
+        class Moon {
+            public <T extends CharSequence> Collection<String> translateData(Collection<T> list) {
+                printBlueGenericLn("We now print the moon with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)");
+                return new ArrayList<>();
+            }
+
+            public <T extends String> Collection<String> translateData(List<T> list) {
+                printBlueGenericLn("We now print the moon with -> public <T extends String> Collection<String> translateData(List<T> list)");
+                return new ArrayList<>();
+            }
+        }
+        class MoonBase extends Moon {
+            public <T extends CharSequence> Collection<String> translateData(Collection<T> list) {
+                printBlueGenericLn("We now print the moon-base with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)");
+                return super.translateData(list);
+            }
+
+            public <T extends String> Collection<String> translateData(List<T> list) {
+                printBlueGenericLn("We now print the moon-base with -> public <T extends String> Collection<String> translateData(List<T> list)");
+                return super.translateData(list);
+            }
+        }
+        var moonBase = new MoonBase();
+        // Cannot resolve method 'transform(java.util.ArrayList<java.lang.Long>)'
+        // moonBase.transform(new ArrayList<Long>());
+        moonBase.translateData(new ArrayList<>());
+        moonBase.translateData((Collection)new Vector<>());
         printUnicornsLn(100);
     }
 }
