@@ -67,6 +67,79 @@ Function<Integer, String> f = ( @Rocket Integer val ) -> Integer.toHexString(val
 ### A TYPE_PARAMETER case
 var missionModified = new MissionDataTyped<String>();
 ### Not that TYPE_PARAMETER is a part of TYPE_USE. If you have TYPE_USE, you don't need TYPE_PARAMETER
+4. Switch valid numeric types and their limits
+============
+### Permitted Values
+### short
+-128 <= byte <= 127
+### byte
+-32768 <= short <= 32767
+### int
+-2147483648 <= short <= 2147483647
+### char
+0 <= char <= 65535
+null <= char <= ￿
+### Not permitted Values
+### bool
+false <= bool <= true
+### long
+-9223372036854775808 <= long <= 9223372036854775807
+### float
+1.4E-45 <= float <= 3.4028235E38
+### double
+4.9E-324 <= double <= 1.7976931348623157E308
+5. Float value declaration
+============
+### We try to assign an absolute number
+1000.0
+### We try to assign a number with decimals. Think that by default they are double
+100.12345
+### With a double, we do not need to cast
+100.45677
+6. Conflicting exports in modularization
+============
+### Check the module definitions of this module
+7. Multi interface inheritance
+============
+### Check the two interfaces. There is a subclass which overrides the superclass method. This is Ok
+public interface BriefingTrajectory {
+    String getOriginLocation();
+    String getDestinationLocation();
+}
+### And this is the sub interface
+public interface MissionBriefingControl extends BriefingDate, BriefingTrajectory {
+    String getDestinationLocation();
+    String getDestinationLocation(MissionData missionData);
+    LocalDateTime getBriefingDate();
+    String getOriginLocation();
+}
+8. 'Function''s and 'ToFunction''s
+============
+### A ToDoubleFunction uses an Object parameter, but always returns a primitve
+### The name is self-exlanatory. To<>Function's always return a primitive type
+4371.0
+-1.0
+### A DoubleFunction uses an double parameter, but always returns an object
+### The name is self-exlanatory. <>Function's always receive a primitive type
+SATCAT
+null
+9. '--add-exports' and '--add-reads' in modularization
+============
+### Check module mastery-2-2-modularity for an example in action
+10. Security guidelines
+============
+### Check https://www.oracle.com/java/technologies/javase/seccodeguide.html for more info on java security
+11. Project Jigsaw
+============
+### Check http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html for more info on java.base
+12. 'AutoCloseable'close method and exception handling
+============
+### AutoCloseable interface and exception handling
+java.lang.NullPointerException
+	See? I can throw NullPointerException whenever I want!
+	$mastery22$/org.jesperancinha.ocp11.mastery2dot2.Master2Dot2Runner.main(Master2Dot2Runner.java:207)
+2,949,136
+### We re-close the FileInputStream, but note that, that one also throws IOException.
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 
 
