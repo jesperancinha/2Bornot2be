@@ -16,6 +16,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.DoubleFunction;
 import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
@@ -277,7 +278,6 @@ public class Master2Dot2Runner {
         printOrangeGenericLn("A subpath 0 to 3 of %s is %s", pathOrbit, pathOrbit.subpath(0, 3));
         printOrangeGenericLn("A subpath 1 to 3 of %s is %s", pathLauncher, pathLauncher.subpath(1, 3));
 
-
         printRainbowTitleLn("15. Prepared statement different types `BLOB` and `CLOB`.");
         printRainbowLn("==");
         printYellowGenericLn("### Multiple runs of the same query is better performed with `PreparedStatement`");
@@ -329,6 +329,23 @@ public class Master2Dot2Runner {
             e.printStackTrace();
         }
 
+        printRainbowTitleLn("16. Non-deterministic nature of findAny.");
+        printRainbowLn("==");
+        printYellowGenericLn("### findAny of Java streams is non deterministic");
+        printYellowGenericLn("### It may give the feeling that the cause of it are parallel streams");
+        printYellowGenericLn("### We pick a list of the actors of Apollo 13");
+        var actors = List.of("Tom Hanks", "Bill Paxton", "Kevin Bacon", "Gary Sinise");
+        printBlueGenericLn("This is the list: %s", "var actors = List.of(\"Tom Hanks\", \"Bill Paxton\",\"Kevin Bacon\",\"Gary Sinise\");");
+        printBlueGenericLn("We select one with findAny and a parallel stream:\n %s", "        var actorParallel = actors. parallelStream()\n" +
+                "                .findAny().orElse(null);");
+        var actorParallel = actors.parallelStream()
+                .findAny().orElse(null);
+        printOrangeGenericLn("We've found actor %s. Note that if you run this several times, you'll still get %s. However you would not be able to determine that before-hand right?", actorParallel, actorParallel);
+        printBlueGenericLn("We select one with findAny and a sequential stream:\n %s", "        var actorParallel2 = actors.stream()\n" +
+                "                .findAny().orElse(null);");
+        var actorParallel2 = actors.stream()
+                .findAny().orElse(null);
+        printOrangeGenericLn("Now we get %s. Run again and you'll still get %s. However, this wasn't possible to determine was it?", actorParallel2, actorParallel2);
         printUnicornsLn(100);
     }
 }
