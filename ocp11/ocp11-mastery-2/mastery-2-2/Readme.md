@@ -140,6 +140,53 @@ java.lang.NullPointerException
 	$mastery22$/org.jesperancinha.ocp11.mastery2dot2.Master2Dot2Runner.main(Master2Dot2Runner.java:207)
 2,949,136
 ### We re-close the FileInputStream, but note that, that one also throws IOException.
+13. 'Files' list and walk
+============
+### In the following sequence of examples we'll see how to list and now not to list files
+### Stream<Path> allFiles1 = Files.list(Paths.get("/**/rocket*.txt")); -> should fail!
+### It may throw an InvalidPathException which is a RuntimeException. This depends on your FileSystems
+### It is also safer to assume that if something goes on reading, it will throw a IOException, instead of possibly the NoSuchFileException
+java.nio.file.NoSuchFileException
+	/**/rocket*.txt
+	java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	java.base/sun.nio.fs.UnixFileSystemProvider.newDirectoryStream(UnixFileSystemProvider.java:408)
+	java.base/java.nio.file.Files.newDirectoryStream(Files.java:471)
+	java.base/java.nio.file.Files.list(Files.java:3694)
+	$mastery22$/org.jesperancinha.ocp11.mastery2dot2.Master2Dot2Runner.main(Master2Dot2Runner.java:233)
+These are the files with list: [/tmp/wolfdata.txt, /tmp/wolfdata2.txt, /tmp/com.google.Keystone, /tmp/rocket-info.txt, /tmp/proxy-tf9x77, /tmp/ost.txt, /tmp/com.avast.proxy.UGQxCar5, /tmp/destination, /tmp/controller, /tmp/master.2.2.JPG, /tmp/com.avast.proxy.KaozeHyo, /tmp/com.apple.launchd.8LFSW1XvYB]
+These are the files with find: [/tmp/rocket-info.txt]
+These are the files with walk: [/tmp/rocket-info.txt]
+14. Reading sub-paths 'Path.subpath'
+============
+### A few things to remember:
+### 1. The root is never element 0
+### 2. First index is inclusive, last index is exclusive (just like almost every index in Java
+### 3. Individual paths do not start or end with path separator
+A subpath 0 to 1 of /tmp/controller/lunar is tmp
+A subpath 0 to 2 of /tmp/controller/lunar is tmp/controller
+Path 0 of /tmp/controller/lunar is tmp
+Root of /tmp/controller/lunar is /
+A subpath 0 to 3 of /tmp/controller/orbit is tmp/controller/orbit
+A subpath 1 to 3 of /tmp/controller/launcher is controller/launcher
+15. Prepared statement different types 'BLOB' and 'CLOB'.
+============
+### Multiple runs of the same query is better performed with 'PreparedStatement'
+### Performance can be hindered if only one query is run per 'PreparedStatement'
+Connection: H2 / UNNAMED
+Current auto-commit setting: true
+1
+1
+prep1: CREATE TABLE Blog (ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+TEXT CLOB,
+IMAGE BLOB);
+prep2: INSERT INTO Blog(
+TEXT,
+IMAGE) VALUES (?,?) {1: SPACE(22 /* table: -2 id: 3 */), 2: CAST(REPEAT('00', 693857) AS BINARY /* table: -2 id: 4 */)}
+1
+This is a big big blog
+Check /tmp/master.2.2.JPG. The contents of ??????..., have been copied there!
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 
 
