@@ -20,6 +20,8 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 14. Reading sub-paths `Path.subpath`
 15. Prepared statement different types `BLOB` and `CLOB`
 16. Non-deterministic nature of `findAny`
+17. Loops and Labels for `do`, `while`, `for` and `if`
+
 (coming soon...)
 
 ## Output

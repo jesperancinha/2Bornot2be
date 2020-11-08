@@ -346,6 +346,37 @@ public class Master2Dot2Runner {
         var actorParallel2 = actors.stream()
                 .findAny().orElse(null);
         printOrangeGenericLn("Now we get %s. Run again and you'll still get %s. However, this wasn't possible to determine was it?", actorParallel2, actorParallel2);
+
+        printRainbowTitleLn("17. Loops and Labels");
+        printRainbowLn("==");
+        printYellowGenericLn("### Loops and Labels cannot be broken or continued for outside flow control statements such as while, do, for and if");
+        printYellowGenericLn("### Break and continue alone do work, but only within a loop");
+        var i = 0;
+        SPACE:
+        while (i++ < 2) {
+            var j = 0;
+            ORBIT:
+            while (j++ < 10) {
+                var k = 0;
+                MOON:
+                while (k++ < 10) {
+                    ACCIDENT:
+                    printRedGenericLn("This will never break");
+                    if (k == 5) {
+                        printOrangeGenericLn("We leave the countdown with i=%d, j=%d, k=%d", i, j, k);
+                        DODO: do {
+                            printGreenGenericLn("The next text won't print");
+                            if(true)
+                                break DODO;
+                            printGreenGenericLn("The next text won't print");
+                        } while (false);
+                        break ORBIT;
+                        // Undefined label: 'ACCIDENT'
+                        // break ACCIDENT;
+                    }
+                }
+            }
+        }
         printUnicornsLn(100);
     }
 }
