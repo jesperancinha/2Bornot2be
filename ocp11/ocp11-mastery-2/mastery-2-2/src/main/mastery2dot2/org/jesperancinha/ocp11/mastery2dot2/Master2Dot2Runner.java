@@ -10,6 +10,11 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Blob;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Arrays;
 import java.util.function.DoubleFunction;
 import java.util.function.Function;
@@ -272,6 +277,57 @@ public class Master2Dot2Runner {
         printOrangeGenericLn("A subpath 0 to 3 of %s is %s", pathOrbit, pathOrbit.subpath(0, 3));
         printOrangeGenericLn("A subpath 1 to 3 of %s is %s", pathLauncher, pathLauncher.subpath(1, 3));
 
+
+        printRainbowTitleLn("15. Prepared statement different types `BLOB` and `CLOB`.");
+        printRainbowLn("==");
+        printYellowGenericLn("### Multiple runs of the same query is better performed with `PreparedStatement`");
+        printYellowGenericLn("### Performance can be hindered if only one query is run per `PreparedStatement`");
+        try {
+            Connection conn = DriverManager.
+                    getConnection("jdbc:h2:mem:", "sa", "");
+            printGreenGenericLn("Connection: %s / %s", conn.getMetaData().getDatabaseProductName(), conn.getCatalog());
+            printGreenGenericLn("Current auto-commit setting: %s", conn.getAutoCommit());
+            PreparedStatement preparedStatement = conn.prepareStatement("select 1 as value from dual");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                printOrangeGenericLn(resultSet.getString("value"));
+                printOrangeGenericLn(resultSet.getString(1));
+            }
+            var resourceAsStream = Master2Dot2Runner.class.getResourceAsStream("/master.2.2.JPG");
+            PreparedStatement createBlogs = conn.
+                    prepareStatement("CREATE TABLE Blog (ID INTEGER PRIMARY KEY AUTO_INCREMENT,\n" +
+                            "TEXT CLOB,\n" +
+                            "IMAGE BLOB);");
+            printGreenGenericLn(createBlogs);
+            createBlogs.execute();
+            Blob blob = conn.createBlob();
+            blob.setBytes(1, resourceAsStream.readAllBytes());
+            java.sql.Clob clob = conn.createClob();
+            clob.setString(1, "This is a big big blog");
+            PreparedStatement insertBlog = conn.
+                    prepareStatement("INSERT INTO Blog(\n" +
+                            "TEXT,\n" +
+                            "IMAGE) VALUES (?,?)");
+            insertBlog.setClob(1, clob);
+            insertBlog.setBlob(2, blob);
+            printGreenGenericLn(insertBlog);
+            insertBlog.execute();
+            PreparedStatement selectBlog = conn.prepareStatement("select ID, TEXT, IMAGE from Blog");
+            ResultSet resultSet2 = selectBlog.executeQuery();
+            while (resultSet2.next()) {
+                printOrangeGenericLn(resultSet2.getString(1));
+                printOrangeGenericLn(new String(resultSet2.getClob(2).getAsciiStream().readAllBytes()));
+                byte[] bytes = resultSet2.getBlob(3).getBinaryStream().readAllBytes();
+                try (FileOutputStream fos = new FileOutputStream("/tmp/master.2.2.JPG")) {
+                    fos.write(bytes);
+                }
+                printOrangeGenericLn("Check /tmp/master.2.2.JPG. The contents of %s..., have been copied there!",
+                        new String(bytes).substring(0, 10));
+            }
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         printUnicornsLn(100);
     }

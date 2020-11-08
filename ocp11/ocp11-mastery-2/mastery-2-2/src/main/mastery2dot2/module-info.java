@@ -5,4 +5,5 @@ module $mastery22$ {
     exports org.jesperancinha.ocp11.mastery2dot2 to org.jesperancinha.ocp11.master2dot2.module;
     requires transitive org.assertj.core;
     requires consolerizer;
+    requires java.sql;
 }

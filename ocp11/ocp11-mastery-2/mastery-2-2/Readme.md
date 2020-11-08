@@ -18,6 +18,7 @@ In this fourth mastery exercise we'll look at a few important key aspects:
 12. `AutoCloseable`close method and exception handling
 13. `Files` list and walk
 14. Reading sub-paths `Path.subpath`
+15. Prepared statement different types `BLOB` and `CLOB`.
 
 (coming soon...)
 
