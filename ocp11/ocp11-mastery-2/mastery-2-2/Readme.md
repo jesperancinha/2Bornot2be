@@ -187,6 +187,38 @@ IMAGE) VALUES (?,?) {1: SPACE(22 /* table: -2 id: 3 */), 2: CAST(REPEAT('00', 69
 1
 This is a big big blog
 Check /tmp/master.2.2.JPG. The contents of ??????..., have been copied there!
+16. Non-deterministic nature of findAny.
+============
+### findAny of Java streams is non deterministic
+### It may give the feeling that the cause of it are parallel streams
+### We pick a list of the actors of Apollo 13
+This is the list: var actors = List.of("Tom Hanks", "Bill Paxton","Kevin Bacon","Gary Sinise");
+We select one with findAny and a parallel stream:
+         var actorParallel = actors. parallelStream()
+                .findAny().orElse(null);
+We've found actor Kevin Bacon. Note that if you run this several times, you'll still get Kevin Bacon. However you would not be able to determine that before-hand right?
+We select one with findAny and a sequential stream:
+         var actorParallel2 = actors.stream()
+                .findAny().orElse(null);
+Now we get Tom Hanks. Run again and you'll still get Tom Hanks. However, this wasn't possible to determine was it?
+17. Loops and Labels
+============
+### Loops and Labels cannot be broken or continued for outside flow control statements such as while, do, for and if
+### Break and continue alone do work, but only within a loop
+This will never break
+This will never break
+This will never break
+This will never break
+This will never break
+We leave the countdown with i=1, j=1, k=5
+The next text won't print
+This will never break
+This will never break
+This will never break
+This will never break
+This will never break
+We leave the countdown with i=2, j=1, k=5
+The next text won't print
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 
 
