@@ -1,13 +1,27 @@
 # mastery-3-1 - Mastery Module 3.1.
 
-## Exercise
-
 In this fifth master module on route to the Java 11 certification, we are going to use data from some of the most amazing singers who sing in dutch.
 Regardless of my musical preferences and of yours, it is undeniable that it is through their music that I ended up learning this amazing language.
 I sang these songs from my heart and little by little my dutch speaking goal became a reality.
 It should be no surprise that my story would end up being a part of my study materials of some sort and this is their debut.
 
 (... coming soon.)
+
+## Exercise
+
+1. `Integer` Mathematical Bases `parseInt`
+2. Labels and `break` in loops
+3. `Files.newDirectoryStream` Listings
+4. `@Override` application
+5. How `null` is interpreted in overloading
+6. How `getRoot()` exhibits the root `Path`
+7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`
+8. Initialization of invisible `primitive` members
+9. Declaring a `String` array.
+10. Passing variables by value and not returning
+11. Thread safe `Object` s
+12. `Stream` count types
+13. 
 
 ## Output
 
