@@ -22,7 +22,7 @@ The point is that you need to have a `/tmp` folder at this point.
 1. `Integer` Mathematical Bases `parseInt`
 2. Labels and `break` in loops
 3. `Files.newDirectoryStream` Listings and the `glob` pattern
-4. `@Override` application
+4. `@Override` in `equals`
 5. How `null` is interpreted in overloading
 6. How `getRoot()` exhibits the root `Path`
 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`
@@ -121,6 +121,7 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Maaike Ouboter](https://nl.wikipedia.org/wiki/Maaike_Ouboter)
 -   [Musixmatch - Abel, Onderweg, Lyrics](https://www.musixmatch.com/lyrics/Abel/Onderweg)
 -   [Glob pattern](https://en.wikipedia.org/wiki/Glob_(programming))
 -   [De Jeugd van Tegenwoordig - Wikipedia NL](https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep))

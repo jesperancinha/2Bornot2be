@@ -3,7 +3,6 @@ package org.jesperancinha.ocp11.mastery3dot1;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
@@ -35,7 +34,31 @@ public class Mastery3Dot1Runner {
 
         exercise1();
         exercise2();
+        exercise3();
 
+        printBrightCyanGenericLn("--- 4. `@Override` in `equals`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We want to buy a record of Maaike Ouboter");
+        printGreenGenericLn("We made a selection of an article we really want to buy.");
+        printMagentaGenericLn("Customer -> Good morning, do you have Maaike Ouboter album \"Vanaf nu is het van jou?\"");
+        printMagentaGenericLn("Clerk -> Yes I do, let me check...");
+        var albumsInStore = List.of(
+                new ShopItem("2742984738947894790942370470", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Normal"),
+                new ShopItem("2394720347320943290482084328", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special"),
+                new ShopItem("9839043805934789054378573895", "En hoe het dan ook weer dag wordt", "2015", "Sony Music Entertainment", "Normal")
+        );
+        printMagentaGenericLn("Clerk -> So that album was published in %s, by %s, one moment...", "2018", "Sony Music Entertainment");
+        List<ShopItem> itemsInStore = albumsInStore.stream().filter(shopItem -> shopItem.equals(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Normal")))
+                .collect(Collectors.toList());
+        printMagentaGenericLn("Clerk -> We seem to have two of those, do you know exactly the one you want?\n%s", itemsInStore);
+        printMagentaGenericLn("Customer -> Yes, I want the special super special please");
+        printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. We don't sorry. Do you have another selection?",itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "SuperSpecial")));
+        printMagentaGenericLn("Customer -> Yes, I want the special edition please");
+        printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. Yes! We do! Great! 😉", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special")));
+        printGreenGenericLn("Important take out here is that `@Override` must be done with `Object` and equals can of course be overloaded.");
+    }
+
+    private static void exercise3() {
         printBrightCyanGenericLn("--- 3. `Files.newDirectoryStream` Listings and the `glob` pattern");
         printRainbowLn("==");
         printGreenGenericLn("Case: We saved a part of Abel's Lyrics somewhere, for our social study work, but we don't know where the file is.");
@@ -66,7 +89,7 @@ public class Mastery3Dot1Runner {
                 printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
-           final  String glob3 = "[ebal][ebal][ebal][ebal].[rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde].{txt}";
+            final String glob3 = "[ebal][ebal][ebal][ebal].[rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde].{txt}";
             printGreenGenericLn("But this may lead to a lot of them! If we use a glob filter of %s we get:", glob3);
             DirectoryStream<Path> ds3 = Files.newDirectoryStream(temporaryFolder, glob3);
             Spliterator<Path> spliterator3 = ds3.spliterator();
@@ -77,7 +100,7 @@ public class Mastery3Dot1Runner {
                 printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
-            final  String glob4 = "abel.onderweg.?";
+            final String glob4 = "abel.onderweg.?";
             printGreenGenericLn("But this may still lead to a lot of them! If we use a glob filter of %s we get:", glob4);
             DirectoryStream<Path> ds4 = Files.newDirectoryStream(temporaryFolder, glob4);
             Spliterator<Path> spliterator4 = ds4.spliterator();
@@ -88,20 +111,20 @@ public class Mastery3Dot1Runner {
                 printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
-            final  String glob5 = "abel.onderweg.{txt}";
+            final String glob5 = "abel.onderweg.{txt}";
             printGreenGenericLn("But this is not even our file!! If we use a glob filter of %s we get:", glob5);
             DirectoryStream<Path> ds5 = Files.newDirectoryStream(temporaryFolder, glob5);
             Spliterator<Path> spliterator5 = ds5.spliterator();
-            if (!spliterator5.tryAdvance( file -> {
-                        try (var fis = new FileInputStream(file.toFile())) {
-                            printBlueGenericLn(new String(fis.readAllBytes(), Charset.defaultCharset()));
-                        } catch (IOException e) {
-                            printRedGenericLn("This was not supposed to have happened! %s", e);
-                            System.exit(1);
-                        }
-                        printYellowGenericLn(file);
-                        printRainbowTitleLn("We finally found it!");
-                    })){
+            if (!spliterator5.tryAdvance(file -> {
+                try (var fis = new FileInputStream(file.toFile())) {
+                    printBlueGenericLn(new String(fis.readAllBytes(), Charset.defaultCharset()));
+                } catch (IOException e) {
+                    printRedGenericLn("This was not supposed to have happened! %s", e);
+                    System.exit(1);
+                }
+                printYellowGenericLn(file);
+                printRainbowTitleLn("We finally found it!");
+            })) {
                 printRedGenericLn("No file found!");
                 printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
@@ -120,7 +143,7 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("However, you bought a bunch of repeated records and because your mood wings,");
         printGreenGenericLn("You don't even know anymore which one is your favourite and which one not.");
         printGreenGenericLn("So now you have 2 records on the top shelf, 4 at the second one and 10 at the bottom!");
-        printGreenGenericLn("But \"De Jeugds van Tegenwoordig\" only edited 8 albums!");
+        printGreenGenericLn("But \"De Jeugd van Tegenwoordig\" only edited 8 albums!");
         printGreenGenericLn("We will use old fashioned for loops to figure out this mess.");
         printGreenGenericLn("On our example we just want to check how many iteration our for loops will perform.");
         printGreenGenericLn("Our criteria is:");
