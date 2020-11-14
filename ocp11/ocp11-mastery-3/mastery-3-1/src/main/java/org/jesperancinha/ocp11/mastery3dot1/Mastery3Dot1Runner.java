@@ -37,14 +37,14 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("But \"De Jeugds van Tegenwoordig\" only edited 8 albums!");
         printGreenGenericLn("We will use old fashioned for loops to figure out this mess.");
         printGreenGenericLn("On our example we just want to check how many iteration our for loops will perform.");
-        printGreenGenericLn("Our criterias are:");
+        printGreenGenericLn("Our criteria is:");
         printGreenGenericLn("1. For loop will break once a repetition is found");
         printGreenGenericLn("2. The Atomic Integer counts the number of repetitions found");
-        printGreenGenericLn("3. Keep in mind that there might be more repetitions, but those are not counted");
+        printGreenGenericLn("3. Keep in mind that there might be more repetitions in one particular iteration, but those are not counted");
         printGreenGenericLn("4. Remember that the for loop will break and will skip the rest of the albums on that iteration");
-        printGreenGenericLn("5. No repetitions will be counted on the same shelf ");
+        printGreenGenericLn("5. No repetitions will be counted on the same shelf");
         printGreenGenericLn("6. I know its difficult but that's the point 😊");
-        printGreenGenericLn("Your is to guess how many iterations will the atomic number count");
+        printGreenGenericLn("Your goal is to guess how many iterations will the atomic number count");
         var albumList = List.of("Parels voor de zwijnen", "De Machine", "De lachende derde", "“Ja, Natúúrlijk!”", "X - Viering van het super decennium", "Manon", "Luek", "Anders (Different)");
         var random = new Random();
         int numberOfAlbums = albumList.size();
