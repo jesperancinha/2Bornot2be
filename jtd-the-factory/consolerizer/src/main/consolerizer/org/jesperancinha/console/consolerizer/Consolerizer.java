@@ -7,7 +7,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static java.lang.Thread.sleep;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 
 public class Consolerizer {
 
@@ -51,15 +53,34 @@ public class Consolerizer {
     }
 
     public static void printBlueGeneric(String text) {
-        System.out.print(ConColor.BLUE.getConsoleColor());
+        System.out.print(BLUE.getConsoleColor());
         printPrivateText(text);
     }
 
     public static void printBlueGeneric(String text, Object... args) {
-        System.out.print(ConColor.BLUE.getConsoleColor());
+        System.out.print(BLUE.getConsoleColor());
         printPrivateText(text, args);
     }
 
+
+    public static void printMagentaGenericLn(String text, Object... args) {
+        printMagentaGeneric(text.concat("\n"), args);
+
+    }
+
+    public static void printMagentaGenericLn(Object text) {
+        printMagentaGeneric(text.toString().concat("\n"));
+    }
+
+    public static void printMagentaGeneric(String text) {
+        System.out.print(MAGENTA.getConsoleColor());
+        printPrivateText(text);
+    }
+
+    public static void printMagentaGeneric(String text, Object... args) {
+        System.out.print(MAGENTA.getConsoleColor());
+        printPrivateText(text, args);
+    }
 
     public static void printGreenGenericLn(Object text) {
         printGreenGeneric(("" + text).trim().concat("\n"));

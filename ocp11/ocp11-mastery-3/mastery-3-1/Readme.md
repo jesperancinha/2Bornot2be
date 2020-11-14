@@ -7,18 +7,28 @@ It should be no surprise that my story would end up being a part of my study mat
 
 (... coming soon.)
 
+## Preparation
+
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
+If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
+The point is that you need to have a `/tmp` folder at this point.
+
+```bash
+./prepare.sh
+```
+
 ## Exercise
 
 1. `Integer` Mathematical Bases `parseInt`
 2. Labels and `break` in loops
-3. `Files.newDirectoryStream` Listings
+3. `Files.newDirectoryStream` Listings and the `glob` pattern
 4. `@Override` application
 5. How `null` is interpreted in overloading
 6. How `getRoot()` exhibits the root `Path`
 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`
 8. Initialization of invisible `primitive` members
 9. Declaring a `String` array.
-10. Passing variables by value and not returning
+10. Passing variables by value and not returning in `Stream`
 11. Thread safe `Object` s
 12. `Stream` count types
 13. How to guarantee Immutability - Java Security Guidelines
@@ -28,8 +38,91 @@ It should be no surprise that my story would end up being a part of my study mat
  
 ## Output
 
+```bash
+/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=58231:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
+================== Master Module mastery-3-1 ==================
+--- 1. `Integer` Mathematical Bases `parseInt`
+============
+According to NPO(https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein),  Diggy Dex single, "Grote Mannen Worden Klein" was releases in 2014
+Let's see different ways to visualize this:
+*** Integer.parseInt(2014)
+The single was "Grote Mannen Worden Klein" was released, in Decimal, in the year 2014
+*** Integer.parseInt(11111011110, 2)
+The single was "Grote Mannen Worden Klein" was released, in Binary, in the year 2014
+References
+1. https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein
+2. https://www.last.fm/music/Diggy+Dex/_/Grote+Mannen+Worden+Klein
+3. https://www.metrolyrics.com/grote-mannen-worden-klein-lyrics-diggy-dex.html
+--- 2. Labels and `break` in loops
+============
+Case: You are a fan of "De Jeugd van Tegenwoordig" and you just keep buying their record
+You have a shelf with three rows where your records are organized by most favourite less favourite
+However, you bought a bunch of repeated records and because your mood wings,
+You don't even know anymore which one is your favourite and which one not.
+So now you have 2 records on the top shelf, 4 at the second one and 10 at the bottom!
+But "De Jeugds van Tegenwoordig" only edited 8 albums!
+We will use old fashioned for loops to figure out this mess.
+On our example we just want to check how many iteration our for loops will perform.
+Our criteria is:
+1. For loop will break once a repetition is found
+2. The Atomic Integer counts the number of repetitions found
+3. Keep in mind that there might be more repetitions in one particular iteration, but those are not counted
+4. Remember that the for loop will break and will skip the rest of the albums on that iteration
+5. No repetitions will be counted on the same shelf
+6. I know its difficult but that's the point 😊
+Your goal is to guess how many iterations will the atomic number count
+These are your randomized shelves:
+Shelf 1 -> [Luek, Manon]
+Shelf 2 -> [De Machine, Luek, Luek, Manon]
+Shelf 3 -> [De Machine, Manon, Anders (Different), “Ja, Natúúrlijk!”, Manon, X - Viering van het super decennium, Manon, Luek, Parels voor de zwijnen, Parels voor de zwijnen]
+Please guess how many repetitions will this method find ->
+78
+You failed this time, but try again. 6 repetitions were found. Your participation awards you with a medal of courage! 🎖
+1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)
+2. https://www.youtube.com/watch?v=cNMXSKfWfLQ
+--- 3. `Files.newDirectoryStream` Listings and the `glob` pattern
+============
+Case: We saved a part of Abel's Lyrics somewhere, for our social study work, but we don't know where the file is.
+We took the lyrics from https://www.musixmatch.com/lyrics/Abel/Onderweg,
+but now we have no access to the internet and we have to deliver our work in 2 hours! Help!
+In this exercise we will find Abel's lyrics in our tmp folder. We hope the system hasn't deleted it yet...
+We will try to find our file in /tmp. Remember to run ./prepare.sh. Check Readme.md for more details:
+If we use a glob filter of *.{gif,jpeg,jpg,bmp} we get:
+No file found!
+This was the wrong extension! If we use a glob filter of *.{txt} we get:
+/tmp/abel.onderweg.txt
+/tmp/.ebonwgal.txt
+/tmp/ebal.rwegonde.txt
+But this may lead to a lot of them! If we use a glob filter of [ebal][ebal][ebal][ebal].[rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde].{txt} we get:
+/tmp/abel.onderweg.txt
+/tmp/ebal.rwegonde.txt
+But this may still lead to a lot of them! If we use a glob filter of abel.onderweg.? we get:
+/tmp/abel.onderweg.t
+But this is not even our file!! If we use a glob filter of abel.onderweg.{txt} we get:
+From: https://www.musixmatch.com/lyrics/Abel/Onderweg
+
+Ik doe de deur dicht
+Straten lijken te huilen
+Wolken lijken te vluchten
+Ik stap de bus in
+Mensen lijken te kijken
+Maar ik wil ze ontwijken
+Voordat ze mij zien
+Het is al lang verleden tijd
+Dat je mijn verjaardag niet vergat
+Je onvoorwaardelijk koos voor mij
+
+A study for the music styles at the end of the 90's.
+/tmp/abel.onderweg.txt
+We finally found it!
+
+Process finished with exit code 0
+
+```
 ## References
 
+-   [Musixmatch - Abel, Onderweg, Lyrics](https://www.musixmatch.com/lyrics/Abel/Onderweg)
+-   [Glob pattern](https://en.wikipedia.org/wiki/Glob_(programming))
 -   [De Jeugd van Tegenwoordig - Wikipedia NL](https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep))
 -   [Diggy Dex - Wikipedia NL](https://nl.wikipedia.org/wiki/Diggy_Dex)
 -   [Jan Willem Roy - Wikipedia NL](https://nl.wikipedia.org/wiki/JW_Roy)

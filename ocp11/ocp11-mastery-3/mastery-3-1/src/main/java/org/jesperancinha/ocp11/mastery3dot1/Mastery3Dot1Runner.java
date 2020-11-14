@@ -2,9 +2,18 @@ package org.jesperancinha.ocp11.mastery3dot1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Spliterator;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -12,7 +21,9 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -24,6 +35,81 @@ public class Mastery3Dot1Runner {
 
         exercise1();
         exercise2();
+
+        printBrightCyanGenericLn("--- 3. `Files.newDirectoryStream` Listings and the `glob` pattern");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We saved a part of Abel's Lyrics somewhere, for our social study work, but we don't know where the file is.");
+        printGreenGenericLn("We took the lyrics from https://www.musixmatch.com/lyrics/Abel/Onderweg,");
+        printGreenGenericLn("but now we have no access to the internet and we have to deliver our work in 2 hours! Help!");
+        printGreenGenericLn("In this exercise we will find Abel's lyrics in our tmp folder. We hope the system hasn't deleted it yet...");
+        printMagentaGenericLn("We will try to find our file in /tmp. Remember to run ./prepare.sh. Check Readme.md for more details:");
+
+        try {
+            var temporaryFolder = Paths.get("/tmp");
+            var glob1 = "*.{gif,jpeg,jpg,bmp}";
+            printGreenGenericLn("If we use a glob filter of %s we get:", glob1);
+            DirectoryStream<Path> ds1 = Files.newDirectoryStream(temporaryFolder, glob1);
+            Spliterator<Path> spliterator1 = ds1.spliterator();
+            if (spliterator1.tryAdvance(Consolerizer::printYellowGenericLn)) {
+                spliterator1.forEachRemaining(Consolerizer::printYellowGenericLn);
+            } else {
+                printRedGenericLn("No file found!");
+            }
+            var glob2 = "*.{txt}";
+            printGreenGenericLn("This was the wrong extension! If we use a glob filter of %s we get:", glob2);
+            DirectoryStream<Path> ds2 = Files.newDirectoryStream(temporaryFolder, glob2);
+            Spliterator<Path> spliterator2 = ds2.spliterator();
+            if (spliterator2.tryAdvance(Consolerizer::printYellowGenericLn)) {
+                spliterator2.forEachRemaining(Consolerizer::printYellowGenericLn);
+            } else {
+                printRedGenericLn("No file found!");
+                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                System.exit(1);
+            }
+           final  String glob3 = "[ebal][ebal][ebal][ebal].[rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde].{txt}";
+            printGreenGenericLn("But this may lead to a lot of them! If we use a glob filter of %s we get:", glob3);
+            DirectoryStream<Path> ds3 = Files.newDirectoryStream(temporaryFolder, glob3);
+            Spliterator<Path> spliterator3 = ds3.spliterator();
+            if (spliterator3.tryAdvance(Consolerizer::printYellowGenericLn)) {
+                spliterator3.forEachRemaining(Consolerizer::printYellowGenericLn);
+            } else {
+                printRedGenericLn("No file found!");
+                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                System.exit(1);
+            }
+            final  String glob4 = "abel.onderweg.?";
+            printGreenGenericLn("But this may still lead to a lot of them! If we use a glob filter of %s we get:", glob4);
+            DirectoryStream<Path> ds4 = Files.newDirectoryStream(temporaryFolder, glob4);
+            Spliterator<Path> spliterator4 = ds4.spliterator();
+            if (spliterator4.tryAdvance(Consolerizer::printYellowGenericLn)) {
+                spliterator4.forEachRemaining(Consolerizer::printYellowGenericLn);
+            } else {
+                printRedGenericLn("No file found!");
+                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                System.exit(1);
+            }
+            final  String glob5 = "abel.onderweg.{txt}";
+            printGreenGenericLn("But this is not even our file!! If we use a glob filter of %s we get:", glob5);
+            DirectoryStream<Path> ds5 = Files.newDirectoryStream(temporaryFolder, glob5);
+            Spliterator<Path> spliterator5 = ds5.spliterator();
+            if (!spliterator5.tryAdvance( file -> {
+                        try (var fis = new FileInputStream(file.toFile())) {
+                            printBlueGenericLn(new String(fis.readAllBytes(), Charset.defaultCharset()));
+                        } catch (IOException e) {
+                            printRedGenericLn("This was not supposed to have happened! %s", e);
+                            System.exit(1);
+                        }
+                        printYellowGenericLn(file);
+                        printRainbowTitleLn("We finally found it!");
+                    })){
+                printRedGenericLn("No file found!");
+                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                System.exit(1);
+            }
+        } catch (IOException e) {
+            printRedGenericLn("This was not supposed to have happened! %s", e);
+            System.exit(1);
+        }
     }
 
     private static void exercise2() {
@@ -87,7 +173,7 @@ public class Mastery3Dot1Runner {
                 }
             }
         }
-        if(repetitions == atomicInteger.get()){
+        if (repetitions == atomicInteger.get()) {
             printGreenGenericLn("You made it champ!! There are indeed %d repetitions found! 🥇", atomicInteger.get());
         } else {
             printRedGenericLn("You failed this time, but try again. %d repetitions were found. Your participation awards you with a medal of courage! 🎖", atomicInteger.get());
