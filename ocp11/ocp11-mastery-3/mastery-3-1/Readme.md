@@ -38,7 +38,7 @@ The point is that you need to have a `/tmp` folder at this point.
  
 ## Output
 
-```bash
+```text
 /Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=58231:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
 ================== Master Module mastery-3-1 ==================
 --- 1. `Integer` Mathematical Bases `parseInt`
