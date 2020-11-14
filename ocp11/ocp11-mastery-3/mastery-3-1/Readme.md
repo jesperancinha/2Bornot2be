@@ -30,6 +30,10 @@ It should be no surprise that my story would end up being a part of my study mat
 
 ## References
 
+-   [De Jeugd van Tegenwoordig - Wikipedia NL](https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep))
+-   [Diggy Dex - Wikipedia NL](https://nl.wikipedia.org/wiki/Diggy_Dex)
+-   [Jan Willem Roy - Wikipedia NL](https://nl.wikipedia.org/wiki/JW_Roy)
+
 <div align="center">
       <a href="https://www.youtube.com/watch?v=bY-F4sCQz1E">
          <img 
