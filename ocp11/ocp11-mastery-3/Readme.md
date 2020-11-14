@@ -4,6 +4,8 @@
 
 OCP 11 studies - Mastery 3
 
+-   [Mastery module 3.1.](./mastery-3-1) - Singing in dutch
+
 ## Topics and coverage
 
 From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):

@@ -1,5 +1,13 @@
 # consolerizer
 
+## Examples
+
+With this module, you can play with the console output and give it color!
+You can also use emoji's and use predefined functions.
+This is an example:
+
+![alt text](./docs/consolerize-capture-1.png "Consolerizer")
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

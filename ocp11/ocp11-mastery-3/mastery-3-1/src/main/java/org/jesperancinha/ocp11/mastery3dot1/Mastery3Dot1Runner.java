@@ -13,6 +13,14 @@ public class Mastery3Dot1Runner {
 
         printBlueGenericLn("================== Master Module mastery-3-1 ==================");
 
+        exercise1();
+
+
+        printBrightCyanGenericLn("--- 2. Labels and `break` in loops");
+
+    }
+
+    private static void exercise1() {
         printBrightCyanGenericLn("--- 1. `Integer` Mathematical Bases `parseInt`");
         printGreenGenericLn("According to NPO(https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein),  Diggy Dex single, \"Grote Mannen Worden Klein\" was releases in 2014");
         printGreenGenericLn("Let's see different ways to visualize this:");

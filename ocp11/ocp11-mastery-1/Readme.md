@@ -4,6 +4,9 @@
 
 OCP 11 studies - Mastery 1
 
+-    [Mastery module 1.1.](mastery-1-1) - The Flinstones
+-    [Mastery module 1.2.](mastery-1-2) - Teenage mutant hero turtles
+
 ## Topics and coverage
 
 From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):

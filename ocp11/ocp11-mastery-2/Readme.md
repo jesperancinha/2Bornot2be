@@ -4,6 +4,11 @@
 
 OCP 11 studies - Mastery 2
 
+-   [Mastery Module 2.1.](./mastery-2-1) - Peter and the Wolf
+-   [Mastery Module 2.2.](./mastery-2-2) - Apollo 13
+-   [Mastery Module 2.2. - Modularity](./mastery-2-2-modularity) - Apollo 13 (Modularity)
+-   [Mastery Module 2.2. - Deserializer](./mastery-2-2-deserializer) - Apollo 13 (Deserializer)
+
 ## Topics and coverage
 
 From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
