@@ -102,6 +102,10 @@ public class Consolerizer {
 
     }
 
+    public static void printYellowGenericLn(Object text, Object... args) {
+        printYellowGeneric(text.toString().concat("\n"), args);
+    }
+
     public static void printOrangeGeneric(String text) {
         System.out.print(ConColor.ORANGE.getConsoleColor());
         printPrivateText(text);
@@ -124,6 +128,11 @@ public class Consolerizer {
     public static void printYellowGeneric(String text) {
         System.out.print(ConColor.YELLOW.getConsoleColor());
         printPrivateText(text);
+    }
+
+    public static void printYellowGeneric(String text, Object... args) {
+        System.out.print(ConColor.YELLOW.getConsoleColor());
+        printPrivateText(text, args);
     }
 
     public void printColorText(final ConColor conColor, String text) {

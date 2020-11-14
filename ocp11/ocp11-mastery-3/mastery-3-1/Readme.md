@@ -22,7 +22,10 @@ It should be no surprise that my story would end up being a part of my study mat
 11. Thread safe `Object` s
 12. `Stream` count types
 13. How to guarantee Immutability - Java Security Guidelines
-
+14. Accessing `static` `interface` methosd
+15. `java.lang.OutOfMemoryError` and `Error` classes
+16. Accessibility `@Override`
+ 
 ## Output
 
 ## References
