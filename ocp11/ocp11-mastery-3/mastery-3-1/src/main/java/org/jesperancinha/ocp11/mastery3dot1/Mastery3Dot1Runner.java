@@ -23,8 +23,10 @@ public class Mastery3Dot1Runner {
         printBlueGenericLn("================== Master Module mastery-3-1 ==================");
 
         exercise1();
+        exercise2();
+    }
 
-
+    private static void exercise2() {
         printBrightCyanGenericLn("--- 2. Labels and `break` in loops");
         printRainbowLn("==");
         printGreenGenericLn("Case: You are a fan of \"De Jeugd van Tegenwoordig\" and you just keep buying their record");
@@ -90,6 +92,9 @@ public class Mastery3Dot1Runner {
         } else {
             printRedGenericLn("You failed this time, but try again. %d repetitions were found. Your participation awards you with a medal of courage! 🎖", atomicInteger.get());
         }
+        printGreenGenericLn("1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)");
+        printGreenGenericLn("2. https://www.youtube.com/watch?v=cNMXSKfWfLQ");
+
     }
 
     private static void exercise1() {
