@@ -71,12 +71,12 @@ Our criteria is:
 6. I know its difficult but that's the point 😊
 Your goal is to guess how many iterations will the atomic number count
 These are your randomized shelves:
-Shelf 1 -> [Anders (Different), Manon]
-Shelf 2 -> [De Machine, De Machine, De Machine, Manon]
-Shelf 3 -> [Luek, Anders (Different), X - Viering van het super decennium, Parels voor de zwijnen, De Machine, De lachende derde, X - Viering van het super decennium, Parels voor de zwijnen, De lachende derde, “Ja, Natúúrlijk!”]
+Shelf 1 -> [Parels voor de zwijnen, Manon]
+Shelf 2 -> [Parels voor de zwijnen, Parels voor de zwijnen, De Machine, Manon]
+Shelf 3 -> [X - Viering van het super decennium, Parels voor de zwijnen, Luek, De Machine, Luek, X - Viering van het super decennium, “Ja, Natúúrlijk!”, Anders (Different), “Ja, Natúúrlijk!”, Manon]
 Please guess how many repetitions will this method find ->
-4
-You failed this time, but try again. 8 repetitions were found. Your participation awards you with a medal of courage! 🎖
+5
+You made it champ!! There are indeed 5 repetitions found! 🥇
 1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)
 2. https://www.youtube.com/watch?v=cNMXSKfWfLQ
 --- 3. `Files.newDirectoryStream` Listings and the `glob` pattern
@@ -197,9 +197,9 @@ For loops do not affect elements directly. They may only affect their contents..
 --- 11. Thread safe `Object` s
 ============
 Please wait while concert goers go inside the arenas...
-Live concert has 200 goers
+Live concert has 142 goers
 Safe live concert has 50 goers
-Unregulated live concert has 199 goers
+Unregulated live concert has 190 goers
 Virtual live concert has 50 goers
 All thread safe concert arenas should have only 50 concert goes.
 We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.
@@ -212,6 +212,22 @@ Diggy Dex has published 6 albums!
 The type of this count is long.
 From long: 6
 Stream counts are always long.
+--- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+============
+Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show
+However, the show on the ticket if from a missed show in Villa Thallia in Rotterdam.
+Can we mutate any of the three tickets we have for the past show?
+Current Tickets
+Unsafe Ticket -> UnsafeTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
+Final Ticket -> FinalTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
+Private Ticket -> PrivateTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
+New Tickets
+Unsafe Ticket -> UnsafeTicket{date=Mon Nov 17 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
+Final Ticket -> FinalTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
+Private Ticket -> PrivateTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
+These tickets actually cannot be changed to anything convincing.
+However, one of the is not entirely immutable. We were able to change the dat though.
+Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.
 
 Process finished with exit code 0
 ```
