@@ -1,4 +1,4 @@
-package org.jesperancinha.ocp11.mastery3dot1;
+package org.jesperancinha.ocp11.mastery3dot1.items;
 
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public class ShopItem {
     public boolean equals(ShopItem o) {
         if (this == o) return true;
         if (!(o instanceof ShopItem)) return false;
-        ShopItem shopItem = (ShopItem) o;
+        ShopItem shopItem = o;
         return Objects.equals(name, shopItem.name) &&
                 Objects.equals(year, shopItem.year) &&
                 Objects.equals(publisher, shopItem.publisher);

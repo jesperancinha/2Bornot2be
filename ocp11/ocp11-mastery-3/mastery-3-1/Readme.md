@@ -174,6 +174,7 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Vinyl Record Sizes and Speeds – What does 33 – 45- 78 RPM mean?](https://blog.electrohome.com/vinyl-record-speeds-33-45-78-mean/)
 -   [Maaike Ouboter](https://nl.wikipedia.org/wiki/Maaike_Ouboter)
 -   [Musixmatch - Abel, Onderweg, Lyrics](https://www.musixmatch.com/lyrics/Abel/Onderweg)
 -   [Glob pattern](https://en.wikipedia.org/wiki/Glob_(programming))

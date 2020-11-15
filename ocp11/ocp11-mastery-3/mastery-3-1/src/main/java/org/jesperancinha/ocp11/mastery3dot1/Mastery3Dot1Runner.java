@@ -1,10 +1,13 @@
 package org.jesperancinha.ocp11.mastery3dot1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase;
+import org.jesperancinha.ocp11.mastery3dot1.items.Record;
+import org.jesperancinha.ocp11.mastery3dot1.items.ShopItem;
+import org.jesperancinha.ocp11.mastery3dot1.items.VinylRecord;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.ParameterizedType;
 import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -40,7 +43,20 @@ public class Mastery3Dot1Runner {
         exercise4();
         exercise5();
         exercise6();
+        exercise7();
 
+        printBrightCyanGenericLn("--- 8. Initialization of invisible `primitive` members");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Our shop has grown a lot and we need a brand new bookcase!");
+        printGreenGenericLn("Let's create one!");
+
+        var recordCase = new RecordCase(100);
+        printMagentaGenericLn("Case details -> %s", recordCase);
+        printGreenGenericLn("Take notice on the member calling before creation.");
+        printGreenGenericLn("Which methods are actually called and why?");
+    }
+
+    private static void exercise7() {
         printBrightCyanGenericLn("--- 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`");
         printRainbowLn("==");
         printGreenGenericLn("Case: We've created a list of elements but didn't gave it a type with diamond notation!");
@@ -113,7 +129,7 @@ public class Mastery3Dot1Runner {
                 .collect(Collectors.toList());
         printMagentaGenericLn("Clerk -> We seem to have two of those, do you know exactly the one you want?\n%s", itemsInStore);
         printMagentaGenericLn("Customer -> Yes, I want the special super special please");
-        printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. We don't sorry. Do you have another selection?",itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "SuperSpecial")));
+        printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. We don't sorry. Do you have another selection?", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "SuperSpecial")));
         printMagentaGenericLn("Customer -> Yes, I want the special edition please");
         printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. Yes! We do! Great! 😉", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special")));
         printGreenGenericLn("Important take out here is that `@Override` must be done with `Object` and equals can of course be overloaded.");
