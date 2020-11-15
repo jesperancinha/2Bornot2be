@@ -2,18 +2,25 @@ package org.jesperancinha.ocp11.mastery3dot1.furniture;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+
 public class Case {
 
-    int capacity;
+    int capacity = 50;
 
     public Case(int capacity) {
         this.showCapacity();
         this.capacity = capacity;
         this.showCapacity();
+        this.printStuff();
     }
 
     public void showCapacity() {
-        Consolerizer.printOrangeGenericLn("This Case has a capacity of %d elements", capacity);
+        printOrangeGenericLn("This Case has a capacity of %d elements", capacity);
+    }
+
+    public void printStuff(){
+        printOrangeGenericLn("I have nothing to say.");
     }
 
     @Override

@@ -44,7 +44,10 @@ public class Mastery3Dot1Runner {
         exercise5();
         exercise6();
         exercise7();
+        exercise8();
+    }
 
+    private static void exercise8() {
         printBrightCyanGenericLn("--- 8. Initialization of invisible `primitive` members");
         printRainbowLn("==");
         printGreenGenericLn("Case: Our shop has grown a lot and we need a brand new bookcase!");
@@ -52,8 +55,10 @@ public class Mastery3Dot1Runner {
 
         var recordCase = new RecordCase(100);
         printMagentaGenericLn("Case details -> %s", recordCase);
+        recordCase.printStuff();
         printGreenGenericLn("Take notice on the member calling before creation.");
         printGreenGenericLn("Which methods are actually called and why?");
+        printGreenGenericLn("Generally speaking, only after `super`, are the instance members initialized.");
     }
 
     private static void exercise7() {
