@@ -45,6 +45,13 @@ public class Mastery3Dot1Runner {
         exercise6();
         exercise7();
         exercise8();
+
+        printBrightCyanGenericLn("--- 9. Declaring a `String` array.");
+        printRainbowLn("==");
+        printGreenGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
+        final String[]  band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
+        printBlueGenericLn("final String[]  band = {\"Willie Wartaal\", \"Vieze Fur\", \"Faberyayo\", \"Bas Bron\"};");
+        printMagentaGenericLn("This is the band: %s", String.join(",",band));
     }
 
     private static void exercise8() {
@@ -58,7 +65,7 @@ public class Mastery3Dot1Runner {
         recordCase.printStuff();
         printGreenGenericLn("Take notice on the member calling before creation.");
         printGreenGenericLn("Which methods are actually called and why?");
-        printGreenGenericLn("Generally speaking, only after `super`, are the instance members initialized.");
+        printGreenGenericLn("Generally speaking, only after `super`, are the instance variable members initialized.");
     }
 
     private static void exercise7() {
