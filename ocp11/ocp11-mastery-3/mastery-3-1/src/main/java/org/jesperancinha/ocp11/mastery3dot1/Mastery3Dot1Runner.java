@@ -4,11 +4,13 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.ParameterizedType;
 import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -38,12 +40,35 @@ public class Mastery3Dot1Runner {
         exercise4();
         exercise5();
         exercise6();
+
+        printBrightCyanGenericLn("--- 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We've created a list of elements but didn't gave it a type with diamond notation!");
+        printGreenGenericLn("We can't sell these at our shop this way, but what is their type?");
+        printYellowGenericLn(" var itemsWithNoName = new ArrayList<>();\n" +
+                "        itemsWithNoName.add(\"Diggy Dex Ft. Eva De Roovere\");\n" +
+                "        itemsWithNoName.add(\"Slaap Lekker (Fantastig Toch)\");\n" +
+                "        itemsWithNoName.add(2009);\n" +
+                "        itemsWithNoName.add(\"Hip Hop\");");
+        var itemsWithNoName = new ArrayList<>();
+        itemsWithNoName.add("Diggy Dex Ft. Eva De Roovere");
+        itemsWithNoName.add("Slaap Lekker (Fantastig Toch)");
+        itemsWithNoName.add(2009);
+        itemsWithNoName.add("Hip Hop");
+        Object singers = itemsWithNoName.get(0);
+        printYellowGenericLn("        Object singers = itemsWithNoName.get(0);\n");
+        printMagentaGenericLn("This is the type of this list, %s", itemsWithNoName.getClass());
+        printMagentaGenericLn("And these are the types of its contents, %s", itemsWithNoName.getClass());
+        printMagentaGenericLn("We can only list the singers, %s, `Object`'s", singers);
+        printGreenGenericLn("The point is, just like in any List, the type is important when retrieving the items.");
+        printGreenGenericLn("Although diamond notation is handy in the old syntax, with the use of `var` it becomes rather obsolete and leads to confusing code.");
     }
 
     private static void exercise6() {
         printBrightCyanGenericLn("--- 6. How `getRoot()` exhibits the root `Path`");
         printRainbowLn("==");
         printGreenGenericLn("Case: We placed our files somewhere, but how do we call the root?");
+        printYellowGenericLn("Path.of(\"/tmp\").getRoot()");
         printMagentaGenericLn(Path.of("/tmp").getRoot());
         printGreenGenericLn("That's it! Slashes are part of root, not of individual paths");
     }

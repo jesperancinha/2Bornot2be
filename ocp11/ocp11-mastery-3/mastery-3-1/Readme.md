@@ -39,7 +39,7 @@ The point is that you need to have a `/tmp` folder at this point.
 ## Output
 
 ```text
-/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=65055:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
+/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=51621:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
 ================== Master Module mastery-3-1 ==================
 --- 1. `Integer` Mathematical Bases `parseInt`
 ============
@@ -72,12 +72,12 @@ Our criteria is:
 6. I know its difficult but that's the point 😊
 Your goal is to guess how many iterations will the atomic number count
 These are your randomized shelves:
-Shelf 1 -> [De Machine, Anders (Different)]
-Shelf 2 -> [De lachende derde, Luek, Luek, De lachende derde]
-Shelf 3 -> [Parels voor de zwijnen, De Machine, Anders (Different), De Machine, Manon, Parels voor de zwijnen, “Ja, Natúúrlijk!”, Manon, Anders (Different), De lachende derde]
+Shelf 1 -> [Anders (Different), Manon]
+Shelf 2 -> [Luek, Manon, Luek, Parels voor de zwijnen]
+Shelf 3 -> [De lachende derde, Manon, Luek, Parels voor de zwijnen, De lachende derde, Anders (Different), “Ja, Natúúrlijk!”, De Machine, De lachende derde, X - Viering van het super decennium]
 Please guess how many repetitions will this method find ->
-6
-You failed this time, but try again. 8 repetitions were found. Your participation awards you with a medal of courage! 🎖
+34
+You failed this time, but try again. 6 repetitions were found. Your participation awards you with a medal of courage! 🎖
 1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)
 2. https://www.youtube.com/watch?v=cNMXSKfWfLQ
 --- 3. `Files.newDirectoryStream` Listings and the `glob` pattern
@@ -147,6 +147,28 @@ Object ShopItem{barCode='2742984738947894790942370470', name='De stilte voorbij'
 Finally we make a machine a start the `checkItem` procedure without a record
 Object null is cleared to be sold as a VinylRecord!
 Never forget that a call with null will search for the most specific overloading!
+--- 6. How `getRoot()` exhibits the root `Path`
+============
+Case: We placed our files somewhere, but how do we call the root?
+Path.of("/tmp").getRoot()
+/
+That's it! Slashes are part of root, not of individual paths
+--- 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`
+============
+Case: We've created a list of elements but didn't gave it a type with diamond notation!
+We can't sell these at our shop this way, but what is their type?
+ var itemsWithNoName = new ArrayList<>();
+        itemsWithNoName.add("Diggy Dex Ft. Eva De Roovere");
+        itemsWithNoName.add("Slaap Lekker (Fantastig Toch)");
+        itemsWithNoName.add(2009);
+        itemsWithNoName.add("Hip Hop");
+        Object singers = itemsWithNoName.get(0);
+
+This is the type of this list, class java.util.ArrayList
+And these are the types of its contents, class java.util.ArrayList
+We can only list the singers, Diggy Dex Ft. Eva De Roovere, `Object`'s
+The point is, just like in any List, the type is important when retrieving the items.
+Although diamond notation is handy in the old syntax, with the use of `var` it becomes rather obsolete and leads to confusing code.
 
 Process finished with exit code 0
 ```
