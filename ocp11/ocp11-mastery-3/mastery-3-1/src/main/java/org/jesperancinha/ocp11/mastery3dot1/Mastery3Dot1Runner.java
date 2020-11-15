@@ -1,5 +1,6 @@
 package org.jesperancinha.ocp11.mastery3dot1;
 
+import org.assertj.core.util.Arrays;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase;
 import org.jesperancinha.ocp11.mastery3dot1.items.Record;
@@ -14,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -45,13 +47,34 @@ public class Mastery3Dot1Runner {
         exercise6();
         exercise7();
         exercise8();
+        exercise9();
+        exercise10();
+    }
 
+    private static void exercise10() {
+        printBrightCyanGenericLn("--- 10. Passing variables by value and not returning in `Stream`");
+        printRainbowLn("==");
+        printGreenGenericLn("Let's create a list of the band \"De Jeugd van Tegenwoordig\"");
+        final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
+        printMagentaGenericLn("The array is %10s", band);
+        printMagentaGenericLn("This is the band: %s", java.util.Arrays.toString(band));
+        var bandList = java.util.Arrays.stream(band).collect(Collectors.toList());
+        printMagentaGenericLn("This is the band  list : %s", bandList);
+        bandList.forEach(member -> member.concat("(realName)"));
+        printMagentaGenericLn("The band didn't change! %s", bandList);
+        var realNameList = new LinkedList<>(List.of("Olivier Mitshel Locadia", "Alfred Tratlehner", "Pepijn Lanen", "Bas Bron"));
+        List<String> completeBand = bandList.stream().map(member -> member.concat("(").concat(realNameList.remove()).concat(")")).collect(Collectors.toList());
+        printMagentaGenericLn("We finally got all the names!! 😉 %s", completeBand);
+        printGreenGenericLn("For loops do not affect elements directly. They may only affect their contents...");
+    }
+
+    private static void exercise9() {
         printBrightCyanGenericLn("--- 9. Declaring a `String` array.");
         printRainbowLn("==");
         printGreenGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
-        final String[]  band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
+        final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
         printBlueGenericLn("final String[]  band = {\"Willie Wartaal\", \"Vieze Fur\", \"Faberyayo\", \"Bas Bron\"};");
-        printMagentaGenericLn("This is the band: %s", String.join(",",band));
+        printMagentaGenericLn("This is the band: %s", String.join(",", band));
     }
 
     private static void exercise8() {
