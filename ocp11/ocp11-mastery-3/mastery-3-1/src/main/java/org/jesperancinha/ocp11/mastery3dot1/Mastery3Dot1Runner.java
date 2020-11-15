@@ -36,7 +36,19 @@ public class Mastery3Dot1Runner {
         exercise2();
         exercise3();
         exercise4();
+        exercise5();
+        exercise6();
+    }
 
+    private static void exercise6() {
+        printBrightCyanGenericLn("--- 6. How `getRoot()` exhibits the root `Path`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We placed our files somewhere, but how do we call the root?");
+        printMagentaGenericLn(Path.of("/tmp").getRoot());
+        printGreenGenericLn("That's it! Slashes are part of root, not of individual paths");
+    }
+
+    private static void exercise5() {
         printBrightCyanGenericLn("--- 5. How `null` is interpreted in overloading");
         printRainbowLn("==");
         printGreenGenericLn("Case: We receive different shop items.");
