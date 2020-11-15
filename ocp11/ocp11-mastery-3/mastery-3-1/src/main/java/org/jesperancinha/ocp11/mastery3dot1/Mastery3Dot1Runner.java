@@ -1,7 +1,11 @@
 package org.jesperancinha.ocp11.mastery3dot1;
 
-import org.assertj.core.util.Arrays;
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery3dot1.concert.Concert;
+import org.jesperancinha.ocp11.mastery3dot1.concert.LiveConcert;
+import org.jesperancinha.ocp11.mastery3dot1.concert.SafeLiveConcert;
+import org.jesperancinha.ocp11.mastery3dot1.concert.UnregulatedConcert;
+import org.jesperancinha.ocp11.mastery3dot1.concert.VirtualConcert;
 import org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase;
 import org.jesperancinha.ocp11.mastery3dot1.items.Record;
 import org.jesperancinha.ocp11.mastery3dot1.items.ShopItem;
@@ -20,6 +24,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Spliterator;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -28,13 +36,14 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGener
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery3Dot1Runner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Consolerizer.typingWaitGlobal = 0;
 
         printBlueGenericLn("================== Master Module mastery-3-1 ==================");
@@ -49,6 +58,37 @@ public class Mastery3Dot1Runner {
         exercise8();
         exercise9();
         exercise10();
+        exercise11();
+    }
+
+    private static void exercise11() throws InterruptedException {
+        printBrightCyanGenericLn("--- 11. Thread safe `Object` s");
+        printRainbowLn("==");
+
+        var liveConcert = new LiveConcert(50);
+        var safeLiveConcert = new SafeLiveConcert(50);
+        var unregulatedConcert = new UnregulatedConcert(50);
+        var virtualConcert = new VirtualConcert(50);
+        ExecutorService executorService1 = call100ThreadsOnConcert(liveConcert);
+        ExecutorService executorService2 = call100ThreadsOnConcert(safeLiveConcert);
+        ExecutorService executorService3 = call100ThreadsOnConcert(unregulatedConcert);
+        ExecutorService executorService4 = call100ThreadsOnConcert(virtualConcert);
+        executorService1.shutdown();
+        executorService2.shutdown();
+        executorService3.shutdown();
+        executorService4.shutdown();
+        executorService1.awaitTermination(10, TimeUnit.SECONDS);
+        executorService2.awaitTermination(10, TimeUnit.SECONDS);
+        executorService3.awaitTermination(10, TimeUnit.SECONDS);
+        executorService4.awaitTermination(10, TimeUnit.SECONDS);
+        printGreenGenericLn("Please wait while concert goers go inside the arenas...");
+        printOrangeGenericLn("Live concert has %d goers", liveConcert.getCurrentCount());
+        printOrangeGenericLn("Safe live concert has %d goers", safeLiveConcert.getCurrentCount());
+        printOrangeGenericLn("Unregulated live concert has %d goers", unregulatedConcert.getCurrentCount());
+        printOrangeGenericLn("Virtual live concert has %d goers", safeLiveConcert.getCurrentCount());
+        printGreenGenericLn("All thread safe concert arenas should have only 50 concert goes.");
+        printGreenGenericLn("We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.");
+        printGreenGenericLn("In our case, more concert goers got in the  non thread-safe spaces.");
     }
 
     private static void exercise10() {
@@ -333,5 +373,14 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("1. https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein");
         printGreenGenericLn("2. https://www.last.fm/music/Diggy+Dex/_/Grote+Mannen+Worden+Klein");
         printGreenGenericLn("3. https://www.metrolyrics.com/grote-mannen-worden-klein-lyrics-diggy-dex.html");
+    }
+
+    private static ExecutorService call100ThreadsOnConcert(Concert concert) {
+        int nThreads = 200;
+        ExecutorService executorService = Executors.newFixedThreadPool(nThreads);
+        for (int i = 0; i < nThreads; i++) {
+            executorService.submit((Callable<Object>) concert::addConcertGoer);
+        }
+        return executorService;
     }
 }
