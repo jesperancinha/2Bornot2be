@@ -35,7 +35,31 @@ public class Mastery3Dot1Runner {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
 
+        printBrightCyanGenericLn("--- 5. How `null` is interpreted in overloading");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We receive different shop items.");
+        printGreenGenericLn("Now we want to check their state.");
+        printGreenGenericLn("In our shop there are many automated ways of checking the state of items, but we generally just call the `checkItem` procedure.");
+        printGreenGenericLn("We receive a copy of the album \"De stilte voorbij\" by pop-band \"Abel\", but the store manager has found different ways to check it's authenticity.");
+        printGreenGenericLn("Let's see how he does it:");
+
+        var record = new VinylRecord("2742984738947894790942370470", "De stilte voorbij", "2000", "[PIAS] Holland", "Normal");
+        printMagentaGenericLn("This is our record. It's a vinyl! %s", record);
+        printMagentaGenericLn("We'll call `checkItem` in different ways!");
+        printMagentaGenericLn("Shop.checkItem(record);");
+        Shop.checkItem(record);
+        printMagentaGenericLn("Shop.checkItem((Record) record);");
+        Shop.checkItem((Record) record);
+        printMagentaGenericLn("Shop.checkItem((ShopItem) record);");
+        Shop.checkItem((ShopItem) record);
+        printMagentaGenericLn("Finally we make a machine a start the `checkItem` procedure without a record");
+        Shop.checkItem(null);
+        printGreenGenericLn("Never forget that a call with null will search for the most specific overloading!");
+    }
+
+    private static void exercise4() {
         printBrightCyanGenericLn("--- 4. `@Override` in `equals`");
         printRainbowLn("==");
         printGreenGenericLn("Case: We want to buy a record of Maaike Ouboter");
@@ -138,11 +162,11 @@ public class Mastery3Dot1Runner {
     private static void exercise2() {
         printBrightCyanGenericLn("--- 2. Labels and `break` in loops");
         printRainbowLn("==");
-        printGreenGenericLn("Case: You are a fan of \"De Jeugd van Tegenwoordig\" and you just keep buying their record");
-        printGreenGenericLn("You have a shelf with three rows where your records are organized by most favourite less favourite");
-        printGreenGenericLn("However, you bought a bunch of repeated records and because your mood wings,");
-        printGreenGenericLn("You don't even know anymore which one is your favourite and which one not.");
-        printGreenGenericLn("So now you have 2 records on the top shelf, 4 at the second one and 10 at the bottom!");
+        printGreenGenericLn("Case: You are a fan of \"De Jeugd van Tegenwoordig\" and you just keep buying their records.");
+        printGreenGenericLn("You have a shelf with three rows where your records are organized by most favourite too less favourite album.");
+        printGreenGenericLn("However, you bought a bunch of repeated records and because of your mood wings,");
+        printGreenGenericLn("You don't even know anymore which one is your favourite and which one is not.");
+        printGreenGenericLn("So now you have 2 records on the top shelf, 4 on the second one and 10 at the bottom!");
         printGreenGenericLn("But \"De Jeugd van Tegenwoordig\" only edited 8 albums!");
         printGreenGenericLn("We will use old fashioned for loops to figure out this mess.");
         printGreenGenericLn("On our example we just want to check how many iteration our for loops will perform.");

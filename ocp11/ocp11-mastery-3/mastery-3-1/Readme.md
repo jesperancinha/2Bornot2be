@@ -39,7 +39,7 @@ The point is that you need to have a `/tmp` folder at this point.
 ## Output
 
 ```text
-/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=58231:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
+/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=65055:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
 ================== Master Module mastery-3-1 ==================
 --- 1. `Integer` Mathematical Bases `parseInt`
 ============
@@ -55,12 +55,12 @@ References
 3. https://www.metrolyrics.com/grote-mannen-worden-klein-lyrics-diggy-dex.html
 --- 2. Labels and `break` in loops
 ============
-Case: You are a fan of "De Jeugd van Tegenwoordig" and you just keep buying their record
-You have a shelf with three rows where your records are organized by most favourite less favourite
-However, you bought a bunch of repeated records and because your mood wings,
-You don't even know anymore which one is your favourite and which one not.
-So now you have 2 records on the top shelf, 4 at the second one and 10 at the bottom!
-But "De Jeugds van Tegenwoordig" only edited 8 albums!
+Case: You are a fan of "De Jeugd van Tegenwoordig" and you just keep buying their records.
+You have a shelf with three rows where your records are organized by most favourite too less favourite album.
+However, you bought a bunch of repeated records and because of your mood wings,
+You don't even know anymore which one is your favourite and which one is not.
+So now you have 2 records on the top shelf, 4 on the second one and 10 at the bottom!
+But "De Jeugd van Tegenwoordig" only edited 8 albums!
 We will use old fashioned for loops to figure out this mess.
 On our example we just want to check how many iteration our for loops will perform.
 Our criteria is:
@@ -72,12 +72,12 @@ Our criteria is:
 6. I know its difficult but that's the point 😊
 Your goal is to guess how many iterations will the atomic number count
 These are your randomized shelves:
-Shelf 1 -> [Luek, Manon]
-Shelf 2 -> [De Machine, Luek, Luek, Manon]
-Shelf 3 -> [De Machine, Manon, Anders (Different), “Ja, Natúúrlijk!”, Manon, X - Viering van het super decennium, Manon, Luek, Parels voor de zwijnen, Parels voor de zwijnen]
+Shelf 1 -> [De Machine, Anders (Different)]
+Shelf 2 -> [De lachende derde, Luek, Luek, De lachende derde]
+Shelf 3 -> [Parels voor de zwijnen, De Machine, Anders (Different), De Machine, Manon, Parels voor de zwijnen, “Ja, Natúúrlijk!”, Manon, Anders (Different), De lachende derde]
 Please guess how many repetitions will this method find ->
-78
-You failed this time, but try again. 6 repetitions were found. Your participation awards you with a medal of courage! 🎖
+6
+You failed this time, but try again. 8 repetitions were found. Your participation awards you with a medal of courage! 🎖
 1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)
 2. https://www.youtube.com/watch?v=cNMXSKfWfLQ
 --- 3. `Files.newDirectoryStream` Listings and the `glob` pattern
@@ -115,9 +115,40 @@ Je onvoorwaardelijk koos voor mij
 A study for the music styles at the end of the 90's.
 /tmp/abel.onderweg.txt
 We finally found it!
+--- 4. `@Override` in `equals`
+============
+Case: We want to buy a record of Maaike Ouboter
+We made a selection of an article we really want to buy.
+Customer -> Good morning, do you have Maaike Ouboter album "Vanaf nu is het van jou?"
+Clerk -> Yes I do, let me check...
+Clerk -> So that album was published in 2018, by Sony Music Entertainment, one moment...
+Clerk -> We seem to have two of those, do you know exactly the one you want?
+[ShopItem{barCode='2742984738947894790942370470', name='Vanaf nu is het van jou', year='2018', publisher='Sony Music Entertainment', specialEdition='Normal'}, ShopItem{barCode='2394720347320943290482084328', name='Vanaf nu is het van jou', year='2018', publisher='Sony Music Entertainment', specialEdition='Special'}]
+Customer -> Yes, I want the special super special please
+Clerk -> Yes, let me check if we have it... false. We don't sorry. Do you have another selection?
+Customer -> Yes, I want the special edition please
+Clerk -> Yes, let me check if we have it... true. Yes! We do! Great! 😉
+Important take out here is that `@Override` must be done with `Object` and equals can of course be overloaded.
+--- 5. How `null` is interpreted in overloading
+============
+Case: We receive different shop items.
+Now we want to check their state.
+In our shop there are many automated ways of checking the state of items, but we generally just call the `checkItem` procedure.
+We receive a copy of the album "De stilte voorbij" by pop-band "Abel", but the store manager has found different ways to check it's authenticity.
+Let's see how he does it:
+This is our record. It's a vinyl! ShopItem{barCode='2742984738947894790942370470', name='De stilte voorbij', year='2000', publisher='[PIAS] Holland', specialEdition='Normal'}
+We'll call `checkItem` in different ways!
+Shop.checkItem(record);
+Object ShopItem{barCode='2742984738947894790942370470', name='De stilte voorbij', year='2000', publisher='[PIAS] Holland', specialEdition='Normal'} is cleared to be sold as a VinylRecord!
+Shop.checkItem((Record) record);
+Object ShopItem{barCode='2742984738947894790942370470', name='De stilte voorbij', year='2000', publisher='[PIAS] Holland', specialEdition='Normal'} is cleared to be sold as a Record!
+Shop.checkItem((ShopItem) record);
+Object ShopItem{barCode='2742984738947894790942370470', name='De stilte voorbij', year='2000', publisher='[PIAS] Holland', specialEdition='Normal'} is cleared to be sold as a ShopItem!
+Finally we make a machine a start the `checkItem` procedure without a record
+Object null is cleared to be sold as a VinylRecord!
+Never forget that a call with null will search for the most specific overloading!
 
 Process finished with exit code 0
-
 ```
 ## References
 
