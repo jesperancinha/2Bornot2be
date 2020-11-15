@@ -39,7 +39,6 @@ The point is that you need to have a `/tmp` folder at this point.
 ## Output
 
 ```text
-/Users/jofisaes/.sdkman/candidates/java/11.0.2-open/bin/java -javaagent:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/lib/idea_rt.jar=59099:/Applications/IntelliJ IDEA 2020.2 EAP.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11/ocp11-mastery-3/mastery-3-1/target/classes:/Users/jofisaes/dev/src/jofisaes/java-test-drives/jtd-the-factory/consolerizer/target/classes:/Users/jofisaes/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.1/junit-jupiter-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar:/Users/jofisaes/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/jofisaes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-commons/1.5.1/junit-platform-commons-1.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.1/junit-jupiter-params-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.1/junit-jupiter-engine-5.5.1.jar:/Users/jofisaes/.m2/repository/org/junit/platform/junit-platform-engine/1.5.1/junit-platform-engine-1.5.1.jar:/Users/jofisaes/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar org.jesperancinha.ocp11.mastery3dot1.Mastery3Dot1Runner
 ================== Master Module mastery-3-1 ==================
 --- 1. `Integer` Mathematical Bases `parseInt`
 ============
@@ -72,9 +71,9 @@ Our criteria is:
 6. I know its difficult but that's the point 😊
 Your goal is to guess how many iterations will the atomic number count
 These are your randomized shelves:
-Shelf 1 -> [Parels voor de zwijnen, De lachende derde]
-Shelf 2 -> [X - Viering van het super decennium, Anders (Different), Manon, Anders (Different)]
-Shelf 3 -> [Anders (Different), Luek, De lachende derde, X - Viering van het super decennium, Manon, De lachende derde, Parels voor de zwijnen, “Ja, Natúúrlijk!”, Manon, X - Viering van het super decennium]
+Shelf 1 -> [Anders (Different), Manon]
+Shelf 2 -> [De Machine, De Machine, De Machine, Manon]
+Shelf 3 -> [Luek, Anders (Different), X - Viering van het super decennium, Parels voor de zwijnen, De Machine, De lachende derde, X - Viering van het super decennium, Parels voor de zwijnen, De lachende derde, “Ja, Natúúrlijk!”]
 Please guess how many repetitions will this method find ->
 4
 You failed this time, but try again. 8 repetitions were found. Your participation awards you with a medal of courage! 🎖
@@ -88,7 +87,7 @@ but now we have no access to the internet and we have to deliver our work in 2 h
 In this exercise we will find Abel's lyrics in our tmp folder. We hope the system hasn't deleted it yet...
 We will try to find our file in /tmp. Remember to run ./prepare.sh. Check Readme.md for more details:
 If we use a glob filter of *.{gif,jpeg,jpg,bmp} we get:
-\No file found!
+No file found!
 This was the wrong extension! If we use a glob filter of *.{txt} we get:
 /tmp/abel.onderweg.txt
 /tmp/.ebonwgal.txt
@@ -198,13 +197,21 @@ For loops do not affect elements directly. They may only affect their contents..
 --- 11. Thread safe `Object` s
 ============
 Please wait while concert goers go inside the arenas...
-Live concert has 176 goers
+Live concert has 200 goers
 Safe live concert has 50 goers
-Unregulated live concert has 185 goers
+Unregulated live concert has 199 goers
 Virtual live concert has 50 goers
 All thread safe concert arenas should have only 50 concert goes.
 We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.
 In our case, more concert goers got in the  non thread-safe spaces.
+--- 12. `Stream` count types
+============
+Case: We have the complete collection of `Diggy Dex` records.
+We will now count them
+Diggy Dex has published 6 albums!
+The type of this count is long.
+From long: 6
+Stream counts are always long.
 
 Process finished with exit code 0
 ```
