@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -59,6 +60,21 @@ public class Mastery3Dot1Runner {
         exercise9();
         exercise10();
         exercise11();
+        exercise12();
+    }
+
+    private static void exercise12() {
+        printBrightCyanGenericLn("--- 12. `Stream` count types");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We have the complete collection of `Diggy Dex` records.");
+        printGreenGenericLn("We will now count them");
+        final String[] allAlbums = {"Verhalen vanuit de Sofa","Mayonaise voor de ziel","Lange nachten, korte dagen","Do it yourself","Golven","Karavaan"};
+        var count =  Arrays.stream(allAlbums).count();
+        printMagentaGenericLn("Diggy Dex has published %d albums!",  count);
+        printMagentaGenericLn("The type of this count is long.");
+        long countConvert = count;
+        printMagentaGenericLn("From long: %d", countConvert);
+        printGreenGenericLn("Stream counts are always long.");
     }
 
     private static void exercise11() throws InterruptedException {
