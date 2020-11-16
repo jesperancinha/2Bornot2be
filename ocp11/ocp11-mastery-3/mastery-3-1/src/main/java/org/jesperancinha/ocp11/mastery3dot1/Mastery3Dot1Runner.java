@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Spliterator;
+import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -43,10 +44,12 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGener
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printSameLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery3Dot1Runner {
@@ -69,10 +72,37 @@ public class Mastery3Dot1Runner {
         exercise12();
         exercise13();
         exercise14();
+        exercise15();
+    }
+
+    private static void exercise15() {
+        printBrightCyanGenericLn("--- 15. `java.lang.OutOfMemoryError` and `Error` classes");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!");
+        printGreenGenericLn("What will happen if too many people buy it?");
+        printBlueGenericLn("Please wait...");
+        printBlueGenericLn("...");
+        var soldAlbums = new ArrayList<String>();
+        try {
+            for (; ; ) {
+                final String transactionId = UUID.randomUUID().toString();
+                soldAlbums.add(transactionId);
+                printSameLine(transactionId);
+                soldAlbums.addAll(soldAlbums);
+            }
+        } catch (Exception e) {
+            printNewLine();
+            printRedGenericLn("This is an exception that should have not happened %s", e);
+        } catch (Error e) {
+            printNewLine();
+            printRedGenericLn("This is the expected error %s", e);
+        }
+        printGreenGenericLn("OutOfMemory is always an Error.");
+        printGreenGenericLn("We can catch it!");
     }
 
     private static void exercise14() {
-        printBrightCyanGenericLn("--- Accessing `static` `interface` methods");
+        printBrightCyanGenericLn("--- 14. Accessing `static` `interface` methods");
         printRainbowLn("==");
         printGreenGenericLn("Case: We received a record case and want to see its descriptions.");
         printGreenGenericLn("Do we need its instance?.");

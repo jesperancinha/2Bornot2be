@@ -34,7 +34,7 @@ The point is that you need to have a `/tmp` folder at this point.
 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 14. Accessing `static` `interface` methods
 15. `java.lang.OutOfMemoryError` and `Error` classes
-16. Accessibility `@Override`
+16. Accessibility `@Override` 
  
 ## Output
 
@@ -71,12 +71,12 @@ Our criteria is:
 6. I know its difficult but that's the point 😊
 Your goal is to guess how many iterations will the atomic number count
 These are your randomized shelves:
-Shelf 1 -> [Parels voor de zwijnen, Manon]
-Shelf 2 -> [Parels voor de zwijnen, Parels voor de zwijnen, De Machine, Manon]
-Shelf 3 -> [X - Viering van het super decennium, Parels voor de zwijnen, Luek, De Machine, Luek, X - Viering van het super decennium, “Ja, Natúúrlijk!”, Anders (Different), “Ja, Natúúrlijk!”, Manon]
+Shelf 1 -> [Anders (Different), Luek]
+Shelf 2 -> [Luek, Parels voor de zwijnen, Luek, Luek]
+Shelf 3 -> [De Machine, Anders (Different), “Ja, Natúúrlijk!”, De Machine, De lachende derde, “Ja, Natúúrlijk!”, X - Viering van het super decennium, X - Viering van het super decennium, Luek, X - Viering van het super decennium]
 Please guess how many repetitions will this method find ->
-5
-You made it champ!! There are indeed 5 repetitions found! 🥇
+6
+You failed this time, but try again. 5 repetitions were found. Your participation awards you with a medal of courage! 🎖
 1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)
 2. https://www.youtube.com/watch?v=cNMXSKfWfLQ
 --- 3. `Files.newDirectoryStream` Listings and the `glob` pattern
@@ -197,9 +197,9 @@ For loops do not affect elements directly. They may only affect their contents..
 --- 11. Thread safe `Object` s
 ============
 Please wait while concert goers go inside the arenas...
-Live concert has 142 goers
+Live concert has 200 goers
 Safe live concert has 50 goers
-Unregulated live concert has 190 goers
+Unregulated live concert has 196 goers
 Virtual live concert has 50 goers
 All thread safe concert arenas should have only 50 concert goes.
 We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.
@@ -215,7 +215,7 @@ Stream counts are always long.
 --- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 ============
 Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show
-However, the show on the ticket if from a missed show in Villa Thallia in Rotterdam.
+However, the show on the ticket is from a missed show in Villa Thallia in Rotterdam which took  place 8 days ago.
 Can we mutate any of the three tickets we have for the past show?
 Current Tickets
 Unsafe Ticket -> UnsafeTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
@@ -226,13 +226,41 @@ Unsafe Ticket -> UnsafeTicket{date=Mon Nov 17 19:30:00 CET 3919, concert='Villa 
 Final Ticket -> FinalTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
 Private Ticket -> PrivateTicket{date=Sun Nov 09 19:30:00 CET 3919, concert='Villa Thalia - Rotterdam', artist='Gers Pardoel'}
 These tickets actually cannot be changed to anything convincing.
-However, one of the is not entirely immutable. We were able to change the dat though.
+However, one of the is not entirely immutable. We were able to change the date though.
 Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.
+--- 14. Accessing `static` `interface` methods
+============
+Case: We received a record case and want to see its descriptions.
+Do we need its instance?.
+This RecordCase has a capacity of 50 records
+This RecordCase has a capacity of 100 records
+Current year is 0
+This is possible: recordCase.describeMe();
+I'm a record case class -> org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase
+This is possible: ((Case)recordCase).describeMe();
+I'm a case class -> org.jesperancinha.ocp11.mastery3dot1.furniture.Case
+This is not possible: ((Container)recordCase).describeMe();
+This is possible: Container.describeMe();
+I'm a container interface -> org.jesperancinha.ocp11.mastery3dot1.furniture.Container
+The point is that interface static methods cannot be called via an instance.
+There is hardly any reason to call a static method from an instance anyways.
+They can though, but only if they belong to ordinary classes and not interfaces.
+--- 15. `java.lang.OutOfMemoryError` and `Error` classes
+============
+Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!
+What will happen if too many people buy it?
+Please wait...
+...
+cdf4c0ee-4eb2-4c35-ae7b-b0159ee64c62
+This is the expected error java.lang.OutOfMemoryError: Java heap space
+OutOfMemory is always an Error.
+We can catch it!
 
 Process finished with exit code 0
 ```
 ## References
 
+-   [100% NL TOP 20](https://www.100p.nl/muziek/charts/100-nl-top-20)
 -   [Vinyl Record Sizes and Speeds – What does 33 – 45- 78 RPM mean?](https://blog.electrohome.com/vinyl-record-speeds-33-45-78-mean/)
 -   [Maaike Ouboter](https://nl.wikipedia.org/wiki/Maaike_Ouboter)
 -   [Musixmatch - Abel, Onderweg, Lyrics](https://www.musixmatch.com/lyrics/Abel/Onderweg)
