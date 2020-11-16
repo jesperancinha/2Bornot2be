@@ -1,21 +1,30 @@
 package org.jesperancinha.ocp11.mastery3dot1.tickets;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public final class FinalTicket {
-    private final LocalDateTime date;
+    private final Date date;
 
     private final String concert;
 
     private final String artist;
 
-    public FinalTicket(LocalDateTime date, String concert, String artist) {
-        this.date = LocalDateTime.from(date);
+    public FinalTicket(Date date, String concert, String artist) {
+        this.date = (Date) date.clone();
         this.concert = concert;
         this.artist = artist;
     }
 
-    public LocalDateTime getDate() {
-        return  LocalDateTime.from(date);
+    public Date getDate() {
+        return (Date) this.date.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "FinalTicket{" +
+                "date=" + date +
+                ", concert='" + concert + '\'' +
+                ", artist='" + artist + '\'' +
+                '}';
     }
 }

@@ -10,6 +10,9 @@ import org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase;
 import org.jesperancinha.ocp11.mastery3dot1.items.Record;
 import org.jesperancinha.ocp11.mastery3dot1.items.ShopItem;
 import org.jesperancinha.ocp11.mastery3dot1.items.VinylRecord;
+import org.jesperancinha.ocp11.mastery3dot1.tickets.FinalTicket;
+import org.jesperancinha.ocp11.mastery3dot1.tickets.PrivateTicket;
+import org.jesperancinha.ocp11.mastery3dot1.tickets.UnsafeTicket;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,8 +21,10 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -61,6 +66,35 @@ public class Mastery3Dot1Runner {
         exercise10();
         exercise11();
         exercise12();
+        exercise13();
+    }
+
+    private static void exercise13() {
+        printBrightCyanGenericLn("--- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show");
+        printGreenGenericLn("However, the show on the ticket if from a missed show in Villa Thallia in Rotterdam.");
+        printGreenGenericLn("Can we mutate any of the three tickets we have for the past show?");
+        var ticketUnsafe = new UnsafeTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
+        var ticketFinal = new FinalTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
+        var ticketPrivate = PrivateTicket.createTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
+        printGreenGenericLn("Current Tickets");
+        printMagentaGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
+        printMagentaGenericLn("Final Ticket -> %s", ticketFinal);
+        printMagentaGenericLn("Private Ticket -> %s", ticketPrivate);
+        final Date dateUnsafe = ticketUnsafe.getDate();
+        dateUnsafe.setDate(17);
+        final Date dateFinal = ticketFinal.getDate();
+        dateFinal.setDate(17);
+        final Date datePrivate = ticketPrivate.getDate();
+        datePrivate.setTime(17);
+        printGreenGenericLn("New Tickets");
+        printMagentaGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
+        printMagentaGenericLn("Final Ticket -> %s", ticketFinal);
+        printMagentaGenericLn("Private Ticket -> %s", ticketPrivate);
+        printGreenGenericLn("These tickets actually cannot be changed to anything convincing.");
+        printGreenGenericLn("However, one of the is not entirely immutable. We were able to change the dat though.");
+        printGreenGenericLn("Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.");
     }
 
     private static void exercise12() {
@@ -68,9 +102,9 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("Case: We have the complete collection of `Diggy Dex` records.");
         printGreenGenericLn("We will now count them");
-        final String[] allAlbums = {"Verhalen vanuit de Sofa","Mayonaise voor de ziel","Lange nachten, korte dagen","Do it yourself","Golven","Karavaan"};
-        var count =  Arrays.stream(allAlbums).count();
-        printMagentaGenericLn("Diggy Dex has published %d albums!",  count);
+        final String[] allAlbums = {"Verhalen vanuit de Sofa", "Mayonaise voor de ziel", "Lange nachten, korte dagen", "Do it yourself", "Golven", "Karavaan"};
+        var count = Arrays.stream(allAlbums).count();
+        printMagentaGenericLn("Diggy Dex has published %d albums!", count);
         printMagentaGenericLn("The type of this count is long.");
         long countConvert = count;
         printMagentaGenericLn("From long: %d", countConvert);
