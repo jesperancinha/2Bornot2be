@@ -17,6 +17,7 @@ public class Consolerizer {
     private final static ConColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
 
     private int typingWait;
+
     public static int typingWaitGlobal = TYPING_DEFAULT_MS;
 
     private ConColor conColor = CON_COLOR_DEFAULT;
@@ -323,15 +324,15 @@ public class Consolerizer {
         for (int i = 0; i < nUnicorns; i++) {
             System.out.print("🦄");
         }
-        System.out.println("\n");
+        printNewLine();
     }
 
-    public static void printSameLine(final String text, final Object... objects){
+    public static void printSameLine(final String text, final Object... objects) {
         System.out.print("\r");
         System.out.printf(text, objects);
     }
 
-    public static void printNewLine(){
+    public static void printNewLine() {
         System.out.print("\n");
     }
 }

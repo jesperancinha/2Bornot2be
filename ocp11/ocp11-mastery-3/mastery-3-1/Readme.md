@@ -71,12 +71,12 @@ Our criteria is:
 6. I know its difficult but that's the point 😊
 Your goal is to guess how many iterations will the atomic number count
 These are your randomized shelves:
-Shelf 1 -> [Anders (Different), Luek]
-Shelf 2 -> [Luek, Parels voor de zwijnen, Luek, Luek]
-Shelf 3 -> [De Machine, Anders (Different), “Ja, Natúúrlijk!”, De Machine, De lachende derde, “Ja, Natúúrlijk!”, X - Viering van het super decennium, X - Viering van het super decennium, Luek, X - Viering van het super decennium]
+Shelf 1 -> [Parels voor de zwijnen, Luek]
+Shelf 2 -> [Luek, De Machine, De lachende derde, Manon]
+Shelf 3 -> [De lachende derde, X - Viering van het super decennium, Luek, Luek, De Machine, Anders (Different), Anders (Different), Manon, X - Viering van het super decennium, Luek]
 Please guess how many repetitions will this method find ->
-6
-You failed this time, but try again. 5 repetitions were found. Your participation awards you with a medal of courage! 🎖
+5
+You made it champ!! There are indeed 5 repetitions found! 🥇
 1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)
 2. https://www.youtube.com/watch?v=cNMXSKfWfLQ
 --- 3. `Files.newDirectoryStream` Listings and the `glob` pattern
@@ -197,9 +197,9 @@ For loops do not affect elements directly. They may only affect their contents..
 --- 11. Thread safe `Object` s
 ============
 Please wait while concert goers go inside the arenas...
-Live concert has 200 goers
+Live concert has 147 goers
 Safe live concert has 50 goers
-Unregulated live concert has 196 goers
+Unregulated live concert has 148 goers
 Virtual live concert has 50 goers
 All thread safe concert arenas should have only 50 concert goes.
 We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.
@@ -251,15 +251,31 @@ Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!
 What will happen if too many people buy it?
 Please wait...
 ...
-cdf4c0ee-4eb2-4c35-ae7b-b0159ee64c62
+cd267005-ce5f-4f52-9a26-00d049cc7ce5
 This is the expected error java.lang.OutOfMemoryError: Java heap space
 OutOfMemory is always an Error.
 We can catch it!
+--- 16. Accessibility `@Override`
+============
+Case: We hve different versions of `Verdronken Vlinder`.
+How many ways can we get them?
+The original version of `Verdronken vlinder` came about in 1967 as a B-Side recording of Boudewijn de Groot's single `Onder ons`
+In this case you can just call the public method. Note that the abstraction is package protected.
+This means that it is the strictest next to `private`
+So we can implement it with `protected` and `public` only.
+Maaike Ouboter sang a cover version of `Verdronken Vlinder in dutch TV show `De Dereld Draait Door`
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
+Hope you enjoyed this mastery into Java 11 with a dutch flavour to it.
+Please keep coming back as I'll be creating more mastery modules.
+Thank you!
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 
 Process finished with exit code 0
 ```
 ## References
 
+-   [Ode aan Boudewijn: Maaike Ouboter - Verdronken Vlinder - 17-1-2014](https://www.bnnvara.nl/dewerelddraaitdoor/videos/257725)
+-   [Verdronken vlinder - Wikipedia NL](https://nl.wikipedia.org/wiki/Verdronken_vlinder)
 -   [100% NL TOP 20](https://www.100p.nl/muziek/charts/100-nl-top-20)
 -   [Vinyl Record Sizes and Speeds – What does 33 – 45- 78 RPM mean?](https://blog.electrohome.com/vinyl-record-speeds-33-45-78-mean/)
 -   [Maaike Ouboter](https://nl.wikipedia.org/wiki/Maaike_Ouboter)

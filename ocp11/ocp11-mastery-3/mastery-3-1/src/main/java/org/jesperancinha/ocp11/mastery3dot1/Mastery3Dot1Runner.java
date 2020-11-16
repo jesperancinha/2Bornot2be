@@ -12,6 +12,8 @@ import org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase;
 import org.jesperancinha.ocp11.mastery3dot1.items.Record;
 import org.jesperancinha.ocp11.mastery3dot1.items.ShopItem;
 import org.jesperancinha.ocp11.mastery3dot1.items.VinylRecord;
+import org.jesperancinha.ocp11.mastery3dot1.songs.OriginalVlinder;
+import org.jesperancinha.ocp11.mastery3dot1.songs.Vlinder;
 import org.jesperancinha.ocp11.mastery3dot1.tickets.FinalTicket;
 import org.jesperancinha.ocp11.mastery3dot1.tickets.PrivateTicket;
 import org.jesperancinha.ocp11.mastery3dot1.tickets.UnsafeTicket;
@@ -50,6 +52,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printSameLine;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery3Dot1Runner {
@@ -73,6 +76,26 @@ public class Mastery3Dot1Runner {
         exercise13();
         exercise14();
         exercise15();
+        exercise16();
+
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with a dutch flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise16() {
+        printBrightCyanGenericLn("--- 16. Accessibility `@Override`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We hve different versions of `Verdronken Vlinder`.");
+        printGreenGenericLn("How many ways can we get them?");
+        var originalVlinder = new OriginalVlinder();
+        originalVlinder.publicPoint();
+        var vlinder = new Vlinder();
+        vlinder.publicPoint();
+        vlinder.playVlinder();
+
     }
 
     private static void exercise15() {
