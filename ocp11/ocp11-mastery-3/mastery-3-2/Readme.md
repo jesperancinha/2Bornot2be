@@ -37,6 +37,13 @@ All the while studying for Java 11.
 ## References
 
 <div align="center">
+      <a href="https://www.youtube.com/watch?v=sfAE1ojKrPw">
+         <img 
+              src="https://img.youtube.com/vi/sfAE1ojKrPw/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
       <a href="https://www.youtube.com/watch?v=GyyamiSLio8">
          <img 
               src="https://img.youtube.com/vi/GyyamiSLio8/0.jpg" 
