@@ -5,8 +5,6 @@ Regardless of my musical preferences and of yours, it is undeniable that it is t
 I sang these songs from my heart and little by little my dutch speaking goal became a reality.
 It should be no surprise that my story would end up being a part of my study materials of some sort and this is their debut.
 
-(... coming soon.)
-
 ## Preparation
 
 If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
