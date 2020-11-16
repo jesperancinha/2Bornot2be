@@ -8,7 +8,27 @@ All the while studying for Java 11.
 
 ## Exercise
 
-1. 
+1. Serialization and polymorphism
+2. Multi-dimensional arrays and ways to create them
+3. Sorting Immutable `List`'s
+4. Static method inheritance and overriding
+5. `final` in `try` with resources
+6. `Deque` and `offerLast`, and other methods.
+7. Base modules and the rest
+8. A case for `final` `var` in a `for` loop
+9. `RandomAccessFile` and `writeUTF`
+10. local `DateFormat` and `Locale`
+11. Multidimensional arrays with `var`
+12. Package protected constructors
+13. `ExceptionInInitializerError`
+14. `thenComparing`
+15. `Consumer` in `for` loops
+16. `sorted`, `Comparable` and `ClassCastException`
+17. Serializing arrays and Lists
+18. `noneMatch` vs `anyMatch`
+19. `StringBuilder` and `setLength`
+20. `Supplier` and `get`
+21. `Files.copy` and symbolic links
 
 ## Output
 
