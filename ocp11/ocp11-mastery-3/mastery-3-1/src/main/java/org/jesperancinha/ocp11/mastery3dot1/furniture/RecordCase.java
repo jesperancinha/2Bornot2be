@@ -18,8 +18,12 @@ public class RecordCase extends Case {
         Consolerizer.printOrangeGenericLn("This RecordCase has a capacity of %d records", super.capacity);
     }
 
-    public void printStuff(){
+    public void printStuff() {
         printOrangeGenericLn("Current year is %d", currentYear);
+    }
+
+    public static void describeMe() {
+        Consolerizer.printYellowGenericLn("I'm a record case class -> %s", RecordCase.class.getName());
     }
 
 }

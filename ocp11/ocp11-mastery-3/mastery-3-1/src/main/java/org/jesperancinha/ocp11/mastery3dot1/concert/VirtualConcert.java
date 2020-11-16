@@ -1,8 +1,5 @@
 package org.jesperancinha.ocp11.mastery3dot1.concert;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
-
 /**
  * This class and its internal object are 100% Thread safe.
  * No changes to counter occur and the counter is marked as final.

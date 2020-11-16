@@ -4,7 +4,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
-public class Case {
+public class Case implements Container {
 
     int capacity = 50;
 
@@ -19,7 +19,7 @@ public class Case {
         printOrangeGenericLn("This Case has a capacity of %d elements", capacity);
     }
 
-    public void printStuff(){
+    public void printStuff() {
         printOrangeGenericLn("I have nothing to say.");
     }
 
@@ -28,5 +28,9 @@ public class Case {
         return "Case{" +
                 "capacity=" + capacity +
                 '}';
+    }
+
+    public static void describeMe() {
+        Consolerizer.printYellowGenericLn("I'm a case class -> %s", Case.class.getName());
     }
 }

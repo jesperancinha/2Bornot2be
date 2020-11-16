@@ -1,7 +1,5 @@
 package org.jesperancinha.ocp11.mastery3dot1.concert;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 /**
  * This class is 100% NOT thread-safe
  * The write accessors perform unsynchronized changes.

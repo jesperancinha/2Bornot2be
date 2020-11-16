@@ -1,7 +1,5 @@
 package org.jesperancinha.ocp11.mastery3dot1.concert;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 

@@ -32,7 +32,7 @@ The point is that you need to have a `/tmp` folder at this point.
 11. Thread safe `Object` s
 12. `Stream` count types
 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
-14. Accessing `static` `interface` methosd
+14. Accessing `static` `interface` methods
 15. `java.lang.OutOfMemoryError` and `Error` classes
 16. Accessibility `@Override`
  

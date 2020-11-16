@@ -1,6 +1,5 @@
 package org.jesperancinha.ocp11.mastery3dot1.tickets;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class PrivateTicket {

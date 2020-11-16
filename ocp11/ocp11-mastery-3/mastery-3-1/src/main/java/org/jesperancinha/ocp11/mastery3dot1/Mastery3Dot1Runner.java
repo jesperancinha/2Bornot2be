@@ -6,6 +6,8 @@ import org.jesperancinha.ocp11.mastery3dot1.concert.LiveConcert;
 import org.jesperancinha.ocp11.mastery3dot1.concert.SafeLiveConcert;
 import org.jesperancinha.ocp11.mastery3dot1.concert.UnregulatedConcert;
 import org.jesperancinha.ocp11.mastery3dot1.concert.VirtualConcert;
+import org.jesperancinha.ocp11.mastery3dot1.furniture.Case;
+import org.jesperancinha.ocp11.mastery3dot1.furniture.Container;
 import org.jesperancinha.ocp11.mastery3dot1.furniture.RecordCase;
 import org.jesperancinha.ocp11.mastery3dot1.items.Record;
 import org.jesperancinha.ocp11.mastery3dot1.items.ShopItem;
@@ -21,7 +23,6 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -67,13 +68,32 @@ public class Mastery3Dot1Runner {
         exercise11();
         exercise12();
         exercise13();
+        exercise14();
+    }
+
+    private static void exercise14() {
+        printBrightCyanGenericLn("--- Accessing `static` `interface` methods");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We received a record case and want to see its descriptions.");
+        printGreenGenericLn("Do we need its instance?.");
+        final RecordCase recordCase = new RecordCase(100);
+        printGreenGenericLn("This is possible: recordCase.describeMe();");
+        recordCase.describeMe();
+        printGreenGenericLn("This is possible: ((Case)recordCase).describeMe();");
+        ((Case) recordCase).describeMe();
+        printRedGenericLn("This is not possible: ((Container)recordCase).describeMe();");
+        printGreenGenericLn("This is possible: Container.describeMe();");
+        Container.describeMe();
+        printGreenGenericLn("The point is that interface static methods cannot be called via an instance.");
+        printGreenGenericLn("There is hardly any reason to call a static method from an instance anyways.");
+        printGreenGenericLn("They can though, but only if they belong to ordinary classes and not interfaces.");
     }
 
     private static void exercise13() {
         printBrightCyanGenericLn("--- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)");
         printRainbowLn("==");
         printGreenGenericLn("Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show");
-        printGreenGenericLn("However, the show on the ticket if from a missed show in Villa Thallia in Rotterdam.");
+        printGreenGenericLn("However, the show on the ticket is from a missed show in Villa Thallia in Rotterdam which took  place 8 days ago.");
         printGreenGenericLn("Can we mutate any of the three tickets we have for the past show?");
         var ticketUnsafe = new UnsafeTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
         var ticketFinal = new FinalTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
@@ -93,7 +113,7 @@ public class Mastery3Dot1Runner {
         printMagentaGenericLn("Final Ticket -> %s", ticketFinal);
         printMagentaGenericLn("Private Ticket -> %s", ticketPrivate);
         printGreenGenericLn("These tickets actually cannot be changed to anything convincing.");
-        printGreenGenericLn("However, one of the is not entirely immutable. We were able to change the dat though.");
+        printGreenGenericLn("However, one of the is not entirely immutable. We were able to change the date though.");
         printGreenGenericLn("Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.");
     }
 
