@@ -5,17 +5,28 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import java.io.Serializable;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+
 public class Market extends Building implements Serializable {
 
-    private  UUID marketId = UUID.randomUUID();
+    private UUID marketId = UUID.randomUUID();
 
-    public Market(float height, float dimX, float  dimY, String mainMaterial) {
+    public Market(float height, float dimX, float dimY, String mainMaterial) {
         super(height, dimX, dimY, mainMaterial);
-        Consolerizer.printOrangeGenericLn("Market constructor has been called! %s", this.toString());
+        printOrangeGenericLn("Market constructor has been called! %s", this.toString());
     }
 
-    public Market(){
-        Consolerizer.printOrangeGenericLn("Market (no-args) constructor has been called! %s", this.toString());
+    public Market() {
+        printOrangeGenericLn("Market (no-args) constructor has been called! %s", this.toString());
+    }
+
+    public static void getInfo() {
+        Consolerizer.printYellowGenericLn("A Market has a UUID");
+    }
+
+
+    public String getCurrentInfo() {
+        return "marketId=" + marketId;
     }
 
     @Override

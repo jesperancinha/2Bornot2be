@@ -6,9 +6,7 @@ import java.io.Serializable;
 
 public class Building extends Construction implements Serializable {
     float height;
-
     float dimX;
-
     float dimY;
     public Building(float height, float dimX, float dimY, String mainMaterial) {
         super(mainMaterial);
@@ -20,6 +18,16 @@ public class Building extends Construction implements Serializable {
 
     public Building() {
         Consolerizer.printOrangeGenericLn("Building (no-args) constructor has been called! %s", toString());
+    }
+
+    public static void getInfo(){
+        Consolerizer.printYellowGenericLn("A Building has a height, dimX and  dimY");
+    }
+
+    public String getCurrentInfo(){
+        return  "height=" + height +
+                ", dimX=" + dimX +
+                ", dimY=" + dimY;
     }
 
     @Override

@@ -14,6 +14,14 @@ public class Construction implements Space {
         Consolerizer.printOrangeGenericLn("Construction (no-args) constructor has been called! %s", this.toString());
     }
 
+    public static void getInfo() {
+        Consolerizer.printYellowGenericLn("A Construction has mainMaterial");
+    }
+
+    public String getCurrentInfo() {
+        return "mainMaterial='" + mainMaterial;
+    }
+
     @Override
     public String toString() {
         return "Construction{" +

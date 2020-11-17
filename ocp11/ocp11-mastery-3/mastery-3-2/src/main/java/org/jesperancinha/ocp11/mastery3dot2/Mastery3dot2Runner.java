@@ -22,6 +22,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGe
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery3dot2Runner {
     public static void main(String[] args) {
@@ -32,12 +33,37 @@ public class Mastery3dot2Runner {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise4() {
+        printBrightCyanGenericLn("--- 4. Static method inheritance and overriding");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We have a stroll around the market and finally we come across some displays");
+        printGreenGenericLn("There we can see how Space's are built across the city.");
+        var construction = new Construction("Cement");
+        var building = new Building(5f, 26f, 11.5f, "bricks");
+        var market = new Market(5f, 26f, 11.5f, "bricks");
+        construction.getInfo();
+        building.getInfo();
+        market.getInfo();
+        printYellowGenericLn(construction.getCurrentInfo());
+        printYellowGenericLn(((Construction) building).getCurrentInfo());
+        printYellowGenericLn(((Construction) market).getCurrentInfo());
+        ((Construction) construction).getInfo();
+        ((Construction) building).getInfo();
+        ((Construction) market).getInfo();
+        printGreenGenericLn("Important takes from this exercise:");
+        printGreenGenericLn("1. static methods are not really overriden. They are however shadowed by another");
+        printGreenGenericLn("2. by upcasting, we can call other static  methods");
+        printGreenGenericLn("3. Instance methods can be overriden");
+        printGreenGenericLn("4. Upcasting will only call the resulting instance method");
     }
 
     private static void exercise3() {
