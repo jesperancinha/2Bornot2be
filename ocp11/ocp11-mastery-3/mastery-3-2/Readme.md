@@ -6,6 +6,16 @@ All the while studying for Java 11.
 
 (... coming soon.)
 
+## Preparation
+
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
+If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
+The point is that you need to have a `/tmp` folder at this point.
+
+```bash
+./prepare.sh
+```
+
 ## Exercise
 
 1. Serialization and polymorphism
@@ -18,7 +28,7 @@ All the while studying for Java 11.
 8. A case for `final` `var` in a `for` loop
 9. `RandomAccessFile` and `writeUTF`
 10. local `DateFormat` and `Locale`
-11. Package protected constructors
+11. Package protected constructors (two classes of different packages)
 12. `ExceptionInInitializerError`
 13. `thenComparing`
 14. `Consumer` in `for` loops
@@ -106,6 +116,9 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [BACALHAU À BRÁS RECEPT](https://salinto.nl/blog/bacalhau-a-bras-recept/)
+-   [Saudades de Portugal - Recept Bacalhau à Brás](https://saudadesdeportugal.nl/bacalhau-a-bras/)
+-   [Difference between the File and RandomAccessFile classes](https://www.careerride.com/Java-file-vs-RandomAccessFile-classes.aspx#:~:text=%2D%20The%20File%20class%20encapsulates%20the,%2D%20The%20java.&text=%2D%20Unlike%20the%20input%20and%20output,inherit%20from%20InputStream%20or%20OutputStream.)
 -   [Castanhas assadas no forno - SAPO - Lifestyle](https://lifestyle.sapo.pt/sabores/receitas/castanhas-assadas-no-forno)
 -   [Castanhas assadas e Feira de São Martinho prometem atrair milhares a Portimão](https://postal.pt/economia/2019-10-31-Castanhas-assadas-e-Feira-de-Sao-Martinho-prometem-atrair-milhares-a-Portimao)
 -   [Festival do Marisco 2019](http://www.festivaldomarisco.com/artistas)

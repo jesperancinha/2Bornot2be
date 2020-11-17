@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.RandomAccessFile;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGener
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -39,12 +41,43 @@ public class Mastery3dot2Runner {
         exercise6();
         exercise7();
         exercise8();
+        exercise9();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise9() {
+        printBrightCyanGenericLn("--- 9. `RandomAccessFile` and `writeUTF`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We want to cook \"Bacalhau à Brás\"");
+        printGreenGenericLn("We went to the market and bought some pieces of raw, dried and salted cod fish");
+        printGreenGenericLn("The rest of the ingredients are at home");
+        printGreenGenericLn("We get home and read our recipe again:");
+        try (var raf = new RandomAccessFile("/tmp/bacalhau.a.bras.txt", "rw")) {
+            printYellowGenericLn(raf.readLine());
+            long filePointer = raf.getFilePointer();
+            printYellowGenericLn(raf.readLine());
+            raf.writeUTF("I'm corrupting the recipe\n");
+            raf.seek(filePointer);
+            String line = null;
+            while ((line = raf.readLine()) != null) {
+                printYellowGenericLn(line);
+            }
+            printOrangeGenericLn("Wait! I forgot something!");
+            raf.seek(filePointer);
+            while ((line = raf.readLine()) != null) {
+                printYellowGenericLn(line);
+            }
+        } catch (IOException e) {
+            printRedGenericLn("Ooops! This shouldn't have happened! Check your runtime -> %s", e);
+        }
+        printGreenGenericLn("RandomAccessFile uses different interfaces than FileInputStream.");
+        printGreenGenericLn("But they are all Closeable.");
+        printGreenGenericLn("In RandomAccessFile a pointer is used that can be saved to go back and forth in the same file.");
     }
 
     private static void exercise8() {
@@ -59,7 +92,7 @@ public class Mastery3dot2Runner {
             // vegetable = "wow";
             printYellowGenericLn(vegetable);
         }
-        for ( var vegetable : vegetableToShopList) {
+        for (var vegetable : vegetableToShopList) {
             vegetable += " with fungus";
             printYellowGenericLn(vegetable);
         }
