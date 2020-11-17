@@ -37,12 +37,29 @@ public class Mastery3dot2Runner {
         exercise4();
         exercise5();
         exercise6();
+        exercise7();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise7() {
+        printBrightCyanGenericLn("--- 7. Base modules and the rest ");
+        printRainbowLn("==");
+        printBlueGenericLn("Expected output:\n%s","Cataplana dish is being served...\n" +
+                "cataplana.jar -> java.base\n" +
+                "   org.jesperancinha.console.consolerizer             -> java.io                                            java.base\n" +
+                "   org.jesperancinha.console.consolerizer             -> java.lang                                          java.base\n" +
+                "   org.jesperancinha.console.consolerizer             -> java.lang.invoke                                   java.base\n" +
+                "   org.jesperancinha.console.consolerizer             -> java.util                                          java.base\n" +
+                "   org.jesperancinha.console.consolerizer             -> java.util.function                                 java.base\n" +
+                "   org.jesperancinha.console.consolerizer             -> java.util.stream                                   java.base\n" +
+                "   org.jesperancinha.ocp11.mastery3dot2               -> java.lang                                          java.base\n" +
+                "   org.jesperancinha.ocp11.mastery3dot2               -> org.jesperancinha.console.consolerizer             cataplana.jar");
+        printGreenGenericLn("Please check module %s for more info...","mastery-3-2-modularity");
     }
 
     private static void exercise6() {

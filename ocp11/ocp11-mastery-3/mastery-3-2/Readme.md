@@ -14,7 +14,7 @@ All the while studying for Java 11.
 4. Static method inheritance and overriding
 5. `final` in `try` with resources
 6. `Deque` and `offerLast`, and other methods.
-7. Base modules and the rest
+7. Base modules and the rest -> [mastery-3-2-modularity](../mastery-3-2-modularity/Readme.md)
 8. A case for `final` `var` in a `for` loop
 9. `RandomAccessFile` and `writeUTF`
 10. local `DateFormat` and `Locale`

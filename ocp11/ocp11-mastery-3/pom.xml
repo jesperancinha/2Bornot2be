@@ -15,5 +15,6 @@
     <modules>
         <module>mastery-3-1</module>
         <module>mastery-3-2</module>
+        <module>mastery-3-2-modularity</module>
     </modules>
 </project>

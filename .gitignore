@@ -19,6 +19,7 @@ hs_err_pid*
 **/target
 **/out
 **/mods
+**/jars
 
 # vaadin
 **/*.scss
