@@ -38,6 +38,7 @@ public class Mastery3dot2Runner {
         exercise5();
         exercise6();
         exercise7();
+        exercise8();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
@@ -46,10 +47,33 @@ public class Mastery3dot2Runner {
         printUnicornsLn(100);
     }
 
-    private static void exercise7() {
-        printBrightCyanGenericLn("--- 7. Base modules and the rest ");
+    private static void exercise8() {
+        printBrightCyanGenericLn("--- 8. A case for `final` `var` in a `for` loop");
         printRainbowLn("==");
-        printBlueGenericLn("Expected output:\n%s","Cataplana dish is being served...\n" +
+        printGreenGenericLn("Case: Let's get some veggies.");
+        printGreenGenericLn("We'll go to the supermarket and get some final vegetables.");
+        printGreenGenericLn("We'll do this according to our shopping list.");
+        var vegetableToShopList = List.of("Tomatoes", "Potatoes", "Kale", "Lettuse", "1Kg Kidney Beans");
+        for (final var vegetable : vegetableToShopList) {
+            // This is not possible because var is marked as final
+            // vegetable = "wow";
+            printYellowGenericLn(vegetable);
+        }
+        for ( var vegetable : vegetableToShopList) {
+            vegetable += " with fungus";
+            printYellowGenericLn(vegetable);
+        }
+        printGreenGenericLn("We can use the word final in combination with var to mark it effectively final");
+        printGreenGenericLn("Vars are effectively final until they suffer some change.");
+        printGreenGenericLn("A final before, makes that change impossible.");
+        printGreenGenericLn("final, as a parameter, will not work becaue var isn't supposed to be used as a parameter type");
+        printGreenGenericLn("Simple reason that we must remember. var needs to know its types. As a parameter, there is no way it can know that.");
+    }
+
+    private static void exercise7() {
+        printBrightCyanGenericLn("--- 7. Base modules and the rest");
+        printRainbowLn("==");
+        printBlueGenericLn("Expected output:\n%s", "Cataplana dish is being served...\n" +
                 "cataplana.jar -> java.base\n" +
                 "   org.jesperancinha.console.consolerizer             -> java.io                                            java.base\n" +
                 "   org.jesperancinha.console.consolerizer             -> java.lang                                          java.base\n" +
@@ -59,7 +83,7 @@ public class Mastery3dot2Runner {
                 "   org.jesperancinha.console.consolerizer             -> java.util.stream                                   java.base\n" +
                 "   org.jesperancinha.ocp11.mastery3dot2               -> java.lang                                          java.base\n" +
                 "   org.jesperancinha.ocp11.mastery3dot2               -> org.jesperancinha.console.consolerizer             cataplana.jar");
-        printGreenGenericLn("Please check module %s for more info...","mastery-3-2-modularity");
+        printGreenGenericLn("Please check module %s for more info...", "mastery-3-2-modularity");
     }
 
     private static void exercise6() {
