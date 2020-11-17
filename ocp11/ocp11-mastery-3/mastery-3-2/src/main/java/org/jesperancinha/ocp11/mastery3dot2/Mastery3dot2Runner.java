@@ -6,16 +6,15 @@ import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Market;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.LinkedBlockingDeque;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -37,6 +36,7 @@ public class Mastery3dot2Runner {
         exercise3();
         exercise4();
         exercise5();
+        exercise6();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
@@ -45,13 +45,46 @@ public class Mastery3dot2Runner {
         printUnicornsLn(100);
     }
 
+    private static void exercise6() {
+        printBrightCyanGenericLn("--- 6. `Deque` and `offerLast`, and other methods.");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: There is a list of clients waiting and the fish seller is registering everything");
+        printGreenGenericLn("As we ask for the fish request, it goes to a Deque in order to be processed");
+        printGreenGenericLn("What can happen?");
+        var dequeQueue = new LinkedBlockingDeque<String>(5);
+        dequeQueue.add("500gg Sardines");
+        dequeQueue.add("1Kg Codfish");
+        dequeQueue.add("800g Swordfish");
+        dequeQueue.add("2Kg Octopus");
+        dequeQueue.add("10Kg Clams");
+        try {
+            dequeQueue.add("5Kg Cockles");
+        } catch (IllegalStateException e) {
+            printRedGenericLn("Note that capacity limit does not show in ArrayDeque, because ArrayDeque grow automatically -> %s", e);
+        }
+        boolean offer = dequeQueue.offer("4Kg Gambas");
+        printMagentaGenericLn("This Deque has now reached its limit of %d elemenst", dequeQueue.size());
+        printMagentaGenericLn("With offer, it's essentially giving an offer to the Deque. %s", offer);
+        boolean offer2 = dequeQueue.offerFirst("4Kg Shrimps");
+        printMagentaGenericLn("With offerFirst, It's the same. %s", offer2);
+        printMagentaGenericLn(offer2);
+        boolean offer3 = dequeQueue.offerLast("2Kg Oysters");
+        printMagentaGenericLn("With offerLast, It's also the same. %s", offer3);
+        printMagentaGenericLn(dequeQueue);
+        printGreenGenericLn("Deque is a collection");
+        printGreenGenericLn("It's a circular collection and there are lots of implementations.");
+        printGreenGenericLn("ArrayDeque -> Not Thread-Safe and automatically expands");
+        printGreenGenericLn("LinkedBlockingDeque -> Thread-Safe and fixed capacity");
+        printGreenGenericLn("Only on fixed capacity Deque's can we explore the full capacity of offer functions");
+    }
+
     private static void exercise5() {
         printBrightCyanGenericLn("--- 5. `final` in `try` with resources");
         printRainbowLn("==");
         printGreenGenericLn("Case: We wanted to cook codfish (Bacalhau).");
         printGreenGenericLn("But we made a mistake when creating the input stream!");
         printGreenGenericLn("I think we can't change this, but let's see what happens!");
-        try(var fis = Mastery3dot2Runner.class.getResourceAsStream("/castanhas.assadas.txt")){
+        try (var fis = Mastery3dot2Runner.class.getResourceAsStream("/castanhas.assadas.txt")) {
             // Unfortunately this is not possible!
             // variables created in a try clause are always immplicitly final
             // fis = Mastery3dot2Runner.class.getResourceAsStream("./bacalhau.assado.txt")
