@@ -12,9 +12,13 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.LinkedBlockingDeque;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
@@ -42,12 +46,34 @@ public class Mastery3dot2Runner {
         exercise7();
         exercise8();
         exercise9();
+        exercise10();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise10() {
+        printBrightCyanGenericLn("--- 10. local `DateFormat` and `Locale`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: What is the day of the City of Olhão and on which year did it occur?");
+        DateFormat dateTimeInstance = DateFormat.getDateTimeInstance();
+        Locale locale = new Locale.Builder().setLanguage("pt").build();
+        printYellowGenericLn(dateTimeInstance.format(new Date(-92, Calendar.JUNE,16)));
+        printYellowGenericLn(locale);
+        printGreenGenericLn("The point here is that Locale and DateFormat are independent.");
+        printGreenGenericLn("They can, however be bound together:");
+        for (int i = 0; i < 4; i++) {
+            DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(i,1, locale);
+            printYellowGenericLn("DateFormat.getDateTimeInstance(i,%d, locale) -> %s",i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE,16)));
+        }
+        for (int i = 0; i < 4; i++) {
+            DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(0,i, locale);
+            printYellowGenericLn("DateFormat.getDateTimeInstance(0,%d, locale) -> %s",i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE,16)));
+        }
+        printGreenGenericLn("We can change to different pre-defined styles");
     }
 
     private static void exercise9() {
@@ -63,7 +89,7 @@ public class Mastery3dot2Runner {
             printYellowGenericLn(raf.readLine());
             raf.writeUTF("I'm corrupting the recipe\n");
             raf.seek(filePointer);
-            String line = null;
+            String line;
             while ((line = raf.readLine()) != null) {
                 printYellowGenericLn(line);
             }
