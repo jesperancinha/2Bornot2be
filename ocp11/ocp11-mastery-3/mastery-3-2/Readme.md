@@ -42,19 +42,41 @@ we cannot find the most common material!
 Let's see how we register and then get the data.
 Construction constructor has been called! Market{marketId=null}Building{height=0.0, dimX=0.0, dimY=0.0}Construction{mainMaterial='bricks'}
 Building constructor has been called! Market{marketId=null}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-Market constructor has been called! Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-We register our data in Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-We register our data in Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-We register our data in Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+Market constructor has been called! Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
 Sending data to file system...
 Data Sent!
 Retrieving data from file system...
 Construction (no-args) constructor has been called! Market{marketId=null}Building{height=0.0, dimX=0.0, dimY=0.0}Construction{mainMaterial='null'}
-We read our data back from the file system and it is Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='null'}
+We read our data back from the file system and it is Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='null'}
 The takeout here, is that the non-serializable class, does not participate in the serializing process.
 Although its constructor is called, no instance members are set.
 The compiler needs the empty constructors only to know that the runtime can build these instances without parameters.
-The constructors themselves are not called.
+The constructors themselves are not called in the serializable instances.
+--- 2. Multi-dimensional arrays and ways to create them
+============
+Case: We are staying at a 5 star hotel in Olhão
+The hotel serves us a 2X2 portion of cooked oysters plate.
+It also serves 2X2 worldwide known raw oyster plate.
+The mussels come fresh uit the fisherman's net.
+We are buying them as they come along.
+Good for us, good for the fisherman's and good for the economy.
+In how many ways can we serve these plates?
+var cookedOysters1 = new String[][]{{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}}; -> [[CookedOyster,CookedOyster],[CookedOyster,CookedOyster]]
+final String[][] cookedOysters2 = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}}; -> [[CookedOyster,CookedOyster],[CookedOyster,CookedOyster]]
+final String[][] cookedOysters3 = new String[2][2]; -> [[CookedOyster,CookedOyster],[CookedOyster,CookedOyster]]
+final String[] cookedOysters4 [] = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+final String cookedOysters5 [][] = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+final String [][] rawOysters = new String[2][2];
+final String [] mussels [] = new String[2][];
+Big takeouts here for something seemingly simple:
+1. All arrays must have at least one dimension
+2. The first dimension MUST have a defined size upon initialization
+3. var needs to know its type. Therefore an array declared with var can only be created with new
+4. Different positions of a multidimensional array may have different array sizes in sub-dimensions
+6. The rectangular brackets my follow a C++ or a Java notation. In other workds, brackets can be declared just before or just after the variable name with no particular restrictions on how many in the left or the right side
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!
 Please keep coming back as I'll be creating more mastery modules.

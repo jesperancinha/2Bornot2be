@@ -12,6 +12,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -26,6 +27,51 @@ public class Mastery3dot2Runner {
 
         exercise1();
 
+        printBrightCyanGenericLn("--- 2. Multi-dimensional arrays and ways to create them");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We are staying at a 5 star hotel in Olhão");
+        printGreenGenericLn("The hotel serves us a 2X2 portion of cooked oysters plate.");
+        printGreenGenericLn("It also serves 2X2 worldwide known raw oyster plate.");
+        printGreenGenericLn("The mussels come fresh uit the fisherman's net.");
+        printGreenGenericLn("We are buying them as they come along.");
+        printGreenGenericLn("Good for us, good for the fisherman's and good for the economy.");
+        printGreenGenericLn("In how many ways can we serve these plates?");
+
+        var cookedOysters1 = new String[][]{{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+        final String[][] cookedOysters2 = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+        final String[][] cookedOysters3 = new String[2][2];
+        cookedOysters3[0][0] = "CookedOyster";
+        cookedOysters3[0][1] = "CookedOyster";
+        cookedOysters3[1][0] = "CookedOyster";
+        cookedOysters3[1][1] = "CookedOyster";
+        final String[] cookedOysters4 [] = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+        final String cookedOysters5 [][] = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+        final String [][] rawOysters = new String[2][2];
+        rawOysters[0][0] = "RawOyster";
+        rawOysters[0][1] = "RawOyster";
+        rawOysters[1][0] = "RawOyster";
+        rawOysters[1][1] = "RawOyster";
+        final String [] mussels [] = new String[2][];
+        mussels [0] = new String[2];
+        mussels [1] = new String[3];
+        mussels[0][0] = "CookedMussel";
+        mussels[0][1] = "CookedMussel";
+        mussels[1][0] = "CookedMussel";
+        mussels[1][1] = "CookedMussel";
+        mussels[1][2] = "CookedMussel";
+        printBlueGenericLn("var cookedOysters1 = new String[][]{{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}}; -> %s",cookedOysters1, "");
+        printBlueGenericLn("final String[][] cookedOysters2 = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}}; -> %s", cookedOysters2);
+        printBlueGenericLn("final String[][] cookedOysters3 = new String[2][2]; -> %s", cookedOysters3);
+        printBlueGenericLn("final String[] cookedOysters4 [] = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}};", cookedOysters4);
+        printBlueGenericLn("final String cookedOysters5 [][] = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}};", cookedOysters5);
+        printBlueGenericLn("final String [][] rawOysters = new String[2][2];", rawOysters);
+        printBlueGenericLn("final String [] mussels [] = new String[2][];", mussels);
+        printGreenGenericLn("Big takeouts here for something seemingly simple:");
+        printGreenGenericLn("1. All arrays must have at least one dimension");
+        printGreenGenericLn("2. The first dimension MUST have a defined size upon initialization");
+        printGreenGenericLn("3. var needs to know its type. Therefore an array declared with var can only be created with new");
+        printGreenGenericLn("4. Different positions of a multidimensional array may have different array sizes in sub-dimensions");
+        printGreenGenericLn("6. The rectangular brackets my follow a C++ or a Java notation. In other workds, brackets can be declared just before or just after the variable name with no particular restrictions on how many in the left or the right side");
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
@@ -64,6 +110,6 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("The takeout here, is that the non-serializable class, does not participate in the serializing process.");
         printGreenGenericLn("Although its constructor is called, no instance members are set.");
         printGreenGenericLn("The compiler needs the empty constructors only to know that the runtime can build these instances without parameters.");
-        printGreenGenericLn("The constructors themselves are not called.");
+        printGreenGenericLn("The constructors themselves are not called in the serializable instances.");
     }
 }

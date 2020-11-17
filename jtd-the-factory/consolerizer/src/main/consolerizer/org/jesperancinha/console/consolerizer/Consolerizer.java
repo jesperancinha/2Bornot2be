@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.lang.Thread.sleep;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
@@ -227,31 +228,41 @@ public class Consolerizer {
 
 
     private static void printPrivateText(String text, Object... vars) {
-
-        for (int i = 0; i < vars.length; i++) {
-            var variable = vars[i];
-            if (variable instanceof Exception) {
-                var e = (Exception) variable;
-                var stackTrace = e.getStackTrace();
-                var sb = new StringBuilder(e.getClass().getCanonicalName());
-                if (Objects.nonNull(e.getMessage())) {
-                    sb.append("\n\t");
-                    sb.append(e.getMessage());
+        if (vars instanceof String[][]) {
+            printPrivateText(text, typingWaitGlobal,
+                    new Object[]{processMultiArrays2((String[][]) vars)});
+        } else {
+            for (int i = 0; i < vars.length; i++) {
+                var variable = vars[i];
+                if (variable instanceof Exception) {
+                    var e = (Exception) variable;
+                    var stackTrace = e.getStackTrace();
+                    var sb = new StringBuilder(e.getClass().getCanonicalName());
+                    if (Objects.nonNull(e.getMessage())) {
+                        sb.append("\n\t");
+                        sb.append(e.getMessage());
+                    }
+                    Arrays.stream(stackTrace).forEach(stackTraceElement -> {
+                        sb.append("\n\t");
+                        sb.append(stackTraceElement.toString());
+                    });
+                    vars[i] = sb.toString();
+                } else if (variable instanceof String[][]) {
+                    vars[i] = processMultiArrays2((String[][]) vars[i]);
+                } else if (variable instanceof String[]) {
+                    vars[i] = "[".concat(String.join(",", (String[]) variable)).concat("]");
+                } else if (variable instanceof int[]) {
+                    vars[i] = "[".concat(IntStream.of((int[]) variable).mapToObj(Integer::toString).collect(Collectors.joining(",")).concat("]"));
                 }
-                Arrays.stream(stackTrace).forEach(stackTraceElement -> {
-                    sb.append("\n\t");
-                    sb.append(stackTraceElement.toString());
-                });
-                vars[i] = sb.toString();
             }
-            if (variable instanceof String[]) {
-                vars[i] = "[".concat(String.join(",", (String[]) variable)).concat("]");
-            }
-            if (variable instanceof int[]) {
-                vars[i] = "[".concat(IntStream.of((int[]) variable).mapToObj(Integer::toString).collect(Collectors.joining(",")).concat("]"));
-            }
+            printPrivateText(text, typingWaitGlobal, vars);
         }
-        printPrivateText(text, typingWaitGlobal, vars);
+    }
+
+    private static String processMultiArrays2(String[][] vars) {
+        return "[".concat(Arrays.stream(vars)
+                .flatMap(x -> Stream.of("[".concat(String.join(",", x)).concat("]")))
+                .collect(Collectors.joining(","))).concat("]");
     }
 
 
