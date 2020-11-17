@@ -42,15 +42,15 @@ we cannot find the most common material!
 Let's see how we register and then get the data.
 Construction constructor has been called! Market{marketId=null}Building{height=0.0, dimX=0.0, dimY=0.0}Construction{mainMaterial='bricks'}
 Building constructor has been called! Market{marketId=null}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-Market constructor has been called! Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-We register our data in Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-We register our data in Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
-We register our data in Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+Market constructor has been called! Market{marketId=169d442d-820e-49da-b208-f72f3924f38a}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=169d442d-820e-49da-b208-f72f3924f38a}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=169d442d-820e-49da-b208-f72f3924f38a}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=169d442d-820e-49da-b208-f72f3924f38a}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
 Sending data to file system...
 Data Sent!
 Retrieving data from file system...
 Construction (no-args) constructor has been called! Market{marketId=null}Building{height=0.0, dimX=0.0, dimY=0.0}Construction{mainMaterial='null'}
-We read our data back from the file system and it is Market{marketId=10a2e42d-1074-4159-aae4-16f5c6a1a203}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='null'}
+We read our data back from the file system and it is Market{marketId=169d442d-820e-49da-b208-f72f3924f38a}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='null'}
 The takeout here, is that the non-serializable class, does not participate in the serializing process.
 Although its constructor is called, no instance members are set.
 The compiler needs the empty constructors only to know that the runtime can build these instances without parameters.
@@ -77,6 +77,26 @@ Big takeouts here for something seemingly simple:
 3. var needs to know its type. Therefore an array declared with var can only be created with new
 4. Different positions of a multidimensional array may have different array sizes in sub-dimensions
 6. The rectangular brackets my follow a C++ or a Java notation. In other workds, brackets can be declared just before or just after the variable name with no particular restrictions on how many in the left or the right side
+--- 3. Sorting Immutable `List`'s
+============
+Case: We finally got the listings of the "Festival do Marisco 2019"
+We want to keep these listings safe, will anyone be able to change them?
+We are attempting to change a well established list.
+allArtists.sort(Artist::compare); -> This list is marked as immutable. We get this error: java.lang.UnsupportedOperationException
+	java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:71)
+	java.base/java.util.ImmutableCollections$AbstractImmutableList.sort(ImmutableCollections.java:110)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise3(Mastery3dot2Runner.java:56)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:34)
+Making a copy of immutable also doesn't work
+List.copyOf(allArtists).sort(Artist::compare); -> This list is marked as immutable. We get this error: java.lang.UnsupportedOperationException
+	java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:71)
+	java.base/java.util.ImmutableCollections$AbstractImmutableList.sort(ImmutableCollections.java:110)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise3(Mastery3dot2Runner.java:62)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:34)
+new ArrayList<>(allArtists).sort(Artist::compare); -> This is probably the only way to get a changed list and make modifications on it.
+We just create a new ArrayList from the immutable list in order to get a mutable list.
+Immutability principles are very common and traverse the whole JDK.
+When working with collections it is important to understand when to we get immutables and when do we get mutables
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!
 Please keep coming back as I'll be creating more mastery modules.
@@ -87,6 +107,8 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Festival do Marisco 2019](http://www.festivaldomarisco.com/artistas)
+-   [Portugese ‘ontdekking’ in onze keuken: chuchu](https://campersmuikjegaatlos.nl/portugese-ontdekking-in-onze-keuken-chuchu/)
 -   [Mercados De Olhão, E.E.M](https://www.visitalgarve.pt/pt/7353/mercados-de-olhao-eem.aspx)
 -   [Mercado de Olhao](https://www.tripadvisor.nl/Attraction_Review-g312714-d3923506-Reviews-Mercado_de_Olhao-Olhao_Faro_District_Algarve.html)
 -   [MUNICÍPIO - Espaços Municipais - Mercados Municipais - Olhão](http://www.cm-olhao.pt/pt/municipio/espacos-municipais/mercados-municipais)
