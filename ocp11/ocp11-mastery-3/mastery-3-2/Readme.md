@@ -33,8 +33,41 @@ All the while studying for Java 11.
 ## Output
 
 ```text
+================== Master Module mastery-3-2 ==================
+--- 1. Serialization and polymorphism
+============
+Case: We are taking info from the "Mercado de Olhão"
+When try to get the information from the registration website,
+we cannot find the most common material!
+Let's see how we register and then get the data.
+Construction constructor has been called! Market{marketId=null}Building{height=0.0, dimX=0.0, dimY=0.0}Construction{mainMaterial='bricks'}
+Building constructor has been called! Market{marketId=null}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+Market constructor has been called! Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+We register our data in Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='bricks'}
+Sending data to file system...
+Data Sent!
+Retrieving data from file system...
+Construction (no-args) constructor has been called! Market{marketId=null}Building{height=0.0, dimX=0.0, dimY=0.0}Construction{mainMaterial='null'}
+We read our data back from the file system and it is Market{marketId=8e6b084c-9c05-43f8-bcae-d626b3def8cd}Building{height=5.0, dimX=26.0, dimY=11.5}Construction{mainMaterial='null'}
+The takeout here, is that the non-serializable class, does not participate in the serializing process.
+Although its constructor is called, no instance members are set.
+The compiler needs the empty constructors only to know that the runtime can build these instances without parameters.
+The constructors themselves are not called.
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
+Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!
+Please keep coming back as I'll be creating more mastery modules.
+Thank you!
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
+
+Process finished with exit code 0
 ```
 ## References
+
+-   [Mercados De Olhão, E.E.M](https://www.visitalgarve.pt/pt/7353/mercados-de-olhao-eem.aspx)
+-   [Mercado de Olhao](https://www.tripadvisor.nl/Attraction_Review-g312714-d3923506-Reviews-Mercado_de_Olhao-Olhao_Faro_District_Algarve.html)
+-   [MUNICÍPIO - Espaços Municipais - Mercados Municipais - Olhão](http://www.cm-olhao.pt/pt/municipio/espacos-municipais/mercados-municipais)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=sfAE1ojKrPw">
