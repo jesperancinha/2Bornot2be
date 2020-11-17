@@ -6,9 +6,11 @@ import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Market;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
@@ -34,12 +36,30 @@ public class Mastery3dot2Runner {
         exercise2();
         exercise3();
         exercise4();
+        exercise5();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise5() {
+        printBrightCyanGenericLn("--- 5. `final` in `try` with resources");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We wanted to cook codfish (Bacalhau).");
+        printGreenGenericLn("But we made a mistake when creating the input stream!");
+        printGreenGenericLn("I think we can't change this, but let's see what happens!");
+        try(var fis = Mastery3dot2Runner.class.getResourceAsStream("/castanhas.assadas.txt")){
+            // Unfortunately this is not possible!
+            // variables created in a try clause are always immplicitly final
+            // fis = Mastery3dot2Runner.class.getResourceAsStream("./bacalhau.assado.txt")
+            printMagentaGenericLn(new String(fis.readAllBytes()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        printGreenGenericLn("A try clause always creates implicitly final variables");
     }
 
     private static void exercise4() {

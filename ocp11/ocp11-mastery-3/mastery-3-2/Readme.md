@@ -18,17 +18,16 @@ All the while studying for Java 11.
 8. A case for `final` `var` in a `for` loop
 9. `RandomAccessFile` and `writeUTF`
 10. local `DateFormat` and `Locale`
-11. Multidimensional arrays with `var`
-12. Package protected constructors
-13. `ExceptionInInitializerError`
-14. `thenComparing`
-15. `Consumer` in `for` loops
-16. `sorted`, `Comparable` and `ClassCastException`
-17. Serializing arrays and Lists
-18. `noneMatch` vs `anyMatch`
-19. `StringBuilder` and `setLength`
-20. `Supplier` and `get`
-21. `Files.copy` and symbolic links
+11. Package protected constructors
+12. `ExceptionInInitializerError`
+13. `thenComparing`
+14. `Consumer` in `for` loops
+15. `sorted`, `Comparable` and `ClassCastException`
+16. Serializing arrays and Lists
+17. `noneMatch` vs `anyMatch`
+18. `StringBuilder` and `setLength`
+19. `Supplier` and `get`
+20. `Files.copy` and symbolic links
 
 ## Output
 
@@ -107,6 +106,8 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Castanhas assadas no forno - SAPO - Lifestyle](https://lifestyle.sapo.pt/sabores/receitas/castanhas-assadas-no-forno)
+-   [Castanhas assadas e Feira de São Martinho prometem atrair milhares a Portimão](https://postal.pt/economia/2019-10-31-Castanhas-assadas-e-Feira-de-Sao-Martinho-prometem-atrair-milhares-a-Portimao)
 -   [Festival do Marisco 2019](http://www.festivaldomarisco.com/artistas)
 -   [Portugese ‘ontdekking’ in onze keuken: chuchu](https://campersmuikjegaatlos.nl/portugese-ontdekking-in-onze-keuken-chuchu/)
 -   [Mercados De Olhão, E.E.M](https://www.visitalgarve.pt/pt/7353/mercados-de-olhao-eem.aspx)
