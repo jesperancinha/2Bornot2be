@@ -236,8 +236,8 @@ public class Consolerizer {
         } else {
             for (int i = 0; i < vars.length; i++) {
                 var variable = vars[i];
-                if (variable instanceof Exception) {
-                    var e = (Exception) variable;
+                if (variable instanceof Exception || variable instanceof Error) {
+                    var e = (Throwable) variable;
                     var stackTrace = e.getStackTrace();
                     var sb = new StringBuilder(e.getClass().getCanonicalName());
                     if (Objects.nonNull(e.getMessage())) {
@@ -248,6 +248,21 @@ public class Consolerizer {
                         sb.append("\n\t");
                         sb.append(stackTraceElement.toString());
                     });
+                    if (variable instanceof Error) {
+                        Throwable cause = e.getCause();
+                        if(Objects.nonNull(cause)) {
+                            sb.append("\n");
+                            sb.append(cause.getClass().getCanonicalName());
+                            if (Objects.nonNull(cause.getMessage())) {
+                                sb.append("\n\t");
+                                sb.append(cause.getMessage());
+                            }
+                            Arrays.stream(cause.getStackTrace()).forEach(stackTraceElement -> {
+                                sb.append("\n\t");
+                                sb.append(stackTraceElement.toString());
+                            });
+                        }
+                    }
                     vars[i] = sb.toString();
                 } else if (variable instanceof String[][]) {
                     vars[i] = processMultiArrays2((String[][]) vars[i]);
@@ -387,7 +402,7 @@ public class Consolerizer {
         System.out.print("\n");
     }
 
-    public static String trim(String string){
+    public static String trim(String string) {
         return string.replaceAll("^[\n]+|[\n]+$", "");
     }
 }

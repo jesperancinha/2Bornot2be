@@ -116,6 +116,10 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Caranguejo - Wikipedia - PT](https://pt.wikipedia.org/wiki/Caranguejo)
+-   [Razor Clam](https://en.wikipedia.org/wiki/Razor_clam)
+-   [Solen marginatus](https://pt.wikipedia.org/wiki/Solen_marginatus)
+-   [Lingueirão à bulhão pato](https://pt.petitchef.com/receitas/entrada/lingueirao-a-bulhao-pato-fid-1547851)
 -   [Split a string to equal length substrings in Java](https://www.techiedelight.com/split-string-to-equal-length-substrings-java/)
 -   [Garoto (café)](https://pt.wikipedia.org/wiki/Garoto_(caf%C3%A9))
 -   [Galão (café)](https://pt.wikipedia.org/wiki/Gal%C3%A3o_(caf%C3%A9))

@@ -4,6 +4,8 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery3dot2.cafes.galao.Galao;
 import org.jesperancinha.ocp11.mastery3dot2.cafes.garoto.Garoto;
 import org.jesperancinha.ocp11.mastery3dot2.festival.Artist;
+import org.jesperancinha.ocp11.mastery3dot2.marisco.Caranguejo;
+import org.jesperancinha.ocp11.mastery3dot2.marisco.Lingueirao;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Market;
@@ -51,12 +53,47 @@ public class Mastery3dot2Runner {
         exercise9();
         exercise10();
         exercise11();
+        exercise12();
+
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise12() {
+        printBrightCyanGenericLn("--- 12. `ExceptionInInitializerError`");
+        printRainbowLn("==");
+        try {
+            new Lingueirao();
+        } catch (ExceptionInInitializerError e){
+            printRedGenericLn("Note we can't catch the Linguerão due to an Error coming from a static initialization -> %s", e);
+        }
+        try {
+            Lingueirao.fishLingueirao();
+        } catch (NoClassDefFoundError e){
+            printRedGenericLn("Notice that there is no class definition found. This makes sense. We actually have no class since initializing  has failed! -> %s", e);
+        }
+        printYellowGenericLn("Essentially Lingueirão has gone into the oblivion because of the bird. 🦅");
+        printYellowGenericLn("What about this Caranguejo? 🦀");
+        try {
+            new Caranguejo();
+        } catch (RuntimeException e){
+            printRedGenericLn("In this case, an exception is thrown during an instance initialization. The Exception is thrown as is -> %s", e);
+        }
+        try {
+            Caranguejo.fishCaranguejo();
+        } catch (RuntimeException e){
+            printRedGenericLn("The same when calling the fishing factory method -> %s", e);
+        }
+        printGreenGenericLn("Take-aways:");
+        printGreenGenericLn("1. Static initialization can fail, but don't stop a program from running.");
+        printGreenGenericLn("2. SI fail results in and initialization failure.");
+        printGreenGenericLn("3. SI failure results in the absence of a class definition.");
+        printGreenGenericLn("4. Instance initialization failure does not present any unusual behaviour.");
+        printGreenGenericLn("5. We can try/catch any throwable that compatible with the originating throwable.");
     }
 
     private static void exercise11() {
