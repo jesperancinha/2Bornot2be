@@ -9,6 +9,8 @@ import org.jesperancinha.ocp11.mastery3dot2.marisco.Lingueirao;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Market;
+import org.jesperancinha.ocp11.mastery3dot2.pesca.CrateSize;
+import org.jesperancinha.ocp11.mastery3dot2.pesca.Peixe;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,10 +22,13 @@ import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -54,7 +59,7 @@ public class Mastery3dot2Runner {
         exercise10();
         exercise11();
         exercise12();
-
+        exercise13();
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
@@ -63,29 +68,66 @@ public class Mastery3dot2Runner {
         printUnicornsLn(90);
     }
 
+    private static void exercise13() {
+        printBrightCyanGenericLn("--- 13. `thenComparing`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We receive a whole lot of fish by DocaPesca");
+        printGreenGenericLn("We have to tag all of them, sort them by size and then sort them by species.");
+        printGreenGenericLn("This is the ideal case to use the `thenCompare` method.");
+        var nFishes = 10;
+        var fishCommonNames = new String[]{
+                "Carapau", "Sardinha",
+                "Peixe Espada", "Robalo", "Xaputa", "Peixe Raia",
+                "Bezugo", "Dourada", "Atúm", "Bacalhau", "Xarroco"};
+        var allCatch = IntStream
+                .range(0, nFishes)
+                .mapToObj(i -> new Peixe(fishCommonNames[(int) (Math.random() * fishCommonNames.length)], (int) (Math.random() * 30)))
+                .collect(Collectors.toList());
+        printYellowGenericLn("These are all our catches: %s\nLet's organize them!", allCatch);
+        Comparator<Peixe> comparator = Comparator.comparing(o -> o.commonName);
+        Comparator<Peixe> peixeComparator = comparator.thenComparing(o -> o.size);
+        var organizedCatch = allCatch
+                .stream().sorted(peixeComparator).collect(Collectors.toList());
+        printYellowGenericLn("This is our organized catch -> %s", organizedCatch);
+        printMagentaGenericLn("Finally we can put our fishes in the matching boxes in a mutch faster way!.");
+        organizedCatch.forEach(peixe -> {
+            CrateSize[] values = CrateSize.values();
+            for (CrateSize crateSize : values) {
+                if (peixe.size >= crateSize.getMin() && peixe.size < crateSize.getMax()) {
+                    peixe.crateSize = crateSize;
+                    break;
+                }
+            }
+        });
+        printMagentaGenericLn(organizedCatch);
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. thenCompare works cumulatively");
+        printGreenGenericLn("2. thenCompare sections each comparison in separate groups");
+    }
+
     private static void exercise12() {
         printBrightCyanGenericLn("--- 12. `ExceptionInInitializerError`");
         printRainbowLn("==");
         try {
             new Lingueirao();
-        } catch (ExceptionInInitializerError e){
+        } catch (ExceptionInInitializerError e) {
             printRedGenericLn("Note we can't catch the Linguerão due to an Error coming from a static initialization -> %s", e);
         }
         try {
             Lingueirao.fishLingueirao();
-        } catch (NoClassDefFoundError e){
+        } catch (NoClassDefFoundError e) {
             printRedGenericLn("Notice that there is no class definition found. This makes sense. We actually have no class since initializing  has failed! -> %s", e);
         }
         printYellowGenericLn("Essentially Lingueirão has gone into the oblivion because of the bird. 🦅");
         printYellowGenericLn("What about this Caranguejo? 🦀");
         try {
             new Caranguejo();
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             printRedGenericLn("In this case, an exception is thrown during an instance initialization. The Exception is thrown as is -> %s", e);
         }
         try {
             Caranguejo.fishCaranguejo();
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             printRedGenericLn("The same when calling the fishing factory method -> %s", e);
         }
         printGreenGenericLn("Take-aways:");
