@@ -1,8 +1,9 @@
 package org.jesperancinha.ocp11.mastery3dot2.pesca;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Peixe implements Catch{
+public class Peixe implements Catch, Serializable {
     public final String commonName;
 
     public final double size;

@@ -13,8 +13,10 @@ import org.jesperancinha.ocp11.mastery3dot2.pesca.Catch;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.CrateSize;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.Isca;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.Peixe;
+import org.jesperancinha.ocp11.mastery3dot2.pesca.Pesca;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -50,21 +52,64 @@ public class Mastery3dot2Runner {
 
         printBlueGenericLn("================== Master Module mastery-3-2 ==================");
 
-        exercise1();
-        exercise2();
-        exercise3();
-        exercise4();
-        exercise5();
-        exercise6();
-        exercise7();
-        exercise8();
-        exercise9();
-        exercise10();
-        exercise11();
-        exercise12();
-        exercise13();
-        exercise14();
-        exercise15();
+//        exercise1();
+//        exercise2();
+//        exercise3();
+//        exercise4();
+//        exercise5();
+//        exercise6();
+//        exercise7();
+//        exercise8();
+//        exercise9();
+//        exercise10();
+//        exercise11();
+//        exercise12();
+//        exercise13();
+//        exercise14();
+//        exercise15();
+
+        printBrightCyanGenericLn("--- 16. Serializing arrays and Lists");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Sometimes we register a fish catch in a List.");
+        printGreenGenericLn("Other times we register this info in an array");
+        printGreenGenericLn("Do we know how serialize this data so that the fisher knows how too find the records of their catch?");
+        var fishCatch = createRandomFishList(2);
+        var fishArray = fishCatch.toArray(new Peixe[0]);
+        var pesca = new Pesca(fishCatch, fishArray);
+        printBlueGenericLn("The fisher catches %s", pesca);
+        try(final var fos = new FileOutputStream("/tmp/fishersCatch.obj")) {
+            var oos = new ObjectOutputStream(fos);
+            oos.writeObject(pesca);
+        } catch (IOException e) {
+           printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
+           System.exit(1);
+        }
+        try(var fis = new FileInputStream("/tmp/fishersCatch.obj")){
+            var ois = new ObjectInputStream(fis);
+            Pesca o = (Pesca) ois.readObject();
+            printMagentaGenericLn("We got the data! And the fisher catched %s",  o);
+
+        } catch (IOException | ClassNotFoundException e){
+            printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
+            System.exit(1);
+        }
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. We don't need a serialVersionUID. It can work without it");
+        printGreenGenericLn("2. However not strictly necessary, a serialVersionUID identifies the version of the object");
+        printGreenGenericLn("3. All serialized objects need to be serializable");
+        printGreenGenericLn("4. This also includes all elements of the array or of a list");
+        printGreenGenericLn("5. The `transient` keyword makes sure that elements aren't going to be serializable.");
+        printGreenGenericLn("6. This would happen for non serializable members with no transient -> java.io.NotSerializableException\n" +
+                "\torg.jesperancinha.ocp11.mastery3dot2.pesca.Isca\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1379)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1175)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)\n" +
+                "\tjava.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)\n" +
+                "\torg.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:82).");
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
@@ -76,7 +121,7 @@ public class Mastery3dot2Runner {
     private static void exercise15() {
         printBrightCyanGenericLn("--- 15. `sorted`, `Comparable` and `ClassCastException`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: During the sorting of the fish bait, one fisherman dropped some real fishes");
+        printGreenGenericLn("Case: During the sorting of the fish bait, one fisher dropped some real fishes");
         printGreenGenericLn("Now we are going to organize this. Will this work?");
         printGreenGenericLn("First we organize the current baits");
         var nBaits = 5;
@@ -92,7 +137,7 @@ public class Mastery3dot2Runner {
                     .stream().sorted().collect(Collectors.toList());
         } catch (ClassCastException e) {
             printRedGenericLn("As we expected, we cannot run a default comparator if it is not defined in the objects of a list");
-            printRedGenericLn("The fisherman has to wash all of their baits -> %s", e);
+            printRedGenericLn("The fisher has to wash all of their baits -> %s", e);
         }
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. We can provide a comparator to the sorted intermediate operation of sorted");
@@ -433,9 +478,9 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("Case: We are staying at a 5 star hotel in Olhão");
         printGreenGenericLn("The hotel serves us a 2X2 portion of cooked oysters plate.");
         printGreenGenericLn("It also serves 2X2 worldwide known raw oyster plate.");
-        printGreenGenericLn("The mussels come fresh uit the fisherman's net.");
+        printGreenGenericLn("The mussels come fresh uit the fisher's net.");
         printGreenGenericLn("We are buying them as they come along.");
-        printGreenGenericLn("Good for us, good for the fisherman's and good for the economy.");
+        printGreenGenericLn("Good for us, good for the fisher's and good for the economy.");
         printGreenGenericLn("In how many ways can we serve these plates?");
 
         var cookedOysters1 = new String[][]{{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
