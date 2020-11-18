@@ -9,7 +9,9 @@ import org.jesperancinha.ocp11.mastery3dot2.marisco.Lingueirao;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Market;
+import org.jesperancinha.ocp11.mastery3dot2.pesca.Catch;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.CrateSize;
+import org.jesperancinha.ocp11.mastery3dot2.pesca.Isca;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.Peixe;
 
 import java.io.FileInputStream;
@@ -62,12 +64,41 @@ public class Mastery3dot2Runner {
         exercise12();
         exercise13();
         exercise14();
+        exercise15();
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise15() {
+        printBrightCyanGenericLn("--- 15. `sorted`, `Comparable` and `ClassCastException`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: During the sorting of the fish bait, one fisherman dropped some real fishes");
+        printGreenGenericLn("Now we are going to organize this. Will this work?");
+        printGreenGenericLn("First we organize the current baits");
+        var nBaits = 5;
+        var allBaits = createBaitFishList(nBaits);
+        var organizedBaits = allBaits
+                .stream().sorted().collect(Collectors.toList());
+        printMagentaGenericLn("We get -> %s ", organizedBaits);
+        var allBaitObjects = new ArrayList<Catch>(organizedBaits);
+        var oneFish = createRandomFishList(1);
+        allBaitObjects.addAll(oneFish);
+        try {
+            var reOrganizedBaits = allBaitObjects
+                    .stream().sorted().collect(Collectors.toList());
+        } catch (ClassCastException e) {
+            printRedGenericLn("As we expected, we cannot run a default comparator if it is not defined in the objects of a list");
+            printRedGenericLn("The fisherman has to wash all of their baits -> %s", e);
+        }
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. We can provide a comparator to the sorted intermediate operation of sorted");
+        printGreenGenericLn("2. Alternatively we can use Comparable in the type definition itself");
+        printGreenGenericLn("3. All objects need to be Comparable, if we want sorted without parameters to work");
+        printGreenGenericLn("4. During a sorted operation, without parameters, there will be a ClassClassException thrown, if at least one element is not Comparable");
     }
 
     private static void exercise14() {
@@ -120,6 +151,17 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. thenCompare works cumulatively");
         printGreenGenericLn("2. thenCompare sections each comparison in separate groups");
+    }
+
+    private static List<Isca> createBaitFishList(int nFishes) {
+        var fishCommonNames = new String[]{
+                "Carapau", "Sardinha",
+                "Peixe Espada", "Robalo", "Xaputa", "Peixe Raia",
+                "Bezugo", "Dourada", "Atúm", "Bacalhau", "Xarroco"};
+        return IntStream
+                .range(0, nFishes)
+                .mapToObj(i -> new Isca(fishCommonNames[(int) (Math.random() * fishCommonNames.length)], (int) (Math.random() * 30)))
+                .collect(Collectors.toList());
     }
 
     private static List<Peixe> createRandomFishList(int nFishes) {
