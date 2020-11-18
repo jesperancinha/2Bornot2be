@@ -116,6 +116,7 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Bird watching in Ria Formosa - Quinta de Marim - Olhão](http://birdwatching.spea.pt/en/where-to-watch/ria-formosa/)
 -   [DocaPesca - Olhão](http://www.docapesca.pt/pt/rede-lotas-e-postos-vendagem/item/olhao.html)
 -   [Caranguejo - Wikipedia - PT](https://pt.wikipedia.org/wiki/Caranguejo)
 -   [Razor Clam](https://en.wikipedia.org/wiki/Razor_clam)

@@ -16,7 +16,6 @@ import org.jesperancinha.ocp11.mastery3dot2.pesca.Peixe;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.Pesca;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -68,12 +67,36 @@ public class Mastery3dot2Runner {
         exercise14();
         exercise15();
         exercise16();
+        exercise17();
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise17() {
+        printBrightCyanGenericLn("--- 17. `noneMatch` vs `anyMatch`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We are now in `Quinta de Marim` in Olhão.");
+        printGreenGenericLn("We are birdwatching and trying to distinguish the bird species");
+        printGreenGenericLn("How can we match them?");
+        var allBirdsSeen = List.of(
+                "Purple Swamphen", "Little Bittern",
+                "Purple Heron", "Collared Pratincole",
+                "Audouin’s Gull", "Greater Flamingo");
+        printMagentaGenericLn("We see all of these birds-> %s", allBirdsSeen);
+        printMagentaGenericLn("Did we see any `Eurasian Spoonbill`? -> %s",
+                allBirdsSeen.stream().anyMatch("Eurasian Spoonbill"::equals));
+        printMagentaGenericLn("So none of them matched right? -> %s",
+                allBirdsSeen.stream().noneMatch("Eurasian Spoonbill"::equals));
+        printMagentaGenericLn("How about the `Little Bittern`? -> %s",
+                allBirdsSeen.stream().anyMatch("Little Bittern"::equals));
+        printMagentaGenericLn("Do all of them match this? -> %s",
+                allBirdsSeen.stream().allMatch("Little Bittern"::equals));
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. allMatch, noneMatch, anyMatch and in general Match operations, return a boolean");
     }
 
     private static void exercise16() {
@@ -86,19 +109,19 @@ public class Mastery3dot2Runner {
         var fishArray = fishCatch.toArray(new Peixe[0]);
         var pesca = new Pesca(fishCatch, fishArray);
         printBlueGenericLn("The fisher catches %s", pesca);
-        try(final var fos = new FileOutputStream("/tmp/fishersCatch.obj")) {
+        try (final var fos = new FileOutputStream("/tmp/fishersCatch.obj")) {
             var oos = new ObjectOutputStream(fos);
             oos.writeObject(pesca);
         } catch (IOException e) {
-           printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
-           System.exit(1);
+            printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
+            System.exit(1);
         }
-        try(var fis = new FileInputStream("/tmp/fishersCatch.obj")){
+        try (var fis = new FileInputStream("/tmp/fishersCatch.obj")) {
             var ois = new ObjectInputStream(fis);
             Pesca o = (Pesca) ois.readObject();
-            printMagentaGenericLn("We got the data! And the fisher catched %s",  o);
+            printMagentaGenericLn("We got the data! And the fisher catched %s", o);
 
-        } catch (IOException | ClassNotFoundException e){
+        } catch (IOException | ClassNotFoundException e) {
             printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
             System.exit(1);
         }
