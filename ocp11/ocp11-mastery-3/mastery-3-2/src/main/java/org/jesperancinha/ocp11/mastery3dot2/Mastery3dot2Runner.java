@@ -68,12 +68,34 @@ public class Mastery3dot2Runner {
         exercise15();
         exercise16();
         exercise17();
+        exercise18();
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise18() {
+        printBrightCyanGenericLn("--- 18. `StringBuilder` and `setLength`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: During a bird-watch, we see a species called: `Slender-billed Gull`");
+        printGreenGenericLn("In our report however, we can only put a word with 7 characters.");
+        printGreenGenericLn("We might be able to save this situation by using setLength");
+        final StringBuilder sb = new StringBuilder("Slender-billed Gull");
+        printMagentaGenericLn("This is our current word -> %s ", sb);
+        sb.setLength(7);
+        printMagentaGenericLn("This is our changed word -> %s ", sb);
+        sb.append("-billed Gull");
+        printMagentaGenericLn("But hey, now we can put way more characters and now we reinstate the rest -> %s ", sb);
+        sb.setLength(30);
+        printMagentaGenericLn("And we can also make this a bigger string -> %s ", sb);
+        sb.append(".");
+        printMagentaGenericLn("If the size is changed to more than what already is, the actual word doesn't change size -> %s ", sb);
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. setLength can decrease a String size inside StrinbBuilder");
+        printGreenGenericLn("2. setLength can may increase the size of the String, but nothing happnes if it surpasses original size");
     }
 
     private static void exercise17() {
