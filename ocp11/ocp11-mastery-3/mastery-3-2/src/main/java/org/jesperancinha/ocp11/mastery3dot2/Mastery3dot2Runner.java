@@ -52,22 +52,31 @@ public class Mastery3dot2Runner {
 
         printBlueGenericLn("================== Master Module mastery-3-2 ==================");
 
-//        exercise1();
-//        exercise2();
-//        exercise3();
-//        exercise4();
-//        exercise5();
-//        exercise6();
-//        exercise7();
-//        exercise8();
-//        exercise9();
-//        exercise10();
-//        exercise11();
-//        exercise12();
-//        exercise13();
-//        exercise14();
-//        exercise15();
+        exercise1();
+        exercise2();
+        exercise3();
+        exercise4();
+        exercise5();
+        exercise6();
+        exercise7();
+        exercise8();
+        exercise9();
+        exercise10();
+        exercise11();
+        exercise12();
+        exercise13();
+        exercise14();
+        exercise15();
+        exercise16();
 
+        printUnicornsLn(90);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(90);
+    }
+
+    private static void exercise16() {
         printBrightCyanGenericLn("--- 16. Serializing arrays and Lists");
         printRainbowLn("==");
         printGreenGenericLn("Case: Sometimes we register a fish catch in a List.");
@@ -110,12 +119,6 @@ public class Mastery3dot2Runner {
                 "\tjava.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)\n" +
                 "\tjava.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)\n" +
                 "\torg.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:82).");
-
-        printUnicornsLn(90);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(90);
     }
 
     private static void exercise15() {
