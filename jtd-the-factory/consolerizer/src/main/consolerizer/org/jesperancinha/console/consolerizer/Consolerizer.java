@@ -15,11 +15,13 @@ import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 public class Consolerizer {
 
     private final static int TYPING_DEFAULT_MS = 10;
+    private final static int MAX_LINE_CHARS = 0;
     private final static ConColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
 
     private int typingWait;
 
     public static int typingWaitGlobal = TYPING_DEFAULT_MS;
+    public static int maxLineCharsGlobal = MAX_LINE_CHARS;
 
     private ConColor conColor = CON_COLOR_DEFAULT;
 
@@ -85,7 +87,7 @@ public class Consolerizer {
     }
 
     public static void printGreenGenericLn(Object text) {
-        printGreenGeneric(("" + text).trim().concat("\n"));
+        printGreenGeneric(trim(("" + text)).concat("\n"));
     }
 
     public static void printGreenGeneric(Object text) {
@@ -223,13 +225,13 @@ public class Consolerizer {
     }
 
     private static void printPrivateText(String text) {
-        printPrivateText(text, typingWaitGlobal);
+        printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal);
     }
 
 
     private static void printPrivateText(String text, Object... vars) {
         if (vars instanceof String[][]) {
-            printPrivateText(text, typingWaitGlobal,
+            printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal,
                     new Object[]{processMultiArrays2((String[][]) vars)});
         } else {
             for (int i = 0; i < vars.length; i++) {
@@ -255,7 +257,7 @@ public class Consolerizer {
                     vars[i] = "[".concat(IntStream.of((int[]) variable).mapToObj(Integer::toString).collect(Collectors.joining(",")).concat("]"));
                 }
             }
-            printPrivateText(text, typingWaitGlobal, vars);
+            printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal, vars);
         }
     }
 
@@ -266,8 +268,13 @@ public class Consolerizer {
     }
 
 
-    private static void printPrivateText(String text, int typingWait) {
-        for (int i = 0; i < text.length(); i++) {
+    private static void printPrivateText(String text, int typingWait, int maxLineChars) {
+        var printText = text;
+        if (maxLineChars > 0) {
+            printText = getParagraphFormat(maxLineChars, printText);
+        }
+
+        for (int i = 0; i < printText.length(); i++) {
             if (typingWait > 0) {
                 try {
                     sleep(typingWait);
@@ -275,16 +282,36 @@ public class Consolerizer {
                     e.printStackTrace();
                 }
             }
-            System.out.print(text.charAt(i));
+            System.out.print(printText.charAt(i));
         }
         if (!text.contains("\n")) {
             System.out.print(" ");
         }
     }
 
-    private static void printPrivateText(String text, int typingWait, final Object... vars) {
+    private static String getParagraphFormat(int maxLineChars, String printText) {
+        return Arrays.stream(printText
+                .split("\n"))
+                .map(paragraph -> Arrays
+                        .stream(
+                                getSplit(maxLineChars, paragraph))
+                        .map(Consolerizer::trim)
+                        .collect(Collectors
+                                .joining("\n"))
+                )
+                .collect(Collectors.joining("\n"))
+                .concat("\n");
+
+    }
+
+    private static void printPrivateText(String text, int typingWait, int maxLineChars, final Object... vars) {
         var newText = String.format(text, vars);
-        for (int i = 0; i < newText.length(); i++) {
+        var printText = newText;
+        if (maxLineChars > 0) {
+            printText = getParagraphFormat(maxLineChars, printText);
+        }
+
+        for (int i = 0; i < printText.length(); i++) {
             if (typingWait > 0) {
                 try {
                     sleep(typingWait);
@@ -292,11 +319,24 @@ public class Consolerizer {
                     e.printStackTrace();
                 }
             }
-            System.out.print(newText.charAt(i));
+            System.out.print(printText.charAt(i));
         }
         if (!text.contains("\n")) {
             System.out.print(" ");
         }
+    }
+
+    private static String[] getSplit(int maxLineChars, String printText) {
+        String[] split = trim(printText).split("(?<=\\G.{" + maxLineChars + "})");
+        if (split.length > 1 && split[1].length() > maxLineChars) {
+            String[] newSplit = getSplit(maxLineChars, split[1]);
+            int newLength = newSplit.length + 1;
+            String[] newStrings = new String[newLength];
+            newStrings[0] = trim(split[0]);
+            System.arraycopy(newSplit, 0, newStrings, 1, newSplit.length);
+            return newStrings;
+        }
+        return split;
     }
 
     public static void printRainbowTitleLn(final String title) {
@@ -345,5 +385,9 @@ public class Consolerizer {
 
     public static void printNewLine() {
         System.out.print("\n");
+    }
+
+    public static String trim(String string){
+        return string.replaceAll("^[\n]+|[\n]+$", "");
     }
 }

@@ -116,6 +116,10 @@ Process finished with exit code 0
 ```
 ## References
 
+-   [Split a string to equal length substrings in Java](https://www.techiedelight.com/split-string-to-equal-length-substrings-java/)
+-   [Garoto (café)](https://pt.wikipedia.org/wiki/Garoto_(caf%C3%A9))
+-   [Galão (café)](https://pt.wikipedia.org/wiki/Gal%C3%A3o_(caf%C3%A9))
+-   [Koffiecultuur in Portugal](https://zininportugal.com/2015/05/17/koffie-wordt-het-een-bica-meia-de-leite-direita-americano-abatanado-galao-of-garoto/)
 -   [Olhão](https://pt.wikipedia.org/wiki/Olh%C3%A3o)
 -   [BACALHAU À BRÁS RECEPT](https://salinto.nl/blog/bacalhau-a-bras-recept/)
 -   [Saudades de Portugal - Recept Bacalhau à Brás](https://saudadesdeportugal.nl/bacalhau-a-bras/)

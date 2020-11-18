@@ -9,7 +9,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGen
 
 public class Market extends Building implements Serializable {
 
-    private UUID marketId = UUID.randomUUID();
+    private final UUID marketId = UUID.randomUUID();
 
     public Market(float height, float dimX, float dimY, String mainMaterial) {
         super(height, dimX, dimY, mainMaterial);

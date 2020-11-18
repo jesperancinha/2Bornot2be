@@ -1,6 +1,8 @@
 package org.jesperancinha.ocp11.mastery3dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery3dot2.cafes.galao.Galao;
+import org.jesperancinha.ocp11.mastery3dot2.cafes.garoto.Garoto;
 import org.jesperancinha.ocp11.mastery3dot2.festival.Artist;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
@@ -34,6 +36,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 public class Mastery3dot2Runner {
     public static void main(String[] args) {
         Consolerizer.typingWaitGlobal = 0;
+        Consolerizer.maxLineCharsGlobal = 150;
 
         printBlueGenericLn("================== Master Module mastery-3-2 ==================");
 
@@ -47,12 +50,33 @@ public class Mastery3dot2Runner {
         exercise8();
         exercise9();
         exercise10();
+        exercise11();
 
-        printUnicornsLn(100);
+        printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
+        printUnicornsLn(90);
+    }
+
+    private static void exercise11() {
+        printBrightCyanGenericLn("--- 11. Package protected constructors");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We are ordering a coffee in Olhão.");
+        printGreenGenericLn("In good portuguese tradition we ask for a short coffee by calling it one \"garoto\".");
+        printGreenGenericLn("If we want our coffee to be served in a tall glass cup with lots of milk on it, we call it one \"galão'\".");
+        printGreenGenericLn("In our case we will try to order one \"Galão\" that is also a \"Garoto\".");
+        printGreenGenericLn("Can we do it?");
+        var garoto = Garoto.create();
+        printMagentaGenericLn("For a starters we can create one %s", garoto);
+        var galao = Galao.create();
+        printMagentaGenericLn("We can also create one create one %s", galao);
+        printGreenGenericLn("The point here is that if classes have package protected constructors, and belong to different packages, they can never be sub-classes of eacht other");
+        printGreenGenericLn("This makes this:");
+        printGreenGenericLn("        var garoto =new Garoto();");
+        printGreenGenericLn("and this:");
+        printGreenGenericLn("        var galao = new Galao();");
+        printGreenGenericLn("an unaccomplishable possibility.");
     }
 
     private static void exercise10() {
@@ -61,17 +85,17 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("Case: What is the day of the City of Olhão and on which year did it occur?");
         DateFormat dateTimeInstance = DateFormat.getDateTimeInstance();
         Locale locale = new Locale.Builder().setLanguage("pt").build();
-        printYellowGenericLn(dateTimeInstance.format(new Date(-92, Calendar.JUNE,16)));
+        printYellowGenericLn(dateTimeInstance.format(new Date(-92, Calendar.JUNE, 16)));
         printYellowGenericLn(locale);
         printGreenGenericLn("The point here is that Locale and DateFormat are independent.");
         printGreenGenericLn("They can, however be bound together:");
         for (int i = 0; i < 4; i++) {
-            DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(i,1, locale);
-            printYellowGenericLn("DateFormat.getDateTimeInstance(i,%d, locale) -> %s",i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE,16)));
+            DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(i, 1, locale);
+            printYellowGenericLn("DateFormat.getDateTimeInstance(i,%d, locale) -> %s", i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE, 16)));
         }
         for (int i = 0; i < 4; i++) {
-            DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(0,i, locale);
-            printYellowGenericLn("DateFormat.getDateTimeInstance(0,%d, locale) -> %s",i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE,16)));
+            DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(0, i, locale);
+            printYellowGenericLn("DateFormat.getDateTimeInstance(0,%d, locale) -> %s", i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE, 16)));
         }
         printGreenGenericLn("We can change to different pre-defined styles");
     }
@@ -203,15 +227,15 @@ public class Mastery3dot2Runner {
         var construction = new Construction("Cement");
         var building = new Building(5f, 26f, 11.5f, "bricks");
         var market = new Market(5f, 26f, 11.5f, "bricks");
-        construction.getInfo();
-        building.getInfo();
-        market.getInfo();
+        Construction.getInfo();
+        Building.getInfo();
+        Market.getInfo();
         printYellowGenericLn(construction.getCurrentInfo());
         printYellowGenericLn(((Construction) building).getCurrentInfo());
         printYellowGenericLn(((Construction) market).getCurrentInfo());
-        ((Construction) construction).getInfo();
-        ((Construction) building).getInfo();
-        ((Construction) market).getInfo();
+        Construction.getInfo();
+        Construction.getInfo();
+        Construction.getInfo();
         printGreenGenericLn("Important takes from this exercise:");
         printGreenGenericLn("1. static methods are not really overriden. They are however shadowed by another");
         printGreenGenericLn("2. by upcasting, we can call other static  methods");
@@ -272,14 +296,14 @@ public class Mastery3dot2Runner {
         cookedOysters3[0][1] = "CookedOyster";
         cookedOysters3[1][0] = "CookedOyster";
         cookedOysters3[1][1] = "CookedOyster";
-        final String[] cookedOysters4[] = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
-        final String cookedOysters5[][] = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+        final String[][] cookedOysters4 = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
+        final String[][] cookedOysters5 = {{"CookedOyster", "CookedOyster"}, {"CookedOyster", "CookedOyster"}};
         final String[][] rawOysters = new String[2][2];
         rawOysters[0][0] = "RawOyster";
         rawOysters[0][1] = "RawOyster";
         rawOysters[1][0] = "RawOyster";
         rawOysters[1][1] = "RawOyster";
-        final String[] mussels[] = new String[2][];
+        final String[][] mussels = new String[2][];
         mussels[0] = new String[2];
         mussels[1] = new String[3];
         mussels[0][0] = "CookedMussel";
