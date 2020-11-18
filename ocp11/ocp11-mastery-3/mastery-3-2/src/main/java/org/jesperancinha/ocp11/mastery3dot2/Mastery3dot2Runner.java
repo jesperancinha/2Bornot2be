@@ -27,6 +27,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -60,12 +61,35 @@ public class Mastery3dot2Runner {
         exercise11();
         exercise12();
         exercise13();
+        exercise14();
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise14() {
+        printBrightCyanGenericLn("--- 14. `Consumer` in `for` loops");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: A bunch of cats is eating left over fish from the fishermen");
+        var nFishes = 5;
+        var allCatch = createRandomFishList(nFishes);
+        final Consumer<Peixe> cat = peixe -> printOrangeGenericLn("Cat eats %s", peixe);
+        var varCat = new Consumer<Peixe>() {
+            @Override
+            public void accept(Peixe peixe) {
+                printOrangeGenericLn("Var Cat eats %s", peixe);
+            }
+        };
+        allCatch.forEach(cat);
+        allCatch.forEach(varCat);
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. For loops use consumers");
+        printGreenGenericLn("2. Consumer receive parameters and consume them. No value is returned");
+        printGreenGenericLn("3. var declared consumers need to specify type (of course)");
+        printGreenGenericLn("4. traditionally declared consumers can use diamond notation and lambdas");
     }
 
     private static void exercise13() {
@@ -75,14 +99,7 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("We have to tag all of them, sort them by size and then sort them by species.");
         printGreenGenericLn("This is the ideal case to use the `thenCompare` method.");
         var nFishes = 10;
-        var fishCommonNames = new String[]{
-                "Carapau", "Sardinha",
-                "Peixe Espada", "Robalo", "Xaputa", "Peixe Raia",
-                "Bezugo", "Dourada", "Atúm", "Bacalhau", "Xarroco"};
-        var allCatch = IntStream
-                .range(0, nFishes)
-                .mapToObj(i -> new Peixe(fishCommonNames[(int) (Math.random() * fishCommonNames.length)], (int) (Math.random() * 30)))
-                .collect(Collectors.toList());
+        var allCatch = createRandomFishList(nFishes);
         printYellowGenericLn("These are all our catches: %s\nLet's organize them!", allCatch);
         Comparator<Peixe> comparator = Comparator.comparing(o -> o.commonName);
         Comparator<Peixe> peixeComparator = comparator.thenComparing(o -> o.size);
@@ -103,6 +120,17 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. thenCompare works cumulatively");
         printGreenGenericLn("2. thenCompare sections each comparison in separate groups");
+    }
+
+    private static List<Peixe> createRandomFishList(int nFishes) {
+        var fishCommonNames = new String[]{
+                "Carapau", "Sardinha",
+                "Peixe Espada", "Robalo", "Xaputa", "Peixe Raia",
+                "Bezugo", "Dourada", "Atúm", "Bacalhau", "Xarroco"};
+        return IntStream
+                .range(0, nFishes)
+                .mapToObj(i -> new Peixe(fishCommonNames[(int) (Math.random() * fishCommonNames.length)], (int) (Math.random() * 30)))
+                .collect(Collectors.toList());
     }
 
     private static void exercise12() {
