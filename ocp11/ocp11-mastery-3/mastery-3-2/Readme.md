@@ -262,6 +262,234 @@ DateFormat.getDateTimeInstance(0,3, locale) -> quinta-feira, 16 de junho de 1808
 We can change to different pre-defined styles
 ````
 
+```text
+--- 11. Package protected constructors
+============
+Case: We are ordering a coffee in Olhão.
+In good portuguese tradition we ask for a short coffee by calling it one "garoto".
+If we want our coffee to be served in a tall glass cup with lots of milk on it, we call it one "galão'".
+In our case we will try to order one "Galão" that is also a "Garoto".
+Can we do it?
+Garoto is served!
+For a starters we can create one Garoto{definition='https://pt.wikipedia.org/wiki/Garoto_(caf%C3%A9)
+Garoto é uma bebida à base de café, muito comum em cafeterias portuguesas. Trata-se de uma combinação de uma dose de café forte com uma pequena quanti
+dade de leite. Deve ser servido quente em uma xícara de café.[1]'}
+Galão is served!
+We can also create one create one Galao{definition='https://pt.wikipedia.org/wiki/Gal%C3%A3o_(caf%C3%A9)
+Galão é uma bebida quente de Portugal feita de café expresso e espuma de leite. Ao todo semelhante à meia de leite, vem num copo alto com cerca de 1/4
+ do café, 3/4 espuma de leite, ao contrário do Garoto (café), mais pequeno, que é servido em uma demitasse / espresso pequena xícara de porcelana. Qua
+ndo a proporção é de 1:1 é chamada de "meia de leite" (metade do leite) e vem numa chávena grande. Pode ser considerado como uma cortado (café), mas c
+om uma quantidade muito maior de leite, as proporções são mais perto de um café com leite.[1]'}
+The point here is that if classes have package protected constructors, and belong to different packages, they can never be sub-classes of eacht other
+This makes this:
+        var garoto =new Garoto();
+and this:
+        var galao = new Galao();
+an unaccomplishable possibility.
+--- 12. `ExceptionInInitializerError`
+============
+Lingueirão comes out to clean up his house! 🪒
+Note we can't catch the Linguerão due to an Error coming from a static initialization -> java.lang.ExceptionInInitializerError
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise12(Mastery3dot2Runner.java:334)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:70)
+java.lang.RuntimeException
+	Oh no! A bird just caught him! We won't fish this one! 🦅
+	org.jesperancinha.ocp11.mastery3dot2.marisco.Lingueirao.<clinit>(Lingueirao.java:10)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise12(Mastery3dot2Runner.java:334)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:70)
+Notice that there is no class definition found. This makes sense. We actually have no class since initializing  has failed! -> java.lang.NoClassDefFou
+ndError
+	Could not initialize class org.jesperancinha.ocp11.mastery3dot2.marisco.Lingueirao
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise12(Mastery3dot2Runner.java:339)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:70)
+Essentially Lingueirão has gone into the oblivion because of the bird. 🦅
+What about this Caranguejo? 🦀
+Caranguejo strolls around on the beach! 🦀
+In this case, an exception is thrown during an instance initialization. The Exception is thrown as is -> java.lang.RuntimeException
+	Oh no! It ran away  in panic!! 💨
+	org.jesperancinha.ocp11.mastery3dot2.marisco.Caranguejo.<init>(Caranguejo.java:9)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise12(Mastery3dot2Runner.java:346)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:70)
+Trying to catch Caranguejo 🕸
+Caranguejo strolls around on the beach! 🦀
+The same when calling the fishing factory method -> java.lang.RuntimeException
+	Oh no! It ran away  in panic!! 💨
+	org.jesperancinha.ocp11.mastery3dot2.marisco.Caranguejo.<init>(Caranguejo.java:9)
+	org.jesperancinha.ocp11.mastery3dot2.marisco.Caranguejo.fishCaranguejo(Caranguejo.java:15)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise12(Mastery3dot2Runner.java:351)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:70)
+Take-aways:
+1. Static initialization can fail, but don't stop a program from running.
+2. SI fail results in and initialization failure.
+3. SI failure results in the absence of a class definition.
+4. Instance initialization failure does not present any unusual behaviour.
+5. We can try/catch any throwable that compatible with the originating throwable.
+--- 13. `thenComparing`
+============
+Case: We receive a whole lot of fish by DocaPesca
+We have to tag all of them, sort them by size and then sort them by species.
+This is the ideal case to use the `thenCompare` method.
+These are all our catches: [Peixe{commonName='Carapau', size=21.0, uuid=d1e5e854-aee5-439c-84d6-35779b1d6259, crateSize=null}, Peixe{commonName='Atúm'
+, size=17.0, uuid=030e7704-e4f1-4984-96bd-fdee67965cc5, crateSize=null}, Peixe{commonName='Dourada', size=13.0, uuid=fd895514-86ff-4f3d-88be-4d9bf86e3
+982, crateSize=null}, Peixe{commonName='Xarroco', size=23.0, uuid=12e6490e-0d1f-4b0c-9de0-bcfd54e0fd2c, crateSize=null}, Peixe{commonName='Atúm', size
+=5.0, uuid=7abb69b1-8df1-4841-888b-674234edbfd6, crateSize=null}, Peixe{commonName='Peixe Espada', size=4.0, uuid=e3977b32-a776-45f5-8310-0e2f764c622d
+, crateSize=null}, Peixe{commonName='Peixe Espada', size=13.0, uuid=74b00be4-1ea1-478c-bd8c-ab949ff24513, crateSize=null}, Peixe{commonName='Sardinha'
+, size=17.0, uuid=9ad6462c-b778-4226-97e7-0b633abe168e, crateSize=null}, Peixe{commonName='Peixe Raia', size=14.0, uuid=76f44ee2-f018-45ba-a611-2d683a
+dfe974, crateSize=null}, Peixe{commonName='Robalo', size=26.0, uuid=9dabb26c-aa06-49b9-a465-d0ee88292578, crateSize=null}]
+Let's organize them!
+This is our organized catch -> [Peixe{commonName='Atúm', size=5.0, uuid=7abb69b1-8df1-4841-888b-674234edbfd6, crateSize=null}, Peixe{commonName='Atúm'
+, size=17.0, uuid=030e7704-e4f1-4984-96bd-fdee67965cc5, crateSize=null}, Peixe{commonName='Carapau', size=21.0, uuid=d1e5e854-aee5-439c-84d6-35779b1d6
+259, crateSize=null}, Peixe{commonName='Dourada', size=13.0, uuid=fd895514-86ff-4f3d-88be-4d9bf86e3982, crateSize=null}, Peixe{commonName='Peixe Espad
+a', size=4.0, uuid=e3977b32-a776-45f5-8310-0e2f764c622d, crateSize=null}, Peixe{commonName='Peixe Espada', size=13.0, uuid=74b00be4-1ea1-478c-bd8c-ab9
+49ff24513, crateSize=null}, Peixe{commonName='Peixe Raia', size=14.0, uuid=76f44ee2-f018-45ba-a611-2d683adfe974, crateSize=null}, Peixe{commonName='Ro
+balo', size=26.0, uuid=9dabb26c-aa06-49b9-a465-d0ee88292578, crateSize=null}, Peixe{commonName='Sardinha', size=17.0, uuid=9ad6462c-b778-4226-97e7-0b6
+33abe168e, crateSize=null}, Peixe{commonName='Xarroco', size=23.0, uuid=12e6490e-0d1f-4b0c-9de0-bcfd54e0fd2c, crateSize=null}]
+Finally we can put our fishes in the matching boxes in a mutch faster way!.
+[Peixe{commonName='Atúm', size=5.0, uuid=7abb69b1-8df1-4841-888b-674234edbfd6, crateSize=TYPE1}, Peixe{commonName='Atúm', size=17.0, uuid=030e7704-e4f
+1-4984-96bd-fdee67965cc5, crateSize=TYPE2}, Peixe{commonName='Carapau', size=21.0, uuid=d1e5e854-aee5-439c-84d6-35779b1d6259, crateSize=TYPE3}, Peixe{
+commonName='Dourada', size=13.0, uuid=fd895514-86ff-4f3d-88be-4d9bf86e3982, crateSize=TYPE2}, Peixe{commonName='Peixe Espada', size=4.0, uuid=e3977b32
+-a776-45f5-8310-0e2f764c622d, crateSize=TYPE1}, Peixe{commonName='Peixe Espada', size=13.0, uuid=74b00be4-1ea1-478c-bd8c-ab949ff24513, crateSize=TYPE2
+}, Peixe{commonName='Peixe Raia', size=14.0, uuid=76f44ee2-f018-45ba-a611-2d683adfe974, crateSize=TYPE2}, Peixe{commonName='Robalo', size=26.0, uuid=9
+dabb26c-aa06-49b9-a465-d0ee88292578, crateSize=TYPE3}, Peixe{commonName='Sardinha', size=17.0, uuid=9ad6462c-b778-4226-97e7-0b633abe168e, crateSize=TY
+PE2}, Peixe{commonName='Xarroco', size=23.0, uuid=12e6490e-0d1f-4b0c-9de0-bcfd54e0fd2c, crateSize=TYPE3}]
+Take-aways
+1. thenCompare works cumulatively
+2. thenCompare sections each comparison in separate groups
+--- 14. `Consumer` in `for` loops
+============
+Case: A bunch of cats is eating left over fish from the fishermen
+Cat eats Peixe{commonName='Xaputa', size=16.0, uuid=d5f37553-8eb3-4483-84e7-60add5d140c4, crateSize=null}
+Cat eats Peixe{commonName='Peixe Raia', size=25.0, uuid=4cf021fa-4feb-40fe-8f47-26da9e45e31c, crateSize=null}
+Cat eats Peixe{commonName='Carapau', size=21.0, uuid=ad66bc30-6d45-4058-935a-d709ac048be3, crateSize=null}
+Cat eats Peixe{commonName='Bacalhau', size=10.0, uuid=ada6213d-8eb6-4173-85a6-748b1c3975bb, crateSize=null}
+Cat eats Peixe{commonName='Peixe Espada', size=0.0, uuid=a0b2855c-a150-4a25-b52c-6d5cafbfba45, crateSize=null}
+Var Cat eats Peixe{commonName='Xaputa', size=16.0, uuid=d5f37553-8eb3-4483-84e7-60add5d140c4, crateSize=null}
+Var Cat eats Peixe{commonName='Peixe Raia', size=25.0, uuid=4cf021fa-4feb-40fe-8f47-26da9e45e31c, crateSize=null}
+Var Cat eats Peixe{commonName='Carapau', size=21.0, uuid=ad66bc30-6d45-4058-935a-d709ac048be3, crateSize=null}
+Var Cat eats Peixe{commonName='Bacalhau', size=10.0, uuid=ada6213d-8eb6-4173-85a6-748b1c3975bb, crateSize=null}
+Var Cat eats Peixe{commonName='Peixe Espada', size=0.0, uuid=a0b2855c-a150-4a25-b52c-6d5cafbfba45, crateSize=null}
+Take-aways
+1. For loops use consumers
+2. Consumer receive parameters and consume them. No value is returned
+3. var declared consumers need to specify type (of course)
+4. traditionally declared consumers can use diamond notation and lambdas
+--- 15. `sorted`, `Comparable` and `ClassCastException`
+============
+Case: During the sorting of the fish bait, one fisher dropped some real fishes
+Now we are going to organize this. Will this work?
+First we organize the current baits
+We get -> [Isca{commonName='Atúm', size=29.0, uuid=5bb44208-744a-4170-bb9f-b731c0a4fa3e, crateSize=null}, Isca{commonName='Bezugo', size=18.0, uuid=bd
+73722b-b94b-482f-83a6-0552ff35798d, crateSize=null}, Isca{commonName='Bezugo', size=20.0, uuid=985bb53a-0490-4126-ab75-22262e339f91, crateSize=null}, 
+Isca{commonName='Peixe Espada', size=5.0, uuid=8b61564f-d0aa-49fd-b9c6-d0a3b3689829, crateSize=null}, Isca{commonName='Sardinha', size=28.0, uuid=c625
+330b-7dda-4044-8045-ff0644fc9acf, crateSize=null}] 
+As we expected, we cannot run a default comparator if it is not defined in the objects of a list
+The fisher has to wash all of their baits -> java.lang.ClassCastException
+	class org.jesperancinha.ocp11.mastery3dot2.pesca.Peixe cannot be cast to class java.lang.Comparable (org.jesperancinha.ocp11.mastery3dot2.pesca.Peixe
+ is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
+	java.base/java.util.Comparators$NaturalOrderComparator.compare(Comparators.java:47)
+	java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	java.base/java.util.TimSort.sort(TimSort.java:220)
+	java.base/java.util.Arrays.sort(Arrays.java:1515)
+	java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:353)
+	java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.exercise15(Mastery3dot2Runner.java:244)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:73)
+Take-aways
+1. We can provide a comparator to the sorted intermediate operation of sorted
+2. Alternatively we can use Comparable in the type definition itself
+3. All objects need to be Comparable, if we want sorted without parameters to work
+4. During a sorted operation, without parameters, there will be a ClassClassException thrown, if at least one element is not Comparable
+--- 16. Serializing arrays and Lists
+============
+Case: Sometimes we register a fish catch in a List.
+Other times we register this info in an array
+Do we know how serialize this data so that the fisher knows how too find the records of their catch?
+The fisher catches Pesca{peixes=[Peixe{commonName='Atúm', size=4.0, uuid=68d54004-8430-48e9-80f0-20e8bc910c39, crateSize=null}, Peixe{commonName='Roba
+lo', size=23.0, uuid=b0036baa-9705-484d-8a71-0058589da2d7, crateSize=null}], peixeArray=[Peixe{commonName='Atúm', size=4.0, uuid=68d54004-8430-48e9-80
+f0-20e8bc910c39, crateSize=null}, Peixe{commonName='Robalo', size=23.0, uuid=b0036baa-9705-484d-8a71-0058589da2d7, crateSize=null}], peixesHidden=[Isc
+a{commonName='Sardinha', size=45.0, uuid=421c6f3f-5fa9-4038-979c-f3aa452c5517, crateSize=null}], peixeArrayHidden=[Isca{commonName='Sardinha', size=45
+.0, uuid=342d29c9-0c7d-4c16-bb39-1257b185c9dc, crateSize=null}]}
+We got the data! And the fisher catched Pesca{peixes=[Peixe{commonName='Atúm', size=4.0, uuid=68d54004-8430-48e9-80f0-20e8bc910c39, crateSize=null}, P
+eixe{commonName='Robalo', size=23.0, uuid=b0036baa-9705-484d-8a71-0058589da2d7, crateSize=null}], peixeArray=[Peixe{commonName='Atúm', size=4.0, uuid=
+68d54004-8430-48e9-80f0-20e8bc910c39, crateSize=null}, Peixe{commonName='Robalo', size=23.0, uuid=b0036baa-9705-484d-8a71-0058589da2d7, crateSize=null
+}], peixesHidden=null, peixeArrayHidden=null}
+Take-aways
+1. We don't need a serialVersionUID. It can work without it
+2. However not strictly necessary, a serialVersionUID identifies the version of the object
+3. All serialized objects need to be serializable
+4. This also includes all elements of the array or of a list
+5. The `transient` keyword makes sure that elements aren't going to be serializable.
+6. This would happen for non serializable members with no transient -> java.io.NotSerializableException
+	org.jesperancinha.ocp11.mastery3dot2.pesca.Isca
+	java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)
+	java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1379)
+	java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1175)
+	java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:82).
+--- 17. `noneMatch` vs `anyMatch`
+============
+Case: We are now in `Quinta de Marim` in Olhão.
+We are birdwatching and trying to distinguish the bird species
+How can we match them?
+We see all of these birds-> [Purple Swamphen, Little Bittern, Purple Heron, Collared Pratincole, Audouin’s Gull, Greater Flamingo]
+Did we see any `Eurasian Spoonbill`? -> false
+So none of them matched right? -> true
+How about the `Little Bittern`? -> true
+Do all of them match this? -> false
+Take-aways
+1. allMatch, noneMatch, anyMatch and in general Match operations, return a boolean
+--- 18. `StringBuilder` and `setLength`
+============
+Case: During a bird-watch, we see a species called: `Slender-billed Gull`
+In our report however, we can only put a word with 7 characters.
+We might be able to save this situation by using setLength
+This is our current word -> Slender-billed Gull 
+This is our changed word -> Slender 
+But hey, now we can put way more characters and now we reinstate the rest -> Slender-billed Gull 
+And we can also make this a bigger string -> Slender-billed Gull            
+If the size is changed to more than what already is, the actual word doesn't change size -> Slender-billed Gull           . 
+Take-aways
+1. setLength can decrease a String size inside StrinbBuilder
+2. setLength can may increase the size of the String, but nothing happnes if it surpasses original size
+--- 19. `Supplier` and `get`
+============
+Case: We are going to visit the worldwide known "Chalé Dr. João Lúcio"
+Of course that, in order to visit it, we need someone to give a ticket to go insinde.
+Clerk - Good afternoon sir, how can I help you?
+Client - One ticket please!
+CK - Here you go!
+CK - This is your ticket Ticket{tickerNumber=fe85570b-cb98-4c22-b2e5-e2fb3e84254d, name='Client'}
+CK - And this is a copy! Enjoy your visit! Ticket{tickerNumber=7b1687d1-b224-4c68-824c-964038b72256, name='Copy'}
+CL - Thank you so much!
+Take-away
+1. Suppliers return a value without the need of parameters
+2. var isn't very convenient to use also with Suppliers because of the code
+3. var also works though
+--- 20. `Files.copy` and symbolic links
+============
+Case: We'll create symbolic links to files we create.
+In this case, a world wide known description of the fantastic City of Olhão.
+Check your file system and look at the results. Change the files via the command line.
+Notice that chaging /tmp/fishers-world.txt will also affect the contents of /tmp/fishers-link.txt.
+Also notice that /tmp/fishers-link2.txt is a text file
+Take-away
+1. A copy of a symlink results in the copuy of the file it is linked to.
+2. The symlink itself does not get copied.
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
+Hope you enjoyed this mastery into Java 11 with the flavour, sounds, beauty and lights of Olhão City!
+Please keep coming back as I'll be creating more mastery modules.
+Thank you!
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
+```
+
 ## References
 
 -   [Bird watching in Ria Formosa - Quinta de Marim - Olhão](http://birdwatching.spea.pt/en/where-to-watch/ria-formosa/)
