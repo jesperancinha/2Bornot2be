@@ -9,6 +9,7 @@ import org.jesperancinha.ocp11.mastery3dot2.marisco.Lingueirao;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Building;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.ocp11.mastery3dot2.mercado.Market;
+import org.jesperancinha.ocp11.mastery3dot2.museu.Ticket;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.Catch;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.CrateSize;
 import org.jesperancinha.ocp11.mastery3dot2.pesca.Isca;
@@ -31,6 +32,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -69,12 +71,37 @@ public class Mastery3dot2Runner {
         exercise16();
         exercise17();
         exercise18();
+        exercise19();
 
         printUnicornsLn(90);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise19() {
+        printBrightCyanGenericLn("--- 19. `Supplier` and `get`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We are going to visit the worldwide known \"Chalé Dr. João Lúcio\"");
+        printGreenGenericLn("Of course that, in order to visit it, we need someone to give a ticket to go insinde.");
+        printBrightCyanGenericLn("Clerk - Good afternoon sir, how can I help you?");
+        printYellowGenericLn("Client - One ticket please!");
+        var ticketSupplier = new Supplier<Ticket>() {
+            @Override
+            public Ticket get() {
+                return new Ticket("Client");
+            }
+        };
+        final Supplier<Ticket> ticketSupplier1 = ()-> new Ticket("Copy");
+        printBrightCyanGenericLn("CK - Here you go!");
+        printBrightCyanGenericLn("CK - This is your ticket %s", ticketSupplier.get());
+        printBrightCyanGenericLn("CK - And this is a copy! Enjoy your visit! %s", ticketSupplier1.get());
+        printYellowGenericLn("CL - Thank you so much!");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Suppliers return a value without the need of parameters");
+        printGreenGenericLn("2. var isn't very convenient to use also with Suppliers because of the code");
+        printGreenGenericLn("3. var also works though");
     }
 
     private static void exercise18() {
