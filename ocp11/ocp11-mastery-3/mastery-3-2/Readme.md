@@ -220,26 +220,26 @@ De avond van te voren leg je 250 gram gedroogde kabeljauw in een bak met melk of
 f 3. Goed laten uitlekken voordat je deze waanzinnig lekkere maaltijd gaat bereiden.
 De avond van te voren leg je 250 gram gedroogde kabeljauw in een bak met melk of water. De volgende dag ververs je het water of de melk nog een keer o
 f 3. Goed laten uitlekken voordat je deze waanzinnig lekkere maaltijd gaat bereiden.
- I'm corrupting the recipe
+I'm corrupting the recipe
 eine stukjes evenals 5 teentjes knoflook. Dit mogen er ook 4 zijn, maar niet minder ð
 Je snijdt eveneens 500 gram aardappelen in flinterdunne stukjes/patatjes.
 De knoflook en de uien fruit je tot ze goudgeel zijn, vervolgens voeg je de kabeljauw toe.
 Bak de patatjes tot ze nog net niet helemaal bruin/gaar zijn.
 Voeg de patatjes aan de kabeljauw toe en voeg 2 of 3 eieren toe. Roer het geheel goed door totdat de eiren een beetje gaan stollen.
 Voeg 3/4 Peterselie en alle koriander toe en roer het door elkaar heen.
-Vul een ovenschaal met de Bacalhau Ã  BrÃ¡s en plaats deze nog 10 minuten in een hetelucht oven op 175 graden, anders op 220 graden.
+Vul een ovenschaal met de Bacalhau à Brás en plaats deze nog 10 minuten in een hetelucht oven op 175 graden, anders op 220 graden.
 Je haalt de schaal uit de oven en je garneert de ovenschaal met het restant peterselie en de olijven.
 Wait! I forgot something!
 De avond van te voren leg je 250 gram gedroogde kabeljauw in een bak met melk of water. De volgende dag ververs je het water of de melk nog een keer o
 f 3. Goed laten uitlekken voordat je deze waanzinnig lekkere maaltijd gaat bereiden.
- I'm corrupting the recipe
+I'm corrupting the recipe
 eine stukjes evenals 5 teentjes knoflook. Dit mogen er ook 4 zijn, maar niet minder ð
 Je snijdt eveneens 500 gram aardappelen in flinterdunne stukjes/patatjes.
 De knoflook en de uien fruit je tot ze goudgeel zijn, vervolgens voeg je de kabeljauw toe.
 Bak de patatjes tot ze nog net niet helemaal bruin/gaar zijn.
 Voeg de patatjes aan de kabeljauw toe en voeg 2 of 3 eieren toe. Roer het geheel goed door totdat de eiren een beetje gaan stollen.
 Voeg 3/4 Peterselie en alle koriander toe en roer het door elkaar heen.
-Vul een ovenschaal met de Bacalhau Ã  BrÃ¡s en plaats deze nog 10 minuten in een hetelucht oven op 175 graden, anders op 220 graden.
+Vul een ovenschaal met de Bacalhau à Brás en plaats deze nog 10 minuten in een hetelucht oven op 175 graden, anders op 220 graden.
 Je haalt de schaal uit de oven en je garneert de ovenschaal met het restant peterselie en de olijven.
 RandomAccessFile uses different interfaces than FileInputStream.
 But they are all Closeable.
@@ -260,6 +260,9 @@ DateFormat.getDateTimeInstance(0,1, locale) -> quinta-feira, 16 de junho de 1808
 DateFormat.getDateTimeInstance(0,2, locale) -> quinta-feira, 16 de junho de 1808 00:00:00
 DateFormat.getDateTimeInstance(0,3, locale) -> quinta-feira, 16 de junho de 1808 00:00
 We can change to different pre-defined styles
+````
+
+```text
 --- 11. Package protected constructors
 ============
 Case: We are ordering a coffee in Olhão.
