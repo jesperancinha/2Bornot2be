@@ -221,7 +221,7 @@ f 3. Goed laten uitlekken voordat je deze waanzinnig lekkere maaltijd gaat berei
 De avond van te voren leg je 250 gram gedroogde kabeljauw in een bak met melk of water. De volgende dag ververs je het water of de melk nog een keer o
 f 3. Goed laten uitlekken voordat je deze waanzinnig lekkere maaltijd gaat bereiden.
 I'm corrupting the recipe
-eine stukjes evenals 5 teentjes knoflook. Dit mogen er ook 4 zijn, maar niet minder ð
+eine stukjes evenals 5 teentjes knoflook. Dit mogen er ook 4 zijn, maar niet minder 
 Je snijdt eveneens 500 gram aardappelen in flinterdunne stukjes/patatjes.
 De knoflook en de uien fruit je tot ze goudgeel zijn, vervolgens voeg je de kabeljauw toe.
 Bak de patatjes tot ze nog net niet helemaal bruin/gaar zijn.
@@ -233,7 +233,7 @@ Wait! I forgot something!
 De avond van te voren leg je 250 gram gedroogde kabeljauw in een bak met melk of water. De volgende dag ververs je het water of de melk nog een keer o
 f 3. Goed laten uitlekken voordat je deze waanzinnig lekkere maaltijd gaat bereiden.
 I'm corrupting the recipe
-eine stukjes evenals 5 teentjes knoflook. Dit mogen er ook 4 zijn, maar niet minder ð
+eine stukjes evenals 5 teentjes knoflook. Dit mogen er ook 4 zijn, maar niet minder 
 Je snijdt eveneens 500 gram aardappelen in flinterdunne stukjes/patatjes.
 De knoflook en de uien fruit je tot ze goudgeel zijn, vervolgens voeg je de kabeljauw toe.
 Bak de patatjes tot ze nog net niet helemaal bruin/gaar zijn.
