@@ -260,9 +260,6 @@ DateFormat.getDateTimeInstance(0,1, locale) -> quinta-feira, 16 de junho de 1808
 DateFormat.getDateTimeInstance(0,2, locale) -> quinta-feira, 16 de junho de 1808 00:00:00
 DateFormat.getDateTimeInstance(0,3, locale) -> quinta-feira, 16 de junho de 1808 00:00
 We can change to different pre-defined styles
-````
-
-```text
 --- 11. Package protected constructors
 ============
 Case: We are ordering a coffee in Olhão.
@@ -403,10 +400,6 @@ Take-aways
 2. Alternatively we can use Comparable in the type definition itself
 3. All objects need to be Comparable, if we want sorted without parameters to work
 4. During a sorted operation, without parameters, there will be a ClassClassException thrown, if at least one element is not Comparable
-```
-
-
-```text
 --- 16. Serializing arrays and Lists
 ============
 Case: Sometimes we register a fish catch in a List.
