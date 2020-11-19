@@ -250,7 +250,7 @@ public class Consolerizer {
                     });
                     if (variable instanceof Error) {
                         Throwable cause = e.getCause();
-                        if(Objects.nonNull(cause)) {
+                        if (Objects.nonNull(cause)) {
                             sb.append("\n");
                             sb.append(cause.getClass().getCanonicalName());
                             if (Objects.nonNull(cause.getMessage())) {
@@ -404,5 +404,11 @@ public class Consolerizer {
 
     public static String trim(String string) {
         return string.replaceAll("^[\n]+|[\n]+$", "");
+    }
+
+    public static void printRedThrowableAndExit(Throwable e) {
+        printRedGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
+        printRedGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
+        System.exit(1);
     }
 }

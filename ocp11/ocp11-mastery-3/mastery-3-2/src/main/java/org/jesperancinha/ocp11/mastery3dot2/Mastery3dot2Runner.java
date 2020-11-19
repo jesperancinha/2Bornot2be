@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -43,6 +45,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGe
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -72,12 +75,41 @@ public class Mastery3dot2Runner {
         exercise17();
         exercise18();
         exercise19();
+        exercise20();
 
         printUnicornsLn(90);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, sexyness and lights of Olhão City!");
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the flavour, sounds, beauty and lights of Olhão City!");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(90);
+    }
+
+    private static void exercise20() {
+        printBrightCyanGenericLn("--- 20. `Files.copy` and symbolic links");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We'll create symbolic links to files we create.");
+        printGreenGenericLn("In this case, a world wide known description of the fantastic City of Olhão.");
+        var fishersWorld = "/tmp/fishers-world.txt";
+        try (var fos = new FileOutputStream(fishersWorld)) {
+            var oos = new ObjectOutputStream(fos);
+            oos.writeObject("Olhão da Restauração. Cidade cubista");
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+        var fishersLink = "/tmp/fishers-link.txt";
+        var fishersLink2 = "/tmp/fishers-link2.txt";
+        try {
+            Files.createLink(Paths.get(fishersLink), Paths.get(fishersWorld));
+            Files.copy(Paths.get(fishersLink), Paths.get(fishersLink2));
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+        printGreenGenericLn("Check your file system and look at the results. Change the files via the command line.");
+        printGreenGenericLn("Notice that chaging %s will also affect the contents of %s.", fishersWorld, fishersLink);
+        printGreenGenericLn("Also notice that %s is a text file",fishersLink2);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. A copy of a symlink results in the copuy of the file it is linked to.");
+        printGreenGenericLn("2. The symlink itself does not get copied.");
     }
 
     private static void exercise19() {
@@ -93,7 +125,7 @@ public class Mastery3dot2Runner {
                 return new Ticket("Client");
             }
         };
-        final Supplier<Ticket> ticketSupplier1 = ()-> new Ticket("Copy");
+        final Supplier<Ticket> ticketSupplier1 = () -> new Ticket("Copy");
         printBrightCyanGenericLn("CK - Here you go!");
         printBrightCyanGenericLn("CK - This is your ticket %s", ticketSupplier.get());
         printBrightCyanGenericLn("CK - And this is a copy! Enjoy your visit! %s", ticketSupplier1.get());
