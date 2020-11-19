@@ -438,6 +438,60 @@ Take-aways
 	java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
 	java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
 	org.jesperancinha.ocp11.mastery3dot2.Mastery3dot2Runner.main(Mastery3dot2Runner.java:82).
+--- 17. `noneMatch` vs `anyMatch`
+============
+Case: We are now in `Quinta de Marim` in Olhão.
+We are birdwatching and trying to distinguish the bird species
+How can we match them?
+We see all of these birds-> [Purple Swamphen, Little Bittern, Purple Heron, Collared Pratincole, Audouin’s Gull, Greater Flamingo]
+Did we see any `Eurasian Spoonbill`? -> false
+So none of them matched right? -> true
+How about the `Little Bittern`? -> true
+Do all of them match this? -> false
+Take-aways
+1. allMatch, noneMatch, anyMatch and in general Match operations, return a boolean
+--- 18. `StringBuilder` and `setLength`
+============
+Case: During a bird-watch, we see a species called: `Slender-billed Gull`
+In our report however, we can only put a word with 7 characters.
+We might be able to save this situation by using setLength
+This is our current word -> Slender-billed Gull 
+This is our changed word -> Slender 
+But hey, now we can put way more characters and now we reinstate the rest -> Slender-billed Gull 
+And we can also make this a bigger string -> Slender-billed Gull 
+If the size is changed to more than what already is, the actual word doesn't change size -> Slender-billed Gull.
+Take-aways
+1. setLength can decrease a String size inside StrinbBuilder
+2. setLength can may increase the size of the String, but nothing happens if it surpasses original size
+--- 19. `Supplier` and `get`
+============
+Case: We are going to visit the worldwide known "Chalé Dr. João Lúcio"
+Of course that, in order to visit it, we need someone to give a ticket to go insinde.
+Clerk - Good afternoon sir, how can I help you?
+Client - One ticket please!
+CK - Here you go!
+CK - This is your ticket Ticket{tickerNumber=fe85570b-cb98-4c22-b2e5-e2fb3e84254d, name='Client'}
+CK - And this is a copy! Enjoy your visit! Ticket{tickerNumber=7b1687d1-b224-4c68-824c-964038b72256, name='Copy'}
+CL - Thank you so much!
+Take-away
+1. Suppliers return a value without the need of parameters
+2. var isn't very convenient to use also with Suppliers because of the code
+3. var also works though
+--- 20. `Files.copy` and symbolic links
+============
+Case: We'll create symbolic links to files we create.
+In this case, a world wide known description of the fantastic City of Olhão.
+Check your file system and look at the results. Change the files via the command line.
+Notice that chaging /tmp/fishers-world.txt will also affect the contents of /tmp/fishers-link.txt.
+Also notice that /tmp/fishers-link2.txt is a text file
+Take-away
+1. A copy of a symlink results in the copuy of the file it is linked to.
+2. The symlink itself does not get copied.
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
+Hope you enjoyed this mastery into Java 11 with the flavour, sounds, beauty and lights of Olhão City!
+Please keep coming back as I'll be creating more mastery modules.
+Thank you!
+🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 ```
 
 ## References
