@@ -4,7 +4,7 @@ In this 7th mastery module on route to the Java 11 certification, we are going t
 
 ## Exercise
 
-1. `Exception` `catch` order.
+1. `Exception` `catch` order
 2. What is the output of `String` for it's 3 different kind of values: `null`, "" and "Something"
 3. JLS evaluation order in multiple operands
 4. Last `Exception` to execute before exiting program abruptly
@@ -29,6 +29,7 @@ In this 7th mastery module on route to the Java 11 certification, we are going t
 
 ## References
 
+-   [John F. Kennedy Biography(1917–1963)](https://www.biography.com/us-president/john-f-kennedy)
 -   [The 1960s History by The History Channel](https://www.history.com/topics/1960s/1960s-history)
 
 <div align="center">
