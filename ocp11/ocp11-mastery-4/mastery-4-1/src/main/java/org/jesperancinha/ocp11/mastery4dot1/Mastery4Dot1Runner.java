@@ -14,6 +14,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGener
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -61,21 +62,22 @@ public class Mastery4Dot1Runner {
                 throw new SeniorException();
             }
         } catch (SeniorException e) {
-            printMagentaGeneric("You are a Senior!");
+            printMagentaGenericLn("You are a Senior!");
         } catch (ExpertException e) {
-            printMagentaGeneric("You are a Expert!");
+            printMagentaGenericLn("You are a Expert!");
         } catch (MediorException e) {
-            printMagentaGeneric("You are a Medior!");
+            printMagentaGenericLn("You are a Medior!");
         } catch (JuniorException e) {
-            printMagentaGeneric("You are a Junior!");
+            printMagentaGenericLn("You are a Junior!");
         } catch (BeginnerException e) {
-            printMagentaGeneric("You are a Beginner!");
+            printMagentaGenericLn("You are a Beginner!");
         } catch (RookieException e) {
-            printMagentaGeneric("You are a Rookie!");
+            printMagentaGenericLn("You are a Rookie!");
         } catch (Exception e) {
             printRedThrowableAndExit(e);
         }
-
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. In a try with multiple catches, the order is more specific to more generic");
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
