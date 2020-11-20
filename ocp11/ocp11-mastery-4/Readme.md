@@ -1,13 +1,8 @@
-# ocp11-mastery-3 (Oracle Certified Professional Java SE 11)
+# ocp11-mastery-4 (Oracle Certified Professional Java SE 11)
 
 ## Introduction
 
-OCP 11 studies - Mastery 3
-
--   [Mastery module 3.1.](./mastery-3-1/Readme.md) - Singing in dutch
--   [Mastery module 3.2.](./mastery-3-2/Readme.md) - [Olhão](https://en.wikipedia.org/wiki/Olh%C3%A3o) City
--   [Mastery module 3.2. Modularity](./mastery-3-2-modularity/Readme.md) - [Olhão](https://en.wikipedia.org/wiki/Olh%C3%A3o) City - A [Cataplana](https://saudadesdeportugal.nl/cataplana/) serving
-
+OCP 11 studies - Mastery 4
 
 ## Topics and coverage
 

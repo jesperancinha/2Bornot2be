@@ -40,6 +40,7 @@
         <module>ocp11-mastery-1</module>
         <module>ocp11-mastery-2</module>
         <module>ocp11-mastery-3</module>
+        <module>ocp11-mastery-4</module>
     </modules>
 
 </project>

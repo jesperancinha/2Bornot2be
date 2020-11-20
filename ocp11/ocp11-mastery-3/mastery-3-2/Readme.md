@@ -478,7 +478,7 @@ Check your file system and look at the results. Change the files via the command
 Notice that chaging /tmp/fishers-world.txt will also affect the contents of /tmp/fishers-link.txt.
 Also notice that /tmp/fishers-link2.txt is a text file
 Take-away
-1. A copy of a symlink results in the copuy of the file it is linked to.
+1. A copy of a symlink results in the copy of the file it is linked to.
 2. The symlink itself does not get copied.
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
 Hope you enjoyed this mastery into Java 11 with the flavour, sounds, beauty and lights of Olhão City!
