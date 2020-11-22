@@ -8,6 +8,8 @@ import org.jesperancinha.ocp11.mastery4dot1.levels.MediorException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.RookieException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.SeniorException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.SuperSeniorException;
+import org.jesperancinha.ocp11.mastery4dot1.riots.RaidException;
+import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -34,12 +36,44 @@ public class Mastery4Dot1Runner {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise4() {
+        printBrightCyanGenericLn("--- 4. Last `Exception` to execute before exiting program abruptly");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: It is 1969, June 28th and you went downtown NY to the famous `The Stonewall Inn`");
+        printGreenGenericLn("It was a nice cosy night and now its early morning and all of the sudden the police charges in!");
+        printGreenGenericLn("You are now facing the beginnings of what later became known as the Stonewall riots");
+
+        try {
+            try {
+                printMagentaGenericLn("Patrons are having after hours fun!");
+                throw new RaidException();
+            } finally {
+                try {
+                    throw new ResponseException();
+                } catch (ResponseException e) {
+                    printRedGenericLn("This should be first exception: %s", e);
+                    printRedGenericLn("If our story had ended here, the raid would have never happened.");
+                    printRedGenericLn("In other words, System.exit(1), would have not allowed to see the output of RaidException.");
+                    // System.exit(1);
+                }
+            }
+        } catch (RaidException e) {
+            printRedGenericLn("Notice when this exception occurs: %s", e);
+        } finally {
+            printRedGenericLn("You see this here, but if you did a System.exit(1) in the previous location, you wouldn't see this message");
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Although finally always occurs in a try catch, the exception doesn't do anything yet although it has been thrown, if no catch is declared");
+        printGreenGenericLn("2. Further process that block the thread from continuing will prevent this exception to affect anything at all.");
     }
 
     private static void exercise3() {
@@ -69,7 +103,7 @@ public class Mastery4Dot1Runner {
         var presidentName = "JFK";
         presidentSearch(presidentName, presidentName, presidentName = mapPresidentName.get("LBJ"));
         final int years = array[mapYearToNumber.get(mapNameToYear.get(mapPresidentName.get("LBJ"))) - 1] = yearsInPower = 3;
-        printMagentaGenericLn("I guess our calculation is correct. They were %d years!",  years);
+        printMagentaGenericLn("I guess our calculation is correct. They were %d years!", years);
         printMagentaGenericLn("An now it is corrected also in our data structures: %d years!", yearsInPower);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Expression evaluation can be seriously complicated");

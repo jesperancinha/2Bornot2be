@@ -29,6 +29,8 @@ In this 7th mastery module on route to the Java 11 certification, we are going t
 
 ## References
 
+-   [Stonewall riots](https://en.wikipedia.org/wiki/Stonewall_riots)
+-   [Lyndon B. Johnson](https://en.wikipedia.org/wiki/Lyndon_B._Johnson)
 -   [John F. Kennedy Biography(1917–1963)](https://www.biography.com/us-president/john-f-kennedy)
 -   [The 1960s History by The History Channel](https://www.history.com/topics/1960s/1960s-history)
 
