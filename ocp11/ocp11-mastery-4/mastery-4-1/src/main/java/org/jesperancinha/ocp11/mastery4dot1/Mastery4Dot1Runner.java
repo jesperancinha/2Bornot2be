@@ -11,6 +11,7 @@ import org.jesperancinha.ocp11.mastery4dot1.levels.SuperSeniorException;
 import org.jesperancinha.ocp11.mastery4dot1.riots.RaidException;
 import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
 import org.jesperancinha.ocp11.mastery4dot1.society.TheGreatSocietyAdapter;
+import org.jesperancinha.ocp11.mastery4dot1.states.LBJGovernment;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -39,12 +40,29 @@ public class Mastery4Dot1Runner {
         exercise3();
         exercise4();
         exercise5();
+        exercise6();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise6() {
+        printBrightCyanGenericLn("--- 6. Java Inheritance of state");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: After JFK's assassination, LBJ inherited the bill of rights which JFK had fought for, for so long.");
+        printGreenGenericLn("This was the time to make a move, and make a move LBJ did!");
+        printGreenGenericLn("Marylin Monroe, didn't sing Happy B'Day to LBJ though.");
+        var lbjGovernment  = new LBJGovernment();
+        printMagentaGenericLn("Work to do:");
+        printMagentaGenericLn("Civil Rights Bill passed: %s", lbjGovernment.civilRightsBill);
+        printMagentaGenericLn("Happy birthday passed: %s", lbjGovernment.bDay);
+        printMagentaGenericLn("But wait! This is not an instance member!: %s", LBJGovernment.bDay);
+        printMagentaGenericLn("So no `Happy Birthday Mr. President`for LBJ");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Since we cannot have a subclass of multiple classes, only interfaces, then is no multiple inheritance of state in Java");
     }
 
     private static void exercise5() {
