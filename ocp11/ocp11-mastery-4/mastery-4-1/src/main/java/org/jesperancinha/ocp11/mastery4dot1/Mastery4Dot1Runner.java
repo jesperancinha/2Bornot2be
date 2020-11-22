@@ -9,6 +9,7 @@ import org.jesperancinha.ocp11.mastery4dot1.levels.RookieException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.SeniorException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.SuperSeniorException;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
@@ -16,6 +17,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCya
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 
@@ -31,12 +33,53 @@ public class Mastery4Dot1Runner {
 
         exercise1();
         exercise2();
+        exercise3();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise3() {
+        printBrightCyanGenericLn("--- 3. JLS evaluation order in multiple operands");
+        printRainbowLn("==");
+        printGreenGenericLn("https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html");
+        printGreenGenericLn("Case: We have the initials LBJ and we want to know how many years was he/she president.");
+        printGreenGenericLn("We don't know anything about them. Just the initials.");
+        printGreenGenericLn("We have a map from initials to president name.");
+        printGreenGenericLn("Another from president name to year.");
+        printGreenGenericLn("Another from year to president number.");
+        printGreenGenericLn("And finally and array from president number to how many years.");
+        printGreenGenericLn("Can we do this in one go?");
+
+        var mapPresidentName = new HashMap<String, String>() {{
+            put("LBJ", "Lyndon B. Johnson");
+        }};
+        var mapNameToYear = new HashMap<String, Integer>() {{
+            put("Lyndon B. Johnson", 1963);
+        }};
+        var mapYearToNumber = new HashMap<Integer, Integer>() {{
+            put(1963, 37);
+        }};
+        var array = new Integer[45];
+        var yearsInPower = 2;
+        printRedGenericLn("We seem to have found a mistake. It wasn't %d years. That's for sure!", yearsInPower);
+        var presidentName = "JFK";
+        presidentSearch(presidentName, presidentName, presidentName = mapPresidentName.get("LBJ"));
+        final int years = array[mapYearToNumber.get(mapNameToYear.get(mapPresidentName.get("LBJ"))) - 1] = yearsInPower = 3;
+        printMagentaGenericLn("I guess our calculation is correct. They were %d years!",  years);
+        printMagentaGenericLn("An now it is corrected also in our data structures: %d years!", yearsInPower);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Expression evaluation can be seriously complicated");
+        printGreenGenericLn("2. Most counter intuitive rule might be that the left operand is evaluated first.");
+        printGreenGenericLn("3. All operands have to be evaluated");
+        printGreenGenericLn("4. Read https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html for more details±!");
+    }
+
+    private static void presidentSearch(String presidentName, String presidentName1, String lbj) {
+        printBrightCyanGenericLn("We though it was %s, but then it wasn't %s and instead it was %s", presidentName, presidentName1, lbj);
     }
 
     private static void exercise2() {
