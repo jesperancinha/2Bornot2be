@@ -10,6 +10,7 @@ import org.jesperancinha.ocp11.mastery4dot1.levels.SeniorException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.SuperSeniorException;
 import org.jesperancinha.ocp11.mastery4dot1.riots.RaidException;
 import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
+import org.jesperancinha.ocp11.mastery4dot1.society.TheGreatSocietyAdapter;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -37,12 +38,36 @@ public class Mastery4Dot1Runner {
         exercise2();
         exercise3();
         exercise4();
+        exercise5();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise5() {
+        printBrightCyanGenericLn("--- 5. Generics separation between `<T>` and `T`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Lyndon B. Johnson envisioned `The Great Society plan` in 1963.");
+        printGreenGenericLn("This led through the years to the civil rights act of 1964 and 1965.");
+        printGreenGenericLn("We can make a few sentences with this:");
+        var theGreatSocietyString = new TheGreatSocietyAdapter<String>();
+        try {
+            final String theGreatSociety = theGreatSocietyString.printSocietyAdapterMethod(1963, 1);
+        } catch (ClassCastException e) {
+            printRedGenericLn("This happens because we specified that the `printSocietyAdapterMethod` would return `String` -> %s", e);
+            printRedGenericLn("However we also generically specify that if input parameters are numbers, then it should return a `Double` number.");
+            printRedGenericLn("This is why it fail this way. Let's make it good now.");
+        }
+        printMagentaGenericLn(theGreatSocietyString.printSocietyAdapterMethod("The civil liberties act was signed off by LBJ in ", 1963));
+        var theGreatSocietyDouble = new TheGreatSocietyAdapter<Double>();
+        printMagentaGenericLn("The Great Society term was coined in %d which led to the creation of the Civil Rights act of %f", 1964, theGreatSocietyDouble.printSocietyAdapterMethod(1963, 1));
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. We can specify a generic type for one specify class before runtime or during runtime with anonymous classes");
+        printGreenGenericLn("2. We can also, regardless of the class generic type, specify the input params of each individual method of an instance object during runtime");
+        printGreenGenericLn("3. We can, in the same way specify the return parameters");
     }
 
     private static void exercise4() {
