@@ -29,6 +29,8 @@ In this 7th mastery module on route to the Java 11 certification, we are going t
 
 ## References
 
+-   [1968 United States presidential election](https://en.wikipedia.org/wiki/1968_United_States_presidential_election)
+-   [Richard Nixon](https://www.biography.com/us-president/richard-nixon)
 -   [Voting Rights Act of 1965](https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965)
 -   [Civil Rights Act of 1964](https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964)
 -   [Great Society](https://en.wikipedia.org/wiki/Great_Society)

@@ -13,8 +13,10 @@ import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
 import org.jesperancinha.ocp11.mastery4dot1.society.TheGreatSocietyAdapter;
 import org.jesperancinha.ocp11.mastery4dot1.states.LBJGovernment;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -41,12 +43,37 @@ public class Mastery4Dot1Runner {
         exercise4();
         exercise5();
         exercise6();
+        exercise7();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise7() {
+        printBrightCyanGenericLn("--- 7. Calculating averages with `collector`'s or with Number typed streams");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We will count the average count of electoral votes per state in the results of the 1968th USA presidential election.");
+        final int []votes = {3,5,40,6,3,14,4,26,13,9,7,9,12,4,5,3,4,17,4,12,4,26,8,6,8,4,11,4,3,12,12,3};
+        var sum1FromIntStream = Arrays.stream(votes).sum();
+        var sum1FromObjStream = Arrays.stream(votes).mapToObj(i->i).reduce(0, (a,b)->  a+b);
+        var sum1FromBoxedStrem = Arrays.stream(votes).boxed().reduce(0, Integer::sum);
+        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via IntStream)",  "Richard Nixon", sum1FromIntStream);
+        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via ObjStream)","Richard Nixon", sum1FromObjStream);
+        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via BoxedStream)","Richard Nixon", sum1FromBoxedStrem);
+        var avg1FromIntStream = Arrays.stream(votes).average().getAsDouble();
+        var avg1FromBoxedStreamDouble = Arrays.stream(votes).boxed().collect(Collectors.averagingDouble(i->i));
+        var avg1FromBoxedStreamInt = Arrays.stream(votes).boxed().collect(Collectors.averagingInt(i->i));
+        var avg1FromBoxedStreamLong = Arrays.stream(votes).boxed().collect(Collectors.averagingLong(i->i));
+        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via IntStream)", avg1FromIntStream);
+        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingDouble)", avg1FromBoxedStreamDouble);
+        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingInt)", avg1FromBoxedStreamInt);
+        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingLong)", avg1FromBoxedStreamLong);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. All average calculation using streams result in a double result");
+        printGreenGenericLn("2. There are at least two ways of doing this. One via collectors and the other via the average method of a Number Stream");
     }
 
     private static void exercise6() {
@@ -62,7 +89,7 @@ public class Mastery4Dot1Runner {
         printMagentaGenericLn("But wait! This is not an instance member!: %s", LBJGovernment.bDay);
         printMagentaGenericLn("So no `Happy Birthday Mr. President`for LBJ");
         printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Since we cannot have a subclass of multiple classes, only interfaces, then is no multiple inheritance of state in Java");
+        printGreenGenericLn("1. Since we cannot have a subclass of multiple classes, only interfaces, then there is no multiple inheritance of state in Java");
     }
 
     private static void exercise5() {
