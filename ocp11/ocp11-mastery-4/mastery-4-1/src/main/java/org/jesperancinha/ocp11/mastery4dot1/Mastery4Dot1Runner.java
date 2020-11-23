@@ -13,8 +13,14 @@ import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
 import org.jesperancinha.ocp11.mastery4dot1.society.TheGreatSocietyAdapter;
 import org.jesperancinha.ocp11.mastery4dot1.states.LBJGovernment;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Properties;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -44,6 +50,7 @@ public class Mastery4Dot1Runner {
         exercise5();
         exercise6();
         exercise7();
+        exercise8();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
@@ -52,21 +59,67 @@ public class Mastery4Dot1Runner {
         printUnicornsLn(100);
     }
 
+    private static void exercise8() {
+        printBrightCyanGenericLn("--- 8. Loading drivers in JDBC 4.0");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We need to record the different missions that took place in the Vietnam War.");
+        printGreenGenericLn("The Vietnam war is a period that lasted between 1887 and 1975.");
+        printGreenGenericLn("The US had a prominent role in this role which escalated very fast between 1965 and 1968.");
+        printGreenGenericLn("During period, Operation Rolling Thunder took place.");
+        printGreenGenericLn("From: https://en.wikipedia.org/wiki/Operation_Rolling_Thunder:");
+        printGreenGenericLn("Operation Rolling Thunder was the title of a gradual and sustained aerial bombardment campaign conducted by the United States (U.S.) 2nd Air Division (later Seventh Air Force), U.S. Navy, and Republic of Vietnam Air Force (RVNAF) against the Democratic Republic of Vietnam (North Vietnam) from 2 March 1965 until 2 November 1968, during the Vietnam War.");
+        printGreenGenericLn("Let's put this in our database. We will use an H2 database");
+        try {
+            Properties p = new Properties();
+            p.setProperty("user", "sa");
+            p.setProperty("password", "");
+            Connection conn = DriverManager.getConnection("jdbc:h2:mem:", p);
+            printMagentaGenericLn("Connection: %s / %s", conn.getMetaData().getDatabaseProductName(), conn.getCatalog());
+            printMagentaGenericLn("Current auto-commit setting: %s", conn.getAutoCommit());
+            printMagentaGenericLn("We can configure this because our dependency com.h2database:h2:1.4.200 contains:");
+            printMagentaGenericLn("1. file java.sql.Driver in /META-INF/services/java.sql.Driver");
+            printMagentaGenericLn("2. this file contains: org.h2.Driver");
+            printMagentaGenericLn("This way, the runtime knows which driver to use.");
+            PreparedStatement statement = conn.prepareStatement(
+                    "CREATE TABLE Operations(ID IDENTITY AUTO_INCREMENT NOT NULL, DESCRIPTION VARCHAR(1000), SOURCE VARCHAR(50), YEAR INT);");
+            statement.executeUpdate();
+            statement = conn.prepareStatement("INSERT INTO Operations(DESCRIPTION,SOURCE, YEAR) VALUES ( ?,?,? );");
+            statement.setString(1, "Operation Rolling Thunder was the title of a gradual and sustained aerial bombardment campaign conducted by the United States (U.S.) 2nd Air Division (later Seventh Air Force), U.S. Navy, and Republic of Vietnam Air Force (RVNAF) against the Democratic Republic of Vietnam (North Vietnam) from 2 March 1965 until 2 November 1968, during the Vietnam War.");
+            statement.setString(2, "Wikipedia");
+            statement.setString(3, "1965");
+            statement.execute();
+            statement = conn.prepareStatement("SELECT * FROM OPERATIONS;");
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()) {
+                printMagentaGenericLn("The result is %s", resultSet.getString(1));
+                printMagentaGenericLn("The result is %s", resultSet.getString(2));
+                printMagentaGenericLn("The result is %s", resultSet.getString(3));
+                printMagentaGenericLn("The result is %s", resultSet.getString(4));
+            }
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. In JDBC4.0, available in Java 11, we don't need to load the driver.");
+        printGreenGenericLn("2. As file java.sql.Driver exists in /META-INF/services of that library, the driver is automatically loaded.");
+    }
+
     private static void exercise7() {
         printBrightCyanGenericLn("--- 7. Calculating averages with `collector`'s or with Number typed streams");
         printRainbowLn("==");
         printGreenGenericLn("Case: We will count the average count of electoral votes per state in the results of the 1968th USA presidential election.");
-        final int []votes = {3,5,40,6,3,14,4,26,13,9,7,9,12,4,5,3,4,17,4,12,4,26,8,6,8,4,11,4,3,12,12,3};
+        final int[] votes = {3, 5, 40, 6, 3, 14, 4, 26, 13, 9, 7, 9, 12, 4, 5, 3, 4, 17, 4, 12, 4, 26, 8, 6, 8, 4, 11, 4, 3, 12, 12, 3};
         var sum1FromIntStream = Arrays.stream(votes).sum();
-        var sum1FromObjStream = Arrays.stream(votes).mapToObj(i->i).reduce(0, (a,b)->  a+b);
+        var sum1FromObjStream = Arrays.stream(votes).mapToObj(i -> i).reduce(0, (a, b) -> a + b);
         var sum1FromBoxedStrem = Arrays.stream(votes).boxed().reduce(0, Integer::sum);
-        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via IntStream)",  "Richard Nixon", sum1FromIntStream);
-        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via ObjStream)","Richard Nixon", sum1FromObjStream);
-        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via BoxedStream)","Richard Nixon", sum1FromBoxedStrem);
+        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via IntStream)", "Richard Nixon", sum1FromIntStream);
+        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via ObjStream)", "Richard Nixon", sum1FromObjStream);
+        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via BoxedStream)", "Richard Nixon", sum1FromBoxedStrem);
         var avg1FromIntStream = Arrays.stream(votes).average().getAsDouble();
-        var avg1FromBoxedStreamDouble = Arrays.stream(votes).boxed().collect(Collectors.averagingDouble(i->i));
-        var avg1FromBoxedStreamInt = Arrays.stream(votes).boxed().collect(Collectors.averagingInt(i->i));
-        var avg1FromBoxedStreamLong = Arrays.stream(votes).boxed().collect(Collectors.averagingLong(i->i));
+        var avg1FromBoxedStreamDouble = Arrays.stream(votes).boxed().collect(Collectors.averagingDouble(i -> i));
+        var avg1FromBoxedStreamInt = Arrays.stream(votes).boxed().collect(Collectors.averagingInt(i -> i));
+        var avg1FromBoxedStreamLong = Arrays.stream(votes).boxed().collect(Collectors.averagingLong(i -> i));
         printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via IntStream)", avg1FromIntStream);
         printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingDouble)", avg1FromBoxedStreamDouble);
         printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingInt)", avg1FromBoxedStreamInt);
@@ -82,7 +135,7 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("Case: After JFK's assassination, LBJ inherited the bill of rights which JFK had fought for, for so long.");
         printGreenGenericLn("This was the time to make a move, and make a move LBJ did!");
         printGreenGenericLn("Marylin Monroe, didn't sing Happy B'Day to LBJ though.");
-        var lbjGovernment  = new LBJGovernment();
+        var lbjGovernment = new LBJGovernment();
         printMagentaGenericLn("Work to do:");
         printMagentaGenericLn("Civil Rights Bill passed: %s", lbjGovernment.civilRightsBill);
         printMagentaGenericLn("Happy birthday passed: %s", lbjGovernment.bDay);
