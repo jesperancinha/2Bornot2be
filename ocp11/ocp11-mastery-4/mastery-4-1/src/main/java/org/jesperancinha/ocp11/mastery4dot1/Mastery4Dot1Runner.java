@@ -13,11 +13,16 @@ import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
 import org.jesperancinha.ocp11.mastery4dot1.society.TheGreatSocietyAdapter;
 import org.jesperancinha.ocp11.mastery4dot1.states.LBJGovernment;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Properties;
@@ -41,8 +46,8 @@ public class Mastery4Dot1Runner {
             skipQuestions = "-skip".equals(args[0]);
         }
         Consolerizer.typingWaitGlobal = 0;
-        printBlueGenericLn("================== Master Module mastery-4-1 ==================");
-
+        printBlueGenericLn("==================== Master Module mastery-4-1 ====================");
+        printBlueGenericLn("Note that this mastery need the prepare.sh script to be run first.");
         exercise1();
         exercise2();
         exercise3();
@@ -51,12 +56,65 @@ public class Mastery4Dot1Runner {
         exercise6();
         exercise7();
         exercise8();
+        exercise9();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise9() {
+        printBrightCyanGenericLn("--- 9. DOS attacks in Java");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: It's 1967, you work for the Pentagon and you come across some papers about the USA involvement in the Vietnam war.");
+        printGreenGenericLn("You have to keep these papers safe, so you decide to make a copy of these files to your safe.");
+        printGreenGenericLn("We'll this in some safe way.");
+        printGreenGenericLn("We also know that files bigger than 2000 characters are fake.");
+        printGreenGenericLn("We still copy until its 2000 characters.");
+        printGreenGenericLn("We will also process maximum 200 files.");
+        printGreenGenericLn("We will validate evey file and check for pattern /tmp/pentagon to avoid path traversal.");
+        final String[] fileNames = {"/tmp/pentagon_paper1.txt", "/tmp/pentagon_paper2.txt", "/tmp/pentagon_paper3.txt"};
+        printMagentaGenericLn("Check your /tmp/tmp folder for the results!");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Guideline 1-1 / DOS-1: Beware of activities that may use disproportionate resources");
+        printGreenGenericLn("2. Guideline 1-2 / DOS-2: Release resources in all cases");
+        printGreenGenericLn("3. Guideline 1-3 / DOS-3: Resource limit checks should not suffer from integer overflow");
+        printGreenGenericLn("4. Guideline 1-4 / DOS-4: Implement Robust Error/Exceptions handling for services");
+        processFilesToMainServer(fileNames);
+    }
+
+    private static void processFilesToMainServer(String[] fileNames) {
+        try {
+            int fileCount = 100;
+            for (String file : fileNames) {
+                fileCount--;
+                if (fileCount < 0) {
+                    break;
+                }
+                if (file.startsWith("/tmp/pentagon")) {
+                    try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+                         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("/tmp/" + file))) {
+                        int i = 0;
+                        int result;
+                        do {
+                            char[] chars = new char[1000 * (i + 1)];
+                            result = bufferedReader.read(chars, i * 1000, 1000);
+                            bufferedWriter.write(chars, i * 1000, 1000);
+                        } while (result > -1 && ++i <= 1);
+                    } catch (FileNotFoundException e) {
+                        printRedGenericLn("File was not found!");
+                        printRedThrowableAndExit(e);
+                    } catch (IOException e) {
+                        printRedGenericLn("An error occurred!");
+                        printRedThrowableAndExit(e);
+                    }
+                }
+            }
+        } catch (Throwable e) {
+            printRedThrowableAndExit(e);
+        }
     }
 
     private static void exercise8() {
@@ -90,7 +148,7 @@ public class Mastery4Dot1Runner {
             statement.execute();
             statement = conn.prepareStatement("SELECT * FROM OPERATIONS;");
             ResultSet resultSet = statement.executeQuery();
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 printMagentaGenericLn("The result is %s", resultSet.getString(1));
                 printMagentaGenericLn("The result is %s", resultSet.getString(2));
                 printMagentaGenericLn("The result is %s", resultSet.getString(3));

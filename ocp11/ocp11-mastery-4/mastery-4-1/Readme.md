@@ -21,7 +21,17 @@ In this 7th mastery module on route to the Java 11 certification, we are going t
 15. What does `@Deprecated` actually do?
 
 (coming soon...)
- 
+
+## Preparation
+
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
+If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
+The point is that you need to have a `/tmp` folder at this point.
+
+```bash
+./prepare.sh
+```
+
 ## Output
 
 ```text
