@@ -1,115 +1,71 @@
-# mastery-4-1 - Mastery Module 4.1.
+# mastery-4-1-modularity - Mastery Module 4.1. Modularity
 
-In this 7th mastery module on route to the Java 11 certification, we are going to use data from the History of the United States of America in the 60's
+Thid modularity module uses as a datasource, The Daily Mail Transatlantic Air Race commemoration of the 50th anniversary of Alcock and Brown's crossing. 
+It is won by a Royal Navy F-4 Phantom II, taking 4 hours 47 minutes.
+This competition took place between the 4th and the 11th 1969.
 
 ## Exercise
 
-1. `Exception` `catch` order
-2. What is the output of `String` for it's 3 different kind of values: `null`, "" and "Something"
-3. JLS evaluation order in multiple operands
-4. Last `Exception` to execute before exiting program abruptly
-5. Generics separation between `<T>` and `T`
-6. Java Inheritance of state
-7. Calculating averages with `collector`'s or with Number typed streams
-8. Loading of drivers in JDBC 4.0
-9. DOS attacks in Java
-10. Using non-modularized jars in modularized jars - [mastery-4-1-modularity](../mastery-4-1-modularity)
-11. Using `private` in inner classes
-12. All possible `switch`
-13. References operation in shadowing static interface members with class members
-14. What encapsulation CANNOT do!
-15. What does `@Deprecated` actually do?
+We will explore how to use non-modular packages with modular ones and vice-versa.
 
-(coming soon...)
-
-## Preparation
-
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+## How to run
 
 ```bash
-./prepare.sh
+javac -encoding utf-8 --module-source-path pilot-module:../../../jtd-the-factory/consolerizer/src/main  -d out -m pilot
+javac -encoding utf-8 --module-path plane/target:out --module-source-path hangar-module:../../../jtd-the-factory/consolerizer/src/main  -d out -m hangar
 ```
+
+## Take-away
+
+It is important to notice that automatic modules, the ones that come from unamed modules, export all packages.
+However, these packages are only visibile to the modularized packages accessible via requires.
+In our example, we would have no been able to access a `plane` if it was not placed in the `hangar`.
 
 ## Output
 
 ```text
+*** --- We start the competition Competition{name='Daily Mail Trans-Atlantic Air Race of 1969'} ---
+*** *** --- Starting point was Hangar{name='Royal Air Force Space at St Pancras, London, UK'} ---
+*** *** --- Pilot Pilot{name='Tom Lecky-Thompson'} ---
+*** ***
+--- Pilot is getting transported by the airplane ---
+*** --- Pilot Pilot{name='Tom Lecky-Thompson'} ---
+*** --- Plane{model='Royal Navy F-4 Phantom II'} ---
+***
+***
+--- Pilot is getting transported by the airplane ---
+*** --- Pilot Pilot{name='Tom Lecky-Thompson'} ---
+*** --- Plane{model='Royal Navy F-4 Phantom II'} ---
+***
 ```
 
 ## References
 
--   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
-
--   [Pentagon Papers](https://en.wikipedia.org/wiki/Pentagon_Papers)
--   [Operation Rolling Thunder](https://en.wikipedia.org/wiki/Operation_Rolling_Thunder)
--   [1968 United States presidential election](https://en.wikipedia.org/wiki/1968_United_States_presidential_election)
--   [Richard Nixon](https://www.biography.com/us-president/richard-nixon)
--   [Voting Rights Act of 1965](https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965)
--   [Civil Rights Act of 1964](https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964)
--   [Great Society](https://en.wikipedia.org/wiki/Great_Society)
--   [Stonewall riots](https://en.wikipedia.org/wiki/Stonewall_riots)
--   [Lyndon B. Johnson](https://en.wikipedia.org/wiki/Lyndon_B._Johnson)
--   [John F. Kennedy Biography(1917–1963)](https://www.biography.com/us-president/john-f-kennedy)
--   [The 1960s History by The History Channel](https://www.history.com/topics/1960s/1960s-history)
+-   [Those magnificent men in their flying machines: Fascinating pictures commemorate the 50th anniversary of the Daily Mail Great Transatlantic Air Race that gripped the world](https://www.dailymail.co.uk/news/article-6989763/Daily-Mail-Great-Transatlantic-Air-Race-images-commemorate-50th-anniversary-event.html)
+-   [Daily Mail Trans-Atlantic Air Race](https://en.wikipedia.org/wiki/Daily_Mail_Trans-Atlantic_Air_Race)
+-   [1969 in aviation](https://en.wikipedia.org/wiki/1969_in_aviation)
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=pD3Vn44F7as">
+      <a href="https://www.youtube.com/watch?v=Dt45BENU7_0">
          <img 
-              src="https://img.youtube.com/vi/pD3Vn44F7as/0.jpg" 
+              src="https://img.youtube.com/vi/Dt45BENU7_0/0.jpg" 
               style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=Q9wdMJmuBlA">
+      <a href="https://www.youtube.com/watch?v=15XTOdtir-o">
          <img 
-              src="https://img.youtube.com/vi/Q9wdMJmuBlA/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=msw-SCSQm3Q">
-         <img 
-              src="https://img.youtube.com/vi/msw-SCSQm3Q/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=mLXoeelZ7XA">
-         <img 
-              src="https://img.youtube.com/vi/mLXoeelZ7XA/0.jpg" 
+              src="https://img.youtube.com/vi/15XTOdtir-o/0.jpg" 
               style="width:10%;">
       </a>
 </div>
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=6x0l_vkjozc">
+      <a href="https://www.youtube.com/watch?v=cazGjbrUhz0">
          <img 
-              src="https://img.youtube.com/vi/6x0l_vkjozc/0.jpg" 
+              src="https://img.youtube.com/vi/cazGjbrUhz0/0.jpg" 
               style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=MR41T36LhMA">
+      <a href="https://www.youtube.com/watch?v=2joCFwckrTs">
          <img 
-              src="https://img.youtube.com/vi/MR41T36LhMA/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=-nrpLVgO7l4">
-         <img 
-              src="https://img.youtube.com/vi/-nrpLVgO7l4/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=5QAF2qF4wHU">
-         <img 
-              src="https://img.youtube.com/vi/5QAF2qF4wHU/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=Ok9941BTzVg">
-         <img 
-              src="https://img.youtube.com/vi/Ok9941BTzVg/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=bcS6N_XPSqA">
-         <img 
-              src="https://img.youtube.com/vi/bcS6N_XPSqA/0.jpg" 
+              src="https://img.youtube.com/vi/2joCFwckrTs/0.jpg" 
               style="width:10%;">
       </a>
 </div>

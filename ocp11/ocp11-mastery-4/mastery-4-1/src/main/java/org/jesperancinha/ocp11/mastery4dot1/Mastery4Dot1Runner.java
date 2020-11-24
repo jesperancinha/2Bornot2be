@@ -57,12 +57,19 @@ public class Mastery4Dot1Runner {
         exercise7();
         exercise8();
         exercise9();
+        exercise10();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise10() {
+        printBrightCyanGenericLn("--- 10. Using non-modularized jars in modularized jars");
+        printRainbowLn("==");
+        printGreenGenericLn("Please check module mastery-4-1-modularity to continue.");
     }
 
     private static void exercise9() {
