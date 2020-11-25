@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.mastery4dot1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot1.concert.Artist;
+import org.jesperancinha.ocp11.mastery4dot1.concert.Radio;
 import org.jesperancinha.ocp11.mastery4dot1.concert.Venue;
 import org.jesperancinha.ocp11.mastery4dot1.levels.BeginnerException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.ExpertException;
@@ -69,12 +70,36 @@ public class Mastery4Dot1Runner {
         exercise11();
         exercise12();
         exercise13();
+        exercise14();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise14() {
+        printBrightCyanGenericLn("---  14. What encapsulation CANNOT do!");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: You were so impressed with day 16th of August 1969 at Woodstock, that you decided to make a radio of it");
+        printGreenGenericLn("The best thing about radio is always the surprise factor and the fact that you do not control it");
+        printGreenGenericLn("So we create a radio with a list of all the artists that played on that day");
+        printGreenGenericLn("We'll get a random artist with the only available method.");
+        var radio = new Radio(List.of("Ravi Shankar", "Melanie", "Arlo Guthrie", "Joan Baez", "Quill",
+                "Country Joe McDonald", "Santana", "John Sebastian", "Keef Hartley Band",
+                "The Incredible String Band", "Canned Heat", "Mountain", "Grateful Dead",
+                "Creedence Clearwater Revival"));
+        printMagentaGenericLn("So now we've hidden our list and any possibility of changing it!");
+        printMagentaGenericLn("We can still select random artist 😉 %s", radio.getRandomArtist());
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Encapsulation is a simple concept");
+        printGreenGenericLn("2. Encapsulation allows to hice unwanted members and methods from public access");
+        printGreenGenericLn("3. Encapsulation has nothing to do with inheritance!");
+        printGreenGenericLn("4. Encapsulation has nothing to do with abstraction!");
+        printGreenGenericLn("5. Encapsulation has nothing to do with polymorphism!");
+        printGreenGenericLn("6. Encapsulation is just about wrapping functionalities to reduce functionality to what is strictly needed!");
+        printGreenGenericLn("7. Encapsulation can be, and frequently is used in combination with other techniques, but that doesn't change its basic principle.");
     }
 
     private static void exercise13() {
