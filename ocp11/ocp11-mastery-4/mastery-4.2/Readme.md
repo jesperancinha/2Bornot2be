@@ -1,4 +1,4 @@
-# mastery-4-1 - Mastery Module 4.1.
+# mastery-4-2 - Mastery Module 4.2.
 
 Welcome to my 8th mastery module.
 For this module we will master our Java knowledge with Java exercises based on the data of Spanish Pop Music.
@@ -27,7 +27,7 @@ This is all about the spanish pop/indie music history between the 70's going thr
 18. `Arrays` `binarySearch`
 19. `try-with-resources` `open` and `close` methods.
  
-(comming soon...)
+(coming soon...)
 
 ## Output
 
