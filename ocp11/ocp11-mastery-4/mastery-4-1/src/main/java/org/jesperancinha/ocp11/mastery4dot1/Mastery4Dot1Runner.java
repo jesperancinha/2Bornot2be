@@ -155,7 +155,7 @@ public class Mastery4Dot1Runner {
         printBrightCyanGenericLn("--- 12. All possible `switch`");
         printRainbowLn("==");
         printGreenGenericLn("Case: It is the 15th of August 1969 and you just went to have fun with your pals.");
-        printGreenGenericLn("We'll look at the listings to see wha't happening for today and tomorrow.");
+        printGreenGenericLn("We'll look at the listings to see what's happening for today and tomorrow.");
         printBlueGenericLn("Switch case for day 15 and day 16");
         var testDay = 15;
         printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
@@ -270,7 +270,7 @@ public class Mastery4Dot1Runner {
         }
         printBlueGenericLn("This means that although the courtCase is private now, it is still registered for the future.");
         printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. private members can be always access from the outer and inner classes alike");
+        printGreenGenericLn("1. private members can always be accessed from the outer and inner classes alike");
         printGreenGenericLn("2. the scope, however, changes when the class is taken out");
         printGreenGenericLn("3. although the code stays the same, the scope changes");
         printGreenGenericLn("4. moving classes away from their inner scope can also be used to change scope without changing a single line of code.");
@@ -293,13 +293,13 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("We will also process maximum 200 files.");
         printGreenGenericLn("We will validate evey file and check for pattern /tmp/pentagon to avoid path traversal.");
         final String[] fileNames = {"/tmp/pentagon_paper1.txt", "/tmp/pentagon_paper2.txt", "/tmp/pentagon_paper3.txt"};
+        processFilesToMainServer(fileNames);
         printMagentaGenericLn("Check your /tmp/tmp folder for the results!");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Guideline 1-1 / DOS-1: Beware of activities that may use disproportionate resources");
         printGreenGenericLn("2. Guideline 1-2 / DOS-2: Release resources in all cases");
         printGreenGenericLn("3. Guideline 1-3 / DOS-3: Resource limit checks should not suffer from integer overflow");
         printGreenGenericLn("4. Guideline 1-4 / DOS-4: Implement Robust Error/Exceptions handling for services");
-        processFilesToMainServer(fileNames);
     }
 
     private static void processFilesToMainServer(String[] fileNames) {
