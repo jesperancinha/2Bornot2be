@@ -12,6 +12,9 @@ import org.jesperancinha.ocp11.mastery4dot1.riots.RaidException;
 import org.jesperancinha.ocp11.mastery4dot1.riots.ResponseException;
 import org.jesperancinha.ocp11.mastery4dot1.society.TheGreatSocietyAdapter;
 import org.jesperancinha.ocp11.mastery4dot1.states.LBJGovernment;
+import org.jesperancinha.ocp11.mastery4dot1.supreme.Case;
+import org.jesperancinha.ocp11.mastery4dot1.supreme.SupremeCourt;
+import org.jesperancinha.ocp11.mastery4dot1.supreme.SupremeCourtArchive;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,6 +22,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -58,12 +62,50 @@ public class Mastery4Dot1Runner {
         exercise8();
         exercise9();
         exercise10();
+        exercise11();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise11() {
+        printBrightCyanGenericLn("--- 11. Using `private` in inner classes");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: In 1957, Frank Kameny's was fired from the United States Army.");
+        printGreenGenericLn("The case seemed to come from institutionalized homophobia. In fact he was discharged for being found to be a homosexual");
+        printGreenGenericLn("In those years, that was, unfortunately a reason to be used against someone to keep them out of the workforce.");
+        printGreenGenericLn("That started a 4 year case in the Supreme Court of the United States of America.");
+        printGreenGenericLn("Unfortunately, it all came to close in 1961, where Kameny was denied certiorari.");
+        printGreenGenericLn("This means that his case was denied the right to be reviewed and Kameny lost his case.");
+        printGreenGenericLn("This case was closed back then");
+        printGreenGenericLn("Based on this, we will now see how can two classes with exactly the same code, can make properties accessible and non-accessible.");
+        var supremeCourtSession = new SupremeCourt("from:https://en.wikipedia.org/wiki/1960s_in_LGBT_rights\nThe United States Supreme Court denies certiorari to Frank Kameny's petition to review the legality of his firing by the United States Army's Map Service in 1957, bringing his four-year legal battle to a close");
+        printBlueGenericLn("Court Session is opened:");
+        printMagentaGenericLn(supremeCourtSession.getCourtCaseDescription());
+        var supremeCourtSessionArchived = new SupremeCourtArchive(supremeCourtSession.getCourtCaseDescription());
+        printBlueGenericLn("Court Session is closed:");
+        printMagentaGenericLn(supremeCourtSessionArchived.getCourtCaseDescription());
+        printBlueGenericLn("If we check via reflection:");
+        try {
+            Field courtCaseField = supremeCourtSessionArchived.getClass().getDeclaredField("courtCase");
+            courtCaseField.setAccessible(true);
+            Case courtCase = (Case) courtCaseField.get(supremeCourtSessionArchived);
+            Field courtCaseStringField = courtCase.getClass().getDeclaredField("courtCase");
+            courtCaseStringField.setAccessible(true);
+            String courtCaseString = (String) courtCaseStringField.get(courtCase);
+            printMagentaGenericLn(courtCaseString);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            printRedThrowableAndExit(e);
+        }
+        printBlueGenericLn("This means that although the courtCase is private now, it is still registered for the future.");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. private members can be always access from the outer and inner classes alike");
+        printGreenGenericLn("2. the scope, however, changes when the class is taken out");
+        printGreenGenericLn("3. although the code stays the same, the scope changes");
+        printGreenGenericLn("4. moving classes away from their inner scope can also be used to change scope without changing a single line of code.");
     }
 
     private static void exercise10() {

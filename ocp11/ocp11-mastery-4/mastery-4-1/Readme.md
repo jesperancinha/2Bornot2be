@@ -40,7 +40,10 @@ The point is that you need to have a `/tmp` folder at this point.
 ## References
 
 -   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+-   [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
 
+-   [1960s in LGBT rights](https://en.wikipedia.org/wiki/1960s_in_LGBT_rights)
+-   [Frank Kameny](https://en.wikipedia.org/wiki/Frank_Kameny)
 -   [Pentagon Papers](https://en.wikipedia.org/wiki/Pentagon_Papers)
 -   [Operation Rolling Thunder](https://en.wikipedia.org/wiki/Operation_Rolling_Thunder)
 -   [1968 United States presidential election](https://en.wikipedia.org/wiki/1968_United_States_presidential_election)

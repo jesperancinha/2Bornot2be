@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>competition</artifactId>
+    <artifactId>competition-module</artifactId>
 
     <build>
         <sourceDirectory>competition</sourceDirectory>
