@@ -1,6 +1,8 @@
 package org.jesperancinha.ocp11.mastery4dot1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery4dot1.concert.Artist;
+import org.jesperancinha.ocp11.mastery4dot1.concert.Venue;
 import org.jesperancinha.ocp11.mastery4dot1.levels.BeginnerException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.ExpertException;
 import org.jesperancinha.ocp11.mastery4dot1.levels.JuniorException;
@@ -27,6 +29,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -65,12 +68,35 @@ public class Mastery4Dot1Runner {
         exercise10();
         exercise11();
         exercise12();
+        exercise13();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise13() {
+        printBrightCyanGenericLn("--- 13. References operation in shadowing static interface members with class members");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: You don't want to miss the time Joan Baez is going to perform");
+        printGreenGenericLn("Your ticket has two dates and times on it, but which one is the one from your concert?");
+        printGreenGenericLn("And what is the other date about?");
+        var artist = new Artist("Joan Baez",
+                LocalDateTime.of(1968, 8, 16, 3,0),
+                LocalDateTime.of(1968, 8, 16,  3,45)
+        );
+        printMagentaGenericLn("In your ticket it says: %s", artist);
+        printMagentaGenericLn("And the other date is start: %s", ((Venue)artist).start);
+        printMagentaGenericLn("And the other date is end: %s", ((Venue)artist).end);
+        printMagentaGenericLn("Right! This is actually the time Woodstock '69 in %s starts and ends!", artist.location);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Members in interfaces are implicitly static");
+        printGreenGenericLn("2. Static members can be shadowed by instance members");
+        printGreenGenericLn("3. We can, however, by upcasting access them anyways");
+        printGreenGenericLn("4. If we don't upcast, in our specific case, the compiler would interpret that an attempt to access instance members");
+        printGreenGenericLn("5. Since instance members are package protected, and we are on a different package, this results in a compilation failure");
     }
 
     private static void exercise12() {
