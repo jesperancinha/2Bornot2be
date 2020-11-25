@@ -29,6 +29,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -63,12 +64,101 @@ public class Mastery4Dot1Runner {
         exercise9();
         exercise10();
         exercise11();
+        exercise12();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise12() {
+        printBrightCyanGenericLn("--- 12. All possible `switch`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: It is the 15th of August 1969 and you just went to have fun with your pals.");
+        printGreenGenericLn("We'll look at the listings to see wha't happening for today and tomorrow.");
+        printBlueGenericLn("Switch case for day 15 and day 16");
+        var testDay = 15;
+        printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
+        testDay = 16;
+        printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
+        printBlueGenericLn("Switch case for Joan Baez");
+        var artist = "Joan Baez";
+        printMagentaGenericLn("%s is playing these songs:\n%s", artist, getSongsByArtist(artist));
+        printBlueGenericLn("Switch case for who played 5 songs only");
+        var songs = (byte) 5;
+        printMagentaGenericLn("These artists are playing %d songs: %s", songs, getArtistsPerSungSongs(songs));
+        printBlueGenericLn("Switch case for artists who played for 45 minutes = 2700 seconds");
+        var duration = (short) 2700;
+        printMagentaGenericLn("These artists played for %d seconds:\n%s", duration, getArtitstByDuration(duration));
+        var character = 'C';
+        printBlueGenericLn("Switch case for artists who start with a C.");
+        printMagentaGenericLn("These artists played for %s seconds:\n%s", character, getArtitstByFirstCharacter(character));
+        printGreenGenericLn("Take-aways");
+        printGreenGenericLn("1. for switch case, the allowed primitive types are int, short, char and byte");
+        printGreenGenericLn("2. for switch case, the allowed boxing types are Integer, Short, Character and Byte");
+        printGreenGenericLn("3. extra objects can be of type String of enum");
+        printGreenGenericLn("4. cases must be declared with constants");
+        printGreenGenericLn("5. default isn't mandatory but there can only be one");
+    }
+
+    private static List<String> getArtitstByFirstCharacter(char character) {
+        switch (character) {
+            case 'S':
+                return List.of("Swami Satchidananda", "Sweetwater", "Santana", "Sly & the Family Stone", "Sha Na Na");
+            case 'C':
+                return List.of("Country Joe McDonald", "Canned Heat", "Creedence Clearwater Revival", "Country Joe and the Fish", "Crosby, Stills, Nash & Young");
+        }
+        return List.of();
+    }
+
+    private static List<String> getArtitstByDuration(short duration) {
+        switch (duration) {
+            case 2700:
+                return List.of("Sweetwater", "Tim Hardin", "Ravi Shankar", "Joan Baez", "Quill", "Santana", "Keef Hartley Band", "");
+            case 600:
+                return List.of("Swami Satchidananda");
+            default:
+                return List.of();
+        }
+    }
+
+    private static List<String> getArtistsPerSungSongs(byte songs) {
+        switch (songs) {
+            case 5:
+                return List.of("John Sebastian", "Keef Hartley Band", "Grateful Dead");
+            case 6:
+                return List.of("The Incredible String Band", "Canned Heat", "Ten Years After");
+        }
+        return List.of();
+    }
+
+    private static List<String> getSongsByArtist(String artist) {
+        switch (artist) {
+            case "Joan Baez":
+                return List.of("Oh Happy Day",
+                        "The Last Thing on My Mind", "I Shall Be Released",
+                        "Story about how federal marshals took husband David Harris into custody",
+                        "Joe Hill", "Sweet Sir Galahad", "Hickory Wind",
+                        "Drug Store Truck Driving Man (duet with Jeffrey Shurtleff)", "One Day at a Time",
+                        "Take Me Back to the Sweet Sunny South", "Warm and Tender Love",
+                        "Swing Low, Sweet Chariot", "We Shall Overcome");
+            case "Quill":
+                return List.of("They Live the Life", "That's How I Eat", "Driftin'", "Waiting for You");
+        }
+        return List.of();
+    }
+
+    private static List<String> getArtistsPerDay(int testDay) {
+        switch (testDay) {
+            case 15:
+                return List.of("Richie Havens", "Swami Satchidananda", "Sweetwater", "Bert Sommer", "Tim Hardin", "Ravi Shankar");
+            case 16:
+                return List.of("Ravi Shankar", "Melanie", "Arlo Guthrie", "Joan Baez", "Quill", "Country Joe McDonald", "Santana", "John Sebastian", "Keef Hartley Band", "The Incredible String Band", "Canned Heat", "Mountain", "Grateful Dead", "Creedence Clearwater Revival");
+            default:
+                return List.of();
+        }
     }
 
     private static void exercise11() {

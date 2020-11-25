@@ -42,6 +42,7 @@ The point is that you need to have a `/tmp` folder at this point.
 -   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 -   [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
 
+-   [List of performances and events at Woodstock Festival](https://en.wikipedia.org/wiki/List_of_performances_and_events_at_Woodstock_Festival)
 -   [1960s in LGBT rights](https://en.wikipedia.org/wiki/1960s_in_LGBT_rights)
 -   [Frank Kameny](https://en.wikipedia.org/wiki/Frank_Kameny)
 -   [Pentagon Papers](https://en.wikipedia.org/wiki/Pentagon_Papers)
