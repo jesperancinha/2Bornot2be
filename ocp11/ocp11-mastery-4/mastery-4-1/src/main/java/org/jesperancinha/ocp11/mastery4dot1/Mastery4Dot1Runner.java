@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.mastery4dot1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot1.concert.Artist;
+import org.jesperancinha.ocp11.mastery4dot1.concert.DeprecatedArtist;
 import org.jesperancinha.ocp11.mastery4dot1.concert.Radio;
 import org.jesperancinha.ocp11.mastery4dot1.concert.Venue;
 import org.jesperancinha.ocp11.mastery4dot1.levels.BeginnerException;
@@ -71,12 +72,38 @@ public class Mastery4Dot1Runner {
         exercise12();
         exercise13();
         exercise14();
+        exercise15();
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with the united states of america's history flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static void exercise15() {
+        printBrightCyanGenericLn("---  15. What does `@Deprecated` actually do?");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: You are one of the organizers of Woodstock '69");
+        printGreenGenericLn("You realized you made a mistake!");
+        printGreenGenericLn("You've registered Joan Baez to perform but in the wrong register!");
+        printGreenGenericLn("What will happen?");
+        var depprecatedRegistration = new DeprecatedArtist("Joan Baez");
+        printMagentaGenericLn("Oh no! You've registered Joan Baez in the wrong book: %s", depprecatedRegistration);
+        var artist = new Artist("Joan Baez",
+               LocalDateTime.of(1968, 8, 16, 3,0),
+               LocalDateTime.of(1968, 8, 16,  3,45)
+       );
+        printMagentaGenericLn("You sneak into the back and fix your mistake: %s", artist);
+        printBlueGenericLn("We don't see the difference running the code");
+        printBlueGenericLn("This is because @Deprecated activates during compile time");
+        printBlueGenericLn("You should be getting this from your compiler: %s", "'DeprecatedArtist(java.lang.String)' is deprecated \n" +
+                "'org.jesperancinha.ocp11.mastery4dot1.concert.DeprecatedArtist' is deprecated");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. @Deprecated triggers compilers to show warnings");
+        printGreenGenericLn("2. @Deprecated has RUNTIME retention. This just means that the annotation is not removed");
+        printGreenGenericLn("3. @Deprecated is accessible via reflection during runtime.");
+        printGreenGenericLn("4. @Deprecated is applicable all around the code:%s","{CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, MODULE, PARAMETER, TYPE}");
     }
 
     private static void exercise14() {
