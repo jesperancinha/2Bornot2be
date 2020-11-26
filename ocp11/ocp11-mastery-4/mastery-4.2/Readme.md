@@ -37,9 +37,20 @@ This is all about the spanish pop/indie music history between the 70's going thr
 
 ## References
 
+-   [Rapid Tables](https://www.rapidtables.com/convert/number/decimal-to-octal.html)
+-   [Definition of Double in C, C++ and C#](https://www.thoughtco.com/definition-of-double-958065#:~:text=Double%20vs.&text=Its%20range%20is%20approximately%201.5,to%201.7%20%C3%97%2010308.)
+-   [Size of Floats](https://chortle.ccsu.edu/java5/Notes/chap11/ch11_2.html)
 -   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 -   [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
-
+-   [Primitive Data Types by Docs@Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+-   [Java: Primitive data types](https://cs.fit.edu/~ryan/java/language/java-data.html)
+-   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
+-   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
+---
+-   [Analysis of Fangoria by Prezi](https://prezi.com/goxtiwbslbm1/analysis-of-fangoria/)
+-   [The Bloody History of Fangoria, the Magazine That Changed the Way We View Horror Movies](https://www.mentalfloss.com/article/560144/how-fangoria-magazine-changed-horror-movies)
+-   [Fangoria magazine](https://en.wikipedia.org/wiki/Fangoria)
+-   [Fangoria band](https://en.wikipedia.org/wiki/Fangoria_(band))
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=qSkcpM0zDnU">
@@ -123,6 +134,30 @@ This is all about the spanish pop/indie music history between the 70's going thr
       <a href="https://www.youtube.com/watch?v=9DUokHPG5G8">
          <img 
               src="https://img.youtube.com/vi/9DUokHPG5G8/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=t3RzZHWmbBw">
+         <img 
+              src="https://img.youtube.com/vi/t3RzZHWmbBw/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=smfo5w7sKMY">
+         <img 
+              src="https://img.youtube.com/vi/smfo5w7sKMY/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=PaHaA7fQPKA">
+         <img 
+              src="https://img.youtube.com/vi/PaHaA7fQPKA/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=o2tLprSl14U">
+         <img 
+              src="https://img.youtube.com/vi/o2tLprSl14U/0.jpg" 
               style="width:10%;">
       </a>
 </div>
