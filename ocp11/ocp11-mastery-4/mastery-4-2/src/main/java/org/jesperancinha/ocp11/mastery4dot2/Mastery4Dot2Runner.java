@@ -26,7 +26,120 @@ public class Mastery4Dot2Runner {
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
 
         exercise1();
+        exercise2();
 
+        printBrightCyanGenericLn("--- 3. The body of `switch`");
+        printRainbowLn("==");
+
+        printGreenGenericLn("Case: \"¿A quién le importa?\" is a single from 1984 sung by Alaska and Dinamara, and edited by Nacho Canut and Carlos Berlanga.");
+        printGreenGenericLn("There have been a lot of switches in styles up until present for this song. Several covers.");
+        printGreenGenericLn("The reason why this song is so popular is because later in the 80's, it found great recognition in marginalized groups.");
+        printGreenGenericLn("Most importantly the LGBT community from spanish speaking countries.");
+        printGreenGenericLn("The song gained such momentum in that community, that it is now celebrated in the same way as \"I will survive\" from Gloria Gaynor is.");
+        printGreenGenericLn("It mainly has to do with the rebelious theme of the song in which it is said:");
+        printGreenGenericLn("\"Who cares as to what to I do? Who cares as to what do I say? I am like this, I will always be like this and I will never change.\"");
+
+        var i = 1984;
+        printMagentaGenericLn("In year %d version %s was released.", i, getYearMusic(i));
+        i = 2002;
+        printMagentaGenericLn("In year %d version %s was released.", i, getYearMusic(i));
+        i = 2011;
+        printMagentaGenericLn("In year %d version %s was released.", i, getYearMusic(i));
+        i = 2017;
+        var m = 6;
+        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        m = 12;
+        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        i = 2020;
+        m = 6;
+        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        m = 7;
+        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+
+        printGreenGenericLn("Curiosities about switch and other accolades:");
+
+        printBlueGenericLn("        int k =0;\n" +
+                "        for (; k < 100; k++) ;\n" +
+                "        while(k < 100);\n" +
+                "        do {} while (k<100);\n" +
+                "        // Do while without a body is illegal\n" +
+                "        // do while (k<100);\n" +
+                "        // Switches without a body are illegal\n" +
+                "        // switch(i);");
+        int k =0;
+        for (; k < 100; k++) ;
+        while(k < 100);
+        do {} while (k<100);
+        // Do while without a body is illegal
+        // do while (k<100);
+        // Switches without a body are illegal
+        // switch(i);k
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Switches must have a body!");
+        printGreenGenericLn("2. Switches only accept int, short, long, byte, char, their boxed counterparts, Short, Long, Byte, Character, and String and enums as parameters.");
+        printGreenGenericLn("3. do while is akin to a switch in the sense that it also cannot be done without a body.");
+        printGreenGenericLn("4. for and while can be done without a body.");
+
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    /**
+     * -   [RUBÍ 2020, entrada completa a quien le importa](https://www.youtube.com/watch?v=aNMdaRbX_-k)
+     * -   [Rosa López · A quién le importa - 2020](https://www.youtube.com/watch?v=NxlfzjWX2Z4)
+     * -   [A QUIÉN LE IMPORTA - Grupal | Gala 7 | OT 2017](https://www.youtube.com/watch?v=hoH6OXQpmQY)
+     * -   [Himno World Pride Madrid 2017 - A quien le importa 2017](https://www.lasexta.com/especiales/world-pride-madrid/orgullo-lgtbi/a-quien-le-importa-asi-suena-el-himno-oficial-del-world-pride-madrid-2017_201706285953f2d20cf2a25c00ab7737.html)
+     * -   [Fangoria - A quien le importa 2011](https://www.youtube.com/watch?v=XX_hWpPnd3I)
+     * -   [Thalia - A Quien Le Importa - Video Oficial 2002](https://www.youtube.com/watch?v=s0MG5mdwweU)
+     * -   [Alaska y Dinarama A Quién Le Importa (1984)](https://www.youtube.com/watch?v=N2L7cRsUA0E)
+     *
+     * @param y Year of the song inception
+     * @param m Month of the song inception
+     * @return
+     */
+    private static String getYearMonthMusic(int y, int m) {
+        switch (y) {
+            case 2002:
+                return "Thalia - A Quien Le Importa - Video Oficial 2002 - https://www.youtube.com/watch?v=s0MG5mdwweU";
+            // Unreachable statement
+            // break;
+            case 2011:
+                return "Fangoria - A quien le importa 2011 - https://www.youtube.com/watch?v=XX_hWpPnd3I";
+            case 2017:
+                switch (m) {
+                    case 12:
+                        return "A QUIÉN LE IMPORTA - Grupal | Gala 7 | OT 2017 - https://www.youtube.com/watch?v=hoH6OXQpmQY";
+                    case 6:
+                    default:
+                        return "Himno World Pride Madrid 2017 - A quien le importa 2017\nhttps://www.lasexta.com/especiales/world-pride-madrid/orgullo-lgtbi/a-quien-le-importa-asi-suena-el-himno-oficial-del-world-pride-madrid-2017_201706285953f2d20cf2a25c00ab7737.html";
+                }
+            case 2020:
+                switch (m) {
+                    case 6:
+                        return "Rosa López · A quién le importa - 2020 - https://www.youtube.com/watch?v=NxlfzjWX2Z4";
+                    case 7:
+                    default:
+                        return "Camila Sodi - RUBÍ 2020, entrada completa a quien le importa - https://www.youtube.com/watch?v=aNMdaRbX_-k";
+
+
+                }
+            case 1984:
+                // Unreachable statement
+                // break;
+            default:
+                return "Alaska y Dinarama A Quién Le Importa (1984) - https://www.youtube.com/watch?v=N2L7cRsUA0E";
+        }
+    }
+
+    private static String getYearMusic(int y) {
+        return getYearMonthMusic(y, 0);
+    }
+
+
+    private static void exercise2() {
         printBrightCyanGenericLn("--- 2. Different ways to use `this`");
         printRainbowLn("==");
         printGreenGenericLn("Case: In 1981, Hispavox edited and published single \"Juntos\" by Paloma San Basilio");
@@ -35,24 +148,17 @@ public class Mastery4Dot2Runner {
 
         var company = new Company("Hispavox");
         var music = company.new Music("Juntos", "Paloma San Basilio",
-                LocalDateTime.of(1981, 1, 1,0,0,0));
+                LocalDateTime.of(1981, 1, 1, 0, 0, 0));
         // 'org.jesperancinha.ocp11.mastery4dot2.record.Company' is not an enclosing class
         // Company.this
         printBlueGenericLn("The only reason why %s works is because %s is an enclosing class of %s.",
-                "Company.this.company","Company","Music");
+                "Company.this.company", "Company", "Music");
         printMagentaGenericLn(music.getTheMusic());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. `this` is more commonly used within a class to refer to the instance members");
         printGreenGenericLn("2. It cannot be used for static members");
         printGreenGenericLn("3. Although less common, we can use this to refer to the instance members of an enclosing class");
         printGreenGenericLn("4. Even though it looks like a static accessor, it is an instance member accessor");
-
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static void exercise1() {
