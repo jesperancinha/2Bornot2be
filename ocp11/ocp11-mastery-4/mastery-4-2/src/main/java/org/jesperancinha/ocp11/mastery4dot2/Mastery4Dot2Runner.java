@@ -27,10 +27,32 @@ public class Mastery4Dot2Runner {
 
         exercise1();
         exercise2();
+        exercise3();
 
+        printBrightCyanGenericLn("--- 4. The `java.desktop` module");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We want an app that lets us surf the web for short stories about Spanish music");
+        printGreenGenericLn("We'll make our first prototype using the \"Bandido\". A famous spanish album from \"Miguel Bosé\" containing famous anthem \"Amante bandido\"");
+        printGreenGenericLn("We'll use this as the name of our module: amante.bandido");
+        printGreenGenericLn("Please find this module in the sources for mastery-4-3-swing and run it.");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Java SWING libraries, although part of the JDK, they are not part of the java.base module.");
+        printGreenGenericLn("2. Because they are not part of the java.base module, they have to be required.");
+        printGreenGenericLn("3. To require them, you need to require the java.desktop module. Example:");
+        printGreenGenericLn("module amante.bandido {\n" +
+                "    requires java.desktop;\n" +
+                "    requires consolerizer;\n" +
+                "}");
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise3() {
         printBrightCyanGenericLn("--- 3. The body of `switch`");
         printRainbowLn("==");
-
         printGreenGenericLn("Case: \"¿A quién le importa?\" is a single from 1984 sung by Alaska and Dinamara, and edited by Nacho Canut and Carlos Berlanga.");
         printGreenGenericLn("There have been a lot of switches in styles up until present for this song. Several covers.");
         printGreenGenericLn("The reason why this song is so popular is because later in the 80's, it found great recognition in marginalized groups.");
@@ -79,12 +101,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("2. Switches only accept int, short, long, byte, char, their boxed counterparts, Short, Long, Byte, Character, and String and enums as parameters.");
         printGreenGenericLn("3. do while is akin to a switch in the sense that it also cannot be done without a body.");
         printGreenGenericLn("4. for and while can be done without a body.");
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     /**
