@@ -1,6 +1,7 @@
 package org.jesperancinha.ocp11.mastery4dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -24,6 +25,37 @@ public class Mastery4Dot2Runner {
         Consolerizer.typingWaitGlobal = 0;
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
 
+        exercise1();
+
+        printBrightCyanGenericLn("--- 2. Different ways to use `this`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: In 1981, Hispavox edited and published single \"Juntos\" by Paloma San Basilio");
+        printGreenGenericLn("Since then, this song has been sung and remixed by different artists.");
+        printGreenGenericLn("We will register this event and see how can we use `this`.");
+
+        var company = new Company("Hispavox");
+        var music = company.new Music("Juntos", "Paloma San Basilio",
+                LocalDateTime.of(1981, 1, 1,0,0,0));
+        // 'org.jesperancinha.ocp11.mastery4dot2.record.Company' is not an enclosing class
+        // Company.this
+        printBlueGenericLn("The only reason why %s works is because %s is an enclosing class of %s.",
+                "Company.this.company","Company","Music");
+        printMagentaGenericLn(music.getTheMusic());
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. `this` is more commonly used within a class to refer to the instance members");
+        printGreenGenericLn("2. It cannot be used for static members");
+        printGreenGenericLn("3. Although less common, we can use this to refer to the instance members of an enclosing class");
+        printGreenGenericLn("4. Even though it looks like a static accessor, it is an instance member accessor");
+
+
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise1() {
         printBrightCyanGenericLn("--- 1. Primitives Revised");
         printRainbowLn("==");
         printGreenGenericLn("Case: Music group Fangoria was created in 1989.");
@@ -171,12 +203,6 @@ public class Mastery4Dot2Runner {
         a = 1233112213L * 12312232223L * 2;
         // Correct
         a = 1233112213d * 12312232223L * 2;
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
 }

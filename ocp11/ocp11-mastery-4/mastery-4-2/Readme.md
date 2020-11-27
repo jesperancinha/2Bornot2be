@@ -47,6 +47,9 @@ This is all about the spanish pop/indie music history between the 70's going thr
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [Paloma San Basilio](https://nl.wikipedia.org/wiki/Paloma_San_Basilio)
+-   [Juntos Sencillo Paloma San Basilio @ Chordify](https://chordify.net/chords/juntos-sencillo-juntos-paloma-san-basilio-arturo-baez-velasquez)
+-   [Juntos (canción)](https://es.wikipedia.org/wiki/Juntos_(canci%C3%B3n))
 -   [Analysis of Fangoria by Prezi](https://prezi.com/goxtiwbslbm1/analysis-of-fangoria/)
 -   [The Bloody History of Fangoria, the Magazine That Changed the Way We View Horror Movies](https://www.mentalfloss.com/article/560144/how-fangoria-magazine-changed-horror-movies)
 -   [Fangoria magazine](https://en.wikipedia.org/wiki/Fangoria)
