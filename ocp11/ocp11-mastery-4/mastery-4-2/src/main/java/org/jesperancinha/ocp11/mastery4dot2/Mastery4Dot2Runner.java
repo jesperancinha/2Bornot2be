@@ -1,11 +1,15 @@
 package org.jesperancinha.ocp11.mastery4dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery4dot2.concert.Band;
+import org.jesperancinha.ocp11.mastery4dot2.concert.GenericBand;
+import org.jesperancinha.ocp11.mastery4dot2.concert.QuintetBand;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -28,7 +32,68 @@ public class Mastery4Dot2Runner {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
 
+        printBrightCyanGenericLn("--- 5. Hiding and shadowing instance members");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: \"Love of Lesbian\" was founded in 1997.");
+        printGreenGenericLn("Alaska actually started in a band called \"Alaska y los Pegamoides\" in 1979.");
+        printGreenGenericLn("\"Vetusta Morla\" is another band which started in 1998.");
+        printGreenGenericLn("We are going to register them and understand the concept of shadouwing of instance members.");
+        var band = new Band(List.of(
+                "Santi Balmes",
+                "Julián Saldarriaga",
+                "Jordi Roig",
+                "Joan Ramón Planell",
+                "Oriol Bonet"), "Love of Lesbian");
+        var quintetBand = new QuintetBand(
+                List.of(
+                        "Alaska",
+                        "Nacho Canut",
+                        "Ana Curra",
+                        "Eduardo Benavente",
+                        "Carlos Berlanga"
+                ), "Alaska y los Pegamoides");
+        var genericBand = new GenericBand(
+                6, List.of(
+                "Pucho",
+                "David \"el Indio\"",
+                "Álvaro B. Baglietto",
+                "Jorge González",
+                "Guillermo Galván",
+                "Juanma Latorre"
+        ), "Vetusta Morla");
+        printMagentaGenericLn("This is band #1 -> %s", band);
+        printMagentaGenericLn("This is band #2 -> %s", quintetBand);
+        printMagentaGenericLn("This is band #3 -> %s", genericBand);
+        printGreenGenericLn("We notice a few things that may sound odd.");
+        printGreenGenericLn("1. Capacity is different for the subclasses of Band.");
+        printGreenGenericLn("2. Capacity didn't limit the number of allowed members.");
+        printMagentaGenericLn("Band #1 has %d members", band.capacity);
+        printMagentaGenericLn("Band #2 has %d members", ((Band)quintetBand).capacity);
+        printMagentaGenericLn("Band #3 has %d members", ((Band)genericBand).capacity);
+        printGreenGenericLn("Well, we know that for the last two bands this is not true. This is why we have our common getters.");
+        printMagentaGenericLn("Band #1 has %d members", band.getCapacity());
+        printMagentaGenericLn("Band #2 has %d members", quintetBand.getCapacity());
+        printMagentaGenericLn("Band #3 has %d members", genericBand.getCapacity());
+        printGreenGenericLn("This is true, but do methods get overriden?");
+        printMagentaGenericLn("Band #1 has %d members", band.getCapacity());
+        printMagentaGenericLn("Band #2 has %d members", ((Band)quintetBand).getCapacity());
+        printMagentaGenericLn("Band #3 has %d members", ((Band)genericBand).getCapacity());
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Shadowing involves covering another variable. There is no limitation on how this can be done");
+        printGreenGenericLn("2. The overshadowing member will also overshadow the scope");
+        printGreenGenericLn("3. Methods do get overridden regardless of @Override");
+        printGreenGenericLn("4. Capacity in an ArrayList only means that the initial capacity of the Array is fixed.");
+        printGreenGenericLn("5. An ArrayList will change size automatically. Capacity is just used in performance and memory usage fine tuning.");
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise4() {
         printBrightCyanGenericLn("--- 4. The `java.desktop` module");
         printRainbowLn("==");
         printGreenGenericLn("Case: We want an app that lets us surf the web for short stories about Spanish music");
@@ -43,11 +108,6 @@ public class Mastery4Dot2Runner {
                 "    requires java.desktop;\n" +
                 "    requires consolerizer;\n" +
                 "}");
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static void exercise3() {
@@ -88,10 +148,11 @@ public class Mastery4Dot2Runner {
                 "        // do while (k<100);\n" +
                 "        // Switches without a body are illegal\n" +
                 "        // switch(i);");
-        int k =0;
+        int k = 0;
         for (; k < 100; k++) ;
-        while(k < 100);
-        do {} while (k<100);
+        while (k < 100) ;
+        do {
+        } while (k < 100);
         // Do while without a body is illegal
         // do while (k<100);
         // Switches without a body are illegal

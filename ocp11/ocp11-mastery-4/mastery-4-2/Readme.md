@@ -11,7 +11,7 @@ This is all about the spanish pop/indie music history between the 70's going thr
 2. Different ways to use `this`
 3. The body of `switch`
 4. The `java.desktop` module
-5. Hidding and shadowing instance members
+5. Hiding and shadowing instance members
 6. Bypassing overloading methods with different return types
 7. Immutability standards and using `LocalDate` and `LocalDateTime`
 8. Overwriting with `FileOutputStream`
@@ -47,6 +47,10 @@ This is all about the spanish pop/indie music history between the 70's going thr
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [Alaska y los Pegamoides](https://es.wikipedia.org/wiki/Alaska_y_los_Pegamoides)
+-   [Vetusta Morla](https://es.wikipedia.org/wiki/Vetusta_Morla)
+-   [La Casa Azul](https://nl.wikipedia.org/wiki/La_Casa_Azul)
+-   [Love of Lesbian](https://en.wikipedia.org/wiki/Love_of_Lesbian)
 -   [RUBÍ 2020, entrada completa a quien le importa](https://www.youtube.com/watch?v=aNMdaRbX_-k)
 -   [Rosa López · A quién le importa - 2020](https://www.youtube.com/watch?v=NxlfzjWX2Z4)
 -   [A QUIÉN LE IMPORTA - Grupal | Gala 7 | OT 2017](https://www.youtube.com/watch?v=hoH6OXQpmQY)
