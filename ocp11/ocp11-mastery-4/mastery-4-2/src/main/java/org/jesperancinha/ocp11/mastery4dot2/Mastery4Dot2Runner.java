@@ -40,6 +40,15 @@ public class Mastery4Dot2Runner {
         exercise5();
         exercise6();
 
+        printBrightCyanGenericLn("--- 7. Immutability standards and using `LocalDate` and `LocalDateTime`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Alaska started a show in 1984 based on the writings of Dolores Rico Oliver called \"La bola de cristal\".");
+        printGreenGenericLn("\"La bola de cristal\", if yo haven't guessed already means \"The cristal ball\"");
+        printGreenGenericLn("Cristal balls are always portrayed the same way");
+        printGreenGenericLn("They are magic and they give information about the past, the present and the future.");
+        printGreenGenericLn("Each cristal ball is also unique, but how do cristal balls make sure they are not tampered with?");
+        printGreenGenericLn("In other words, what makes cristal balls immutable?");
+
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
@@ -418,7 +427,7 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("6. f is also needed if our number without decimals results to be higher than long");
         printGreenGenericLn("7. f can take in any integer or long");
         printGreenGenericLn("8. d can take in any integer or long or float");
-        printGreenGenericLn("9. Octals have to be multiple of 8 otherwise the 0 before the number rule won't work!");
+        printGreenGenericLn("9. Octals may not have digits higher than 8 otherwise the 0 before the number rule won't work!");
         double a;
         long b = 123;
         a = b;
