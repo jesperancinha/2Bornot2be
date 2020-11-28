@@ -33,13 +33,21 @@ public class Mastery4Dot2Runner {
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
         printBlueGenericLn("----> Run with -ea or -enableassertions for a more accurate run");
 
+        exercise1();
+        exercise2();
+        exercise3();
+        exercise4();
+        exercise5();
+        exercise6();
 
-//        exercise1();
-//        exercise2();
-//        exercise3();
-//        exercise4();
-//        exercise5();
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
 
+    private static void exercise6() {
         printBrightCyanGenericLn("--- 6. Bypassing overloading methods with different return types");
         printRainbowLn("==");
         printGreenGenericLn("Case: We want to go one of the \"La casa azul\" concerts.");
@@ -74,12 +82,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("2. The compiler cannot tell two methods apart if they differ only in their return type");
         printGreenGenericLn("3. This makes sense because if you call a method and do not assign its return value, you also would not be able to tell which method should be called would you?");
         printGreenGenericLn("4. By the previous point we can also infer that parameter naming will not play a role in overloading since we don't call methods via their parameters name in Java... Not yet at least 😊");
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static void exercise5() {
