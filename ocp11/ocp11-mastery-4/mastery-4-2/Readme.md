@@ -29,6 +29,16 @@ This is all about the spanish pop/indie music history between the 70's going thr
  
 (coming soon...)
 
+## Preparation
+
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
+If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
+The point is that you need to have a `/tmp` folder at this point.
+
+```bash
+./prepare.sh
+```
+
 ## Output
 
 ```text
@@ -48,6 +58,8 @@ This is all about the spanish pop/indie music history between the 70's going thr
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [Raúl - Sueño su boca](https://genius.com/Raul-sueno-su-boca-lyrics)
+-   [Raúl Fuentes Cuenca](https://en.wikipedia.org/wiki/Ra%C3%BAl_Fuentes_Cuenca)
 -   [La Bola de Cristal](https://en.wikipedia.org/wiki/La_Bola_de_Cristal)
 -   [La Casa Azul](https://en.wikipedia.org/wiki/La_Casa_Azul)
 -   [Alaska y los Pegamoides](https://es.wikipedia.org/wiki/Alaska_y_los_Pegamoides)

@@ -8,6 +8,10 @@ import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 import org.jesperancinha.ocp11.mastery4dot2.show.CristalBall;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.time.Instant;
@@ -26,6 +30,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGe
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 import static org.jesperancinha.ocp11.mastery4dot2.concert.Ticket.getTicketsLongNumbers;
 import static org.jesperancinha.ocp11.mastery4dot2.concert.Ticket.getTicketsStringNumbers;
 
@@ -40,6 +45,7 @@ public class Mastery4Dot2Runner {
         Consolerizer.maxLineCharsGlobal = 200;
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
         printBlueGenericLn("----> Run with -ea or -enableassertions for a more accurate run");
+        printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
         exercise1();
         exercise2();
@@ -48,6 +54,62 @@ public class Mastery4Dot2Runner {
         exercise5();
         exercise6();
         exercise7();
+
+        printBrightCyanGenericLn("--- 8. Overwriting with `FileOutputStream`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: \"Sueño su boca\" was the first big hit of Raúl Cuenca in Spain.");
+        printGreenGenericLn("In the year 2000, this hit was being played all across spanish speaking countries and the rest of the latin world.");
+        printGreenGenericLn("You want to save the lyrics and made it through to copying them to one friend");
+        printGreenGenericLn("Now you you are making the second copy you make a mistake and only copy a bit of it to the same destination file.");
+        printGreenGenericLn("Will there be a change?.");
+        try (
+                var fis = new FileInputStream("/tmp/raul_lyrics.txt");
+                var fos = new FileOutputStream("/tmp/raul_lyrics2.txt");
+        ) {
+            byte[] buffer = new byte[2048];
+            int bytes;
+            while ((bytes = fis.read(buffer)) != -1) {
+                fos.write(buffer, 0, bytes);
+                printYellowGenericLn(new String(buffer).trim());
+            }
+        } catch (FileNotFoundException e) {
+            printRedThrowableAndExit(e);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        } catch (Exception e) {
+            printRedThrowableAndExit(e);
+        }
+        printBlueGenericLn("Check your file contents in the file system: /tmp/raul_lyrics2.txt.");
+        printBlueGenericLn("Press ENTER twice to continue...");
+        if (!skipQuestions) {
+            try {
+                System.in.read();
+            } catch (IOException e) {
+                printRedThrowableAndExit(e);
+            }
+        }
+        try (
+                var fis = new FileInputStream("/tmp/raul_lyrics.txt");
+                var fos = new FileOutputStream("/tmp/raul_lyrics2.txt");
+        ) {
+            byte[] buffer = new byte[100];
+            int bytes;
+            bytes = fis.read(buffer);
+            fos.write(buffer, 0, bytes);
+            printYellowGenericLn(new String(buffer).trim());
+        } catch (FileNotFoundException e) {
+            printRedThrowableAndExit(e);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        } catch (Exception e) {
+            printRedThrowableAndExit(e);
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. By default, FileOutputStream is configured to have the appendMode to false.");
+        printGreenGenericLn("2. If appendMode is disable, the file gets overwritten.");
+        printGreenGenericLn("3. Overwriting a file means that the file is written all over again.");
+        printGreenGenericLn("4. When we start again, we remove all original data.");
+
 
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
