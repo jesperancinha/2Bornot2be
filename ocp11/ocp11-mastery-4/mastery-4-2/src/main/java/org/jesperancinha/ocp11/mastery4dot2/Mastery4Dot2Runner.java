@@ -6,10 +6,16 @@ import org.jesperancinha.ocp11.mastery4dot2.concert.GenericBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.QuintetBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
+import org.jesperancinha.ocp11.mastery4dot2.show.CristalBall;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
@@ -18,6 +24,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMag
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.ocp11.mastery4dot2.concert.Ticket.getTicketsLongNumbers;
 import static org.jesperancinha.ocp11.mastery4dot2.concert.Ticket.getTicketsStringNumbers;
@@ -30,6 +37,7 @@ public class Mastery4Dot2Runner {
             skipQuestions = "-skip".equals(args[0]);
         }
         Consolerizer.typingWaitGlobal = 0;
+        Consolerizer.maxLineCharsGlobal = 200;
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
         printBlueGenericLn("----> Run with -ea or -enableassertions for a more accurate run");
 
@@ -39,7 +47,16 @@ public class Mastery4Dot2Runner {
         exercise4();
         exercise5();
         exercise6();
+        exercise7();
 
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise7() {
         printBrightCyanGenericLn("--- 7. Immutability standards and using `LocalDate` and `LocalDateTime`");
         printRainbowLn("==");
         printGreenGenericLn("Case: Alaska started a show in 1984 based on the writings of Dolores Rico Oliver called \"La bola de cristal\".");
@@ -48,12 +65,70 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("They are magic and they give information about the past, the present and the future.");
         printGreenGenericLn("Each cristal ball is also unique, but how do cristal balls make sure they are not tampered with?");
         printGreenGenericLn("In other words, what makes cristal balls immutable?");
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
+        printGreenGenericLn("For our case we are just interested on the first 5 requirements for security guidelines 6 on Mutable classes: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        CristalBall bolaDeCristal = null;
+        try {
+            bolaDeCristal = CristalBall.createCristalBall(
+                    "Alaska",
+                    new Date(86, Calendar.OCTOBER, 6),
+                    new Band(
+                            List.of(
+                                    "Alaska",
+                                    "Nacho Canut",
+                                    "Ana Curra",
+                                    "Eduardo Benavente",
+                                    "Carlos Berlanga"
+                            ), "Alaska y los Pegamoides"));
+        } catch (NoSuchProviderException e) {
+            printRedThrowableAndExit(e);
+        } catch (NoSuchAlgorithmException e) {
+            printRedThrowableAndExit(e);
+        }
+        printMagentaGenericLn("This is the Cristal Ball of Episode I\n%s", bolaDeCristal);
+        printMagentaGenericLn("We can get the from the available ones\n%s", CristalBall.getHost(bolaDeCristal));
+        printMagentaGenericLn("We can get it from the available ones\n%s", CristalBall.getCristalBall(bolaDeCristal.getPriv()));
+        printBrightCyanGenericLn("We can also comment it out:");
+        bolaDeCristal.setComment("Me encanta este show! Super guay!!");
+        printMagentaGenericLn("And then we get a comment on our Cristal Ball\n%s", bolaDeCristal);
+        printBrightCyanGenericLn("And if we check if this is immutable:");
+        Date date = bolaDeCristal.getDate();
+        Date dateSafeCopy = bolaDeCristal.getDateSafeCopy();
+        LocalDate localDate = bolaDeCristal.getLocalDate();
+        LocalDateTime localDateTime = bolaDeCristal.getLocalDateTime();
+        Band band = bolaDeCristal.getBand();
+        String host = bolaDeCristal.getHost();
+        printMagentaGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
+        printBrightCyanGenericLn("Let's tamper that and see if we can change it!");
+        date.setYear(200);
+        dateSafeCopy.setTime(200);
+        band.capacity = 1000;
+        printBrightCyanGenericLn("Note that LocalDate and LocalDateTime are already immutable");
+        printBrightCyanGenericLn("We did change the date objects and the capacity.");
+        printBrightCyanGenericLn("From the outside we get the impression that we changed our original cristal ball:");
+        printMagentaGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
+        printBrightCyanGenericLn("But from the inside we see that nothing has changed:");
+        date = bolaDeCristal.getDate();
+        dateSafeCopy = bolaDeCristal.getDateSafeCopy();
+        localDate = bolaDeCristal.getLocalDate();
+        localDateTime = bolaDeCristal.getLocalDateTime();
+        band = bolaDeCristal.getBand();
+        host = bolaDeCristal.getHost();
+        printMagentaGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
+        printBrightCyanGenericLn("If we make a copy of it, we can use our method. Remember that we made a copy method to make a copy easy and follow the secuirty guidelines:");
+        try {
+            printMagentaGenericLn("This is our copy:\n%s", bolaDeCristal.copy());
+        } catch (NoSuchProviderException e) {
+            printRedThrowableAndExit(e);
+        } catch (NoSuchAlgorithmException e) {
+            printRedThrowableAndExit(e);
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. We followed the Java Security Guidelines for Mutability from point 1 to 5, which are the most common");
+        printGreenGenericLn("1.1 Guideline 6-1 / MUTABLE-1: Prefer immutability for value types");
+        printGreenGenericLn("1.2 Guideline 6-2 / MUTABLE-2: Create copies of mutable output values");
+        printGreenGenericLn("1.3 Guideline 6-3 / MUTABLE-3: Create safe copies of mutable and subclassable input values");
+        printGreenGenericLn("1.4 Guideline 6-4 / MUTABLE-4: Support copy functionality for a mutable class");
+        printGreenGenericLn("1.5 Guideline 6-5 / MUTABLE-5: Do not trust identity equality when overridable on input reference objects");
     }
 
     private static void exercise6() {

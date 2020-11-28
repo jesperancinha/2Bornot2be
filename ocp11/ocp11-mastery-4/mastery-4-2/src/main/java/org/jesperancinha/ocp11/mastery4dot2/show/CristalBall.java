@@ -2,14 +2,18 @@ package org.jesperancinha.ocp11.mastery4dot2.show;
 
 import org.jesperancinha.ocp11.mastery4dot2.concert.Band;
 
+import java.nio.charset.Charset;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.PrivateKey;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -19,6 +23,9 @@ public final class CristalBall {
 
     // Guideline 6-5 / MUTABLE-5: Do not trust identity equality when overridable on input reference objects
     private static final Map<PrivateKey, CristalBall> cristalBalls = new WeakHashMap<>();
+
+    // Guideline 6-5 / MUTABLE-5: Do not trust identity equality when overridable on input reference objects
+    private  static final Map<CristalBall,String> cristalBallIdentities = new IdentityHashMap<>();
 
     // Guideline 6-1 / MUTABLE-1: Prefer immutability for value types
     private final String host;
@@ -35,6 +42,8 @@ public final class CristalBall {
 
     private final PrivateKey priv;
 
+    private  String comment;
+
     // Guideline 6-1 / MUTABLE-1: Prefer immutability for value types
     // Guideline 6-2 / MUTABLE-2: Create copies of mutable output values
     // Guideline 6-3 / MUTABLE-3: Create safe copies of mutable and subclassable input values
@@ -44,12 +53,13 @@ public final class CristalBall {
         this.host = host;
         this.date = (Date) date.clone();
         this.band = new Band(band.getMembers(), band.getBandName());
-        this.localDate = null;
-        this.localDateTime = null;
+        this.localDate = Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDate();
+        this.localDateTime = Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDateTime();
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DSA", "SUN");
         KeyPair pair = keyGen.generateKeyPair();
         this.priv = pair.getPrivate();
-        printYellowGenericLn("Public key is %s", pair.getPublic());
+        cristalBallIdentities.put(this, this.host);
+        cristalBalls.put(this.priv, this);
     }
 
     public static CristalBall createCristalBall(final String host, final Date date, final Band band) throws NoSuchProviderException, NoSuchAlgorithmException {
@@ -89,10 +99,42 @@ public final class CristalBall {
     // Guideline 6-3 / MUTABLE-3: Create safe copies of mutable and subclassable input values
     // Guideline 6-4 / MUTABLE-4: Support copy functionality for a mutable class
     public CristalBall copy() throws NoSuchProviderException, NoSuchAlgorithmException {
-        return new CristalBall(host, getDate(), getBand());
+        var cristalBall = new CristalBall(host, getDate(), getBand());
+        cristalBall.setComment(this.comment);
+        return cristalBall;
     }
 
-    public CristalBall getCristalBall(PrivateKey key){
+    public PrivateKey getPriv() {
+        return priv;
+    }
+
+    public static CristalBall getCristalBall(PrivateKey key){
         return cristalBalls.get(key);
+    }
+
+    public static String getHost(CristalBall key){
+        return cristalBallIdentities.get(key);
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+
+    @Override
+    public String toString() {
+        return "CristalBall{" +
+                "host='" + host + '\'' +
+                ", localDate=" + localDate +
+                ", localDateTime=" + localDateTime +
+                ", date=" + date +
+                ", band=" + band +
+                ", priv=" + priv +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }
