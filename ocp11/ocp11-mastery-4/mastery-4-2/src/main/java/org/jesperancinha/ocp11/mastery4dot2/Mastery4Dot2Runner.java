@@ -4,6 +4,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot2.concert.Band;
 import org.jesperancinha.ocp11.mastery4dot2.concert.GenericBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.QuintetBand;
+import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 
 import java.time.Instant;
@@ -18,6 +19,8 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGene
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.ocp11.mastery4dot2.concert.Ticket.getTicketsLongNumbers;
+import static org.jesperancinha.ocp11.mastery4dot2.concert.Ticket.getTicketsStringNumbers;
 
 public class Mastery4Dot2Runner {
     private static boolean skipQuestions;
@@ -28,12 +31,58 @@ public class Mastery4Dot2Runner {
         }
         Consolerizer.typingWaitGlobal = 0;
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
+        printBlueGenericLn("----> Run with -ea or -enableassertions for a more accurate run");
 
-        exercise1();
-        exercise2();
-        exercise3();
-        exercise4();
 
+//        exercise1();
+//        exercise2();
+//        exercise3();
+//        exercise4();
+//        exercise5();
+
+        printBrightCyanGenericLn("--- 6. Bypassing overloading methods with different return types");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We want to go one of the \"La casa azul\" concerts.");
+        printGreenGenericLn("Time is running out to book them, we don't know to which one we can go to.");
+        printGreenGenericLn("So we decide to buy a bunch of them.");
+        var ticket1 = new Ticket("La casa azul", "El Ejido, " +
+                "ES", "ES23424ES23432", LocalDateTime.of(2019, 4, 27, 0, 0, 0));
+        var ticket2 = new Ticket("La casa azul", "El Ejido, " +
+                "ES", 123232341342312L, LocalDateTime.of(2019, 4, 27, 0, 0, 0));
+        var ticket3 = new Ticket("La casa azul", "Seville, " +
+                "ES", 193874567394857L, LocalDateTime.of(2019, 6, 29, 0, 0, 0));
+        printMagentaGenericLn("Our first ticket is -> %s", ticket1);
+        printMagentaGenericLn("Our second ticket is -> %s", ticket2);
+        printMagentaGenericLn("Our third ticket is -> %s", ticket3);
+        printMagentaGenericLn("We have all the tickets for \"La casa azul\":\n%s", getTicketsStringNumbers("La casa azul"));
+        printMagentaGenericLn("Some of them are just numbers:\n%s", getTicketsLongNumbers("La casa azul"));
+        printBrightCyanGenericLn("We realize that we can only go to the latest one!");
+        printBrightCyanGenericLn("Let's unregister te last two tickets");
+        var ticket1U = Ticket.unregisterTicket("ES23424ES23432");
+        var ticket2U = Ticket.unregisterTicket(123232341342312L);
+        assert ticket1.equals(ticket1U);
+        assert ticket2.equals(ticket2U);
+        printMagentaGenericLn("We've unregistered tickets\n%s\nand\n%s", ticket1U, ticket2U);
+        final var allTicketsLaCasaAzul = getTicketsStringNumbers("La casa azul");
+        printMagentaGenericLn("We finally should only have one ticket in our reservation:\n%s", allTicketsLaCasaAzul);
+        final var ticketNumber = allTicketsLaCasaAzul.get(0);
+        final var finalTicket = Ticket.getTicket(ticketNumber);
+        printMagentaGenericLn("Hurrah! We are going to %s to watch %s with ticket %s on the %s",
+                finalTicket.getVenue(), finalTicket.getBandName(), finalTicket.getTicketNumber(), finalTicket.getLocalDateTime());
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Methods can be overloaded if their parameters are different both in number and in types");
+        printGreenGenericLn("2. The compiler cannot tell two methods apart if they differ only in their return type");
+        printGreenGenericLn("3. This makes sense because if you call a method and do not assign its return value, you also would not be able to tell which method should be called would you?");
+        printGreenGenericLn("4. By the previous point we can also infer that parameter naming will not play a role in overloading since we don't call methods via their parameters name in Java... Not yet at least 😊");
+
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise5() {
         printBrightCyanGenericLn("--- 5. Hiding and shadowing instance members");
         printRainbowLn("==");
         printGreenGenericLn("Case: \"Love of Lesbian\" was founded in 1997.");
@@ -70,27 +119,22 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("1. Capacity is different for the subclasses of Band.");
         printGreenGenericLn("2. Capacity didn't limit the number of allowed members.");
         printMagentaGenericLn("Band #1 has %d members", band.capacity);
-        printMagentaGenericLn("Band #2 has %d members", ((Band)quintetBand).capacity);
-        printMagentaGenericLn("Band #3 has %d members", ((Band)genericBand).capacity);
+        printMagentaGenericLn("Band #2 has %d members", ((Band) quintetBand).capacity);
+        printMagentaGenericLn("Band #3 has %d members", ((Band) genericBand).capacity);
         printGreenGenericLn("Well, we know that for the last two bands this is not true. This is why we have our common getters.");
         printMagentaGenericLn("Band #1 has %d members", band.getCapacity());
         printMagentaGenericLn("Band #2 has %d members", quintetBand.getCapacity());
         printMagentaGenericLn("Band #3 has %d members", genericBand.getCapacity());
         printGreenGenericLn("This is true, but do methods get overriden?");
         printMagentaGenericLn("Band #1 has %d members", band.getCapacity());
-        printMagentaGenericLn("Band #2 has %d members", ((Band)quintetBand).getCapacity());
-        printMagentaGenericLn("Band #3 has %d members", ((Band)genericBand).getCapacity());
+        printMagentaGenericLn("Band #2 has %d members", ((Band) quintetBand).getCapacity());
+        printMagentaGenericLn("Band #3 has %d members", ((Band) genericBand).getCapacity());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Shadowing involves covering another variable. There is no limitation on how this can be done");
         printGreenGenericLn("2. The overshadowing member will also overshadow the scope");
         printGreenGenericLn("3. Methods do get overridden regardless of @Override");
         printGreenGenericLn("4. Capacity in an ArrayList only means that the initial capacity of the Array is fixed.");
         printGreenGenericLn("5. An ArrayList will change size automatically. Capacity is just used in performance and memory usage fine tuning.");
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static void exercise4() {

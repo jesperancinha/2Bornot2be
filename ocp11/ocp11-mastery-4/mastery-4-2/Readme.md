@@ -47,6 +47,7 @@ This is all about the spanish pop/indie music history between the 70's going thr
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [La Casa Azul](https://en.wikipedia.org/wiki/La_Casa_Azul)
 -   [Alaska y los Pegamoides](https://es.wikipedia.org/wiki/Alaska_y_los_Pegamoides)
 -   [Vetusta Morla](https://es.wikipedia.org/wiki/Vetusta_Morla)
 -   [La Casa Azul](https://nl.wikipedia.org/wiki/La_Casa_Azul)
@@ -173,6 +174,19 @@ This is all about the spanish pop/indie music history between the 70's going thr
       <a href="https://www.youtube.com/watch?v=o2tLprSl14U">
          <img 
               src="https://img.youtube.com/vi/o2tLprSl14U/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=mNIuVRgnOWc">
+         <img 
+              src="https://img.youtube.com/vi/mNIuVRgnOWc/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=vng7HCs2fbE">
+         <img 
+              src="https://img.youtube.com/vi/vng7HCs2fbE/0.jpg" 
               style="width:10%;">
       </a>
 </div>
