@@ -3,6 +3,9 @@ package org.jesperancinha.ocp11.mastery4dot2.concert;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Please not the {@link Band} is not a final class!
+ */
 public class Band {
 
     public int capacity = 4;
@@ -36,5 +39,9 @@ public class Band {
                 ", members=" + members +
                 ", bandName='" + bandName + '\'' +
                 '}';
+    }
+
+    public String getBandName() {
+        return bandName;
     }
 }

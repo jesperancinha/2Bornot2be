@@ -37,6 +37,7 @@ This is all about the spanish pop/indie music history between the 70's going thr
 
 ## References
 
+-   [SecurityManager checkPackageAccess() Method](https://www.tutorialspoint.com/java/lang/securitymanager_checkpackageaccess.htm)
 -   [Rapid Tables](https://www.rapidtables.com/convert/number/decimal-to-octal.html)
 -   [Definition of Double in C, C++ and C#](https://www.thoughtco.com/definition-of-double-958065#:~:text=Double%20vs.&text=Its%20range%20is%20approximately%201.5,to%201.7%20%C3%97%2010308.)
 -   [Size of Floats](https://chortle.ccsu.edu/java5/Notes/chap11/ch11_2.html)
