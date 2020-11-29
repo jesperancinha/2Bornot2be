@@ -67,11 +67,48 @@ public class Mastery4Dot2Runner {
         exercise8();
         exercise9();
 
+        printBrightCyanGenericLn("--- 10. Evaluation order of conditional operators");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Pepe is a manager that loves going to concerts.");
+        printGreenGenericLn("In your team, you know that he is crazy about \"Vetusta Morla\".");
+        printGreenGenericLn("However, sometimes, Pepe forgets to say to the team that is off.");
+        printGreenGenericLn("Not only that, but at the same time that \"Vetusta Morla\" is playing, \"Sidonie\" is also playing in the same week.");
+        printGreenGenericLn("If any of this is true, then we know that Pepe will be off the whole November of 2011.");
+        printGreenGenericLn("We'll check this:");
+        var month = 11;
+        var year = 2011;
+        if (pepeIsOffOn(year, month, 24) || pepeIsOffOn(year, month, 25)) {
+            printMagentaGenericLn("Pepe won't be coming to work this november!");
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Logic operators such as || and && can short circuit in Java");
+        printGreenGenericLn("2. Short circuiting does not imply the evaluation of all operands");
+        printGreenGenericLn("3. Since they are evaluated left to right and considering mathematical precedence, the runtime knows when further evaluation is not needed");
+        printGreenGenericLn("4. When not all operands are evaluated, we call this  a short-circuit");
+
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
         printGreenGenericLn("Thank you!");
         printUnicornsLn(100);
+    }
+
+    private static boolean pepeIsOffOn(int year, int month, int day) {
+        var concertVetustaDate = LocalDateTime.of(2011, 11, 25, 0, 0);
+        var concertSidonieDate = LocalDateTime.of(2011, 11, 24, 0, 0);
+        if (concertVetustaDate.getYear() == year &&
+                concertVetustaDate.getMonthValue() == month &&
+                concertVetustaDate.getDayOfMonth() == day) {
+            printMagentaGenericLn("Pepe is going to see Vetusta Morla on the %s", concertVetustaDate);
+            return true;
+        }
+        if (concertVetustaDate.getYear() == year &&
+                concertSidonieDate.getMonthValue() == month &&
+                concertSidonieDate.getDayOfMonth() == day) {
+            printMagentaGenericLn("Pepe is going to see Sidonie on the %s", concertSidonieDate);
+            return true;
+        }
+        return false;
     }
 
     private static void exercise9() {
@@ -164,7 +201,6 @@ public class Mastery4Dot2Runner {
                     break;
                 }
             }
-            ;
         };
     }
 

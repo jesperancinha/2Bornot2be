@@ -58,6 +58,8 @@ The point is that you need to have a `/tmp` folder at this point.
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [Sidonie (2011) Teatro Circo Price. Madrid](https://www.mercadeopop.com/sidonie-2011-teatro-circo-price-madrid/)
+-   [Vetusta Morla en Concierto en Granada](https://www.granadamarcha.com/2011/11/07/vetusta-morla-en-concierto-en-granada/)
 -   [Arranca la gira española de Paulina Rubio](https://www.20minutos.es/noticia/700639/0/paulina/rubio/gira/)
 -   [Raúl - Sueño su boca](https://genius.com/Raul-sueno-su-boca-lyrics)
 -   [Raúl Fuentes Cuenca](https://en.wikipedia.org/wiki/Ra%C3%BAl_Fuentes_Cuenca)
