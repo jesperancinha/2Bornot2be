@@ -1,6 +1,9 @@
 package org.jesperancinha.ocp11.mastery4dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery4dot2.band.EffectiveBandManager;
+import org.jesperancinha.ocp11.mastery4dot2.band.GeneralBandManager;
+import org.jesperancinha.ocp11.mastery4dot2.band.QuintetBandManager;
 import org.jesperancinha.ocp11.mastery4dot2.concert.Band;
 import org.jesperancinha.ocp11.mastery4dot2.concert.GenericBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.QuintetBand;
@@ -18,6 +21,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.temporal.Temporal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -66,7 +70,71 @@ public class Mastery4Dot2Runner {
         exercise7();
         exercise8();
         exercise9();
+        exercise10();
+        exercise11();
 
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise11() {
+        printBrightCyanGenericLn("--- 11. Method overloading and overriding with `extends`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Some of us like music \"Rosario Flores\" style, others prefer something more edgy like \"Dorian\".");
+        printGreenGenericLn("We now have to manage the upcoming dates and for that we have created just one BandManager abstraction");
+        printGreenGenericLn("Further we have implemented 3 different ways to override and other two to overload the BandManager method.");
+        printGreenGenericLn("We'll put these methods to the test for different times of music history.");
+        var band = new Band(List.of(
+                "Santi Balmes",
+                "Julián Saldarriaga",
+                "Jordi Roig",
+                "Joan Ramón Planell",
+                "Oriol Bonet"), "Love of Lesbian");
+        var quintetBand = new QuintetBand(
+                List.of(
+                        "Alaska",
+                        "Nacho Canut",
+                        "Ana Curra",
+                        "Eduardo Benavente",
+                        "Carlos Berlanga"
+                ), "Alaska y los Pegamoides");
+        var genericBand = new GenericBand(
+                6, List.of(
+                "Pucho",
+                "David \"el Indio\"",
+                "Álvaro B. Baglietto",
+                "Jorge González",
+                "Guillermo Galván",
+                "Juanma Latorre"
+        ), "Vetusta Morla");
+        var paulinaRubio = new GenericBand(1, List.of("Paulina Rubio"), "Paulina Rubio");
+        var rosarioFlores = new GenericBand(1, List.of("Rosario Flores"), "Rosario Flores");
+        printMagentaGenericLn("These are our bands:\n%s\n%s\n%s\n%s\n%s", band, quintetBand, genericBand, paulinaRubio, rosarioFlores);
+        var effectiveBandManager = new EffectiveBandManager();
+        var generalBandManager = new GeneralBandManager();
+        var quintetBandManager = new QuintetBandManager();
+        final Map<Band, Temporal> upcomingDates = effectiveBandManager.getUpcomingDates(band, LocalDateTime.now());
+        final Map<GenericBand, LocalDateTime> upcomingDates1 = generalBandManager.getUpcomingDates(genericBand, LocalDateTime.now());
+        final Map<QuintetBand, LocalDate> upcomingDates2 = quintetBandManager.getUpcomingDates(quintetBand, LocalDate.now());
+        printMagentaGenericLn("The first maps are now ready:\n%s\n%s\n%s", upcomingDates, upcomingDates1, upcomingDates2);
+        upcomingDates1.put(paulinaRubio, LocalDateTime.now());
+        upcomingDates1.put(rosarioFlores, LocalDateTime.now());
+        printMagentaGenericLn("Adding two more artists to this new concert we get:\n%s", upcomingDates1);
+        final Map<GenericBand, LocalDateTime> upcomingDates3 = generalBandManager.getUpcomingDates((Band) genericBand, LocalDateTime.now());
+        final Map<QuintetBand, LocalDate> upcomingDates4 = quintetBandManager.getUpcomingDates((Band) quintetBand, LocalDate.now());
+        printBrightMagentaGenericLn("Had we used the overriden methods we would have gotten:\n%s\nand\n%s", upcomingDates3, upcomingDates4);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Overloading and overriding with extends obeys some specific rules");
+        printGreenGenericLn("2. The base type is the parameter you have to use in order to override");
+        printGreenGenericLn("3. Subclass types of the declared base parameter always results in overloading");
+        printGreenGenericLn("4. The return parameters may be subclass types");
+        printGreenGenericLn("5. Since they have to be subclasses or the same, the type cannot be erased when overriding");
+    }
+
+    private static void exercise10() {
         printBrightCyanGenericLn("--- 10. Evaluation order of conditional operators");
         printRainbowLn("==");
         printGreenGenericLn("Case: Pepe is a manager that loves going to concerts.");
@@ -85,12 +153,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("2. Short circuiting does not imply the evaluation of all operands");
         printGreenGenericLn("3. Since they are evaluated left to right and considering mathematical precedence, the runtime knows when further evaluation is not needed");
         printGreenGenericLn("4. When not all operands are evaluated, we call this  a short-circuit");
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static boolean pepeIsOffOn(int year, int month, int day) {
