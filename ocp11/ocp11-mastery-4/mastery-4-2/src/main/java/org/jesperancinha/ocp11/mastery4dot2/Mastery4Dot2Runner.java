@@ -20,13 +20,22 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -44,7 +53,8 @@ public class Mastery4Dot2Runner {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 200;
         printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
-        printBlueGenericLn("----> Run with -ea or -enableassertions for a more accurate run");
+        printBlueGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
+        printBlueGenericLn("----> Run with -skip to skip questions");
         printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
         exercise1();
@@ -54,7 +64,125 @@ public class Mastery4Dot2Runner {
         exercise5();
         exercise6();
         exercise7();
+        exercise8();
+        exercise9();
 
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
+
+    private static void exercise9() {
+        printBrightCyanGenericLn("--- 9. Why use `putIfAbsent`?");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Someone in your group of friends suggested to go to the next concert of Paulina Rubio.");
+        printGreenGenericLn("Unfortunatelly you cannot go.");
+        printGreenGenericLn("However your friends, Paco, Lori, Nere, Cristina, Viktor, Carlos and Andrea, are really excited to go!");
+        printGreenGenericLn("We need to distribute the tickets as fast as possible and store them in a map.");
+        printGreenGenericLn("The best ticket is the front row one, so in spite of being best friends, they will struggle to get the best one first!");
+        printOrangeGenericLn("Ticket office is open!");
+        var ticketFrontRow = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES1028562319",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var ticketRowTwo = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES0384518495",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var ticketRowThree = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES0174538594",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var ticketRowFour = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES3287451065",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var ticketRowFive = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES0102956473",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var ticketRowSix = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES6674993217",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var ticketRowSeven = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES9928465748",
+                LocalDateTime.of(2010, 5, 8, 0, 0));
+        var precedenceTickets = List.of(ticketFrontRow,
+                ticketRowTwo, ticketRowThree, ticketRowFour, ticketRowFive, ticketRowSix, ticketRowSeven);
+        ExecutorService executorService = Executors.newFixedThreadPool(7);
+        final var ticketMap = new ConcurrentHashMap<Ticket, String>();
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Paco"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Lori"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Nere"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Cristina"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Viktor"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Carlos"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap, "Andrea"));
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(10, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            printRedThrowableAndExit(e);
+        }
+        printMagentaGenericLn("The result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
+        printGreenGenericLn("We would get the same result if we had used putIfAbsent:");
+        final var ticketMap2 = new ConcurrentHashMap<Ticket, String>();
+        executorService = Executors.newFixedThreadPool(7);
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Paco"));
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Lori"));
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Nere"));
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Cristina"));
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Viktor"));
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Carlos"));
+        executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Andrea"));
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(10, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            printRedThrowableAndExit(e);
+        }
+        printMagentaGenericLn("The new result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
+        printGreenGenericLn("These operations will not fail for non-thread safe maps:");
+        final var ticketMap3 = new HashMap<Ticket, String>();
+        executorService = Executors.newFixedThreadPool(7);
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Paco"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Lori"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Nere"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Cristina"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Viktor"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Carlos"));
+        executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Andrea"));
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(10, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            printRedThrowableAndExit(e);
+        }
+        printMagentaGenericLn("The new result is also what we are looking for:\n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. In order to add to a hashmap in a concurrent way, we should use an atomic operation.");
+        printGreenGenericLn("2. putIfAbsent performs a check if exists and add then if not, it puts an element into the map in an atomic way.");
+        printGreenGenericLn("3. This, also works in a non-thread safe map.");
+        printGreenGenericLn("4. For that we do not have to combine our operation with a ConcurrentHashMap which is thread safe.");
+    }
+
+    private static Runnable tryAssignToNoLog(List<Ticket> precedenceTickets, Map<Ticket, String> ticketMap, String winner) {
+        return () -> {
+            for (var nextTicket : precedenceTickets) {
+                final String computeIfAbsent = ticketMap.putIfAbsent(nextTicket, winner);
+                if (Objects.equals(computeIfAbsent, winner)) {
+                    break;
+                }
+            }
+            ;
+        };
+    }
+
+    private static Runnable tryAssignTo(List<Ticket> precedenceTickets, Map<Ticket, String> ticketMap, String winner) {
+        return () -> {
+            for (var nextTicket : precedenceTickets) {
+                final String computeIfAbsent = ticketMap.computeIfAbsent(nextTicket, ticket -> {
+                    printOrangeGenericLn("Assigning ticket %s to %s", ticket, winner);
+                    return winner;
+                });
+                if (Objects.equals(computeIfAbsent, winner)) {
+                    break;
+                }
+            }
+        };
+    }
+
+    private static void exercise8() {
         printBrightCyanGenericLn("--- 8. Overwriting with `FileOutputStream`");
         printRainbowLn("==");
         printGreenGenericLn("Case: \"Sueño su boca\" was the first big hit of Raúl Cuenca in Spain.");
@@ -109,13 +237,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("2. If appendMode is disable, the file gets overwritten.");
         printGreenGenericLn("3. Overwriting a file means that the file is written all over again.");
         printGreenGenericLn("4. When we start again, we remove all original data.");
-
-
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static void exercise7() {
