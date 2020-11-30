@@ -47,6 +47,9 @@ The point is that you need to have a `/tmp` folder at this point.
 
 ## References
 
+-   [Implementig a Class Loader](Implementing a Class Loader docstore.mik.ua/orelly/java-ent/security/ch03_04.htm)
+-   [Installing Your Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/installSMgr.html)
+-   [Writing a Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/writingSMgr.html)
 -   [SecurityManager checkPackageAccess() Method](https://www.tutorialspoint.com/java/lang/securitymanager_checkpackageaccess.htm)
 -   [Rapid Tables](https://www.rapidtables.com/convert/number/decimal-to-octal.html)
 -   [Definition of Double in C, C++ and C#](https://www.thoughtco.com/definition-of-double-958065#:~:text=Double%20vs.&text=Its%20range%20is%20approximately%201.5,to%201.7%20%C3%97%2010308.)
@@ -225,6 +228,11 @@ The point is that you need to have a `/tmp` folder at this point.
       <a href="https://www.youtube.com/watch?v=TRUHtSqZEG0">
          <img 
               src="https://img.youtube.com/vi/TRUHtSqZEG0/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=xErS7G3-tCQ">
+         <img 
+              src="https://img.youtube.com/vi/xErS7G3-tCQ/0.jpg" 
               style="width:10%;">
       </a>
 </div>

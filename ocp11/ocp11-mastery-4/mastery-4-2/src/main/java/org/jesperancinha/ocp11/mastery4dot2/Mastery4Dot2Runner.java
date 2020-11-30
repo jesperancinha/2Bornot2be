@@ -10,6 +10,7 @@ import org.jesperancinha.ocp11.mastery4dot2.concert.QuintetBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 import org.jesperancinha.ocp11.mastery4dot2.show.CristalBall;
+import org.jesperancinha.ocp11.mastery4dot2.show.SuperCristalBall;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,6 +18,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
+import java.security.Permission;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -41,6 +43,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGene
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -73,6 +76,65 @@ public class Mastery4Dot2Runner {
         exercise10();
         exercise11();
 
+
+        printBrightCyanGenericLn("--- 12. Immutability with Guidelines 7 and 6");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We just made a much safer Cristal Ball for Alaska to use.");
+        printGreenGenericLn("Let's give it a try!.");
+        SuperCristalBall superBolaDeCristal = null;
+        try {
+            superBolaDeCristal = SuperCristalBall.createCristalBall(
+                    "Alaska",
+                    new Date(86, Calendar.OCTOBER, 6),
+                    new Band(
+                            List.of(
+                                    "Alaska",
+                                    "Nacho Canut",
+                                    "Ana Curra",
+                                    "Eduardo Benavente",
+                                    "Carlos Berlanga"
+                            ), "Alaska y los Pegamoides"));
+        } catch (NoSuchProviderException e) {
+            printRedThrowableAndExit(e);
+        } catch (NoSuchAlgorithmException e) {
+            printRedThrowableAndExit(e);
+        }
+        printMagentaGenericLn("This is our new and improved cristal ball:\n%s", superBolaDeCristal);
+        printBlueGenericLn("Note that we've made this Cristal Ball so safe that it now obeys guidelines 6 and 7!");
+        printBlueGenericLn("Therefore, for this module, there isn't much to test.");
+        printBlueGenericLn("Please follow the code for a better understandinf of what's happening and namely have a look at the comments.");
+        printBlueGenericLn("Of course read the guidelines here -> https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        // Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes
+        SecurityManager setSecurityManager = new SecurityManager() {
+            @Override
+            public void checkExit(int status) {
+                throw new RuntimeException("Ahha! Not today you are not!");
+            }
+            @Override
+            public void checkPermission(Permission perm) {
+            }
+        };
+        System.setSecurityManager(setSecurityManager);
+
+        try {
+            assert superBolaDeCristal != null;
+            // Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes
+            superBolaDeCristal.leaveEarth();
+        } catch (RuntimeException e) {
+            printRedGenericLn("The reason why this exception is thrown is that our SecurityManager doesn't let us exit with an error:\n%s\nIt's magic!", e);
+        }
+        System.setSecurityManager(new SecurityManager());
+
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. We've made a few tests here, but this module will not be able to cover all of guidelines 6 and 7");
+        printGreenGenericLn("2. Guideline 6 is about protecting Mutability");
+        printGreenGenericLn("3. Guideline 7 is about protecting Object construction");
+        printGreenGenericLn("4. Some guidelines may fuse with each other");
+        printGreenGenericLn("5. Some are much more important than others");
+        printGreenGenericLn("6. Guideline 7-1 / OBJECT-1: Avoid exposing constructors of sensitive classes");
+        printGreenGenericLn("7. Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes");
+        printGreenGenericLn("8. Guideline 7-4 / OBJECT-4: Prevent constructors from calling methods that can be overridden");
+        printGreenGenericLn("9. Guideline 7-5 / OBJECT-5: Defend against cloning of non-final classes");
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
