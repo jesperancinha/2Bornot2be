@@ -20,7 +20,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
@@ -93,7 +92,33 @@ public class Mastery4Dot2Runner {
 //        exercise14();
 //        exercise15();
 //        exercise16();
+//        exercise17();
 
+        printBrightCyanGenericLn("--- 18. `Arrays` `binarySearch`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We have compiled a list of of all Lori Meyers albums we know");
+        printGreenGenericLn("Lori Meyers started in 1998. You are now in possession of a lot of their records.");
+        printGreenGenericLn("Now you want to organize them!.");
+        final String[] albums = {"Viaje de estudios", "Hostal Pimodán",
+                "Hostal Pimodán (reedición)", "Cronolánea",
+                "Viaje de estudios (reedición)", "Cuando el destino nos alcance",
+                "Impronta"};
+         int foundIndex = Arrays.binarySearch(albums, "D");
+        printMagentaGenericLn("Our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
+        printMagentaGenericLn("Our insertion point results in %d. This result makes no sense, purely because our array isn't sorted",  foundIndex);
+        Arrays.sort(albums);
+        printMagentaGenericLn("After sorting, our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
+        foundIndex = Arrays.binarySearch(albums, "D");
+        printMagentaGenericLn("Once sorted, we finally have insertion point %d. This is correct",  foundIndex);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. In order to make binarySearch for Arrays, we have to sort them first");
+        printGreenGenericLn("2. Sorting arrays and therefore being able to perform a faster and more accurate binary search isn't specific to Java");
+        printGreenGenericLn("3. The insertion point is an index. It is describe as a negative number");
+
+        moduleEnd();
+    }
+
+    private static void exercise17() {
         printBrightCyanGenericLn("--- 17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`");
         printRainbowLn("==");
         printGreenGenericLn("Case: In the year 2000, spanish singer, Monica Naranjo, came into the music scene with her hit \"Sobreviviré\"");
@@ -102,18 +127,18 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("We want to copy these lyrics from the source to new files.");
         printGreenGenericLn("We will do this in two ways. One with a BufferedWriter and the other with a FileOutputStream.");
         String source = null;
-        try(var fis = new FileInputStream("/tmp/monica_naranjo_lyrics.txt")){
+        try (var fis = new FileInputStream("/tmp/monica_naranjo_lyrics.txt")) {
             source = new String(fis.readAllBytes(), Charset.defaultCharset());
         } catch (FileNotFoundException e) {
-           printRedThrowableAndExit(e);
+            printRedThrowableAndExit(e);
         } catch (IOException e) {
             printRedThrowableAndExit(e);
         }
         printMagentaGenericLn("We just read the lyrics");
         printBrightMagentaGenericLn(source);
-        printMagentaGenericLn("We will now write this to file in UTF(Unicode Transformation Format) %s","/tmp/mn1.txt");
-        try(var fos = new FileOutputStream("/tmp/mn1.txt")){
-           final ObjectOutputStream oos = new ObjectOutputStream(fos);
+        printMagentaGenericLn("We will now write this to file in UTF(Unicode Transformation Format) %s", "/tmp/mn1.txt");
+        try (var fos = new FileOutputStream("/tmp/mn1.txt")) {
+            final ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeUTF(source);
             oos.flush();
         } catch (FileNotFoundException e) {
@@ -122,7 +147,7 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         readFile("/tmp/mn1.txt");
-        try(var bw = new BufferedWriter(new FileWriter("/tmp/mn2.txt", Charset.defaultCharset()))){
+        try (var bw = new BufferedWriter(new FileWriter("/tmp/mn2.txt", Charset.defaultCharset()))) {
             bw.write('U');
             bw.write('T');
             bw.write('F');
@@ -132,7 +157,7 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         readFile("/tmp/mn2.txt");
-        try(var fos = new FileOutputStream("/tmp/mn3.txt")){
+        try (var fos = new FileOutputStream("/tmp/mn3.txt")) {
             final OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.defaultCharset().name());
             osw.write(source);
             osw.flush();
@@ -140,17 +165,16 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         } catch (IOException e) {
             printRedThrowableAndExit(e);
-        }        printGreenGenericLn("Take-away");
+        }
+        printGreenGenericLn("Take-away");
         readFile("/tmp/mn3.txt");
         printGreenGenericLn("1. We can specify UTF with FileWriter, OutputStreamWriter and with ObjectOutputStream");
         printGreenGenericLn("2. It is not mandatory to specify UTF with Writers. CharSet is optional");
         printGreenGenericLn("3. In the OutputStream we have methods that can write in UTF directly (writeUTF)");
-
-        moduleEnd();
     }
 
     private static void readFile(String resultFilename) {
-        try(var fis = new FileInputStream(resultFilename)){
+        try (var fis = new FileInputStream(resultFilename)) {
             printMagentaGenericLn("We just read this from file %s", resultFilename);
             final String s = new String(fis.readAllBytes(), Charset.defaultCharset());
             printBrightMagentaGenericLn(s);
@@ -168,14 +192,14 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("In 2008 and 2009, they've edited their first two EP(Extended Play)s");
         printGreenGenericLn("You'll show these vinyls to your friends");
         printGreenGenericLn("And then you will lend them");
-        final String[] cientoCero = {"Cientocero","Elástica galáctica","No es así","Cientocero (english)","Cientocero (maqueta)"};
-        final String[] supersubmarina = {"Supersubmarina","Ana","Supersubmarina","OCB"};
-        final NavigableMap<String, List<String>> albums = new TreeMap<>(){{
+        final String[] cientoCero = {"Cientocero", "Elástica galáctica", "No es así", "Cientocero (english)", "Cientocero (maqueta)"};
+        final String[] supersubmarina = {"Supersubmarina", "Ana", "Supersubmarina", "OCB"};
+        final NavigableMap<String, List<String>> albums = new TreeMap<>() {{
             put("Cientocero", Arrays.stream(cientoCero).collect(Collectors.toList()));
             put("Supersubmarina", Arrays.stream(supersubmarina).collect(Collectors.toList()));
         }};
-        printMagentaGenericLn("Ciento cero is %s", String.join(",",cientoCero));
-        printMagentaGenericLn("Supersubmarina is %s", String.join(",",supersubmarina));
+        printMagentaGenericLn("Ciento cero is %s", String.join(",", cientoCero));
+        printMagentaGenericLn("Supersubmarina is %s", String.join(",", supersubmarina));
         printBlueGenericLn("Let's tail this from %s:", "Cientocero");
         printMagentaGenericLn("%s", albums.tailMap("Cientocero"));
         printBlueGenericLn("And now from %s:", "Supersubmarina");

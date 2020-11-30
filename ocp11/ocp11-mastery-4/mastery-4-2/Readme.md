@@ -61,6 +61,7 @@ The point is that you need to have a `/tmp` folder at this point.
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [Lori Meyers](https://en.wikipedia.org/wiki/Lori_Meyers)
 -   [Sobreviviré (canción)](https://es.wikipedia.org/wiki/Sobrevivir%C3%A9_(canci%C3%B3n))
 -   [Sobreviviré - Monica Naranjo](https://www.letras.mus.br/monica-naranjo/130411/)
 -   [Supersubmarina](https://es.wikipedia.org/wiki/Supersubmarina)
