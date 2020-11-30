@@ -47,7 +47,7 @@ The point is that you need to have a `/tmp` folder at this point.
 
 ## References
 
--   [Implementig a Class Loader](Implementing a Class Loader docstore.mik.ua/orelly/java-ent/security/ch03_04.htm)
+-   [Implementig a Class Loader](https://docstore.mik.ua/orelly/java-ent/security/ch03_04.htm)
 -   [Installing Your Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/installSMgr.html)
 -   [Writing a Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/writingSMgr.html)
 -   [SecurityManager checkPackageAccess() Method](https://www.tutorialspoint.com/java/lang/securitymanager_checkpackageaccess.htm)

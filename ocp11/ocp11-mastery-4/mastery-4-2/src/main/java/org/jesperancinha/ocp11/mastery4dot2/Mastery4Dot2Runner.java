@@ -11,6 +11,7 @@ import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 import org.jesperancinha.ocp11.mastery4dot2.show.CristalBall;
 import org.jesperancinha.ocp11.mastery4dot2.show.SuperCristalBall;
+import org.jesperancinha.ocp11.mastery4dot2.styles.Indie;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -77,6 +78,19 @@ public class Mastery4Dot2Runner {
         exercise11();
         exercise12();
         exercise13();
+
+        printBrightCyanGenericLn("--- 14. Static and instance initialization of final `members`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We know that the band Dorian is mostly classified as being an Indie pop group.");
+        printGreenGenericLn("We'll create its registry and see the many different ways we can initialize final values.");
+        printGreenGenericLn("Have a look in the code. All these fields are mandatory and cannot change because they are final");
+        var dorian = new Indie("Dorian");
+        printMagentaGenericLn("This is our band %s", dorian);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. All final fields have to be initialized");
+        printGreenGenericLn("2. There is no difference in this mandatory action between static and instance members");
+        printGreenGenericLn("3. Members can be initialized using accolades");
+        printGreenGenericLn("4. There isn't a lot of reasons to use accolades this way. Just know that they work");
 
         examEnd();
     }
