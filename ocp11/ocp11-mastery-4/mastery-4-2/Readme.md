@@ -421,9 +421,6 @@ Take-away
 2. putIfAbsent performs a check if exists and add then if not, it puts an element into the map in an atomic way.
 3. This, also works in a non-thread safe map.
 4. For that we do not have to combine our operation with a ConcurrentHashMap which is thread safe.
-```
-
-```text
 --- 10. Evaluation order of conditional operators
 ============
 Case: Pepe is a manager that loves going to concerts.
@@ -641,7 +638,7 @@ No hay en el mundo, no
 Nadie más dura que yo
 We will now write this to file in UTF(Unicode Transformation Format) /tmp/mn1.txt
 We just read this from file /tmp/mn1.txt
-�� z  zxfrom https://www.letras.mus.br/monica-naranjo/130411/
+from https://www.letras.mus.br/monica-naranjo/130411/
 Tengo el ansia de la juventud
 tengo miedo lo mismo que tú
 Y cada amanecer me derrumbo al ver
