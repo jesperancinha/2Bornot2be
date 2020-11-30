@@ -110,7 +110,7 @@ public class Consolerizer {
     }
 
     public static void printGreenGeneric(Object text) {
-        System.out.print("\033[0;32m");
+        System.out.print(ConColor.GREEN.getConsoleColor());
         printPrivateText(text.toString());
     }
 
@@ -119,7 +119,7 @@ public class Consolerizer {
     }
 
     public static void printGreenGeneric(String text, Object... args) {
-        System.out.print("\033[0;32m");
+        System.out.print(ConColor.GREEN.getConsoleColor());
         printPrivateText(text, args);
     }
 

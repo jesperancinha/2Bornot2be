@@ -8,6 +8,9 @@ import org.jesperancinha.ocp11.mastery4dot2.concert.Band;
 import org.jesperancinha.ocp11.mastery4dot2.concert.GenericBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.QuintetBand;
 import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
+import org.jesperancinha.ocp11.mastery4dot2.instrument.DrumException;
+import org.jesperancinha.ocp11.mastery4dot2.instrument.Drums;
+import org.jesperancinha.ocp11.mastery4dot2.instrument.DrumsIOException;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 import org.jesperancinha.ocp11.mastery4dot2.show.CristalBall;
 import org.jesperancinha.ocp11.mastery4dot2.show.SuperCristalBall;
@@ -93,7 +96,32 @@ public class Mastery4Dot2Runner {
 //        exercise15();
 //        exercise16();
 //        exercise17();
+//        exercise18();
+        printBrightCyanGenericLn("--- 19. `try-with-resources` `open` and `close` methods.");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: We are at the end of our mastery module");
+        printGreenGenericLn("If you noticed, drums are a part of almost all spanish music");
+        printGreenGenericLn("We'll play one as a closeable instrument. Enjoy!");
 
+        var drum = new Drums();
+        try (drum) {
+            drum.playDrum();
+            drum.playWrongDrum();
+        } catch (DrumException | DrumsIOException e) {
+            e.printStackTrace();
+            printRedGenericLn("It's all good! We failed to play, closing failed and this is expected -> %s", e);
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. We can use try-with-resources even after we've created our autocloseable instance");
+        printGreenGenericLn("2. A suppressed exception occurs when closing fails");
+        printGreenGenericLn("3. The suppressed exception is the closing exception when one is thrown in the try block");
+        printGreenGenericLn("4. The main exception is the one thrown during the try scope");
+        printGreenGenericLn("5. If no exception is thrown during the try block, no suppressed exception is thrown");
+
+        moduleEnd();
+    }
+
+    private static void exercise18() {
         printBrightCyanGenericLn("--- 18. `Arrays` `binarySearch`");
         printRainbowLn("==");
         printGreenGenericLn("Case: We have compiled a list of of all Lori Meyers albums we know");
@@ -103,19 +131,17 @@ public class Mastery4Dot2Runner {
                 "Hostal Pimodán (reedición)", "Cronolánea",
                 "Viaje de estudios (reedición)", "Cuando el destino nos alcance",
                 "Impronta"};
-         int foundIndex = Arrays.binarySearch(albums, "D");
+        int foundIndex = Arrays.binarySearch(albums, "D");
         printMagentaGenericLn("Our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
-        printMagentaGenericLn("Our insertion point results in %d. This result makes no sense, purely because our array isn't sorted",  foundIndex);
+        printMagentaGenericLn("Our insertion point results in %d. This result makes no sense, purely because our array isn't sorted", foundIndex);
         Arrays.sort(albums);
         printMagentaGenericLn("After sorting, our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
         foundIndex = Arrays.binarySearch(albums, "D");
-        printMagentaGenericLn("Once sorted, we finally have insertion point %d. This is correct",  foundIndex);
+        printMagentaGenericLn("Once sorted, we finally have insertion point %d. This is correct", foundIndex);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. In order to make binarySearch for Arrays, we have to sort them first");
         printGreenGenericLn("2. Sorting arrays and therefore being able to perform a faster and more accurate binary search isn't specific to Java");
         printGreenGenericLn("3. The insertion point is an index. It is describe as a negative number");
-
-        moduleEnd();
     }
 
     private static void exercise17() {
