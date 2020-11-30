@@ -1,5 +1,7 @@
 package org.jesperancinha.console.consolerizer;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -209,7 +211,7 @@ public class Consolerizer {
     }
 
     public static void printBrightCyanGenericLn(Object text) {
-        printBrightCyanGeneric((""+text).concat("\n"));
+        printBrightCyanGeneric(("" + text).concat("\n"));
     }
 
     public static void printBrightCyanGeneric(Object text) {
@@ -255,7 +257,12 @@ public class Consolerizer {
         } else {
             for (int i = 0; i < vars.length; i++) {
                 var variable = vars[i];
-                if (variable instanceof Exception || variable instanceof Error) {
+                if (variable instanceof Exception) {
+                    final StringWriter out = new StringWriter();
+                    ((Exception) variable).printStackTrace(new PrintWriter(out));
+                    vars[i] = out.toString();
+                }
+                if (variable instanceof Error) {
                     var e = (Throwable) variable;
                     var stackTrace = e.getStackTrace();
                     var sb = new StringBuilder(e.getClass().getCanonicalName());

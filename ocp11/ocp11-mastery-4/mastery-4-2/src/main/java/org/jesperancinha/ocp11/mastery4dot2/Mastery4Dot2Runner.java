@@ -18,6 +18,7 @@ import org.jesperancinha.ocp11.mastery4dot2.songs.Compilation;
 import org.jesperancinha.ocp11.mastery4dot2.styles.Indie;
 
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -25,6 +26,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.nio.charset.Charset;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -79,24 +82,30 @@ public class Mastery4Dot2Runner {
         printBlueGenericLn("----> Run with -skip to skip questions");
         printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
-//        exercise1();
-//        exercise2();
-//        exercise3();
-//        exercise4();
-//        exercise5();
-//        exercise6();
-//        exercise7();
-//        exercise8();
-//        exercise9();
-//        exercise10();
-//        exercise11();
-//        exercise12();
-//        exercise13();
-//        exercise14();
-//        exercise15();
-//        exercise16();
-//        exercise17();
-//        exercise18();
+        exercise1();
+        exercise2();
+        exercise3();
+        exercise4();
+        exercise5();
+        exercise6();
+        exercise7();
+        exercise8();
+        exercise9();
+        exercise10();
+        exercise11();
+        exercise12();
+        exercise13();
+        exercise14();
+        exercise15();
+        exercise16();
+        exercise17();
+        exercise18();
+        exercise19();
+
+        moduleEnd();
+    }
+
+    private static void exercise19() {
         printBrightCyanGenericLn("--- 19. `try-with-resources` `open` and `close` methods.");
         printRainbowLn("==");
         printGreenGenericLn("Case: We are at the end of our mastery module");
@@ -108,7 +117,6 @@ public class Mastery4Dot2Runner {
             drum.playDrum();
             drum.playWrongDrum();
         } catch (DrumException | DrumsIOException e) {
-            e.printStackTrace();
             printRedGenericLn("It's all good! We failed to play, closing failed and this is expected -> %s", e);
         }
         printGreenGenericLn("Take-away");
@@ -117,8 +125,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("3. The suppressed exception is the closing exception when one is thrown in the try block");
         printGreenGenericLn("4. The main exception is the one thrown during the try scope");
         printGreenGenericLn("5. If no exception is thrown during the try block, no suppressed exception is thrown");
-
-        moduleEnd();
     }
 
     private static void exercise18() {
@@ -442,7 +448,7 @@ public class Mastery4Dot2Runner {
         } catch (RuntimeException e) {
             printRedGenericLn("The reason why this exception is thrown is that our SecurityManager doesn't let us exit with an error:\n%s\nIt's magic!", e);
         }
-        System.setSecurityManager(new SecurityManager());
+        System.setSecurityManager(null);
 
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. We've made a few tests here, but this module will not be able to cover all of guidelines 6 and 7");
