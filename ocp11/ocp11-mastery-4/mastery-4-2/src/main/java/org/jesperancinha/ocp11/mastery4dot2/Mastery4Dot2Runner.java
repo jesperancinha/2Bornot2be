@@ -14,10 +14,16 @@ import org.jesperancinha.ocp11.mastery4dot2.show.SuperCristalBall;
 import org.jesperancinha.ocp11.mastery4dot2.songs.Compilation;
 import org.jesperancinha.ocp11.mastery4dot2.styles.Indie;
 
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
+import java.nio.charset.Charset;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.Permission;
@@ -26,7 +32,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.temporal.Temporal;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -42,7 +47,6 @@ import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
@@ -88,7 +92,76 @@ public class Mastery4Dot2Runner {
 //        exercise13();
 //        exercise14();
 //        exercise15();
+//        exercise16();
 
+        printBrightCyanGenericLn("--- 17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: In the year 2000, spanish singer, Monica Naranjo, came into the music scene with her hit \"Sobreviviré\"");
+        printGreenGenericLn("Given the raw energy of the lyrics of the songs and its meaning, \"Sobreviviré\" became an anthem of those who fight to be understood and accepted");
+        printGreenGenericLn("In the video, Monica Naranjo depics just that.");
+        printGreenGenericLn("We want to copy these lyrics from the source to new files.");
+        printGreenGenericLn("We will do this in two ways. One with a BufferedWriter and the other with a FileOutputStream.");
+        String source = null;
+        try(var fis = new FileInputStream("/tmp/monica_naranjo_lyrics.txt")){
+            source = new String(fis.readAllBytes(), Charset.defaultCharset());
+        } catch (FileNotFoundException e) {
+           printRedThrowableAndExit(e);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+        printMagentaGenericLn("We just read the lyrics");
+        printBrightMagentaGenericLn(source);
+        printMagentaGenericLn("We will now write this to file in UTF(Unicode Transformation Format) %s","/tmp/mn1.txt");
+        try(var fos = new FileOutputStream("/tmp/mn1.txt")){
+           final ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeUTF(source);
+            oos.flush();
+        } catch (FileNotFoundException e) {
+            printRedThrowableAndExit(e);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+        readFile("/tmp/mn1.txt");
+        try(var bw = new BufferedWriter(new FileWriter("/tmp/mn2.txt", Charset.defaultCharset()))){
+            bw.write('U');
+            bw.write('T');
+            bw.write('F');
+            bw.write('-');
+            bw.write(source);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+        readFile("/tmp/mn2.txt");
+        try(var fos = new FileOutputStream("/tmp/mn3.txt")){
+            final OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.defaultCharset().name());
+            osw.write(source);
+            osw.flush();
+        } catch (FileNotFoundException e) {
+            printRedThrowableAndExit(e);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }        printGreenGenericLn("Take-away");
+        readFile("/tmp/mn3.txt");
+        printGreenGenericLn("1. We can specify UTF with FileWriter, OutputStreamWriter and with ObjectOutputStream");
+        printGreenGenericLn("2. It is not mandatory to specify UTF with Writers. CharSet is optional");
+        printGreenGenericLn("3. In the OutputStream we have methods that can write in UTF directly (writeUTF)");
+
+        moduleEnd();
+    }
+
+    private static void readFile(String resultFilename) {
+        try(var fis = new FileInputStream(resultFilename)){
+            printMagentaGenericLn("We just read this from file %s", resultFilename);
+            final String s = new String(fis.readAllBytes(), Charset.defaultCharset());
+            printBrightMagentaGenericLn(s);
+        } catch (FileNotFoundException e) {
+            printRedThrowableAndExit(e);
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+    }
+
+    private static void exercise16() {
         printBrightCyanGenericLn("--- 16. NavigableMap and `pollLastEntry` and `pollFirstEntry`");
         printRainbowLn("==");
         printGreenGenericLn("Case: \"Supersubmarina\" is a band from Spain.");
@@ -121,7 +194,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("1. Navigable maps are very simple");
         printGreenGenericLn("2. Important methods are pollFirstEntry, pollLastEntry, tailMap and headMaps");
         printGreenGenericLn("3. Head is exclusive, whiile tail is inclusive");
-        moduleEnd();
     }
 
     private static void exercise15() {
