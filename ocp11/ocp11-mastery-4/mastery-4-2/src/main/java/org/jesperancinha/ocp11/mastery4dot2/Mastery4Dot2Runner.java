@@ -11,6 +11,7 @@ import org.jesperancinha.ocp11.mastery4dot2.concert.Ticket;
 import org.jesperancinha.ocp11.mastery4dot2.record.Company;
 import org.jesperancinha.ocp11.mastery4dot2.show.CristalBall;
 import org.jesperancinha.ocp11.mastery4dot2.show.SuperCristalBall;
+import org.jesperancinha.ocp11.mastery4dot2.songs.Compilation;
 import org.jesperancinha.ocp11.mastery4dot2.styles.Indie;
 
 import java.io.FileInputStream;
@@ -25,13 +26,16 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.temporal.Temporal;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -65,20 +69,100 @@ public class Mastery4Dot2Runner {
         printBlueGenericLn("----> Run with -skip to skip questions");
         printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
-        exercise1();
-        exercise2();
-        exercise3();
-        exercise4();
-        exercise5();
-        exercise6();
-        exercise7();
-        exercise8();
-        exercise9();
-        exercise10();
-        exercise11();
-        exercise12();
-        exercise13();
+//        exercise1();
+//        exercise2();
+//        exercise3();
+//        exercise4();
+//        exercise5();
+//        exercise6();
+//        exercise7();
+//        exercise8();
+//        exercise9();
+//        exercise10();
+//        exercise11();
+//        exercise12();
+//        exercise13();
+//        exercise14();
 
+        printBrightCyanGenericLn("--- 15. Iterating through a `CopyOnWriteArrayList` and the `UnsupportedOperationException`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Someone is compiling songs of the band Dorian for you.");
+        printGreenGenericLn("Your other half is waiting impatiently for the mix result.");
+        printGreenGenericLn("You keep getting a list, always updated, but you have to read it at the same time its being filled.");
+        printGreenGenericLn("It's hard to keep up, and so you decide to make multiple reads.");
+        final String[] songs = {
+                "Buenas Intenciones",
+                "Duele",
+                "La Tormenta de Arena",
+                "Los Amigos que Perdí",
+                "El Futuro no es de Nadie",
+                "Vicios y Defectos",
+                "Tristeza",
+                "A Cualquier Otra parte",
+                "Te Echamos de Menos (Undo Remix)",
+                "Horas Bajas (Undo Remix)", "El Temblor (Lovo Remix)", "Verte Amanecer"};
+        printMagentaGenericLn("This is our possible list:");
+        printOrangeGenericLn("%s", String.join(",", songs));
+        final Compilation compilation = new Compilation();
+
+        final var songSet = Arrays.stream(songs).collect(Collectors.toCollection(ConcurrentSkipListSet::new));
+        final ExecutorService executorService = Executors.newFixedThreadPool(2);
+        executorService.submit(() -> {
+            try {
+                while (songSet.size() > 0) {
+                    final String s = songSet.pollFirst();
+                    compilation.addSong(s);
+                    Thread.sleep(100);
+                }
+            } catch (InterruptedException e) {
+                printRedThrowableAndExit(e);
+            }
+
+
+        });
+        executorService.submit(() -> {
+            try {
+                while (songSet.size() > 0) {
+                    final Iterator<String> iterator = compilation.iterator();
+                    while (iterator.hasNext()) {
+                        printMagentaGenericLn("Got song %s", iterator.next());
+                        Thread.sleep(500);
+                    }
+                    printBrightMagentaGenericLn("One Iteration done!");
+                }
+                final Iterator<String> iterator = compilation.iterator();
+                while (iterator.hasNext()) {
+                    printMagentaGenericLn("Got song %s", iterator.next());
+                    Thread.sleep(500);
+                }
+                printBrightMagentaGenericLn("Last iteration done!");
+            } catch (InterruptedException e) {
+                printRedThrowableAndExit(e);
+            }
+        });
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(15, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            printRedThrowableAndExit(e);
+        }
+        final Iterator<String> iterator = compilation.iterator();
+        printMagentaGenericLn("No exception has occurred and everything went well.");
+        printBlueGenericLn("Can we change the list with this iterator though?");
+        try {
+            iterator.remove();
+        } catch (UnsupportedOperationException e) {
+            printRedGenericLn("We cannot! And this is because this iterator is working with an array that is allowed to be copied and discarded -> %s", e);
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. CopyOnWriteArrayList make a copy on every write operation");
+        printGreenGenericLn("2. This way, there will be no concurrent type of exception thrown");
+        printGreenGenericLn("3. The iterator of this type of List's does not support modifications");
+
+        examEnd();
+    }
+
+    private static void exercise14() {
         printBrightCyanGenericLn("--- 14. Static and instance initialization of final `members`");
         printRainbowLn("==");
         printGreenGenericLn("Case: We know that the band Dorian is mostly classified as being an Indie pop group.");
@@ -91,8 +175,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("2. There is no difference in this mandatory action between static and instance members");
         printGreenGenericLn("3. Members can be initialized using accolades");
         printGreenGenericLn("4. There isn't a lot of reasons to use accolades this way. Just know that they work");
-
-        examEnd();
     }
 
     private static void exercise13() {

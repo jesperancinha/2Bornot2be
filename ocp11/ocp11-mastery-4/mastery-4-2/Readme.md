@@ -61,6 +61,8 @@ The point is that you need to have a `/tmp` folder at this point.
 -   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
 -   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [TOP 15 MEJORES CANCIONES DE DORIAN](https://culturadiversa.es/2018/05/mejores-canciones-de-dorian.html)
+-   [Dorian_(banda)](https://es.wikipedia.org/wiki/Dorian_(banda))
 -   [Vetusta Morla y la infinidad de canciones que hay en una canción](https://www.elindependiente.com/tendencias/musica/2020/06/13/vetusta-morla-y-la-infinidad-de-canciones-que-hay-en-una-cancion/)
 -   [Rosario Flores](https://en.wikipedia.org/wiki/Rosario_Flores)
 -   [Paulina Rubio](https://nl.wikipedia.org/wiki/Paulina_Rubio)

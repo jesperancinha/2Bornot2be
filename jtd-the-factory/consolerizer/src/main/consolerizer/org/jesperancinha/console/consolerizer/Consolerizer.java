@@ -161,7 +161,7 @@ public class Consolerizer {
 
 
     public static void printOrangeGenericLn(String text, Object... args) {
-        printOrangeGeneric(text.toString().concat("\n"), args);
+        printOrangeGeneric(text.concat("\n"), args);
     }
 
     public static void printOrangeGeneric(String text, Object... args) {
