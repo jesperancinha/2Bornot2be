@@ -75,8 +75,69 @@ public class Mastery4Dot2Runner {
         exercise9();
         exercise10();
         exercise11();
+        exercise12();
+        exercise13();
 
+        examEnd();
+    }
 
+    private static void exercise13() {
+        printBrightCyanGenericLn("--- 13. `Float.POSITIVE_INFINITY` vs `Float.NEGATIVE_INFINITY`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: Vetusta Morla publish in 2020 its fith studio album entitled \"Mismo Sitio Distinto Lugar - Canciones dentro de canciones\".");
+        printGreenGenericLn("They came up with this original concept of songs within songs.");
+        printGreenGenericLn("When you find a song within a song you are really up to infinity.");
+        printGreenGenericLn("We can represent the infinity of songs Vetusta Morla can make by using Float and Double.");
+        var songs = Float.POSITIVE_INFINITY;
+        var nosongs = Float.NEGATIVE_INFINITY;
+        printOrangeGenericLn(songs);
+        printOrangeGenericLn(nosongs);
+        printBlueGenericLn("But how can we generate infinite songs?");
+        var infiniteSongs = 1 / 0.0f;
+        var noSongsToInfinity = -1 / 0.0f;
+        printOrangeGenericLn(infiniteSongs);
+        printOrangeGenericLn(noSongsToInfinity);
+        printBlueGenericLn("Can we use double for this?");
+        var songsDouble = Double.POSITIVE_INFINITY;
+        var nosongsDouble = Double.NEGATIVE_INFINITY;
+        printOrangeGenericLn(songsDouble);
+        printOrangeGenericLn(nosongsDouble);
+        printBlueGenericLn("But how can we generate double infinite songs?");
+        var infiniteSongsDouble = 1 / 0.0;
+        var noSongsToInfinityDouble = -1 / 0.0;
+        printOrangeGenericLn(infiniteSongsDouble);
+        printOrangeGenericLn(noSongsToInfinityDouble);
+        printBlueGenericLn("Sounds good, but how about that overflow Exception?");
+        try {
+            var notWithLongs = 1 / 0L;
+        } catch (ArithmeticException e) {
+            printRedGenericLn("Nope, no Longs allowed! -> %s", e);
+        }
+        printBlueGenericLn("Ok... and ints?");
+        try {
+            var notWithIntegers = 1 / 0;
+        } catch (ArithmeticException e) {
+            printRedGenericLn("Nope, no ints either! -> %s", e);
+        }
+        printBlueGenericLn("Shorts?");
+        try {
+            var notWithShorts = 1 / (short) 0;
+        } catch (ArithmeticException e) {
+            printRedGenericLn("Shorts also won't do! -> %s", e);
+        }
+        printBlueGenericLn("Then I guess Byte won't also work?");
+        try {
+            var notWithBytes = 1 / (byte) 0;
+        } catch (ArithmeticException e) {
+            printRedGenericLn("Bingo! -> %s", e);
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. There infinity representations for Float and Double calculations");
+        printGreenGenericLn("2. Numbers without decimals cannot make a division by zero");
+        printGreenGenericLn("3. Division by zero with Float and Double are akin to ∞ (infinity) in math.");
+    }
+
+    private static void exercise12() {
         printBrightCyanGenericLn("--- 12. Immutability with Guidelines 7 and 6");
         printRainbowLn("==");
         printGreenGenericLn("Case: We just made a much safer Cristal Ball for Alaska to use.");
@@ -110,6 +171,7 @@ public class Mastery4Dot2Runner {
             public void checkExit(int status) {
                 throw new RuntimeException("Ahha! Not today you are not!");
             }
+
             @Override
             public void checkPermission(Permission perm) {
             }
@@ -135,11 +197,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("7. Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes");
         printGreenGenericLn("8. Guideline 7-4 / OBJECT-4: Prevent constructors from calling methods that can be overridden");
         printGreenGenericLn("9. Guideline 7-5 / OBJECT-5: Defend against cloning of non-final classes");
-        printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
-        printUnicornsLn(100);
     }
 
     private static void exercise11() {
@@ -861,4 +918,11 @@ public class Mastery4Dot2Runner {
         a = 1233112213d * 12312232223L * 2;
     }
 
+    private static void examEnd() {
+        printUnicornsLn(100);
+        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
+        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        printGreenGenericLn("Thank you!");
+        printUnicornsLn(100);
+    }
 }
