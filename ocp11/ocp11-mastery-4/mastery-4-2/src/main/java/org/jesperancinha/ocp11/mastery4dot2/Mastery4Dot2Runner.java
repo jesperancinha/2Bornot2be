@@ -26,6 +26,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.temporal.Temporal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -33,12 +34,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.NavigableMap;
 import java.util.Objects;
+import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
@@ -83,7 +87,44 @@ public class Mastery4Dot2Runner {
 //        exercise12();
 //        exercise13();
 //        exercise14();
+//        exercise15();
 
+        printBrightCyanGenericLn("--- 16. NavigableMap and `pollLastEntry` and `pollFirstEntry`");
+        printRainbowLn("==");
+        printGreenGenericLn("Case: \"Supersubmarina\" is a band from Spain.");
+        printGreenGenericLn("In 2008 and 2009, they've edited their first two EP(Extended Play)s");
+        printGreenGenericLn("You'll show these vinyls to your friends");
+        printGreenGenericLn("And then you will lend them");
+        final String[] cientoCero = {"Cientocero","Elástica galáctica","No es así","Cientocero (english)","Cientocero (maqueta)"};
+        final String[] supersubmarina = {"Supersubmarina","Ana","Supersubmarina","OCB"};
+        final NavigableMap<String, List<String>> albums = new TreeMap<>(){{
+            put("Cientocero", Arrays.stream(cientoCero).collect(Collectors.toList()));
+            put("Supersubmarina", Arrays.stream(supersubmarina).collect(Collectors.toList()));
+        }};
+        printMagentaGenericLn("Ciento cero is %s", String.join(",",cientoCero));
+        printMagentaGenericLn("Supersubmarina is %s", String.join(",",supersubmarina));
+        printBlueGenericLn("Let's tail this from %s:", "Cientocero");
+        printMagentaGenericLn("%s", albums.tailMap("Cientocero"));
+        printBlueGenericLn("And now from %s:", "Supersubmarina");
+        printMagentaGenericLn("%s", albums.tailMap("Supersubmarina"));
+        printBlueGenericLn("Let's head this from %s:", "Cientocero");
+        printMagentaGenericLn("%s", albums.headMap("Cientocero"));
+        printBlueGenericLn("And now from %s:", "Supersubmarina");
+        printMagentaGenericLn("%s", albums.headMap("Supersubmarina"));
+        final Map.Entry<String, List<String>> firstLending = albums.pollFirstEntry();
+        printMagentaGenericLn("We just took out the first album: %s", firstLending);
+        printMagentaGenericLn("So the our album collection looks like this: %s", albums);
+        final Map.Entry<String, List<String>> lastLending = albums.pollLastEntry();
+        printMagentaGenericLn("We just took out the last album: %s", lastLending);
+        printMagentaGenericLn("So the our album collection should be empty now: %s", albums);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Navigable maps are very simple");
+        printGreenGenericLn("2. Important methods are pollFirstEntry, pollLastEntry, tailMap and headMaps");
+        printGreenGenericLn("3. Head is exclusive, whiile tail is inclusive");
+        moduleEnd();
+    }
+
+    private static void exercise15() {
         printBrightCyanGenericLn("--- 15. Iterating through a `CopyOnWriteArrayList` and the `UnsupportedOperationException`");
         printRainbowLn("==");
         printGreenGenericLn("Case: Someone is compiling songs of the band Dorian for you.");
@@ -158,8 +199,6 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("1. CopyOnWriteArrayList make a copy on every write operation");
         printGreenGenericLn("2. This way, there will be no concurrent type of exception thrown");
         printGreenGenericLn("3. The iterator of this type of List's does not support modifications");
-
-        examEnd();
     }
 
     private static void exercise14() {
@@ -1014,7 +1053,7 @@ public class Mastery4Dot2Runner {
         a = 1233112213d * 12312232223L * 2;
     }
 
-    private static void examEnd() {
+    private static void moduleEnd() {
         printUnicornsLn(100);
         printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor flavour to it.");
         printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
