@@ -4,6 +4,26 @@ Welcome to my 9th Mastery Module: "And then Indie"
 
 ## Exercise
 
+1. Indexes in a `ResultSet`
+2. Using `mapToObj`
+3. Mutability Guidelins with focus on 6.6.
+4. Valid modes in `RandomAccessFile`. Difference from using `append`
+5. `Predicate` of types
+6. Downcasting and Upcasting
+7. `jdeps` alternative `commmands`
+8. Boxing into a `List` and difference between primitives
+9. `++i` `i++` in a loop
+10. Collecting duplicate entries to a `Map`
+11. `readPassword` in `Console`
+12. Complex `operands` and `operators`
+13. Creating and filtering an `IntStream`
+14. When to call `flush`
+15. add `override` in an `ArrayList`
+16. Overriding methods returning primitives
+17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`
+18. Abtract classes and the `new` keyword
+19. `String` `replace` old/new 
+
 ## Preparation
 
 If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
