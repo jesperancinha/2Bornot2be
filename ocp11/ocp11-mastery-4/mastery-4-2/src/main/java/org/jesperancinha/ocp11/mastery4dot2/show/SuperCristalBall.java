@@ -143,7 +143,7 @@ public final class SuperCristalBall {
                 '}';
     }
 
-    public final void leaveEarth(){
+    public final void leaveEarth() {
         System.exit(1);
     }
 }

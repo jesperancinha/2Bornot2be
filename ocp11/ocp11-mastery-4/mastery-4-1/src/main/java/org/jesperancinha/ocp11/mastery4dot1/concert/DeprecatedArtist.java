@@ -1,12 +1,12 @@
 package org.jesperancinha.ocp11.mastery4dot1.concert;
 
 @Deprecated
-public class DeprecatedArtist implements Venue{
+public class DeprecatedArtist implements Venue {
 
     private String name;
 
     @Deprecated
-    public DeprecatedArtist(String name){
+    public DeprecatedArtist(String name) {
         this.name = name;
     }
 

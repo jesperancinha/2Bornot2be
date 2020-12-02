@@ -18,7 +18,7 @@ public class Competition {
         Plane.transportPilot();
     }
 
-    private Competition(String name){
+    private Competition(String name) {
 
         this.name = name;
     }

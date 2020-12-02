@@ -17,6 +17,7 @@
         <module>mastery-4-1-modularity</module>
         <module>mastery-4-2</module>
         <module>mastery-4-2-swing</module>
+        <module>mastery-4-3</module>
     </modules>
 
 </project>

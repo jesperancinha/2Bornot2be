@@ -18,6 +18,7 @@ public class Band {
         this.members = new ArrayList<>(capacity);
         this.members.addAll(members);
     }
+
     Band(final int capacity, final List<String> members, String bandName) {
         this.members = new ArrayList<>(capacity);
         this.bandName = bandName;

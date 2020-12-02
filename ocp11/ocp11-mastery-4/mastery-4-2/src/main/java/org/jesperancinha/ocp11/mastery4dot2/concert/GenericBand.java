@@ -24,6 +24,6 @@ public class GenericBand extends Band {
     public String toString() {
         return "GenericBand{" +
                 "capacity=" + capacity +
-                '}'+ super.toString();
+                '}' + super.toString();
     }
 }

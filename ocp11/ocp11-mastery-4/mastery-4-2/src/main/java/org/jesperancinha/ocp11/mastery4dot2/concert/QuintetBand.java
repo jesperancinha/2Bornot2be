@@ -2,11 +2,11 @@ package org.jesperancinha.ocp11.mastery4dot2.concert;
 
 import java.util.List;
 
-public class QuintetBand extends Band{
+public class QuintetBand extends Band {
 
     private int capacity;
 
-    public QuintetBand(List<String> members, String bandName){
+    public QuintetBand(List<String> members, String bandName) {
         super(5, members, bandName);
         this.capacity = 5;
     }

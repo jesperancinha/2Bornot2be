@@ -1,7 +1,5 @@
 package org.jesperancinha.ocp11.mastery4dot2;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.swing.*;
 import java.awt.*;
 

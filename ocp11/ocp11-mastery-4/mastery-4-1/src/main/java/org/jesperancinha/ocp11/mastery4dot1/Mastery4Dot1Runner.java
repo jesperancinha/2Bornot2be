@@ -91,9 +91,9 @@ public class Mastery4Dot1Runner {
         var depprecatedRegistration = new DeprecatedArtist("Joan Baez");
         printMagentaGenericLn("Oh no! You've registered Joan Baez in the wrong book: %s", depprecatedRegistration);
         var artist = new Artist("Joan Baez",
-               LocalDateTime.of(1968, 8, 16, 3,0),
-               LocalDateTime.of(1968, 8, 16,  3,45)
-       );
+                LocalDateTime.of(1968, 8, 16, 3, 0),
+                LocalDateTime.of(1968, 8, 16, 3, 45)
+        );
         printMagentaGenericLn("You sneak into the back and fix your mistake: %s", artist);
         printBlueGenericLn("We don't see the difference running the code");
         printBlueGenericLn("This is because @Deprecated activates during compile time");
@@ -103,7 +103,7 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("1. @Deprecated triggers compilers to show warnings");
         printGreenGenericLn("2. @Deprecated has RUNTIME retention. This just means that the annotation is not removed");
         printGreenGenericLn("3. @Deprecated is accessible via reflection during runtime.");
-        printGreenGenericLn("4. @Deprecated is applicable all around the code:%s","{CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, MODULE, PARAMETER, TYPE}");
+        printGreenGenericLn("4. @Deprecated is applicable all around the code:%s", "{CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, MODULE, PARAMETER, TYPE}");
     }
 
     private static void exercise14() {
@@ -136,12 +136,12 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("Your ticket has two dates and times on it, but which one is the one from your concert?");
         printGreenGenericLn("And what is the other date about?");
         var artist = new Artist("Joan Baez",
-                LocalDateTime.of(1968, 8, 16, 3,0),
-                LocalDateTime.of(1968, 8, 16,  3,45)
+                LocalDateTime.of(1968, 8, 16, 3, 0),
+                LocalDateTime.of(1968, 8, 16, 3, 45)
         );
         printMagentaGenericLn("In your ticket it says: %s", artist);
-        printMagentaGenericLn("And the other date is start: %s", ((Venue)artist).start);
-        printMagentaGenericLn("And the other date is end: %s", ((Venue)artist).end);
+        printMagentaGenericLn("And the other date is start: %s", ((Venue) artist).start);
+        printMagentaGenericLn("And the other date is end: %s", ((Venue) artist).end);
         printMagentaGenericLn("Right! This is actually the time Woodstock '69 in %s starts and ends!", artist.location);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Members in interfaces are implicitly static");

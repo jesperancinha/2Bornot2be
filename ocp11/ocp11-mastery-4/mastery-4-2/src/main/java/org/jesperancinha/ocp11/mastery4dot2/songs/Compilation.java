@@ -7,11 +7,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public final class Compilation {
     private List<String> songs = new CopyOnWriteArrayList<>();
 
-    public final void addSong(final String song){
+    public final void addSong(final String song) {
         songs.add(song);
     }
 
-    public final Iterator<String> iterator(){
+    public final Iterator<String> iterator() {
         return songs.iterator();
     }
 

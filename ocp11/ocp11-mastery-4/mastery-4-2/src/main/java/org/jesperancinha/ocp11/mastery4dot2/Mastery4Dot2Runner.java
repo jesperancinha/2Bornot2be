@@ -18,7 +18,6 @@ import org.jesperancinha.ocp11.mastery4dot2.songs.Compilation;
 import org.jesperancinha.ocp11.mastery4dot2.styles.Indie;
 
 import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -26,8 +25,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.nio.charset.Charset;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
