@@ -24,6 +24,8 @@ Welcome to my 9th Mastery Module: "And then Indie"
 18. Abtract classes and the `new` keyword
 19. `String` `replace` old/new 
 
+
+(... coming soon ...)
 ## Preparation
 
 If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
@@ -43,7 +45,18 @@ The point is that you need to have a `/tmp` folder at this point.
 ## References
 
 ---
+-   [Electric Feel](https://en.wikipedia.org/wiki/Electric_Feel)
+-   [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
+-   [Time to Pretend](https://en.wikipedia.org/wiki/Time_to_Pretend)
+-   [MGMT and their Little Dark Age](https://www.youtube.com/watch?v=IMMlwjWyHxA)
 
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=IMMlwjWyHxA">
+         <img 
+              src="https://img.youtube.com/vi/IMMlwjWyHxA/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 <div align="center">
       <a href="https://www.youtube.com/watch?v=47dtFZ8CFo8">
          <img 
