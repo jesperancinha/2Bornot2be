@@ -34,9 +34,8 @@
     </dependencies>
 
     <modules>
-        <module>ocp11-basics</module>
-        <module>ocp11-scale-up</module>
-        <module>ocp11-scale-up-2</module>
+        <module>ocp11-basics-1</module>
+        <module>ocp11-basics-2</module>
         <module>ocp11-mastery-1</module>
         <module>ocp11-mastery-2</module>
         <module>ocp11-mastery-3</module>

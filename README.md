@@ -39,10 +39,10 @@ It is the support project of the following articles on my blog:
 
 ## Contents
 
--   [java-test-11](./java-test-11) - Java 11 test mini projects
--   [java-test-15](./java-test-15) - Java 15 test mini projects
--   [OCP-11 - 1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819](./ocp11) - OCP SE 11 Exam preparation
--   [JEE 7 - 1z0-900](./jee7) - Java EE 7 Application Developer Exam Preparation
+-   [java-test-11](./java-test-11/Readme.md) - Java 11 test mini projects
+-   [java-test-15](./java-test-15/Readme.md) - Java 15 test mini projects
+-   [OCP-11 - 1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819](./ocp11/Readme.md) - OCP SE 11 Exam preparation
+-   [JEE 7 - 1z0-900](./jee7/Readme.md) - Java EE 7 Application Developer Exam Preparation
 
 ---
 

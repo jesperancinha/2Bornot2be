@@ -1,1 +1,0 @@
-This is atomic file 1!

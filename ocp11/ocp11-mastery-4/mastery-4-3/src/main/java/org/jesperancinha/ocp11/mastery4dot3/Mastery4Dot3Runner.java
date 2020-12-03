@@ -16,9 +16,11 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -37,8 +39,19 @@ public class Mastery4Dot3Runner {
         printBlueGenericLn("----> Run with -skip to skip questions");
         printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
+        exercise1();
+
+        printBrightCyanGenericLn("--- 2. Using `mapToObj`");
+        printRainbowLn('=', 10);
+        printGreenGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
+        printGreenGenericLn("Let's have a look at the math behind it");
+
+        moduleEnd();
+    }
+
+    private static void exercise1() {
         printBrightCyanGenericLn("--- 1. Indexes in a `ResultSet`");
-        printRainbowLn("==========");
+        printRainbowLn('=', 10);
         printGreenGenericLn("Case: We are wondering what happened to MGMT and why we don't hear about them anymore.");
         printGreenGenericLn("On this first exercise we will investigate their triad of hits.");
         printGreenGenericLn("MGMT came into the Indie music scene in 2008 with their album Oracular Spectacular.");
@@ -97,7 +110,7 @@ public class Mastery4Dot3Runner {
             }
 
         });
-        printRainbowLn("----------");
+        printRainbowLn('-', 10);
         try {
             final Statement statement = connection.createStatement();
             final ResultSet resultSet = statement.executeQuery("SELECT SONG, BAND, HITYEAR from SONG;");
@@ -149,8 +162,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("2. Conversions happen automatically if they match");
         printGreenGenericLn("3. An Int if convertible to Integer, Long, Float, Double and Big Integer");
         printGreenGenericLn("4. We can even get a special java.sql.Array type, which  returns the data in an array form valid for all types");
-
-        moduleEnd();
     }
 
     private static void moduleEnd() {

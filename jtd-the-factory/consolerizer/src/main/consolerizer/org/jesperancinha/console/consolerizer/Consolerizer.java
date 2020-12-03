@@ -5,11 +5,11 @@ import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.lang.Thread.sleep;
+import static java.util.stream.Collectors.joining;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
@@ -295,7 +295,7 @@ public class Consolerizer {
                 } else if (variable instanceof String[]) {
                     vars[i] = "[".concat(String.join(",", (String[]) variable)).concat("]");
                 } else if (variable instanceof int[]) {
-                    vars[i] = "[".concat(IntStream.of((int[]) variable).mapToObj(Integer::toString).collect(Collectors.joining(",")).concat("]"));
+                    vars[i] = "[".concat(IntStream.of((int[]) variable).mapToObj(Integer::toString).collect(joining(",")).concat("]"));
                 }
             }
             printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal, vars);
@@ -305,7 +305,7 @@ public class Consolerizer {
     private static String processMultiArrays2(String[][] vars) {
         return "[".concat(Arrays.stream(vars)
                 .flatMap(x -> Stream.of("[".concat(String.join(",", x)).concat("]")))
-                .collect(Collectors.joining(","))).concat("]");
+                .collect(joining(","))).concat("]");
     }
 
 
@@ -337,10 +337,9 @@ public class Consolerizer {
                         .stream(
                                 getSplit(maxLineChars, paragraph))
                         .map(Consolerizer::trim)
-                        .collect(Collectors
-                                .joining("\n"))
+                        .collect(joining("\n"))
                 )
-                .collect(Collectors.joining("\n"))
+                .collect(joining("\n"))
                 .concat("\n");
 
     }
@@ -400,6 +399,9 @@ public class Consolerizer {
         }
     }
 
+    public static void printRainbowLn(final char c, int nchars) {
+        printRainbowLn(Stream.generate(((Character) c)::toString).limit(nchars).collect(joining()));
+    }
     public static void printRainbowLn(final String theme) {
         printRainbow(theme);
         System.out.print("\n");

@@ -45,6 +45,7 @@ The point is that you need to have a `/tmp` folder at this point.
 ## References
 
 ---
+-   [MGMT discography](https://en.wikipedia.org/wiki/MGMT_discography)
 -   [Electric Feel](https://en.wikipedia.org/wiki/Electric_Feel)
 -   [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
 -   [Time to Pretend](https://en.wikipedia.org/wiki/Time_to_Pretend)
