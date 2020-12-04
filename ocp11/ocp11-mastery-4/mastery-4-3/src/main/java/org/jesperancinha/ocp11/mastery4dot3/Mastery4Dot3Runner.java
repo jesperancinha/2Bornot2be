@@ -15,7 +15,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.DoubleAccumulator;
+import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -84,6 +87,40 @@ public class Mastery4Dot3Runner {
         printRainbowLn('-', 10);
         printMagentaGenericLn("Sequential list result -> %s", list01);
         printMagentaGenericLn("Sequential list result -> %s", list02);
+        printRainbowLn('-', 10);
+        printMagentaGenericLn("If we want to calculate the average this way and with high performance, we can!");
+        final double avg = peakPositionsPerCountry.values().stream().mapToInt(i -> i)
+                .parallel()
+                .collect(
+                        () -> new DoubleAccumulator(Double::sum, 0),
+                        new ObjIntConsumer<DoubleAccumulator>() {
+                            @Override
+                            public void accept(DoubleAccumulator atomicInteger, int value) {
+                                atomicInteger.accumulate(value);
+                            }
+                        }, new BiConsumer<DoubleAccumulator, DoubleAccumulator>() {
+                            @Override
+                            public void accept(DoubleAccumulator doubleAccumulator, DoubleAccumulator doubleAccumulator2) {
+                                doubleAccumulator.accumulate(doubleAccumulator2.doubleValue());
+                            }
+                        }).doubleValue() / peakPositionsPerCountry.values().size();
+
+        printMagentaGenericLn("This is the result -> %f", avg);
+        printRainbowLn('-', 10);
+        printMagentaGenericLn("However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
+
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingDouble(i->i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingInt(i->i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingLong(i->i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToObj(i->i).collect(Collectors.averagingLong(i->i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).boxed().collect(Collectors.averagingLong(i->i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).average().getAsDouble());
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToDouble(i->i).average().getAsDouble());
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToLong(i->i).average().getAsDouble());
+
+        printRainbowLn('-', 10);
+
+        printMagentaGenericLn("Curiosity 1","");
         moduleEnd();
     }
 
