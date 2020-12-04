@@ -51,7 +51,12 @@ public class Mastery4Dot3Runner {
 
         exercise1();
         exercise2();
+        exercise3();
 
+        moduleEnd();
+    }
+
+    private static void exercise3() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 3. Mutability Guidelines with focus on 6.6.");
         printRainbowLn('=');
@@ -87,12 +92,11 @@ public class Mastery4Dot3Runner {
         printMagentaGenericLn("And so, although your friend did this to your copy:");
         printMagentaGenericLn(copy);
         printMagentaGenericLn("Your original is still there 😉!!");
+        printMagentaGenericLn(yourOrangeAlbum);
         printRainbowLn('-');
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Guideline 6-6 / MUTABLE-6: Treat passing input to untrusted object as output");
         printGreenGenericLn("2. More info: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
-        printMagentaGenericLn(yourOrangeAlbum);
-        moduleEnd();
     }
 
     private static void exercise2() {
