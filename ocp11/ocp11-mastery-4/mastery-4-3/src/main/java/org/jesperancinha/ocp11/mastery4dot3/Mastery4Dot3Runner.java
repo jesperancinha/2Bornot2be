@@ -1,9 +1,12 @@
 package org.jesperancinha.ocp11.mastery4dot3;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
+import org.jesperancinha.ocp11.mastery4dot3.record.Album;
 import org.jesperancinha.ocp11.mastery4dot3.song.Song;
 
 import java.math.BigDecimal;
+import java.nio.charset.StandardCharsets;
 import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,6 +43,7 @@ public class Mastery4Dot3Runner {
         }
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 200;
+        Consolerizer.rainbowLineChars = 20;
         printBlueGenericLn("==================== Master Module mastery-4-3 And Then Indie ====================");
         printBlueGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
         printBlueGenericLn("----> Run with -skip to skip questions");
@@ -48,19 +52,60 @@ public class Mastery4Dot3Runner {
         exercise1();
         exercise2();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 3. Mutability Guidelines with focus on 6.6.");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: In January 2020, Vampire Weekend won the best Album of the Year at the Grammy's.");
+        printGreenGenericLn(
+            "At the same time they have had already released a limited edition orange vinyl version of this album.");
+        printGreenGenericLn(
+            "No doubt that with such great success, this limited will have its price inflated through the years.");
+        printGreenGenericLn(
+            "You bought this record, and now, years later, a friend asks you if you can lend they your record.");
+        printGreenGenericLn(
+            "You are very protective of such a music gem and so you decide to make a copy of it, and give lend that to your friend.");
+        printGreenGenericLn(
+            "Your friend's intention turns out to be something else in the end. They was going to scratch it for you");
+        printRainbowLn('-');
+        var friend = new Frenemy("Frenemy");
+        var orangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
+            List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
+                "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
+        printMagentaGenericLn("This is the album you were about to lend:");
+        printMagentaGenericLn(orangeAlbum);
+        printMagentaGenericLn("If you had lend it to %s", friend);
+        friend.lendAlbum(orangeAlbum);
+        printMagentaGenericLn("This would be the returned album:");
+        printMagentaGenericLn(orangeAlbum);
+        printRainbowLn('-');
+        printMagentaGenericLn("But since you are pretty safe in what you do, you are going to lend:");
+        var yourOrangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
+            List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
+                "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
+        final Album copy = yourOrangeAlbum.copy();
+        friend.lendAlbum(copy);
+        printMagentaGenericLn("And so, although your friend did this to your copy:");
+        printMagentaGenericLn(copy);
+        printMagentaGenericLn("Your original is still there 😉!!");
+        printRainbowLn('-');
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Guideline 6-6 / MUTABLE-6: Treat passing input to untrusted object as output");
+        printGreenGenericLn("2. More info: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        printMagentaGenericLn(yourOrangeAlbum);
         moduleEnd();
     }
 
     private static void exercise2() {
+        printRainbowLn('=');
         printBrightCyanGenericLn("--- 2. Using `mapToObj`");
-        printRainbowLn('=', 10);
+        printRainbowLn('=');
         printGreenGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
         printGreenGenericLn("Let's have a look at the math behind it");
         var peakPositionsPerCountry = Map.of("US", 38, "AUS", 6, "BEL", 10, "CAN", 24, "FRA", 22, "GER", 65, "IRL", 5,
             "NZ", 13, "SWI", 68, "UK", 8);
         printMagentaGenericLn("This is their peak register on the charts on the  16th November 2020");
         printMagentaGenericLn(peakPositionsPerCountry);
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         // <R> R collect(Supplier<R> supplier,
         // ObjIntConsumer<R> accumulator,
         // BiConsumer<R, R> combiner);
@@ -76,7 +121,7 @@ public class Mastery4Dot3Runner {
                     integers.add(value);
                 }
             }, ArrayList::addAll);
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         final List<Integer> list02 = peakPositionsPerCountry.values()
             .stream()
             .mapToInt(i -> i)
@@ -90,10 +135,10 @@ public class Mastery4Dot3Runner {
                 printMagentaGeneric(integers2);
                 integers.addAll(integers2);
             });
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         printMagentaGenericLn("Sequential list result -> %s", list01);
         printMagentaGenericLn("Sequential list result -> %s", list02);
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         printMagentaGenericLn("If we want to calculate the average this way and with high performance, we can!");
         final double avg = peakPositionsPerCountry.values()
             .stream()
@@ -114,7 +159,7 @@ public class Mastery4Dot3Runner {
             .size();
 
         printMagentaGenericLn("This is the result -> %f", avg);
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         printMagentaGenericLn(
             "However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
@@ -161,7 +206,7 @@ public class Mastery4Dot3Runner {
                 .mapToLong(i -> i)
                 .average()
                 .getAsDouble());
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         printMagentaGenericLn("Curiosity 1 (Forcing Doubles) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
             .mapToObj(i -> i)
             .collect(Collectors.averagingDouble(i -> i)));
@@ -176,7 +221,7 @@ public class Mastery4Dot3Runner {
             .collect(Collectors.averagingInt(Double::intValue)));
         printMagentaGenericLn(
             "Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Calculating average can be done in different ways.");
         printGreenGenericLn(
@@ -194,8 +239,9 @@ public class Mastery4Dot3Runner {
     }
 
     private static void exercise1() {
+        printRainbowLn('=');
         printBrightCyanGenericLn("--- 1. Indexes in a `ResultSet`");
-        printRainbowLn('=', 10);
+        printRainbowLn('=');
         printGreenGenericLn("Case: We are wondering what happened to MGMT and why we don't hear about them anymore.");
         printGreenGenericLn("On this first exercise we will investigate their triad of hits.");
         printGreenGenericLn("MGMT came into the Indie music scene in 2008 with their album Oracular Spectacular.");
@@ -250,7 +296,7 @@ public class Mastery4Dot3Runner {
             }
 
         });
-        printRainbowLn('-', 10);
+        printRainbowLn('-');
         try {
             final Statement statement = connection.createStatement();
             final ResultSet resultSet = statement.executeQuery("SELECT SONG, BAND, HITYEAR from SONG;");
@@ -287,7 +333,7 @@ public class Mastery4Dot3Runner {
                 printMagentaGenericLn("resultSet.getFloat(3); -> %s", hitYearFloat3);
                 printMagentaGenericLn("resultSet.getArray(\"HITYEAR\");-> %s", hitYearArray);
                 printMagentaGenericLn("resultSet.getArray(3); -> %s", hitYearArray3);
-                printRainbowLn("----------");
+                printRainbowLn('-');
             }
         } catch (SQLException e) {
             printRedThrowableAndExit(e);

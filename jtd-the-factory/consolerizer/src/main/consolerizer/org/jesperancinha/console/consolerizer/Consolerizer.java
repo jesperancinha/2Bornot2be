@@ -19,12 +19,14 @@ public class Consolerizer {
 
     private final static int TYPING_DEFAULT_MS = 10;
     private final static int MAX_LINE_CHARS = 0;
+    private final static int RAINBOW_LINE_CHARS = 10;
     private final static ConColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
 
     private int typingWait;
 
     public static int typingWaitGlobal = TYPING_DEFAULT_MS;
     public static int maxLineCharsGlobal = MAX_LINE_CHARS;
+    public static int rainbowLineChars = RAINBOW_LINE_CHARS;
 
     private ConColor conColor = CON_COLOR_DEFAULT;
 
@@ -402,6 +404,11 @@ public class Consolerizer {
     public static void printRainbowLn(final char c, int nchars) {
         printRainbowLn(Stream.generate(((Character) c)::toString).limit(nchars).collect(joining()));
     }
+
+    public static void printRainbowLn(final char c) {
+        printRainbowLn(Stream.generate(((Character) c)::toString).limit(rainbowLineChars).collect(joining()));
+    }
+
     public static void printRainbowLn(final String theme) {
         printRainbow(theme);
         System.out.print("\n");

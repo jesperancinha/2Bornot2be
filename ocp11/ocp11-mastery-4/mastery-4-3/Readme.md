@@ -6,7 +6,7 @@ Welcome to my 9th Mastery Module: "And then Indie"
 
 1. Indexes in a `ResultSet`
 2. Using `mapToObj`
-3. Mutability Guidelins with focus on 6.6.
+3. Mutability Guidelines with focus on 6.6.
 4. Valid modes in `RandomAccessFile`. Difference from using `append`
 5. `Predicate` of types
 6. Downcasting and Upcasting
@@ -45,6 +45,8 @@ The point is that you need to have a `/tmp` folder at this point.
 ## References
 
 ---
+
+-   [Vampire Weekend release new album ‘Father of the Bride’](https://www.sonymusic.co.uk/vampire-weekend-release-new-album-father-of-the-bride/)
 -   [MGMT discography](https://en.wikipedia.org/wiki/MGMT_discography)
 -   [Electric Feel](https://en.wikipedia.org/wiki/Electric_Feel)
 -   [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
@@ -55,6 +57,11 @@ The point is that you need to have a `/tmp` folder at this point.
       <a href="https://www.youtube.com/watch?v=IMMlwjWyHxA">
          <img 
               src="https://img.youtube.com/vi/IMMlwjWyHxA/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=IlkTVMMkCP4">
+         <img 
+              src="https://img.youtube.com/vi/IlkTVMMkCP4/0.jpg" 
               style="width:10%;">
       </a>
 </div>
