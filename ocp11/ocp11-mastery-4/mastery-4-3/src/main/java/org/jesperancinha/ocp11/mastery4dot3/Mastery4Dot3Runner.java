@@ -5,6 +5,10 @@ import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
 import org.jesperancinha.ocp11.mastery4dot3.record.Album;
 import org.jesperancinha.ocp11.mastery4dot3.song.Song;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.sql.Array;
@@ -16,6 +20,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.DoubleAccumulator;
@@ -53,6 +58,56 @@ public class Mastery4Dot3Runner {
         exercise2();
         exercise3();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 4. Valid modes in `RandomAccessFile`. Difference from using `append`");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: We are writing the lyrics to Contra");
+        printGreenGenericLn("We will use alternative methods to do so and alternate");
+        printGreenGenericLn("file will be located in /tmp/contra.txt");
+        printRainbowLn('-');
+        var allLines = List.of("https://www.songteksten.nl/songteksten/302818/vampire-weekend/i-think-ur-a-contra.html",
+            "Never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
+            "Said never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
+            "I think you're a contra", "I think that you've lied", "Don't call me a contra", "Till you've tried");
+
+        final Iterator<String> iterator = allLines.iterator();
+        final String name = "/tmp/contra.txt";
+        while (iterator.hasNext()) {
+            try (var raf = new RandomAccessFile(name, "rw")) {
+                raf.seek(raf.length());
+                final String next = iterator.next();
+                raf.writeUTF(next);
+                raf.writeUTF("\n");
+                printMagentaGenericLn(next);
+            } catch (FileNotFoundException e) {
+                printRedThrowableAndExit(e);
+            } catch (IOException e) {
+                printRedThrowableAndExit(e);
+            }
+
+            try (var fos = new FileOutputStream(name, true)) {
+                if (iterator.hasNext()) {
+                    final String next = iterator.next();
+                    fos.write(next.getBytes(StandardCharsets.UTF_8));
+                    fos.write("\n".getBytes(StandardCharsets.UTF_8));
+                    printMagentaGenericLn(next);
+
+                }
+            } catch (FileNotFoundException e) {
+                printRedThrowableAndExit(e);
+            } catch (IOException e) {
+                printRedThrowableAndExit(e);
+            }
+        }
+        printRainbowLn('-');
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. With RandomAccessFile, we can use seek to get to a point in the file.");
+        printGreenGenericLn("2. With RandomAccessFile, we know how many bytes exist in the file.");
+        printGreenGenericLn(
+            "3. With RandomAccessFile, the position after the end of the file has an index number equal to the file size.");
+        printGreenGenericLn("4. The index is based on an inclusive start index and an exclusive end index.");
+        printGreenGenericLn(
+            "5. With FileOutputStream we can append data at the end of the file without the need for seek. The append option does this for us.");
         moduleEnd();
     }
 
