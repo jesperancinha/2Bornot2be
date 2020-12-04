@@ -78,9 +78,9 @@ public class Consolerizer {
         printMagentaGeneric(text.toString().concat("\n"));
     }
 
-    public static void printMagentaGeneric(String text) {
+    public static void printMagentaGeneric(Object text) {
         System.out.print(MAGENTA.getConsoleColor());
-        printPrivateText(text);
+        printPrivateText(text.toString());
     }
 
     public static void printMagentaGeneric(String text, Object... args) {
@@ -97,9 +97,9 @@ public class Consolerizer {
         printBrightMagentaGeneric(text.toString().concat("\n"));
     }
 
-    public static void printBrightMagentaGeneric(String text) {
+    public static void printBrightMagentaGeneric(Object text) {
         System.out.print(BRIGHT_MAGENTA.getConsoleColor());
-        printPrivateText(text);
+        printPrivateText(text.toString());
     }
 
     public static void printBrightMagentaGeneric(String text, Object... args) {

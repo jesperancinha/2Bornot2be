@@ -12,15 +12,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.function.ObjIntConsumer;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -45,7 +47,43 @@ public class Mastery4Dot3Runner {
         printRainbowLn('=', 10);
         printGreenGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
         printGreenGenericLn("Let's have a look at the math behind it");
-
+        var peakPositionsPerCountry = Map.of(
+                "US", 38, "AUS", 6, "BEL", 10, "CAN", 24,
+                "FRA", 22, "GER", 65, "IRL", 5, "NZ", 13,
+                "SWI", 68, "UK", 8
+        );
+        printMagentaGeneric("This is their peak register on the charts on the  16th November 2020");
+        printMagentaGeneric(peakPositionsPerCountry);
+        printRainbowLn('-', 10);
+        // <R> R collect(Supplier<R> supplier,
+        // ObjIntConsumer<R> accumulator,
+        // BiConsumer<R, R> combiner);
+        final List<Integer> list01 = peakPositionsPerCountry.values().stream().mapToInt(i -> i)
+                .collect(ArrayList::new, new ObjIntConsumer<ArrayList<Integer>>() {
+                    @Override
+                    public void accept(ArrayList<Integer> integers, int value) {
+                        printMagentaGenericLn("When our stream is sequential, we can see things nicely, but performance goes away:");
+                        printMagentaGenericLn("Adding value %d", value);
+                        integers.add(value);
+                    }
+                }, ArrayList::addAll);
+        printRainbowLn('-', 10);
+        final List<Integer> list02 = peakPositionsPerCountry.values().stream().mapToInt(i -> i)
+                .parallel()
+                .collect(
+                        ArrayList::new,
+                        (integers, value) -> {
+                            integers.add(value);
+                            printBrightMagentaGeneric(value);
+                        }, (integers, integers2) -> {
+                            printMagentaGeneric("I'm reaching this now, because I'm a parallel stream!");
+                            printMagentaGeneric(integers);
+                            printMagentaGeneric(integers2);
+                            integers.addAll(integers2);
+                        });
+        printRainbowLn('-', 10);
+        printMagentaGenericLn("Sequential list result -> %s", list01);
+        printMagentaGenericLn("Sequential list result -> %s", list02);
         moduleEnd();
     }
 
