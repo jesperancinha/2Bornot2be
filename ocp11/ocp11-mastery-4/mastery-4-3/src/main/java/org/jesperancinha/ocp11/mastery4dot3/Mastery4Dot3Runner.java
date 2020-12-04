@@ -20,7 +20,6 @@ import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -41,103 +40,157 @@ public class Mastery4Dot3Runner {
         }
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 200;
-        printBlueGenericLn("==================== Master Module mastery-4-3 And Then India ====================");
+        printBlueGenericLn("==================== Master Module mastery-4-3 And Then Indie ====================");
         printBlueGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
         printBlueGenericLn("----> Run with -skip to skip questions");
         printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
         exercise1();
+        exercise2();
 
+        moduleEnd();
+    }
+
+    private static void exercise2() {
         printBrightCyanGenericLn("--- 2. Using `mapToObj`");
         printRainbowLn('=', 10);
         printGreenGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
         printGreenGenericLn("Let's have a look at the math behind it");
-        var peakPositionsPerCountry = Map.of(
-                "US", 38, "AUS", 6, "BEL", 10, "CAN", 24,
-                "FRA", 22, "GER", 65, "IRL", 5, "NZ", 13,
-                "SWI", 68, "UK", 8
-        );
+        var peakPositionsPerCountry = Map.of("US", 38, "AUS", 6, "BEL", 10, "CAN", 24, "FRA", 22, "GER", 65, "IRL", 5,
+            "NZ", 13, "SWI", 68, "UK", 8);
         printMagentaGenericLn("This is their peak register on the charts on the  16th November 2020");
         printMagentaGenericLn(peakPositionsPerCountry);
         printRainbowLn('-', 10);
         // <R> R collect(Supplier<R> supplier,
         // ObjIntConsumer<R> accumulator,
         // BiConsumer<R, R> combiner);
-        final List<Integer> list01 = peakPositionsPerCountry.values().stream().mapToInt(i -> i)
-                .collect(ArrayList::new, new ObjIntConsumer<ArrayList<Integer>>() {
-                    @Override
-                    public void accept(ArrayList<Integer> integers, int value) {
-                        printMagentaGenericLn("When our stream is sequential, we can see things nicely, but performance goes away:");
-                        printMagentaGenericLn("Adding value %d", value);
-                        integers.add(value);
-                    }
-                }, ArrayList::addAll);
+        final List<Integer> list01 = peakPositionsPerCountry.values()
+            .stream()
+            .mapToInt(i -> i)
+            .collect(ArrayList::new, new ObjIntConsumer<ArrayList<Integer>>() {
+                @Override
+                public void accept(ArrayList<Integer> integers, int value) {
+                    printMagentaGenericLn(
+                        "When our stream is sequential, we can see things nicely, but performance goes away:");
+                    printMagentaGenericLn("Adding value %d", value);
+                    integers.add(value);
+                }
+            }, ArrayList::addAll);
         printRainbowLn('-', 10);
-        final List<Integer> list02 = peakPositionsPerCountry.values().stream().mapToInt(i -> i)
-                .parallel()
-                .collect(
-                        ArrayList::new,
-                        (integers, value) -> {
-                            integers.add(value);
-                            printBrightMagentaGeneric(value);
-                        }, (integers, integers2) -> {
-                            printMagentaGeneric("I'm reaching this now, because I'm a parallel stream!");
-                            printMagentaGeneric(integers);
-                            printMagentaGeneric(integers2);
-                            integers.addAll(integers2);
-                        });
+        final List<Integer> list02 = peakPositionsPerCountry.values()
+            .stream()
+            .mapToInt(i -> i)
+            .parallel()
+            .collect(ArrayList::new, (integers, value) -> {
+                integers.add(value);
+                printBrightMagentaGeneric(value);
+            }, (integers, integers2) -> {
+                printMagentaGeneric("I'm reaching this now, because I'm a parallel stream!");
+                printMagentaGeneric(integers);
+                printMagentaGeneric(integers2);
+                integers.addAll(integers2);
+            });
         printRainbowLn('-', 10);
         printMagentaGenericLn("Sequential list result -> %s", list01);
         printMagentaGenericLn("Sequential list result -> %s", list02);
         printRainbowLn('-', 10);
         printMagentaGenericLn("If we want to calculate the average this way and with high performance, we can!");
-        final double avg = peakPositionsPerCountry.values().stream().mapToInt(i -> i)
-                .parallel()
-                .collect(
-                        () -> new DoubleAccumulator(Double::sum, 0),
-                        new ObjIntConsumer<DoubleAccumulator>() {
-                            @Override
-                            public void accept(DoubleAccumulator atomicInteger, int value) {
-                                atomicInteger.accumulate(value);
-                            }
-                        }, new BiConsumer<DoubleAccumulator, DoubleAccumulator>() {
-                            @Override
-                            public void accept(DoubleAccumulator doubleAccumulator, DoubleAccumulator doubleAccumulator2) {
-                                doubleAccumulator.accumulate(doubleAccumulator2.doubleValue());
-                            }
-                        }).doubleValue() / peakPositionsPerCountry.values().size();
+        final double avg = peakPositionsPerCountry.values()
+            .stream()
+            .mapToInt(i -> i)
+            .parallel()
+            .collect(() -> new DoubleAccumulator(Double::sum, 0), new ObjIntConsumer<DoubleAccumulator>() {
+                @Override
+                public void accept(DoubleAccumulator atomicInteger, int value) {
+                    atomicInteger.accumulate(value);
+                }
+            }, new BiConsumer<DoubleAccumulator, DoubleAccumulator>() {
+                @Override
+                public void accept(DoubleAccumulator doubleAccumulator, DoubleAccumulator doubleAccumulator2) {
+                    doubleAccumulator.accumulate(doubleAccumulator2.doubleValue());
+                }
+            })
+            .doubleValue() / peakPositionsPerCountry.values()
+            .size();
 
         printMagentaGenericLn("This is the result -> %f", avg);
         printRainbowLn('-', 10);
-        printMagentaGenericLn("However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingDouble(i->i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingInt(i->i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingLong(i->i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToObj(i->i).collect(Collectors.averagingLong(i->i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).boxed().collect(Collectors.averagingLong(i->i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).average().getAsDouble());
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToDouble(i->i).average().getAsDouble());
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToLong(i->i).average().getAsDouble());
+        printMagentaGenericLn(
+            "However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .collect(Collectors.averagingDouble(i -> i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .collect(Collectors.averagingInt(i -> i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .collect(Collectors.averagingLong(i -> i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .mapToInt(i -> i)
+                .mapToObj(i -> i)
+                .collect(Collectors.averagingLong(i -> i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .mapToInt(i -> i)
+                .boxed()
+                .collect(Collectors.averagingLong(i -> i)));
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .mapToInt(i -> i)
+                .average()
+                .getAsDouble());
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .mapToInt(i -> i)
+                .mapToDouble(i -> i)
+                .average()
+                .getAsDouble());
+        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
+            peakPositionsPerCountry.values()
+                .stream()
+                .mapToInt(i -> i)
+                .mapToLong(i -> i)
+                .average()
+                .getAsDouble());
         printRainbowLn('-', 10);
         printMagentaGenericLn("Curiosity 1 (Forcing Doubles) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i->i).collect(Collectors.averagingDouble(i->i)));
+            .mapToObj(i -> i)
+            .collect(Collectors.averagingDouble(i -> i)));
         printMagentaGenericLn("Curiosity 2 (Forcing Longs) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i->i).collect(Collectors.averagingLong(Double::longValue)));
+            .mapToObj(i -> i)
+            .collect(Collectors.averagingLong(Double::longValue)));
         printMagentaGenericLn("Curiosity 3 (Forcing Ints) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i->i).collect(Collectors.averagingInt(Double::intValue)));
+            .mapToObj(i -> i)
+            .collect(Collectors.averagingInt(Double::intValue)));
         printMagentaGenericLn("Curiosity 4 (no values) ->  %f", DoubleStream.of()
-            .mapToObj(i->i).collect(Collectors.averagingInt(Double::intValue)));
-        printMagentaGenericLn("Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
+            .mapToObj(i -> i)
+            .collect(Collectors.averagingInt(Double::intValue)));
+        printMagentaGenericLn(
+            "Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
         printRainbowLn('-', 10);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Calculating average can be done in different ways.");
-        printGreenGenericLn("2. All ways require the return value to double in the end unless we make our custom calculation.");
-        printGreenGenericLn("3. Using collectors, the result in never an Optional and this is because that is the way collectors work.");
-        printGreenGenericLn("4. Number streams do have collectors. We calculated avg using our own average implementation, but it will always be less efficient.");
-        printGreenGenericLn("5. The collector of the Number streams are used to solve value accumulation issues. They are perfect for custom reduce operations.");
-        printGreenGenericLn("6. The BiConsumer of a Number stream collector is called only during `parallel` stream operations. It is not called at all otherwise.");
-        printGreenGenericLn("7. The `average` method of a Number stream is there to solve this problem. However, it returns an `OptionalDouble`. We then call getAsDouble to know the value.");
-        moduleEnd();
+        printGreenGenericLn(
+            "2. All ways require the return value to double in the end unless we make our custom calculation.");
+        printGreenGenericLn(
+            "3. Using collectors, the result in never an Optional and this is because that is the way collectors work.");
+        printGreenGenericLn(
+            "4. Number streams do have collectors. We calculated avg using our own average implementation, but it will always be less efficient.");
+        printGreenGenericLn(
+            "5. The collector of the Number streams are used to solve value accumulation issues. They are perfect for custom reduce operations.");
+        printGreenGenericLn(
+            "6. The BiConsumer of a Number stream collector is called only during `parallel` stream operations. It is not called at all otherwise.");
+        printGreenGenericLn(
+            "7. The `average` method of a Number stream is there to solve this problem. However, it returns an `OptionalDouble`. We then call getAsDouble to know the value.");
     }
 
     private static void exercise1() {
@@ -147,12 +200,9 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("On this first exercise we will investigate their triad of hits.");
         printGreenGenericLn("MGMT came into the Indie music scene in 2008 with their album Oracular Spectacular.");
 
-        var songTimeToPretend =
-                new Song("Time to pretend", "MGMT", LocalDate.of(2008, 3, 3));
-        var songKids =
-                new Song("Kids", "MGMT", LocalDate.of(2008, 10, 13));
-        var songElectricFeel =
-                new Song("Electric Feel", "MGMT", LocalDate.of(2008, 6, 23));
+        var songTimeToPretend = new Song("Time to pretend", "MGMT", LocalDate.of(2008, 3, 3));
+        var songKids = new Song("Kids", "MGMT", LocalDate.of(2008, 10, 13));
+        var songElectricFeel = new Song("Electric Feel", "MGMT", LocalDate.of(2008, 6, 23));
 
         var allSongs = List.of(songTimeToPretend, songKids, songElectricFeel);
 
@@ -165,12 +215,9 @@ public class Mastery4Dot3Runner {
         PreparedStatement preparedStatementCreate = null;
         try {
             assert connection != null;
-            preparedStatementCreate = connection.prepareStatement("CREATE TABLE Song (" +
-                    "   id INT AUTO_INCREMENT NOT NULL, \n" +
-                    "   SONG VARCHAR(50) NOT NULL, \n" +
-                    "   BAND VARCHAR(50) NOT NULL, \n" +
-                    "   HITYEAR INT " +
-                    ");");
+            preparedStatementCreate = connection.prepareStatement(
+                "CREATE TABLE Song (" + "   id INT AUTO_INCREMENT NOT NULL, \n" + "   SONG VARCHAR(50) NOT NULL, \n"
+                    + "   BAND VARCHAR(50) NOT NULL, \n" + "   HITYEAR INT " + ");");
         } catch (SQLException e) {
             printRedThrowableAndExit(e);
         }
@@ -189,10 +236,12 @@ public class Mastery4Dot3Runner {
         Connection finalConnection = connection;
         allSongs.forEach(song -> {
             try {
-                final PreparedStatement statement = finalConnection.prepareStatement("INSERT INTO Song (SONG, BAND, HITYEAR) VALUES(?,?,?);");
+                final PreparedStatement statement = finalConnection.prepareStatement(
+                    "INSERT INTO Song (SONG, BAND, HITYEAR) VALUES(?,?,?);");
                 statement.setString(1, song.getSong());
                 statement.setString(2, song.getBand());
-                statement.setLong(3, song.getHitLocalDate().getYear());
+                statement.setLong(3, song.getHitLocalDate()
+                    .getYear());
                 if (statement.execute()) {
                     printMagentaGeneric("Inserted song %s", song);
                 }
@@ -252,7 +301,8 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("1. In Result sets, indexes are 1 based");
         printGreenGenericLn("2. Conversions happen automatically if they match");
         printGreenGenericLn("3. An Int if convertible to Integer, Long, Float, Double and Big Integer");
-        printGreenGenericLn("4. We can even get a special java.sql.Array type, which  returns the data in an array form valid for all types");
+        printGreenGenericLn(
+            "4. We can even get a special java.sql.Array type, which  returns the data in an array form valid for all types");
     }
 
     private static void moduleEnd() {

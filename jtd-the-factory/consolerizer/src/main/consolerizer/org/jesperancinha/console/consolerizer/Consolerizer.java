@@ -75,7 +75,7 @@ public class Consolerizer {
     }
 
     public static void printMagentaGenericLn(Object text) {
-        printMagentaGeneric(text.toString().concat("\n"));
+        printMagentaGeneric(text.toString().trim().concat("\n"));
     }
 
     public static void printMagentaGeneric(Object text) {
