@@ -19,6 +19,8 @@ import java.util.concurrent.atomic.DoubleAccumulator;
 import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -55,8 +57,8 @@ public class Mastery4Dot3Runner {
                 "FRA", 22, "GER", 65, "IRL", 5, "NZ", 13,
                 "SWI", 68, "UK", 8
         );
-        printMagentaGeneric("This is their peak register on the charts on the  16th November 2020");
-        printMagentaGeneric(peakPositionsPerCountry);
+        printMagentaGenericLn("This is their peak register on the charts on the  16th November 2020");
+        printMagentaGenericLn(peakPositionsPerCountry);
         printRainbowLn('-', 10);
         // <R> R collect(Supplier<R> supplier,
         // ObjIntConsumer<R> accumulator,
@@ -108,7 +110,6 @@ public class Mastery4Dot3Runner {
         printMagentaGenericLn("This is the result -> %f", avg);
         printRainbowLn('-', 10);
         printMagentaGenericLn("However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
-
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingDouble(i->i)));
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingInt(i->i)));
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().collect(Collectors.averagingLong(i->i)));
@@ -117,10 +118,25 @@ public class Mastery4Dot3Runner {
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).average().getAsDouble());
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToDouble(i->i).average().getAsDouble());
         printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values().stream().mapToInt(i->i).mapToLong(i->i).average().getAsDouble());
-
         printRainbowLn('-', 10);
-
-        printMagentaGenericLn("Curiosity 1","");
+        printMagentaGenericLn("Curiosity 1 (Forcing Doubles) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+            .mapToObj(i->i).collect(Collectors.averagingDouble(i->i)));
+        printMagentaGenericLn("Curiosity 2 (Forcing Longs) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+            .mapToObj(i->i).collect(Collectors.averagingLong(Double::longValue)));
+        printMagentaGenericLn("Curiosity 3 (Forcing Ints) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+            .mapToObj(i->i).collect(Collectors.averagingInt(Double::intValue)));
+        printMagentaGenericLn("Curiosity 4 (no values) ->  %f", DoubleStream.of()
+            .mapToObj(i->i).collect(Collectors.averagingInt(Double::intValue)));
+        printMagentaGenericLn("Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
+        printRainbowLn('-', 10);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Calculating average can be done in different ways.");
+        printGreenGenericLn("2. All ways require the return value to double in the end unless we make our custom calculation.");
+        printGreenGenericLn("3. Using collectors, the result in never an Optional and this is because that is the way collectors work.");
+        printGreenGenericLn("4. Number streams do have collectors. We calculated avg using our own average implementation, but it will always be less efficient.");
+        printGreenGenericLn("5. The collector of the Number streams are used to solve value accumulation issues. They are perfect for custom reduce operations.");
+        printGreenGenericLn("6. The BiConsumer of a Number stream collector is called only during `parallel` stream operations. It is not called at all otherwise.");
+        printGreenGenericLn("7. The `average` method of a Number stream is there to solve this problem. However, it returns an `OptionalDouble`. We then call getAsDouble to know the value.");
         moduleEnd();
     }
 
