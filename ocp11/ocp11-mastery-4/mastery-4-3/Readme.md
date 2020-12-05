@@ -21,7 +21,7 @@ Welcome to my 9th Mastery Module: "And then Indie"
 15. add `override` in an `ArrayList`
 16. Overriding methods returning primitives
 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`
-18. Abtract classes and the `new` keyword
+18. Abstract classes and the `new` keyword
 19. `String` `replace` old/new 
 
 

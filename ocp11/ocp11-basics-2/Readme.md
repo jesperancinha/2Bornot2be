@@ -1,4 +1,4 @@
-# ocp11-scale-up-2 (Oracle Certified Professional Java SE 11)
+# ocp11-basics-2 (Oracle Certified Professional Java SE 11)
 
 ## Introduction
 

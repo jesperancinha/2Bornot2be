@@ -59,7 +59,17 @@ public class Mastery4Dot3Runner {
         exercise2();
         exercise3();
         exercise4();
+        exercise5();
 
+        printBrightCyanGenericLn("--- 6. Downcasting and Upcasting");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: ");
+
+        moduleEnd();
+    }
+
+    private static void exercise5() {
+        printRainbowLn('=');
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 5. `Predicate` of types");
         printRainbowLn('=');
@@ -116,7 +126,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn(
             "3. You don't have to define the type of the input parameter if you already have done so for the reference.");
         printGreenGenericLn("4. The previous rule works the same way as the diamond notation works.");
-        moduleEnd();
     }
 
     private static void exercise4() {

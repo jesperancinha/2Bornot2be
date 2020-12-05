@@ -20,7 +20,7 @@ jdeps ...
 -   We compile our module
 
 ```bash
-cd ocp11-scale-up-2/jpms-tron-package
+cd ocp11-basics-2/jpms-tron-package
 cd src/main
 javac --module-source-path . -m tron -d ./out
 java --module-path out --module tron/org.jesperancinha.ocp11.tron.TronRunner
@@ -90,7 +90,7 @@ ACTIVATE
 ```bash
 jdeps jars/tron.jar 
 tron
- [file:///Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11-scale-up-2/jpms-tron-package/src/main/jars/tron.jar]
+ [file:///Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11-basics-2/jpms-tron-package/src/main/jars/tron.jar]
    requires mandated java.base (@15-ea)
 tron -> java.base
    org.jesperancinha.ocp11.tron                       -> java.io                                            java.base
@@ -102,7 +102,7 @@ tron -> java.base
 ```bash
 jdeps -verbose jars/tron.jar
 tron
- [file:///Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11-scale-up-2/jpms-tron-package/src/main/jars/tron.jar]
+ [file:///Users/jofisaes/dev/src/jofisaes/java-test-drives/ocp11-basics-2/jpms-tron-package/src/main/jars/tron.jar]
    requires mandated java.base (@15-ea)
 tron -> java.base
    org.jesperancinha.ocp11.tron.TronRunner            -> java.lang.Class                                    java.base
