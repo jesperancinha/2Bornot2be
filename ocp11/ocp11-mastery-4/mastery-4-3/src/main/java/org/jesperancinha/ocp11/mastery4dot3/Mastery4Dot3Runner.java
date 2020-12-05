@@ -4,6 +4,10 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
 import org.jesperancinha.ocp11.mastery4dot3.record.Album;
 import org.jesperancinha.ocp11.mastery4dot3.song.Song;
+import org.jesperancinha.ocp11.mastery4dot3.transport.Limousine;
+import org.jesperancinha.ocp11.mastery4dot3.transport.TourTrailer;
+import org.jesperancinha.ocp11.mastery4dot3.transport.Trailer;
+import org.jesperancinha.ocp11.mastery4dot3.transport.Transport;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -37,6 +41,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGene
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 
@@ -63,7 +68,38 @@ public class Mastery4Dot3Runner {
 
         printBrightCyanGenericLn("--- 6. Downcasting and Upcasting");
         printRainbowLn('=');
-        printGreenGenericLn("Case: ");
+        printGreenGenericLn("Case: Hercules love affair is on tour and you are going to see them in the backstage!");
+        printGreenGenericLn("Can you go on their trailer? Probably not ☹️. We'll look into the not case.");
+        var tourTrailerHLA = new TourTrailer("Hercules Love Affair");
+        printMagentaGenericLn("This is the band in the trailer: %s", tourTrailerHLA);
+        var limoFriends = new Limousine(List.of("You", "Joan", "Edith", "Margaret", "Dorothy"));
+        printMagentaGenericLn("You and your friends %s are now in the limo!", limoFriends);
+        final Transport transportHLA = tourTrailerHLA;
+        final Transport transportFriends = limoFriends;
+        printMagentaGenericLn("The Transport for the Trailer is %s", transportHLA);
+        printMagentaGenericLn("The Transport for the Limousine is %s", transportFriends);
+        // Inconvertible types; cannot cast 'org.jesperancinha.ocp11.mastery4dot3.transport.Limousine' to 'org.jesperancinha.ocp11.mastery4dot3.transport.TourTrailer'
+        // final TourTrailer trailerFriends = (TourTrailer)limoFriends;
+        try {
+            final TourTrailer trailerFriends = (TourTrailer) transportFriends;
+        }catch (ClassCastException e){
+            printRedGenericLn("This is expected %s", e);
+            printRedGenericLn("There is no compilation error, because we are downcasting from transportFriends, which is a reference to a Transport interface");
+            printRedGenericLn("Transport interfaces can be Trailers but of course they can also be Limousines.");
+            printRedGenericLn("If the instance is a Limousine, then it cannot be a Trailer at the same time.");
+        }
+        final Trailer trailerHLA = tourTrailerHLA;
+        printMagentaGenericLn("Finally a tour trailer HLA is also just a trailer");
+        printMagentaGenericLn("The subclass TourTrailer is just a more specific case of Trailer");
+        printMagentaGenericLn("And so we have the Trailer as %s", trailerHLA);
+
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. var declaration plays a smaller role in downcasting and upcasting, since the type is assigned on the right side.");
+        printGreenGenericLn("2. Upcasting is automatic, when the subtype is known.");
+        printGreenGenericLn("3. Casting in general has to be explicit if the subtype is unknown.");
+        printGreenGenericLn("4. Compilation errors occurs when the subtype is known and doesn't match the type being cast to.");
+        printGreenGenericLn("5. If it is possible to downcast, the compiler has no way to differentiate the actual instance being referenced to.");
+        printGreenGenericLn("6. The later results in a ClassCastException, which is a RuntimeException because only during runtime will the actual cast be attempted.");
 
         moduleEnd();
     }
