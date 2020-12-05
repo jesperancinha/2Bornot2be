@@ -10,7 +10,7 @@ Welcome to my 9th Mastery Module: "And then Indie"
 4. Valid modes in `RandomAccessFile`. Difference from using `append`
 5. `Predicate` of types
 6. Downcasting and Upcasting
-7. `jdeps` alternative `commands`
+7. `jdeps` alternative `commands` [mastery-4-3-modularity](../mastery-4-3-modularity)
 8. Boxing into a `List` and difference between primitives
 9. `++i` `i++` in a loop
 10. Collecting duplicate entries to a `Map`

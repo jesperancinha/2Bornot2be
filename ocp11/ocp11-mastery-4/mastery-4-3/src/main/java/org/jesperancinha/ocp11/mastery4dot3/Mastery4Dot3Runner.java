@@ -70,7 +70,11 @@ public class Mastery4Dot3Runner {
         printBrightCyanGenericLn("--- 7. `jdeps` alternative `commands`");
         printRainbowLn('=');
         printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
-
+        printGreenGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
+        printGreenGenericLn("2. Classpath only works with unamed modules/automatic modules and their dependencies.");
+        printGreenGenericLn("3. Classpath does not work for modules that depend on automatic modules.");
         moduleEnd();
     }
 

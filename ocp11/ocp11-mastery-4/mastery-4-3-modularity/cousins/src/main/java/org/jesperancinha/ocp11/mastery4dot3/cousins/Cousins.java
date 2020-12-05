@@ -1,7 +1,9 @@
 package org.jesperancinha.ocp11.mastery4dot3.cousins;
 
 public class Cousins {
-    public final String getCousins(){
-        return String.format("They have %s cousins", (int) (Math.random() * 100));
+    public final String getCousins() {
+        return new org.jesperancinha.ocp11.mastery4dot3.cousins.of.cousins.Cousins().getCousins()
+            .concat("\n")
+            .concat(String.format("They have %s cousins", (int) (Math.random() * 100)));
     }
 }

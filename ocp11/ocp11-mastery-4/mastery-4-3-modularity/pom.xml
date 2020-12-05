@@ -16,5 +16,6 @@
         <module>cousins</module>
         <module>your.cousins</module>
         <module>family</module>
+        <module>cousins.of.cousins</module>
     </modules>
 </project>
