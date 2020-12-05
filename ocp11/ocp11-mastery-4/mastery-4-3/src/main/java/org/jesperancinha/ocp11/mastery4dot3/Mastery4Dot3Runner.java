@@ -65,7 +65,16 @@ public class Mastery4Dot3Runner {
         exercise3();
         exercise4();
         exercise5();
+        exercise6();
 
+        printBrightCyanGenericLn("--- 7. `jdeps` alternative `commands`");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
+
+        moduleEnd();
+    }
+
+    private static void exercise6() {
         printBrightCyanGenericLn("--- 6. Downcasting and Upcasting");
         printRainbowLn('=');
         printGreenGenericLn("Case: Hercules love affair is on tour and you are going to see them in the backstage!");
@@ -100,8 +109,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("4. Compilation errors occurs when the subtype is known and doesn't match the type being cast to.");
         printGreenGenericLn("5. If it is possible to downcast, the compiler has no way to differentiate the actual instance being referenced to.");
         printGreenGenericLn("6. The later results in a ClassCastException, which is a RuntimeException because only during runtime will the actual cast be attempted.");
-
-        moduleEnd();
     }
 
     private static void exercise5() {

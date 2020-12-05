@@ -1,158 +1,34 @@
-# mastery-4-3 - Mastery Module 4.3. - And then Indie
+# mastery-4-3 - Mastery Module 4.3. Modularity - Exercise 7
 
-Welcome to my 9th Mastery Module: "And then Indie"
+Exercise 7 - Investigating jdeps
 
-## Exercise
+## How to run
 
-1. Indexes in a `ResultSet`
-2. Using `mapToObj`
-3. Mutability Guidelines with focus on 6.6.
-4. Valid modes in `RandomAccessFile`. Difference from using `append`
-5. `Predicate` of types
-6. Downcasting and Upcasting
-7. `jdeps` alternative `commands`
-8. Boxing into a `List` and difference between primitives
-9. `++i` `i++` in a loop
-10. Collecting duplicate entries to a `Map`
-11. `readPassword` in `Console`
-12. Complex `operands` and `operators`
-13. Creating and filtering an `IntStream`
-14. When to call `flush`
-15. add `override` in an `ArrayList`
-16. Overriding methods returning primitives
-17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`
-18. Abstract classes and the `new` keyword
-19. `String` `replace` old/new 
-
-
-(... coming soon ...)
-## Preparation
-
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](./prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+If we run this way:
 
 ```bash
-./prepare.sh
+javac --module-source-path ./family -m family -d ./out
 ```
+
+We will be missing the modules.
+So we have to include the jars and turn them int automatic modules:
+
+```bash
+mkdir out
+javac --module-path cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path family -m family -d ./out
+mkdir jars
+jar --create --file ./jars/family.jar --main-class org.jesperancinha.ocp11.mastery4dot3.family.FamilyRunner -C ./out/family .
+java --module-path jars:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar --module family/org.jesperancinha.ocp11.mastery4dot3.family.FamilyRunner
+jdeps --module-path cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar jars/family.jar
+```
+
+## Exercise
 
 ## Output
 
 ```text
 
 ```
-
-## References
-
----
--   [Hercules Love Affair Homepage](https://www.herculesandloveaffair.net/home/)
--   [VAMPIRE WEEKEND @ The Grammys](https://www.grammy.com/grammys/artists/vampire-weekend/10722)
--   [Vampire Weekend release new album ‘Father of the Bride’](https://www.sonymusic.co.uk/vampire-weekend-release-new-album-father-of-the-bride/)
--   [MGMT discography](https://en.wikipedia.org/wiki/MGMT_discography)
--   [Electric Feel](https://en.wikipedia.org/wiki/Electric_Feel)
--   [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
--   [Time to Pretend](https://en.wikipedia.org/wiki/Time_to_Pretend)
--   [MGMT and their Little Dark Age](https://www.youtube.com/watch?v=IMMlwjWyHxA)
-
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=GJ78MJg3UdE">
-         <img 
-              src="https://img.youtube.com/vi/GJ78MJg3UdE/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=0fizVDRsvOI">
-         <img 
-              src="https://img.youtube.com/vi/0fizVDRsvOI/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=IMMlwjWyHxA">
-         <img 
-              src="https://img.youtube.com/vi/IMMlwjWyHxA/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=IlkTVMMkCP4">
-         <img 
-              src="https://img.youtube.com/vi/IlkTVMMkCP4/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=47dtFZ8CFo8">
-         <img 
-              src="https://img.youtube.com/vi/47dtFZ8CFo8/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=JozUoRIbsEE">
-         <img 
-              src="https://img.youtube.com/vi/JozUoRIbsEE/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=AIIovpUQiro">
-         <img 
-              src="https://img.youtube.com/vi/AIIovpUQiro/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=IPKAwJKGSDc">
-         <img 
-              src="https://img.youtube.com/vi/IPKAwJKGSDc/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=mGu0IYyncZ4">
-         <img 
-              src="https://img.youtube.com/vi/mGu0IYyncZ4/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=xozfkEPxDqk">
-         <img 
-              src="https://img.youtube.com/vi/xozfkEPxDqk/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=bccKotFwzoY">
-         <img 
-              src="https://img.youtube.com/vi/bccKotFwzoY/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=1e0u11rgd9Q">
-         <img 
-              src="https://img.youtube.com/vi/1e0u11rgd9Q/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=X61BVv6pLtw">
-         <img 
-              src="https://img.youtube.com/vi/X61BVv6pLtw/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=cdHnMYUPh6s">
-         <img 
-              src="https://img.youtube.com/vi/cdHnMYUPh6s/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=MmZexg8sxyk">
-         <img 
-              src="https://img.youtube.com/vi/MmZexg8sxyk/0.jpg" 
-              style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=WiGI_UsWcWs">
-         <img 
-              src="https://img.youtube.com/vi/WiGI_UsWcWs/0.jpg" 
-              style="width:10%;">
-      </a>
-</div>
-
----
 
 ## References
 
