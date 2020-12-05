@@ -26,6 +26,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.DoubleAccumulator;
 import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
@@ -57,7 +58,68 @@ public class Mastery4Dot3Runner {
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 5. `Predicate` of types");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: Vampire Weekend had 2 wind by the Grammys for two of their albums.");
+        printGreenGenericLn("We'll build some predicates based on this and see the small differences.");
+
+        final Predicate<Album> predicateWithType = (Album a) -> {
+            if (a.getAlbumName()
+                .toLowerCase()
+                .startsWith("Father Of The Bride".toLowerCase())) {
+                return true;
+            }
+            return a.getAlbumName()
+                .toLowerCase()
+                .startsWith("Modern Vampires Of The City".toLowerCase());
+        };
+
+        final Predicate<Album> predicateWithTypeOnlyOnReference = (a) -> {
+            if (a.getAlbumName()
+                .toLowerCase()
+                .startsWith("Father Of The Bride".toLowerCase())) {
+                return true;
+            }
+            return a.getAlbumName()
+                .toLowerCase()
+                .startsWith("Modern Vampires Of The City".toLowerCase());
+        };
+
+        final Predicate predicateWithoutType = (a) -> {
+            if (((Album) a).getAlbumName()
+                .toLowerCase()
+                .startsWith("Father Of The Bride".toLowerCase())) {
+                return true;
+            }
+            return ((Album) a).getAlbumName()
+                .toLowerCase()
+                .startsWith("Modern Vampires Of The City".toLowerCase());
+        };
+        var fatherOfTheBride = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
+            List.of());
+        var modernVampiresOfTheCity = new Album("Modern Vampires of The City", "Vampire Weekend", List.of());
+        var contra = new Album("Contra", "Vampire Weekend", List.of());
+        printMagentaGenericLn("Albunm %s won the grammys -> %s", fatherOfTheBride,
+            predicateWithType.test(fatherOfTheBride));
+        // Unchecked call to 'test(T)' as a member of raw type 'java.util.function.Predicate'
+        printMagentaGenericLn("Album %s won the grammys -> %s", modernVampiresOfTheCity,
+            predicateWithoutType.test(modernVampiresOfTheCity));
+        printMagentaGenericLn("Album %s won the grammys -> %s", contra, predicateWithTypeOnlyOnReference.test(contra));
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn(
+            "1. Predicate with types are checked and therefore the reference much be checked as well for type");
+        printGreenGenericLn(
+            "2. Predicate without types are unchecked and unsafe and therefore the reference cannot be typed.");
+        printGreenGenericLn(
+            "3. You don't have to define the type of the input parameter if you already have done so for the reference.");
+        printGreenGenericLn("4. The previous rule works the same way as the diamond notation works.");
+        moduleEnd();
+    }
+
+    private static void exercise4() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 4. Valid modes in `RandomAccessFile`. Difference from using `append`");
         printRainbowLn('=');
@@ -108,7 +170,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("4. The index is based on an inclusive start index and an exclusive end index.");
         printGreenGenericLn(
             "5. With FileOutputStream we can append data at the end of the file without the need for seek. The append option does this for us.");
-        moduleEnd();
     }
 
     private static void exercise3() {
