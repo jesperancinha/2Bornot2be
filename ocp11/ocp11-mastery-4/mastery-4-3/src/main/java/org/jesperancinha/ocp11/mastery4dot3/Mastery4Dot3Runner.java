@@ -10,8 +10,10 @@ import org.jesperancinha.ocp11.mastery4dot3.transport.TourTrailer;
 import org.jesperancinha.ocp11.mastery4dot3.transport.Trailer;
 import org.jesperancinha.ocp11.mastery4dot3.transport.Transport;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.math.BigDecimal;
@@ -80,7 +82,40 @@ public class Mastery4Dot3Runner {
         exercise10();
         exercise11();
         exercise12();
+        exercise13();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 14. When to call `flush`");
+        printRainbowLn('=');
+        printGreenGenericLn(
+            "Case: We'll save lyrics of Animal Collective's single \"FloriDada\" from 2016 into a file.");
+        printGreenGenericLn("Do we need to flush it?");
+
+        var lyrics =
+            "from: https://www.azlyrics.com/lyrics/animalcollective/floridada.html\nChild\n" + "Of limousines\n" + "What's the best place\n" + "That you have seen\n" + "All of the hands\n"
+                + "That you have shook\n" + "Home of the queen of everything fancy\n" + "Is there a smell\n"
+                + "That you can tell\n" + "Gives you some peace\n" + "Sends you to hell\n" + "All of the beds\n"
+                + "That you have yearned\n" + "Is there a dream to\n" + "Where you'd return\n" + "Where is the plight\n"
+                + "With the most stars\n" + "Where do you drink";
+        try (final BufferedWriter bfw = new BufferedWriter(new FileWriter("/tmp/floridada.txt"))){
+            bfw.write(lyrics,0, lyrics.length());
+        } catch (IOException e) {
+            printRedThrowableAndExit(e);
+        }
+
+        printMagentaGenericLn("Lyrics have  been written to \"/tmp/floridada.txt\".");
+        printMagentaGenericLn(lyrics);
+        printBlueGenericLn("Please check file contents!");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. The underlying close operation flushes the content to file.");
+        printGreenGenericLn("2. Flush is usually called if you want to write sequentially to a file and not in one go.");
+        printGreenGenericLn("3. This way, we can hold  the buffer in memory and possibly perform changes before  flushing it to a file.");
+        printGreenGenericLn("4. We can also use flush, if we want to keep the buffer available for future writes to a file.");
+
+        moduleEnd();
+    }
+
+    private static void exercise13() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 13. Creating and filtering an `IntStream`");
         printRainbowLn('=');
@@ -89,7 +124,9 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
         final var peakPositionsMPP = new int[] { 13, 4, 63, 31, 25, 46, 58, 21, 37, 26 };
         printMagentaGenericLn("These are the peak positions for differenct countries:");
-        printMagentaGenericLn(Arrays.stream(peakPositionsMPP).boxed().collect(Collectors.toList()));
+        printMagentaGenericLn(Arrays.stream(peakPositionsMPP)
+            .boxed()
+            .collect(Collectors.toList()));
         final IntPredicate topTen = position -> position <= 10;
         final IntPredicate topTen1 = (int position) -> position <= 10;
         final var topTenCount = IntStream.of(peakPositionsMPP)
@@ -102,20 +139,24 @@ public class Mastery4Dot3Runner {
             .count();
         printMagentaGenericLn("If we want to specify type, we can, but its not needed:");
         printMagentaGenericLn(topTenCount1);
-        IntUnaryOperator takeItToNumberOne = a -> a-3;
+        IntUnaryOperator takeItToNumberOne = a -> a - 3;
         final var toNumberOne = IntStream.of(peakPositionsMPP)
-            .map(takeItToNumberOne).parallel().collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
+            .map(takeItToNumberOne)
+            .parallel()
+            .collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
         printMagentaGenericLn("We can also pretend that they reached number 1 with a mapping trick:");
         printMagentaGenericLn(toNumberOne);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. IntStream is different than Stream.");
-        printGreenGenericLn("2. We know that collect does not take a Collector. It takes a Supplier, a ObjIntConsumer and a BiConsumer.");
+        printGreenGenericLn(
+            "2. We know that collect does not take a Collector. It takes a Supplier, a ObjIntConsumer and a BiConsumer.");
         printGreenGenericLn("3. BiConsumer only works for parallel streams.");
-        printGreenGenericLn("4. IntStream filters work with IntPredicates. They differ from normal predicates in that they only accept integers.");
+        printGreenGenericLn(
+            "4. IntStream filters work with IntPredicates. They differ from normal predicates in that they only accept integers.");
         printGreenGenericLn("5. We cannot use a common Predicate in place of a IntPredicate. They are different.");
         printGreenGenericLn("6. We can map using a IntUnaryOperator.");
-        printGreenGenericLn("7. IntStreams only accept int or varargs of type int. Lists are not allowed. Only arrays.");
-        moduleEnd();
+        printGreenGenericLn(
+            "7. IntStreams only accept int or varargs of type int. Lists are not allowed. Only arrays.");
     }
 
     private static void exercise12() {
