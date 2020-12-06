@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.atomic.DoubleAccumulator;
 import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
@@ -45,6 +46,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery4Dot3Runner {
     private static boolean skipQuestions;
@@ -72,10 +74,37 @@ public class Mastery4Dot3Runner {
         exercise9();
         exercise10();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 11. `readPassword` in `Console`");
+        printRainbowLn('=');
+        printGreenGenericLn(
+            "Case: Capital Cities made a funny video, where to get to their video set, a password is asked at the entrance.");
+        printGreenGenericLn("See the video here: https://www.youtube.com/watch?v=w7JFSLu8OHI");
+        printGreenGenericLn("So, what's the password?");
+
+        var console = System.console();
+        if (Objects.isNull(console)) {
+            printMagentaGenericLn(
+                "Unfortunately, console is only available if you invoke this program via the command line");
+            printYellowGenericLn("Please build this project and run:");
+            printYellowGenericLn("java  -jar target/mastery-4-3-1.0.0-SNAPSHOT.jar ");
+        } else {
+            final char[] password = console.readPassword();
+            final String passwordString = new String(password);
+            printMagentaGenericLn("You've typed '%s' as a password", passwordString);
+            if(!passwordString.equals("More than a mystery")){
+                printRedThrowableAndExit(new Exception(String.format("Your password '%s' is wrong! We have to stop here. Please try again", passwordString)));
+            }
+            printMagentaGenericLn("You got it right!");
+            printGreenGenericLn("Take-away");
+            printGreenGenericLn("1. New String also accepts a char array");
+            printGreenGenericLn("2. When typing a password, nothing is shown on screen, but the String is clearly introduced in the code.");
+        }
         moduleEnd();
     }
 
     private static void exercise10() {
+        printRainbowLn('=');
         printBrightCyanGenericLn("--- 10. Collecting duplicate entries to a `Map`");
         printRainbowLn('=');
         printGreenGenericLn("Case: We have a collection of Capital Cities CD's");
@@ -83,18 +112,17 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("However, we made mistake and put two entries of the same album.");
         printGreenGenericLn("Can we still collect this into a Map?");
 
-        var recordList = List.of(
-            new AlbumForSale("In a Tidal Wave of Mystery",2016L),
-            new AlbumForSale("Solarize",2019L),
-            new AlbumForSale("Solarize",2018L)
-        );
+        var recordList = List.of(new AlbumForSale("In a Tidal Wave of Mystery", 2016L),
+            new AlbumForSale("Solarize", 2019L), new AlbumForSale("Solarize", 2018L));
         printMagentaGenericLn("Our album list:");
         printMagentaGenericLn(recordList);
         try {
             final Map<String, Long> collect = recordList.stream()
                 .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase));
-        } catch (IllegalStateException e){
-            printRedGenericLn("This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s", e);
+        } catch (IllegalStateException e) {
+            printRedGenericLn(
+                "This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s",
+                e);
         }
         printMagentaGenericLn("We can't go back, so now we have to define a way to disambiguate this.");
         printMagentaGenericLn("We do that with a merge function which is a BinaryOperator.");
@@ -106,35 +134,42 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. If there are repeated keys, the map collection fails by default.");
         printGreenGenericLn("2. A merge strategy can be implemented.");
-        printGreenGenericLn("3. The merge strategy is of type BinaryOperator, which is characterized by have the input and return parameters of the same type.");
+        printGreenGenericLn(
+            "3. The merge strategy is of type BinaryOperator, which is characterized by have the input and return parameters of the same type.");
         printGreenGenericLn("4. The later is how we distinguish between operators and functions..");
     }
 
     private static void exercise9() {
+        printRainbowLn('=');
         printBrightCyanGenericLn("--- 9. `++i` `i++` in a loop");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
+        printGreenGenericLn(
+            "Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
         printGreenGenericLn("There are 10 in the normal edition and we are two people counting!");
 
         int i;
         int j;
-        for (i = 0, j = 0; j == i && i<10; ++j, i++) {
+        for (i = 0, j = 0; j == i && i < 10; ++j, i++) {
 
             printMagentaGenericLn("I count %d and my friend counts %d", i, j);
         }
         printMagentaGenericLn("I counted %d and my friend counted %d", i, j);
-        for (i = 0, j = 0; j == i && j<10; ++j, i++) {
+        for (i = 0, j = 0; j == i && j < 10; ++j, i++) {
 
             printMagentaGenericLn("I count %d and my friend counts %d", i, j);
         }
         printMagentaGenericLn("I counted %d and my friend counted %d", i, j);
         printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Although may look confusing, the point of this exercise is to show that ++ on the left side or on the right side, do not make a difference in an ordinary for loop.");
-        printGreenGenericLn("2. When ++ is on the left, we sum first, then read and then return the result. This result goes in the loop.");
-        printGreenGenericLn("3. When ++ is on the right, we read first, then sum and then return the result. This result goes in the loop.");
+        printGreenGenericLn(
+            "1. Although may look confusing, the point of this exercise is to show that ++ on the left side or on the right side, do not make a difference in an ordinary for loop.");
+        printGreenGenericLn(
+            "2. When ++ is on the left, we sum first, then read and then return the result. This result goes in the loop.");
+        printGreenGenericLn(
+            "3. When ++ is on the right, we read first, then sum and then return the result. This result goes in the loop.");
     }
 
     private static void exercise8() {
+        printRainbowLn('=');
         printBrightCyanGenericLn("--- 8. Boxing and the difference between primitives");
         printRainbowLn('=');
         printGreenGenericLn(
@@ -190,6 +225,7 @@ public class Mastery4Dot3Runner {
     }
 
     private static void exercise7() {
+        printRainbowLn('=');
         printBrightCyanGenericLn("--- 7. `jdeps` alternative `commands`");
         printRainbowLn('=');
         printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
@@ -244,7 +280,6 @@ public class Mastery4Dot3Runner {
     }
 
     private static void exercise5() {
-        printRainbowLn('=');
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 5. `Predicate` of types");
         printRainbowLn('=');

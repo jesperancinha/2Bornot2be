@@ -422,10 +422,12 @@ public class Consolerizer {
     }
 
     public static void printUnicornsLn(final int nUnicorns) {
+        printRainbowLn('-', nUnicorns/4);
         for (int i = 0; i < nUnicorns; i++) {
             System.out.print("🦄");
         }
         printNewLine();
+        printRainbowLn('-', nUnicorns/4);
     }
 
     public static void printSameLine(final String text, final Object... objects) {
