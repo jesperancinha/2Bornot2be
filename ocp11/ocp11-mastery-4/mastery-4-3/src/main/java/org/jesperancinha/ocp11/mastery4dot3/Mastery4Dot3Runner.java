@@ -29,6 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Scanner;
 import java.util.concurrent.atomic.DoubleAccumulator;
 import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;
@@ -73,7 +74,51 @@ public class Mastery4Dot3Runner {
         exercise8();
         exercise9();
         exercise10();
+        exercise11();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 12. Complex `operands` and `operators`");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: In this case, there isn't really much we can do in terms of our Indie Theme.");
+        printGreenGenericLn(
+            "In this exercise we just want to make a random execution flow and guess what is happening.");
+
+        int z = 10;
+        int w = 20;
+        z = ++w;
+        w += --z;
+        if ((w == w + 4 - z--) & (w == --z)) {
+            z -= 20;
+        }
+        printBlueGenericLn(
+            "        int z = 10;\n" + "        int w = 20;\n" + "        z= ++w;\n" + "        w += --z;\n"
+                + "        if( (w == w + 4 - z--) & ( w == --z)){\n" + "            z -=20;\n" + "        }");
+        Scanner sc = new Scanner(System.in);
+        printMagentaGeneric("Please guess what is the value of z at the end of this execution:");
+        int guess;
+        if (skipQuestions) {
+            printGreenGenericLn("18");
+            guess = 18;
+        } else {
+            guess = sc.nextInt();
+        }
+        if (guess == z) {
+            printMagentaGenericLn("You got it right!");
+            printMagentaGenericLn(z);
+        } else {
+            printRedThrowableAndExit(
+                new Exception(String.format("Unfortunately your guess %d, isn't correct. Please try again...", guess)));
+        }
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn(
+            "1. Operand evaluation is difficult. Keep an eye out for module ocp11-mastery-logics for more exercises like this.");
+        printGreenGenericLn("2. Operations follow typical Math operation and follow accolade definitions.");
+        printGreenGenericLn("3. Operands get evaluated first, before the operations.");
+        printGreenGenericLn("4. Disambiguation happens from left to right.");
+        moduleEnd();
+    }
+
+    private static void exercise11() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 11. `readPassword` in `Console`");
         printRainbowLn('=');
@@ -92,15 +137,17 @@ public class Mastery4Dot3Runner {
             final char[] password = console.readPassword();
             final String passwordString = new String(password);
             printMagentaGenericLn("You've typed '%s' as a password", passwordString);
-            if(!passwordString.equals("More than a mystery")){
-                printRedThrowableAndExit(new Exception(String.format("Your password '%s' is wrong! We have to stop here. Please try again", passwordString)));
+            if (!passwordString.equals("More than a mystery")) {
+                printRedThrowableAndExit(new Exception(
+                    String.format("Your password '%s' is wrong! We have to stop here. Please try again",
+                        passwordString)));
             }
             printMagentaGenericLn("You got it right!");
             printGreenGenericLn("Take-away");
             printGreenGenericLn("1. New String also accepts a char array");
-            printGreenGenericLn("2. When typing a password, nothing is shown on screen, but the String is clearly introduced in the code.");
+            printGreenGenericLn(
+                "2. When typing a password, nothing is shown on screen, but the String is clearly introduced in the code.");
         }
-        moduleEnd();
     }
 
     private static void exercise10() {
