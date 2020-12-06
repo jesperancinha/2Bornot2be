@@ -3,6 +3,7 @@ package org.jesperancinha.ocp11.mastery4dot3;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
 import org.jesperancinha.ocp11.mastery4dot3.record.Album;
+import org.jesperancinha.ocp11.mastery4dot3.record.AlbumForSale;
 import org.jesperancinha.ocp11.mastery4dot3.song.Song;
 import org.jesperancinha.ocp11.mastery4dot3.transport.Limousine;
 import org.jesperancinha.ocp11.mastery4dot3.transport.TourTrailer;
@@ -68,7 +69,48 @@ public class Mastery4Dot3Runner {
         exercise6();
         exercise7();
         exercise8();
+        exercise9();
+        exercise10();
 
+        moduleEnd();
+    }
+
+    private static void exercise10() {
+        printBrightCyanGenericLn("--- 10. Collecting duplicate entries to a `Map`");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: We have a collection of Capital Cities CD's");
+        printGreenGenericLn("Now we want put those in a Map so that we have a reference to the year we bought them.");
+        printGreenGenericLn("However, we made mistake and put two entries of the same album.");
+        printGreenGenericLn("Can we still collect this into a Map?");
+
+        var recordList = List.of(
+            new AlbumForSale("In a Tidal Wave of Mystery",2016L),
+            new AlbumForSale("Solarize",2019L),
+            new AlbumForSale("Solarize",2018L)
+        );
+        printMagentaGenericLn("Our album list:");
+        printMagentaGenericLn(recordList);
+        try {
+            final Map<String, Long> collect = recordList.stream()
+                .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase));
+        } catch (IllegalStateException e){
+            printRedGenericLn("This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s", e);
+        }
+        printMagentaGenericLn("We can't go back, so now we have to define a way to disambiguate this.");
+        printMagentaGenericLn("We do that with a merge function which is a BinaryOperator.");
+        printMagentaGenericLn("We'll consider the most recent purchase year.");
+        final Map<String, Long> collect = recordList.stream()
+            .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase, Math::max));
+        printMagentaGenericLn("We finally get our disambiguated map:");
+        printMagentaGenericLn(collect);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. If there are repeated keys, the map collection fails by default.");
+        printGreenGenericLn("2. A merge strategy can be implemented.");
+        printGreenGenericLn("3. The merge strategy is of type BinaryOperator, which is characterized by have the input and return parameters of the same type.");
+        printGreenGenericLn("4. The later is how we distinguish between operators and functions..");
+    }
+
+    private static void exercise9() {
         printBrightCyanGenericLn("--- 9. `++i` `i++` in a loop");
         printRainbowLn('=');
         printGreenGenericLn("Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
