@@ -66,7 +66,61 @@ public class Mastery4Dot3Runner {
         exercise4();
         exercise5();
         exercise6();
+        exercise7();
 
+        printBrightCyanGenericLn("--- 8. Boxing and the difference between primitives");
+        printRainbowLn('=');
+        printGreenGenericLn(
+            "Case: The album \"Hercules and The Love Affair\" of the band of the same name was published on the 10th of March 2008.");
+        printGreenGenericLn(
+            "We are going to use the numerology related to this album to explore boxing from primitive values");
+
+        // Just a few warm up tests before we start
+        // Note that boxing is strict in its conversion
+        // Note that unboxing is just a strict as primitive inter conversion.
+        double a = 100;
+        long l = 2282787987934L;
+        long s = 22;
+        Double b = 1001d;
+        Long d = 23434553334523434L;
+        Integer e = 1312;
+        Long f = 1L;
+        Float g = 1.1f;
+        Double h = 1.1;
+        double o = h;
+        double p = g;
+        double q = f;
+        double r = e;
+
+        printMagentaGenericLn("This album lasts for 46m 29s.");
+        final Double doubleDuration1 = (46d + 29d / 60);
+        final Double doubleDuration2 = (46d + 29 / 60);
+        final Double doubleDuration3 = (46 + 29d / 60);
+        printMagentaGenericLn("Which in minutes can also be:");
+        printMagentaGenericLn("%s %s %s (minutes) in double", doubleDuration1, doubleDuration2, doubleDuration3);
+        printMagentaGenericLn("or");
+        final Float floatDuration1 = (46f + 29f / 60);
+        final Float floatDuration2 = (46f + 29 / 60);
+        final Float floatDuration3 = (46 + 29f / 60);
+        printMagentaGenericLn("%s %s %s (minutes) in double", floatDuration1, floatDuration2, floatDuration3);
+        final Integer yearInteger = 2008;
+        final Long yearLong = 2008L;
+        printMagentaGenericLn("This album was published on the year %d and %d", yearInteger, yearLong);
+        final Character c = 'H';
+        final Character c1 = 72;
+        final Byte byteNumber = 46;
+        final Short shortNumber = 2008;
+        printMagentaGenericLn("The album starts with letter '%s' which is an %d in the integer form.",c, (int)c1);
+        printMagentaGenericLn("Since the duration is shorter than %d, we can register it in a Byte %d.", Byte.MAX_VALUE, byteNumber);
+        printMagentaGenericLn("Finally the published year can be registered in a two byte type like Short %d.", shortNumber);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. In Boxing, the only possible conversions are from int to Byte, Short, Character and Integer.");
+        printGreenGenericLn("2. Long needs an L at the end of it.There is no automatic conversion.");
+        printGreenGenericLn("3. Double and Float need D and F respectively. There is no automatic conversion.");
+        moduleEnd();
+    }
+
+    private static void exercise7() {
         printBrightCyanGenericLn("--- 7. `jdeps` alternative `commands`");
         printRainbowLn('=');
         printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
@@ -75,15 +129,15 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
         printGreenGenericLn("2. Classpath only works with unamed modules/automatic modules and their dependencies.");
         printGreenGenericLn("3. Classpath does not work for modules that depend on automatic modules.");
-        moduleEnd();
     }
 
     private static void exercise6() {
         printBrightCyanGenericLn("--- 6. Downcasting and Upcasting");
         printRainbowLn('=');
-        printGreenGenericLn("Case: Hercules love affair is on tour and you are going to see them in the backstage!");
+        printGreenGenericLn(
+            "Case: Hercules and Love Affair is on tour and you are going to see them in the backstage!");
         printGreenGenericLn("Can you go on their trailer? Probably not ☹️. We'll look into the not case.");
-        var tourTrailerHLA = new TourTrailer("Hercules Love Affair");
+        var tourTrailerHLA = new TourTrailer("Hercules and Love Affair");
         printMagentaGenericLn("This is the band in the trailer: %s", tourTrailerHLA);
         var limoFriends = new Limousine(List.of("You", "Joan", "Edith", "Margaret", "Dorothy"));
         printMagentaGenericLn("You and your friends %s are now in the limo!", limoFriends);
@@ -95,9 +149,10 @@ public class Mastery4Dot3Runner {
         // final TourTrailer trailerFriends = (TourTrailer)limoFriends;
         try {
             final TourTrailer trailerFriends = (TourTrailer) transportFriends;
-        }catch (ClassCastException e){
+        } catch (ClassCastException e) {
             printRedGenericLn("This is expected %s", e);
-            printRedGenericLn("There is no compilation error, because we are downcasting from transportFriends, which is a reference to a Transport interface");
+            printRedGenericLn(
+                "There is no compilation error, because we are downcasting from transportFriends, which is a reference to a Transport interface");
             printRedGenericLn("Transport interfaces can be Trailers but of course they can also be Limousines.");
             printRedGenericLn("If the instance is a Limousine, then it cannot be a Trailer at the same time.");
         }
@@ -107,12 +162,16 @@ public class Mastery4Dot3Runner {
         printMagentaGenericLn("And so we have the Trailer as %s", trailerHLA);
 
         printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. var declaration plays a smaller role in downcasting and upcasting, since the type is assigned on the right side.");
+        printGreenGenericLn(
+            "1. var declaration plays a smaller role in downcasting and upcasting, since the type is assigned on the right side.");
         printGreenGenericLn("2. Upcasting is automatic, when the subtype is known.");
         printGreenGenericLn("3. Casting in general has to be explicit if the subtype is unknown.");
-        printGreenGenericLn("4. Compilation errors occurs when the subtype is known and doesn't match the type being cast to.");
-        printGreenGenericLn("5. If it is possible to downcast, the compiler has no way to differentiate the actual instance being referenced to.");
-        printGreenGenericLn("6. The later results in a ClassCastException, which is a RuntimeException because only during runtime will the actual cast be attempted.");
+        printGreenGenericLn(
+            "4. Compilation errors occurs when the subtype is known and doesn't match the type being cast to.");
+        printGreenGenericLn(
+            "5. If it is possible to downcast, the compiler has no way to differentiate the actual instance being referenced to.");
+        printGreenGenericLn(
+            "6. The later results in a ClassCastException, which is a RuntimeException because only during runtime will the actual cast be attempted.");
     }
 
     private static void exercise5() {

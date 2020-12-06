@@ -11,7 +11,7 @@ Welcome to my 9th Mastery Module: "And then Indie"
 5. `Predicate` of types
 6. Downcasting and Upcasting
 7. `jdeps` alternative `commands` [mastery-4-3-modularity](../mastery-4-3-modularity)
-8. Boxing into a `List` and difference between primitives
+8. Boxing and the difference between primitives
 9. `++i` `i++` in a loop
 10. Collecting duplicate entries to a `Map`
 11. `readPassword` in `Console`
@@ -45,7 +45,8 @@ The point is that you need to have a `/tmp` folder at this point.
 ## References
 
 ---
--   [Hercules Love Affair Homepage](https://www.herculesandloveaffair.net/home/)
+-   [Hercules and Love Affair (album)](https://en.wikipedia.org/wiki/Hercules_and_Love_Affair_(album))
+-   [Hercules and Love Affair Homepage](https://www.herculesandloveaffair.net/home/)
 -   [VAMPIRE WEEKEND @ The Grammys](https://www.grammy.com/grammys/artists/vampire-weekend/10722)
 -   [Vampire Weekend release new album ‘Father of the Bride’](https://www.sonymusic.co.uk/vampire-weekend-release-new-album-father-of-the-bride/)
 -   [MGMT discography](https://en.wikipedia.org/wiki/MGMT_discography)
