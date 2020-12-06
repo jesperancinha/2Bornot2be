@@ -4,6 +4,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
 import org.jesperancinha.ocp11.mastery4dot3.record.Album;
 import org.jesperancinha.ocp11.mastery4dot3.record.AlbumForSale;
+import org.jesperancinha.ocp11.mastery4dot3.record.AnimalCollectiveList;
 import org.jesperancinha.ocp11.mastery4dot3.song.Song;
 import org.jesperancinha.ocp11.mastery4dot3.transport.Limousine;
 import org.jesperancinha.ocp11.mastery4dot3.transport.TourTrailer;
@@ -83,7 +84,36 @@ public class Mastery4Dot3Runner {
         exercise11();
         exercise12();
         exercise13();
+        exercise14();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 15. add `override` in an `ArrayList`");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: We are going to store our Animal Collective record collection in and ArrayList.");
+        printGreenGenericLn("But is isn't no ordinary list! This is a AnimalCollectiveList!");
+        var acList = new AnimalCollectiveList();
+        acList.add("Feels");
+        acList.add("Strawberry Jam");
+        acList.add("Merriweather Post Pavilion");
+        printYellowGenericLn("We would have gotten something different if we tried to override with add(Object)");
+        printYellowGenericLn(
+            "     'add(E)' in 'java.util.ArrayList' clashes with 'add(Object)' in 'org.jesperancinha.ocp11.mastery4dot3.record.AnimalCollectiveList';\n"
+                + "     both methods have same erasure, yet neither overrides the other");
+        printMagentaGenericLn("This is our record collection:");
+        printMagentaGenericLn(acList);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn(
+            "1. We cannot overload or override any of the original ArrayList methods with Object because of type erasure.");
+        printGreenGenericLn(
+            "2. Type erasure \"Replace all type parameters in generic types with their bounds or Object if the type parameters are unbounded\"");
+        printGreenGenericLn("3. If for example we attempt to override with add(Object), this won't work");
+        printGreenGenericLn(
+            "4. Type erasure will replace add(T) with add(Object) and this will conflict with our own add(Object)");
+        printGreenGenericLn("5. Since they don't override each other, this becomes impossible to do.");
+        moduleEnd();
+    }
+
+    private static void exercise14() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 14. When to call `flush`");
         printRainbowLn('=');
@@ -92,13 +122,14 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("Do we need to flush it?");
 
         var lyrics =
-            "from: https://www.azlyrics.com/lyrics/animalcollective/floridada.html\nChild\n" + "Of limousines\n" + "What's the best place\n" + "That you have seen\n" + "All of the hands\n"
-                + "That you have shook\n" + "Home of the queen of everything fancy\n" + "Is there a smell\n"
-                + "That you can tell\n" + "Gives you some peace\n" + "Sends you to hell\n" + "All of the beds\n"
-                + "That you have yearned\n" + "Is there a dream to\n" + "Where you'd return\n" + "Where is the plight\n"
-                + "With the most stars\n" + "Where do you drink";
-        try (final BufferedWriter bfw = new BufferedWriter(new FileWriter("/tmp/floridada.txt"))){
-            bfw.write(lyrics,0, lyrics.length());
+            "from: https://www.azlyrics.com/lyrics/animalcollective/floridada.html\nChild\n" + "Of limousines\n"
+                + "What's the best place\n" + "That you have seen\n" + "All of the hands\n" + "That you have shook\n"
+                + "Home of the queen of everything fancy\n" + "Is there a smell\n" + "That you can tell\n"
+                + "Gives you some peace\n" + "Sends you to hell\n" + "All of the beds\n" + "That you have yearned\n"
+                + "Is there a dream to\n" + "Where you'd return\n" + "Where is the plight\n" + "With the most stars\n"
+                + "Where do you drink";
+        try (final BufferedWriter bfw = new BufferedWriter(new FileWriter("/tmp/floridada.txt"))) {
+            bfw.write(lyrics, 0, lyrics.length());
         } catch (IOException e) {
             printRedThrowableAndExit(e);
         }
@@ -108,11 +139,12 @@ public class Mastery4Dot3Runner {
         printBlueGenericLn("Please check file contents!");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. The underlying close operation flushes the content to file.");
-        printGreenGenericLn("2. Flush is usually called if you want to write sequentially to a file and not in one go.");
-        printGreenGenericLn("3. This way, we can hold  the buffer in memory and possibly perform changes before  flushing it to a file.");
-        printGreenGenericLn("4. We can also use flush, if we want to keep the buffer available for future writes to a file.");
-
-        moduleEnd();
+        printGreenGenericLn(
+            "2. Flush is usually called if you want to write sequentially to a file and not in one go.");
+        printGreenGenericLn(
+            "3. This way, we can hold  the buffer in memory and possibly perform changes before  flushing it to a file.");
+        printGreenGenericLn(
+            "4. We can also use flush, if we want to keep the buffer available for future writes to a file.");
     }
 
     private static void exercise13() {

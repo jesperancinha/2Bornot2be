@@ -44,6 +44,7 @@ The point is that you need to have a `/tmp` folder at this point.
 
 ## References
 
+-   [Type Erasure](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)
 ---
 -   [Animal Collective Lyrics FloriDada](https://www.azlyrics.com/lyrics/animalcollective/floridada.html)
 -   [Animal Collective discography](https://en.wikipedia.org/wiki/Animal_Collective_discography)
