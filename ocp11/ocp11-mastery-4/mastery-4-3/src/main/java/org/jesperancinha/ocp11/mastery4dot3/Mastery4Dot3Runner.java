@@ -67,7 +67,32 @@ public class Mastery4Dot3Runner {
         exercise5();
         exercise6();
         exercise7();
+        exercise8();
 
+        printBrightCyanGenericLn("--- 9. `++i` `i++` in a loop");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
+        printGreenGenericLn("There are 10 in the normal edition and we are two people counting!");
+
+        int i;
+        int j;
+        for (i = 0, j = 0; j == i && i<10; ++j, i++) {
+
+            printMagentaGenericLn("I count %d and my friend counts %d", i, j);
+        }
+        printMagentaGenericLn("I counted %d and my friend counted %d", i, j);
+        for (i = 0, j = 0; j == i && j<10; ++j, i++) {
+
+            printMagentaGenericLn("I count %d and my friend counts %d", i, j);
+        }
+        printMagentaGenericLn("I counted %d and my friend counted %d", i, j);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Although may look confusing, the point of this exercise is to show that ++ on the left side or on the right side, do not make a difference in an ordinary for loop.");
+        printGreenGenericLn("2. When ++ is on the left, we sum first, then read and then return the result. This result goes in the loop.");
+        printGreenGenericLn("3. When ++ is on the right, we read first, then sum and then return the result. This result goes in the loop.");
+    }
+
+    private static void exercise8() {
         printBrightCyanGenericLn("--- 8. Boxing and the difference between primitives");
         printRainbowLn('=');
         printGreenGenericLn(
@@ -110,14 +135,16 @@ public class Mastery4Dot3Runner {
         final Character c1 = 72;
         final Byte byteNumber = 46;
         final Short shortNumber = 2008;
-        printMagentaGenericLn("The album starts with letter '%s' which is an %d in the integer form.",c, (int)c1);
-        printMagentaGenericLn("Since the duration is shorter than %d, we can register it in a Byte %d.", Byte.MAX_VALUE, byteNumber);
-        printMagentaGenericLn("Finally the published year can be registered in a two byte type like Short %d.", shortNumber);
+        printMagentaGenericLn("The album starts with letter '%s' which is an %d in the integer form.", c, (int) c1);
+        printMagentaGenericLn("Since the duration is shorter than %d, we can register it in a Byte %d.", Byte.MAX_VALUE,
+            byteNumber);
+        printMagentaGenericLn("Finally the published year can be registered in a two byte type like Short %d.",
+            shortNumber);
         printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. In Boxing, the only possible conversions are from int to Byte, Short, Character and Integer.");
+        printGreenGenericLn(
+            "1. In Boxing, the only possible conversions are from int to Byte, Short, Character and Integer.");
         printGreenGenericLn("2. Long needs an L at the end of it.There is no automatic conversion.");
         printGreenGenericLn("3. Double and Float need D and F respectively. There is no automatic conversion.");
-        moduleEnd();
     }
 
     private static void exercise7() {
