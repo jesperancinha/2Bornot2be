@@ -25,6 +25,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -32,10 +33,13 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.concurrent.atomic.DoubleAccumulator;
 import java.util.function.BiConsumer;
+import java.util.function.IntPredicate;
+import java.util.function.IntUnaryOperator;
 import java.util.function.ObjIntConsumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
@@ -75,7 +79,46 @@ public class Mastery4Dot3Runner {
         exercise9();
         exercise10();
         exercise11();
+        exercise12();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 13. Creating and filtering an `IntStream`");
+        printRainbowLn('=');
+        printGreenGenericLn(
+            "Case: We will examine the position on the charts for Animal Collective at present: 2020/12/06");
+        printGreenGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
+        final var peakPositionsMPP = new int[] { 13, 4, 63, 31, 25, 46, 58, 21, 37, 26 };
+        printMagentaGenericLn("These are the peak positions for differenct countries:");
+        printMagentaGenericLn(Arrays.stream(peakPositionsMPP).boxed().collect(Collectors.toList()));
+        final IntPredicate topTen = position -> position <= 10;
+        final IntPredicate topTen1 = (int position) -> position <= 10;
+        final var topTenCount = IntStream.of(peakPositionsMPP)
+            .filter(topTen)
+            .count();
+        printMagentaGenericLn("This many counties reached the top ten:");
+        printMagentaGenericLn(topTenCount);
+        final var topTenCount1 = IntStream.of(peakPositionsMPP)
+            .filter(topTen1)
+            .count();
+        printMagentaGenericLn("If we want to specify type, we can, but its not needed:");
+        printMagentaGenericLn(topTenCount1);
+        IntUnaryOperator takeItToNumberOne = a -> a-3;
+        final var toNumberOne = IntStream.of(peakPositionsMPP)
+            .map(takeItToNumberOne).parallel().collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
+        printMagentaGenericLn("We can also pretend that they reached number 1 with a mapping trick:");
+        printMagentaGenericLn(toNumberOne);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. IntStream is different than Stream.");
+        printGreenGenericLn("2. We know that collect does not take a Collector. It takes a Supplier, a ObjIntConsumer and a BiConsumer.");
+        printGreenGenericLn("3. BiConsumer only works for parallel streams.");
+        printGreenGenericLn("4. IntStream filters work with IntPredicates. They differ from normal predicates in that they only accept integers.");
+        printGreenGenericLn("5. We cannot use a common Predicate in place of a IntPredicate. They are different.");
+        printGreenGenericLn("6. We can map using a IntUnaryOperator.");
+        printGreenGenericLn("7. IntStreams only accept int or varargs of type int. Lists are not allowed. Only arrays.");
+        moduleEnd();
+    }
+
+    private static void exercise12() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 12. Complex `operands` and `operators`");
         printRainbowLn('=');
@@ -115,7 +158,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("2. Operations follow typical Math operation and follow accolade definitions.");
         printGreenGenericLn("3. Operands get evaluated first, before the operations.");
         printGreenGenericLn("4. Disambiguation happens from left to right.");
-        moduleEnd();
     }
 
     private static void exercise11() {
