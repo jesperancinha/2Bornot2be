@@ -91,11 +91,44 @@ public class Mastery4Dot3Runner {
         exercise15();
         exercise16();
         exercise17();
+        exercise18();
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 19. `String` `replace` old/new");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: We are closing this module with \"After the Curtain\" from musical group Beirut.");
+        printGreenGenericLn(
+            "After this module, please continue your studies. Look out for new modules as they will keep coming");
 
+        var testCurtain = "After the curtain".replace("curtain", "curtain") == "After the curtain";
+        var testC = "After the curtain".replace('c', 'c') == "After the curtain";
+
+        printMagentaGenericLn("Testing \"After the curtain\" with Strings:");
+        printMagentaGenericLn(testCurtain);
+        printMagentaGenericLn("Testing \"After the curtain\" with Character:");
+        printMagentaGenericLn(testC);
+        printBlueGenericLn("This strange phenomenon happen because of this:");
+        printBlueGenericLn(
+            "    public String replace(char oldChar, char newChar) {\n" + "        if (oldChar != newChar) {\n"
+                + "            String ret = isLatin1() ? StringLatin1.replace(value, oldChar, newChar)\n"
+                + "                                    : StringUTF16.replace(value, oldChar, newChar);\n"
+                + "            if (ret != null) {\n" + "                return ret;\n" + "            }\n"
+                + "        }\n" + "        return this;\n" + "    }");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. String constants can be compared with the equals logical operator.");
+        printGreenGenericLn(
+            "2. The `replace` method, with string, always returns a new string, which invalidates the use of the logic operator.");
+        printGreenGenericLn(
+            "3. The `replace` method, with a char, returns a new string, if the chars are different, which not always invalidates the use of the logic operator.");
+        printGreenGenericLn("4. Replacing with the same character returns the same String.");
+        moduleEnd();
+    }
+
+    private static void exercise18() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 18. Abstract classes and the `new` keyword");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We have a plan for a guitar. It is probably the most important instrument in Indie music.");
+        printGreenGenericLn(
+            "Case: We have a plan for a guitar. It is probably the most important instrument in Indie music.");
         printGreenGenericLn("Deadline is approaching and you have to deliver it! It's not ready!");
         printGreenGenericLn("You do have an initial Blueprint and so we'll create our guitar like that!");
 
@@ -128,10 +161,10 @@ public class Mastery4Dot3Runner {
 
         printMagentaGenericLn("This is our guitar at the moment -> %s", guitar);
         printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Although a very simple concept, it is important to notice that no abstractions may exist in instances.");
-        printGreenGenericLn("2. This is why, when we crate instances of anonymous classes, we are force to implement whatever is left from the abstraction.");
-
-        moduleEnd();
+        printGreenGenericLn(
+            "1. Although a very simple concept, it is important to notice that no abstractions may exist in instances.");
+        printGreenGenericLn(
+            "2. This is why, when we crate instances of anonymous classes, we are force to implement whatever is left from the abstraction.");
     }
 
     private static void exercise17() {
@@ -146,7 +179,8 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("3. Elements in class path are considered normal jars.");
         printGreenGenericLn("4. Automatic modules can still read from the class path.");
         printGreenGenericLn("5. Named modules cannot.");
-        printGreenGenericLn("6. The later two are the reason why the firs command works well and the following doesn't.");
+        printGreenGenericLn(
+            "6. The later two are the reason why the firs command works well and the following doesn't.");
     }
 
     private static void exercise16() {
