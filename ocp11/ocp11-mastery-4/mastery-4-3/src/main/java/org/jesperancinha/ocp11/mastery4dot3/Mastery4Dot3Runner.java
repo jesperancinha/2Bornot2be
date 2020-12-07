@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.mastery4dot3;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
+import org.jesperancinha.ocp11.mastery4dot3.instrument.Guitar;
 import org.jesperancinha.ocp11.mastery4dot3.record.Album;
 import org.jesperancinha.ocp11.mastery4dot3.record.AlbumCalculator;
 import org.jesperancinha.ocp11.mastery4dot3.record.AlbumForSale;
@@ -89,7 +90,51 @@ public class Mastery4Dot3Runner {
         exercise14();
         exercise15();
         exercise16();
+        exercise17();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 18. Abstract classes and the `new` keyword");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: We have a plan for a guitar. It is probably the most important instrument in Indie music.");
+        printGreenGenericLn("Deadline is approaching and you have to deliver it! It's not ready!");
+        printGreenGenericLn("You do have an initial Blueprint and so we'll create our guitar like that!");
+
+        final Guitar guitar = new Guitar() {
+            @Override
+            public int hashCode() {
+                return super.hashCode();
+            }
+
+            @Override
+            public boolean equals(Object obj) {
+                return super.equals(obj);
+            }
+
+            @Override
+            protected Object clone() throws CloneNotSupportedException {
+                return super.clone();
+            }
+
+            @Override
+            public String toString() {
+                return "This guitar isn't ready!";
+            }
+
+            @Override
+            protected void finalize() throws Throwable {
+                super.finalize();
+            }
+        };
+
+        printMagentaGenericLn("This is our guitar at the moment -> %s", guitar);
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. Although a very simple concept, it is important to notice that no abstractions may exist in instances.");
+        printGreenGenericLn("2. This is why, when we crate instances of anonymous classes, we are force to implement whatever is left from the abstraction.");
+
+        moduleEnd();
+    }
+
+    private static void exercise17() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`");
         printRainbowLn('=');
@@ -102,8 +147,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("4. Automatic modules can still read from the class path.");
         printGreenGenericLn("5. Named modules cannot.");
         printGreenGenericLn("6. The later two are the reason why the firs command works well and the following doesn't.");
-
-        moduleEnd();
     }
 
     private static void exercise16() {
