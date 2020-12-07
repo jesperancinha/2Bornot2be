@@ -221,13 +221,13 @@ If you had lend it to Frenemy{name='Frenemy'}
 Thanks for the album!
 Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=I know the reason why you think you gotta leave, We took a vow in summertime}
 This would be the returned album:
-Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=                                               ,                            }
+Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=,}
 ------------------------------------------------------------------------------------------------------------------------
 But since you are pretty safe in what you do, you are going to lend:
 Thanks for the album!
 Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=I know the reason why you think you gotta leave, We took a vow in summertime}
 And so, although your friend did this to your copy:
-Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=                                               ,                            }
+Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=,}
 Your original is still there 😉!!
 Album{albumName='Father of the Bride (Vinyl - Orange, Limited Edition)', band='Vampire Weekend', songs=I know the reason why you think you gotta leave, We took a vow in summertime}
 ------------------------------------------------------------------------------------------------------------------------
