@@ -3,6 +3,7 @@ package org.jesperancinha.ocp11.mastery4dot3;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.mastery4dot3.community.Frenemy;
 import org.jesperancinha.ocp11.mastery4dot3.record.Album;
+import org.jesperancinha.ocp11.mastery4dot3.record.AlbumCalculator;
 import org.jesperancinha.ocp11.mastery4dot3.record.AlbumForSale;
 import org.jesperancinha.ocp11.mastery4dot3.record.AnimalCollectiveList;
 import org.jesperancinha.ocp11.mastery4dot3.song.Song;
@@ -29,6 +30,7 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -85,7 +87,59 @@ public class Mastery4Dot3Runner {
         exercise12();
         exercise13();
         exercise14();
+        exercise15();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 16. Overriding methods returning primitives");
+        printRainbowLn('=');
+        printGreenGenericLn(
+            "Case: We are going to see how many songs per record, on average, are Animal Collective developing.");
+        printGreenGenericLn(
+            "We want one or more methods that return different types: Byte, Short, Character, Integer, Long, Float and Double");
+        printGreenGenericLn("We will use the AlbumCalculator for that");
+
+        var albumCalculator = new AlbumCalculator(new HashMap<>() {{
+            put("Spirit They're Gone, Spirit They've Vanished", 10);
+            put("Danse Manatee", 12);
+            put("Campfire Songs", 5);
+            put("Here Comes the Indian", 7);
+            put("Sung Tongs", 12);
+            put("Feels", 9);
+            put("Strawberry Jam", 9);
+            put("Merriweather Post Pavilion", 11);
+            put("Centipede Hz", 11);
+            put("Painting With", 12);
+        }});
+
+        printMagentaGenericLn("This is our album collection:");
+        printMagentaGenericLn(albumCalculator);
+        printMagentaGenericLn("And here are different ways to calculate average songs per album:");
+
+        final byte averageByte = albumCalculator.getAverageByte();
+        final char averageCharacter = albumCalculator.getAverageCharacter();
+        final double averageDouble = albumCalculator.getAverageDouble();
+        final float averageFloat = albumCalculator.getAverageFloat();
+        final int averageInt = albumCalculator.getAverageInt();
+        final long averageLong = albumCalculator.getAverageLong();
+        final short averageShort = albumCalculator.getAverageShort();
+
+        printMagentaGenericLn("Byte -> %s", averageByte);
+        printMagentaGenericLn("Character -> %s", averageCharacter);
+        printMagentaGenericLn("Double -> %s", averageDouble);
+        printMagentaGenericLn("Float -> %s", averageFloat);
+        printMagentaGenericLn("Integer -> %s", averageInt);
+        printMagentaGenericLn("Long -> %s", averageLong);
+        printMagentaGenericLn("Short -> %s", averageShort);
+
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn(
+            "1. Methods with primitive return types can only be overridden by methods of the same return type.");
+        printGreenGenericLn("2. There is no averagingFloat collector.");
+        printGreenGenericLn("3. Look into the code and bear in mind the different ways to calculate average.");
+        moduleEnd();
+    }
+
+    private static void exercise15() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 15. add `override` in an `ArrayList`");
         printRainbowLn('=');
@@ -110,7 +164,6 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn(
             "4. Type erasure will replace add(T) with add(Object) and this will conflict with our own add(Object)");
         printGreenGenericLn("5. Since they don't override each other, this becomes impossible to do.");
-        moduleEnd();
     }
 
     private static void exercise14() {
