@@ -13,6 +13,8 @@ javac --module-source-path ./family -m family -d ./out
 We will be missing the modules.
 So we have to include the jars and turn them int automatic modules:
 
+## Exercise 7
+
 ```bash
 mkdir out
 javac --module-path cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path family -m family -d ./out
@@ -31,7 +33,13 @@ jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousin
 jdeps --class-path cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
 jdeps -classpath cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
 ```
-## Exercise
+
+## Exercise 17
+
+```bash
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar jars/family.jar
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:jars/family.jar ../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar
+```
 
 ## Output
 

@@ -88,7 +88,25 @@ public class Mastery4Dot3Runner {
         exercise13();
         exercise14();
         exercise15();
+        exercise16();
 
+        printRainbowLn('=');
+        printBrightCyanGenericLn("--- 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`");
+        printRainbowLn('=');
+        printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend..,Again!");
+        printGreenGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
+        printGreenGenericLn("Take-away");
+        printGreenGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
+        printGreenGenericLn("2. The last element of the command can be converted to an automatic module.");
+        printGreenGenericLn("3. Elements in class path are considered normal jars.");
+        printGreenGenericLn("4. Automatic modules can still read from the class path.");
+        printGreenGenericLn("5. Named modules cannot.");
+        printGreenGenericLn("6. The later two are the reason why the firs command works well and the following doesn't.");
+
+        moduleEnd();
+    }
+
+    private static void exercise16() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 16. Overriding methods returning primitives");
         printRainbowLn('=');
@@ -136,7 +154,6 @@ public class Mastery4Dot3Runner {
             "1. Methods with primitive return types can only be overridden by methods of the same return type.");
         printGreenGenericLn("2. There is no averagingFloat collector.");
         printGreenGenericLn("3. Look into the code and bear in mind the different ways to calculate average.");
-        moduleEnd();
     }
 
     private static void exercise15() {
