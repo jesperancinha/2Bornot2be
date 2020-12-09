@@ -227,8 +227,6 @@ We now print the moon with -> public <T extends String> Collection<String> trans
 We now print the moon-base with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)
 We now print the moon with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)
 🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄🦄
-
-
 Process finished with exit code 0
 ```
 

@@ -41,6 +41,7 @@
         <module>ocp11-mastery-3</module>
         <module>ocp11-mastery-4</module>
         <module>ocp11-mastery-logics</module>
+        <module>ocp11-crums</module>
     </modules>
 
 </project>

@@ -1,12 +1,15 @@
-# ocp11-mastery-3 (Oracle Certified Professional Java SE 11)
+# ocp11-crums
+
 
 ## Introduction
 
-OCP 11 studies - Mastery 3
+OCP 11 studies - Crums
 
--   [Mastery module 3.1.](./mastery-3-1/Readme.md) - Singing in dutch
--   [Mastery module 3.2.](./mastery-3-2/Readme.md) - [Olhão](https://en.wikipedia.org/wiki/Olh%C3%A3o) City
--   [Mastery module 3.2. Modularity](./mastery-3-2-modularity/Readme.md) - [Olhão](https://en.wikipedia.org/wiki/Olh%C3%A3o) City - A [Cataplana](https://saudadesdeportugal.nl/cataplana/) serving
+Welcome to project Crums.
+
+Crums are classes without a theme which are destined to highlight specific points of the Java Language.
+There is no context. The point is to make them as fast as possible and understand the nuances.
+
 ## Topics and coverage
 
 From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):

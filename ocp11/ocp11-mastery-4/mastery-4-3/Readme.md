@@ -586,8 +586,6 @@ Process finished with exit code
 -   [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
 -   [Time to Pretend](https://en.wikipedia.org/wiki/Time_to_Pretend)
 -   [MGMT and their Little Dark Age](https://www.youtube.com/watch?v=IMMlwjWyHxA)
-
-
 <div align="center">
       <a href="https://www.youtube.com/watch?v=GJ78MJg3UdE">
          <img 
