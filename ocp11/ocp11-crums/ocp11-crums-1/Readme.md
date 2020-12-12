@@ -1,6 +1,4 @@
 # ocp11-crums
-
-
 ## Introduction
 
 OCP 11 studies - Crums
