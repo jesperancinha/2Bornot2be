@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ocp11-crums</artifactId>
+    <artifactId>ocp11-mastery</artifactId>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,9 +18,12 @@
     </properties>
 
     <modules>
-        <module>ocp11-crums-1</module>
-        <module>ocp11-crums-2</module>
+        <module>ocp11-mastery-1</module>
+        <module>ocp11-mastery-2</module>
+        <module>ocp11-mastery-3</module>
+        <module>ocp11-mastery-4</module>
+        <module>ocp11-mastery-logics</module>
+        <module>ocp11-mastery-5</module>
     </modules>
 
-    <packaging>pom</packaging>
 </project>

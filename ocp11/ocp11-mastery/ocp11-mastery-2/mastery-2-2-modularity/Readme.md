@@ -1,61 +1,44 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# mastery-2-2-modularity - Mastery Module 2.2.modularity
 
-## Introduction
+## How to run
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+- Forcing requires and exports (--add-reads and --add-exports respectively)
 
-## Topics and coverage
+```bash
+cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --add-reads rocket=consolerizer -d out --module rocket
+java --add-reads rocket=consolerizer --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner rocket=lunar.module --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+```
 
--   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+- Forcing exports, with all uncommented modules in [rocket](rocket/rocket/module-info.java).
 
----
+```bash
+cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket -d out --module rocket
+java --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+```
 
-## Collect and Count
+- The typical compilation with all uncommented modules in [lunar.module](lunar.module/lunar.module/module-info.java) and in [rocket](rocket/rocket/module-info.java).
 
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+```bash
+cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module -d out --module rocket
+java --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+```
 
----
+## Output
 
-## References
+```bash
+10:26 $ java --add-reads rocket=consolerizer --add-exports lunar.module/org.jesperancinha.ocp11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner rocket=lunar.module --module-path out --module rocket/org.jesperancinha.ocp11.rocket.RocketRunner
+============ Welcome to the Apollo 13's mission launch of 1970 ============
+Apollo 13 - Rocket Launched!...
+Send hello!
+Apollo 13 - Service Module detached...
+Apollo 13 - Lunar Module detached...
+Mission complete
+Done!!
+```
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [Enthuware](https://enthuware.com/)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
--   [Whizlabs](https://www.whizlabs.com/)
-
----
-
-## Java 11 Specs
-
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
-
----
-
-## The module graph
-
-[![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
- 
----
-
-## Achievements
-
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
-  
----
-    
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

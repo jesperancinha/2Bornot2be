@@ -1,26 +1,75 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# mastery-4-3 - Mastery Module 4.3. Modularity - Exercise 7
 
-## Introduction
+Exercise 7 - Investigating jdeps
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+## How to run
 
-## Topics and coverage
+If we run this way:
 
--   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+```bash
+javac --module-source-path ./family -m family -d ./out
+```
 
----
+We will be missing the modules.
+So we have to include the jars and turn them int automatic modules:
 
-## Collect and Count
+## Exercise 7
 
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+```bash
+mkdir out
+javac --module-path cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path family -m family -d ./out
+mkdir jars
+jar --create --file ./jars/family.jar --main-class org.jesperancinha.ocp11.mastery4dot3.family.FamilyRunner -C ./out/family .
+java -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar --module-path jars:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar --module family/org.jesperancinha.ocp11.mastery4dot3.family.FamilyRunner
+jdeps --module-path cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar jars/family.jar
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar --module-path cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar jars/family.jar
+jdeps cousins/target/cousins-1.0.0-SNAPSHOT.jar
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+jdeps your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar
+```
 
----
+```bash
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+jdeps --class-path cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+jdeps -classpath cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+```
+
+## Exercise 17
+
+```bash
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar jars/family.jar
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:jars/family.jar ../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar
+```
+
+## Output
+
+```text
+java -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar --module-path jars:cousins/target/cousins-1.0.0-SNAPSHOT.jar:your.cousins/target/your.cousins-1.0.0-SNAPSHOT.jar:../../../jtd-the-factory/consolerizer/target/consolerizer-1.0.0-SNAPSHOT.jar --module family/org.jesperancinha.ocp11.mastery4dot3.family.FamilyRunner
+Let's start a family party!
+We start with their cousins!
+They have 86 cousins of cousins
+They have 75 cousins
+And now we start with our cousins!
+You have 14 cousins 
+
+jdeps -cp cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+cousins-1.0.0-SNAPSHOT.jar -> cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar
+cousins-1.0.0-SNAPSHOT.jar -> java.base
+   org.jesperancinha.ocp11.mastery4dot3.cousins       -> java.lang                                          java.base
+   org.jesperancinha.ocp11.mastery4dot3.cousins       -> org.jesperancinha.ocp11.mastery4dot3.cousins.of.cousins cousins.of.cousins-1.0.0-SNAPSHOT.jar
+
+jdeps --class-path cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+cousins-1.0.0-SNAPSHOT.jar -> cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar
+cousins-1.0.0-SNAPSHOT.jar -> java.base
+   org.jesperancinha.ocp11.mastery4dot3.cousins       -> java.lang                                          java.base
+   org.jesperancinha.ocp11.mastery4dot3.cousins       -> org.jesperancinha.ocp11.mastery4dot3.cousins.of.cousins cousins.of.cousins-1.0.0-SNAPSHOT.jar
+
+jdeps -classpath cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar cousins/target/cousins-1.0.0-SNAPSHOT.jar
+cousins-1.0.0-SNAPSHOT.jar -> cousins.of.cousins/target/cousins.of.cousins-1.0.0-SNAPSHOT.jar
+cousins-1.0.0-SNAPSHOT.jar -> java.base
+   org.jesperancinha.ocp11.mastery4dot3.cousins       -> java.lang                                          java.base
+   org.jesperancinha.ocp11.mastery4dot3.cousins       -> org.jesperancinha.ocp11.mastery4dot3.cousins.of.cousins cousins.of.cousins-1.0.0-SNAPSHOT.jar
+```
 
 ## References
 
@@ -49,13 +98,13 @@ Collect and count are methods of the Stream interface which use reduce operation
 
 ## Achievements
 
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+[![alt text](../../../../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../../../../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
   
 ---
-    
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

@@ -1,24 +1,62 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# ocp11-basics-1 (Oracle Certified Professional Java SE 11)
 
 ## Introduction
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+OCP 11 studies - Level 2
 
 ## Topics and coverage
 
--   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+Given that the topics covered on [oc11](../..) are very basic, I have decided to create this extra repository in order to further deepen my knowledge on the OCP11.
 
----
+From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
 
-## Collect and Count
+Subjects covered:
 
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+1. Working with Java data types
+    - Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting
+    - Handle text using String and StringBuilder classes
+    - Use local variable type inference, including as lambda parameters
+2. Java Object-Oriented Approach
+    - Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection)
+    - Define and use fields and methods, including instance, static and overloaded methods
+    - Initialize objects and their members using instance and static initialiser statements and constructors
+    - Understand variable scopes, apply encapsulation and make objects immutable
+    - Create and use subclasses and superclasses, including abstract classes
+    - Utilize polymorphism and casting to call methods, differentiate object type versus reference type
+    - Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods
+    - Create and use enumerations
+3. Working with Arrays and Collections
+    - Use generics, including wildcards
+    - Use a Java array and List, Set, Map and Deque collections, including convenience methods
+    - Sort collections and arrays using Comparator and Comparable interfaces
+4. Java Platform Module System
+    - Deploy and execute modular applications, including automatic modules
+    - Declare, use, and expose modules, including the use of services
+5. Java I/O API
+    - Read and write console and file data using I/O Streams
+    - Implement serialization and deserialization techniques on Java objects
+    - Handle file system objects using java.nio.file API
+6. Database Applications with JDBC
+    - Connect to and perform database SQL operations, process query results using JDBC API
+7. Annotations
+    - Create, apply, and process annotations
+8. Controlling Program Flow
+    - Create and use loops, if/else, and switch statements
+9. Exception Handling
+    - Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
+    - Create and use custom exceptions
+10. Working with Streams and Lambda expressions
+    - Implement functional interfaces using lambda expressions, including interfaces from the java.util.function package
+    - Use Java Streams to filter, transform and process data
+    - Perform decomposition and reduction, including grouping and partitioning on sequential and parallel streams
+11. Concurrency
+    - Create worker threads using Runnable and Callable, and manage concurrency using an ExecutorService and java.util.concurrent API
+    - Develop thread-safe code, using different locking mechanisms and java.util.concurrent API
+12. Secure Coding in Java SE Application
+    - Develop code that mitigates security threats such as denial of service, code injection, input validation and ensure data integrity
+    - Secure resource access including filesystems, manage policies and execute privileged code
+13. Localization
+    - Implement Localization using Locale, resource bundles, and Java APIs to parse and format messages, dates, and numbers
 
 ---
 
@@ -49,13 +87,13 @@ Collect and count are methods of the Stream interface which use reduce operation
 
 ## Achievements
 
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+[![alt text](../../../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
+[![alt text](../../../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../../../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../../../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
   
 ---
-    
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

@@ -34,14 +34,9 @@
     </dependencies>
 
     <modules>
-        <module>ocp11-basics-1</module>
-        <module>ocp11-basics-2</module>
-        <module>ocp11-mastery-1</module>
-        <module>ocp11-mastery-2</module>
-        <module>ocp11-mastery-3</module>
-        <module>ocp11-mastery-4</module>
-        <module>ocp11-mastery-logics</module>
         <module>ocp11-crums</module>
+        <module>ocp11-basics</module>
+        <module>ocp11-mastery</module>
     </modules>
 
 </project>

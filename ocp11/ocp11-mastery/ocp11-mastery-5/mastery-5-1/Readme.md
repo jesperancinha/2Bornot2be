@@ -1,24 +1,41 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# mastery-4-1 - Mastery Module 4.1.
 
-## Introduction
+And then Indie part 2!
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+## Exercise
 
-## Topics and coverage
+## Preparation
 
--   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh).
+If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
+The point is that you need to have a `/tmp` folder at this point.
 
+```bash
+./prepare.sh
+```
+
+## Output
+
+```text
+```
+
+## References
 ---
 
-## Collect and Count
-
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=S12iI1p8lpE">
+         <img 
+              src="https://img.youtube.com/vi/S12iI1p8lpE/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=TBZ52zCD0zk">
+         <img 
+              src="https://img.youtube.com/vi/TBZ52zCD0zk/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 
 ---
 
@@ -49,13 +66,13 @@ Collect and count are methods of the Stream interface which use reduce operation
 
 ## Achievements
 
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+[![alt text](../../../../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../../../../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
   
 ---
-    
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

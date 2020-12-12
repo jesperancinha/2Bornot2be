@@ -1,24 +1,177 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# mastery-4-2-swing - Mastery Module 4.2. Swing
 
-## Introduction
+Welcome to my 8th mastery module.
+For this module we will master our Java knowledge with Java exercises based on the data of Spanish Pop Music.
+In this case we will have a look at some of the music that really had an influence on my life during my Spanish years.
+This is all about the spanish pop/indie music history between the 70's going through the 80's, 90's and early 2000's.
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+## Exercise
 
-## Topics and coverage
+1. Primitives Revised
+2. Different ways to use `this`
+3. The body of `switch`
+4. The `java.desktop` module
+5. Hidding and shadowing instance members
+6. Bypassing overloading methods with different return types
+7. Immutability standards and using `LocalDate` and `LocalDateTime`
+8. Overwriting with `FileOutputStream`
+9. Why use `putIfAbsent`?
+10. Evaluation order of conditional operators
+11. Method overloading and overriding with `extends`
+12. Immutability with Guidelines 7 and 6
+13. `Float.POSITIVE_INFINITY` vs `Float.NEGATIVE_INFINITY`
+14. Static and instance initialization of final `members`
+15. Iterating through a `CopyOnWriteArrayList` and the `UnsupportedOperationException`
+16. NavigableMap and `pollLastEntry` and `pollFirstEntry`
+17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`
+18. `Arrays` `binarySearch`
+19. `try-with-resources` `open` and `close` methods.
+ 
+(coming soon...)
 
--   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+## Output
 
+```text
+
+```
+
+## References
+
+-   [Rapid Tables](https://www.rapidtables.com/convert/number/decimal-to-octal.html)
+-   [Definition of Double in C, C++ and C#](https://www.thoughtco.com/definition-of-double-958065#:~:text=Double%20vs.&text=Its%20range%20is%20approximately%201.5,to%201.7%20%C3%97%2010308.)
+-   [Size of Floats](https://chortle.ccsu.edu/java5/Notes/chap11/ch11_2.html)
+-   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+-   [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
+-   [Primitive Data Types by Docs@Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+-   [Java: Primitive data types](https://cs.fit.edu/~ryan/java/language/java-data.html)
+-   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
+-   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 ---
+-   [RUBÍ 2020, entrada completa a quien le importa](https://www.youtube.com/watch?v=aNMdaRbX_-k)
+-   [Rosa López · A quién le importa - 2020](https://www.youtube.com/watch?v=NxlfzjWX2Z4)
+-   [A QUIÉN LE IMPORTA - Grupal | Gala 7 | OT 2017](https://www.youtube.com/watch?v=hoH6OXQpmQY)
+-   [Himno World Pride Madrid 2017 - A quien le importa 2017](https://www.lasexta.com/especiales/world-pride-madrid/orgullo-lgtbi/a-quien-le-importa-asi-suena-el-himno-oficial-del-world-pride-madrid-2017_201706285953f2d20cf2a25c00ab7737.html)
+-   [Fangoria - A quien le importa 2011](https://www.youtube.com/watch?v=XX_hWpPnd3I)
+-   [Thalia - A Quien Le Importa - Video Oficial 2002](https://www.youtube.com/watch?v=s0MG5mdwweU)
+-   [Alaska y Dinarama A Quién Le Importa (1984)](https://www.youtube.com/watch?v=N2L7cRsUA0E)
+-   [¿A quién le importa?](https://en.wikipedia.org/wiki/%C2%BFA_qui%C3%A9n_le_importa%3F)
+-   [Paloma San Basilio](https://nl.wikipedia.org/wiki/Paloma_San_Basilio)
+-   [Juntos Sencillo Paloma San Basilio @ Chordify](https://chordify.net/chords/juntos-sencillo-juntos-paloma-san-basilio-arturo-baez-velasquez)
+-   [Juntos (canción)](https://es.wikipedia.org/wiki/Juntos_(canci%C3%B3n))
+-   [Analysis of Fangoria by Prezi](https://prezi.com/goxtiwbslbm1/analysis-of-fangoria/)
+-   [The Bloody History of Fangoria, the Magazine That Changed the Way We View Horror Movies](https://www.mentalfloss.com/article/560144/how-fangoria-magazine-changed-horror-movies)
+-   [Fangoria magazine](https://en.wikipedia.org/wiki/Fangoria)
+-   [Fangoria band](https://en.wikipedia.org/wiki/Fangoria_(band))
 
-## Collect and Count
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=qSkcpM0zDnU">
+         <img 
+              src="https://img.youtube.com/vi/qSkcpM0zDnU/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=bt-92dlspc4">
+         <img 
+              src="https://img.youtube.com/vi/bt-92dlspc4/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=WbC2U48HhvQ">
+         <img 
+              src="https://img.youtube.com/vi/WbC2U48HhvQ/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=hDYNkas2z88">
+         <img 
+              src="https://img.youtube.com/vi/hDYNkas2z88/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=N1uTrIJCAOU">
+         <img 
+              src="https://img.youtube.com/vi/N1uTrIJCAOU/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=KKNwl0s6ap0">
+         <img 
+              src="https://img.youtube.com/vi/KKNwl0s6ap0/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=WdvKgZVgWWg">
+         <img 
+              src="https://img.youtube.com/vi/WdvKgZVgWWg/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=juNxwa6H3lI">
+         <img 
+              src="https://img.youtube.com/vi/juNxwa6H3lI/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=zvj1Lv9mVKw">
+         <img 
+              src="https://img.youtube.com/vi/zvj1Lv9mVKw/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=mTo7MiVDkPU">
+         <img 
+              src="https://img.youtube.com/vi/mTo7MiVDkPU/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=eHeRVD0Q_ig">
+         <img 
+              src="https://img.youtube.com/vi/eHeRVD0Q_ig/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=OnQeexb8bB8">
+         <img 
+              src="https://img.youtube.com/vi/OnQeexb8bB8/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=XX_hWpPnd3I">
+         <img 
+              src="https://img.youtube.com/vi/XX_hWpPnd3I/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=9DUokHPG5G8">
+         <img 
+              src="https://img.youtube.com/vi/9DUokHPG5G8/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=t3RzZHWmbBw">
+         <img 
+              src="https://img.youtube.com/vi/t3RzZHWmbBw/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=smfo5w7sKMY">
+         <img 
+              src="https://img.youtube.com/vi/smfo5w7sKMY/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=PaHaA7fQPKA">
+         <img 
+              src="https://img.youtube.com/vi/PaHaA7fQPKA/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=o2tLprSl14U">
+         <img 
+              src="https://img.youtube.com/vi/o2tLprSl14U/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 
 ---
 
@@ -49,13 +202,13 @@ Collect and count are methods of the Stream interface which use reduce operation
 
 ## Achievements
 
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+[![alt text](../../../../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../../../../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
   
 ---
-    
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

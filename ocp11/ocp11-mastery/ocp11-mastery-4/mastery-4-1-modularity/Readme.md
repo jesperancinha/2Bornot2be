@@ -1,24 +1,74 @@
-# ocp11 (Oracle Certified Professional Java SE 11)
+# mastery-4-1-modularity - Mastery Module 4.1. Modularity
 
-## Introduction
+Thid modularity module uses as a datasource, The Daily Mail Transatlantic Air Race commemoration of the 50th anniversary of Alcock and Brown's crossing. 
+It is won by a Royal Navy F-4 Phantom II, taking 4 hours 47 minutes.
+This competition took place between the 4th and the 11th 1969.
 
-OCP 11 studies. 
-In this project you will find all my study materials for the OCP 11.
+## Exercise
 
-## Topics and coverage
+We will explore how to use non-modular packages with modular ones and vice-versa.
 
--   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+## How to run
 
----
+```bash
+javac -encoding utf-8 --module-source-path pilot-module:../../../jtd-the-factory/consolerizer/src/main  -d out -m pilot
+javac -encoding utf-8 --module-path plane/target:out --module-source-path hangar-module:../../../jtd-the-factory/consolerizer/src/main  -d out -m hangar
+```
 
-## Collect and Count
+## Take-away
 
-Collect and count are methods of the Stream interface which use reduce operations to perform their objectives.
+It is important to notice that automatic modules, the ones that come from unamed modules, export all packages.
+However, these packages are only visibile to the modularized packages accessible via requires.
+In our example, we would have no been able to access a `plane` if it was not placed in the `hangar`.
+
+## Output
+
+```text
+*** --- We start the competition Competition{name='Daily Mail Trans-Atlantic Air Race of 1969'} ---
+*** *** --- Starting point was Hangar{name='Royal Air Force Space at St Pancras, London, UK'} ---
+*** *** --- Pilot Pilot{name='Tom Lecky-Thompson'} ---
+*** ***
+--- Pilot is getting transported by the airplane ---
+*** --- Pilot Pilot{name='Tom Lecky-Thompson'} ---
+*** --- Plane{model='Royal Navy F-4 Phantom II'} ---
+***
+***
+--- Pilot is getting transported by the airplane ---
+*** --- Pilot Pilot{name='Tom Lecky-Thompson'} ---
+*** --- Plane{model='Royal Navy F-4 Phantom II'} ---
+***
+```
+
+## References
+
+-   [Those magnificent men in their flying machines: Fascinating pictures commemorate the 50th anniversary of the Daily Mail Great Transatlantic Air Race that gripped the world](https://www.dailymail.co.uk/news/article-6989763/Daily-Mail-Great-Transatlantic-Air-Race-images-commemorate-50th-anniversary-event.html)
+-   [Daily Mail Trans-Atlantic Air Race](https://en.wikipedia.org/wiki/Daily_Mail_Trans-Atlantic_Air_Race)
+-   [1969 in aviation](https://en.wikipedia.org/wiki/1969_in_aviation)
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=Dt45BENU7_0">
+         <img 
+              src="https://img.youtube.com/vi/Dt45BENU7_0/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=15XTOdtir-o">
+         <img 
+              src="https://img.youtube.com/vi/15XTOdtir-o/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=cazGjbrUhz0">
+         <img 
+              src="https://img.youtube.com/vi/cazGjbrUhz0/0.jpg" 
+              style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=2joCFwckrTs">
+         <img 
+              src="https://img.youtube.com/vi/2joCFwckrTs/0.jpg" 
+              style="width:10%;">
+      </a>
+</div>
 
 ---
 
@@ -49,13 +99,13 @@ Collect and count are methods of the Stream interface which use reduce operation
 
 ## Achievements
 
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
+[![alt text](../../../../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
+[![alt text](../../../../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
+[![alt text](../../../../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
   
 ---
-    
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
