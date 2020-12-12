@@ -28,8 +28,8 @@ public class Crum3 {
         printMagentaGenericLn("We create A -> %s", a);
         printMagentaGenericLn("We create B -> %s", b);
 
-         A a1 = a.createA();
-         B b1 = b.createB();
+        A a1 = a.createA();
+        B b1 = b.createB();
 
         printMagentaGenericLn("We create A1 from A -> %s which ia instance of %s", a1, a1.getClass());
         printMagentaGenericLn("We create B1 from B -> %s", b1);
@@ -44,7 +44,9 @@ public class Crum3 {
 
         printMagentaGenericLn("We can however assign A1 to B1 -> %s", a1);
 
-        printGreenGenericLn("The upper in the class in the hierarchy you are the broader are the instances your reference can be assigned to.");
-        printGreenGenericLn("Also notice that we had to create an instance of Crum3 in order to create the first instances of A and B");
+        printGreenGenericLn(
+            "The upper in the class in the hierarchy you are the broader are the instances your reference can be assigned to.");
+        printGreenGenericLn(
+            "Also notice that we had to create an instance of Crum3 in order to create the first instances of A and B");
     }
 }

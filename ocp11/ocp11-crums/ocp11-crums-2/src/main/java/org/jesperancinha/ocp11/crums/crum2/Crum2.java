@@ -27,6 +27,6 @@ public class Crum2 {
      * @return
      */
     public int getDob() {
-        return this.dob;
+        return dob;
     }
 }

@@ -67,12 +67,13 @@ public class Consolerizer {
     public static void printBlueGenericTitleLn(Object text) {
         final String fullText = text.toString();
         var remaining = titleSpread - fullText.length() - 2;
-        var padding = remaining / 2;
+        var padding = (int) Math.ceil(remaining / 2f);
         printBlueGeneric(new String(new char[padding]).replace('\0', '=')
             .concat(" ")
             .concat(fullText)
             .concat(" ")
             .concat(new String(new char[padding]).replace('\0', '='))
+            .substring(0, titleSpread)
             .concat("\n"));
     }
 
