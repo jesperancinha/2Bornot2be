@@ -1,5 +1,10 @@
 # ocp11-basics
 
+## Topics and coverage
+
+-   [OCP-11 - 1z0-819 - Basics 1](./ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
+-   [OCP-11 - 1z0-819 - Basics 2](./ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

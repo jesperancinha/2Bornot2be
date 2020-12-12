@@ -1,5 +1,12 @@
 # ocp11-mastery
 
+## Topics and coverage
+
+-   [OCP-11 - 1z0-819 - Mastery 1](./ocp11-mastery-1) - OCP SE 11 Exam preparation specific for 1z0-819
+-   [OCP-11 - 1z0-819 - Mastery 2](./ocp11-mastery-2) - OCP SE 11 Exam preparation specific for 1z0-819
+-   [OCP-11 - 1z0-819 - Mastery 3](./ocp11-mastery-3) - OCP SE 11 Exam preparation specific for 1z0-819
+-   [OCP-11 - 1z0-819 - Mastery 4](./ocp11-mastery-4) - OCP SE 11 Exam preparation specific for 1z0-819
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
