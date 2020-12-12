@@ -9,6 +9,5 @@ public class RunAll {
         Consolerizer.maxLineCharsGlobal = 150;
         Consolerizer.titleSpread = 150;
         Crum1.main(null);
-
     }
 }
