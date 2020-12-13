@@ -17,4 +17,8 @@
     </properties>
 
     <packaging>pom</packaging>
+
+    <modules>
+        <module>mastery-5-1</module>
+    </modules>
 </project>

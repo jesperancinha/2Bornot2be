@@ -35,6 +35,11 @@ The point is that you need to have a `/tmp` folder at this point.
               src="https://img.youtube.com/vi/TBZ52zCD0zk/0.jpg" 
               style="width:10%;">
       </a>
+      <a href="https://www.youtube.com/watch?v=yzLT6_TQmq8">
+         <img 
+              src="https://img.youtube.com/vi/yzLT6_TQmq8/0.jpg" 
+              style="width:10%;">
+      </a>
 </div>
 
 ---
