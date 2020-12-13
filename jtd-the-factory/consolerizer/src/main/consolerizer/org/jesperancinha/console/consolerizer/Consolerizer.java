@@ -456,6 +456,14 @@ public class Consolerizer {
             });
     }
 
+    public static void printRainbowStack(final String theme) {
+        ConColor.getConsoleRainbow()
+            .forEach(color -> {
+                System.out.print(color);
+                System.out.println(theme);
+            });
+    }
+
     public static void printUnicornsLn(final int nUnicorns) {
         printRainbowLn('-', nUnicorns / 4);
         for (int i = 0; i < nUnicorns; i++) {
