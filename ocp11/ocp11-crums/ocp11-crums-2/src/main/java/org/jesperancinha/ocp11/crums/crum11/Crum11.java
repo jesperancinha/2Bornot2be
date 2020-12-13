@@ -73,6 +73,6 @@ public class Crum11 {
         printMagentaGenericLn(
             "Wildcard notation may be justified to use in seldom situations and is always placed on the left side of the assignment");
         printMagentaGenericLn(
-            "Wildcard and  diamond notation can be used at the same time in one assignment operation");
+            "Wildcard and diamond notation can be used at the same time in one assignment operation");
     }
 }
