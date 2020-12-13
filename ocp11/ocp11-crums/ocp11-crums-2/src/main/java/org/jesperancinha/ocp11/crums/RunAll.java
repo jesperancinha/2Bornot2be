@@ -3,6 +3,7 @@ package org.jesperancinha.ocp11.crums;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.crums.crum1.Crum1;
 import org.jesperancinha.ocp11.crums.crum10.Crum10;
+import org.jesperancinha.ocp11.crums.crum11.Crum11;
 import org.jesperancinha.ocp11.crums.crum2.Crum2;
 import org.jesperancinha.ocp11.crums.crum3.Crum3;
 import org.jesperancinha.ocp11.crums.crum4.Crum4;
@@ -27,5 +28,6 @@ public class RunAll {
         Crum8.main(null);
         Crum9.main(null);
         Crum10.main(null);
+        Crum11.main(null);
     }
 }
