@@ -9,6 +9,7 @@ import org.jesperancinha.ocp11.crums.crum5.Crum5;
 import org.jesperancinha.ocp11.crums.crum6.Crum6;
 import org.jesperancinha.ocp11.crums.crum7.Crum7;
 import org.jesperancinha.ocp11.crums.crum8.Crum8;
+import org.jesperancinha.ocp11.crums.crum9.Crum9;
 
 public class RunAll {
     public static void main(String[] args) {
@@ -23,5 +24,6 @@ public class RunAll {
         Crum6.main(null);
         Crum7.main(null);
         Crum8.main(null);
+        Crum9.main(null);
     }
 }
