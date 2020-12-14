@@ -15,13 +15,13 @@ interface ISubTypeA {
 enum SubTypeA implements ISubTypeA {
     AA, AB;
 
-    private Type A = Type.A;
+    private final Type A = Type.A;
 
     public Type getA() {
         return A;
     }
 
-    public Type getCloneA(){
+    public Type getCloneA() {
         try {
             return (Type) clone();
         } catch (CloneNotSupportedException e) {
@@ -52,13 +52,15 @@ class RunningModule {
             SubTypeA.AB.getA());
         printMagentaGenericLn("Using an interface we get the same -> %s", ((ISubTypeA) (SubTypeA.AB)).getA());
 
-        printMagentaGenericLn("We can also use instances to access types in the same way -> %s", new RunningModule().getType());
+        printMagentaGenericLn("We can also use instances to access types in the same way -> %s",
+            new RunningModule().getType());
 
         printGreenGenericLn("What we see is that enums are full of surprised");
         printGreenGenericLn("An enum is final and cannot be extended");
         final Type cloneA = SubTypeA.AB.getCloneA();
         printGreenGenericLn("We can also not clone it");
-        printGreenGenericLn("Note that static imports work, however, if they are not present, we have to use he main enum type to start to reference our enum value");
+        printGreenGenericLn(
+            "Note that static imports work, however, if they are not present, we have to use he main enum type to start to reference our enum value");
     }
 
     public Type getType() {
