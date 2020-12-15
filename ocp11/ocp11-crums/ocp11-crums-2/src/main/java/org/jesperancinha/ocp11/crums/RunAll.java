@@ -18,6 +18,7 @@ import org.jesperancinha.ocp11.crums.crum21.Crum21;
 import org.jesperancinha.ocp11.crums.crum22.Crum22;
 import org.jesperancinha.ocp11.crums.crum23.Crum23;
 import org.jesperancinha.ocp11.crums.crum24.Crum24;
+import org.jesperancinha.ocp11.crums.crum25.Crum25;
 import org.jesperancinha.ocp11.crums.crum3.Crum3;
 import org.jesperancinha.ocp11.crums.crum4.Crum4;
 import org.jesperancinha.ocp11.crums.crum5.Crum5;
@@ -27,7 +28,7 @@ import org.jesperancinha.ocp11.crums.crum8.Crum8;
 import org.jesperancinha.ocp11.crums.crum9.Crum9;
 
 public class RunAll {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 150;
         Consolerizer.titleSpread = 150;
@@ -55,5 +56,6 @@ public class RunAll {
         Crum22.main(null);
         Crum23.main(null);
         Crum24.main(null);
+        Crum25.main(null);
     }
 }
