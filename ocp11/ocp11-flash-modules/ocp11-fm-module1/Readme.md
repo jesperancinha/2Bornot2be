@@ -6,6 +6,7 @@
 cd ocp11/ocp11-flash-modules/ocp11-fm-module1/
 
 javac --module-source-path . -d out -p modules/consolerizer-1.0.0-SNAPSHOT.jar -m ocpfmmodule1
+java --module-path modules:out --module ocpfmmodule1/org.jesperancinha.ocp11.flashmodule.module1.FlashModule1
 ```
 
 ## About me 👨🏽‍💻🚀

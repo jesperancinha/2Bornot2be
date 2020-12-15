@@ -17,6 +17,7 @@ import org.jesperancinha.ocp11.crums.crum20.Crum20;
 import org.jesperancinha.ocp11.crums.crum21.Crum21;
 import org.jesperancinha.ocp11.crums.crum22.Crum22;
 import org.jesperancinha.ocp11.crums.crum23.Crum23;
+import org.jesperancinha.ocp11.crums.crum24.Crum24;
 import org.jesperancinha.ocp11.crums.crum3.Crum3;
 import org.jesperancinha.ocp11.crums.crum4.Crum4;
 import org.jesperancinha.ocp11.crums.crum5.Crum5;
@@ -53,5 +54,6 @@ public class RunAll {
         Crum21.main(null);
         Crum22.main(null);
         Crum23.main(null);
+        Crum24.main(null);
     }
 }
