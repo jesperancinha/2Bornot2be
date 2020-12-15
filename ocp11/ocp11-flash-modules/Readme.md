@@ -1,19 +1,16 @@
-# ocp11-mastery-5 (Oracle Certified Professional Java SE 11)
+# ocp11-mastery
 
 ## Introduction
 
-OCP 11 studies - Mastery 5
+Welcome to Flash Mopdules.
 
-In this module we will bind our studies with crums:
-
--    [Crums 1](../../ocp11-crums/ocp11-crums-1)
--    [Crums 2](../../ocp11-crums/ocp11-crums-2)
-
-In this module we will bind our studies with flash modules:
-
--    [Flash Module 1](../../ocp11-flash-modules/ocp11-fm-module1)
+In this section we make Lightning/Fast track modules to quickly explore Java modularity
 
 ## Topics and coverage
+
+OCP SE 11 Exam preparation specific for 1z0-819:
+
+-   [OCP-11 - 1z0-819 - Flash Module 1](./ocp11-fm-module1) - Flash module about class creation
 
 From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
 

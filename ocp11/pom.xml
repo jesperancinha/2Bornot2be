@@ -37,6 +37,8 @@
         <module>ocp11-crums</module>
         <module>ocp11-basics</module>
         <module>ocp11-mastery</module>
+        <module>ocp11-flash-modules</module>
+        <module>ocp-fm-module1</module>
     </modules>
 
 </project>

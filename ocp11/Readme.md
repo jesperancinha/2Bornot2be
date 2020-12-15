@@ -10,7 +10,7 @@ In this project you will find all my study materials for the OCP 11.
 -   [OCP-11 - 1z0-819 - Basic](./ocp11-basics) - OCP SE 11 Exam preparation specific for 1z0-819 - Basic concept precision modules
 -   [OCP-11 - 1z0-819 - Mastery](./ocp11-mastery) - OCP SE 11 Exam preparation specific for 1z0-819 - Extremely theoretical modules with a context
 -   [OCP-11 - 1z0-819 - Crums](./ocp11-crums) - OCP SE 11 Exam preparation specific for 1z0-819 - Lightning/Fast track practice exercises without a context
-
+-   [OCP-11 - 1z0-819 - Flash Modules](./ocp11-flash-modules) - OCP SE 11 Exam preparation specific for 1z0-819 - Lightning/Fast track practice module exercises without a context
 ---
 
 ## Collect and Count
