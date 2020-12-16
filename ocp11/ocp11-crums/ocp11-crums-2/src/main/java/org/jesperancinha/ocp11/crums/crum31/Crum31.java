@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
@@ -46,12 +47,18 @@ public class Crum31 {
             .peek(Consolerizer::printOrangeGenericLn)
             .collect(Collectors.toList());
 
-        printMagentaGenericLn("We can also organize first by Id and then  name");
+        printMagentaGenericLn("We can also organize first by Id and then name");
         printMagentaGenericLn(collect2);
+
+        final Stream<Sandwich> sorted = sandwiches.stream()
+            .sorted();
+        printMagentaGenericLn("Finally we can sort them with a terminating function");
+        printMagentaGenericLn(sorted);
         printGreenGenericLn("We can make our own comparators");
         printGreenGenericLn(
             "If we know we are only using an item to compare or even if we have more we can use Comparator and thenComparing if further must follow suit");
         printGreenGenericLn("Note that Comparator only knows the type from the left hand side of assignment");
-        printGreenGenericLn("This means that in the lambda flow declaration, it is not possible to define a Comparator, thenComparing. The lambda will identify an Object only");
+        printGreenGenericLn(
+            "This means that in the lambda flow declaration, it is not possible to define a Comparator, thenComparing. The lambda will identify an Object only");
     }
 }
