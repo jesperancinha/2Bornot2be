@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum ConColor {
+    WHITE("FFFFFF", "\033[0m"),
     BLACK("000000", "\033[0;30m"),
     BLUE("0000AA", "\033[0;34m"),
     GREEN("00AA00", "\033[0;32m"),

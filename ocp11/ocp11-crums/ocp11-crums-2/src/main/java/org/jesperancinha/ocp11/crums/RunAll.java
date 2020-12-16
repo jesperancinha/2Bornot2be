@@ -31,6 +31,7 @@ import org.jesperancinha.ocp11.crums.crum33.Crum33;
 import org.jesperancinha.ocp11.crums.crum34.Crum34;
 import org.jesperancinha.ocp11.crums.crum35.Crum35;
 import org.jesperancinha.ocp11.crums.crum36.Crum36;
+import org.jesperancinha.ocp11.crums.crum37.Crum37;
 import org.jesperancinha.ocp11.crums.crum4.Crum4;
 import org.jesperancinha.ocp11.crums.crum5.Crum5;
 import org.jesperancinha.ocp11.crums.crum6.Crum6;
@@ -38,11 +39,15 @@ import org.jesperancinha.ocp11.crums.crum7.Crum7;
 import org.jesperancinha.ocp11.crums.crum8.Crum8;
 import org.jesperancinha.ocp11.crums.crum9.Crum9;
 
+import java.util.Arrays;
+
 public class RunAll {
     public static void main(String[] args) throws InterruptedException {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 150;
         Consolerizer.titleSpread = 150;
+        Consolerizer.blackAndWhite = Arrays.asList(args)
+            .contains("-bw");
         Crum1.main(args);
         Crum2.main(args);
         Crum3.main(args);
@@ -79,5 +84,6 @@ public class RunAll {
         Crum34.main(args);
         Crum35.main(args);
         Crum36.main(args);
+        Crum37.main(args);
     }
 }

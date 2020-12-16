@@ -14,6 +14,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
 
 public class Consolerizer {
 
@@ -29,6 +30,7 @@ public class Consolerizer {
     public static int maxLineCharsGlobal = MAX_LINE_CHARS;
     public static int rainbowLineChars = RAINBOW_LINE_CHARS;
     public static int titleSpread = TITLE_SPREAD;
+    public static boolean blackAndWhite;
 
     private ConColor conColor = CON_COLOR_DEFAULT;
 
@@ -268,10 +270,16 @@ public class Consolerizer {
     }
 
     private static void printPrivateText(String text) {
+        if(blackAndWhite) {
+            System.out.print(WHITE.getConsoleColor());
+        }
         printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal);
     }
 
     private static void printPrivateText(String text, Object... vars) {
+        if(blackAndWhite) {
+            System.out.print(WHITE.getConsoleColor());
+        }
         if (vars instanceof String[][]) {
             printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal,
                 new Object[] { processMultiArrays2((String[][]) vars) });
