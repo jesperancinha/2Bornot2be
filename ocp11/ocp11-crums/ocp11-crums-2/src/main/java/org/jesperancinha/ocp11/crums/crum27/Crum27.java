@@ -26,10 +26,10 @@ public class Crum27 {
             + "        final Double aDouble = 1881.1881;");
         printMagentaGenericLn("Some boxing operations aren't that simple:");
 
-        final String iAmANumberInAString = 12345 + " - This is a number. Did you notice the boxng operation?";
+        final String iAmANumberInAString = 12345 + " - This is a number. Did you notice the boxing operation?";
 
         printBlueGenericLn(
-            "        final String iAmANumberInAString = 12345 + \" - This is a number. Did you notice the boxng operation?\";");
+            "        final String iAmANumberInAString = 12345 + \" - This is a number. Did you notice the boxing operation?\";");
 
         printOrangeGenericLn("All numbers so far:");
         printOrangeGenericLn(aBoolean);
