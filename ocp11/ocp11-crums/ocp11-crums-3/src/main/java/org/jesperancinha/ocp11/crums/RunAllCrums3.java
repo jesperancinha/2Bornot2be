@@ -8,6 +8,7 @@ import org.jesperancinha.ocp11.crums.crum4.Crum4;
 import org.jesperancinha.ocp11.crums.crum5.Crum5;
 import org.jesperancinha.ocp11.crums.crum6.Crum6;
 import org.jesperancinha.ocp11.crums.crum7.Crum7;
+import org.jesperancinha.ocp11.crums.crum8.Crum8;
 
 import java.util.Arrays;
 
@@ -26,6 +27,6 @@ public class RunAllCrums3 {
         Crum5.main(args);
         Crum6.main(args);
         Crum7.main(args);
-
+        Crum8.main(args);
     }
 }
