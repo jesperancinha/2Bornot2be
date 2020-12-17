@@ -1,6 +1,7 @@
 package org.jesperancinha.ocp11.crums;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.ocp11.crums.crum1.Crum1;
 
 import java.util.Arrays;
 
@@ -11,6 +12,8 @@ public class RunAllCrums3 {
         Consolerizer.titleSpread = 150;
         Consolerizer.blackAndWhite = Arrays.asList(args)
             .contains("-bw");
+
+        Crum1.main(args);
 
     }
 }
