@@ -196,9 +196,9 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
-    public static void printYellowGeneric(String text) {
+    public static void printYellowGeneric(Object text) {
         System.out.print(ConColor.YELLOW.getConsoleColor());
-        printPrivateText(text);
+        printPrivateText(text.toString());
     }
 
     public static void printYellowGeneric(String text, Object... args) {

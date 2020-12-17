@@ -4,6 +4,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.crums.crum1.Crum1;
 import org.jesperancinha.ocp11.crums.crum2.Crum2;
 import org.jesperancinha.ocp11.crums.crum3.Crum3;
+import org.jesperancinha.ocp11.crums.crum4.Crum4;
 
 import java.util.Arrays;
 
@@ -18,6 +19,7 @@ public class RunAllCrums3 {
         Crum1.main(args);
         Crum2.main(args);
         Crum3.main(args);
+        Crum4.main(args);
 
     }
 }
