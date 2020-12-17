@@ -19,6 +19,7 @@
     <modules>
         <module>ocp11-crums-1</module>
         <module>ocp11-crums-2</module>
+        <module>ocp11-crums-3</module>
     </modules>
 
     <packaging>pom</packaging>

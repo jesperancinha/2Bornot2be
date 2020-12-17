@@ -41,7 +41,7 @@ import org.jesperancinha.ocp11.crums.crum9.Crum9;
 
 import java.util.Arrays;
 
-public class RunAll {
+public class RunAllCrums2 {
     public static void main(String[] args) throws InterruptedException {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 150;

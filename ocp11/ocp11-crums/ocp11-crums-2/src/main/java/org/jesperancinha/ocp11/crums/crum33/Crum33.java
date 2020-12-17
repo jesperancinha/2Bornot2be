@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -20,16 +21,16 @@ public class Crum33 {
             .forEach(Consolerizer::printOrangeGenericLn);
 
         printMagentaGenericLn("We can also retrieve the value per key String:");
-        printOrangeGenericLn("%s has index %s", "ATM", CashContainer.valueOf("ATM"));
+        printOrangeGenericLn("%s has index %s", "KITTENACCOUNT", CashContainer.valueOf("KITTENACCOUNT"));
         printMagentaGenericLn("It is case sensitive!");
         try {
-            printOrangeGenericLn("%s has index %s", "ATm", CashContainer.valueOf("ATm"));
+            printOrangeGenericLn("%s has index %s", "KITTENAccount", CashContainer.valueOf("KITTENAccount"));
         } catch (IllegalArgumentException e) {
             printRedGenericLn(
                 "This is expected! Note that an invalid value results in a RuntimeException of type IllegalArgumentException -> %s",
                 e);
         }
-
+        printMagentaGeneric("And if we try to clone it:");
         try {
             CashContainer.LIONACCOUNT.tryToClone();
         } catch (CloneNotSupportedException e) {

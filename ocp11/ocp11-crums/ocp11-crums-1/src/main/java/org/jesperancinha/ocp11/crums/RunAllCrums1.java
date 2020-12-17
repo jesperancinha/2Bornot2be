@@ -20,7 +20,7 @@ import org.jesperancinha.ocp11.crums.crum7.Crum7;
 import org.jesperancinha.ocp11.crums.crum8.Crum8;
 import org.jesperancinha.ocp11.crums.crum9.Crum9;
 
-public class RunAll {
+public class RunAllCrums1 {
     public static void main(String[] args) {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 150;
