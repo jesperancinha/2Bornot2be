@@ -2,6 +2,7 @@ package org.jesperancinha.ocp11.crums;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.ocp11.crums.crum1.Crum1;
+import org.jesperancinha.ocp11.crums.crum2.Crum2;
 
 import java.util.Arrays;
 
@@ -14,6 +15,7 @@ public class RunAllCrums3 {
             .contains("-bw");
 
         Crum1.main(args);
+        Crum2.main(args);
 
     }
 }
