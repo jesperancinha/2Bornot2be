@@ -28,7 +28,6 @@ public class Crum8 {
         } catch (IllegalArgumentException e) {
             printRedGenericLn(
                 "This is expected! Relativizing a filename with a filename with a path does not make sense -> %s", e);
-
         }
 
         printMagentaGenericLn(
