@@ -30,7 +30,7 @@ public class Crum33 {
                 "This is expected! Note that an invalid value results in a RuntimeException of type IllegalArgumentException -> %s",
                 e);
         }
-        printMagentaGeneric("And if we try to clone it:");
+        printMagentaGenericLn("And if we try to clone it:");
         try {
             CashContainer.LIONACCOUNT.tryToClone();
         } catch (CloneNotSupportedException e) {
