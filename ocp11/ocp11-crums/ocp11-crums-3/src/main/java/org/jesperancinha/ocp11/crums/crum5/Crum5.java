@@ -77,7 +77,7 @@ public class Crum5 {
             printOrangeGenericLn(dateTimeFormatter6);
             printMagentaGenericLn(dateTimeFormatter6.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
-            printRedGenericLn("This is expected. The maximum repetition possible for any patter is 5-> %s", e);
+            printRedGenericLn("This is expected. The maximum repetition possible for any patter is 5 -> %s", e);
         }
 
         printGreenGenericLn("We can generally say that 5 is the maximum digit repetition for a DateTimeFormatter");
