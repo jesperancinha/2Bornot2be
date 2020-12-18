@@ -1,106 +1,13 @@
-# ocp11-mastery-5 (Oracle Certified Professional Java SE 11)
+# ocp11-fm-module2
 
-## Introduction
+## How to run
 
-OCP 11 studies - Mastery 5
+```bash
+cd ocp11/ocp11-flash-modules/ocp11-fm-module2/
 
-In this module we will bind our studies with crums:
-
--    [Crums 1](../../ocp11-crums/ocp11-crums-1)
--    [Crums 2](../../ocp11-crums/ocp11-crums-2)
-
-In this module we will bind our studies with flash modules:
-
--    [Flash Module 1](../../ocp11-flash-modules/ocp11-fm-module1)
--    [Flash Module 2](../../ocp11-flash-modules/ocp11-fm-module2)
-
-## Topics and coverage
-
-From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
-
-Subjects covered:
-
-1. Working with Java data types
-    - Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting
-    - Handle text using String and StringBuilder classes
-    - Use local variable type inference, including as lambda parameters
-2. Java Object-Oriented Approach
-    - Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection)
-    - Define and use fields and methods, including instance, static and overloaded methods
-    - Initialize objects and their members using instance and static initialiser statements and constructors
-    - Understand variable scopes, apply encapsulation and make objects immutable
-    - Create and use subclasses and superclasses, including abstract classes
-    - Utilize polymorphism and casting to call methods, differentiate object type versus reference type
-    - Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods
-    - Create and use enumerations
-3. Working with Arrays and Collections
-    - Use generics, including wildcards
-    - Use a Java array and List, Set, Map and Deque collections, including convenience methods
-    - Sort collections and arrays using Comparator and Comparable interfaces
-4. Java Platform Module System
-    - Deploy and execute modular applications, including automatic modules
-    - Declare, use, and expose modules, including the use of services
-5. Java I/O API
-    - Read and write console and file data using I/O Streams
-    - Implement serialization and deserialization techniques on Java objects
-    - Handle file system objects using java.nio.file API
-6. Database Applications with JDBC
-    - Connect to and perform database SQL operations, process query results using JDBC API
-7. Annotations
-    - Create, apply, and process annotations
-8. Controlling Program Flow
-    - Create and use loops, if/else, and switch statements
-9. Exception Handling
-    - Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
-    - Create and use custom exceptions
-10. Working with Streams and Lambda expressions
-    - Implement functional interfaces using lambda expressions, including interfaces from the java.util.function package
-    - Use Java Streams to filter, transform and process data
-    - Perform decomposition and reduction, including grouping and partitioning on sequential and parallel streams
-11. Concurrency
-    - Create worker threads using Runnable and Callable, and manage concurrency using an ExecutorService and java.util.concurrent API
-    - Develop thread-safe code, using different locking mechanisms and java.util.concurrent API
-12. Secure Coding in Java SE Application
-    - Develop code that mitigates security threats such as denial of service, code injection, input validation and ensure data integrity
-    - Secure resource access including filesystems, manage policies and execute privileged code
-13. Localization
-    - Implement Localization using Locale, resource bundles, and Java APIs to parse and format messages, dates, and numbers
-
----
-
-## References
-
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [Enthuware](https://enthuware.com/)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
--   [Whizlabs](https://www.whizlabs.com/)
-
----
-
-## Java 11 Specs
-
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
-
----
-
-## The module graph
-
-[![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
- 
----
-
-## Achievements
-
-[![alt text](../../../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../../../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../../../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../../../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
-  
----
+javac -p modules/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path . -d out -m ocpfmmodule2
+java --module-path modules:out --module ocpfmmodule2/org.jesperancinha.ocp11.flashmodule.module2.FlashModule2
+```
 
 ## About me 👨🏽‍💻🚀
 

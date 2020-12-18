@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ocp11-fm-module1</artifactId>
+    <artifactId>ocp11-fm-module2</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -18,7 +18,7 @@
 
     <build>
         <defaultGoal>install</defaultGoal>
-        <sourceDirectory>ocpfmmodule1</sourceDirectory>
+        <sourceDirectory>ocpfmmodule2</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
