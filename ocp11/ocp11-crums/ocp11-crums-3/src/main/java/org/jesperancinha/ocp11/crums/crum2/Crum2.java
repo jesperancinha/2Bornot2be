@@ -58,7 +58,8 @@ public class Crum2 {
         printGreenGenericLn(
             "In practice, what we do see with our example is that the longer the lists are the longer it takes to add elements");
         printGreenGenericLn("For the ArrayList, that time doesn't seem to differ much per added element");
-        printGreenGenericLn("For the LinkedList, there is a noticeable difference. For a small number of elements, a LinkedList may be a better option.");
+        printGreenGenericLn(
+            "For the LinkedList, there is a noticeable difference. For a small number of elements, a LinkedList may be a better option.");
         printGreenGenericLn("Try to run with and without the -skipTime flag 😊.");
 
     }

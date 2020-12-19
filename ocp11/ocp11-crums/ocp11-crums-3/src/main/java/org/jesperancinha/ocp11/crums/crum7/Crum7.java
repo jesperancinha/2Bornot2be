@@ -51,6 +51,7 @@ public class Crum7 {
         printGreenGenericLn("Setting a wrong type as a parameter is pointless, but it doesn't cause an exception");
         printGreenGenericLn(
             "In both cases this is just a find operation which makes it logic that it does not throw an exception and instead it just returns false");
-        printGreenGenericLn("As an added curiosity, not that Arrays.asList returns a fixed size list. It is still mutable. List.of is immutable");
+        printGreenGenericLn(
+            "As an added curiosity, not that Arrays.asList returns a fixed size list. It is still mutable. List.of is immutable");
     }
 }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Table5A extends TableLegs implements Serializable {
 
-    private String name;
+    private final String name;
 
     public Table5A() {
         super(5, 25);

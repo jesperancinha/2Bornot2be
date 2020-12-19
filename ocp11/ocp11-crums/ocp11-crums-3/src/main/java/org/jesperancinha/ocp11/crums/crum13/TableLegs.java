@@ -3,7 +3,7 @@ package org.jesperancinha.ocp11.crums.crum13;
 public class TableLegs extends FourFurnitureLegs
 //        implements Serializable
 {
-    private int area;
+    private final int area;
 
 //        public TableLegs() {
 //

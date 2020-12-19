@@ -82,6 +82,7 @@ public class Crum5 {
 
         printGreenGenericLn("We can generally say that 5 is the maximum digit repetition for a DateTimeFormatter");
         printGreenGenericLn("We can introduce our own text. To escape it we put it between single quotes");
-        printGreenGenericLn("Some digit types like 24 hour, hour, minute, second, day of the month, only allow up to 2 repetitions");
+        printGreenGenericLn(
+            "Some digit types like 24 hour, hour, minute, second, day of the month, only allow up to 2 repetitions");
     }
 }

@@ -29,7 +29,7 @@ public class Crum4 {
                 Consolerizer.printYellowGeneric((char) read);
             }
         } catch (IOException e) {
-           printRedThrowableAndExit(e);
+            printRedThrowableAndExit(e);
         }
 
         Consolerizer.printNewLine();
@@ -47,6 +47,7 @@ public class Crum4 {
         }
         Consolerizer.printNewLine();
 
-        printGreenGenericLn("The point is that a BufferedReader can be creater with all java.io.Reader subtypes and java.io.Reader included");
+        printGreenGenericLn(
+            "The point is that a BufferedReader can be creater with all java.io.Reader subtypes and java.io.Reader included");
     }
 }

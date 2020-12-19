@@ -43,22 +43,27 @@ public class Crum6 {
 
         var locale2 = new Locale.Builder().setRegion("ES")
             .build();
-        printMagentaGenericLn("We can also read a bundle file, if we only have the country code of it -> %s. This is only possible with two underscores though", locale2);
+        printMagentaGenericLn(
+            "We can also read a bundle file, if we only have the country code of it -> %s. This is only possible with two underscores though",
+            locale2);
         final ResourceBundle resourceBundleEs = ResourceBundle.getBundle("messages", locale2);
         printOrangeGenericLn(resourceBundleEs.getString("goodnight"));
 
         var locale3 = new Locale.Builder().setLanguage("pt")
             .setRegion("PT")
             .build();
-        printMagentaGenericLn("We can also read a bundle file, if we have the language and the country code -> %s", locale3);
+        printMagentaGenericLn("We can also read a bundle file, if we have the language and the country code -> %s",
+            locale3);
         final ResourceBundle resourceBundlePtPt = ResourceBundle.getBundle("messages", locale3);
         printOrangeGenericLn(resourceBundlePtPt.getString("goodmorning"));
 
         printGreenGenericLn("Bundles have simple and very complicated rules");
-        printGreenGenericLn("A normal message properties file can have this format: <bundle_name>_<language_code>_<country_code>.properties");
+        printGreenGenericLn(
+            "A normal message properties file can have this format: <bundle_name>_<language_code>_<country_code>.properties");
         printGreenGenericLn("If we only have the bundle: <bundle_name>.properties");
         printGreenGenericLn("If we have the bundle and the language: <bundle_name>_<language_code>.properties");
-        printGreenGenericLn("If we have the bundle and the country: <bundle_name__<country_code>.properties (notice the two underscores");
+        printGreenGenericLn(
+            "If we have the bundle and the country: <bundle_name__<country_code>.properties (notice the two underscores");
 
     }
 }

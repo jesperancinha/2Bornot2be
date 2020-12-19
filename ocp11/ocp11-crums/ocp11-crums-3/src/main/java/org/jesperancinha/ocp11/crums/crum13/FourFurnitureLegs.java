@@ -3,7 +3,7 @@ package org.jesperancinha.ocp11.crums.crum13;
 public class FourFurnitureLegs
 //        implements Serializable
 {
-    private int height;
+    private final int height;
 
 //        public FourFurnitureLegs() {
 //

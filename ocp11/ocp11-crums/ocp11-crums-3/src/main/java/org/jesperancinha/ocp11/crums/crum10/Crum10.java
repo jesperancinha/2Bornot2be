@@ -11,12 +11,14 @@ public class Crum10 {
         try {
             calculateExceptions();
         } catch (NoSuchFieldException e) {
-           printRedGenericLn("This is expected! NoSuchFieldException is a checked exception that needs to be in throws -> %s", e);
+            printRedGenericLn(
+                "This is expected! NoSuchFieldException is a checked exception that needs to be in throws -> %s", e);
         }
         try {
             calculateException2();
         } catch (ClassNotFoundException e) {
-            printRedGenericLn("This is expected! ClassNotFoundException is a checked exception that needs to be in throws -> %s", e);
+            printRedGenericLn(
+                "This is expected! ClassNotFoundException is a checked exception that needs to be in throws -> %s", e);
         }
         try {
             calculateException3();
@@ -24,7 +26,8 @@ public class Crum10 {
             printRedGenericLn("This is expected! Exception is a checked exception that needs to be in throws -> %s", e);
         }
 
-        printGreenGenericLn("It is important to know that subclasses of ReflectiveOperationException are also checked exceptions");
+        printGreenGenericLn(
+            "It is important to know that subclasses of ReflectiveOperationException are also checked exceptions");
         printGreenGenericLn("If they are thrown, they need to be catch or the method needs to have throws.");
 
     }
@@ -38,6 +41,6 @@ public class Crum10 {
     }
 
     private static void calculateExceptions() throws NoSuchFieldException {
-        throw  new NoSuchFieldException();
+        throw new NoSuchFieldException();
     }
 }

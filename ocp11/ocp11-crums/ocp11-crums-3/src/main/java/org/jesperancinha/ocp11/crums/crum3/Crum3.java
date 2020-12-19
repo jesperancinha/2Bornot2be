@@ -62,8 +62,10 @@ public class Crum3 {
         // b1 = new A();
 
         printGreenGenericLn("It is very important to distinguish between compile errors and runtime errors");
-        printGreenGenericLn("When casting, a runtime error happens when the right happens in the code, but the instance does not match the casting type in any way");
-        printGreenGenericLn("A wrong cast may only happen if the type cast to is the same type or a sub-type of the instance");
+        printGreenGenericLn(
+            "When casting, a runtime error happens when the right happens in the code, but the instance does not match the casting type in any way");
+        printGreenGenericLn(
+            "A wrong cast may only happen if the type cast to is the same type or a sub-type of the instance");
         printGreenGenericLn("Without an explicit casting, the compiler detects immediately that something went wrong");
         printGreenGenericLn("When we make explicit casting, the compiler leaves that responsibility to us");
     }
