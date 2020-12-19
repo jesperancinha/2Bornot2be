@@ -21,6 +21,7 @@
     <modules>
         <module>ocp11-fm-module1</module>
         <module>ocp11-fm-module2</module>
+        <module>ocp11-fm-module3</module>
     </modules>
 
 </project>

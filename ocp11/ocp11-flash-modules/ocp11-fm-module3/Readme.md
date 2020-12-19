@@ -1,5 +1,24 @@
-This is just a file to fix this directory
-This simulates a directory where modules should be
+# ocp11-fm-module3
+
+## How to compile
+
+```bash
+cd ocp11/ocp11-flash-modules/ocp11-fm-module2/
+
+javac -p modules/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path . -d out -m ocpfmmodule3
+javac -p modules --module-source-path . -d out -m ocpfmmodule3
+javac --module-path modules --module-source-path . -d out -m ocpfmmodule3
+javac --module-path modules/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path . -d out -m ocpfmmodule3
+```
+
+## How to run
+
+```bash
+java --module-path modules:out --module ocpfmmodule3/org.jesperancinha.ocp11.flashmodule.module3.FlashModule3
+java --module-path modules/consolerizer-1.0.0-SNAPSHOT.jar:out --module ocpfmmodule3/org.jesperancinha.ocp11.flashmodule.module3.FlashModule3
+java -p modules:out --module ocpfmmodule3/org.jesperancinha.ocp11.flashmodule.module3.FlashModule3
+java -p modules/consolerizer-1.0.0-SNAPSHOT.jar:out -m ocpfmmodule3/org.jesperancinha.ocp11.flashmodule.module3.FlashModule3
+```
 
 ## About me 👨🏽‍💻🚀
 
