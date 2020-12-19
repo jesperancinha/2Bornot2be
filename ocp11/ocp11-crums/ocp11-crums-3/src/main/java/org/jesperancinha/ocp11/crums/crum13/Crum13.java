@@ -11,6 +11,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGener
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum13 {
 
@@ -33,7 +34,7 @@ public class Crum13 {
         try {
             Table5A table5A = (Table5A) ois.readObject();
             printYellowGenericLn(
-                "See, with the uncommented default empty contructors you were able to deserialize our Table5A: %s",
+                "See, with the uncommented default empty constructors you were able to deserialize our Table5A: %s",
                 table5A);
         } catch (InvalidClassException e) {
             printRedGenericLn(
