@@ -30,10 +30,11 @@ public class Crum20 {
             "In this case we can create a new method which checks that there is no overflow of the integer parameter");
 
         try {
-            printRainbowTitleLn(makeStrawberryCopy(getAStrawberryPrivate(), Integer.MAX_VALUE));
+            printRainbowTitleLn(makeStrawberryCopySafe(getAStrawberryPrivate(), Integer.MAX_VALUE));
         } catch (BufferOverflowException | OutOfMemoryError e) {
             printRedGenericLn("This is expected. Our final method is now inline with Guidelines 4-1 and 1-3 -> %s", e);
-            printRedGenericLn("Note that if you get an OutOfMemoryError, that is ok for now, but the code should also be protected against that");
+            printRedGenericLn(
+                "Note that if you get an OutOfMemoryError, that is ok for now, but the code should also be protected against that");
         }
 
         printGreenGenericLn("It is important that from a security perspective that our code follows certain guideline");
@@ -49,7 +50,7 @@ public class Crum20 {
         }
         final char[] chars = aStrawberryPrivate.toCharArray();
         final char[] charsTo = new char[i];
-        System.arraycopy(chars, 0, charsTo, 0, i);
+        System.arraycopy(chars, 0, charsTo, 0, Math.min(i, chars.length));
         return new String(charsTo);
 
     }
