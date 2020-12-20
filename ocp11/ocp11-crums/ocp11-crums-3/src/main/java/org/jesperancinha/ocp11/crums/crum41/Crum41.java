@@ -1,0 +1,38 @@
+package org.jesperancinha.ocp11.crums.crum41;
+
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+
+public class Crum41 {
+    public class Other {
+        public final static String hello = "Hello";
+    }
+
+    public static void main(String[] args) {
+        printBlueGenericTitleLn("Crum 41 - Advanced String literal comparison");
+
+        final String a = "Java";
+
+        final String b = "Java";
+
+        final String c = "J" + 'a' + 'v' + 'a';
+
+        final String va = "va";
+        String va1 = "va";
+
+        final String d = "Ja" + va;
+
+        final String e = "Ja" + va1;
+
+        printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", a, b, a, b, a == b);
+        printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", a, c, a, c, a == c);
+        printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", a, d, a, d, a == d);
+        printMagentaGenericLn("These are not literals and so %s is not equal to %s, %s == %s = %s", a, e, a, e, a == e);
+
+        printGreenGenericLn("There is a difference and a very functional one between using final and not using final");
+        printGreenGenericLn("When using final, the literals work to create Strings in the String pool");
+        printGreenGenericLn("When not using final, the result becomes a reference and the bitwise == operator does not work.");
+
+    }
+}
