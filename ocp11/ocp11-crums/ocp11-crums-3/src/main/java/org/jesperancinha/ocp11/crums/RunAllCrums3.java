@@ -37,6 +37,7 @@ import org.jesperancinha.ocp11.crums.crum39.Crum39;
 import org.jesperancinha.ocp11.crums.crum4.Crum4;
 import org.jesperancinha.ocp11.crums.crum40.Crum40;
 import org.jesperancinha.ocp11.crums.crum41.Crum41;
+import org.jesperancinha.ocp11.crums.crum42.Crum42;
 import org.jesperancinha.ocp11.crums.crum5.Crum5;
 import org.jesperancinha.ocp11.crums.crum6.Crum6;
 import org.jesperancinha.ocp11.crums.crum7.Crum7;
@@ -95,5 +96,6 @@ public class RunAllCrums3 {
         Crum39.main(args);
         Crum40.main(args);
         Crum41.main(args);
+        Crum42.main(args);
     }
 }

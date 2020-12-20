@@ -5,10 +5,6 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGene
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum41 {
-    public class Other {
-        public final static String hello = "Hello";
-    }
-
     public static void main(String[] args) {
         printBlueGenericTitleLn("Crum 41 - Advanced String literal comparison");
 
@@ -33,6 +29,5 @@ public class Crum41 {
         printGreenGenericLn("There is a difference and a very functional one between using final and not using final");
         printGreenGenericLn("When using final, the literals work to create Strings in the String pool");
         printGreenGenericLn("When not using final, the result becomes a reference and the bitwise == operator does not work.");
-
     }
 }
