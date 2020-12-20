@@ -20,6 +20,10 @@ public class Crum33 {
         //
         // }
 
+        for (var i = 0; i < 10; i++) {
+
+        }
+
         printMagentaGenericLn("We cannot use var do declare variables in a compound");
 
         for (int i = 0, j = 10; i < 10; i++) {
@@ -30,11 +34,10 @@ public class Crum33 {
         printMagentaGenericLn("We an however declare var outside the for loop:");
 
         var a = 0;
-        for (; a<20; a++){
+        for (; a < 20; a++) {
             printRainbowTitle("" + a);
         }
         printNewLine();
-
 
         printGreenGenericLn("In Java 11 a for loop can be a bit complicated to understand at some point");
         printGreenGenericLn("Important key things to remember");
