@@ -21,9 +21,14 @@ public class Crum41 {
 
         final String e = "Ja" + va1;
 
+        String f = "java";
+
+        String g = "java";
+
         printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", a, b, a, b, a == b);
         printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", a, c, a, c, a == c);
         printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", a, d, a, d, a == d);
+        printMagentaGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", f, g, f, g, f == g);
         printMagentaGenericLn("These are not literals and so %s is not equal to %s, %s == %s = %s", a, e, a, e, a == e);
 
         printGreenGenericLn("There is a difference and a very functional one between using final and not using final");
