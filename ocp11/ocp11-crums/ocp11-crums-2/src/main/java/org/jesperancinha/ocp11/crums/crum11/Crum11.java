@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -23,12 +24,20 @@ public class Crum11 {
         printMagentaGenericLn("We can have a band list with a generic type List -> %s", bandList);
 
         final List<?> bandListWildcard = bandList;
+        // Required type:
+        // capture of ?
+        // Provided:
+        // String
+        // bandListWildcard.add("sneaky");
 
         printMagentaGenericLn(
             "If you play with this new reference, you'll realize you cannot easily add an element to the list -> %s",
             bandListWildcard);
 
         final List<? extends String> bandListWildcardExtends = bandList;
+        bandList.add("Sneaky");
+        final String band1 = bandListWildcardExtends.get(0);
+        printBrightCyanGenericLn(band1);
 
         // capture of ? extends String
         // String test = "Anna Domino";
@@ -59,7 +68,9 @@ public class Crum11 {
         final List<?> bandListWildcardDiamond = new ArrayList<>(
             Arrays.asList("Vampire Weekend", "Los Campesinos!", "The Cure", "PJ Harvey",
                 "Nick Cave and the bad seeds"));
-        printMagentaGenericLn("We can create wildcard lists in combination with diamond notation created instances.");
+        final Object o = bandListWildcardDiamond.get(0);
+        printBrightCyanGenericLn(o);
+        printMagentaGenericLn("We can create wildcard lists in combinastion with diamond notation created instances.");
         printMagentaGenericLn(
             "Note that since the reference is a wildcard, adding is also not an easy option in this case");
 
