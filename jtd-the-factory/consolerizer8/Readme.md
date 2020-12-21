@@ -1,37 +1,12 @@
-# jee7
+# consolerizer
 
-## Introduction
+## Examples
 
-This is a set of study modules that I'm using to pass exam Oracle's exam 1z0-900
+With this module, you can play with the console output and give it color!
+You can also use emoji's and use predefined functions.
+This is an example:
 
--   [JEE Crums](jee-crums) -  A set of modules with quick learning  / fast track exercises without context
-
----
-
-## Achievements
-
-[![alt text](../badges/oracle-certified-foundations-associate-java-100.png "OCJA SE 8")](https://www.youracclaim.com/badges/6db92c1e-7bca-4856-9543-0d5ed0182794/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-7-programmer-100.png "OCA SE 7")](https://www.youracclaim.com/badges/f4c6cc1e-cb52-432b-904d-36d266112225/public_url)
-[![alt text](../badges/oracle-certified-associate-java-se-8-programmer-100.png "OCA SE 8")](https://www.youracclaim.com/badges/a206436d-6fd8-4ca1-8feb-38a838446ee7/public_url)
-[![alt text](../badges/oracle-certified-professional-java-se-8-programmer-100.png "OCP SE 8")](https://www.youracclaim.com/badges/92e036f5-4e11-4cff-9935-3e62266d2074/public_url)
-
----
-
-# References
-
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Enthuware](https://enthuware.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+![alt text](./docs/consolerize-capture-1.png "Consolerizer")
 
 ## About me 👨🏽‍💻🚀
 

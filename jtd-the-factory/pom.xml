@@ -15,6 +15,7 @@
 
     <modules>
         <module>consolerizer</module>
+        <module>consolerizer8</module>
     </modules>
 
 </project>
