@@ -24,6 +24,12 @@ This is a set of study modules that I'm using to pass exam Oracle's exam 1z0-900
 -   [Enthuware](https://enthuware.com/)
 -   [Whizlabs](https://www.whizlabs.com/)
 -   [Pluralsight](https://www.pluralsight.com/)
+-   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+-   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+-   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+-   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+-   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+-   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
 
 ## About me 👨🏽‍💻🚀
 

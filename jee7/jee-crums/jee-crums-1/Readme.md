@@ -1,5 +1,13 @@
 # jee-crums-1
 
+## How to run
+
+```bash
+cd jee7/jee-crums/jee-crums-1
+sdk use java 8.0.242.hs-adpt
+mvn package embedded-glassfish:run
+```
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
