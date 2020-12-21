@@ -2,10 +2,12 @@
 
 ## How to run
 
+The java version must be set to 7. You can use 8 or higher versions, but that is not valid for the exam.
 ```bash
 cd jee7/jee-crums/jee-crums-1
 sdk use java 8.0.242.hs-adpt
 mvn package embedded-glassfish:run
+mvn clean install embedded-glassfish:run
 ```
 
 ## About me 👨🏽‍💻🚀
