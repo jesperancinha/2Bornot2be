@@ -5,6 +5,8 @@
 OCP 11 studies. 
 In this project you will find all my study materials for the OCP 11.
 
+<span style="color:green">IMPORTANT NOTICE:</span> I have achieved this certification on the 2020/12/21. This means that the updates will not happen as regularly as during the preparation for the exam. From [Mastery module 5](./ocp11-mastery/ocp11-mastery-5) onwards, I will still update and continue to add materials. Please understand that it just won't happen has often as before.
+
 ## Topics and coverage
 
 -   [OCP-11 - 1z0-819 - Basic](./ocp11-basics) - OCP SE 11 Exam preparation specific for 1z0-819 - Basic concept precision modules
