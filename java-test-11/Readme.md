@@ -1,10 +1,98 @@
 # Java 11 Test Drives
 
-## Contents
+## Introduction
 
--   [java-test-drives-common](./java-test-drives-design-patterns) - Java commons
--   [java-test-drives-designpatterns](./java-test-drives-design-patterns) - Java design patterns
--   [java-test-drives-security](./java-test-drives-security) - Java Security
+In this project you will find all my study materials for my Java 11 learning journey.
+Feel free to use these materials in your studies.
+These modules can be used for education purposes or for certain types of exames like the [1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+
+## Topics and coverage
+
+-   [Basic](./java-11-basics) - Basic concept precision modules
+-   [Mastery](./java-11-mastery) - Extremely theoretical modules with a context
+-   [Crums](./java-11-crums) - Lightning/Fast track practice exercises without a context
+-   [Flash Modules](./java-11-flash-modules) - Lightning/Fast track practice module exercises without a context
+-   [Test Drives](./java-11-test-drives) - Experimental applications built with Java 11
+---
+
+## References
+
+-   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+-   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+-   [Enthuware](https://enthuware.com/)
+-   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+-   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+-   [Whizlabs](https://www.whizlabs.com/)
+
+---
+
+## Java 11 Specs
+
+-   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+-   [The modular JDK](https://openjdk.java.net/jeps/200)
+-   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+
+---
+
+## The module graph
+
+[![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
+
+---
+
+## 1z0-819 Guidelines
+
+From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
+
+Subjects covered:
+
+1. Working with Java data types
+    - Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting
+    - Handle text using String and StringBuilder classes
+    - Use local variable type inference, including as lambda parameters
+2. Java Object-Oriented Approach
+    - Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection)
+    - Define and use fields and methods, including instance, static and overloaded methods
+    - Initialize objects and their members using instance and static initialiser statements and constructors
+    - Understand variable scopes, apply encapsulation and make objects immutable
+    - Create and use subclasses and superclasses, including abstract classes
+    - Utilize polymorphism and casting to call methods, differentiate object type versus reference type
+    - Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods
+    - Create and use enumerations
+3. Working with Arrays and Collections
+    - Use generics, including wildcards
+    - Use a Java array and List, Set, Map and Deque collections, including convenience methods
+    - Sort collections and arrays using Comparator and Comparable interfaces
+4. Java Platform Module System
+    - Deploy and execute modular applications, including automatic modules
+    - Declare, use, and expose modules, including the use of services
+5. Java I/O API
+    - Read and write console and file data using I/O Streams
+    - Implement serialization and deserialization techniques on Java objects
+    - Handle file system objects using java.nio.file API
+6. Database Applications with JDBC
+    - Connect to and perform database SQL operations, process query results using JDBC API
+7. Annotations
+    - Create, apply, and process annotations
+8. Controlling Program Flow
+    - Create and use loops, if/else, and switch statements
+9. Exception Handling
+    - Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
+    - Create and use custom exceptions
+10. Working with Streams and Lambda expressions
+    - Implement functional interfaces using lambda expressions, including interfaces from the java.util.function package
+    - Use Java Streams to filter, transform and process data
+    - Perform decomposition and reduction, including grouping and partitioning on sequential and parallel streams
+11. Concurrency
+    - Create worker threads using Runnable and Callable, and manage concurrency using an ExecutorService and java.util.concurrent API
+    - Develop thread-safe code, using different locking mechanisms and java.util.concurrent API
+12. Secure Coding in Java SE Application
+    - Develop code that mitigates security threats such as denial of service, code injection, input validation and ensure data integrity
+    - Secure resource access including filesystems, manage policies and execute privileged code
+13. Localization
+    - Implement Localization using Locale, resource bundles, and Java APIs to parse and format messages, dates, and numbers
+
+---
 
 ## About me 👨🏽‍💻🚀
 
