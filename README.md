@@ -28,7 +28,9 @@
 
 Java study project.
 
-This project is intended as a study tool for the latest Java version. To find out the current version in study please check the details in the [pom.xml](pom.xml) file
+This project is intended as a study tool for different java versions and frameworks.
+They contain original content that I have created with the help of the referenced documentation and websites.
+Please feel free to use this project for your education and exams.
 
 It is the support project of the following articles on my blog:
 
