@@ -38,15 +38,10 @@ It is the support project of the following articles on my blog:
 |[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
 
 ## Contents
-#### General Studies
 
--   [java-test-11](./java-test-11/Readme.md) - Java 11 test mini projects
--   [java-test-15](./java-test-15/Readme.md) - Java 15 test mini projects
-    
-#### Exam preparation
-
--   [OCP-11 (1z0-815 - 1z0-816 - 1z0-817 - 1z0-818 - 1z0-819)](./ocp11/Readme.md) - OCP SE 11 Exam preparation
--   [JEE 7 (1z0-900)](./jee7/Readme.md) - Java EE 7 Application Developer Exam Preparation
+-   [java-test-11](./java-test-11/Readme.md) - Java 11 study materials
+-   [java-test-15](./java-test-15/Readme.md) - Java 15 study materials and article contents
+-   [JEE 7](./jee7/Readme.md) - Java EE 7 study materials
 
 ---
 
