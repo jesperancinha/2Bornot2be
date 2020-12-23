@@ -1,9 +1,9 @@
-# ocp11-basics
+# java-11-basics
 
 ## Topics and coverage
 
--   [OCP-11 - 1z0-819 - Basics 1](ocp11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
--   [OCP-11 - 1z0-819 - Basics 2](ocp11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
+-   [OCP-11 - 1z0-819 - Basics 1](java-11-basics-1) - OCP SE 11 Exam preparation specific for 1z0-819
+-   [OCP-11 - 1z0-819 - Basics 2](java-11-basics-2) - OCP SE 11 Exam preparation specific for 1z0-819
 
 ## About me 👨🏽‍💻🚀
 

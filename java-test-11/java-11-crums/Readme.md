@@ -1,4 +1,5 @@
-# ocp11-crums
+# java-11-crums
+
 ## Introduction
 
 Crums
@@ -10,8 +11,9 @@ There is no context. The point is to make them as fast as possible and understan
 
 ## Contents
 
--   [Crums 1](ocp11-crums-1)
--   [Crums 2](ocp11-crums-2)
+-   [Crums 1](java-11-crums-1)
+-   [Crums 2](java-11-crums-2)
+-   [Crums 3](java-11-crums-3)
 
 ---
 

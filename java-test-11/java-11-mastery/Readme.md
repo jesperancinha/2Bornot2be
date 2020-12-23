@@ -1,4 +1,4 @@
-# ocp11-mastery
+# java-11-mastery
 
 ## Topics and coverage
 

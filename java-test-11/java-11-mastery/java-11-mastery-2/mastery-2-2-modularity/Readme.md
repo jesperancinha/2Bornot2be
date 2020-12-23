@@ -5,7 +5,7 @@
 - Forcing requires and exports (--add-reads and --add-exports respectively)
 
 ```bash
-cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+cd ocp11/java11-mastery-2/mastery-2-2-modularity/
 javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module --add-exports lunar.module/org.jesperancinha.java11.lunar.extra=rocket --add-reads rocket=consolerizer -d out --module rocket
 java --add-reads rocket=consolerizer --add-exports lunar.module/org.jesperancinha.java11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.java11.rocket.RocketRunner rocket=lunar.module --module-path out --module rocket/org.jesperancinha.java11.rocket.RocketRunner
 ```
@@ -13,7 +13,7 @@ java --add-reads rocket=consolerizer --add-exports lunar.module/org.jesperancinh
 - Forcing exports, with all uncommented modules in [rocket](rocket/rocket/module-info.java).
 
 ```bash
-cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+cd ocp11/java11-mastery-2/mastery-2-2-modularity/
 javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module --add-exports lunar.module/org.jesperancinha.java11.lunar.extra=rocket -d out --module rocket
 java --add-exports lunar.module/org.jesperancinha.java11.lunar.extra=rocket --module-path out --module rocket/org.jesperancinha.java11.rocket.RocketRunner
 ```
@@ -21,7 +21,7 @@ java --add-exports lunar.module/org.jesperancinha.java11.lunar.extra=rocket --mo
 - The typical compilation with all uncommented modules in [lunar.module](lunar.module/lunar.module/module-info.java) and in [rocket](rocket/rocket/module-info.java).
 
 ```bash
-cd ocp11/ocp11-mastery-2/mastery-2-2-modularity/
+cd ocp11/java11-mastery-2/mastery-2-2-modularity/
 javac -encoding UTF-8 --module-source-path ../../../jtd-the-factory/consolerizer/src/main:rocket:lunar.module:service.module -d out --module rocket
 java --module-path out --module rocket/org.jesperancinha.java11.rocket.RocketRunner
 ```

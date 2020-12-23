@@ -1,9 +1,9 @@
-# ocp11-fm-module2
+# java-11-fm-module2
 
 ## How to run
 
 ```bash
-cd ocp11/ocp11-flash-modules/ocp11-fm-module2/
+cd ocp11/java-11-flash-modules/java-11-fm-module2/
 
 javac -p modules/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path . -d out -m ocpfmmodule2
 java --module-path modules:out --module ocpfmmodule2/org.jesperancinha.java11.flashmodule.module2.FlashModule2

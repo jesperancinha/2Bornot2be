@@ -1,4 +1,4 @@
-# ocp11-mastery
+# java-11-mastery
 
 ## Introduction
 
@@ -8,9 +8,9 @@ In this section we make Lightning/Fast track modules to quickly explore Java mod
 
 ## Topics and coverage
 
--   [Flash Module 1](ocp11-fm-module1) - Flash module about class creation
--   [Flash Module 2](ocp11-fm-module2) - Flash module about class creation
--   [Flash Module 3](ocp11-fm-module3) - Flash module about class creation
+-   [Flash Module 1](java-11-fm-module1) - Flash module about class creation
+-   [Flash Module 2](java-11-fm-module2) - Flash module about class creation
+-   [Flash Module 3](java-11-fm-module3) - Flash module about class creation
 ---
 
 ## References

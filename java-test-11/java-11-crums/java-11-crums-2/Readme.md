@@ -1,8 +1,8 @@
-# ocp11-crums-2
+# java-11-crums-2
 
 ## Example
 
-![alt text](docs/ocp11-crums-2.png "Crums Module 2")
+![alt text](docs/java-11-crums-2.png "Crums Module 2")
 
 ## About me 👨🏽‍💻🚀
 

@@ -1,9 +1,9 @@
-# ocp11-fm-module3
+# java-11-fm-module3
 
 ## How to compile
 
 ```bash
-cd ocp11/ocp11-flash-modules/ocp11-fm-module2/
+cd ocp11/java-11-flash-modules/java-11-fm-module2/
 
 javac -p modules/consolerizer-1.0.0-SNAPSHOT.jar --module-source-path . -d out -m ocpfmmodule3
 javac -p modules --module-source-path . -d out -m ocpfmmodule3

@@ -374,7 +374,7 @@ public class Mastery4Dot3Runner {
         }
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
-            "1. Operand evaluation is difficult. Keep an eye out for module ocp11-mastery-logics for more exercises like this.");
+            "1. Operand evaluation is difficult. Keep an eye out for module java11-mastery-logics for more exercises like this.");
         printGreenGenericLn("2. Operations follow typical Math operation and follow accolade definitions.");
         printGreenGenericLn("3. Operands get evaluated first, before the operations.");
         printGreenGenericLn("4. Disambiguation happens from left to right.");
