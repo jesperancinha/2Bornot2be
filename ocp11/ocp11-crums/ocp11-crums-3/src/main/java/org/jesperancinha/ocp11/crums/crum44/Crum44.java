@@ -24,25 +24,30 @@ public class Crum44 {
         printMagentaGenericLn("We will now zip the tickets with their price!");
         final Map<String, Double> map1 = IntStream.range(0, tickets.size())
             .boxed()
-            .collect(Collectors.toMap(tickets::get, prices::get, (x, y) -> {
-                printOrangeGenericLn("x=%f, y=%f", x, y);
-                return x + y;
+            .collect(Collectors.toMap(tickets::get, prices::get, (ticketPrice1, ticketPrice2) -> {
+                printOrangeGenericLn("ticketPrice1=$%.2f, ticketPrice1=$%.2f", ticketPrice1, ticketPrice2);
+                final double totalTickets = ticketPrice1 + ticketPrice2;
+                printOrangeGenericLn("You have an album with price $%.2f", totalTickets);
+                printOrangeGenericLn("Can you guess which  on is it?", totalTickets);
+                return totalTickets;
             }));
 
         printBrightCyanGenericLn(map1);
 
         printYellowGenericLn("Now we just double the values to reduce the ticket to price 0!!!");
-        final LinkedHashMap<String, Double> map2 = Stream.of(map1.entrySet(), map1.entrySet())
+
+        Stream.of(map1.entrySet(), map1.entrySet())
             .flatMap(Collection::stream)
             .sorted(Map.Entry.comparingByValue())
-            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (x, y) -> {
-                printOrangeGenericLn("x=%f, y=%f", x, y);
-                return x - y;
-            }, LinkedHashMap::new));
-        map2.forEach((var k, var v) -> printMagentaGenericLn("%s = %.10f\n", k, v));
+            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (ticketPrice1, ticketPrice2) -> {
+                printOrangeGenericLn("ticketPrice1=$%.2f, ticketPrice2=$%.2f", ticketPrice1, ticketPrice2);
+                return ticketPrice1 - ticketPrice2;
+            }, LinkedHashMap::new))
+            .forEach((var artistName, var ticketSumValue) -> printMagentaGenericLn("%s = $%.2f\n", artistName,
+                ticketSumValue));
 
         printGreenGenericLn(
-            "Let's remember that Collectors.toMap uses indexes or whatever value in the strem to setup the keys we need and the values");
+            "Let's remember that Collectors.toMap uses indexes or whatever value in the stream to setup the keys we need and the values");
         printGreenGenericLn("We can use these indexes to our advantage but we don't have to.");
         printGreenGenericLn("A BinaryOperator takes care of operations with the map values");
         printGreenGenericLn("The Extra supplier value is where the key/value pairs will be stored.");

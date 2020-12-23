@@ -10,6 +10,12 @@ mvn package embedded-glassfish:run
 mvn clean install embedded-glassfish:run
 ```
 
+## Where to go to
+
+When you start the server, your server main page will be opened here
+
+[http://localhost:8080/crums1/](http://localhost:8080/crums1/)
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

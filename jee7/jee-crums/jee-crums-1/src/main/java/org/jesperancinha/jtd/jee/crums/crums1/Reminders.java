@@ -2,20 +2,31 @@ package org.jesperancinha.jtd.jee.crums.crums1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
+
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
+@Named( "Reminders" )
+@ApplicationScoped
+@Startup
+@Singleton
 public class Reminders {
 
-    static {
+    @PostConstruct
+    public void postConstruct() {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 150;
         Consolerizer.titleSpread = 150;
         Consolerizer.blackAndWhite = false;
-
         reminder1();
     }
+
 
     private static void reminder1() {
         printBlueGenericLn("Crum1 - Which are Java EE components ?");
