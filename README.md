@@ -39,9 +39,9 @@ It is the support project of the following articles on my blog:
 
 ## Contents
 
--   [java-test-11](./java-test-11/Readme.md) - Java 11 study materials
--   [java-test-15](./java-test-15/Readme.md) - Java 15 study materials and article contents
--   [JEE 7](./jee7/Readme.md) - Java EE 7 study materials
+-   [java-test-11](./java-test-11) - Java 11 study materials
+-   [java-test-15](./java-test-15) - Java 15 study materials and article contents
+-   [JEE 7](./jee7) - Java EE 7 study materials
 
 ---
 
