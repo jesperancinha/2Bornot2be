@@ -5,7 +5,9 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.junit.Ignore;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
@@ -26,5 +28,10 @@ public class RemindersTest {
 
     @org.junit.After
     public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void  testReminder(){
+        Consolerizer.printBlueGenericLn("WOW It works!");
     }
 }
