@@ -8,11 +8,11 @@ import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
-@Named( "Reminders" )
+@Named("Reminders")
 @ApplicationScoped
 @Startup
 @Singleton
@@ -24,13 +24,13 @@ public class Reminders {
         Consolerizer.maxLineCharsGlobal = 150;
         Consolerizer.titleSpread = 150;
         Consolerizer.blackAndWhite = false;
+        printBlueGenericTitleLn("Welcome to the Crums 1 module about JEE");
         reminder1();
+        printBlueGenericTitleLn("This is the end of the Crums 1 module about JEE");
     }
 
-
     private static void reminder1() {
-        printBlueGenericLn("Crum1 - Which are Java EE components ?");
-
+        printBlueGenericTitleLn("Crum1 - Which are Java EE components ?");
         printMagentaGenericLn("Web Components:");
         printOrangeGenericLn("Java Server Faces (JSF)");
         printOrangeGenericLn("Java Servlet");
