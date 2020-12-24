@@ -20,6 +20,7 @@
         <module>java-11-crums-1</module>
         <module>java-11-crums-2</module>
         <module>java-11-crums-3</module>
+        <module>java-11-crums-4</module>
     </modules>
 
     <packaging>pom</packaging>
