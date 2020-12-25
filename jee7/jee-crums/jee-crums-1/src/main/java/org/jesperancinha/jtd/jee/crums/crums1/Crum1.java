@@ -8,7 +8,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 public class Crum1 {
     public static void main(String[] args) {
         printBlueGenericTitleLn("Crum1 - Which are Java EE components ?");
-        printYellowGenericLn("from: https://turngeek.github.io/javaee7inaweek/chapter/i-2-the-component-architecture-of-java-ee-7/");
+        printYellowGenericLn("from:\nhttps://turngeek.github.io/javaee7inaweek/chapter/i-2-the-component-architecture-of-java-ee-7/");
         printMagentaGenericLn("Web Components:");
         printOrangeGenericLn("Java Server Faces (JSF)");
         printOrangeGenericLn("Java Servlet");

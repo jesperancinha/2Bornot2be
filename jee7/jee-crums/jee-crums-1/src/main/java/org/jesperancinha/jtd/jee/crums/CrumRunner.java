@@ -12,9 +12,6 @@ import javax.inject.Named;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @Named("CrumRunner")
 @ApplicationScoped
@@ -25,8 +22,8 @@ public class CrumRunner {
     @PostConstruct
     public void postConstruct() {
         Consolerizer.typingWaitGlobal = 0;
-        Consolerizer.maxLineCharsGlobal = 150;
-        Consolerizer.titleSpread = 150;
+        Consolerizer.maxLineCharsGlobal = 500;
+        Consolerizer.titleSpread = 500;
         Consolerizer.blackAndWhite = false;
         printBlueGenericTitleLn("Welcome to the Crums 1 module about JEE");
         Crum1.main(null);

@@ -1,15 +1,4 @@
-# jee7
-
-## Introduction
-
-This is a set of study modules that I'm using to study JEE7.
-Feel free to use these materials in your studies.
-These modules can be used for education purposes or for certain types of exames like the [1z0-900](https://education.oracle.com/java-se-11-developer/pexam_1Z0-900)
-
--   [JEE Crums](jee-crums) -  A set of modules with quick learning  / fast track exercises without context
--   [JEE Applications](jee-apps) - A set of applications written in JEE using diffeen servers like Glassfish and Weblogic
-
----
+# jee-apps
 
 # References
 
