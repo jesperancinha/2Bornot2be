@@ -1,6 +1,10 @@
 # jee-apps
 
-# References
+## Applications
+
+-   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history
+
+## References
 
 -   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
 -   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
