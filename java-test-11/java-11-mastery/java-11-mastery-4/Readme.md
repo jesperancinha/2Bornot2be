@@ -10,10 +10,11 @@ Mastery 4
 
 -   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
 -   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [Enthuware](https://enthuware.com/)
 -   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
 -   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+-   [Pluralsight](https://www.pluralsight.com/)
 -   [Whizlabs](https://www.whizlabs.com/)
+-   [Enthuware](https://enthuware.com/)
 
 ---
 
