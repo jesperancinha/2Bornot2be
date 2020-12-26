@@ -385,7 +385,7 @@ public class Consolerizer {
         if (!text.contains("\n")) {
             System.out.print(" ");
         }
-        printWhiteGeneric("");
+        System.out.print(WHITE.getConsoleColor());
     }
 
     private static String getParagraphFormat(int maxLineChars, String printText) {
@@ -418,7 +418,7 @@ public class Consolerizer {
         if (!text.contains("\n")) {
             System.out.print(" ");
         }
-        printWhiteGeneric("");
+        System.out.print(WHITE.getConsoleColor());
     }
 
     private static String[] getSplit(int maxLineChars, String printText) {
@@ -438,13 +438,13 @@ public class Consolerizer {
         printRainbowTitle(title.toString()
             .trim());
         System.out.print("\n");
-        printWhiteGeneric("");
+        System.out.print(WHITE.getConsoleColor());
     }
 
     public static void printRainbowTitleLn(final String title, final Object... objects) {
         printRainbowTitle(String.format(title, objects));
         System.out.print("\n");
-        printWhiteGeneric("");
+        System.out.print(WHITE.getConsoleColor());
     }
 
     public static void printRainbowTitle(final String title) {
@@ -461,7 +461,7 @@ public class Consolerizer {
                 k++;
             }
         }
-        printWhiteGeneric("");
+        System.out.print(WHITE.getConsoleColor());
     }
 
     public static void printRainbowLn(final char c, int nchars) {
