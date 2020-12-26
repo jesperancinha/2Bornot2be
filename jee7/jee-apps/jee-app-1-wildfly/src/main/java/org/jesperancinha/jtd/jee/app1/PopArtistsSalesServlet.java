@@ -30,6 +30,7 @@ public class PopArtistsSalesServlet extends HttpServlet {
     private long totalSales;
 
     // Injected normal scoped bean is not proxyable
+    // If you put @RequestScoped. TODO: Find what this is all about
     @Inject
     @SalesRequest
     private Long totalSalesDynamic;
