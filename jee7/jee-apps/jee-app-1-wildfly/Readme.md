@@ -11,7 +11,7 @@ For this app we cover:
 4. JSF (Java Server Faces)
 5. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 
-## How to run
+## How to run   
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
