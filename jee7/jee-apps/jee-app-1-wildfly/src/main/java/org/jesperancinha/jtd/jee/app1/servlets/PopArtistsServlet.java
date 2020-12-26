@@ -1,6 +1,7 @@
-package org.jesperancinha.jtd.jee.app1;
+package org.jesperancinha.jtd.jee.app1.servlets;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.jtd.jee.app1.service.PopArtistsService;
 
 import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;

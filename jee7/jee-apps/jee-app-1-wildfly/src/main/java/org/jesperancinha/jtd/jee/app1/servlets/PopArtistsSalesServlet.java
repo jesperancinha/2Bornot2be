@@ -1,8 +1,9 @@
-package org.jesperancinha.jtd.jee.app1;
+package org.jesperancinha.jtd.jee.app1.servlets;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.app1.beans.Sales;
 import org.jesperancinha.jtd.jee.app1.managers.SalesRequest;
+import org.jesperancinha.jtd.jee.app1.service.PopArtistsService;
 
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;

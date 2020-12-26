@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.app1;
+package org.jesperancinha.jtd.jee.app1.service;
 
 import java.util.Arrays;
 import java.util.List;
