@@ -249,6 +249,25 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
+
+    public static void printWhiteGenericLn(final String text, final Object... args) {
+        printWhiteGeneric(text.concat("\n"), args);
+    }
+
+    public static void printWhiteGenericLn(Object text) {
+        printWhiteGeneric(("" + text).concat("\n"));
+    }
+
+    public static void printWhiteGeneric(Object text) {
+        System.out.print(WHITE.getConsoleColor());
+        printPrivateText(text.toString());
+    }
+
+    public static void printWhiteGeneric(String text, Object... args) {
+        System.out.print(WHITE.getConsoleColor());
+        printPrivateText(text, args);
+    }
+
     public void printBrightCyan(Object text) {
         System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
         printPrivateText(text.toString());
@@ -366,6 +385,7 @@ public class Consolerizer {
         if (!text.contains("\n")) {
             System.out.print(" ");
         }
+        printWhiteGeneric("");
     }
 
     private static String getParagraphFormat(int maxLineChars, String printText) {
@@ -398,6 +418,7 @@ public class Consolerizer {
         if (!text.contains("\n")) {
             System.out.print(" ");
         }
+        printWhiteGeneric("");
     }
 
     private static String[] getSplit(int maxLineChars, String printText) {
@@ -417,11 +438,13 @@ public class Consolerizer {
         printRainbowTitle(title.toString()
             .trim());
         System.out.print("\n");
+        printWhiteGeneric("");
     }
 
     public static void printRainbowTitleLn(final String title, final Object... objects) {
         printRainbowTitle(String.format(title, objects));
         System.out.print("\n");
+        printWhiteGeneric("");
     }
 
     public static void printRainbowTitle(final String title) {
@@ -438,6 +461,7 @@ public class Consolerizer {
                 k++;
             }
         }
+        printWhiteGeneric("");
     }
 
     public static void printRainbowLn(final char c, int nchars) {

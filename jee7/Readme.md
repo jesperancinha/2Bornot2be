@@ -9,6 +9,13 @@ These modules can be used for education purposes or for certain types of exames 
 -   [JEE Crums](jee-crums) -  A set of modules with quick learning  / fast track exercises without context
 -   [JEE Applications](jee-apps) - A set of applications written in JEE using diffeen servers like Glassfish and Weblogic
 
+I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like.
+For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java).
+In these modules I am using <b>java version 8.0.242.hs-adpt</b>. You can try other java 8 versions. I cannot guarantee that you'll be able to execute 100% of the examples though.
+You can also try to use a version of Java SE 7, but I'm almost 100% sure that none of the modules will work as I'll be using lamdas for the code.
+
+NOTE: JEE7 has nothing to do with the actual Java SE version being used. I chose Java 8 for compatibility reasons.
+
 ---
 
 # References
