@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.app1;
+package org.jesperancinha.jtd.jee.app1.managers;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Documented;
@@ -15,5 +15,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Documented
 @Qualifier
-public @interface Sales {
+public @interface SalesRequest {
 }

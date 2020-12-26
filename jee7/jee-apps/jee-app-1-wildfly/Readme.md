@@ -6,8 +6,9 @@ The apps under [jee-apps](..), cover lots of topics.
 For this app we cover:
 
 1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
-2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
-3. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
+3. `@ApplicationScoped` 
+4. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 
 ## How to run
 

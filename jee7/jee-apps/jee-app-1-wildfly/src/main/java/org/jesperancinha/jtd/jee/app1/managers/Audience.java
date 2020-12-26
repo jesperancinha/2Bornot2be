@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.app1;
+package org.jesperancinha.jtd.jee.app1.managers;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Documented;
