@@ -1,10 +1,9 @@
 package org.jesperancinha.jtd.jee.app1;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.jtd.jee.app1.managers.Sales;
+import org.jesperancinha.jtd.jee.app1.beans.Sales;
 import org.jesperancinha.jtd.jee.app1.managers.SalesRequest;
 
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -65,6 +64,8 @@ public class PopArtistsSalesServlet extends HttpServlet {
         final String exercise1 = "Note that in JEE, we do not need to use any extra annotation to inject a Service.\n"
             + "The service itself, does not use any annotation";
         writer.println("<p>" + exercise1 + "</p>");
+        writer.println("<a href=\"../index.html\">Back</a>");
+        writer.println("<a href=\"./sales\">Refresh</a>");
         writer.println("</body></html>");
         writer.close();
     }

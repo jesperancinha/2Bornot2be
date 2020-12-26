@@ -1,5 +1,7 @@
 package org.jesperancinha.jtd.jee.app1.managers;
 
+import org.jesperancinha.jtd.jee.app1.beans.Sales;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 
