@@ -12,7 +12,8 @@ For this app we cover:
 5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
 6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
 7. `@Stateful`, `@Alternative`
-8. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+8. `@Model`
+9. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 
 ## How to run   
 
@@ -25,6 +26,10 @@ This has been tested with Wildfly 16. Please install it and deploy this using yo
 -   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
 -   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
 -   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+
+##  Context references
+
+-   [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
 
 ## About me 👨🏽‍💻🚀
 

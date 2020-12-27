@@ -9,6 +9,15 @@
     <h:outputLabel value="Hello, world"/>
     <p>#{salesBean.salesNumber}</p>
     <p>#{salesBean.salesNumberRandom}</p>
+
+    <ui:repeat value="#{albumController.getAlbumList}" var="album">
+        <li>
+            <h:link value="#{album.albumName}" outcome="album">
+                <f:param name="id" value="#{album.id}" />
+            </h:link>
+        </li>
+    </ui:repeat>
+
     <a href="index.html">Back</a>
     <a href="artists.xhtml">Refresh</a>
 </f:view>
