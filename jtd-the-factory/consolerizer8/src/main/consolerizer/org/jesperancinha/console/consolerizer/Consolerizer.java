@@ -157,8 +157,8 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
-    public static void printRedGenericLn(String text) {
-        printRedGeneric(text.concat("\n"));
+    public static void printRedGenericLn(Object text) {
+        printRedGeneric(trim(("" + text)).concat("\n"));
     }
 
     public static void printRedGeneric(String text) {

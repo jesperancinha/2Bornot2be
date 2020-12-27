@@ -11,7 +11,8 @@ For this app we cover:
 4. JSF (Java Server Faces)
 5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
 6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
-7. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+7. `@Stateful`, `@Alternative`
+8. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 
 ## How to run   
 
