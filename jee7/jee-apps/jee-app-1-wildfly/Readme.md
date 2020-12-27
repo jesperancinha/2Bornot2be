@@ -17,7 +17,7 @@ For this app we cover:
 10. `<h:dataTable`, `<h:column` and `<f:facets` 
 11. `<h:outputFormat ` and `<f:param`
 12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
-13. Arquillian JUni tests
+13. Arquillian JUnit tests
 
 ## How to run   
 
