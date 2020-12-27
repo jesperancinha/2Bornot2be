@@ -46,7 +46,7 @@
             <groupId>org.jboss.arquillian.test</groupId>
             <artifactId>arquillian-test-api</artifactId>
             <version>1.6.0.Final</version>
-        </dependency><!-- https://mvnrepository.com/artifact/org.jboss.arquillian.junit/arquillian-junit-container -->
+        </dependency
         <dependency>
             <groupId>org.jboss.arquillian.junit</groupId>
             <artifactId>arquillian-junit-container</artifactId>
@@ -59,7 +59,6 @@
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jboss.arquillian.container/arquillian-glassfish-embedded-3.1 -->
         <dependency>
             <groupId>org.jboss.arquillian.container</groupId>
             <artifactId>arquillian-glassfish-embedded-3.1</artifactId>

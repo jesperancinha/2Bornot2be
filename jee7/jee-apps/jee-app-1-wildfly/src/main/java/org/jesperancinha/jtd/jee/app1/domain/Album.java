@@ -6,9 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.validation.constraints.Size;
 
 @Entity
-@Table
+@XmlRootElement
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "albumName"))
 public class Album {
     @Id
     @Column
@@ -16,6 +20,7 @@ public class Album {
     private Long id;
 
     @Column(unique = true)
+    @Size(min = 1, max = 100)
     private String albumName;
 
     @Column

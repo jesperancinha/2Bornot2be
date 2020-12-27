@@ -14,7 +14,8 @@ For this app we cover:
 7. `@Stateful`, `@Alternative`
 8. `@Model`
 9. `<ui:repeat`, `<h:link` and `<f:param` 
-10. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+10. `<h:dataTable`, `<h:column` and `<f:facets` 
+11. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 
 ## How to run   
 
