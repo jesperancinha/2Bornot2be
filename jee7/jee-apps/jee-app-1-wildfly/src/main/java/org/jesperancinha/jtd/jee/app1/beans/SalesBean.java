@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.app1.beans;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
@@ -33,7 +32,6 @@ public class SalesBean implements Serializable {
     // 1. The bean isn't serializable
     // 2. The bean is actually an annotation that belongs to a different package
 
-
     @Inject
     @Sales
     Instance<Long> salesNumberRandomGenerator;
@@ -48,7 +46,7 @@ public class SalesBean implements Serializable {
         this.salesNumber = salesNumber;
     }
 
-    public long getSalesNumberRandom(){
+    public long getSalesNumberRandom() {
         return salesNumberRandomGenerator.get();
     }
 }

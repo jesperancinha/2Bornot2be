@@ -1,1 +1,0 @@
-INSERT INTO Album ('albumName','year') VALUES ('Invasion of Privacy', '2018');

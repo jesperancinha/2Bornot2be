@@ -15,8 +15,8 @@ public class AlbumController {
     @Inject
     private AlbumDao albumDao;
 
-    public List<Album> getAlbumList(){
-       return albumDao.getAllAlbums();
+    public List<Album> getAlbumList() {
+        return albumDao.getAllAlbums();
     }
 
 }

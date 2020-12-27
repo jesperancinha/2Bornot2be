@@ -10,14 +10,18 @@
     <p>#{salesBean.salesNumber}</p>
     <p>#{salesBean.salesNumberRandom}</p>
 
-    <ui:repeat value="#{albumController.getAlbumList}" var="album">
+    <ui:repeat value="#{albumController.albumList}" var="album">
         <li>
+            <div style="display: inline">
             <h:link value="#{album.albumName}" outcome="album">
-                <f:param name="id" value="#{album.id}" />
+                <f:param name="id" value="#{album.id}"/>-
+            </h:link> <h:link value="#{album.year}" outcome="album">
+                <f:param name="id" value="#{album.id}"/>
             </h:link>
+            </div>
         </li>
     </ui:repeat>
-
+    <br/>
     <a href="index.html">Back</a>
     <a href="artists.xhtml">Refresh</a>
 </f:view>

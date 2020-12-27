@@ -66,8 +66,12 @@ public class PopArtistsSalesServlet extends HttpServlet {
         final PrintWriter writer = resp.getWriter();
         writer.println("<html><head><title>An artists page</title></head><body>");
         writer.println(String.format("<h1>Artist %s has sold %d records!</h1>", chosenArtist, totalSales));
-        writer.println(String.format("<h1>Artist %s has sold %d records! -> Nothing dynamic about this right?</h1>", chosenArtist, totalSalesDynamic));
-        writer.println(String.format("<h1>Artist %s has sold %d records! -> With Instance<E> it does become dynamic</h1>", chosenArtist, totalDynamicSales.get()));
+        writer.println(
+            String.format("<h1>Artist %s has sold %d records! -> Nothing dynamic about this right?</h1>", chosenArtist,
+                totalSalesDynamic));
+        writer.println(
+            String.format("<h1>Artist %s has sold %d records! -> With Instance<E> it does become dynamic</h1>",
+                chosenArtist, totalDynamicSales.get()));
         final String exercise1 = "Note that in JEE, we do not need to use any extra annotation to inject a Service.\n"
             + "The service itself, does not use any annotation";
         writer.println("<p>" + exercise1 + "</p>");

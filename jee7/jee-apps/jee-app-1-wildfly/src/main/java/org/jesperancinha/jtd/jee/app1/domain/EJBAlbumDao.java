@@ -6,14 +6,13 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
-
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @Stateful
 @Alternative
-public class EJBAlbumDao implements AlbumDao{
+public class EJBAlbumDao implements AlbumDao {
     @Inject
     private EntityManager entityManager;
 

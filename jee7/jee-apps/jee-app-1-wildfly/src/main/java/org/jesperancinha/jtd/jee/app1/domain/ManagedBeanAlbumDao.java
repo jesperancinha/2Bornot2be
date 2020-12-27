@@ -1,18 +1,17 @@
 package org.jesperancinha.jtd.jee.app1.domain;
 
-import javax.enterprise.inject.Model;
+import org.jesperancinha.console.consolerizer.Consolerizer;
+
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
-
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
-@Model
 public class ManagedBeanAlbumDao implements AlbumDao {
 
     @Inject
@@ -73,6 +72,7 @@ public class ManagedBeanAlbumDao implements AlbumDao {
 
     @Override
     public List<Album> getAllAlbums() {
+        Consolerizer.printRainbowTitleLn("Getting all albums via %s", ManagedBeanAlbumDao.class.getName());
         try {
             List<Album> albumList;
             try {
@@ -94,5 +94,6 @@ public class ManagedBeanAlbumDao implements AlbumDao {
                 throw new RuntimeException(se);
             }
             throw new RuntimeException(e);
-        }    }
+        }
+    }
 }

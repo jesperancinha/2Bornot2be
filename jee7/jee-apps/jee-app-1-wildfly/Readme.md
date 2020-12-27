@@ -13,11 +13,23 @@ For this app we cover:
 6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
 7. `@Stateful`, `@Alternative`
 8. `@Model`
-9. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+9. `<ui:repeat`, `<h:link` and `<f:param` 
+10. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 
 ## How to run   
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
+
+```bash
+sdk use java 8.0.242.hs-adpt
+```
+
+NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
+Remember to makes sure that you are making the build with `Java SE 8`.
+Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 11.
+However, this module ensures the study of `JEE7` with both.
+For the current module you are looking at, Java SE 8 is the one being used.
+
 
 ## References
 
