@@ -19,6 +19,9 @@ public class Album {
     private String albumName;
 
     @Column
+    private String artist;
+
+    @Column
     private Long year;
 
     public Long getId() {
@@ -43,5 +46,13 @@ public class Album {
 
     public void setYear(Long year) {
         this.year = year;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 }

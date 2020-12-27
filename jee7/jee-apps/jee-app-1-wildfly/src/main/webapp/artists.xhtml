@@ -13,11 +13,17 @@
     <ui:repeat value="#{albumController.albumList}" var="album">
         <li>
             <div style="display: inline">
-            <h:link value="#{album.albumName}" outcome="album">
-                <f:param name="id" value="#{album.id}"/>-
-            </h:link> <h:link value="#{album.year}" outcome="album">
-                <f:param name="id" value="#{album.id}"/>
-            </h:link>
+                <h:link value="#{album.artist}" outcome="album">
+                    <f:param name="id" value="#{album.id}"/>
+                </h:link>
+                -
+                <h:link value="#{album.albumName}" outcome="album">
+                    <f:param name="id" value="#{album.id}"/>
+                </h:link>
+                -
+                <h:link value="#{album.year}" outcome="album">
+                    <f:param name="id" value="#{album.id}"/>
+                </h:link>
             </div>
         </li>
     </ui:repeat>

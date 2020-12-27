@@ -1,1 +1,1 @@
-INSERT INTO Album (id,albumName,year) VALUES (1,'Invasion of Privacy', 2018);
+INSERT INTO Album (id,artist,albumName,year) VALUES (1,'Cardi B','Invasion of Privacy', 2018);
