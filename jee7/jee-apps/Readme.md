@@ -1,5 +1,12 @@
 # jee-apps
 
+## Prepare the envionment
+
+1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
+2. Unpack the contents of that package to this root.
+
+This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
+
 ## Applications
 
 -   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history

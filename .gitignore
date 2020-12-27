@@ -29,3 +29,8 @@ hs_err_pid*
 
 ## MAC-OS
 .DS_Store
+
+## Wildfly installation(s)
+wildfly-16.0.0.Final
+*.tar.gz
+*.zip

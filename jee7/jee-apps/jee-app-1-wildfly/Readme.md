@@ -35,6 +35,11 @@ Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 
 However, this module ensures the study of `JEE7` with both.
 For the current module you are looking at, Java SE 8 is the one being used.
 
+## Run Arquillian tests
+
+```bash
+mvn clean install -Parq-wildfly-managed
+```
 
 ## References
 
