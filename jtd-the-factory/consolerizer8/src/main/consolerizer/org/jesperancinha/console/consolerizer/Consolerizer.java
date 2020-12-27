@@ -46,6 +46,13 @@ public class Consolerizer {
         return new Consolerizer().conColor(ConColor.BRIGHT_GREEN);
     }
 
+    public static void setupFastDefault() {
+        typingWaitGlobal = 0;
+        maxLineCharsGlobal = 100;
+        titleSpread = 100;
+        blackAndWhite = false;
+    }
+
     public Consolerizer conColor(ConColor conColor) {
         this.conColor = conColor;
         return this;

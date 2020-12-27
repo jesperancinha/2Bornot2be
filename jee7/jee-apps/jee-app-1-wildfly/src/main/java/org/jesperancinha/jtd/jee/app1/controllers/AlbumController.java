@@ -8,6 +8,9 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
+
 @Named
 @RequestScoped
 public class AlbumController {
@@ -16,6 +19,8 @@ public class AlbumController {
     private AlbumDao albumDao;
 
     public List<Album> getAlbumList() {
+        setupFastDefault();
+        printYellowGenericLn("The album list has been called!");
         return albumDao.getAllAlbums();
     }
 
