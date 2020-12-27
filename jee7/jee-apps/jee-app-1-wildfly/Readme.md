@@ -17,13 +17,16 @@ For this app we cover:
 10. `<h:dataTable`, `<h:column` and `<f:facets` 
 11. `<h:outputFormat ` and `<f:param`
 12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+13. Arquillian JUni tests
 
 ## How to run   
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
 ```bash
+jenv local system
 sdk use java 8.0.242.hs-adpt
+java -version
 ```
 
 NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
