@@ -47,6 +47,8 @@ In this web application it is important to understand the basics of these:
 
 This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
+The theme of this discovery app is: <b>Pop stars list, music, lyrics and history</b>
+
 ## How to run       
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.

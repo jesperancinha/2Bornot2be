@@ -1,4 +1,4 @@
-# jee-apps
+# jee-app-1-wildfly
 
 ---
 
@@ -11,37 +11,69 @@
 
 ---
 
-## Prepare the environment
+## Exercise
 
-1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
-2. Unpack the contents of that package to this root.
+The apps under [jee-apps](..), cover lots of topics.
+For this app we cover:
 
-This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
+In this web application it is important to understand the basics of these:
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
-## Applications
+The theme of this discovery app is: <b>Kitchen Herbs and History</b>
 
--   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
--   [jee-app-2-wildfly](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11 (coming soon...)
--   [jee-app-2-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases (coming soon...)
+## How to run       
+
+This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
+
+```bash
+jenv local system
+sdk use java 8.0.242.hs-adpt
+java -version
+```
+
+After the service is running and deployed you should be able to see pages and JSON's in these addresses:
+
+1. http://localhost:8080/jee-app-1-wildfly/app/album/resource/1
+2. http://localhost:8080/jee-app-1-wildfly/app/album/resource/2
+3. http://localhost:8080/jee-app-1-wildfly/app/album/resource/3
+4. http://localhost:8080/jee-app-1-wildfly/app/album/resource/4
+5. http://localhost:8080/jee-app-1-wildfly/
+
+NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
+Remember to makes sure that you are making the build with `Java SE 8`.
+Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 11.
+However, this module ensures the study of `JEE7` with both.
+For the current module you are looking at, Java SE 8 is the one being used.
+
+## Run Arquillian tests
+
+```bash
+jenv local system
+sdk use java 8.0.242.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
+
+## Run Arquillian tests on Intellij
+
+Use Arquillian Managed and you should get a screen like this.
+All options should be the default ones.
+
+![alt text](docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+-   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
+-   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
+-   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
+-   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
+-   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+
+##  Context references
+
+-   [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
+-   [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
+-   [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
 
 ## About me 👨🏽‍💻🚀
 

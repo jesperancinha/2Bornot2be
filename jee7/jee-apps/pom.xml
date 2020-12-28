@@ -12,6 +12,7 @@
     <artifactId>jee-apps</artifactId>
     <modules>
         <module>jee-app-1-wildfly</module>
+        <module>jee-app-2-wildfly</module>
     </modules>
 
     <properties>
