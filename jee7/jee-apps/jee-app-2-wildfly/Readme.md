@@ -18,6 +18,7 @@ For this app we cover:
 
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
+3. `ServletContext`, `HttpSession` and `doGet`
 
 In this web application it is important to understand the basics of these:
 
