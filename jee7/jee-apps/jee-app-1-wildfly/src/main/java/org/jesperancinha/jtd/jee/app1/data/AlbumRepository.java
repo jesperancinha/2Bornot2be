@@ -35,4 +35,5 @@ public class AlbumRepository {
         criteria.select(member).orderBy(cb.asc(member.get("albumName")));
         return em.createQuery(criteria).getResultList();
     }
+
 }

@@ -52,4 +52,8 @@ public class AlbumController {
         newAlbum = new Album();
     }
 
+    public void createAlbum(Album album) {
+        this.newAlbum = album;
+        createAlbum();
+    }
 }

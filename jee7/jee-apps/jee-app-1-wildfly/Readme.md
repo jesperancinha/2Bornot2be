@@ -21,6 +21,20 @@ For this app we cover:
 14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
 15. `UserTransaction`, `Event<T>`
 16. `FacesContext`
+17. `@Path`, `@ApplicationPath`, `Application`
+18. `@Observes` and `Reception.ALWAYS`
+
+In this web application it is important to understand the basics of these:
+
+1. CDI -> Context Dependency Injection
+2. JSF -> Java Server Faces
+3. JTA -> Java Transaction API
+4. EJB -> Enterprise Java Bean
+5. Bean Validation
+6. Arquillian
+7. JAX - RS
+
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
 ## How to run       
 
@@ -31,6 +45,14 @@ jenv local system
 sdk use java 8.0.242.hs-adpt
 java -version
 ```
+
+After the service is running and deployed you should be able to see pages and JSON's in these addresses:
+
+1. http://localhost:8080/jee-app-1-wildfly/app/album/resource/1
+2. http://localhost:8080/jee-app-1-wildfly/app/album/resource/2
+3. http://localhost:8080/jee-app-1-wildfly/app/album/resource/3
+4. http://localhost:8080/jee-app-1-wildfly/app/album/resource/4
+5. http://localhost:8080/jee-app-1-wildfly/
 
 NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
 Remember to makes sure that you are making the build with `Java SE 8`.
@@ -64,6 +86,8 @@ All options should be the default ones.
 ##  Context references
 
 -   [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
+-   [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
+-   [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
 
 ## About me 👨🏽‍💻🚀
 
