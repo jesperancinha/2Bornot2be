@@ -1,4 +1,4 @@
-# jee-app-1-wildfly
+# jee-app-2-wildfly
 
 ---
 
@@ -28,29 +28,17 @@ This has been tested with Wildfly 16. Please install it and deploy this using yo
 
 ```bash
 jenv local system
-sdk use java 8.0.242.hs-adpt
+sdk use java 11.0.9.hs-adpt 
 java -version
 ```
 
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:
 
-1. http://localhost:8080/jee-app-1-wildfly/app/album/resource/1
-2. http://localhost:8080/jee-app-1-wildfly/app/album/resource/2
-3. http://localhost:8080/jee-app-1-wildfly/app/album/resource/3
-4. http://localhost:8080/jee-app-1-wildfly/app/album/resource/4
-5. http://localhost:8080/jee-app-1-wildfly/
-
-NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
-Remember to makes sure that you are making the build with `Java SE 8`.
-Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 11.
-However, this module ensures the study of `JEE7` with both.
-For the current module you are looking at, Java SE 8 is the one being used.
-
 ## Run Arquillian tests
 
 ```bash
 jenv local system
-sdk use java 8.0.242.hs-adpt
+sdk use java 11.0.9.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
