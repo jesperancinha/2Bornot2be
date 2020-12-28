@@ -7,7 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -17,6 +21,7 @@ public class Album {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotNull
     private Long id;
 
     @Column(unique = true)
@@ -24,10 +29,22 @@ public class Album {
     private String albumName;
 
     @Column
+    @NotNull
     private String artist;
 
     @Column
+    @NotNull
     private Long year;
+
+    @Column
+    @Email
+    @Null
+    private String email;
+
+    @Column
+//    @Null
+    @Digits(fraction = 2, integer = 12)
+    private String sales;
 
     public Long getId() {
         return id;
@@ -61,9 +78,25 @@ public class Album {
         this.artist = artist;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "Album{" + "id=" + id + ", albumName='" + albumName + '\'' + ", artist='" + artist + '\'' + ", year="
             + year + '}';
+    }
+
+    public String getSales() {
+        return sales;
+    }
+
+    public void setSales(String sales) {
+        this.sales = sales;
     }
 }
