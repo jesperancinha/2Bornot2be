@@ -49,7 +49,7 @@ public class AlbumResourceRESTService {
     }
 
     @GET
-    @Path("/{id:[0-9][0-9]*}")
+    @Path("/{id:[0-9]+}")
     @Produces(APPLICATION_JSON)
     public Album lookupAlbumById(
         @PathParam("id")
@@ -66,30 +66,24 @@ public class AlbumResourceRESTService {
     @Produces(APPLICATION_JSON)
     public Response createAlbum(Album album) {
         setupFastDefault();
-        Response.ResponseBuilder builder = null;
         try {
             Set<ConstraintViolation<Album>> violations = validator.validate(album);
             if (!violations.isEmpty()) {
                 throw new ConstraintViolationException(new HashSet<ConstraintViolation<?>>(violations));
             }
             albumController.createAlbum(album);
-            builder = Response.ok();
+            return Response.ok().build();
         } catch (ConstraintViolationException ce) {
             Set<ConstraintViolation<?>> violations = ce.getConstraintViolations();
-
-            printMagentaGenericLn("Validation completed. violations found: " + violations.size());
-            builder = Response.status(Response.Status.BAD_REQUEST)
+            return   Response.status(Response.Status.BAD_REQUEST)
                 .entity(violations.stream()
                     .collect(Collectors.toMap(t -> t.getPropertyPath()
-                        .toString(), ConstraintViolation::getMessage)));
+                        .toString(), ConstraintViolation::getMessage))).build();
         } catch (Exception e) {
-            Map<String, String> stringHashMap = new HashMap<>();
-            stringHashMap.put("error", e.getMessage());
-            builder = Response.status(Response.Status.BAD_REQUEST)
-                .entity(stringHashMap);
+            return  Response.status(Response.Status.BAD_REQUEST)
+                .entity(e.getMessage()).build();
         }
 
-        return builder.build();
     }
 
 }
