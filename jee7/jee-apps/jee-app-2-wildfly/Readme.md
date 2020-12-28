@@ -43,6 +43,8 @@ java -version
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:
 
 1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
+2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
+3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
 
 You can also perform these post requests:
 
