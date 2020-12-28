@@ -21,6 +21,8 @@ For this app we cover:
 
 In this web application it is important to understand the basics of these:
 
+1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+
 This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
 The theme of this discovery app is: <b>Kitchen Herbs and History</b>
