@@ -38,7 +38,7 @@ public class Album {
 
     @Column
     @Email
-    @Null
+//    @Null
     private String email;
 
     @Column

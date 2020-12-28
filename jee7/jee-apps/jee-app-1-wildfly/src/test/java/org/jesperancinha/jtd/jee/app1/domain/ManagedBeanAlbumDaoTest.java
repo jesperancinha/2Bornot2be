@@ -9,6 +9,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jesperancinha.console.consolerizer.ConColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.app1.Resources;
+import org.jesperancinha.jtd.jee.app1.data.ArtistProducer;
 import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +17,6 @@ import org.junit.runner.RunWith;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.UserTransaction;
-import javax.validation.ConstraintViolationException;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
@@ -27,13 +27,10 @@ public class ManagedBeanAlbumDaoTest {
     @Deployment
     public static Archive<?> createTestArchive() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Album.class,
-                ManagedBeanAlbumDao.class,
-                Resources.class,
-                AlbumDao.class, UserTransaction.class, EntityManager.class,
-                Consolerizer.class, ConColor.class)
+            .addClasses(Album.class, ManagedBeanAlbumDao.class, Resources.class, ArtistProducer.class, AlbumDao.class,
+                UserTransaction.class, EntityManager.class, Consolerizer.class, ConColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
-            .addAsWebInfResource(EmptyAsset.INSTANCE,  "beans.xml")
+            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
             .addAsWebInfResource("test-ds.xml");
     }
 
@@ -43,7 +40,7 @@ public class ManagedBeanAlbumDaoTest {
     @Test
     public void testCreateAlbum() {
         Album album = new Album();
-        album.setAlbumName("c");
+        album.setAlbumName("Healing Is Difficult");
         album.setArtist("Sia");
         album.setYear(2001L);
         managedBeanAlbumDao.createAlbum(album);
@@ -91,9 +88,8 @@ public class ManagedBeanAlbumDaoTest {
         Consolerizer.printBrightCyanGenericLn("TEST-> %s", album);
     }
 
-
     @AfterClass
-    public static void afterAll(){
+    public static void afterAll() {
         printBlueGenericTitleLn("After test ManagedBeanAlbumDaoTest");
         printGreenGenericLn("We see a lot of validations here in a layer above the database:");
         printGreenGenericLn("@Null, @NotNull, @Size, @Email and @Digits");
@@ -102,7 +98,8 @@ public class ManagedBeanAlbumDaoTest {
         printGreenGenericLn("@Size - Means that the member has to match validation in length");
         printGreenGenericLn("@Email - Means that the member has to have a conventional email form");
         printGreenGenericLn("@Digit - Is specific to numbers in a String form. It can be seen as an extension @Size");
-        printGreenGenericLn("More about @Digit: https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/Digits.html");
+        printGreenGenericLn(
+            "More about @Digit: https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/Digits.html");
         printGreenGenericLn("BigDecimal\n" + "BigInteger\n" + "CharSequence\n"
             + "byte, short, int, long, and their respective wrapper types");
     }

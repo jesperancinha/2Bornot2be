@@ -19,6 +19,7 @@ For this app we cover:
 12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 13. Arquillian JUnit tests
 14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
+15. `UserTransaction`, `Event<T>`
 
 ## How to run   
 
@@ -39,6 +40,8 @@ For the current module you are looking at, Java SE 8 is the one being used.
 ## Run Arquillian tests
 
 ```bash
+jenv local system
+sdk use java 8.0.242.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
