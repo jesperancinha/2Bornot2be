@@ -23,6 +23,8 @@ For this app we cover:
 In this web application it is important to understand the basics of these:
 
 1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+2. JCA - Java Connector Architecture
+3. JMS - Java Message Service
 
 This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
