@@ -44,7 +44,7 @@ public class ManagedBeanAlbumDaoTest {
         album.setYear(1997L);
         managedBeanAlbumDao.createAlbum(album);
         assertNotNull(album.getId());
-        Consolerizer.printBrightCyanGenericLn("TEST->", album);
+        Consolerizer.printBrightCyanGenericLn("TEST-> %s", album);
     }
 
 }

@@ -41,6 +41,13 @@ For the current module you are looking at, Java SE 8 is the one being used.
 mvn clean install -Parq-wildfly-managed
 ```
 
+## Run Arquillian tests on Intellij
+
+Use Arquillian Managed and you should get a screen like this.
+All options should be the default ones.
+
+![alt text](docs/jee-app-1-wildfly-IntelliJ-test-config.png)
+
 ## References
 
 -   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
