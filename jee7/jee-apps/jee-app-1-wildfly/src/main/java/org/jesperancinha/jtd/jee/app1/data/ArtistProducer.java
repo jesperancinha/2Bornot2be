@@ -39,5 +39,5 @@ public class ArtistProducer {
     @PostConstruct
     public void retrieveAllMembersOrderedByName() {
         artistList = managedBeanArtistDao.getAllArtists();
-    }
+     }
 }

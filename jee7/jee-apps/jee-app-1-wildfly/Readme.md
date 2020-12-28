@@ -20,8 +20,9 @@ For this app we cover:
 13. Arquillian JUnit tests
 14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
 15. `UserTransaction`, `Event<T>`
+16. `FacesContext`
 
-## How to run   
+## How to run       
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 

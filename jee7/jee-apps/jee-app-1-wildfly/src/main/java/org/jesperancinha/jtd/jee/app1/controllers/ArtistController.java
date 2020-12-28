@@ -1,7 +1,6 @@
 package org.jesperancinha.jtd.jee.app1.controllers;
 
-import org.jesperancinha.jtd.jee.app1.domain.Album;
-import org.jesperancinha.jtd.jee.app1.domain.AlbumDao;
+import org.jesperancinha.jtd.jee.app1.domain.ArtistDao;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -11,35 +10,36 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
+import org.jesperancinha.jtd.jee.app1.domain.Artist;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
 @Named
 @RequestScoped
-public class AlbumController {
+public class ArtistController {
 
     @Inject
-    private AlbumDao albumDao;
+    private ArtistDao artistDao;
 
     @Inject
     private FacesContext facesContext;
 
     @Produces
     @Named
-    private Album newAlbum;
+    private Artist newArtist;
 
-    public List<Album> getAlbumList() {
+    public List<Artist> getArtistList() {
         setupFastDefault();
-        printYellowGenericLn("The album list has been called!");
-        return albumDao.getAllAlbums();
+        printYellowGenericLn("The artist list has been called!");
+        return artistDao.getAllArtists();
     }
 
-    public void createAlbum() {
+    public void createArtist() {
         setupFastDefault();
-        printYellowGenericLn("The album %s is going to be created!", newAlbum);
+        printYellowGenericLn("The album %s is going to be created!", newArtist);
         try {
-            albumDao.createAlbum(newAlbum);
+            artistDao.createArtist(newArtist);
         } catch (Exception e) {
             String errorMessage = e.getMessage();
             FacesMessage m = new FacesMessage(FacesMessage.SEVERITY_ERROR, errorMessage, "Registration unsuccessful");
@@ -49,7 +49,7 @@ public class AlbumController {
 
     @PostConstruct
     public void initNewMember() {
-        newAlbum = new Album();
+        newArtist = new Artist();
     }
 
 }

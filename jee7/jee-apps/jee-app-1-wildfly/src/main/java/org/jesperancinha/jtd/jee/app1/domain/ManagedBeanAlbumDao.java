@@ -3,6 +3,8 @@ package org.jesperancinha.jtd.jee.app1.domain;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import javax.enterprise.event.Event;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -25,6 +27,9 @@ public class ManagedBeanAlbumDao implements AlbumDao {
 
     @Inject
     private Event<Album> albumEvent;
+
+    @Inject
+    private FacesContext facesContext;
 
     @Override
     public Album getAlbumForName(String name) {
@@ -92,6 +97,8 @@ public class ManagedBeanAlbumDao implements AlbumDao {
                 entityManager.merge(album);
                 utx.commit();
                 albumEvent.fire(album);
+                FacesMessage m = new FacesMessage(FacesMessage.SEVERITY_INFO, "Successfully created album!", "This album registration has been a success!");
+                facesContext.addMessage(null, m);
             } catch (IllegalStateException illegalStateException) {
                 throw illegalStateException;
             } catch (Exception se) {
