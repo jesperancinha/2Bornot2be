@@ -16,6 +16,9 @@
 The apps under [jee-apps](..), cover lots of topics.
 For this app we cover:
 
+1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
+2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
+
 In this web application it is important to understand the basics of these:
 
 This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
@@ -34,6 +37,13 @@ java -version
 
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:
 
+1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
+
+You can also perform these post requests:
+
+```bash
+curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
+```
 ## Run Arquillian tests
 
 ```bash
@@ -47,10 +57,16 @@ mvn clean install -Parq-wildfly-managed
 Use Arquillian Managed and you should get a screen like this.
 All options should be the default ones.
 
-![alt text](docs/jee-app-1-wildfly-IntelliJ-test-config.png)
+![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
+-   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
+-   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+-   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
+-   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+-   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
+-   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
 -   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
 -   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
 -   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
@@ -58,10 +74,6 @@ All options should be the default ones.
 -   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
 
 ##  Context references
-
--   [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
--   [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
--   [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
 
 ## About me 👨🏽‍💻🚀
 
