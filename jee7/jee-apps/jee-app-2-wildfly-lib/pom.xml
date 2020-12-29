@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jee-app-2-wildfly</artifactId>
+    <artifactId>jee-app-2-wildfly-lib</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -43,16 +43,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.jesperancinha.jtd</groupId>
-            <artifactId>jee-app-2-wildfly-lib</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-<!--            <scope>provided</scope>-->
-        </dependency>
-        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.jboss.ironjacamar</groupId>
@@ -177,13 +171,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>${version.war.plugin}</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.wildfly.maven.plugin}</version>
@@ -193,26 +180,6 @@
 
 
     <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.0.0-M5</version>
-                        <configuration>
-                            <excludes>
-                                <exclude>**/ManagedBeanAlbumDaoTest.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
         <profile>
             <id>arq-wildfly-managed</id>
             <dependencies>
@@ -239,5 +206,4 @@
             </build>
         </profile>
     </profiles>
-    <packaging>war</packaging>
 </project>

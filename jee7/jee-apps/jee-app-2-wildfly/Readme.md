@@ -23,11 +23,12 @@ For this app we cover:
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
 
 In this web application it is important to understand the basics of these:
 
 1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
-2. JCA - Java Connector Architecture
+2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
 3. JMS - Java Message Service
 
 This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
@@ -44,11 +45,25 @@ sdk use java 11.0.9.hs-adpt
 java -version
 ```
 
+Be sure to run the automated installed:
+
+```bash
+installAll.sh
+```
+
+Also make sure that you have read the index page of [jee-apps](..) and that you have previously installed [Wildfly 16](../installWildFly.sh).
+
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:
 
 1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
 2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
 3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
+4. http://localhost:8080/jee-app-2-wildfly/app/herbs/connection
+
+> NOTE: For point 4, there is a JCA running on this set of examples.
+> The problem is that it does not work because classes aren't being shared via the RAR module
+> Can you find out what is stopping this from working?
+> And can you find a solution?
 
 You can also perform these post requests:
 
@@ -72,6 +87,9 @@ All options should be the default ones.
 
 ## References
 
+-   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
+-   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
+-   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
 -   [JCA IronJacamar](http://www.ironjacamar.org/)
 -   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
 -   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)

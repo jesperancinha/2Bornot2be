@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jee-app-2-wildfly</artifactId>
+    <artifactId>jee-app-2-wildfly-adapter</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -46,7 +46,6 @@
             <groupId>org.jesperancinha.jtd</groupId>
             <artifactId>jee-app-2-wildfly-lib</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -177,10 +176,13 @@
                 </configuration>
             </plugin>
             <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>${version.war.plugin}</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <excludes>
+                        <exclude>**/META-INF/*</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
@@ -193,6 +195,56 @@
 
 
     <profiles>
+        <profile>
+            <id>rar</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution>
+                                <id>copy-resources</id>
+                                <!-- here the phase you need -->
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>rars</outputDirectory>
+                                    <resources>
+                                        <resource>
+                                            <directory>
+                                                ${project.basedir}/target
+                                            </directory>
+                                            <includes>
+                                                <include>*.rar</include>
+                                            </includes>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-rar-plugin</artifactId>
+                        <version>2.2</version>
+                        <executions>
+                            <execution>
+                                <id>rar</id>
+                                <goals>
+                                    <goal>rar</goal>
+                                </goals>
+                                <configuration>
+                                    <raXmlFile>src/main/resources/META-INF/ironjacamar.xml</raXmlFile>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>default</id>
             <activation>
@@ -239,5 +291,4 @@
             </build>
         </profile>
     </profiles>
-    <packaging>war</packaging>
 </project>

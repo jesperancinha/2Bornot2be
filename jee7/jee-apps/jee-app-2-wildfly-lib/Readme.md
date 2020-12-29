@@ -1,4 +1,7 @@
-# jee-apps
+# jee-app-2-wildfly-adapter
+
+
+## Technologies used
 
 ---
 
@@ -8,50 +11,93 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/iron-jacamar-50.png "IronJacamar")](http://www.ironjacamar.org/)
 
 ---
 
-## Prepare the environment
+## Exercise
 
-1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
-2. Unpack the contents of that package to this root.
+The apps under [jee-apps](..), cover lots of topics.
+For this app we cover:
 
-This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
+1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
+2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
+3. `ServletContext`, `HttpSession` and `doGet`
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
+In this web application it is important to understand the basics of these:
 
-You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
+1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
+3. JMS - Java Message Service
+
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
+
+The theme of this discovery app is: <b>Kitchen Herbs and History</b>
+
+## How to run       
+
+This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
 ```bash
-curl https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.tar.gz --output wildfly-16.0.0.Final.tar.gz
-tar -xvzf wildfly-16.0.0.Final.tar.gz
+jenv local system
+sdk use java 11.0.9.hs-adpt 
+java -version
 ```
 
+```bash
+mvn clean install
+mvn clean install -Prar rar:rar
+```
 
+Include the resulting rar in folder [rars](./rars) in your WildFly deployment.
 
-## Applications
+After the service is running and deployed you should be able to see pages and JSON's in these addresses:
 
--   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
--   [jee-app-2-wildfly](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11 (coming soon...)
--   [jee-app-2-wildfly-adapter](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module. (coming soon...)
--   [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases (coming soon...)
+1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
+2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
+3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
+4. http://localhost:8080/jee-app-2-wildfly/app/herbs/connection
+
+You can also perform these post requests:
+
+```bash
+curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
+```
+## Run Arquillian tests
+
+```bash
+jenv local system
+sdk use java 11.0.9.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
+
+## Run Arquillian tests on Intellij
+
+Use Arquillian Managed and you should get a screen like this.
+All options should be the default ones.
+
+![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+-   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
+-   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
+-   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
+-   [JCA IronJacamar](http://www.ironjacamar.org/)
+-   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
+-   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
+-   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+-   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
+-   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+-   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
+-   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
+-   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
+-   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
+-   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
+-   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
+-   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+
+##  Context references
 
 ## About me 👨🏽‍💻🚀
 

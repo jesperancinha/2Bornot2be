@@ -16,7 +16,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 
 @Path("/herbs")
 @RequestScoped
-public class AlbumResourceRESTService {
+public class KitchenHerbsResourceRESTService {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
