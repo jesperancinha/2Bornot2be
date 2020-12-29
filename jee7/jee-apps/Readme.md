@@ -28,13 +28,12 @@ curl https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.tar.gz
 tar -xvzf wildfly-16.0.0.Final.tar.gz
 ```
 
-
-
 ## Applications
 
 -   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
 -   [jee-app-2-wildfly](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11 (coming soon...)
 -   [jee-app-2-wildfly-adapter](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module. (coming soon...)
+-   [jee-app-2-wildfly-lib](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the library needed for the previous adapter. (coming soon...)
 -   [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases (coming soon...)
 
 ## References
