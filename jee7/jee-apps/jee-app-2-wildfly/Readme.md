@@ -8,6 +8,7 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/iron-jacamar-50.png "IronJacamar")](http://www.ironjacamar.org/)
 
 ---
 
@@ -68,6 +69,8 @@ All options should be the default ones.
 
 ## References
 
+-   [JCA IronJacamar](http://www.ironjacamar.org/)
+-   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
 -   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
 -   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
 -   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
