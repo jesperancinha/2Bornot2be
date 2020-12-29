@@ -1,5 +1,8 @@
 # jee-app-2-wildfly
 
+
+## Technologies used
+
 ---
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
