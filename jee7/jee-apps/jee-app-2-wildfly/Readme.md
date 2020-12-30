@@ -68,7 +68,7 @@ curl https://search.maven.org/remotecontent?filepath=org/apache/activemq/activem
 cp activemq-rar-5.16.0.rar ../wildfly-16.0.0.Final/standalone/deployments
 ```
 
-Add the following subsystem to [standalone.xml](../wildfly-16.0.0.Final/standalone/configuration/standalone.xml)
+Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
 ```xml
 <subsystem xmlns="urn:jboss:domain:resource-adapters:5.0">
 	<resource-adapters>
@@ -128,6 +128,12 @@ Add the following subsystem to [standalone.xml](../wildfly-16.0.0.Final/standalo
 		</resource-adapter>
 	</resource-adapters>
 </subsystem>
+```
+
+<b>ALWAYS start WildFly this way:</b>
+
+```bash
+./standalone.sh -c  standalone-full.xml
 ```
 
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:

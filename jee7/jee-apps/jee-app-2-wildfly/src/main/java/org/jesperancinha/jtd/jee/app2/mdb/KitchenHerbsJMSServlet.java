@@ -1,5 +1,7 @@
 package org.jesperancinha.jtd.jee.app2.mdb;
 
+import org.jesperancinha.console.consolerizer.Consolerizer;
+
 import javax.annotation.Resource;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
@@ -16,13 +18,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+
 @WebServlet("/jms")
 public class KitchenHerbsJMSServlet extends HttpServlet {
 
     @Resource(lookup = "java:/ConnectionFactory")
     ConnectionFactory cf;
 
-    @Resource(lookup = "java:jboss/activemq/queue/TestQueue")
+    //    @Resource(lookup = "java:jboss/activemq/queue/TestQueue")
     private Queue queue;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +45,11 @@ public class KitchenHerbsJMSServlet extends HttpServlet {
     }
 
     public void example() throws Exception {
-
+        Consolerizer.setupFastDefault();
+        printUnicornsLn(100);
+        printOrangeGenericLn("The type of the connection factory is %s",
+          cf);
+        printUnicornsLn(100);
         Connection connection = null;
         try {
             connection = cf.createConnection();

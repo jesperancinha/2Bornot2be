@@ -7,16 +7,16 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
-@MessageDriven(activationConfig = {
+//@MessageDriven(activationConfig = {
 
-    @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+//    @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+//    @ActivationConfigProperty(propertyName = "destination", propertyValue = "activemq/queue/TestQueue")
 
-    @ActivationConfigProperty(propertyName = "destination", propertyValue = "activemq/queue/TestQueue") },
-    messageListenerInterface = MessageListener.class)
+//}, messageListenerInterface = MessageListener.class)
 
-public class KitchenHerbsMDB implements CustomMessageListener {
+public class KitchenHerbsMDB {
 
-    @Override
+//    @Override
     public void onMessage(Message message) {
 
         try {
