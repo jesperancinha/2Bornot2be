@@ -134,7 +134,7 @@ Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/sta
 Also be sure to update this section:
 
 ```xml
-        <subsystem xmlns="urn:jboss:domain:messaging-activemq:6.0">
+<subsystem xmlns="urn:jboss:domain:messaging-activemq:6.0">
     <server name="default">
         <statistics enabled="${wildfly.messaging-activemq.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
         <security-setting name="#">
