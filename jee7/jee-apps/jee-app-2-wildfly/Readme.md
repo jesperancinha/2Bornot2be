@@ -60,6 +60,7 @@ There are many vendors out there.
 We randomly pick [activeMQ](http://activemq.apache.org/).
 Go to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html).
 Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar) file.
+Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.10.0/activemq-rar-5.10.0.rar) file.
 Copy that file into [deployments](../wildfly-16.0.0.Final/standalone/deployments):
 
 ```bash
@@ -69,7 +70,7 @@ cp activemq-rar-5.16.0.rar ../wildfly-16.0.0.Final/standalone/deployments
 
 Add the following subsystem to [standalone.xml](../wildfly-16.0.0.Final/standalone/configuration/standalone.xml)
 ```xml
-<subsystem xmlns="urn:jboss:domain:resource-adapters:2.0">
+<subsystem xmlns="urn:jboss:domain:resource-adapters:5.0">
 	<resource-adapters>
 		<resource-adapter id="activemq">
 			<archive>

@@ -3,7 +3,6 @@
     <deployment>
         <dependencies>
             <module name="jee-app-2-wildfly-adapter.rar"/>
-            <module name="activemq-rar-5.16.0.rar"/>
         </dependencies>
     </deployment>
 </jboss-deployment-structure>

@@ -33,6 +33,6 @@ hs_err_pid*
 .DS_Store
 
 ## Wildfly installation(s)
-wildfly-16.0.0.Final
+wildfly*.Final
 *.tar.gz
 *.zip
