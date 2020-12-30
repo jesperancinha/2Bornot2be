@@ -25,6 +25,7 @@ For this app we cover:
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
 4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
+5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`
 
 In this web application it is important to understand the basics of these:
 
@@ -57,13 +58,22 @@ Also make sure that you have read the index page of [jee-apps](..) and that you 
 Afterwards, we still need to configure a messaging system.
 There are many vendors out there.
 We randomly pick [activeMQ](http://activemq.apache.org/).
+Go to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html).
+Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar) file.
+Copy that file into [deployments](../wildfly-16.0.0.Final/standalone/deployments):
 
+```bash
+curl https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar --output activemq-rar-5.16.0.rar
+cp activemq-rar-5.16.0.rar ../wildfly-16.0.0.Final/standalone/deployments
+```
+
+Add the following subsystem to [standalone.xml](../wildfly-16.0.0.Final/standalone/configuration/standalone.xml)
 ```xml
 <subsystem xmlns="urn:jboss:domain:resource-adapters:2.0">
 	<resource-adapters>
 		<resource-adapter id="activemq">
 			<archive>
-				activemq-rar-5.10.0.rar
+                activemq-rar-5.16.0.rar
 			</archive>
 
 			<transaction-support>XATransaction</transaction-support>
@@ -153,6 +163,7 @@ All options should be the default ones.
 
 ## References
 
+-   [WildFly Integration with apache activemq](https://javadev.org/docs/appserv/wildfly/8.2/active-mq/wildfly-activemq-integration-as-application/)
 -   [CHAPTER 15. JAVA CONNECTOR ARCHITECTURE (JCA) MANAGEMENT](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/configuration_guide/jca_management)
 -   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
 -   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
