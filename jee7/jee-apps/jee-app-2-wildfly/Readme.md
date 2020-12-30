@@ -203,13 +203,14 @@ mvn clean install -Parq-wildfly-managed
 
 ## Run Arquillian tests on Intellij
 
-Use Arquillian Managed and you should get a screen like this.
+Use Arquillian Managed, and you should get a screen like this.
 All options should be the default ones.
 
 ![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
+-   [while starting wildfly 10.1 to work with artemis, jboss.ra.activemq-ra is not installed error persists](https://stackoverflow.com/questions/43179283/while-starting-wildfly-10-1-to-work-with-artemis-jboss-ra-activemq-ra-is-not-in)
 -   [WildFly Integration with apache activemq](https://javadev.org/docs/appserv/wildfly/8.2/active-mq/wildfly-activemq-integration-as-application/)
 -   [CHAPTER 15. JAVA CONNECTOR ARCHITECTURE (JCA) MANAGEMENT](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/configuration_guide/jca_management)
 -   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
