@@ -25,7 +25,8 @@ For this app we cover:
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
 4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
-5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`
+5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
+6.  ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
 
 In this web application it is important to understand the basics of these:
 
@@ -96,7 +97,7 @@ Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/sta
 			</config-property>
 
 			<connection-definitions>
-				<connection-definition class-name="org.apache.activemq.ra.ActiveMQManagedConnectionFactory" jndi-name="java:/ConnectionFactory" enabled="true" pool-name="ConnectionFactory">
+				<connection-definition class-name="org.apache.activemq.ra.ActiveMQManagedConnectionFactory" jndi-name="java:/ConnectionFactoryLove" enabled="true" pool-name="ConnectionFactory">
 
 					<xa-pool>
 						<min-pool-size>1</min-pool-size>
@@ -109,7 +110,7 @@ Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/sta
 			</connection-definitions>
 
 			<admin-objects>
-				<admin-object class-name="org.apache.activemq.command.ActiveMQQueue" jndi-name="java:jboss/activemq/queue/TestQueue" use-java-context="true" pool-name="TestQueue">
+				<admin-object class-name="org.apache.activemq.command.ActiveMQQueue" jndi-name="java:jboss/activemq/queue/TestQueue" use-java-context="true" pool-name="TestQueue" enabled="true">
 
 					<config-property name="PhysicalName">
 						activemq/queue/TestQueue
@@ -117,7 +118,7 @@ Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/sta
 
 				</admin-object>
 
-				<admin-object class-name="org.apache.activemq.command.ActiveMQTopic" jndi-name="java:jboss/activemq/topic/TestTopic" use-java-context="true" pool-name="TestTopic">
+				<admin-object class-name="org.apache.activemq.command.ActiveMQTopic" jndi-name="java:jboss/activemq/topic/TestTopic" use-java-context="true" pool-name="TestTopic" enabled="true">
 
 					<config-property name="PhysicalName">
 						activemq/topic/TestTopic
@@ -129,6 +130,44 @@ Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/sta
 	</resource-adapters>
 </subsystem>
 ```
+
+Also be sure to update this section:
+
+```xml
+        <subsystem xmlns="urn:jboss:domain:messaging-activemq:6.0">
+    <server name="default">
+        <statistics enabled="${wildfly.messaging-activemq.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
+        <security-setting name="#">
+            <role name="guest" send="true" consume="true" create-non-durable-queue="true" delete-non-durable-queue="true"/>
+        </security-setting>
+        <address-setting name="#" dead-letter-address="jms.queue.DLQ" expiry-address="jms.queue.ExpiryQueue" max-size-bytes="10485760" page-size-bytes="2097152" message-counter-history-day-limit="10"/>
+        <http-connector name="http-connector" socket-binding="http" endpoint="http-acceptor"/>
+        <http-connector name="http-connector-throughput" socket-binding="http" endpoint="http-acceptor-throughput">
+            <param name="batch-delay" value="50"/>
+        </http-connector>
+        <in-vm-connector name="in-vm" server-id="0">
+            <param name="buffer-pooling" value="false"/>
+        </in-vm-connector>
+        <http-acceptor name="http-acceptor" http-listener="default"/>
+        <http-acceptor name="http-acceptor-throughput" http-listener="default">
+            <param name="batch-delay" value="50"/>
+            <param name="direct-deliver" value="false"/>
+        </http-acceptor>
+        <in-vm-acceptor name="in-vm" server-id="0">
+            <param name="buffer-pooling" value="false"/>
+        </in-vm-acceptor>
+        <jms-queue name="ExpiryQueue" entries="java:/jms/queue/ExpiryQueue"/>
+        <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
+        <jms-queue name="TestQueue" entries="java:jboss/activemq/queue/TestQueue"/>
+        <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactoryLove" connectors="in-vm"/>
+        <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
+        <pooled-connection-factory name="activemq" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
+    </server>
+</subsystem>
+```
+
+The important nodes to bear in mind are the whole `resource-adapters` node, `jms-queue` and the `pooled-connection-factory`.
+A complete backup of a successful running ApacheMQ configuration file is located in [standalone-full.xml](backup/standalone-full.xml) for your evaluation.
 
 <b>ALWAYS start WildFly this way:</b>
 
@@ -142,6 +181,7 @@ After the service is running and deployed you should be able to see pages and JS
 2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
 3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
 4. http://localhost:8080/jee-app-2-wildfly/app/herbs/connection
+5. http://localhost:8080/jee-app-2-wildfly/jms
 
 > NOTE: For point 4, there is a JCA running on this set of examples.
 > The problem is that it does not work because classes aren't being shared via the RAR module

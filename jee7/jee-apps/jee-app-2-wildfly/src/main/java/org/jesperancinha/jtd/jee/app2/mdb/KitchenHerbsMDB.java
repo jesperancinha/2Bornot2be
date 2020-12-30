@@ -7,32 +7,28 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
-//@MessageDriven(activationConfig = {
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
+import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
-//    @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-//    @ActivationConfigProperty(propertyName = "destination", propertyValue = "activemq/queue/TestQueue")
+@MessageDriven(activationConfig = {
 
-//}, messageListenerInterface = MessageListener.class)
+    @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+    @ActivationConfigProperty(propertyName = "destination", propertyValue = "jboss/activemq/queue/TestQueue")
 
-public class KitchenHerbsMDB {
-
-//    @Override
+}, messageListenerInterface = MessageListener.class)
+public class KitchenHerbsMDB implements MessageListener {
+    @Override
     public void onMessage(Message message) {
-
         try {
-
+            setupFastDefault();
+            printBrightMagentaGenericLn("We've got this message -> %s", message);
             if (message instanceof TextMessage) {
-
-                System.out.println("Got Message "
-
-                    + ((TextMessage) message).getText());
-
+                printBrightMagentaGenericLn("More specifically: %s", ((TextMessage) message).getText());
             }
 
         } catch (JMSException e) {
-
-            e.printStackTrace();
-
+            printRedThrowableAndExit(e);
         }
 
     }

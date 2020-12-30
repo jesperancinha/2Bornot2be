@@ -18,16 +18,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 
 @WebServlet("/jms")
 public class KitchenHerbsJMSServlet extends HttpServlet {
 
-    @Resource(lookup = "java:/ConnectionFactory")
+    @Resource(lookup = "java:/ConnectionFactoryLove")
     ConnectionFactory cf;
 
-    //    @Resource(lookup = "java:jboss/activemq/queue/TestQueue")
+    @Resource(lookup = "java:jboss/activemq/queue/TestQueue")
     private Queue queue;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -47,8 +49,8 @@ public class KitchenHerbsJMSServlet extends HttpServlet {
     public void example() throws Exception {
         Consolerizer.setupFastDefault();
         printUnicornsLn(100);
-        printOrangeGenericLn("The type of the connection factory is %s",
-          cf);
+        printOrangeGenericLn("The type of the connection factory is %s", cf);
+        printOrangeGenericLn("The type of the queue is %s", queue);
         printUnicornsLn(100);
         Connection connection = null;
         try {
@@ -67,16 +69,14 @@ public class KitchenHerbsJMSServlet extends HttpServlet {
     }
 
     private void closeConnection(Connection con) {
+        printMagentaGenericLn("Closing connection %s", con);
         try {
-
             if (con != null) {
                 con.close();
             }
 
         } catch (JMSException jmse) {
-
-            System.out.println("Could not close connection " + con + " exception was " + jmse);
-
+            printRedGenericLn("Could not close connection " + con + " exception was " + jmse);
         }
 
     }
