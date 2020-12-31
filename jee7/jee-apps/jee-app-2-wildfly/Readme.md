@@ -210,6 +210,7 @@ All options should be the default ones.
 
 ## References
 
+-   [How to use @Resource WebServiceContext injection with Spring's @Transactional](https://stackoverflow.com/questions/5820969/how-to-use-resource-webservicecontext-injection-with-springs-transactional)
 -   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
 -   [Create a web service with maven](https://tuttlem.github.io/2015/12/05/create-a-web-service-with-maven.html)
 -   [When will I ever need to use @WebServiceRef?](https://stackoverflow.com/questions/15661262/when-will-i-ever-need-to-use-webserviceref)
