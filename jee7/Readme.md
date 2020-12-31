@@ -25,7 +25,17 @@ For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [
 In these modules I am using <b>java version 8.0.242.hs-adpt</b>. You can try other java 8 versions. I cannot guarantee that you'll be able to execute 100% of the examples though.
 You can also try to use a version of Java SE 7, but I'm almost 100% sure that none of the modules will work as I'll be using lamdas for the code.
 
-NOTE: JEE7 has nothing to do with the actual Java SE version being used. I chose Java 8 for compatibility reasons.
+<b>NOTE: JEE7 has nothing to do with the actual Java SE version being used. I chose Java 8 in a few projects for compatibility reasons. You can also find apps developed with Java 11 on top of JEE7.</b>
+
+This repo is here because, amongst other reasons, JEE is still pretty much very relevant.
+Alternatives to a [JEE architecture](https://www.oracle.com/java/technologies/java-ee-glance.html), like the [Spring Framework](https://spring.io/) facilitate another way to solve enterprise problems.
+Both are very good architectures, and they differ in their approach.
+This means that many companies are using either one or the other.
+[JEE 7 specifically](https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7), is the only way at the moment to get certified via an [Oracle exam](https://education.oracle.com/java-ee-7-application-developer/pexam_1Z0-900).
+At the same time, this is still a very popular framework to be used.
+[SOAP services and technologies](https://en.wikipedia.org/wiki/SOAP) are also still very much in use these days by many companies and therefore an understanding on how to do this in Java is still very much a necessity.
+
+<i>João Esperancinha, 31 of December 2020</i>
 
 ---
 
