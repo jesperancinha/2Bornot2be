@@ -1,6 +1,4 @@
 # jee-app-2-wildfly-adapter
-
-
 ## Technologies used
 
 ---

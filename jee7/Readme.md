@@ -35,7 +35,7 @@ This means that many companies are using either one or the other.
 At the same time, this is still a very popular framework to be used.
 [SOAP services and technologies](https://en.wikipedia.org/wiki/SOAP) are also still very much in use these days by many companies and therefore an understanding on how to do this in Java is still very much a necessity.
 
-<i>João Esperancinha, 31 of December 2020</i>
+<i>João Esperancinha, 31st of December 2020</i>
 
 ---
 

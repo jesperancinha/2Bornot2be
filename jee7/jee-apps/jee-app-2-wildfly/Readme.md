@@ -1,6 +1,4 @@
 # jee-app-2-wildfly
-
-
 ## Technologies used
 
 ---
@@ -26,7 +24,9 @@ For this app we cover:
 3. `ServletContext`, `HttpSession` and `doGet`
 4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
 5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
-6.  ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
+6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
+7. Much about `@WebServiceRef`
+8. `@WebServlet`, `@WebServiceRef`, `@HandlerChain`, `@WebServiceClient`, SOAP WS - JAX-WS
 
 In this web application it is important to understand the basics of these:
 
@@ -210,6 +210,9 @@ All options should be the default ones.
 
 ## References
 
+-   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
+-   [Create a web service with maven](https://tuttlem.github.io/2015/12/05/create-a-web-service-with-maven.html)
+-   [When will I ever need to use @WebServiceRef?](https://stackoverflow.com/questions/15661262/when-will-i-ever-need-to-use-webserviceref)
 -   [while starting wildfly 10.1 to work with artemis, jboss.ra.activemq-ra is not installed error persists](https://stackoverflow.com/questions/43179283/while-starting-wildfly-10-1-to-work-with-artemis-jboss-ra-activemq-ra-is-not-in)
 -   [WildFly Integration with apache activemq](https://javadev.org/docs/appserv/wildfly/8.2/active-mq/wildfly-activemq-integration-as-application/)
 -   [CHAPTER 15. JAVA CONNECTOR ARCHITECTURE (JCA) MANAGEMENT](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/configuration_guide/jca_management)

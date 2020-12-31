@@ -1,101 +1,92 @@
-# jee-app-2-wildfly-adapter
-## Technologies used
-
----
-
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/iron-jacamar-50.png "IronJacamar")](http://www.ironjacamar.org/)
-
----
-
-## Exercise
-
-The apps under [jee-apps](..), cover lots of topics.
-For this app we cover:
-
-1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
-2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
-3. `ServletContext`, `HttpSession` and `doGet`
-
-In this web application it is important to understand the basics of these:
-
-1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
-2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
-3. JMS - Java Message Service
-
-This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
-
-The theme of this discovery app is: <b>Kitchen Herbs and History</b>
-
-## How to run       
-
-This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
-
-```bash
-jenv local system
-sdk use java 11.0.9.hs-adpt 
-java -version
-```
-
-```bash
-mvn clean install
-mvn clean install -Prar rar:rar
-```
-
-Include the resulting rar in folder [rars](./rars) in your WildFly deployment.
-
-After the service is running and deployed you should be able to see pages and JSON's in these addresses:
-
-1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
-2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
-3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
-4. http://localhost:8080/jee-app-2-wildfly/app/herbs/connection
-
-You can also perform these post requests:
-
-```bash
-curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
-```
-## Run Arquillian tests
-
-```bash
-jenv local system
-sdk use java 11.0.9.hs-adpt
-mvn clean install -Parq-wildfly-managed
-```
-
-## Run Arquillian tests on Intellij
-
-Use Arquillian Managed and you should get a screen like this.
-All options should be the default ones.
-
-![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
+# jee-app-2-wildfly-ws
 
 ## References
 
--   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
--   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
--   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
--   [JCA IronJacamar](http://www.ironjacamar.org/)
--   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
--   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
--   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
--   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
--   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
--   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
--   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
--   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
--   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
--   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
--   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
--   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+-   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
+-   [JAX-WS Hello World Example – RPC Style](https://examples.javacodegeeks.com/enterprise-java/jws/jax-ws-hello-world-example-rpc-style/)
+-   [Hello World JAX-RS Application](https://www.journaldev.com/9191/java-web-services-tutorial)
+-   [Create a Java Web Service (SOAP RPC) for WildFly](https://www.learn-it-with-examples.com/development/java/java-web-services/create-simple-java-web-service-soap-rpc-web-app.html)
+    
+## Errors Reported While  Deploying
 
-##  Context references
+As part of the JEE learning experience, I've added exceptions here with a resolution for it.
+
+### Error 1 - Apache CXF library (cxf-rt-transports-http-3.3.7.jar) detected in ws endpoint deployment
+
+```shell
+14:56:52,007 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-4) MSC000001: Failed to start service jboss.deployment.unit."jee-app-2-wildfly-ws-1.0-SNAPSHOT.war".PARSE: org.jboss.msc.service.StartException in service jboss.deployment.unit."jee-app-2-wildfly-ws-1.0-SNAPSHOT.war".PARSE: WFLYSRV0153: Failed to process phase PARSE of deployment "jee-app-2-wildfly-ws-1.0-SNAPSHOT.war"
+	at org.jboss.as.server@8.0.0.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:183)
+	at org.jboss.msc@1.4.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1738)
+	at org.jboss.msc@1.4.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1700)
+	at org.jboss.msc@1.4.5.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1558)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1982)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYWS0059: Apache CXF library (cxf-rt-transports-http-3.3.7.jar) detected in ws endpoint deployment; either provide a proper deployment replacing embedded libraries with container module dependencies or disable the webservices subsystem for the current deployment adding a proper jboss-deployment-structure.xml descriptor to it. The former approach is recommended, as the latter approach causes most of the webservices Java EE and any JBossWS specific functionality to be disabled.
+	at org.jboss.as.webservices//org.jboss.as.webservices.deployers.WSLibraryFilterProcessor.deploy(WSLibraryFilterProcessor.java:70)
+	at org.jboss.as.server@8.0.0.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:176)
+	... 8 more
+```
+
+<b>Solution<b>
+
+Add a `proper` `jboss-deployment-structure.xml`. 
+From [JBoss Application Server](https://cxf.apache.org/docs/application-server-specific-configuration-guide.html):
+
+```xml
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <exclude-subsystems>
+            <subsystem name="webservices" />
+        </exclude-subsystems>
+    </deployment>
+</jboss-deployment-structure>
+```
+
+### Error 2 - Managed bean with a parameterized bean class must be @Dependent
+
+```shell
+15:06:25,407 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-3) MSC000001: Failed to start service jboss.deployment.unit."jee-app-2-wildfly-ws-1.0-SNAPSHOT.war".WeldStartService: org.jboss.msc.service.StartException in service jboss.deployment.unit."jee-app-2-wildfly-ws-1.0-SNAPSHOT.war".WeldStartService: Failed to start service
+	at org.jboss.msc@1.4.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1730)
+	at org.jboss.msc@1.4.5.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1558)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1982)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.jboss.weld.exceptions.DefinitionException: WELD-000071: Managed bean with a parameterized bean class must be @Dependent: class org.apache.cxf.jaxrs.provider.AbstractCachingMessageProvider
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.bean.ManagedBean.checkType(ManagedBean.java:211)
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.bean.AbstractBean.initializeAfterBeanDiscovery(AbstractBean.java:108)
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.bean.ManagedBean.initializeAfterBeanDiscovery(ManagedBean.java:122)
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.bootstrap.ConcurrentBeanDeployer$AfterBeanDiscoveryInitializerFactory.doWork(ConcurrentBeanDeployer.java:111)
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.bootstrap.ConcurrentBeanDeployer$AfterBeanDiscoveryInitializerFactory.doWork(ConcurrentBeanDeployer.java:102)
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.executor.IterativeWorkerTaskFactory$1.call(IterativeWorkerTaskFactory.java:62)
+	at org.jboss.weld.core@3.1.0.Final//org.jboss.weld.executor.IterativeWorkerTaskFactory$1.call(IterativeWorkerTaskFactory.java:55)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+	at org.jboss.threads@2.3.3.Final//org.jboss.threads.JBossThread.run(JBossThread.java:485)
+```
+
+<b>Solution</b>
+
+Change `jboss-deployment-structure.xml` to:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+  <ear-subdeployments-isolated>false</ear-subdeployments-isolated>
+  <deployment>
+     <exclude-subsystems>
+          <subsystem name="jaxrs" />
+    </exclude-subsystems>
+  </deployment>
+</jboss-deployment-structure>
+```
+
 
 ## About me 👨🏽‍💻🚀
 
