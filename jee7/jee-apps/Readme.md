@@ -30,11 +30,47 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 ## Applications
 
-### jee-app-1-wildfly
+### jee-app-1-wildfly - Pop stars list, music, lyrics and history
+
+#### Subjects
+
+1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
+2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
+3. `@ApplicationScoped`
+4. JSF (Java Server Faces)
+5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
+6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
+7. `@Stateful`, `@Alternative`
+8. `@Model`
+9. `<ui:repeat`, `<h:link` and `<f:param`
+10. `<h:dataTable`, `<h:column` and `<f:facets`
+11. `<h:outputFormat ` and `<f:param`
+12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+13. Arquillian JUnit tests
+14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
+15. `UserTransaction`, `Event<T>`
+16. `FacesContext`
+17. `@Path`, `@ApplicationPath`, `Application`
+18. `@Observes` and `Reception.ALWAYS`
+
+#### Modules
 
 -   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
 
-### jee-app-2-wildfly
+### jee-app-2-wildfly - Kitchen Herbs and History
+
+#### Subjects
+
+1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
+2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
+3. `ServletContext`, `HttpSession` and `doGet`
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
+5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
+6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
+7. Much about `@WebServiceRef`
+8. `@WebServlet`, `@WebServiceRef`, `@HandlerChain`, `@WebServiceClient`, SOAP WS - JAX-WS
+
+#### Modules
 
 -   [jee-app-2-wildfly (WAR application)](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11 (coming soon...)
 -   [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module.
