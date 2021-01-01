@@ -450,7 +450,7 @@
             <resource-adapters>
                 <resource-adapter id="activemq">
                     <archive>
-                        activemq-rar-5.10.0.rar
+                        activemq-rar-5.16.0.rar
                     </archive>
                     <transaction-support>XATransaction</transaction-support>
                     <config-property name="ServerUrl">
@@ -596,14 +596,5 @@
         </outbound-socket-binding>
     </socket-binding-group>
     <deployments>
-        <deployment name="jee-app-2-wildfly-adapter.rar" runtime-name="jee-app-2-wildfly-adapter.rar">
-            <content sha1="51448b67771ff24f07e1d22ac40cc2539f7c9c6d"/>
-        </deployment>
-        <deployment name="activemq-all-5.12.0.jar" runtime-name="activemq-all-5.12.0.jar">
-            <content sha1="86c425ff614bf361e2af4654be7d21c2fd67f9e8"/>
-        </deployment>
-        <deployment name="jee-app-2-wildfly.war" runtime-name="jee-app-2-wildfly.war">
-            <content sha1="35c71a909d06c5984dd8a07c56645c8d145426f0"/>
-        </deployment>
     </deployments>
 </server>

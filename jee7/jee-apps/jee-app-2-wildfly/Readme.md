@@ -48,7 +48,13 @@ sdk use java 11.0.9.hs-adpt
 java -version
 ```
 
-Be sure to run the automated installed:
+Run this command first <b>WITHOUT</b> the server running:
+
+```bash
+cp backup/standalone-full.xml ../wildfly-16.0.0.Final/standalone/configuration/
+```
+
+Be sure to run the automated installation having the sever <b>RUNNING</b>:
 
 ```bash
 installAll.sh
@@ -172,7 +178,7 @@ A complete backup of a successful running ApacheMQ configuration file is located
 <b>ALWAYS start WildFly this way:</b>
 
 ```bash
-./standalone.sh -c  standalone-full.xml
+./standalone.sh -c standalone-full.xml
 ```
 
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:
@@ -193,6 +199,31 @@ You can also perform these post requests:
 ```bash
 curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
 ```
+
+## Troubleshooting
+
+Installing applications in Application servers can be difficult.
+Although this isn't specific to Java Enterprise knowledge, it is necessary in order to make exercises.
+One place we always have to look at if problems arise is the standalone files.
+In our case we are running the [standalone-full.xml](./backup/standalone-full.xml) file.
+Upon successful installation we should have these `deployments` at the end of the file:
+
+```xml
+<deployments>
+    <deployment name="jee-app-2-wildfly-ws-1.0-SNAPSHOT.war" runtime-name="jee-app-2-wildfly-ws-1.0-SNAPSHOT.war">
+        <fs-archive path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly-ws/target/jee-app-2-wildfly-ws-1.0-SNAPSHOT.war"/>
+    </deployment>
+    <deployment name="jee-app-2-wildfly-adapter.rar" runtime-name="jee-app-2-wildfly-adapter.rar">
+        <fs-archive path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly-adapter/target/jee-app-2-wildfly-adapter.rar"/>
+    </deployment>
+    <deployment name="jee-app-2-wildfly.war" runtime-name="jee-app-2-wildfly.war">
+        <fs-archive path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly/target/jee-app-2-wildfly.war"/>
+    </deployment>
+</deployments>
+```
+
+This should be automated, so don't add this manually.
+
 ## Run Arquillian tests
 
 ```bash
@@ -210,6 +241,7 @@ All options should be the default ones.
 
 ## References
 
+-   [Maven - Generate Jar and War](https://stackoverflow.com/questions/10862980/maven-generate-jar-and-war)
 -   [How to use @Resource WebServiceContext injection with Spring's @Transactional](https://stackoverflow.com/questions/5820969/how-to-use-resource-webservicecontext-injection-with-springs-transactional)
 -   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
 -   [Create a web service with maven](https://tuttlem.github.io/2015/12/05/create-a-web-service-with-maven.html)
