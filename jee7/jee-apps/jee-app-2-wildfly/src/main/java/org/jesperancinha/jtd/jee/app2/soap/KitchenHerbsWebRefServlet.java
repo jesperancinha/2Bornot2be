@@ -1,7 +1,9 @@
 package org.jesperancinha.jtd.jee.app2.soap;
 
 import org.jesperancinha.jtd.jee.soap.HelloWorldServerImplService;
+import org.jesperancinha.jtd.jee.soap.HelloWorldServerInt;
 
+import javax.jws.HandlerChain;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,18 +19,21 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
     /**
      * Injecting the SEI (Service Endpoint Interface)
      */
-//    @WebServiceRef(KitchenHerbsService.class) // @WebServiceClient
-//    private KitchenHerbsMessenger kitchenHerbsMessenger;
+    @WebServiceRef(HelloWorldServerImplService.class) // @WebServiceClient
+    private HelloWorldServerInt kitchenHerbsMessenger;
 
-//    @WebServiceRef(wsdlLocation = "META-INF/wsdl/KitchenHerbsService/hello.wsdl")
-//    private KitchenHerbsServiceWsdl kitchenHerbsServiceWsdl;
+    @WebServiceRef(wsdlLocation = "META-INF/hello.wsdl")
+    private HelloWorldServerImplService kitchenHerbsServiceWsdl;
 
-//    @WebServiceRef
-//    public KitchenHerbsServicePure helloMessengerServicePure;
-//
-//    @WebServiceRef(KitchenHerbsServiceHandlerChain.class)
-//    @HandlerChain(file="handler-chain.xml")
-//    private KitchenHerbsMessengerHandlerChain kitchenHerbsMessengerHandlerChain;
+    @WebServiceRef
+    public HelloWorldServerImplService helloMessengerServicePure;
+
+
+//    It is an error to combine this annotation with the @SOAPMessageHandlers annotation.
+//    from: https://docs.oracle.com/javase/7/docs/api/javax/jws/HandlerChain.html
+    @WebServiceRef(KitchenHerbsServiceHandlerChain.class)
+    @HandlerChain(file= "handler-chain.xml")
+    private HelloWorldServerImplService kitchenHerbsMessengerHandlerChain;
 
     @WebServiceRef(wsdlLocation = "http://localhost:8080/jee-app-2-wildfly-ws-1.0-SNAPSHOT/HelloService?wsdl")
     private HelloWorldServerImplService helloWorldServerImplService;
@@ -46,7 +51,11 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet at " + request.getContextPath() + "</h1>");
-            out.println("<p>" + sayHello("world") + "</p>");
+            out.println("<p>" + sayHello("world one") + "</p>");
+            out.println("<p>" + sayHello2("world two") + "</p>");
+            out.println("<p>" + sayHello3("world three") + "</p>");
+            out.println("<p>" + sayHello4("world four") + "</p>");
+            out.println("<p>" + sayHello5("world five") + "</p>");
             out.println("</body>");
             out.println("</html>");
 
@@ -57,5 +66,17 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
 
     private String sayHello(String name) {
         return helloWorldServerImplService.getHelloPort().sayHelloWorld(name);
+    }
+    private String sayHello2(String name) {
+        return kitchenHerbsServiceWsdl.getHelloPort().sayHelloWorld(name);
+    }
+    private String sayHello3(String name) {
+        return helloMessengerServicePure.getHelloPort().sayHelloWorld(name);
+    }
+    private String sayHello4(String name) {
+        return kitchenHerbsMessengerHandlerChain.getHelloPort().sayHelloWorld(name);
+    }
+    private String sayHello5(String name) {
+        return kitchenHerbsMessenger.sayHelloWorld(name);
     }
 }

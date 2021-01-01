@@ -46,19 +46,19 @@
             <groupId>org.jesperancinha.jtd</groupId>
             <artifactId>jee-app-2-wildfly-lib</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-<!--            <scope>provided</scope>-->
+            <!--            <scope>provided</scope>-->
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.jesperancinha.jtd.jee</groupId>-->
-<!--            <artifactId>jee-app-2-wildfly-ws</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <classifier>classes</classifier>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.jesperancinha.jtd.jee</groupId>-->
+        <!--            <artifactId>jee-app-2-wildfly-ws</artifactId>-->
+        <!--            <version>1.0-SNAPSHOT</version>-->
+        <!--            <classifier>classes</classifier>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
-<!--            <scope>provided</scope>-->
+            <!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
@@ -192,6 +192,16 @@
                 <version>${version.war.plugin}</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <webResources>
+                        <resource>
+                            <directory>${basedir}/src/main/java/org/jesperancinha/jtd/jee/app2/soap</directory>
+                            <excludes>
+                                <exclude>*.java</exclude>
+                            </excludes>
+                            <filtering>true</filtering>
+                            <targetPath>WEB-INF/classes/org/jesperancinha/jtd/jee/app2/soap</targetPath>
+                        </resource>
+                    </webResources>
                 </configuration>
             </plugin>
             <plugin>
@@ -233,7 +243,7 @@
                                     <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                                     <wsdlOptions>
                                         <wsdlOption>
-                                            <wsdl>${basedir}/src/main/resources/META-INF/hello.wsdl</wsdl>
+                                            <wsdl>${basedir}/src/main/webapp/META-INF/hello.wsdl</wsdl>
                                         </wsdlOption>
                                     </wsdlOptions>
                                 </configuration>

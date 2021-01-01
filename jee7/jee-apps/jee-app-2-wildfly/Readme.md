@@ -241,6 +241,8 @@ All options should be the default ones.
 
 ## References
 
+-   [What's in a name? What developers can expect in Jakarta EE 9](https://www.theserverside.com/feature/Whats-in-a-name-What-developers-can-expect-in-Jakarta-EE-9)
+-   [@WebService handlers with @HandlerChain](https://tomee.apache.org/examples-trunk/webservice-handlerchain/)
 -   [Maven - Generate Jar and War](https://stackoverflow.com/questions/10862980/maven-generate-jar-and-war)
 -   [How to use @Resource WebServiceContext injection with Spring's @Transactional](https://stackoverflow.com/questions/5820969/how-to-use-resource-webservicecontext-injection-with-springs-transactional)
 -   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
