@@ -15,8 +15,18 @@ public class Tooth {
 
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
     private UUID uuid;
 
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
+
+    public String toString(){
+        return uuid.toString();
+    }
 }

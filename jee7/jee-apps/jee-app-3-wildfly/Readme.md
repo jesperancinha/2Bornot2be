@@ -18,16 +18,26 @@ For this app we cover:
 
 1. `@Entity` and `@Table`
 
+
+## Run Arquillian tests
+
+```bash
+jenv local system
+sdk use java 11.0.9.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
+
 ## Context References
 
 -   [Mandible by Wikipedia](https://en.wikipedia.org/wiki/Mandible)
 -   [Tooth Decay](https://www.nidcr.nih.gov/health-info/tooth-decay/more-info#:~:text=Tooth%20decay%20(dental%20caries)%20is,a%20tooth%2C%20called%20a%20cavity.)
 -   [Wisdom teeth](https://www.webmd.com/oral-health/wisdom-teeth#1)
 -   [Wisdom tooh by Wikipedia](https://en.wikipedia.org/wiki/Wisdom_tooth)
+-   [Trigeminal Nerve Overview](https://www.healthline.com/human-body-maps/trigeminal-nerve)
 
 ## References
 
-
+-   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 
 ## About me 👨🏽‍💻🚀
 
