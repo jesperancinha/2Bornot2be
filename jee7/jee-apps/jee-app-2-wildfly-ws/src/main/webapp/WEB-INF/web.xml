@@ -9,11 +9,11 @@
             com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
     </listener>
     <servlet>
-        <servlet-name>HelloService</servlet-name>
+        <servlet-name>KitchenHerbsService</servlet-name>
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HelloService</servlet-name>
-        <url-pattern>/HelloService</url-pattern>
+        <servlet-name>KitchenHerbsService</servlet-name>
+        <url-pattern>/kitchen-herbs</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -1,7 +1,7 @@
 package org.jesperancinha.jtd.jee.app2.soap;
 
-import org.jesperancinha.jtd.jee.soap.HelloWorldServerImplService;
-import org.jesperancinha.jtd.jee.soap.HelloWorldServerInt;
+import org.jesperancinha.jtd.jee.soap.KitchenHerbsServer;
+import org.jesperancinha.jtd.jee.soap.KitchenHerbsServerImplService;
 
 import javax.jws.HandlerChain;
 import javax.servlet.ServletException;
@@ -19,24 +19,24 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
     /**
      * Injecting the SEI (Service Endpoint Interface)
      */
-    @WebServiceRef(HelloWorldServerImplService.class) // @WebServiceClient
-    private HelloWorldServerInt kitchenHerbsMessenger;
+    @WebServiceRef(KitchenHerbsServerImplService.class) // @WebServiceClient
+    private KitchenHerbsServer kitchenHerbsMessenger;
 
-    @WebServiceRef(wsdlLocation = "META-INF/hello.wsdl")
-    private HelloWorldServerImplService kitchenHerbsServiceWsdl;
+    @WebServiceRef(wsdlLocation = "META-INF/kitchen-herbs.wsdl")
+    private KitchenHerbsServerImplService kitchenHerbsServiceWsdl;
 
     @WebServiceRef
-    public HelloWorldServerImplService helloMessengerServicePure;
+    public KitchenHerbsServerImplService helloMessengerServicePure;
 
 
 //    It is an error to combine this annotation with the @SOAPMessageHandlers annotation.
 //    from: https://docs.oracle.com/javase/7/docs/api/javax/jws/HandlerChain.html
-    @WebServiceRef(KitchenHerbsServiceHandlerChain.class)
+    @WebServiceRef
     @HandlerChain(file= "handler-chain.xml")
-    private HelloWorldServerImplService kitchenHerbsMessengerHandlerChain;
+    private KitchenHerbsServerImplService kitchenHerbsMessengerHandlerChain;
 
-    @WebServiceRef(wsdlLocation = "http://localhost:8080/jee-app-2-wildfly-ws-1.0-SNAPSHOT/HelloService?wsdl")
-    private HelloWorldServerImplService helloWorldServerImplService;
+    @WebServiceRef(wsdlLocation = "http://localhost:8080/jee-app-2-wildfly-ws-1.0-SNAPSHOT/kitchen-herbs?wsdl")
+    private KitchenHerbsServerImplService KitchenHerbsServerImplService;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -65,16 +65,16 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
     }
 
     private String sayHello(String name) {
-        return helloWorldServerImplService.getHelloPort().sayHelloWorld(name);
+        return KitchenHerbsServerImplService.getKitchenHerbsPort().sayHelloWorld(name);
     }
     private String sayHello2(String name) {
-        return kitchenHerbsServiceWsdl.getHelloPort().sayHelloWorld(name);
+        return kitchenHerbsServiceWsdl.getKitchenHerbsPort().sayHelloWorld(name);
     }
     private String sayHello3(String name) {
-        return helloMessengerServicePure.getHelloPort().sayHelloWorld(name);
+        return helloMessengerServicePure.getKitchenHerbsPort().sayHelloWorld(name);
     }
     private String sayHello4(String name) {
-        return kitchenHerbsMessengerHandlerChain.getHelloPort().sayHelloWorld(name);
+        return kitchenHerbsMessengerHandlerChain.getKitchenHerbsPort().sayHelloWorld(name);
     }
     private String sayHello5(String name) {
         return kitchenHerbsMessenger.sayHelloWorld(name);

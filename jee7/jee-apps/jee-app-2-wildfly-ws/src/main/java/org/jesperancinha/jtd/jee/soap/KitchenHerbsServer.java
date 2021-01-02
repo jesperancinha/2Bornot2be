@@ -7,7 +7,7 @@ import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
 @SOAPBinding(style = Style.RPC)
-public interface HelloWorldServerInt {
+public interface KitchenHerbsServer {
 
     @WebMethod
     String sayHelloWorld(String name);
