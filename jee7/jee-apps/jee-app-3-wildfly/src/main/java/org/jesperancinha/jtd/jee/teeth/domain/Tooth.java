@@ -2,6 +2,8 @@ package org.jesperancinha.jtd.jee.teeth.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -20,6 +22,8 @@ public class Tooth {
     private Jaw jaw;
 
     private Nerve nerve;
+
+    private ToothType toothType;
 
     @ManyToOne
     public Jaw getJaw() {
@@ -62,5 +66,14 @@ public class Tooth {
 
     public void setNerve(Nerve nerve) {
         this.nerve = nerve;
+    }
+
+    @Enumerated(EnumType.STRING)
+    public ToothType getToothType() {
+        return toothType;
+    }
+
+    public void setToothType(ToothType toothType) {
+        this.toothType = toothType;
     }
 }
