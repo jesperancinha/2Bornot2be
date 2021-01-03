@@ -193,6 +193,7 @@
                             <excludes>
                                 <exclude>**/ToothServiceTest.java</exclude>
                                 <exclude>**/ToothService1Test.java</exclude>
+                                <exclude>**/ToothService2Test.java</exclude>
                             </excludes>
                         </configuration>
                     </plugin>
@@ -219,6 +220,7 @@
                             <includes>
                                 <include>**/ToothServiceTest.java</include>
                                 <include>**/ToothService1Test.java</include>
+                                <include>**/ToothService2Test.java</include>
                             </includes>
                         </configuration>
                     </plugin>

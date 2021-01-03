@@ -20,6 +20,13 @@ For this app we cover:
 2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
 3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
 
+
+## Domains in detail
+
+-   [Domain](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
+-   [Domain1](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain1) - TransactionManagementType.BEAN
+-   [Domain2](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain2) - TransactionManagementType.CONTAINER
+
 ## Run Arquillian tests
 
 ```bash

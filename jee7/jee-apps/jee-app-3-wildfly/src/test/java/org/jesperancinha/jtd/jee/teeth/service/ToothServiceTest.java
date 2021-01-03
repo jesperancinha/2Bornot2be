@@ -34,11 +34,14 @@ public class ToothServiceTest {
     @Inject
     ToothService toothService;
 
+    @Inject
+    JawService jawService;
+
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Jaw.class, ToothService.class, Tooth.class, Resources.class, UserTransaction.class, EntityManager.class,
-                Consolerizer.class, ConColor.class)
+            .addClasses(Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
+                UserTransaction.class, EntityManager.class, Consolerizer.class, ConColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
             .addAsWebInfResource("test-ds.xml");
@@ -48,14 +51,24 @@ public class ToothServiceTest {
     public void createTooth_whenGood_thenOk()
         throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
         NotSupportedException {
+
         final var tooth = new Tooth();
         final var uuid = UUID.randomUUID();
         tooth.setUuid(uuid);
+
+        final var jaw = new Jaw();
+        jaw.setUuid(UUID.randomUUID());
+        final Jaw jaw1 = jawService.updateItRight(jaw);
+
+        tooth.setJaw(jaw);
+
         final Tooth tooth1 = toothService.updateItRight(tooth);
         Consolerizer.printOrangeGenericLn(tooth1);
         final Tooth toothResult = toothService.findTooth(uuid);
+
         Consolerizer.printOrangeGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
+        assertEquals(jaw1.getUuid(), toothResult.getJaw().getUuid());
     }
 
     @Test(expected = EJBException.class)
