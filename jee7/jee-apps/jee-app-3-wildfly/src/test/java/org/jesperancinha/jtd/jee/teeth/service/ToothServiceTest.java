@@ -10,6 +10,7 @@ import org.jesperancinha.console.consolerizer.ConColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
+import org.jesperancinha.jtd.jee.teeth.domain.Nerve;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +41,7 @@ public class ToothServiceTest {
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
+            .addClasses(Nerve.class, Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
                 UserTransaction.class, EntityManager.class, Consolerizer.class, ConColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")

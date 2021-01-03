@@ -3,9 +3,6 @@ package org.jesperancinha.jtd.jee.teeth.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -13,22 +10,11 @@ import java.util.UUID;
 
 @Entity
 @Table
-public class Tooth {
+public class Nerve {
 
     private UUID uuid;
 
-    private Jaw jaw;
-
-    private Nerve nerve;
-
-    @ManyToOne
-    public Jaw getJaw() {
-        return jaw;
-    }
-
-    public void setJaw(Jaw jaw) {
-        this.jaw = jaw;
-    }
+    private Tooth tooth;
 
     @Id
     @Column
@@ -39,10 +25,6 @@ public class Tooth {
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
-    }
-
-    public String toString(){
-        return uuid.toString();
     }
     // org.jboss.arquillian.container.spi.client.container.DeploymentException:
     // Cannot deploy test.war:
@@ -56,11 +38,11 @@ public class Tooth {
     //    org.jesperancinha.jtd.jee.teeth.domain.Tooth.nerve"}}}}
     // @Column
     @OneToOne
-    public Nerve getNerve() {
-        return nerve;
+    public Tooth getTooth() {
+        return tooth;
     }
 
-    public void setNerve(Nerve nerve) {
-        this.nerve = nerve;
+    public void setTooth(Tooth tooth) {
+        this.tooth = tooth;
     }
 }
