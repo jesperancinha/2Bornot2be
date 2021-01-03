@@ -1,10 +1,11 @@
 package org.jesperancinha.jtd.jee.teeth.service;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
+import org.jesperancinha.jtd.jee.teeth.domain1.Tooth;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.persistence.EntityManager;
@@ -15,15 +16,17 @@ import javax.transaction.HeuristicRollbackException;
 import javax.transaction.NotSupportedException;
 import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
-import javax.transaction.UserTransaction;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+
 @Stateless
-@TransactionManagement(javax.ejb.TransactionManagementType.BEAN)
-public class ToothService {
+@TransactionManagement(TransactionManagementType.CONTAINER)
+public class ToothService1 {
 
     @PersistenceContext(unitName = "primary")
     private EntityManager entityManager;
+
 
     // WFLYJPA0059: javax.persistence.PersistenceContext injection target is invalid.  Only setter methods are allowed:
     // @PersistenceContext(unitName = "primary")
@@ -35,22 +38,30 @@ public class ToothService {
     public Tooth updateItRight(final Tooth tooth)
         throws NamingException, HeuristicMixedException, HeuristicRollbackException,NotSupportedException, SystemException, RollbackException {
         var context = new InitialContext();
-        var utx = (UserTransaction) context.lookup("java:comp/UserTransaction");
-        utx.begin();
+
+
+        printYellowGenericLn("Because we are using %s, this means we cannot perform UserTransaction code.");
+        printYellowGenericLn("This get's done by the container itself");
+        printYellowGenericLn("And so the code changes a bit to avoid the following error:");
+        printYellowGenericLn("javax.naming.NameNotFoundException: UserTransaction\n"
+            + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)\n"
+            + "Caused by: java.lang.IllegalStateException: WFLYEJB0137: Only session and message-driven beans with bean-managed transaction demarcation are allowed to access UserTransaction\n"
+            + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)");
+        // javax.naming.NameNotFoundException: UserTransaction
+        //        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)
+        //Caused by: java.lang.IllegalStateException: WFLYEJB0137: Only session and message-driven beans with bean-managed transaction demarcation are allowed to access UserTransaction
+        //        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)
+        // var utx = (UserTransaction) context.lookup("java:comp/UserTransaction");
+//        utx.begin();
         final Tooth merge = entityManager.merge(tooth);
         entityManager.lock(merge, LockModeType.NONE);
         final Tooth mergeResult2 = entityManager.merge(merge);
-        utx.commit();
+//        utx.commit();
         return mergeResult2;
     }
 
-    // WFLYEJB0034: EJB Invocation failed on component ToothService for method
-    // public void org.jesperancinha.jtd.jee.teeth.service.ToothService.updateToothJustMerge(org.jesperancinha.jtd.jee.teeth.domain.Tooth):
-    // javax.ejb.EJBException: javax.persistence.TransactionRequiredException:
-    // WFLYJPA0060: Transaction is required to perform this operation
-    // (either use a transaction or extended persistence context)
-    public void updateToothJustMerge(final Tooth tooth) {
-        entityManager.merge(tooth);
+    public Tooth updateToothJustMerge(final Tooth tooth) {
+       return entityManager.merge(tooth);
     }
 
     // WFLYEJB0034: EJB Invocation failed on component ToothService for method

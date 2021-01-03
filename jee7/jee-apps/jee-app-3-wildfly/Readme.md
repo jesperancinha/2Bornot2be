@@ -17,6 +17,7 @@ The apps under [jee-apps](..), cover lots of topics.
 For this app we cover:
 
 1. `@Entity` and `@Table`
+2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
 
 
 ## Run Arquillian tests
