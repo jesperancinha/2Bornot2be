@@ -18,7 +18,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
 
 public class Consolerizer {
 
-    private final static int TYPING_DEFAULT_MS = 10;
+    private final static int TYPING_DEFAULT_MS = 0;
     private final static int MAX_LINE_CHARS = 0;
     private final static int RAINBOW_LINE_CHARS = 10;
     private final static int TITLE_SPREAD = 100;
@@ -40,6 +40,20 @@ public class Consolerizer {
 
     public Consolerizer(int typingWait) {
         this.typingWait = typingWait;
+    }
+
+    public static void setupFastDefault() {
+        typingWaitGlobal = 0;
+        maxLineCharsGlobal = 100;
+        titleSpread = 100;
+        blackAndWhite = false;
+    }
+
+    public static void setupRetro() {
+        typingWaitGlobal = 10;
+        maxLineCharsGlobal = 0;
+        titleSpread = 100;
+        blackAndWhite = false;
     }
 
     public static Consolerizer createGreen() {

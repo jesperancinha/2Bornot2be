@@ -21,7 +21,7 @@ For this app we cover:
 3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
 4. `@OneToOne` The same rule applies as in point 3.
 5. `@Enumerated` JPA entities
-6. Abstract and final JPA entities
+6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
 
 ## Domains in detail
 

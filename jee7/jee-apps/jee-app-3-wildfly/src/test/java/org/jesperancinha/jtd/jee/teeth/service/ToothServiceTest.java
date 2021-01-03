@@ -57,6 +57,7 @@ public class ToothServiceTest {
     public void createTooth_whenGood_thenOk()
         throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
         NotSupportedException {
+        Consolerizer.setupFastDefault();
 
         final var tooth = new Tooth();
         final var uuid = UUID.randomUUID();
@@ -76,6 +77,13 @@ public class ToothServiceTest {
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
         assertEquals(jaw1.getUuid(), toothResult.getJaw()
             .getUuid());
+        Consolerizer.printMagentaGenericLn("from: https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html");
+        Consolerizer.printBrightMagentaGenericLn("The class must be annotated with the javax.persistence.Entity annotation.");
+        Consolerizer.printBrightMagentaGenericLn("The class must have a public or protected, no-argument constructor. The class may have other constructors.");
+        Consolerizer.printBrightMagentaGenericLn("The class must not be declared final. No methods or persistent instance variables must be declared final.");
+        Consolerizer.printBrightMagentaGenericLn("If an entity instance be passed by value as a detached object, such as through a session bean’s remote business interface, the class must implement the Serializable interface.");
+        Consolerizer.printBrightMagentaGenericLn("Entities may extend both entity and non-entity classes, and non-entity classes may extend entity classes.");
+        Consolerizer.printBrightMagentaGenericLn("Persistent instance variables must be declared private, protected, or package-private, and can only be accessed directly by the entity class’s methods. Clients must access the entity’s state through accessor or business methods.");
     }
 
     @Test(expected = EJBException.class)
