@@ -9,6 +9,9 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jesperancinha.console.consolerizer.ConColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.Resources;
+import org.jesperancinha.jtd.jee.teeth.domain.AbstractToothType;
+import org.jesperancinha.jtd.jee.teeth.domain.FinalToothType;
+import org.jesperancinha.jtd.jee.teeth.domain.InterfaceToothType;
 import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
 import org.jesperancinha.jtd.jee.teeth.domain.Nerve;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
@@ -42,7 +45,8 @@ public class ToothServiceTest {
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(ToothType.class, Nerve.class, Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
+            .addClasses(FinalToothType.class, InterfaceToothType.class, AbstractToothType.class, ToothType.class,
+                Nerve.class, Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
                 UserTransaction.class, EntityManager.class, Consolerizer.class, ConColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
@@ -70,7 +74,8 @@ public class ToothServiceTest {
 
         Consolerizer.printOrangeGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
-        assertEquals(jaw1.getUuid(), toothResult.getJaw().getUuid());
+        assertEquals(jaw1.getUuid(), toothResult.getJaw()
+            .getUuid());
     }
 
     @Test(expected = EJBException.class)
