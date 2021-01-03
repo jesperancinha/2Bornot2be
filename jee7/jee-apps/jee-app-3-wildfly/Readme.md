@@ -18,7 +18,7 @@ For this app we cover:
 
 1. `@Entity` and `@Table`
 2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
-
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
 
 ## Run Arquillian tests
 

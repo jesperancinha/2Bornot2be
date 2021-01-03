@@ -9,8 +9,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jesperancinha.console.consolerizer.ConColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.Resources;
-import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
-import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
+import org.jesperancinha.jtd.jee.teeth.domain2.Tooth;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -29,15 +28,15 @@ import java.util.UUID;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
-public class ToothServiceTest {
+public class ToothService2Test {
 
     @Inject
-    ToothService toothService;
+    ToothService2 toothService;
 
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Jaw.class, ToothService.class, Tooth.class, Resources.class, UserTransaction.class, EntityManager.class,
+            .addClasses(ToothService2.class, Tooth.class, Resources.class, UserTransaction.class, EntityManager.class,
                 Consolerizer.class, ConColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
@@ -45,7 +44,7 @@ public class ToothServiceTest {
     }
 
     @Test
-    public void createTooth_whenGood_thenOk()
+    public void findTooth()
         throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
         NotSupportedException {
         final var tooth = new Tooth();

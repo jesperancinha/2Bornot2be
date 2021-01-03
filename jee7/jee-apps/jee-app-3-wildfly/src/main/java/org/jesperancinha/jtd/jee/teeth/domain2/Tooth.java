@@ -1,34 +1,21 @@
-package org.jesperancinha.jtd.jee.teeth.domain;
+package org.jesperancinha.jtd.jee.teeth.domain2;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
-@Entity
-@Table
+@Entity(name = "tooth2")
+@Table(name = "tooth2")
 public class Tooth {
-
-    private UUID uuid;
-
-    private Jaw jaw;
-
-    @ManyToOne
-    public Jaw getJaw() {
-        return jaw;
-    }
-
-    public void setJaw(Jaw jaw) {
-        this.jaw = jaw;
-    }
 
     @Id
     @Column
     @NotNull
+    private UUID uuid;
+
     public UUID getUuid() {
         return uuid;
     }

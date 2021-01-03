@@ -1,14 +1,12 @@
-package org.jesperancinha.jtd.jee.teeth.domain;
+package org.jesperancinha.jtd.jee.teeth.domain2;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -16,33 +14,14 @@ import java.util.UUID;
  * {@link Entity}, is responsible for the entity name in named queries
  * {@link Table}, is the table name in the databases
  */
-@Entity
-@Table
+@Entity(name = "jaw2")
+@Table(name = "jaw2")
 public class Jaw {
-
-    private UUID uuid;
-
-    @Column
-    private List<Tooth> toothList;
-
-    @OneToMany
-    public List<Tooth> getToothList() {
-        return toothList;
-    }
-
-    public void setToothList(List<Tooth> toothList) {
-        this.toothList = toothList;
-    }
 
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
-    public UUID getUuid() {
-        return uuid;
-    }
+    private UUID uuid;
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
 }
-
