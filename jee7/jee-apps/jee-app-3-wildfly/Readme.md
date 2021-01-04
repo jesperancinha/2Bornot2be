@@ -25,6 +25,7 @@ For this app we cover:
 7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
 8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
 9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
+10. `@TransactionAttribute` and `TransactionAttributeType`
 
 ## Domains in detail
 
@@ -35,11 +36,13 @@ For this app we cover:
 ## Test Endpoints
 
 1. http://localhost:8080/jee-app-3-wildfly/periodontitis - Passivation Exercise
-2. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
-3. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
-4. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
-5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
-6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
+2. http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1 - Passivation Exercise
+3. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
+4. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
+5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
+6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
+7. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
+8. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/tx/all - Transaction type
 
 ## Run Arquillian tests
 
@@ -105,6 +108,7 @@ mvn clean install -Parq-wildfly-managed
 
 -   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 -   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
+-   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
 
 ## About me 👨🏽‍💻🚀
 
