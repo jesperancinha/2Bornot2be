@@ -23,12 +23,19 @@ For this app we cover:
 5. `@Enumerated` JPA entities
 6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
 7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
+8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
 
 ## Domains in detail
 
 -   [Domain](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
 -   [Domain1](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain1) - TransactionManagementType.BEAN
 -   [Domain2](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain2) - TransactionManagementType.CONTAINER
+
+## Test Endpoints
+
+1. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all
+2. http://localhost:8080/jee-app-3-wildfly/periodontitis
+3. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all
 
 ## Run Arquillian tests
 

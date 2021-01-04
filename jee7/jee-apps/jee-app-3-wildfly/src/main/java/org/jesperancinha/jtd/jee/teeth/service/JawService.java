@@ -7,6 +7,7 @@ import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)

@@ -1,5 +1,7 @@
 package org.jesperancinha.jtd.jee.teeth.domain;
 
+import java.io.Serializable;
+
 public enum ToothType {
     INCISOR,
     CANINE,

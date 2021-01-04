@@ -15,7 +15,9 @@ import javax.transaction.HeuristicRollbackException;
 import javax.transaction.NotSupportedException;
 import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
+import javax.transaction.Transactional;
 import javax.transaction.UserTransaction;
+import java.util.List;
 import java.util.UUID;
 
 @Stateless
@@ -30,6 +32,10 @@ public class ToothService {
     // from ResourceInjectionAnnotationParsingProcessor: https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed
     public Tooth findTooth(UUID uuid) {
         return entityManager.find(Tooth.class, uuid);
+    }
+
+    public List<Tooth> findAll(){
+        return entityManager.createQuery("from Tooth").getResultList();
     }
 
     public Tooth updateItRight(final Tooth tooth)

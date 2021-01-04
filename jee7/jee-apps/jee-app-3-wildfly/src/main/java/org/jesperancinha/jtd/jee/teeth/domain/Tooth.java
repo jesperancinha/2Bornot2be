@@ -4,16 +4,18 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Table
-public class Tooth {
+public class Tooth  {
 
     private UUID uuid;
 
@@ -31,7 +33,7 @@ public class Tooth {
 
 //    private InterfaceToothType interfaceToothType;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     public Jaw getJaw() {
         return jaw;
     }
@@ -66,7 +68,7 @@ public class Tooth {
     //    not allowed on a @OneToOne property:
     //    org.jesperancinha.jtd.jee.teeth.domain.Tooth.nerve"}}}}
     // @Column
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     public Nerve getNerve() {
         return nerve;
     }
@@ -93,7 +95,7 @@ public class Tooth {
         this.nerveHit = nerveHit;
     }
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     public AbstractToothType getAbstractToothType() {
         return abstractToothType;
     }
@@ -102,7 +104,7 @@ public class Tooth {
         this.abstractToothType = abstractToothType;
     }
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     public FinalToothType getFinalToothType() {
         return finalToothType;
     }
