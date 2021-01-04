@@ -77,7 +77,7 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 -   [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the library needed for the previous adapter.
 -   [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP Webservice.
 
-### jee-app-3-wildfly
+### jee-app-3-wildfly - A lesson on teeth health and the odd cases
 
 #### Subjects
 
