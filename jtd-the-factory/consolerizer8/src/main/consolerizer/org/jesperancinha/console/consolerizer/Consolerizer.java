@@ -17,6 +17,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
 
 public class Consolerizer {
@@ -171,7 +172,7 @@ public class Consolerizer {
     }
 
     public static void printRedGeneric(String text, Object... args) {
-        System.out.print("\033[0;31m");
+        printColor(RED);
         printPrivateText(text, args);
     }
 
@@ -180,7 +181,7 @@ public class Consolerizer {
     }
 
     public static void printRedGeneric(String text) {
-        System.out.print("\033[0;31m");
+        printColor(RED);
         printPrivateText(text);
     }
 

@@ -24,6 +24,7 @@ For this app we cover:
 6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
 7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
 8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
+9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
 
 ## Domains in detail
 
@@ -33,9 +34,12 @@ For this app we cover:
 
 ## Test Endpoints
 
-1. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all
-2. http://localhost:8080/jee-app-3-wildfly/periodontitis
-3. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all
+1. http://localhost:8080/jee-app-3-wildfly/periodontitis - Passivation Exercise
+2. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
+3. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
+4. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
+5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
+6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
 
 ## Run Arquillian tests
 
