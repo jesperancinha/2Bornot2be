@@ -5,14 +5,17 @@ import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
 
@@ -23,6 +26,7 @@ public class Consolerizer {
     private final static int RAINBOW_LINE_CHARS = 10;
     private final static int TITLE_SPREAD = 100;
     private final static ConColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
+    private static ConColor currentColor;
 
     private int typingWait;
 
@@ -94,12 +98,12 @@ public class Consolerizer {
     }
 
     public static void printBlueGeneric(String text) {
-        System.out.print(BLUE.getConsoleColor());
+        printColor(BLUE);
         printPrivateText(text);
     }
 
     public static void printBlueGeneric(String text, Object... args) {
-        System.out.print(BLUE.getConsoleColor());
+        printColor(BLUE);
         printPrivateText(text, args);
     }
 
@@ -115,12 +119,12 @@ public class Consolerizer {
     }
 
     public static void printMagentaGeneric(Object text) {
-        System.out.print(MAGENTA.getConsoleColor());
+        printColor(MAGENTA);
         printPrivateText(text.toString());
     }
 
     public static void printMagentaGeneric(String text, Object... args) {
-        System.out.print(MAGENTA.getConsoleColor());
+        printColor(MAGENTA);
         printPrivateText(text, args);
     }
 
@@ -135,12 +139,12 @@ public class Consolerizer {
     }
 
     public static void printBrightMagentaGeneric(Object text) {
-        System.out.print(BRIGHT_MAGENTA.getConsoleColor());
+        printColor(BRIGHT_MAGENTA);
         printPrivateText(text.toString());
     }
 
     public static void printBrightMagentaGeneric(String text, Object... args) {
-        System.out.print(BRIGHT_MAGENTA.getConsoleColor());
+        printColor(BRIGHT_MAGENTA);
         printPrivateText(text, args);
     }
 
@@ -149,7 +153,7 @@ public class Consolerizer {
     }
 
     public static void printGreenGeneric(Object text) {
-        System.out.print(ConColor.GREEN.getConsoleColor());
+        printColor(GREEN);
         printPrivateText(text.toString());
     }
 
@@ -158,7 +162,7 @@ public class Consolerizer {
     }
 
     public static void printGreenGeneric(String text, Object... args) {
-        System.out.print(ConColor.GREEN.getConsoleColor());
+        printColor(GREEN);
         printPrivateText(text, args);
     }
 
@@ -192,7 +196,7 @@ public class Consolerizer {
     }
 
     public static void printOrangeGeneric(String text) {
-        System.out.print(ConColor.ORANGE.getConsoleColor());
+        printColor(ConColor.ORANGE);
         printPrivateText(text);
     }
 
@@ -206,22 +210,22 @@ public class Consolerizer {
     }
 
     public static void printOrangeGeneric(String text, Object... args) {
-        System.out.print(ConColor.ORANGE.getConsoleColor());
+        printColor(ConColor.ORANGE);
         printPrivateText(text, args);
     }
 
     public static void printYellowGeneric(Object text) {
-        System.out.print(ConColor.YELLOW.getConsoleColor());
+        printColor(ConColor.YELLOW);
         printPrivateText(text.toString());
     }
 
     public static void printYellowGeneric(String text, Object... args) {
-        System.out.print(ConColor.YELLOW.getConsoleColor());
+        printColor(ConColor.YELLOW);
         printPrivateText(text, args);
     }
 
     public void printColorText(final ConColor conColor, String text) {
-        System.out.print(conColor.getConsoleColor());
+        printColor(conColor);
         printPrivateText(text);
     }
 
@@ -254,15 +258,14 @@ public class Consolerizer {
     }
 
     public static void printBrightCyanGeneric(Object text) {
-        System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
+        printColor(BRIGHT_CYAN);
         printPrivateText(text.toString());
     }
 
     public static void printBrightCyanGeneric(String text, Object... args) {
-        System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
+        printColor(BRIGHT_CYAN);
         printPrivateText(text, args);
     }
-
 
     public static void printWhiteGenericLn(final String text, final Object... args) {
         printWhiteGeneric(text.concat("\n"), args);
@@ -273,45 +276,45 @@ public class Consolerizer {
     }
 
     public static void printWhiteGeneric(Object text) {
-        System.out.print(WHITE.getConsoleColor());
+        printColor(WHITE);
         printPrivateText(text.toString());
     }
 
     public static void printWhiteGeneric(String text, Object... args) {
-        System.out.print(WHITE.getConsoleColor());
+        printColor(WHITE);
         printPrivateText(text, args);
     }
 
     public void printBrightCyan(Object text) {
-        System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
+        printColor(BRIGHT_CYAN);
         printPrivateText(text.toString());
     }
 
     public void printBrightCyan(String text, Object... args) {
-        System.out.print(ConColor.BRIGHT_CYAN.getConsoleColor());
+        printColor(BRIGHT_CYAN);
         printPrivateText(text, args);
     }
 
     public void printText(String text) {
-        System.out.print(conColor.getConsoleColor());
+        printColor(conColor);
         printPrivateText(text);
     }
 
     public void printText(String text, Object... vars) {
-        System.out.print(conColor.getConsoleColor());
+        printColor(conColor);
         printPrivateText(text, vars);
     }
 
     private static void printPrivateText(String text) {
         if (blackAndWhite) {
-            System.out.print(WHITE.getConsoleColor());
+            printColor(WHITE);
         }
         printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal);
     }
 
     private static void printPrivateText(String text, Object... vars) {
         if (blackAndWhite) {
-            System.out.print(WHITE.getConsoleColor());
+            printColor(WHITE);
         }
         if (vars instanceof String[][]) {
             printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal,
@@ -383,56 +386,75 @@ public class Consolerizer {
     private static void printPrivateText(String text, int typingWait, int maxLineChars) {
         String printText = text;
         if (maxLineChars > 0 && printText.length() > maxLineChars) {
-            printText = getParagraphFormat(maxLineChars, printText);
-        }
-
-        for (int i = 0; i < printText.length(); i++) {
-            if (typingWait > 0) {
-                try {
-                    sleep(typingWait);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+            printPerLine(printText, typingWait, maxLineChars);
+        } else {
+            printColor(currentColor);
+            for (int i = 0; i < printText.length(); i++) {
+                if (typingWait > 0) {
+                    try {
+                        sleep(typingWait);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+                System.out.print(printText.charAt(i));
             }
-            System.out.print(printText.charAt(i));
+            if (!text.contains("\n")) {
+                System.out.print(" ");
+            }
+            System.out.print(WHITE.getConsoleColor());
         }
-        if (!text.contains("\n")) {
-            System.out.print(" ");
-        }
-        System.out.print(WHITE.getConsoleColor());
     }
 
-    private static String getParagraphFormat(int maxLineChars, String printText) {
-        return Arrays.stream(printText.split("\n"))
+    private static void printPerLine(String printText, int typingWait, int maxLineChars) {
+        final List<List<String>> collect = Arrays.stream(printText.split("\n"))
             .map(paragraph -> Arrays.stream(getSplit(maxLineChars, paragraph))
                 .map(Consolerizer::trim)
-                .collect(joining("\n")))
-            .collect(joining("\n"))
-            .concat("\n");
-
+                .collect(Collectors.toList()))
+            .collect(Collectors.toList());
+        for (List<String> list : collect) {
+            for (String line : list) {
+                Arrays.stream(line.split("\n"))
+                    .forEach(subLine -> {
+                        for (int i = 0; i < subLine.length(); i++) {
+                            if (typingWait > 0) {
+                                try {
+                                    sleep(typingWait);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            printColor(currentColor);
+                            System.out.print(subLine.charAt(i));
+                        }
+                        printNewLine();
+                    });
+            }
+        }
     }
 
     private static void printPrivateText(String text, int typingWait, int maxLineChars, final Object... vars) {
         String newText = String.format(text, vars);
         String printText = newText;
         if (maxLineChars > 0) {
-            printText = getParagraphFormat(maxLineChars, printText);
-        }
+            printPerLine(printText, typingWait, maxLineChars);
+        } else {
 
-        for (int i = 0; i < printText.length(); i++) {
-            if (typingWait > 0) {
-                try {
-                    sleep(typingWait);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+            for (int i = 0; i < printText.length(); i++) {
+                if (typingWait > 0) {
+                    try {
+                        sleep(typingWait);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+                System.out.print(printText.charAt(i));
             }
-            System.out.print(printText.charAt(i));
+            if (!text.contains("\n")) {
+                System.out.print(" ");
+            }
+            System.out.print(WHITE.getConsoleColor());
         }
-        if (!text.contains("\n")) {
-            System.out.print(" ");
-        }
-        System.out.print(WHITE.getConsoleColor());
     }
 
     private static String[] getSplit(int maxLineChars, String printText) {
@@ -452,13 +474,13 @@ public class Consolerizer {
         printRainbowTitle(title.toString()
             .trim());
         System.out.print("\n");
-        System.out.print(WHITE.getConsoleColor());
+        printColor(WHITE);
     }
 
     public static void printRainbowTitleLn(final String title, final Object... objects) {
         printRainbowTitle(String.format(title, objects));
         System.out.print("\n");
-        System.out.print(WHITE.getConsoleColor());
+        printColor(WHITE);
     }
 
     public static void printRainbowTitle(final String title) {
@@ -475,7 +497,7 @@ public class Consolerizer {
                 k++;
             }
         }
-        System.out.print(WHITE.getConsoleColor());
+        printColor(WHITE);
     }
 
     public static void printRainbowLn(final char c, int nchars) {
@@ -537,5 +559,10 @@ public class Consolerizer {
         printRedGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
         printRedGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
         System.exit(1);
+    }
+
+    private static void printColor(ConColor conColor) {
+        currentColor = conColor;
+        System.out.print(conColor.getConsoleColor());
     }
 }

@@ -22,7 +22,7 @@ For this app we cover:
 4. `@OneToOne` The same rule applies as in point 3.
 5. `@Enumerated` JPA entities
 6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
-
+    
 ## Domains in detail
 
 -   [Domain](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
