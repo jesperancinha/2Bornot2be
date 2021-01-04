@@ -22,7 +22,8 @@ For this app we cover:
 4. `@OneToOne` The same rule applies as in point 3.
 5. `@Enumerated` JPA entities
 6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
-    
+7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
+
 ## Domains in detail
 
 -   [Domain](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
@@ -37,6 +38,50 @@ sdk use java 11.0.9.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
+## Troubleshooting
+
+### EJB sub system
+
+```xml
+<subsystem xmlns="urn:jboss:domain:ejb3:5.0">
+    ... 
+</subsystem>
+```
+
+#### Bean session timeout [configuration](https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform/6.2/html/administration_and_configuration_guide/set_default_session_bean_access_timeout_values1)
+
+```xml 
+<session-bean>
+    <stateless>
+        <bean-instance-pool-ref pool-name="slsb-strict-max-pool"/>
+    </stateless>
+    <stateful default-access-timeout="5000" cache-ref="simple"/>
+    <singleton default-access-timeout="5000"/>
+</session-bean>
+```
+
+#### Passivation [configuration](http://www.mastertheboss.com/jboss-server/jboss-cluster/jboss-as-7-custom-caches-configuration)
+
+1. Caches
+```xml
+<caches>
+    <cache name="simple" aliases="NoPassivationCache"/>
+    <cache name="passivating" passivation-store-ref="file" aliases="SimpleStatefulCache"/>
+    <cache name="clustered" passivation-store-ref="infinispan" aliases="StatefulTreeCache"/>
+    <cache name="custom-cache" passivation-store-ref="custom-store"/>
+</caches>
+```
+
+2. Passivation Stores
+
+```xml
+<passivation-stores>
+    <file-passivation-store name="file" idle-timeout="30" idle-timeout-unit="SECONDS"/>
+    <file-passivation-store name="custom-store" idle-timeout="30" idle-timeout-unit="SECONDS" max-size="500"/>
+    <cluster-passivation-store name="infinispan" idle-timeout="30" idle-timeout-unit="SECONDS" cache-container="ejb"/>
+</passivation-stores>
+```
+
 ## Context References
 
 -   [Mandible by Wikipedia](https://en.wikipedia.org/wiki/Mandible)
@@ -47,6 +92,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 -   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 
 ## About me 👨🏽‍💻🚀
