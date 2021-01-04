@@ -79,6 +79,19 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 ### jee-app-3-wildfly
 
+#### Subjects
+
+1. `@Entity` and `@Table`
+2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
+4. `@OneToOne` The same rule applies as in point 3.
+5. `@Enumerated` JPA entities
+6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
+7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
+8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
+
+#### Modules
+
 -   [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases (coming soon...)
 
 ## References
