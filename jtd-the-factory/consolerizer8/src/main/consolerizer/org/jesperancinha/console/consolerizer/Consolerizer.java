@@ -426,7 +426,11 @@ public class Consolerizer {
                                 }
                             }
                             printColor(currentColor);
-                            System.out.print(subLine.charAt(i));
+                            final char c = subLine.charAt(i);
+                            System.out.print(c);
+                            if(c == '\n'){
+                                printColor(currentColor);
+                            }
                         }
                         printNewLine();
                     });
@@ -440,7 +444,6 @@ public class Consolerizer {
         if (maxLineChars > 0) {
             printPerLine(printText, typingWait, maxLineChars);
         } else {
-
             for (int i = 0; i < printText.length(); i++) {
                 if (typingWait > 0) {
                     try {
@@ -449,7 +452,12 @@ public class Consolerizer {
                         e.printStackTrace();
                     }
                 }
-                System.out.print(printText.charAt(i));
+
+                final char c = printText.charAt(i);
+                System.out.print(c);
+                if(c == '\n'){
+                    printColor(currentColor);
+                }
             }
             if (!text.contains("\n")) {
                 System.out.print(" ");
