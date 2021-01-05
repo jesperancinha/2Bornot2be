@@ -1,4 +1,4 @@
-# jee-app-3-wildfly
+# jee-app-2-1-wildfly
 
 ---
 
