@@ -17,6 +17,7 @@ The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
+2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
 
 ## Run Arquillian tests
 
@@ -35,7 +36,8 @@ These two entries need to be added to node `urn:jboss:domain:messaging-activemq:
 1. Queue
 
 ```xml
-<jms-queue name="LyricsQueue" entries="java:/jms/LyricsQueue" durable="yes"/>
+<jms-queue name="LyricsQueue" entries="java:/jms/LyricsQueue" durable="true"/>
+<jms-queue name="LyricsReceiptQueue" entries="java:/jms/LyricsReceiptQueue" durable="true"/>
 ```
 
 2. Queue Factory
@@ -73,6 +75,7 @@ These two entries need to be added to node `urn:jboss:domain:messaging-activemq:
 
 ## References
 
+-   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
 -   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
 -   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
 -   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)

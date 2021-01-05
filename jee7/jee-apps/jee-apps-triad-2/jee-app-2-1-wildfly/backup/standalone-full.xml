@@ -441,6 +441,7 @@
                 <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
                 <jms-queue name="TestQueue" entries="java:jboss/activemq/queue/TestQueue"/>
                 <jms-queue name="LyricsQueue" entries="java:/jms/LyricsQueue" durable="true"/>
+                <jms-queue name="LyricsReceiptQueue" entries="java:/jms/LyricsReceiptQueue" durable="true"/>
                 <connection-factory name="LyricsQueueFactory" entries="java:/jms/LyricsQueueFactory" connectors="in-vm"/>
                 <connection-factory name="MyConnectionFactory" entries="jjava:/jms/TestQueueFactory" connectors="in-vm"/>
                 <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactoryLove" connectors="in-vm"/>

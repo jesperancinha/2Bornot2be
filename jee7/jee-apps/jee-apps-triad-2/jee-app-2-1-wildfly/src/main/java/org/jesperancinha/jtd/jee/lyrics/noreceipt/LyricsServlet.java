@@ -1,4 +1,6 @@
-package org.jesperancinha.jtd.jee.lyrics;
+package org.jesperancinha.jtd.jee.lyrics.noreceipt;
+
+import org.jesperancinha.jtd.jee.lyrics.service.LyricsService;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;

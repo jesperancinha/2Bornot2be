@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.lyrics;
+package org.jesperancinha.jtd.jee.lyrics.service;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
