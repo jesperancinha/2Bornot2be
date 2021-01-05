@@ -30,7 +30,7 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 ## Applications
 
-### jee-app-1-wildfly - Boy Bands in the 90's
+### [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Boy Bands in the 90's
 
 #### Subjects
 
@@ -38,7 +38,7 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 #### Modules
 
--   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
+-   [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
 
 ### jee-app-2-wildfly
 
