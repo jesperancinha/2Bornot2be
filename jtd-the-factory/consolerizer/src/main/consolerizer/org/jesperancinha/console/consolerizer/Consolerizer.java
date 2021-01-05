@@ -398,7 +398,12 @@ public class Consolerizer {
                         e.printStackTrace();
                     }
                 }
-                System.out.print(printText.charAt(i));
+                printColor(currentColor);
+                final char c = printText.charAt(i);
+                System.out.print(c);
+                if(c == '\n'){
+                    printColor(currentColor);
+                }
             }
             if (!text.contains("\n")) {
                 System.out.print(" ");
