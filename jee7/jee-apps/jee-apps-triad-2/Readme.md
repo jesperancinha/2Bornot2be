@@ -1,4 +1,4 @@
-# jee-apps-triad-1
+# jee-apps-triad-2
 
 ---
 
@@ -30,73 +30,27 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 ## Applications
 
-### jee-app-1-wildfly - Pop stars list, music, lyrics and history
+### jee-app-1-wildfly - Boy Bands in the 90's
 
 #### Subjects
 
-1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
-2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
-3. `@ApplicationScoped`
-4. JSF (Java Server Faces)
-5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
-6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
-7. `@Stateful`, `@Alternative`
-8. `@Model`
-9. `<ui:repeat`, `<h:link` and `<f:param`
-10. `<h:dataTable`, `<h:column` and `<f:facets`
-11. `<h:outputFormat ` and `<f:param`
-12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
-13. Arquillian JUnit tests
-14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
-15. `UserTransaction`, `Event<T>`
-16. `FacesContext`
-17. `@Path`, `@ApplicationPath`, `Application`
-18. `@Observes` and `Reception.ALWAYS`
+1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
 
 #### Modules
 
 -   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
 
-### jee-app-2-wildfly - Kitchen Herbs and History
+### jee-app-2-wildfly
 
 #### Subjects
 
-1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
-2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
-3. `ServletContext`, `HttpSession` and `doGet`
-4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
-5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
-6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
-7. Much about `@WebServiceRef`
-8. `@WebServlet`, `@WebServiceRef`, `@HandlerChain`, `@WebServiceClient`, SOAP WS - JAX-WS
-
 #### Modules
 
--   [jee-app-2-wildfly (WAR application)](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
--   [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module.
--   [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the library needed for the previous adapter.
--   [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP Webservice.
-
-### jee-app-3-wildfly - A lesson on teeth health and the odd cases
+### jee-app-3-wildfly
 
 #### Subjects
 
-1. `@Entity` and `@Table`
-2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
-3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
-4. `@OneToOne` The same rule applies as in point 3.
-5. `@Enumerated` JPA entities
-6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
-7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
-8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
-9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
-10. `@TransactionAttribute` and `TransactionAttributeType`
-11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
-12. `Rollback`
-
 #### Modules
-
--   [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases
 
 ## References
 
