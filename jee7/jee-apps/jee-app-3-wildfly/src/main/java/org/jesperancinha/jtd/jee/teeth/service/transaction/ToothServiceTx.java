@@ -15,6 +15,8 @@ import javax.persistence.TransactionRequiredException;
 import javax.transaction.TransactionSynchronizationRegistry;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -24,6 +26,12 @@ public class ToothServiceTx {
 
     @PersistenceContext(unitName = "primary", type = PersistenceContextType.TRANSACTION)
     private EntityManager entityManager;
+
+    private int a = 10;
+
+    public int getA() {
+        return a;
+    }
 
     @Resource
     TransactionSynchronizationRegistry tsr;
@@ -44,6 +52,18 @@ public class ToothServiceTx {
 
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public Tooth addTootRequired(final Tooth tooth) {
+        return mergeTooth(tooth);
+    }
+
+    @TransactionAttribute(TransactionAttributeType.REQUIRED)
+    public Tooth addTootRequiredRollback(final Tooth tooth) {
+        this.a = 1000;
+        printMagentaGenericLn("We just made a=%d", this.a);
+        throw new RuntimeException();
+    }
+    @TransactionAttribute(TransactionAttributeType.REQUIRED)
+    public Tooth addTootRequiredNoRollback(final Tooth tooth) {
+        this.a = 1000;
         return mergeTooth(tooth);
     }
 

@@ -27,7 +27,7 @@ For this app we cover:
 9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
 10. `@TransactionAttribute` and `TransactionAttributeType`
 11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
-
+12. `Rollback`
 ## Domains in detail
 
 -   [Domain](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
@@ -107,6 +107,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
 -   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 -   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 -   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)

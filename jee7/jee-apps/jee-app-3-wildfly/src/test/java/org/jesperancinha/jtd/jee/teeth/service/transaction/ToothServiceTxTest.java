@@ -16,6 +16,7 @@ import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
 import org.jesperancinha.jtd.jee.teeth.domain.Nerve;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 import org.jesperancinha.jtd.jee.teeth.domain.ToothType;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -26,7 +27,10 @@ import javax.ejb.EJBTransactionRequiredException;
 import javax.persistence.EntityManager;
 import javax.transaction.UserTransaction;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @RunWith(Arquillian.class)
 public class ToothServiceTxTest extends TestCase {
@@ -46,6 +50,12 @@ public class ToothServiceTxTest extends TestCase {
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
             .addAsWebInfResource("test-ds.xml");
+    }
+
+    @Before
+    public void setUp(){
+        printBlueGenericLn("References");
+        printBlueGenericLn("- https://blog.frankel.ch/transaction-management-ejb3-vs-spring/");
     }
 
     @Test
@@ -74,7 +84,7 @@ public class ToothServiceTxTest extends TestCase {
     }
 
     @Test(expected = EJBTransactionRequiredException.class)
-    public void addToothMandatory_whenNoTransaction_thenFail() throws Exception {
+    public void addToothMandatory_whenNoTransaction_thenFail() {
         toothService.addToothMandatory(createTooth());
         toothService.addToothMandatory(createTooth());
     }
@@ -87,7 +97,27 @@ public class ToothServiceTxTest extends TestCase {
         userTransaction.commit();
         printGreenGenericLn("Notice that the transaction remains the same!");
         printGreenGenericLn("REQUIRED in this case means that you need a transaction when merging an object");
-        printGreenGenericLn("REQUIRED is not MANDATORY in the sense that a transaction if created if one does not exist");
+        printGreenGenericLn(
+            "REQUIRED is not MANDATORY in the sense that a transaction if created if one does not exist");
+    }
+
+    @Test
+    public void addToothRequiredRollback() {
+        try {
+            toothService.addTootRequiredRollback(createTooth());
+        } catch (Exception e) {
+            printRedGenericLn("This is expected! -> %s", e.getMessage());
+
+        }
+        printOrangeGenericLn(toothService.getA());
+        printGreenGenericLn("Note that a has been rollback to its initial value of 10 before the transaction");
+    }
+
+    @Test
+    public void addToothRequiredNoRollback() {
+        toothService.addTootRequiredNoRollback(createTooth());
+        printOrangeGenericLn(toothService.getA());
+        printGreenGenericLn("Since no rollback occured, this means that a is changed.");
     }
 
     @Test
@@ -96,7 +126,8 @@ public class ToothServiceTxTest extends TestCase {
         toothService.addTootRequired(createTooth());
         printGreenGenericLn("Notice that the transaction remains the same!");
         printGreenGenericLn("REQUIRED in this case means that you need a transaction when merging an object");
-        printGreenGenericLn("REQUIRED is not MANDATORY in the sense that a transaction if created if one does not exist");
+        printGreenGenericLn(
+            "REQUIRED is not MANDATORY in the sense that a transaction if created if one does not exist");
     }
 
     @Test
@@ -106,6 +137,15 @@ public class ToothServiceTxTest extends TestCase {
         toothService.addTootRequiresNew(createTooth());
         userTransaction.commit();
         printGreenGenericLn("Notice that the transactions are different per creation");
+    }
+
+    @Test
+    public void addToothRequiresNew_whenNoTransaction_thenStartNew() throws Exception {
+        toothService.addTootRequiresNew(createTooth());
+        toothService.addTootRequiresNew(createTooth());
+        printGreenGenericLn("Notice that the transactions are different per creation");
+        printGreenGenericLn("In this case REQUIRES_NEW works just like REQUIRED");
+        printGreenGenericLn("Only difference is that a new transaction is created everytime.");
     }
 
     @Test

@@ -91,6 +91,8 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
 9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
 10. `@TransactionAttribute` and `TransactionAttributeType`
+11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
+12. `Rollback`
 
 #### Modules
 
