@@ -18,6 +18,7 @@ For this app we cover:
 
 1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
 2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
+3. `<alternatives>`, `@Alternative`, `@Default`
 
 ## Run Arquillian tests
 

@@ -35,6 +35,8 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 #### Subjects
 
 1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
+2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
+3. `<alternatives>`, `@Alternative`, `@Default`
 
 #### Modules
 
