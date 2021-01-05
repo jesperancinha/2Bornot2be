@@ -16,7 +16,7 @@
 
 ## Exercise
 
-The apps under [jee-apps](..), cover lots of topics.
+The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
@@ -51,7 +51,7 @@ java -version
 Run this command first <b>WITHOUT</b> the server running:
 
 ```bash
-cp backup/standalone-full.xml ../wildfly-16.0.0.Final/standalone/configuration/
+cp backup/standalone-full.xml ../../wildfly-16.0.0.Final/standalone/configuration/
 ```
 
 Be sure to run the automated installation having the sever <b>RUNNING</b>:
@@ -60,7 +60,7 @@ Be sure to run the automated installation having the sever <b>RUNNING</b>:
 installAll.sh
 ```
 
-Also make sure that you have read the index page of [jee-apps](..) and that you have previously installed [Wildfly 16](../installWildFly.sh).
+Also make sure that you have read the index page of [jee-apps](../..) and that you have previously installed [Wildfly 16](../../installWildFly.sh).
 
 Afterwards, we still need to configure a messaging system.
 There are many vendors out there.
@@ -68,14 +68,14 @@ We randomly pick [activeMQ](http://activemq.apache.org/).
 Go to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html).
 Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar) file.
 Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.10.0/activemq-rar-5.10.0.rar) file.
-Copy that file into [deployments](../wildfly-16.0.0.Final/standalone/deployments):
+Copy that file into [deployments](../../../wildfly-16.0.0.Final/standalone/deployments):
 
 ```bash
 curl https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar --output activemq-rar-5.16.0.rar
-cp activemq-rar-5.16.0.rar ../wildfly-16.0.0.Final/standalone/deployments
+cp activemq-rar-5.16.0.rar ../../wildfly-16.0.0.Final/standalone/deployments
 ```
 
-Add the following subsystem to [standalone-full.xml](../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
+Add the following subsystem to [standalone-full.xml](../../../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
 ```xml
 <subsystem xmlns="urn:jboss:domain:resource-adapters:5.0">
 	<resource-adapters>
@@ -205,7 +205,7 @@ curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type:
 Installing applications in Application servers can be difficult.
 Although this isn't specific to Java Enterprise knowledge, it is necessary in order to make exercises.
 One place we always have to look at if problems arise is the standalone files.
-In our case we are running the [standalone-full.xml](./backup/standalone-full.xml) file.
+In our case we are running the [standalone-full.xml](backup/standalone-full.xml) file.
 Upon successful installation we should have these `deployments` at the end of the file:
 
 ```xml

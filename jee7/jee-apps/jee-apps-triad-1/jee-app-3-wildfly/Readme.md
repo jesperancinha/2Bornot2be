@@ -1,5 +1,4 @@
-# jee-app-2-wildfly-adapter
-## Technologies used
+# jee-app-3-wildfly
 
 ---
 
@@ -9,58 +8,43 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/iron-jacamar-50.png "IronJacamar")](http://www.ironjacamar.org/)
 
 ---
 
 ## Exercise
 
-The apps under [jee-apps](..), cover lots of topics.
+The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
-1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
-2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
-3. `ServletContext`, `HttpSession` and `doGet`
+1. `@Entity` and `@Table`
+2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
+4. `@OneToOne` The same rule applies as in point 3.
+5. `@Enumerated` JPA entities
+6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
+7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
+8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
+9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
+10. `@TransactionAttribute` and `TransactionAttributeType`
+11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
+12. `Rollback`
+## Domains in detail
 
-In this web application it is important to understand the basics of these:
+-   [Domain](src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
+-   [Domain1](src/main/java/org/jesperancinha/jtd/jee/teeth/domain1) - TransactionManagementType.BEAN
+-   [Domain2](src/main/java/org/jesperancinha/jtd/jee/teeth/domain2) - TransactionManagementType.CONTAINER
 
-1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
-2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
-3. JMS - Java Message Service
+## Test Endpoints
 
-This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
+1. http://localhost:8080/jee-app-3-wildfly/periodontitis - Passivation Exercise
+2. http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1 - Passivation Exercise
+3. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
+4. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
+5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
+6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
+7. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
+8. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/tx/all - Transaction type
 
-The theme of this discovery app is: <b>Kitchen Herbs and History</b>
-
-## How to run       
-
-This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
-
-```bash
-jenv local system
-sdk use java 11.0.9.hs-adpt 
-java -version
-```
-
-```bash
-mvn clean install
-mvn clean install -Prar rar:rar
-```
-
-Include the resulting rar in folder [rars](./rars) in your WildFly deployment.
-
-After the service is running and deployed you should be able to see pages and JSON's in these addresses:
-
-1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
-2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
-3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
-4. http://localhost:8080/jee-app-2-wildfly/app/herbs/connection
-
-You can also perform these post requests:
-
-```bash
-curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
-```
 ## Run Arquillian tests
 
 ```bash
@@ -69,33 +53,64 @@ sdk use java 11.0.9.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
-## Run Arquillian tests on Intellij
+## Troubleshooting
 
-Use Arquillian Managed and you should get a screen like this.
-All options should be the default ones.
+### EJB sub system
 
-![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
+```xml
+<subsystem xmlns="urn:jboss:domain:ejb3:5.0">
+    ... 
+</subsystem>
+```
+
+#### Bean session timeout [configuration](https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform/6.2/html/administration_and_configuration_guide/set_default_session_bean_access_timeout_values1)
+
+```xml 
+<session-bean>
+    <stateless>
+        <bean-instance-pool-ref pool-name="slsb-strict-max-pool"/>
+    </stateless>
+    <stateful default-access-timeout="5000" cache-ref="simple"/>
+    <singleton default-access-timeout="5000"/>
+</session-bean>
+```
+
+#### Passivation [configuration](http://www.mastertheboss.com/jboss-server/jboss-cluster/jboss-as-7-custom-caches-configuration)
+
+1. Caches
+```xml
+<caches>
+    <cache name="simple" aliases="NoPassivationCache"/>
+    <cache name="passivating" passivation-store-ref="file" aliases="SimpleStatefulCache"/>
+    <cache name="clustered" passivation-store-ref="infinispan" aliases="StatefulTreeCache"/>
+    <cache name="custom-cache" passivation-store-ref="custom-store"/>
+</caches>
+```
+
+2. Passivation Stores
+
+```xml
+<passivation-stores>
+    <file-passivation-store name="file" idle-timeout="30" idle-timeout-unit="SECONDS"/>
+    <file-passivation-store name="custom-store" idle-timeout="30" idle-timeout-unit="SECONDS" max-size="500"/>
+    <cluster-passivation-store name="infinispan" idle-timeout="30" idle-timeout-unit="SECONDS" cache-container="ejb"/>
+</passivation-stores>
+```
+
+## Context References
+
+-   [Mandible by Wikipedia](https://en.wikipedia.org/wiki/Mandible)
+-   [Tooth Decay](https://www.nidcr.nih.gov/health-info/tooth-decay/more-info#:~:text=Tooth%20decay%20(dental%20caries)%20is,a%20tooth%2C%20called%20a%20cavity.)
+-   [Wisdom teeth](https://www.webmd.com/oral-health/wisdom-teeth#1)
+-   [Wisdom tooh by Wikipedia](https://en.wikipedia.org/wiki/Wisdom_tooth)
+-   [Trigeminal Nerve Overview](https://www.healthline.com/human-body-maps/trigeminal-nerve)
 
 ## References
 
--   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
--   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
--   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
--   [JCA IronJacamar](http://www.ironjacamar.org/)
--   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
--   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
--   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
--   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
--   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
--   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
--   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
--   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
--   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
--   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
--   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
--   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
-
-##  Context references
+-   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
+-   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
+-   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
+-   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
 
 ## About me 👨🏽‍💻🚀
 

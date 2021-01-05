@@ -1,4 +1,5 @@
-# jee-app-1-wildfly
+# jee-app-2-wildfly-adapter
+## Technologies used
 
 ---
 
@@ -8,46 +9,28 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/iron-jacamar-50.png "IronJacamar")](http://www.ironjacamar.org/)
 
 ---
 
 ## Exercise
 
-The apps under [jee-apps](..), cover lots of topics.
+The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
-1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
-2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
-3. `@ApplicationScoped` 
-4. JSF (Java Server Faces)
-5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
-6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
-7. `@Stateful`, `@Alternative`
-8. `@Model`
-9. `<ui:repeat`, `<h:link` and `<f:param` 
-10. `<h:dataTable`, `<h:column` and `<f:facets` 
-11. `<h:outputFormat ` and `<f:param`
-12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
-13. Arquillian JUnit tests
-14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
-15. `UserTransaction`, `Event<T>`
-16. `FacesContext`
-17. `@Path`, `@ApplicationPath`, `Application`
-18. `@Observes` and `Reception.ALWAYS`
+1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
+2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
+3. `ServletContext`, `HttpSession` and `doGet`
 
 In this web application it is important to understand the basics of these:
 
-1. CDI -> Context Dependency Injection
-2. JSF -> Java Server Faces
-3. JTA -> Java Transaction API
-4. EJB -> Enterprise Java Bean
-5. Bean Validation
-6. Arquillian
-7. JAX - RS
+1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
+3. JMS - Java Message Service
 
 This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
-The theme of this discovery app is: <b>Pop stars list, music, lyrics and history</b>
+The theme of this discovery app is: <b>Kitchen Herbs and History</b>
 
 ## How to run       
 
@@ -55,29 +38,34 @@ This has been tested with Wildfly 16. Please install it and deploy this using yo
 
 ```bash
 jenv local system
-sdk use java 8.0.242.hs-adpt
+sdk use java 11.0.9.hs-adpt 
 java -version
 ```
 
+```bash
+mvn clean install
+mvn clean install -Prar rar:rar
+```
+
+Include the resulting rar in folder [rars](rars) in your WildFly deployment.
+
 After the service is running and deployed you should be able to see pages and JSON's in these addresses:
 
-1. http://localhost:8080/jee-app-1-wildfly/app/album/resource/1
-2. http://localhost:8080/jee-app-1-wildfly/app/album/resource/2
-3. http://localhost:8080/jee-app-1-wildfly/app/album/resource/3
-4. http://localhost:8080/jee-app-1-wildfly/app/album/resource/4
-5. http://localhost:8080/jee-app-1-wildfly/
+1. http://localhost:8080/jee-app-2-wildfly/app/herbs/parsley
+2. http://localhost:8080/jee-app-2-wildfly/herbs/prices
+3. http://localhost:8080/jee-app-2-wildfly/herbs/prices2
+4. http://localhost:8080/jee-app-2-wildfly/app/herbs/connection
 
-NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
-Remember to makes sure that you are making the build with `Java SE 8`.
-Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 11.
-However, this module ensures the study of `JEE7` with both.
-For the current module you are looking at, Java SE 8 is the one being used.
+You can also perform these post requests:
 
+```bash
+curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
+```
 ## Run Arquillian tests
 
 ```bash
 jenv local system
-sdk use java 8.0.242.hs-adpt
+sdk use java 11.0.9.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
@@ -86,10 +74,21 @@ mvn clean install -Parq-wildfly-managed
 Use Arquillian Managed and you should get a screen like this.
 All options should be the default ones.
 
-![alt text](docs/jee-app-1-wildfly-IntelliJ-test-config.png)
+![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
+-   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
+-   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
+-   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
+-   [JCA IronJacamar](http://www.ironjacamar.org/)
+-   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
+-   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
+-   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+-   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
+-   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+-   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
+-   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
 -   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
 -   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
 -   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
@@ -97,10 +96,6 @@ All options should be the default ones.
 -   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
 
 ##  Context references
-
--   [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
--   [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
--   [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
 
 ## About me 👨🏽‍💻🚀
 

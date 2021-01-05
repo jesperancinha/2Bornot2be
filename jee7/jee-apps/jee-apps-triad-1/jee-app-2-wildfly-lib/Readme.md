@@ -15,7 +15,7 @@
 
 ## Exercise
 
-The apps under [jee-apps](..), cover lots of topics.
+The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`

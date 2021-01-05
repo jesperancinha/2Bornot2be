@@ -1,4 +1,4 @@
-# jee-app-3-wildfly
+# jee-apps
 
 ---
 
@@ -11,10 +11,75 @@
 
 ---
 
-## Exercise
+## Prepare the environment
 
-The apps under [jee-apps](..), cover lots of topics.
-For this app we cover:
+1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
+2. Unpack the contents of that package to this root.
+
+This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
+
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
+The ones without any notice, are considered done, but they will be subject to improvements from time to time.
+
+You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
+
+```bash
+curl https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.tar.gz --output wildfly-16.0.0.Final.tar.gz
+tar -xvzf wildfly-16.0.0.Final.tar.gz
+```
+
+## Applications
+
+### jee-app-1-wildfly - Pop stars list, music, lyrics and history
+
+#### Subjects
+
+1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
+2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
+3. `@ApplicationScoped`
+4. JSF (Java Server Faces)
+5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
+6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
+7. `@Stateful`, `@Alternative`
+8. `@Model`
+9. `<ui:repeat`, `<h:link` and `<f:param`
+10. `<h:dataTable`, `<h:column` and `<f:facets`
+11. `<h:outputFormat ` and `<f:param`
+12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+13. Arquillian JUnit tests
+14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
+15. `UserTransaction`, `Event<T>`
+16. `FacesContext`
+17. `@Path`, `@ApplicationPath`, `Application`
+18. `@Observes` and `Reception.ALWAYS`
+
+#### Modules
+
+-   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
+
+### jee-app-2-wildfly - Kitchen Herbs and History
+
+#### Subjects
+
+1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
+2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
+3. `ServletContext`, `HttpSession` and `doGet`
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
+5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
+6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
+7. Much about `@WebServiceRef`
+8. `@WebServlet`, `@WebServiceRef`, `@HandlerChain`, `@WebServiceClient`, SOAP WS - JAX-WS
+
+#### Modules
+
+-   [jee-app-2-wildfly (WAR application)](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
+-   [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module.
+-   [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the library needed for the previous adapter.
+-   [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP Webservice.
+
+### jee-app-3-wildfly - A lesson on teeth health and the odd cases
+
+#### Subjects
 
 1. `@Entity` and `@Table`
 2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
@@ -28,89 +93,26 @@ For this app we cover:
 10. `@TransactionAttribute` and `TransactionAttributeType`
 11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
 12. `Rollback`
-## Domains in detail
 
--   [Domain](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
--   [Domain1](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain1) - TransactionManagementType.BEAN
--   [Domain2](./src/main/java/org/jesperancinha/jtd/jee/teeth/domain2) - TransactionManagementType.CONTAINER
+#### Modules
 
-## Test Endpoints
-
-1. http://localhost:8080/jee-app-3-wildfly/periodontitis - Passivation Exercise
-2. http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1 - Passivation Exercise
-3. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
-4. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
-5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
-6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
-7. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
-8. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/tx/all - Transaction type
-
-## Run Arquillian tests
-
-```bash
-jenv local system
-sdk use java 11.0.9.hs-adpt
-mvn clean install -Parq-wildfly-managed
-```
-
-## Troubleshooting
-
-### EJB sub system
-
-```xml
-<subsystem xmlns="urn:jboss:domain:ejb3:5.0">
-    ... 
-</subsystem>
-```
-
-#### Bean session timeout [configuration](https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform/6.2/html/administration_and_configuration_guide/set_default_session_bean_access_timeout_values1)
-
-```xml 
-<session-bean>
-    <stateless>
-        <bean-instance-pool-ref pool-name="slsb-strict-max-pool"/>
-    </stateless>
-    <stateful default-access-timeout="5000" cache-ref="simple"/>
-    <singleton default-access-timeout="5000"/>
-</session-bean>
-```
-
-#### Passivation [configuration](http://www.mastertheboss.com/jboss-server/jboss-cluster/jboss-as-7-custom-caches-configuration)
-
-1. Caches
-```xml
-<caches>
-    <cache name="simple" aliases="NoPassivationCache"/>
-    <cache name="passivating" passivation-store-ref="file" aliases="SimpleStatefulCache"/>
-    <cache name="clustered" passivation-store-ref="infinispan" aliases="StatefulTreeCache"/>
-    <cache name="custom-cache" passivation-store-ref="custom-store"/>
-</caches>
-```
-
-2. Passivation Stores
-
-```xml
-<passivation-stores>
-    <file-passivation-store name="file" idle-timeout="30" idle-timeout-unit="SECONDS"/>
-    <file-passivation-store name="custom-store" idle-timeout="30" idle-timeout-unit="SECONDS" max-size="500"/>
-    <cluster-passivation-store name="infinispan" idle-timeout="30" idle-timeout-unit="SECONDS" cache-container="ejb"/>
-</passivation-stores>
-```
-
-## Context References
-
--   [Mandible by Wikipedia](https://en.wikipedia.org/wiki/Mandible)
--   [Tooth Decay](https://www.nidcr.nih.gov/health-info/tooth-decay/more-info#:~:text=Tooth%20decay%20(dental%20caries)%20is,a%20tooth%2C%20called%20a%20cavity.)
--   [Wisdom teeth](https://www.webmd.com/oral-health/wisdom-teeth#1)
--   [Wisdom tooh by Wikipedia](https://en.wikipedia.org/wiki/Wisdom_tooth)
--   [Trigeminal Nerve Overview](https://www.healthline.com/human-body-maps/trigeminal-nerve)
+-   [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases
 
 ## References
 
--   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
--   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
--   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
--   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+-   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+-   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+-   [Pluralsight](https://www.pluralsight.com/)
+-   [Whizlabs](https://www.whizlabs.com/)
+-   [Enthuware](https://enthuware.com/)
+-   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+-   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+-   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+-   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+-   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+-   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+-   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+-   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ## About me 👨🏽‍💻🚀
 

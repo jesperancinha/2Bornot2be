@@ -11,12 +11,7 @@
   <artifactId>jee-apps</artifactId>
       
   <modules>
-    <module>jee-app-1-wildfly</module>
-    <module>jee-app-2-wildfly-ws</module>
-    <module>jee-app-2-wildfly-lib</module>
-    <module>jee-app-2-wildfly-adapter</module>
-    <module>jee-app-2-wildfly</module>
-    <module>jee-app-3-wildfly</module>
+    <module>jee-apps-triad-1</module>
   </modules>
 
   <packaging>pom</packaging>

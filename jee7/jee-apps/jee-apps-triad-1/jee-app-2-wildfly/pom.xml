@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jee-apps</artifactId>
+        <artifactId>jee-apps-triad-1</artifactId>
         <groupId>org.jesperancinha.jtd</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jee-app-3-wildfly</artifactId>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <distribution>repo</distribution>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-        </license>
-    </licenses>
+    <artifactId>jee-app-2-wildfly</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -25,7 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
         <version.war.plugin>3.0.0</version.war.plugin>
+        <ironjacamar-depchain.version>1.4.25.Final</ironjacamar-depchain.version>
         <jboss-javaee-7.0.version>1.0.3.Final</jboss-javaee-7.0.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencyManagement>
@@ -37,14 +31,44 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.jboss.ironjacamar</groupId>
+                <artifactId>ironjacamar-depchain</artifactId>
+                <version>${ironjacamar-depchain.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
         <dependency>
+            <groupId>org.jesperancinha.jtd</groupId>
+            <artifactId>jee-app-2-wildfly-lib</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <!--            <scope>provided</scope>-->
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.jesperancinha.jtd.jee</groupId>-->
+        <!--            <artifactId>jee-app-2-wildfly-ws</artifactId>-->
+        <!--            <version>1.0-SNAPSHOT</version>-->
+        <!--            <classifier>classes</classifier>-->
+        <!--        </dependency>-->
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
+            <!--            <scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.ironjacamar</groupId>
+            <artifactId>ironjacamar-spec-api</artifactId>
+            <version>${ironjacamar-depchain.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -70,7 +94,7 @@
         </dependency>
         <dependency>
             <groupId>org.jesperancinha.jtd</groupId>
-            <artifactId>consolerizer</artifactId>
+            <artifactId>consolerizer8</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -149,34 +173,6 @@
             <version>2.0.1.Final</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.16.1</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/jboss/jboss-annotations-ejb3 -->
-        <dependency>
-            <groupId>org.jboss.ejb3</groupId>
-            <artifactId>jboss-ejb3-ext-api</artifactId>
-            <version>2.3.0.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-annotations-ejb3</artifactId>
-            <version>4.2.2.GA</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-            <version>1.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-transaction-jta</artifactId>
-            <version>1.0.5</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -187,8 +183,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -196,6 +192,16 @@
                 <version>${version.war.plugin}</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <webResources>
+                        <resource>
+                            <directory>${basedir}/src/main/java/org/jesperancinha/jtd/jee/app2/soap</directory>
+                            <excludes>
+                                <exclude>*.java</exclude>
+                            </excludes>
+                            <filtering>true</filtering>
+                            <targetPath>WEB-INF/classes/org/jesperancinha/jtd/jee/app2/soap</targetPath>
+                        </resource>
+                    </webResources>
                 </configuration>
             </plugin>
             <plugin>
@@ -221,11 +227,31 @@
                         <version>3.0.0-M5</version>
                         <configuration>
                             <excludes>
-                                <exclude>**/ToothServiceTest.java</exclude>
-                                <exclude>**/ToothService1Test.java</exclude>
-                                <exclude>**/ToothService2Test.java</exclude>
+                                <exclude>**/ManagedBeanAlbumDaoTest.java</exclude>
                             </excludes>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-codegen-plugin</artifactId>
+                        <version>3.4.1</version>
+                        <executions>
+                            <execution>
+                                <id>generate-sources</id>
+                                <phase>generate-sources</phase>
+                                <configuration>
+                                    <sourceRoot>target/generated-sources/cxf</sourceRoot>
+                                    <wsdlOptions>
+                                        <wsdlOption>
+                                            <wsdl>${basedir}/src/main/webapp/META-INF/kitchen-herbs.wsdl</wsdl>
+                                        </wsdlOption>
+                                    </wsdlOptions>
+                                </configuration>
+                                <goals>
+                                    <goal>wsdl2java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -248,9 +274,7 @@
                         <version>3.0.0-M5</version>
                         <configuration>
                             <includes>
-                                <include>**/ToothServiceTest.java</include>
-                                <include>**/ToothService1Test.java</include>
-                                <include>**/ToothService2Test.java</include>
+                                <include>**/ManagedBeanAlbumDaoTest.java</include>
                             </includes>
                         </configuration>
                     </plugin>
@@ -259,5 +283,4 @@
         </profile>
     </profiles>
     <packaging>war</packaging>
-
 </project>
