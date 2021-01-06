@@ -19,6 +19,7 @@ For this app we cover:
 1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
 2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
 3. `<alternatives>`, `@Alternative`, `@Default`
+4. `JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
 
 ## Run Arquillian tests
 
@@ -76,6 +77,7 @@ These two entries need to be added to node `urn:jboss:domain:messaging-activemq:
 
 ## References
 
+-   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
 -   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
 -   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
 -   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
