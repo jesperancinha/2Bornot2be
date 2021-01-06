@@ -1,4 +1,4 @@
-# jee-apps-triad-2
+# jee-app-2-2-wildfly
 
 ---
 
@@ -11,67 +11,61 @@
 
 ---
 
-## Prepare the environment
+## Exercise
 
-1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
-2. Unpack the contents of that package to this root.
+The apps under [jee-apps](../..), cover lots of topics.
+For this app we cover:
 
-This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
-
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
-
-You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
+## Run Arquillian tests
 
 ```bash
-curl https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.tar.gz --output wildfly-16.0.0.Final.tar.gz
-tar -xvzf wildfly-16.0.0.Final.tar.gz
+jenv local system
+sdk use java 11.0.9.hs-adpt
+mvn clean install -Parq-wildfly-managed
 ```
 
-## Applications
+## Installation
 
-### [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Boy Bands in the 90's
+The configuration file for WildFly is as usual located in [standalone-full.xml](./backup).
 
-#### Subjects
+These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
+    
+## Context References
 
-1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
-2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
-3. `<alternatives>`, `@Alternative`, `@Default`
-4. `JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
-
-#### Modules
-
--   [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Boy Bands in the 90's
-
-### [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands
-
-#### Subjects
-
-#### Modules
-
--   [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands
-
-### jee-app-3-wildfly
-
-#### Subjects
-
-#### Modules
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=V9Wv4SCBiTE">
+     <img alt="Sound of the Underground - Girls Aloud"
+          src="https://img.youtube.com/vi/V9Wv4SCBiTE/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=9wfpXI5PKlw">
+     <img alt="Spice up your life - Spice Girls"
+          src="https://img.youtube.com/vi/9wfpXI5PKlw/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=S1kE0MMfr20">
+     <img alt="Scandalous - Mis-Teeq"
+          src="https://img.youtube.com/vi/S1kE0MMfr20/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=rnHVIuBlAUo">
+     <img alt="In the middle - Sugababes" 
+          src="https://img.youtube.com/vi/rnHVIuBlAUo/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ## References
 
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+-   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
+-   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
+-   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
+-   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
+-   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
+-   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
+-   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
 
 ## About me 👨🏽‍💻🚀
 

@@ -33,19 +33,28 @@ mvn clean install -Parq-wildfly-managed
 
 The configuration file for WildFly is as usual located in [standalone-full.xml](./backup).
 
-These two entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
+These three entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
 
 1. Queue
 
 ```xml
+<jms-queue name="TestQueue" entries="java:jboss/activemq/queue/TestQueue"/>
 <jms-queue name="LyricsQueue" entries="java:/jms/LyricsQueue" durable="true"/>
 <jms-queue name="LyricsReceiptQueue" entries="java:/jms/LyricsReceiptQueue" durable="true"/>
+<jms-queue name="LyricsDurableQueue" entries="java:/jms/LyricsDurableQueue" durable="true"/>
 ```
 
 2. Queue Factory
 
 ```xml
 <connection-factory name="LyricsQueueFactory" entries="java:/jms/LyricsQueueFactory" connectors="in-vm"/>
+```
+
+
+3. Topics
+
+```xml
+<jms-topic name="LyricsTopic" entries="java:/jms/LyricsTopic" />
 ```
 
 ## Context References
