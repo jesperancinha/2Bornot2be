@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>Girl Bands SOAP Web Service</display-name>
+<!--    <listener>-->
+<!--        <listener-class>-->
+<!--            com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>-->
+<!--    </listener>-->
+<!--    <servlet>-->
+<!--        <servlet-name>KitchenHerbsService</servlet-name>-->
+<!--        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>KitchenHerbsService</servlet-name>-->
+<!--        <url-pattern>/kitchen-herbs</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>right</servlet-name>
+        <servlet-class>org.jesperancinha.jtd.jee.girl.bands.RightNameServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>right</servlet-name>
+        <url-pattern>/right</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>left</servlet-name>
+        <servlet-class>org.jesperancinha.jtd.jee.girl.bands.LeftNameServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>left</servlet-name>
+        <url-pattern>/left</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.jsf</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+</web-app>

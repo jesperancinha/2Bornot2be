@@ -16,6 +16,8 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
+1. `URL Rewriting`
+
 ## Run Arquillian tests
 
 ```bash
@@ -59,6 +61,7 @@ These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`
 
 ## References
 
+-   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)
 -   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
 -   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
 -   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)

@@ -11,23 +11,6 @@
 
 ---
 
-## Prepare the environment
-
-1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
-2. Unpack the contents of that package to this root.
-
-This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
-
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
-
-You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
-
-```bash
-curl https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.tar.gz --output wildfly-16.0.0.Final.tar.gz
-tar -xvzf wildfly-16.0.0.Final.tar.gz
-```
-
 ## Applications
 
 ### [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Boy Bands in the 90's
@@ -46,6 +29,8 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 ### [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands
 
 #### Subjects
+
+1. `URL Rewriting`
 
 #### Modules
 
