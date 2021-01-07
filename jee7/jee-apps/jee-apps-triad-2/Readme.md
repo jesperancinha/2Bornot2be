@@ -33,7 +33,8 @@
 1. `URL Rewriting`, `Session`, `Cookie`
 2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
-4. `@WebParam` and `@WebResult`
+4. `@WebParam`, `@WebResult`
+5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 
 #### Modules
 

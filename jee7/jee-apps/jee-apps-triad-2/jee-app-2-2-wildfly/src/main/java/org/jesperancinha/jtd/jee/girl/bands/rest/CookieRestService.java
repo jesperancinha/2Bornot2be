@@ -1,13 +1,11 @@
 package org.jesperancinha.jtd.jee.girl.bands.rest;
 
 import javax.enterprise.context.RequestScoped;
-import javax.servlet.ServletException;
 import javax.ws.rs.CookieParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Cookie;
-import java.io.IOException;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 

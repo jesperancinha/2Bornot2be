@@ -19,7 +19,8 @@ For this app we cover:
 1. `URL Rewriting`, `Session`, `Cookie`
 2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
-4. `@WebParam` and `@WebResult`
+4. `@WebParam`, `@WebResult`
+5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 
 ## Test Endpoints
 
@@ -31,6 +32,7 @@ For this app we cover:
 6. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/cookie - Sending cookies via SOAP Session Management and JAX-WS (notice that it's WS and not RS.)
 7. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground - @Webparam and @WebResult
 8. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl - @Webparam and @WebResult
+9. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/registry - Random access and JAXB
 
 Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
 
@@ -100,14 +102,10 @@ sdk use java 11.0.9.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
-## Installation
-
-The configuration file for WildFly is as usual located in [standalone-full.xml](./backup).
-
-These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
-    
 ## Context References
 
+-   [Eye Candy (album)](https://en.wikipedia.org/wiki/Eye_Candy_(album))
+-   [Mis-Teeq](https://en.wikipedia.org/wiki/Mis-Teeq)
 -   [Say you'll be there - Spice Girls by Wikipedia](https://en.wikipedia.org/wiki/Say_You%27ll_Be_There)
 -   [Girls Aloud](https://en.wikipedia.org/wiki/Girls_Aloud)
 
