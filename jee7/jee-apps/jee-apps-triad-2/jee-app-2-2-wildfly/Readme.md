@@ -19,6 +19,7 @@ For this app we cover:
 1. `URL Rewriting`, `Session`, `Cookie`
 2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
+4. `@WebParam` and `@WebResult`
 
 ## Test Endpoints
 
@@ -28,6 +29,29 @@ For this app we cover:
 4. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there - SOAP Session management (note that this is only pulling the HTTP session out.)
 5. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl - SOAP Session management (note that this is only pulling the HTTP session out.)
 6. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/cookie - Sending cookies via SOAP Session Management and JAX-WS (notice that it's WS and not RS.)
+7. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground - @Webparam and @WebResult
+8. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl - @Webparam and @WebResult
+
+Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
+
+From this:
+```xml
+<service name="BeThereLyricsServiceImplService">
+    <port name="be-therePort" binding="tns:be-therePortBinding">
+        <soap:address location="http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there"/>
+    </port>
+</service>
+```
+
+To This:
+
+```xml
+<service name="BeThereLyricsServiceImplService">
+    <port name="be-therePort" binding="tns:be-therePortBinding">
+        <soap:address location="http://whatever:whateverport/whatever-path/be-there-whatever"/>
+    </port>
+</service>
+```
 
 ### SOAP requests
 
@@ -57,6 +81,12 @@ curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-the
 curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line7.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
 ```
 
+```bash
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:undergroundPortBinding" --data @band.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:undergroundPortBinding" --data @underground1.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:undergroundPortBinding" --data @underground2.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl -c "cookies.txt" -b "cookies.txt"
+```
+
 We can also try sending cookies:
 
 ```bash
@@ -79,6 +109,7 @@ These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`
 ## Context References
 
 -   [Say you'll be there - Spice Girls by Wikipedia](https://en.wikipedia.org/wiki/Say_You%27ll_Be_There)
+-   [Girls Aloud](https://en.wikipedia.org/wiki/Girls_Aloud)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=V9Wv4SCBiTE">

@@ -33,10 +33,11 @@
 1. `URL Rewriting`, `Session`, `Cookie`
 2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
+4. `@WebParam` and `@WebResult`
 
 #### Modules
 
--   [jee-app-2-2-wildfly](je    e-app-2-2-wildfly) - Girl Bands
+-   [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands
 
 ### jee-app-3-wildfly
 
