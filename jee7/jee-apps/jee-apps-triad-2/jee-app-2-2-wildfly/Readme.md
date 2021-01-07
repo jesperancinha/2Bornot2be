@@ -57,7 +57,7 @@ To This:
 
 ### SOAP requests
 
-#### Envelope
+#### Envelopes
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bt="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
@@ -69,6 +69,30 @@ To This:
     </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:underground="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <underground:bandMembers>
+        </underground:bandMembers>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:underground="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <underground:underground>
+            <pieceNumber>0</pieceNumber>
+        </underground:underground>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
 #### Command line
 
 Note that we are keeping cookies in [cookies.txt](cookies.txt) file.
