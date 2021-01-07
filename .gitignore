@@ -36,3 +36,4 @@ hs_err_pid*
 wildfly*.Final
 *.tar.gz
 *.zip
+cookies.txt

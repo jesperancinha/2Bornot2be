@@ -114,8 +114,7 @@ public class Consolerizer {
     }
 
     public static void printMagentaGenericLn(Object text) {
-        printMagentaGeneric(text.toString()
-            .trim()
+        printMagentaGeneric(("" + text).trim()
             .concat("\n"));
     }
 
@@ -393,7 +392,7 @@ public class Consolerizer {
             for (int i = 0; i < printText.length(); i++) {
                 if (typingWait > 0) {
                     try {
-                         sleep(typingWait);
+                        sleep(typingWait);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -401,7 +400,7 @@ public class Consolerizer {
                 printColor(currentColor);
                 final char c = printText.charAt(i);
                 System.out.print(c);
-                if(c == '\n'){
+                if (c == '\n') {
                     printColor(currentColor);
                 }
             }
@@ -433,7 +432,7 @@ public class Consolerizer {
                             printColor(currentColor);
                             final char c = subLine.charAt(i);
                             System.out.print(c);
-                            if(c == '\n'){
+                            if (c == '\n') {
                                 printColor(currentColor);
                             }
                         }
@@ -460,7 +459,7 @@ public class Consolerizer {
 
                 final char c = printText.charAt(i);
                 System.out.print(c);
-                if(c == '\n'){
+                if (c == '\n') {
                     printColor(currentColor);
                 }
             }

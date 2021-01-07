@@ -16,14 +16,43 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
-1. `URL Rewriting`
+1. `URL Rewriting`, `Session`, `Cookie`
+2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 
 ## Test Endpoints
 
 1. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/
-2. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/left?leftName=Viva
-3. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/store_main.jsp
+2. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/left?leftName=Viva - URL Rewriting Session Management
+3. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/store_main.jsp - URL Rewriting, Http Session and Cookie Management
+4. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there - SOAP Session management
+5. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl - SOAP Session management
 
+### SOAP requests
+
+#### Envelope
+
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bt="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <bt:sayYoullBeThere>
+            <arg0>Ah, say you'll be there</arg0>
+        </bt:sayYoullBeThere>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+#### Command line
+
+Note that we are keeping cookies in [cookies.txt](cookies.txt) file.
+```bash
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line1.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line2.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line3.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line4.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line5.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line6.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line7.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+```
 ## Run Arquillian tests
 
 ```bash
@@ -39,6 +68,8 @@ The configuration file for WildFly is as usual located in [standalone-full.xml](
 These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
     
 ## Context References
+
+-   [Say you'll be there - Spice Girls by Wikipedia](https://en.wikipedia.org/wiki/Say_You%27ll_Be_There)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=V9Wv4SCBiTE">
@@ -67,6 +98,7 @@ These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`
 
 ## References
 
+-   [SOAP request from command line using curl](https://browse-tutorials.com/tutorial/soap-request-command-line-using-curl)
 -   [Session Management in Java – HttpServlet, Cookies, URL Rewriting](https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
 -   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)
 -   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
