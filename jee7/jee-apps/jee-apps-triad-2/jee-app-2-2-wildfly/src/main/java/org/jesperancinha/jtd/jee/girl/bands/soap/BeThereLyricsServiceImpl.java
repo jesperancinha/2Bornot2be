@@ -5,6 +5,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import javax.annotation.Resource;
 import javax.jws.WebService;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -48,9 +50,16 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
 
         final MessageContext mc = this.wsContext.getMessageContext();
         final var sr = mc.get(MessageContext.SERVLET_REQUEST);
+        final var srerp = mc.get(MessageContext.SERVLET_RESPONSE);
+        final HttpServletRequest hsr = (HttpServletRequest) sr;
+        final HttpServletResponse hrerp = (HttpServletResponse) srerp;
+
+        printRainbowTitleLn("Current cookies are %s", Arrays.stream(hsr.getCookies())
+            .map(cookie -> String.format("%s=%s", cookie.getName(), cookie.getValue()))
+            .collect(Collectors.joining(",")));
 
         if (sr != null && sr instanceof HttpServletRequest) {
-            final HttpServletRequest hsr = (HttpServletRequest) sr;
+            hrerp.addCookie(new javax.servlet.http.Cookie("beThereCookie", line));
             final HttpSession session = hsr.getSession(true);
             final List<String> currentLyrics = (List<String>) session.getAttribute("currentLyrics");
             if (Objects.isNull(currentLyrics)) {

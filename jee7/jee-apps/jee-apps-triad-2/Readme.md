@@ -30,7 +30,9 @@
 
 #### Subjects
 
-1. `URL Rewriting`
+1. `URL Rewriting`, `Session`, `Cookie`
+2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
+3.  `@CookieParam`, `JAX-WS`, `Cookie`
 
 #### Modules
 

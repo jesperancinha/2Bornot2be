@@ -18,14 +18,16 @@ For this app we cover:
 
 1. `URL Rewriting`, `Session`, `Cookie`
 2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
+3.  `@CookieParam`, `JAX-WS`, `Cookie`
 
 ## Test Endpoints
 
 1. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/
 2. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/left?leftName=Viva - URL Rewriting Session Management
 3. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/store_main.jsp - URL Rewriting, Http Session and Cookie Management
-4. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there - SOAP Session management
-5. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl - SOAP Session management
+4. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there - SOAP Session management (note that this is only pulling the HTTP session out.)
+5. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl - SOAP Session management (note that this is only pulling the HTTP session out.)
+6. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/cookie - Sending cookies via SOAP Session Management and JAX-WS (notice that it's WS and not RS.)
 
 ### SOAP requests
 
@@ -44,6 +46,7 @@ For this app we cover:
 #### Command line
 
 Note that we are keeping cookies in [cookies.txt](cookies.txt) file.
+
 ```bash
 curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line1.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
 curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line2.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
@@ -52,6 +55,12 @@ curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-the
 curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line5.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
 curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line6.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
 curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:be-therePortBinding" --data @line7.xml http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl -c "cookies.txt" -b "cookies.txt"
+```
+
+We can also try sending cookies:
+
+```bash
+curl http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/cookie -b "beThereCookie=Tell me will this deja vu never end? Oh"
 ```
 ## Run Arquillian tests
 
@@ -98,6 +107,11 @@ These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`
 
 ## References
 
+-   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
+-   [Auth0 REST vs SOAP - Building Modern Applications](https://auth0.com/learn/rest-vs-soap/)
+-   [O'Reilly SOAP session scope](https://www.oreilly.com/library/view/apache-axis2-web/9781849511568/ch10s05.html)
+-   [WebLogic Communications Services Gatekeeper Application Developer's Guide](https://docs.oracle.com/cd/E50778_01/doc.60/e50769/app_sessmgr.htm#SGAPP138)
+-   [InterSystems SOAP Session Management](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSOAP_SESSIONS)
 -   [SOAP request from command line using curl](https://browse-tutorials.com/tutorial/soap-request-command-line-using-curl)
 -   [Session Management in Java – HttpServlet, Cookies, URL Rewriting](https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
 -   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)

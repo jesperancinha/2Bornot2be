@@ -19,7 +19,7 @@ public class LogoutGirlBandRecordStoreServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-        Cookie[] cookies = request.getCookies();
+        final var cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 cookie.setMaxAge(0);
