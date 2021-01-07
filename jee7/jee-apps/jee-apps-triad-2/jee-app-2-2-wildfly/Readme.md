@@ -18,7 +18,7 @@ For this app we cover:
 
 1. `URL Rewriting`, `Session`, `Cookie`
 2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
-3.  `@CookieParam`, `JAX-WS`, `Cookie`
+3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
 
 ## Test Endpoints
 
@@ -107,6 +107,7 @@ These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`
 
 ## References
 
+-   [URL Rewriting in WSDL and XML Schema](https://membrane-soa.org/service-proxy-doc/4.2/url-rewriting-wsdl.htm)
 -   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
 -   [Auth0 REST vs SOAP - Building Modern Applications](https://auth0.com/learn/rest-vs-soap/)
 -   [O'Reilly SOAP session scope](https://www.oreilly.com/library/view/apache-axis2-web/9781849511568/ch10s05.html)
