@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.girl.bands;
+package org.jesperancinha.jtd.jee.girl.bands.servlets;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 

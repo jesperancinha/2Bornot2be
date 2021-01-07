@@ -21,6 +21,12 @@ For this app we cover:
 3. `<alternatives>`, `@Alternative`, `@Default`
 4. `JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
 
+## Test Endpoints
+
+1. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric/receipt - MDB's with receipt
+2. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric/durable - Durable MDB's
+3. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric - MDB
+
 ## Run Arquillian tests
 
 ```bash

@@ -19,7 +19,7 @@
 
     <servlet>
         <servlet-name>right</servlet-name>
-        <servlet-class>org.jesperancinha.jtd.jee.girl.bands.RightNameServlet</servlet-class>
+        <servlet-class>org.jesperancinha.jtd.jee.girl.bands.servlets.RightNameServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -29,7 +29,7 @@
 
     <servlet>
         <servlet-name>left</servlet-name>
-        <servlet-class>org.jesperancinha.jtd.jee.girl.bands.LeftNameServlet</servlet-class>
+        <servlet-class>org.jesperancinha.jtd.jee.girl.bands.servlets.LeftNameServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

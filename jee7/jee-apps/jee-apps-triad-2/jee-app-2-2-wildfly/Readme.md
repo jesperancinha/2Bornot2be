@@ -18,6 +18,12 @@ For this app we cover:
 
 1. `URL Rewriting`
 
+## Test Endpoints
+
+1. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/
+2. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/left?leftName=Viva
+3. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/store_main.jsp
+
 ## Run Arquillian tests
 
 ```bash
@@ -61,6 +67,7 @@ These entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`
 
 ## References
 
+-   [Session Management in Java – HttpServlet, Cookies, URL Rewriting](https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
 -   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)
 -   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
 -   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
