@@ -17,6 +17,7 @@ The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `service`, `doGet`
+2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 
 ## Test Endpoints
 
@@ -29,6 +30,8 @@ mvn clean install -Parq-wildfly-managed
 ```
 
 ## Context References
+
+-   [Midnight Star (band)](https://en.wikipedia.org/wiki/Midnight_Star_(band))
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=v0KpfrJE4zw">

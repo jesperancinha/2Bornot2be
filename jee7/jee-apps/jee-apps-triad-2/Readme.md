@@ -51,6 +51,7 @@
 #### Subjects
 
 1. `service`, `doGet`
+2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 
 #### Modules
 
