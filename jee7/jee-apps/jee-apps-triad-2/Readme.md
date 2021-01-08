@@ -38,6 +38,7 @@
 6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
 7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
 8. `<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
+9. `Filter`, `web.xml`, `order`, `direct references`
 
 #### Modules
 
