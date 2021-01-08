@@ -28,6 +28,30 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=v0KpfrJE4zw">
+     <img alt="Little Red Corvette - Prince"
+          src="https://img.youtube.com/vi/v0KpfrJE4zw/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=qRbEBf_ShDA">
+     <img alt="Midas Touch - Midnight Start"
+          src="https://img.youtube.com/vi/qRbEBf_ShDA/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=5X-Mrc2l1d0">
+     <img alt="Rock With You - Michael Jackson"
+          src="https://img.youtube.com/vi/5X-Mrc2l1d0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=RkPy4yq7EJo">
+     <img alt="Pretty Wings - Maxwell"
+          src="https://img.youtube.com/vi/RkPy4yq7EJo/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ## References
 
