@@ -36,6 +36,7 @@
 4. `@WebParam`, `@WebResult`
 5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
+7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
 
 #### Modules
 

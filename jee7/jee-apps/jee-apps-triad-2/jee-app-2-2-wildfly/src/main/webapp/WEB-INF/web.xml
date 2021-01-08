@@ -5,6 +5,36 @@
          version="4.0">
     <display-name>Girl Bands SOAP Web Service</display-name>
 
+    <filter>
+        <description>
+        </description>
+        <display-name>CaghtUpInTheMiddle2</display-name>
+        <filter-name>CaghtUpInTheMiddle2</filter-name>
+        <filter-class>org.jesperancinha.jtd.jee.girl.bands.filters.CaghtUpInTheMiddle2</filter-class>
+        <init-param>
+            <param-name>yetAnotherSong</param-name>
+            <param-value>Overload</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <description>
+        </description>
+        <display-name>CaghtUpInTheMiddle</display-name>
+        <filter-name>CaghtUpInTheMiddle</filter-name>
+        <filter-class>org.jesperancinha.jtd.jee.girl.bands.filters.CaghtUpInTheMiddle</filter-class>
+        <init-param>
+            <param-name>otherSong</param-name>
+            <param-value>Round Round</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CaghtUpInTheMiddle</filter-name>
+        <url-pattern>/CaghtUpInTheMiddle</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CaghtUpInTheMiddle2</filter-name>
+        <url-pattern>/CaghtUpInTheMiddle</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>

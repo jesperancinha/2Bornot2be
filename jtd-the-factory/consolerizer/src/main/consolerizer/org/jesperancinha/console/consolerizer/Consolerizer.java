@@ -65,6 +65,14 @@ public class Consolerizer {
         return new Consolerizer().conColor(ConColor.BRIGHT_GREEN);
     }
 
+    public static String getUnicorns(int i) {
+        final var sb = new StringBuilder();
+        for (int j = 0; j < i; j++) {
+            sb.append("🦄");
+        }
+        return sb.toString();
+    }
+
     public Consolerizer conColor(ConColor conColor) {
         this.conColor = conColor;
         return this;
@@ -125,6 +133,26 @@ public class Consolerizer {
 
     public static void printMagentaGeneric(String text, Object... args) {
         printColor(MAGENTA);
+        printPrivateText(text, args);
+    }
+
+    public static void printRandomColorGenericLn(String text, Object... args) {
+        printRandomColorGeneric(text.concat("\n"), args);
+
+    }
+
+    public static void printRandomColorGenericLn(Object text) {
+        printRandomColorGeneric(("" + text).trim()
+            .concat("\n"));
+    }
+
+    public static void printRandomColorGeneric(Object text) {
+        printColor(ConColor.getRandomColor());
+        printPrivateText(text.toString());
+    }
+
+    public static void printRandomColorGeneric(String text, Object... args) {
+        printColor(ConColor.getRandomColor());
         printPrivateText(text, args);
     }
 

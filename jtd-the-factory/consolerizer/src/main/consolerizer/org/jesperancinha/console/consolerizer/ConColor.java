@@ -24,13 +24,18 @@ public enum ConColor {
     BRIGHT_WHITE("FFFFFF", "\033[1;37m"),
     BG_ORANGE("AA0000", "\033[48:2:255:165:0m");
 
-
     private String hexColor;
     private String consoleColor;
 
     ConColor(String hexColor, String consoleColor) {
         this.hexColor = hexColor;
         this.consoleColor = consoleColor;
+    }
+
+    public static ConColor getRandomColor() {
+        final ConColor[] values = values();
+        var randomI = (int) (Math.random() * values.length);
+        return values[randomI];
     }
 
     public String getConsoleColor() {
@@ -42,9 +47,7 @@ public enum ConColor {
     }
 
     public static List<String> getConsoleRainbow() {
-        return Arrays.asList(RED.getConsoleColor(),
-                ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
-                GREEN.getConsoleColor(), BLUE.getConsoleColor(),
-                ConColor.MAGENTA.getConsoleColor());
+        return Arrays.asList(RED.getConsoleColor(), ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
+            GREEN.getConsoleColor(), BLUE.getConsoleColor(), ConColor.MAGENTA.getConsoleColor());
     }
 }

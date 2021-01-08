@@ -22,6 +22,7 @@ For this app we cover:
 4. `@WebParam`, `@WebResult`
 5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
+7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
 
 ## Test Endpoints
 
@@ -35,6 +36,8 @@ For this app we cover:
 8. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl - @Webparam and @WebResult
 9. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/registry - Random access and JAXB
 10. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/secure/lyrics/spice - @WebFilter studies
+11. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle - Filter, web.xml and order
+
 Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
 
 From this:
@@ -162,6 +165,9 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
+-   [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
+-   [Define and Map Filters](https://help.perforce.com/hydraexpress/4.3.0/html/rwsfexpservletug/4-8.html#:~:text=The%20filter%20element%20of%20a,for%20this%20particular%20filter%20instance.)
 -   [How do I define a filter using @WebFilter annotation?](https://kodejava.org/how-do-i-define-a-filter-using-webfilter-annotation/)
 -   [URL Rewriting in WSDL and XML Schema](https://membrane-soa.org/service-proxy-doc/4.2/url-rewriting-wsdl.htm)
 -   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
