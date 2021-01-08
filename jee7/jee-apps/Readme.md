@@ -103,6 +103,7 @@ Make sure to follow the rules established in [Readme.md](../Readme.md).
 
 -   [jee-app-2-1-wildfly](./jee-apps-triad-2/jee-app-2-1-wildfly) - Boy bands in the 90's
 -   [jee-app-2-2-wildfly](./jee-apps-triad-2/jee-app-2-2-wildfly) - Girl Bands
+-   [jee-app-2-3-wildfly](./jee-apps-triad-2/jee-app-2-3-wildfly) - Soul Music
 
 ## References
 
