@@ -27,7 +27,7 @@ public class CaghtUpInTheMiddle2 implements Filter {
             + "Love's gonna get ya\n" + "But only when I let ya\n" + "And I don't wanna turn away";
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
         printBrightMagentaGenericLn("This is our filter config on init -> %s", this.filterConfig);
     }

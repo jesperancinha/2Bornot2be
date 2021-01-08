@@ -23,6 +23,7 @@ For this app we cover:
 5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
 7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
+8. `<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
 
 ## Test Endpoints
 
@@ -37,7 +38,7 @@ For this app we cover:
 9. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/registry - Random access and JAXB
 10. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/secure/lyrics/spice - @WebFilter studies
 11. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle - Filter, web.xml and order
-
+12. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/love.jsp - JSP and Servlet
 Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
 
 From this:
@@ -165,6 +166,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
 -   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
 -   [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
 -   [Define and Map Filters](https://help.perforce.com/hydraexpress/4.3.0/html/rwsfexpservletug/4-8.html#:~:text=The%20filter%20element%20of%20a,for%20this%20particular%20filter%20instance.)

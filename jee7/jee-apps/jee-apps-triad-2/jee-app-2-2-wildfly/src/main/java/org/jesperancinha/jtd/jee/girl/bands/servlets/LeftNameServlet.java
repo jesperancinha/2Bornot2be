@@ -20,4 +20,7 @@ public class LeftNameServlet extends HttpServlet {
         }
     }
 
+    public String getSongName() {
+        return "Viva";
+    }
 }

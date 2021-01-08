@@ -22,4 +22,7 @@ public class RightNameServlet extends HttpServlet {
         }
     }
 
+    public String getSongName() {
+        return "Forever";
+    }
 }

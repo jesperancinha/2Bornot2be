@@ -13,7 +13,6 @@ import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 
 public class CaghtUpInTheMiddle implements Filter {
@@ -28,7 +27,7 @@ public class CaghtUpInTheMiddle implements Filter {
             + "But we'll be getting by alright (uh uh uh)";
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
         printBrightMagentaGenericLn("This is our filter config on init -> %s", this.filterConfig);
     }
