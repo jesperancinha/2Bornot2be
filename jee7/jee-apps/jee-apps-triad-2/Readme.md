@@ -35,6 +35,7 @@
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
 4. `@WebParam`, `@WebResult`
 5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
+6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
 
 #### Modules
 

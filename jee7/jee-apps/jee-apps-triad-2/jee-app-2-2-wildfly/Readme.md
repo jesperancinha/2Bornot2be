@@ -21,6 +21,7 @@ For this app we cover:
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
 4. `@WebParam`, `@WebResult`
 5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
+6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
 
 ## Test Endpoints
 
@@ -33,7 +34,7 @@ For this app we cover:
 7. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground - @Webparam and @WebResult
 8. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl - @Webparam and @WebResult
 9. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/registry - Random access and JAXB
-
+10. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/secure/lyrics/spice - @WebFilter studies
 Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
 
 From this:
@@ -128,6 +129,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+-   [Spice Up Your Life](https://en.wikipedia.org/wiki/Spice_Up_Your_Life)
 -   [Eye Candy (album)](https://en.wikipedia.org/wiki/Eye_Candy_(album))
 -   [Mis-Teeq](https://en.wikipedia.org/wiki/Mis-Teeq)
 -   [Say you'll be there - Spice Girls by Wikipedia](https://en.wikipedia.org/wiki/Say_You%27ll_Be_There)
@@ -160,6 +162,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [How do I define a filter using @WebFilter annotation?](https://kodejava.org/how-do-i-define-a-filter-using-webfilter-annotation/)
 -   [URL Rewriting in WSDL and XML Schema](https://membrane-soa.org/service-proxy-doc/4.2/url-rewriting-wsdl.htm)
 -   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
 -   [Auth0 REST vs SOAP - Building Modern Applications](https://auth0.com/learn/rest-vs-soap/)
