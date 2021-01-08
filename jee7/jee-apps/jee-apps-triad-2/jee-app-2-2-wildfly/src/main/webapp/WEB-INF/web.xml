@@ -83,8 +83,7 @@
 
     <servlet-mapping>
         <servlet-name>SugababesServlet2</servlet-name>
-        <url-pattern>/SugababesServlet2</url-pattern>
-
+        <url-pattern>/CaghtUpInTheMiddle2</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>right</servlet-name>
