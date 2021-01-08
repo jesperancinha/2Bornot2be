@@ -25,6 +25,7 @@ For this app we cover:
 7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
 8. `<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
 9. `Filter`, `web.xml`, `order`, `direct references`
+10. `Session`, `invalidate`, `IllegalStateException`
 
 ## Test Endpoints
 
@@ -41,7 +42,7 @@ For this app we cover:
 11. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle - Filter, web.xml and order
 12. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/love.jsp - JSP and Servlet
 13. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle2 - Filter, web.xml, order and direct references
-
+14. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/spice - Session invalidation exercise
 -   Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
 
 From this:
