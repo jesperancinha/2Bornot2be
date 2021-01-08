@@ -44,8 +44,9 @@
 #### Modules
 
 -   [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands
+-   [jee-app-2-2-wf-light](jee-app-2-2-wf-light) - Girl Bands - Fast track for web.xml curious cases
 
-### jee-app-3-wildfly
+### jee-app-3-wildflys
 
 #### Subjects
 

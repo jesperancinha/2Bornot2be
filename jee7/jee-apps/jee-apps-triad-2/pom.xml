@@ -19,6 +19,7 @@
     <modules>
         <module>jee-app-2-1-wildfly</module>
         <module>jee-app-2-2-wildfly</module>
+        <module>jee-app-2-2-wf-light</module>
     </modules>
     <packaging>pom</packaging>
 </project>
