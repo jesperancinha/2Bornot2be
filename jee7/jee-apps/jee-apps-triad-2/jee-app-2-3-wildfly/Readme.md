@@ -18,6 +18,7 @@ For this app we cover:
 
 1. `service`, `doGet`
 2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
+3. `<error-page>`, `<exception-type>`, `<location>`
 
 ## Test Endpoints
 
@@ -54,6 +55,14 @@ mvn clean install -Parq-wildfly-managed
       <a href="https://www.youtube.com/watch?v=RkPy4yq7EJo">
      <img alt="Pretty Wings - Maxwell"
           src="https://img.youtube.com/vi/RkPy4yq7EJo/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=Bc7vBEdYfbA">
+     <img alt="She's a super lady - Luther Vandross"
+          src="https://img.youtube.com/vi/Bc7vBEdYfbA/0.jpg" 
           style="width:10%;">
       </a>
 </div>

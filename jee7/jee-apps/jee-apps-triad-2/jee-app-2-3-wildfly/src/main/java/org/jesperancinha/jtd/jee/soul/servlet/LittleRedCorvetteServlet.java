@@ -16,7 +16,7 @@ import java.io.PrintWriter;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
-@WebServlet("corvette")
+@WebServlet("/corvette")
 public class LittleRedCorvetteServlet extends HttpServlet {
 
     private static final String FROM = "https://genius.com/Prince-little-red-corvette-lyrics";

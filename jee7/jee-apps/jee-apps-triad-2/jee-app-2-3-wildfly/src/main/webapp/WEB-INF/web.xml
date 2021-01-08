@@ -5,6 +5,12 @@
          version="4.0">
     <display-name>Soul music</display-name>
 
+    <error-page>
+        <exception-type>org.jesperancinha.jtd.jee.soul.exceptions.NotSoulMusicException</exception-type>
+        <location>/notsoulerror.jsp</location>
+    </error-page>
+
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
