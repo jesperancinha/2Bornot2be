@@ -45,13 +45,16 @@
 
 -   [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands - Java 11
 -   [jee-app-2-2-wf-light](jee-app-2-2-wf-light) - Girl Bands - Fast track for web.xml curious cases - Java 11
--   [jee-app-2-3-wildfly](jee-app-2-3-wildfly) - Soul Music - Java 11
 
-### jee-app-3-wildfly
+### [jee-app-3-wildfly](jee-app-2-3-wildfly)
 
 #### Subjects
 
+1. `service`, `doGet`
+
 #### Modules
+
+-   [jee-app-2-3-wildfly](jee-app-2-3-wildfly) - Soul Music - Java 11
 
 ## References
 

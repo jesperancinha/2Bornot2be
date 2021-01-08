@@ -16,6 +16,8 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
+1. `service`, `doGet`
+
 ## Test Endpoints
 
 ## Run Arquillian tests
