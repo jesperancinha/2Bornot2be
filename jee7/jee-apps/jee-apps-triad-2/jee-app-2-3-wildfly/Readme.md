@@ -105,9 +105,9 @@ mvn clean install -Parq-wildfly-managed
           src="https://img.youtube.com/vi/mu3Fy6c3VR0/0.jpg" 
           style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=0fNxgaw8I7I">
-     <img alt="Use Ta Be My Girl - The O'Jays"
-          src="https://img.youtube.com/vi/0fNxgaw8I7I/0.jpg" 
+      <a href="https://www.youtube.com/watch?v=q4Octh286e0">
+     <img alt="Back For More feat. Eugene Wilde - Cool Million"
+          src="https://img.youtube.com/vi/q4Octh286e0/0.jpg" 
           style="width:10%;">
       </a>
 </div>
