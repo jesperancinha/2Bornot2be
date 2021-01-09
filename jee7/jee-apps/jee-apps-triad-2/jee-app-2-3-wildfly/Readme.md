@@ -46,18 +46,20 @@ mvn clean install -Parq-wildfly-managed
           src="https://img.youtube.com/vi/qRbEBf_ShDA/0.jpg" 
           style="width:10%;">
       </a>
+</div>
+<div align="center">
       <a href="https://www.youtube.com/watch?v=5X-Mrc2l1d0">
      <img alt="Rock With You - Michael Jackson"
           src="https://img.youtube.com/vi/5X-Mrc2l1d0/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a href="https://www.youtube.com/watch?v=RkPy4yq7EJo">
      <img alt="Pretty Wings - Maxwell"
           src="https://img.youtube.com/vi/RkPy4yq7EJo/0.jpg" 
           style="width:10%;">
       </a>
+</div>
+<div align="center">
       <a href="https://www.youtube.com/watch?v=Bc7vBEdYfbA">
      <img alt="She's a super lady - Luther Vandross"
           src="https://img.youtube.com/vi/Bc7vBEdYfbA/0.jpg" 
@@ -69,7 +71,6 @@ mvn clean install -Parq-wildfly-managed
           style="width:10%;">
       </a>
 </div>
-
 <div align="center">
       <a href="https://www.youtube.com/watch?v=uSu6tcbMOu0">
      <img alt="Let's stay together - Al Green"
@@ -79,6 +80,13 @@ mvn clean install -Parq-wildfly-managed
       <a href="https://www.youtube.com/watch?v=iN3KsbnQZxU">
      <img alt="Move on up - Curtis Mayfield"
           src="https://img.youtube.com/vi/iN3KsbnQZxU/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=JSEbDN49bYM">
+     <img alt="Move on up - Curtis Mayfield"
+          src="https://img.youtube.com/vi/JSEbDN49bYM/0.jpg" 
           style="width:10%;">
       </a>
 </div>
