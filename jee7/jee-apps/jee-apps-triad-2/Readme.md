@@ -55,6 +55,7 @@
 3. `<error-page>`, `<exception-type>`, `<location>`
 4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
 5. `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
+6. `<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
 
 #### Modules
 

@@ -21,6 +21,7 @@ For this app we cover:
 3. `<error-page>`, `<exception-type>`, `<location>`
 4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
 5. `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
+6. `<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
 
 ## Test Endpoints
 
@@ -39,7 +40,7 @@ mvn clean install -Parq-wildfly-managed
 -   [Midnight Star (band)](https://en.wikipedia.org/wiki/Midnight_Star_(band))
 
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=v0KpfrJE4zw">
+      <a title="Little Red Corvette - Prince" href="https://www.youtube.com/watch?v=v0KpfrJE4zw">
      <img alt="Little Red Corvette - Prince"
           src="https://img.youtube.com/vi/v0KpfrJE4zw/0.jpg" 
           style="width:10%;">
@@ -56,14 +57,14 @@ mvn clean install -Parq-wildfly-managed
           src="https://img.youtube.com/vi/5X-Mrc2l1d0/0.jpg" 
           style="width:10%;">
       </a>
-      <a href="https://www.youtube.com/watch?v=RkPy4yq7EJo">
+      <a title="Pretty Wings - Maxwell" href="https://www.youtube.com/watch?v=RkPy4yq7EJo">
      <img alt="Pretty Wings - Maxwell"
           src="https://img.youtube.com/vi/RkPy4yq7EJo/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 <div align="center">
-      <a href="https://www.youtube.com/watch?v=Bc7vBEdYfbA">
+      <a title="She's a super lady - Luther Vandross" href="https://www.youtube.com/watch?v=Bc7vBEdYfbA">
      <img alt="She's a super lady - Luther Vandross"
           src="https://img.youtube.com/vi/Bc7vBEdYfbA/0.jpg" 
           style="width:10%;">
@@ -112,8 +113,22 @@ mvn clean install -Parq-wildfly-managed
       </a>
 </div>
 
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=ooOFMsvn4gk">
+     <img alt="Like I Want To - Lisa Shaw"
+          src="https://img.youtube.com/vi/ooOFMsvn4gk/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=fKyXVFN8znk">
+     <img alt="She works hard for the summer - Donna Summer"
+          src="https://img.youtube.com/vi/fKyXVFN8znk/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ## References
 
+-   [jsp:useBean action tag](https://www.javatpoint.com/jsp-useBean-action)
 -   [How can I print error stack trace in JSP page?](https://stackoverflow.com/questions/8135980/how-can-i-print-error-stack-trace-in-jsp-page/8136065)
 -   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
 -   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
