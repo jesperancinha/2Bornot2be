@@ -54,6 +54,7 @@
 2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 3. `<error-page>`, `<exception-type>`, `<location>`
 4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
+5. `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
 
 #### Modules
 

@@ -76,7 +76,7 @@ public class MidasTouch {
         this.comment = comment;
     }
 
-    public void midasTouchFail(){
+    public void midasTouchSoul(){
         throw new RuntimeException();
     }
 }

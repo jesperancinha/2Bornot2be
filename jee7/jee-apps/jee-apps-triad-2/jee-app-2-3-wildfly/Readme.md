@@ -20,6 +20,7 @@ For this app we cover:
 2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 3. `<error-page>`, `<exception-type>`, `<location>`
 4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
+5. `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
 
 ## Test Endpoints
 
@@ -33,6 +34,8 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+-   [Megadeth - So Far, So Good... So What! - In My Darkest Hour](https://en.wikipedia.org/wiki/So_Far,_So_Good..._So_What!)
+-   [Luther Vandross](https://en.wikipedia.org/wiki/Luther_Vandross)
 -   [Midnight Star (band)](https://en.wikipedia.org/wiki/Midnight_Star_(band))
 
 <div align="center">
@@ -85,8 +88,26 @@ mvn clean install -Parq-wildfly-managed
 </div>
 <div align="center">
       <a href="https://www.youtube.com/watch?v=JSEbDN49bYM">
-     <img alt="Move on up - Curtis Mayfield"
+     <img alt="No One`s Gonna Love You - S.O.S. Band"
           src="https://img.youtube.com/vi/JSEbDN49bYM/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=0fNxgaw8I7I">
+     <img alt="Use Ta Be My Girl - The O'Jays"
+          src="https://img.youtube.com/vi/0fNxgaw8I7I/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=mu3Fy6c3VR0">
+     <img alt="Voggue - Dancin' the Night Away - Voggue"
+          src="https://img.youtube.com/vi/mu3Fy6c3VR0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=0fNxgaw8I7I">
+     <img alt="Use Ta Be My Girl - The O'Jays"
+          src="https://img.youtube.com/vi/0fNxgaw8I7I/0.jpg" 
           style="width:10%;">
       </a>
 </div>
