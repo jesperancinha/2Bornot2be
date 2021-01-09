@@ -75,4 +75,8 @@ public class MidasTouch {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    public void midasTouchFail(){
+        throw new RuntimeException();
+    }
 }

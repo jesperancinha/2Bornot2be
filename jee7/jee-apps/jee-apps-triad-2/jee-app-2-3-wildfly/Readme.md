@@ -19,6 +19,7 @@ For this app we cover:
 1. `service`, `doGet`
 2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 3. `<error-page>`, `<exception-type>`, `<location>`
+4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
 
 ## Test Endpoints
 
@@ -45,30 +46,46 @@ mvn clean install -Parq-wildfly-managed
           src="https://img.youtube.com/vi/qRbEBf_ShDA/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-<div align="center">
       <a href="https://www.youtube.com/watch?v=5X-Mrc2l1d0">
      <img alt="Rock With You - Michael Jackson"
           src="https://img.youtube.com/vi/5X-Mrc2l1d0/0.jpg" 
           style="width:10%;">
       </a>
+</div>
+<div align="center">
       <a href="https://www.youtube.com/watch?v=RkPy4yq7EJo">
      <img alt="Pretty Wings - Maxwell"
           src="https://img.youtube.com/vi/RkPy4yq7EJo/0.jpg" 
           style="width:10%;">
       </a>
-</div>
-
-<div align="center">
       <a href="https://www.youtube.com/watch?v=Bc7vBEdYfbA">
      <img alt="She's a super lady - Luther Vandross"
           src="https://img.youtube.com/vi/Bc7vBEdYfbA/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=Iii33aHd7zY">
+     <img alt="I ain't hearing you - Angie Stone"
+          src="https://img.youtube.com/vi/Iii33aHd7zY/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=uSu6tcbMOu0">
+     <img alt="Let's stay together - Al Green"
+          src="https://img.youtube.com/vi/uSu6tcbMOu0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a href="https://www.youtube.com/watch?v=iN3KsbnQZxU">
+     <img alt="Move on up - Curtis Mayfield"
+          src="https://img.youtube.com/vi/iN3KsbnQZxU/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ## References
 
+-   [How can I print error stack trace in JSP page?](https://stackoverflow.com/questions/8135980/how-can-i-print-error-stack-trace-in-jsp-page/8136065)
 -   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
 -   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
 -   [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
