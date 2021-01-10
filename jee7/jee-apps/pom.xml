@@ -13,6 +13,7 @@
   <modules>
     <module>jee-apps-triad-1</module>
     <module>jee-apps-triad-2</module>
+      <module>jee-apps-quad-1</module>
   </modules>
 
   <packaging>pom</packaging>

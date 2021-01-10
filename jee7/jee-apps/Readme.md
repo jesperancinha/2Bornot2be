@@ -98,6 +98,13 @@ Make sure to follow the rules established in [Readme.md](../Readme.md).
 `<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
 `Filter`, `web.xml`, `order`, `direct references`
 `Session`, `invalidate`, `IllegalStateException`
+`service`, `doGet`
+`<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
+`<error-page>`, `<exception-type>`, `<location>`
+`<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
+`<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
+`<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
+`<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
 
 #### Applications:
 
