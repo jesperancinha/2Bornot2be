@@ -20,10 +20,10 @@ For this app we cover:
 
 ## Test Endpoints
 
-1. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promised.to.love.you.forevermore/burgundy @PathParam
-2. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise/burgundy ->@PathParam
-3. http://localhost:8080/jee_app_1_tomcat_war/app/kings/.promise/burgundy -> @PathParam
-4. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to/burgundy -> @PathParam
+1. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promised.to.love.you.forevermore.subjects/burgundy -> @PathParam
+2. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.subjects/burgundy -> @PathParam
+3. http://localhost:8080/jee_app_1_tomcat_war/app/kings/.promise.subjects/burgundy -> @PathParam
+4. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy -> @PathParam
 
 ## Run Arquillian tests
 

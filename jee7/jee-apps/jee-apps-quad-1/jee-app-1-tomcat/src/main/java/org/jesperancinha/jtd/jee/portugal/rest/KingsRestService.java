@@ -10,7 +10,7 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
-@Path("/kings/{text1}.{text2}")
+@Path("/kings/{text1}.{text2}.subjects")
 @RequestScoped
 public class KingsRestService {
 
