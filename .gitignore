@@ -37,3 +37,8 @@ wildfly*.Final
 *.tar.gz
 *.zip
 cookies.txt
+
+## Glassfish installationn(s)
+glassfish4
+glassfish5
+glassfish6

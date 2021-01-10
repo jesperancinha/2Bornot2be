@@ -1,4 +1,4 @@
-# jee-apps-triad-1
+# jee-apps-quad-1
 
 ---
 
@@ -38,6 +38,7 @@
 
 ## References
 
+-   [Glassfish server does not start. NullPointeException ](https://stackoverflow.com/questions/47458119/glassfish-server-does-not-start-nullpointeexception)
 -   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
 -   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
 -   [Pluralsight](https://www.pluralsight.com/)

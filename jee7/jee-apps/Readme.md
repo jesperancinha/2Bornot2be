@@ -24,7 +24,23 @@ This way I hope to make your path to JEE certification a fun success! Enjoy!
 
 ## Prepare the environment
 
-Make sure to follow the rules established in [Readme.md](../Readme.md).
+### Wildfly 16.0
+
+1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
+2. Unpack the contents of that package to this root.
+
+You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
+
+### Tomcat
+
+### End Installation notes
+
+This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
+
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
+The ones without any notice, are considered done, but they will be subject to improvements from time to time.
+
+
 
 ## Triads
 
@@ -114,6 +130,9 @@ Make sure to follow the rules established in [Readme.md](../Readme.md).
 
 ## References
 
+-   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
+-   [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
+-   [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
 -   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
 -   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
 -   [Pluralsight](https://www.pluralsight.com/)

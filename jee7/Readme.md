@@ -1,4 +1,4 @@
-# jee7
+# jee7 Test Drives
 
 ---
 
@@ -38,6 +38,20 @@ At the same time, this is still a very popular framework to be used.
 <i>João Esperancinha, 31st of December 2020</i>
 
 ---
+
+# Important Specs
+
+1. Java API for WebSocket 1.1
+2. JavaServer Faces (JSF) 2.2
+3. JavaServer Pages (JSP) 2.3
+4. Java API for RESTful Services (JAX-RS) 2.0
+5. Java API for JSON Processing (JSON-P) 1.0
+6. Expression Language (EL) 3.0 
+7. Java Authentication Service Provider Interface for Containers (JASPIC) 1.1
+
+<b style="color: green">Apache Tomcat 9.0.41 and Wildfly 16.0 seem to follow these standards. This is why I am using them.</b>
+
+<b style="color: red">Glassfish for Java EE 7 unfortunately only supports Java 6 and Java 8 in later versions. Newer versions are ready for JEE 8 and above. We will be using Java 11 in our test modules</b>
 
 # References
 
