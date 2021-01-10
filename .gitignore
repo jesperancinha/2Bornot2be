@@ -38,7 +38,10 @@ wildfly*.Final
 *.zip
 cookies.txt
 
-## Glassfish installationn(s)
+## Glassfish installation(s)
 glassfish4
 glassfish5
 glassfish6
+
+## Tomcat installations(s)
+apache-tomcat-*

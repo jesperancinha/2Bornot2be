@@ -6,31 +6,31 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/glassfish-50.png "Glassfish")](https://javaee.github.io/glassfish/download)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
 ## Applications
 
-### jee-app-1-glassfish - History of Portugal
+### [jee-app-1-tomcat](jee-app-1-tomcat) - History of Portugal - 🇵🇹
 
 #### Subjects
 
 #### Modules
 
-### jee-app-2-glassfish - History of Spain
+### [jee-app-2-tomcat](jee-app-2-tomcat) - History of Spain - 🇪🇸
 
 #### Subjects
 
 #### Modules
 
-### jee-app-3-glassfish - History of The Netherlands
+### [jee-app-3-tomcat](jee-app-3-tomcat) - History of The Netherlands - 🇳🇱
 
 #### Subjects
 
 #### Modules
 
-### jee-app-4-glassfish - History of The Netherlands
+### [jee-app-4-tomcat](jee-app-4-tomcat) - History of The United Kingdom - 🇬🇧
 
 #### Subjects
 
@@ -49,7 +49,7 @@
 -   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
 -   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
 -   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+-   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-tomcat-4/)
 -   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
 -   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
