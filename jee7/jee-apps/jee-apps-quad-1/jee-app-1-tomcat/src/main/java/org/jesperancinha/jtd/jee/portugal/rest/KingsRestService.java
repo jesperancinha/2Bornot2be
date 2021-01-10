@@ -14,6 +14,9 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGene
 @RequestScoped
 public class KingsRestService {
 
+    private static final List<String> KINGS_BURGUNDY = List.of("Afonso I", "Sancho I", "Afonso II", "Sancho II", "Afonso III", "Dinis I", "Afonso IV",
+        "Pedro I", "Fernando I");
+
     @GET
     @Path("/burgundy")
     @Produces(MediaType.APPLICATION_JSON)
@@ -26,7 +29,12 @@ public class KingsRestService {
         printGreenGenericLn("We can get text1 and text2 as input path params -> %s, %s", text1, text2);
         printGreenGenericLn(
             "This happens regardless of how complicated the path is established both on the class or on the method.");
-        return List.of("Afonso I", "Sancho I", "Afonso II", "Sancho II", "Afonso III", "Dinis I", "Afonso IV",
-            "Pedro I", "Fernando I");
+        return KINGS_BURGUNDY;
+    }
+
+    @GET
+    @Path("/burgundy/{id: BUR\\d+}")
+    public String getKingById(@PathParam("id") String id){
+        return KINGS_BURGUNDY.get(Integer.parseInt(id.replace("BUR","")));
     }
 }

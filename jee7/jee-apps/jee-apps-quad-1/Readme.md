@@ -16,6 +16,9 @@
 
 #### Subjects
 
+1. `@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
+2. `RegEx`, `@PathParam`, `@GET`
+
 #### Modules
 
 ### [jee-app-2-tomcat](jee-app-2-tomcat) - History of Spain - 🇪🇸

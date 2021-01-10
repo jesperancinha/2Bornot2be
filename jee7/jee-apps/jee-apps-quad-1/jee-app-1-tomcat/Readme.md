@@ -17,6 +17,7 @@ The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
+2. `RegEx`, `@PathParam`, `@GET`
 
 ## Test Endpoints
 
@@ -24,6 +25,15 @@ For this app we cover:
 2. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.subjects/burgundy -> @PathParam
 3. http://localhost:8080/jee_app_1_tomcat_war/app/kings/.promise.subjects/burgundy -> @PathParam
 4. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy -> @PathParam
+5. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR0 -> RegEx in @PathParam
+6. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR1 -> RegEx in @PathParam
+7. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR2 -> RegEx in @PathParam
+8. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR3 -> RegEx in @PathParam
+9. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR4 -> RegEx in @PathParam
+10. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR5 -> RegEx in @PathParam
+11. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR6 -> RegEx in @PathParam
+12. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR7 -> RegEx in @PathParam
+13. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR8 -> RegEx in @PathParam
 
 ## Run Arquillian tests
 
