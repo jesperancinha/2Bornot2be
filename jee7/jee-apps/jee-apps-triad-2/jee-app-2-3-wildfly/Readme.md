@@ -22,6 +22,7 @@ For this app we cover:
 4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
 5. `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
 6. `<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
+7. `<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
 
 ## Test Endpoints
 
@@ -35,6 +36,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+-   [Angie Stone - Unexpected](https://en.wikipedia.org/wiki/Unexpected_(Angie_Stone_album))
 -   [Megadeth - So Far, So Good... So What! - In My Darkest Hour](https://en.wikipedia.org/wiki/So_Far,_So_Good..._So_What!)
 -   [Luther Vandross](https://en.wikipedia.org/wiki/Luther_Vandross)
 -   [Midnight Star (band)](https://en.wikipedia.org/wiki/Midnight_Star_(band))
