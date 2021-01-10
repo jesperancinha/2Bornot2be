@@ -1,4 +1,4 @@
-# jee7 Test Drives
+# jee-app-1-tomcat History of Portugal
 
 ---
 
@@ -7,68 +7,62 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
 
-## Introduction
+## Exercise
 
-This is a set of study modules that I'm using to study JEE7.
-Feel free to use these materials in your studies.
-These modules can be used for education purposes or for certain types of exames like the [1z0-900](https://education.oracle.com/java-se-11-developer/pexam_1Z0-900)
+The apps under [jee-apps](../..), cover lots of topics.
+For this app we cover:
 
--   [JEE Crums](jee-crums) -  A set of modules with quick learning  / fast track exercises without context
--   [JEE Applications](jee-apps) - A set of applications written in JEE using diffeen servers like Glassfish and Weblogic
+1. `@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
 
-I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like.
-For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java).
-In these modules I am using <b>java version 8.0.242.hs-adpt</b>. You can try other java 8 versions. I cannot guarantee that you'll be able to execute 100% of the examples though.
-You can also try to use a version of Java SE 7, but I'm almost 100% sure that none of the modules will work as I'll be using lamdas for the code.
+## Test Endpoints
 
-<b>NOTE: JEE7 has nothing to do with the actual Java SE version being used. I chose Java 8 in a few projects for compatibility reasons. You can also find apps developed with Java 11 on top of JEE7.</b>
+1. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promised.to.love.you.forevermore/burgundy @PathParam
+2. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise/burgundy ->@PathParam
+3. http://localhost:8080/jee_app_1_tomcat_war/app/kings/.promise/burgundy -> @PathParam
+4. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to/burgundy -> @PathParam
 
-This repo is here because, amongst other reasons, JEE is still pretty much very relevant.
-Alternatives to a [JEE architecture](https://www.oracle.com/java/technologies/java-ee-glance.html), like the [Spring Framework](https://spring.io/) facilitate another way to solve enterprise problems.
-Both are very good architectures, and they differ in their approach.
-This means that many companies are using either one or the other.
-[JEE 7 specifically](https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7), is the only way at the moment to get certified via an [Oracle exam](https://education.oracle.com/java-ee-7-application-developer/pexam_1Z0-900).
-At the same time, this is still a very popular framework to be used.
-[SOAP services and technologies](https://en.wikipedia.org/wiki/SOAP) are also still very much in use these days by many companies and therefore an understanding on how to do this in Java is still very much a necessity.
+## Run Arquillian tests
 
-<i>João Esperancinha, 31st of December 2020</i>
+```bash
+jenv local system
+sdk use java 11.0.9.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
 
----
+## Context References
 
-# Important Specs
+-   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
+-   [List of Portuguese monarchs](https://en.wikipedia.org/wiki/List_of_Portuguese_monarchs)
 
-1. Java API for WebSocket 1.1
-2. JavaServer Faces (JSF) 2.2
-3. JavaServer Pages (JSP) 2.3
-4. Java API for RESTful Services (JAX-RS) 2.0
-5. Java API for JSON Processing (JSON-P) 1.0
-6. Expression Language (EL) 3.0 
-7. Java Authentication Service Provider Interface for Containers (JASPIC) 1.1
+## References
 
-<b style="color: green">Apache Tomcat 9.0.41 and Wildfly 16.0 seem to follow these standards. This is why I am using them.</b>
-
-<b style="color: red">Glassfish for Java EE 7 unfortunately only supports Java 6 and Java 8 in later versions. Newer versions are ready for JEE 8 and above. We will be using Java 11 in our test modules</b>
-
-# References
-
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+-   [jsp:useBean action tag](https://www.javatpoint.com/jsp-useBean-action)
+-   [How can I print error stack trace in JSP page?](https://stackoverflow.com/questions/8135980/how-can-i-print-error-stack-trace-in-jsp-page/8136065)
+-   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
+-   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
+-   [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
+-   [Define and Map Filters](https://help.perforce.com/hydraexpress/4.3.0/html/rwsfexpservletug/4-8.html#:~:text=The%20filter%20element%20of%20a,for%20this%20particular%20filter%20instance.)
+-   [How do I define a filter using @WebFilter annotation?](https://kodejava.org/how-do-i-define-a-filter-using-webfilter-annotation/)
+-   [URL Rewriting in WSDL and XML Schema](https://membrane-soa.org/service-proxy-doc/4.2/url-rewriting-wsdl.htm)
+-   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
+-   [Auth0 REST vs SOAP - Building Modern Applications](https://auth0.com/learn/rest-vs-soap/)
+-   [O'Reilly SOAP session scope](https://www.oreilly.com/library/view/apache-axis2-web/9781849511568/ch10s05.html)
+-   [WebLogic Communications Services Gatekeeper Application Developer's Guide](https://docs.oracle.com/cd/E50778_01/doc.60/e50769/app_sessmgr.htm#SGAPP138)
+-   [InterSystems SOAP Session Management](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSOAP_SESSIONS)
+-   [SOAP request from command line using curl](https://browse-tutorials.com/tutorial/soap-request-command-line-using-curl)
+-   [Session Management in Java – HttpServlet, Cookies, URL Rewriting](https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
+-   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)
+-   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
+-   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
+-   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
+-   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
+-   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
+-   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
+-   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
 
 ## About me 👨🏽‍💻🚀
 
