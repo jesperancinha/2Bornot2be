@@ -18,22 +18,29 @@ For this app we cover:
 
 1. `@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
 2. `RegEx`, `@PathParam`, `@GET`
+3. `@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
 
 ## Test Endpoints
 
-1. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promised.to.love.you.forevermore.subjects/burgundy -> @PathParam
-2. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.subjects/burgundy -> @PathParam
-3. http://localhost:8080/jee_app_1_tomcat_war/app/kings/.promise.subjects/burgundy -> @PathParam
-4. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy -> @PathParam
-5. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR0 -> RegEx in @PathParam
-6. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR1 -> RegEx in @PathParam
-7. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR2 -> RegEx in @PathParam
-8. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR3 -> RegEx in @PathParam
-9. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR4 -> RegEx in @PathParam
-10. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR5 -> RegEx in @PathParam
-11. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR6 -> RegEx in @PathParam
-12. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR7 -> RegEx in @PathParam
-13. http://localhost:8080/jee_app_1_tomcat_war/app/kings/promise.to.subjects/burgundy/BUR8 -> RegEx in @PathParam
+1. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promised.to.love.you.forevermore.subjects/burgundy -> @PathParam
+2. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.subjects/burgundy -> @PathParam
+3. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/.promise.subjects/burgundy -> @PathParam
+4. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy -> @PathParam
+5. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR0 -> RegEx in @PathParam
+6. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR1 -> RegEx in @PathParam
+7. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR2 -> RegEx in @PathParam
+8. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR3 -> RegEx in @PathParam
+9. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR4 -> RegEx in @PathParam
+10. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR5 -> RegEx in @PathParam
+11. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR6 -> RegEx in @PathParam
+12. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR7 -> RegEx in @PathParam
+13. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR8 -> RegEx in @PathParam
+14. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateless
+15. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateless/pop
+16. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful
+17. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful/pop
+18. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton
+19. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton/pop
 
 ## Run Arquillian tests
 
@@ -45,11 +52,14 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+-   [History of Portugal](https://en.wikipedia.org/wiki/History_of_Portugal)
 -   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
 -   [List of Portuguese monarchs](https://en.wikipedia.org/wiki/List_of_Portuguese_monarchs)
 
 ## References
 
+-   [32.7 The Lifecycles of Enterprise Beans](https://docs.oracle.com/javaee/7/tutorial/ejb-intro007.htm)
+-   [Annotation Type Path](https://docs.oracle.com/javaee/7/api/javax/ws/rs/Path.html)
 -   [jsp:useBean action tag](https://www.javatpoint.com/jsp-useBean-action)
 -   [How can I print error stack trace in JSP page?](https://stackoverflow.com/questions/8135980/how-can-i-print-error-stack-trace-in-jsp-page/8136065)
 -   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)

@@ -93,6 +93,10 @@ public class Consolerizer {
             .concat("\n"));
     }
 
+    public static void printBlueGenericTitleLn(Object text, Object... args) {
+        printBlueGenericTitleLn(String.format("" + text, args));
+    }
+
     public static void printBlueGenericTitleLn(Object text) {
         final String fullText = text.toString();
         var remaining = titleSpread - fullText.length() - 2;

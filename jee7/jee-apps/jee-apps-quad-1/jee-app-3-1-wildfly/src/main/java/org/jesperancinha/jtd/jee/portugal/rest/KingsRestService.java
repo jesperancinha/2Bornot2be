@@ -27,7 +27,7 @@ public class KingsRestService {
             String text2
     ) {
         printGreenGenericLn("We can get text1 and text2 as input path params -> %s, %s", text1, text2);
-        printGreenGenericLn(
+         printGreenGenericLn(
             "This happens regardless of how complicated the path is established both on the class or on the method.");
         return KINGS_BURGUNDY;
     }

@@ -6,34 +6,35 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
 ## Applications
 
-### [jee-app-1-tomcat](jee-app-1-tomcat) - History of Portugal - 🇵🇹
+### [jee-app-3-1-wildfly](jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
 
 #### Subjects
 
 1. `@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
 2. `RegEx`, `@PathParam`, `@GET`
+3. `@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
 
 #### Modules
 
-### [jee-app-2-tomcat](jee-app-2-tomcat) - History of Spain - 🇪🇸
+### [jee-app-3-2-wildfly](jee-app-3-2-wildfly) - History of Spain - 🇪🇸
 
 #### Subjects
 
 #### Modules
 
-### [jee-app-3-tomcat](jee-app-3-tomcat) - History of The Netherlands - 🇳🇱
+### [jee-app-3-3-wildfly](jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
 
 #### Subjects
 
 #### Modules
 
-### [jee-app-4-tomcat](jee-app-4-tomcat) - History of The United Kingdom - 🇬🇧
+### [jee-app-3-4-wildfly](jee-app-3-4-wildfly) - History of The United Kingdom - 🇬🇧
 
 #### Subjects
 
