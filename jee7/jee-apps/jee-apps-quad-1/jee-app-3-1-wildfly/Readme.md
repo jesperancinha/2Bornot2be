@@ -20,6 +20,7 @@ For this app we cover:
 2. `RegEx`, `@PathParam`, `@GET`
 3. `@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
 4. `Scope`, `@RequestScoped`
+5. `Specific`, `Generic`, `@GET`, `@Path`
 
 ## Test Endpoints
 

@@ -13,6 +13,8 @@ import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 import java.util.List;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+
 @Path("/history")
 @SessionScoped
 public class HistoryRestService implements Serializable {
@@ -25,6 +27,12 @@ public class HistoryRestService implements Serializable {
 
     @Inject
     private HistoryStatelessDelivery historyStatelessDelivery;
+
+    public HistoryRestService() {
+        printRainbowTitleLn("Remember that you can use @Singleton, @Stateful and @Stateless in @Path annotated beans.");
+        printRainbowTitleLn("For MDB's (Message Driven Beans), there is no reason to use these annotations.");
+        printRainbowTitleLn("They just won't make any sense.");
+    }
 
     @GET
     @Path("/singleton")
