@@ -1,13 +1,10 @@
-package org.jesperancinha.jtd.jee.portugal.beans;
+package org.jesperancinha.jtd.jee.portugal.rest.def.scope.beans;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.ejb.Stateless;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Stack;
@@ -18,11 +15,10 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGene
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @Stateless
-@Dependent
-public class HistoryStatelessDelivery implements Serializable {
+public class HistoryStatelessDeliveryDefault implements Serializable {
     final Stack<String> stackOfEvents1 = HistoryContentCreator.stackOfEvents1();
 
-    public HistoryStatelessDelivery() {
+    public HistoryStatelessDeliveryDefault() {
         printYellowGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
         printYellowGenericLn(stackOfEvents1);
@@ -48,7 +44,7 @@ public class HistoryStatelessDelivery implements Serializable {
     }
 
     @PostConstruct
-    public void postConstruct(){
+    public void postConstruct() {
         Consolerizer.titleSpread = 150;
         printBlueGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
             .getCanonicalName(), this.hashCode());

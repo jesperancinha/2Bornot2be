@@ -1,13 +1,10 @@
-package org.jesperancinha.jtd.jee.portugal.beans;
+package org.jesperancinha.jtd.jee.portugal.rest.def.scope.beans;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.ejb.Stateless;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.SessionScoped;
+import javax.inject.Singleton;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Stack;
@@ -15,20 +12,19 @@ import java.util.Stack;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
-@Stateless
-@Dependent
-public class HistoryStatelessDelivery implements Serializable {
+@Singleton
+public class HistorySingletonDeliveryDefault implements Serializable {
     final Stack<String> stackOfEvents1 = HistoryContentCreator.stackOfEvents1();
 
-    public HistoryStatelessDelivery() {
-        printYellowGenericLn("This is a %s with hash %s", this.getClass()
+    public HistorySingletonDeliveryDefault() {
+        printRedGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
-        printYellowGenericLn(stackOfEvents1);
-        printGreenGenericLn("A @Stateless bean is never passivated and only has two stages:");
+
+        printGreenGenericLn("A @Singleton bean is never passivated and only has two stages:");
         printGreenGenericLn("Non-existent and ready for activation");
-        printGreenGenericLn("nonexistent and ready for the invocation of business methods.");
+        printGreenGenericLn("A @Singleton is already @ApplicationScoped");
     }
 
     public List<String> getSomeHistory() {
@@ -43,12 +39,12 @@ public class HistoryStatelessDelivery implements Serializable {
 
     @PreDestroy
     public void destroy() {
-        printBlueGenericTitleLn("Bean %s is being destroyed", this.getClass()
-            .getCanonicalName());
+        printBlueGenericTitleLn("Bean %s with hash %s is being destroyed", this.getClass()
+            .getCanonicalName(), this.hashCode());
     }
 
     @PostConstruct
-    public void postConstruct(){
+    public void postConstruct() {
         Consolerizer.titleSpread = 150;
         printBlueGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
             .getCanonicalName(), this.hashCode());

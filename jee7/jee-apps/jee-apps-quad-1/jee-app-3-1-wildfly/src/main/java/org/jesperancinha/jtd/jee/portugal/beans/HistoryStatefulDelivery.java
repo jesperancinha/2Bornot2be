@@ -29,6 +29,7 @@ public class  HistoryStatefulDelivery implements Serializable {
         printGreenGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
         printYellowGenericLn(stackOfEvents1);
+
     }
 
     public List<String> getSomeHistory() {

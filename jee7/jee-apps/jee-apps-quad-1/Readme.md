@@ -19,6 +19,7 @@
 1. `@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
 2. `RegEx`, `@PathParam`, `@GET`
 3. `@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
+4. `Scope`, `@RequestScoped`
 
 #### Modules
 
