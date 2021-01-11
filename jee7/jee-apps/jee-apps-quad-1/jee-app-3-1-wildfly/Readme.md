@@ -21,6 +21,7 @@ For this app we cover:
 3. `@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
 4. `Scope`, `@RequestScoped`
 5. `Specific`, `Generic`, `@GET`, `@Path`
+6. `@QueryParam`
 
 ## Test Endpoints
 
@@ -60,6 +61,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [29.2 Creating a RESTful Root Resource Class](https://docs.oracle.com/javaee/7/tutorial/jaxrs002.htm)
 -   [32.7 The Lifecycles of Enterprise Beans](https://docs.oracle.com/javaee/7/tutorial/ejb-intro007.htm)
 -   [Annotation Type Path](https://docs.oracle.com/javaee/7/api/javax/ws/rs/Path.html)
 -   [jsp:useBean action tag](https://www.javatpoint.com/jsp-useBean-action)

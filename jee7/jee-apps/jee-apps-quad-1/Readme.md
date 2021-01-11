@@ -21,6 +21,7 @@
 3. `@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
 4. `Scope`, `@RequestScoped`
 5. `Specific`, `Generic`, `@GET`, `@Path`
+6. `@QueryParam`
 
 #### Modules
 
