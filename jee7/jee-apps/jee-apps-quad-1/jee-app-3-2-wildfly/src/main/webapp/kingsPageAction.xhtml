@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<p>I like to move it move it!</p>
+<h:form id="findForm">
+    <p><input jsf:id="search1" placeholder="Search by title" jsf:value="#{kingsAndQueensMB.filterString}"/></p>
+    <p><input id="search2" jsf:placeholder="Search by title" value="#{kingsAndQueensMB.filterString}"/></p>
+    <p><h:inputText id="search3" value="#{kingsAndQueensMB.filterString}" placeholder="Search by title"/></p>
+    <p><h:inputText id="search4" value="#{kingsAndQueensMB.filterString}" placeholder="Search by title"/>
+        <f:param name="placeholder" value="Search by title"/>
+    </p>
+    <p><h:inputText id="search5" value="#{kingsAndQueensMB.filterString}" pt:placeholder="Search by title"/></p>
+    <p><h:commandButton value="Search by title" action="#{kingsAndQueensMB.allKingsAndQueensHabsburg}"/></p>
+    <p><h:outputText value="#{kingsAndQueensMB.filterString}"/></p>
+</h:form>
+</body>
+</html>

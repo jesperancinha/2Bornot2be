@@ -18,6 +18,7 @@ For this app we cover:
 
 1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
 2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
+3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
 
 ## Test Endpoints
 
@@ -45,6 +46,8 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [JSF 2 Templating with Facelets example](https://mkyong.com/jsf2/jsf-2-templating-with-facelets-example/)
+-   [23.4 About CDI Managed Beans](https://docs.oracle.com/javaee/7/tutorial/cdi-basic004.htm)
 -   [JSF Navigation Rule Example Tutorial](https://www.journaldev.com/7042/jsf-navigation-rule-example-tutorial)
 -   [Caesar Cipher Encrypt & Decrypt](https://md5decrypt.net/en/Caesar/)
 -   [18 Java API for WebSocket](http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket.htm)
