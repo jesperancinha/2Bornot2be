@@ -37,6 +37,7 @@
 1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`. `h:commandLink`
 2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
 3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
+4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
 
 #### Modules
 

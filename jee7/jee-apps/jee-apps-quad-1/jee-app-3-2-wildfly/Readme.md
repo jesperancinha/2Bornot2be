@@ -19,6 +19,7 @@ For this app we cover:
 1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
 2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
 3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
+4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
 
 ## Test Endpoints
 
@@ -46,6 +47,9 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [JSTL - Core <fmt:message> Tag](https://www.tutorialspoint.com/jsp/jstl_format_message_tag.htm)
+-   [JSTL - Core <fmt:bundle> Tag](https://www.tutorialspoint.com/jsp/jstl_format_bundle_tag.htm)
+-   [JSP - Standard Tag Library (JSTL) Tutorial](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm)
 -   [JSF 2 Templating with Facelets example](https://mkyong.com/jsf2/jsf-2-templating-with-facelets-example/)
 -   [23.4 About CDI Managed Beans](https://docs.oracle.com/javaee/7/tutorial/cdi-basic004.htm)
 -   [JSF Navigation Rule Example Tutorial](https://www.journaldev.com/7042/jsf-navigation-rule-example-tutorial)
