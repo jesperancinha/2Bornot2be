@@ -23,6 +23,7 @@ For this app we cover:
 5. `Specific`, `Generic`, `@GET`, `@Path`
 6. `@QueryParam`
 7. `MessageBodyReader`
+8. `MessageBodyWritter`
 
 ## Test Endpoints
 
@@ -46,8 +47,6 @@ For this app we cover:
 18. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton
 19. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton/pop
 
-
-
 ```bash
 curl -X POST http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/messages/sendMessage -H "Content-Type: application/text" -d @message1.txt
 ```
@@ -68,6 +67,10 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [Creating Custom JAX-RS MessageBodyReader](https://memorynotfound.com/jax-rs-messagebodyreader/)
+-   [Creating Custom JAX-RS MessageBodyWriter](https://memorynotfound.com/jax-rs-messagebodywriter/)
+-   [Chapter 4. RESTful Web Services](https://www.oreilly.com/library/view/java-ee-7/9781449370589/ch04.html)
+-   [XMLHttpRequest.response](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response)
 -   [29.2 Creating a RESTful Root Resource Class](https://docs.oracle.com/javaee/7/tutorial/jaxrs002.htm)
 -   [32.7 The Lifecycles of Enterprise Beans](https://docs.oracle.com/javaee/7/tutorial/ejb-intro007.htm)
 -   [Annotation Type Path](https://docs.oracle.com/javaee/7/api/javax/ws/rs/Path.html)

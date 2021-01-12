@@ -23,6 +23,7 @@
 5. `Specific`, `Generic`, `@GET`, `@Path`
 6. `@QueryParam`
 7. `MessageBodyReader`
+8. `MessageBodyWritter`
 
 #### Modules
 

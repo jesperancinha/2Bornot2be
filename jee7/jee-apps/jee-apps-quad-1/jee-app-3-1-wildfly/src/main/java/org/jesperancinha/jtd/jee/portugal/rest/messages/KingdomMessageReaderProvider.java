@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
 
 @Provider
 @Consumes("application/text")
-public class KingdomMessageProvider implements MessageBodyReader<KingdomMessage> {
+public class KingdomMessageReaderProvider implements MessageBodyReader<KingdomMessage> {
     @Override
     public boolean isReadable(Class<?> aClass, Type type, Annotation[] annotations, MediaType mediaType) {
         return type == KingdomMessage.class;
