@@ -64,7 +64,6 @@
 <h2>Main visualization</h2>
 <a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/historyDelivery.jsp">Test page with all the beans via
     JSP</a>
-</body>
 <h1>Pseudonyms List. Distinguish between more specific end points from more generic ones.</h1>
 <p><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/pseudonyms/burgundy/Sancho%20I">Sancho
     I - Specific endpoint</a></p>
@@ -138,9 +137,48 @@
 
     window.addEventListener("load", connect2, false);
 </script>
-<div id="webSocketResult1Id"></div>
-<div id="webSocketResult2Id"></div>
 <button onclick="wsocket.send('Can I be a king?'); wsocket2.send('Your Majesty, I don\'t know what to say!')">Click to
     be a King!
 </button>
+<div id="webSocketResult1Id"></div>
+<div id="webSocketResult2Id"></div>
+
+
+<h1>Sending encoded messages in Caesar 13 format</h1>
+<script>
+    var secretMessage = 'wbnb v jnf xvat bs cbeghtny ur vf erpbtavmrq puvrsyl sbe uvf ebyr va cbeghtnyf ivpgbel va n fhpprffvba jne jvgu pnfgvyr cerfreivat uvf pbhagelf vaqrcraqrapr naq rfgnoyvfuvat gur nivm  be wbnavan qlanfgl ba gur cbeghthrfr guebar';
+    var wsocket3;
+
+    function connect3() {
+        wsocket3 = new WebSocket("ws://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/aviz/security");
+        wsocket3.onmessage = onMessage3;
+    }
+
+    function onMessage3(evt) {
+        document.getElementById("webSocketResult3Id").innerHTML = evt.data
+    }
+
+    window.addEventListener("load", connect3, false);
+</script>
+<script>
+    var wsocket4;
+
+    function connect4() {
+        wsocket4 = new WebSocket("ws://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/aviz/security/noencoding");
+        wsocket4.onmessage = onMessage4;
+    }
+
+    function onMessage4(evt) {
+        document.getElementById("webSocketResult4Id").innerHTML = evt.data
+    }
+
+    window.addEventListener("load", connect4, false);
+</script>
+<h3>You are about to send this:</h3>
+<h3>wbnb v jnf xvat bs cbeghtny ur vf erpbtavmrq puvrsyl sbe uvf ebyr va cbeghtnyf ivpgbel va n fhpprffvba jne jvgu pnfgvyr cerfreivat uvf pbhagelf vaqrcraqrapr naq rfgnoyvfuvat gur nivm  be wbnavan qlanfgl ba gur cbeghthrfr guebar</h3>
+<button onclick="wsocket3.send(secretMessage); wsocket4.send(secretMessage);">Click for a bit of history</button>
+
+<div id="webSocketResult3Id"></div>
+<div id="webSocketResult4Id"></div>
+</body>
 </html>

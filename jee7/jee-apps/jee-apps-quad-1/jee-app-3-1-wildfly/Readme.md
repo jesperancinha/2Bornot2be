@@ -25,6 +25,7 @@ For this app we cover:
 7. `MessageBodyReader`
 8. `MessageBodyWritter`
 9. `@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
+10. `Encoder.Text`, `Decoder.Text`, `init`, `destroy`, `decode`, `encode`, `encoders`, `decoders`
 
 ## Test Endpoints
 
@@ -72,12 +73,14 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+-   [John I of Portugal](https://en.wikipedia.org/wiki/John_I_of_Portugal)
 -   [History of Portugal](https://en.wikipedia.org/wiki/History_of_Portugal)
 -   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
 -   [List of Portuguese monarchs](https://en.wikipedia.org/wiki/List_of_Portuguese_monarchs)
 
 ## References
 
+-   [Caesar Cipher Encrypt & Decrypt](https://md5decrypt.net/en/Caesar/)
 -   [18 Java API for WebSocket](http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket.htm)
 -   [WebSocket Client API in Java EE 7](https://dzone.com/articles/websocket-client-api-in-java-ee-7)
 -   [Java EE 7: Building Web Applications with WebSocket, JavaScript and HTML5](oracle.com/webfolder/technetwork/tutorials/obe/java/HomeWebsocket/WebsocketHome.html#:~:text=By%20maintaining%20a%20constant%20connection,into%20Java%20EE%207%20applications.)
