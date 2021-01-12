@@ -1,3 +1,8 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.
   User: jofisaes
@@ -12,6 +17,30 @@
 </head>
 <body>
 <p>I like to move it move it!</p>
+
+<%
+
+    final Map<String, String> kingsAndQueens = new HashMap<>();
+    kingsAndQueens.put("Isabel I", "Trastámara");
+    kingsAndQueens.put("Fernando V & II", "Trastámara");
+    kingsAndQueens.put("Juana I", "Trastámara");
+    kingsAndQueens.put("Felipe I", "Trastámara");
+    request.setAttribute("kingsAndQueens", kingsAndQueens);
+%>
+
+
+<table>
+    <tr>
+        <th>Kings & Queens</th>
+        <th>House</th>
+    </tr>
+    <c:forEach var="item" items="${kingsAndQueens}">
+        <tr>
+            <td>${item.key}</td>
+            <td>${item.value}</td>
+        </tr>
+    </c:forEach>
+</table>
 
 </body>
 </html>

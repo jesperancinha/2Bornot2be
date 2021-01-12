@@ -17,6 +17,7 @@ The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
+2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
 
 ## Test Endpoints
 
@@ -36,6 +37,7 @@ mvn clean install -Parq-wildfly-managed
 
 ## Context References
 
+-   [List of Spanish monarchs](https://en.wikipedia.org/wiki/List_of_Spanish_monarchs)
 -   [John I of Portugal](https://en.wikipedia.org/wiki/John_I_of_Portugal)
 -   [History of Portugal](https://en.wikipedia.org/wiki/History_of_Portugal)
 -   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
