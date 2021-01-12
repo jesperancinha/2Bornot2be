@@ -22,6 +22,7 @@ For this app we cover:
 4. `Scope`, `@RequestScoped`
 5. `Specific`, `Generic`, `@GET`, `@Path`
 6. `@QueryParam`
+7. `MessageBodyReader`
 
 ## Test Endpoints
 
@@ -44,6 +45,12 @@ For this app we cover:
 17. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful/pop
 18. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton
 19. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton/pop
+
+
+
+```bash
+curl -X POST http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/messages/sendMessage -H "Content-Type: application/text" -d @message1.txt
+```
 
 ## Run Arquillian tests
 
