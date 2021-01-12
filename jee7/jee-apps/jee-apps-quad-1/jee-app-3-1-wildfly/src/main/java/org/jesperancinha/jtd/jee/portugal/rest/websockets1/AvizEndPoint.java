@@ -26,12 +26,14 @@ public class AvizEndPoint {
     public void onMessage(Session session, String message) throws IOException {
         printBlueGenericTitleLn("OnMessage from %s called!", this.getClass()
             .getCanonicalName());
+        printGreenGenericLn("Message receive is: %s", message);
+        final var returnMessage = String.format("Q: %s\n A: %s", message, "So you want to be part of the House of Aviz huh!?!");
         session.getBasicRemote()
-            .sendText(message);
+            .sendText(returnMessage);
         for (Session sess : session.getOpenSessions()) {
             if (sess.isOpen())
                 sess.getBasicRemote()
-                    .sendText(message);
+                    .sendText(returnMessage);
         }
     }
 

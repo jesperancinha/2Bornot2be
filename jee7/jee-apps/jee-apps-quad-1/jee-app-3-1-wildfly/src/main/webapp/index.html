@@ -46,15 +46,19 @@
 <ul>
     <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateless">Stateless plain
         call</a></li>
-    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateless/pop">Stateless affecting
+    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateless/pop">Stateless
+        affecting
         value</a></li>
-    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateful">Stateful plain call</a>
+    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateful">Stateful plain
+        call</a>
     </li>
-    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateful/pop">Stateful affecting
+    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/stateful/pop">Stateful
+        affecting
         value</a></li>
     <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/singleton">Singleton plain
         call</a></li>
-    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/singleton/pop">Singleton affecting
+    <li><a href="http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/def/singleton/pop">Singleton
+        affecting
         value</a></li>
 </ul>
 <h2>Main visualization</h2>
@@ -84,7 +88,7 @@
     function sendMessageToKing() {
         var ajaxPostRequest = new XMLHttpRequest();
         ajaxPostRequest.open("POST", "/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/messages/sendMessage");
-        ajaxPostRequest.onreadystatechange = function() {
+        ajaxPostRequest.onreadystatechange = function () {
             if (ajaxPostRequest.readyState === 4) {
                 console.log(ajaxPostRequest.response);
                 document.getElementById("messageACKId").innerHTML = ajaxPostRequest.response;
@@ -105,4 +109,38 @@
 <h3>ACK</h3>
 <div id="messageACKId"></div>
 
+<h1>House of Aviz</h1>
+<script>
+    var wsocket;
+
+    function connect() {
+        wsocket = new WebSocket("ws://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/aviz");
+        wsocket.onmessage = onMessage;
+    }
+
+    function onMessage(evt) {
+        document.getElementById("webSocketResult1Id").innerHTML = evt.data
+    }
+
+    window.addEventListener("load", connect, false);
+</script>
+<script>
+    var wsocket2;
+
+    function connect2() {
+        wsocket2 = new WebSocket("ws://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/aviz/interpreter");
+        wsocket2.onmessage = onMessage2;
+    }
+
+    function onMessage2(evt) {
+        document.getElementById("webSocketResult2Id").innerHTML = evt.data
+    }
+
+    window.addEventListener("load", connect2, false);
+</script>
+<div id="webSocketResult1Id"></div>
+<div id="webSocketResult2Id"></div>
+<button onclick="wsocket.send('Can I be a king?'); wsocket2.send('Your Majesty, I don\'t know what to say!')">Click to
+    be a King!
+</button>
 </html>
