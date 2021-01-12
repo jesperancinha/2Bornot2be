@@ -180,5 +180,25 @@
 
 <div id="webSocketResult3Id"></div>
 <div id="webSocketResult4Id"></div>
+
+<h1>Sending partial Messages</h1>
+<script>
+    var wsocket5;
+
+    function connect5() {
+        wsocket5 = new WebSocket("ws://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/aviz/interpreter/mass");
+        wsocket5.onmessage = onMessage5;
+    }
+
+    function onMessage5(evt) {
+        document.getElementById("webSocketResult5Id").innerHTML = evt.data
+    }
+
+    window.addEventListener("load", connect5, false);
+</script>
+<button onclick="wsocket5.send('This is supposed to be a huge message')">Click for a huge bit of history</button>
+<button onclick="wsocket5.send(new Uint32Array('This is supposed to be a huge message'))">Click for a huge bit of history in bytes</button>
+
+<div id="webSocketResult5Id"></div>
 </body>
 </html>

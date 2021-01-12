@@ -26,6 +26,7 @@
 8. `MessageBodyWritter`
 9. `@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
 10. `Encoder.Text`, `Decoder.Text`, `init`, `destroy`, `decode`, `encode`, `encoders`, `decoders`
+11. `MessageHandler.Partial`, `MessageHandler.Whole`, `@OnMessage`, `isLast`
 
 #### Modules
 
