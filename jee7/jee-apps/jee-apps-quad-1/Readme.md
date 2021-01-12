@@ -24,6 +24,7 @@
 6. `@QueryParam`
 7. `MessageBodyReader`
 8. `MessageBodyWritter`
+9. `@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
 
 #### Modules
 

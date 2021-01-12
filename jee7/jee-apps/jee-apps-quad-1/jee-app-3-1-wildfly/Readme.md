@@ -24,8 +24,11 @@ For this app we cover:
 6. `@QueryParam`
 7. `MessageBodyReader`
 8. `MessageBodyWritter`
+9. `@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
 
 ## Test Endpoints
+
+### GET / Browser tests
 
 1. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promised.to.love.you.forevermore.subjects/burgundy -> @PathParam
 2. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.subjects/burgundy -> @PathParam
@@ -40,15 +43,23 @@ For this app we cover:
 11. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR6 -> RegEx in @PathParam
 12. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR7 -> RegEx in @PathParam
 13. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/kings/promise.to.subjects/burgundy/BUR8 -> RegEx in @PathParam
-14. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateless
-15. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateless/pop
-16. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful
-17. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful/pop
-18. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton
-19. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton/pop
+14. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateless - @Stateless
+15. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateless/pop - @Stateless
+16. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful - @Stateful
+17. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/stateful/pop - @Stateful
+18. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton - @Singleton
+19. http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/singleton/pop - @Singleton
+
+### POST requests
 
 ```bash
 curl -X POST http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/app/history/messages/sendMessage -H "Content-Type: application/text" -d @message1.txt
+```
+
+### WebSockets
+
+```bash
+curl --include --no-buffer --header "Connection: Upgrade" --header "Upgrade: websocket" --header "Host: localhost:8080" --header "Origin: http://localhost:8080" --header "Sec-WebSocket-Key: SomeKey==" --header "Sec-WebSocket-Version: 13" http://localhost:8080/jee-app-3-1-wildfly-1.0.0-SNAPSHOT/aviz
 ```
 
 ## Run Arquillian tests
@@ -67,6 +78,9 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [18 Java API for WebSocket](http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket.htm)
+-   [WebSocket Client API in Java EE 7](https://dzone.com/articles/websocket-client-api-in-java-ee-7)
+-   [Java EE 7: Building Web Applications with WebSocket, JavaScript and HTML5](oracle.com/webfolder/technetwork/tutorials/obe/java/HomeWebsocket/WebsocketHome.html#:~:text=By%20maintaining%20a%20constant%20connection,into%20Java%20EE%207%20applications.)
 -   [Creating Custom JAX-RS MessageBodyReader](https://memorynotfound.com/jax-rs-messagebodyreader/)
 -   [Creating Custom JAX-RS MessageBodyWriter](https://memorynotfound.com/jax-rs-messagebodywriter/)
 -   [Chapter 4. RESTful Web Services](https://www.oreilly.com/library/view/java-ee-7/9781449370589/ch04.html)
