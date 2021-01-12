@@ -1,4 +1,4 @@
-# jee-apps
+# jee-app-3-2-wildfly History of Spain
 
 ---
 
@@ -11,162 +11,73 @@
 
 ---
 
+## Exercise
 
-## Introduction
+The apps under [jee-apps](../..), cover lots of topics.
+For this app we cover:
 
-For a good understanding of JEE I've created different Triads.
-A triad is a basically a set of three applications.
-Each application may also be a set of one or three modules.
-In this document you can see a cloud of topics for every triad and their contexts.
-This way I hope to make your path to JEE certification a fun success! Enjoy!
+1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
 
-</i>João Esperancinha, on the 5th of January 2021</i>
+## Test Endpoints
 
-## Prepare the environment
+### GET / Browser tests
 
-### Wildfly 16.0
+### POST requests
 
-1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
-2. Unpack the contents of that package to this root.
+### WebSockets
 
-You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
+## Run Arquillian tests
 
-### Tomcat
+```bash
+jenv local system
+sdk use java 11.0.9.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
 
-### End Installation notes
+## Context References
 
-This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
-
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
-
-
-
-## Triads
-
-### [jee-apps-triad-1](./jee-apps-triad-1)
-
-#### Subjects:
-
-----
-
-`Servlet`
-`@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`,
-`@ApplicationScoped`, `JSF`
-`javax.enterprise.inject.Instance`,
-`@PersistenceContext`, `InjectionPoint`, `@RequestScoped`
-`@Stateful`, `@Alternative`
-`@Model`
-`<ui:repeat`, `<h:link`, `<f:param`
-`<h:dataTable`, `<h:column`, `<f:facets`
-`<h:outputFormat` `<f:param`
-`@Resource`,
-`Arquillian` `JUnit` `tests`
-`@Null`, `@NotNull`, `@Size`, `@Email`, `@Digits`
-`UserTransaction`, `Event<T>`,
-`FacesContext`,
-`@Path`, `@ApplicationPath`, `Application`
-`@Observes`, `Reception.ALWAYS`
-`@XmlRootElement(name = "herb")`, `@XmlAccessorType(XmlAccessType.FIELD)`
-`@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes`, `MediaType.APPLICATION_XML`
-`ServletContext`, `HttpSession`, `doGet`
-`JCA`, `JNDI`,
-`javax.ejb.MessageDriven`, `@ActivationConfigProperty`, `javax.jms.MessageListener`.
-`ApacheMQ`, `queues`, `standalone-full.xml`,
-`@WebServiceRef`
-`@WebServlet`, `@WebServiceRef`, `@HandlerChain`, `@WebServiceClient`, `SOAP WS - JAX-WS`
-`@Entity`, `@Table`
-`javax.ejb.TransactionManagementType.BEAN`,`javax.ejb.TransactionManagementType.CONTAINER`
-`@OneToMany`, `@ManyToOne`
-`@OneToOne`
-`@Enumerated`,`entities`
-`Abstract`, `final`,  `JPA`,
-`@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
-`transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
-`@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`, `TimerService`
-`@TransactionAttribute`, `TransactionAttributeType`
-`MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` `TransactionAttribute`
-`Rollback`
-
----
-
-#### Applications:
-
--   [jee-app-1-wildfly](./jee-apps-triad-1/jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
--   [jee-app-2-wildfly](./jee-apps-triad-1/jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
--   [jee-app-3-wildfly](./jee-apps-triad-1/jee-app-3-wildfly) - A lesson on teeth health and the odd cases - Java 11
-
-### [jee-apps-triad-2](./jee-apps-triad-2)
-
-#### Subjects:
-
-`@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
-`acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
-`<alternatives>`, `@Alternative`, `@Default`
-`JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
-`URL Rewriting`, `Session`, `Cookie`
-`soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
-`@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
-`@WebParam`, `@WebResult`
-`Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
-`@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
-`Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
-`<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
-`Filter`, `web.xml`, `order`, `direct references`
-`Session`, `invalidate`, `IllegalStateException`
-`service`, `doGet`
-`<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
-`<error-page>`, `<exception-type>`, `<location>`
-`<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
-`<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
-`<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
-`<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
-
-#### Applications:
-
--   [jee-app-2-1-wildfly](./jee-apps-triad-2/jee-app-2-1-wildfly) - Boy bands in the 90's
--   [jee-app-2-2-wildfly](./jee-apps-triad-2/jee-app-2-2-wildfly) - Girl Bands
--   [jee-app-2-3-wildfly](./jee-apps-triad-2/jee-app-2-3-wildfly) - Soul Music
-
-### [jee-apps-quad-1](./jee-apps-quad-1)
-
-#### Subjects:
-
-`@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
-`RegEx`, `@PathParam`, `@GET`
-`@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
-`Scope`, `@RequestScoped`
-`Specific`, `Generic`, `@GET`, `@Path`
-`@QueryParam`
-`MessageBodyReader`
-`MessageBodyWritter`
-`@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
-`Encoder.Text`, `Decoder.Text`, `init`, `destroy`, `decode`, `encode`, `encoders`, `decoders`
-`MessageHandler.Partial`, `MessageHandler.Whole`, `@OnMessage`, `isLast`
-
-#### Applications:
-
--   [jee-app-3-1-wildfly](./jee-apps-quad-1/jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
--   [jee-app-3-2-wildfly](./jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain - 🇪🇸
+-   [John I of Portugal](https://en.wikipedia.org/wiki/John_I_of_Portugal)
+-   [History of Portugal](https://en.wikipedia.org/wiki/History_of_Portugal)
+-   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
+-   [List of Portuguese monarchs](https://en.wikipedia.org/wiki/List_of_Portuguese_monarchs)
 
 ## References
 
--   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
--   [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
--   [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+-   [JSF Navigation Rule Example Tutorial](https://www.journaldev.com/7042/jsf-navigation-rule-example-tutorial)
+-   [Caesar Cipher Encrypt & Decrypt](https://md5decrypt.net/en/Caesar/)
+-   [18 Java API for WebSocket](http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket.htm)
+-   [WebSocket Client API in Java EE 7](https://dzone.com/articles/websocket-client-api-in-java-ee-7)
+-   [Java EE 7: Building Web Applications with WebSocket, JavaScript and HTML5](oracle.com/webfolder/technetwork/tutorials/obe/java/HomeWebsocket/WebsocketHome.html#:~:text=By%20maintaining%20a%20constant%20connection,into%20Java%20EE%207%20applications.)
+-   [Creating Custom JAX-RS MessageBodyReader](https://memorynotfound.com/jax-rs-messagebodyreader/)
+-   [Creating Custom JAX-RS MessageBodyWriter](https://memorynotfound.com/jax-rs-messagebodywriter/)
+-   [Chapter 4. RESTful Web Services](https://www.oreilly.com/library/view/java-ee-7/9781449370589/ch04.html)
+-   [XMLHttpRequest.response](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response)
+-   [29.2 Creating a RESTful Root Resource Class](https://docs.oracle.com/javaee/7/tutorial/jaxrs002.htm)
+-   [32.7 The Lifecycles of Enterprise Beans](https://docs.oracle.com/javaee/7/tutorial/ejb-intro007.htm)
+-   [Annotation Type Path](https://docs.oracle.com/javaee/7/api/javax/ws/rs/Path.html)
+-   [jsp:useBean action tag](https://www.javatpoint.com/jsp-useBean-action)
+-   [How can I print error stack trace in JSP page?](https://stackoverflow.com/questions/8135980/how-can-i-print-error-stack-trace-in-jsp-page/8136065)
+-   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
+-   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
+-   [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
+-   [Define and Map Filters](https://help.perforce.com/hydraexpress/4.3.0/html/rwsfexpservletug/4-8.html#:~:text=The%20filter%20element%20of%20a,for%20this%20particular%20filter%20instance.)
+-   [How do I define a filter using @WebFilter annotation?](https://kodejava.org/how-do-i-define-a-filter-using-webfilter-annotation/)
+-   [URL Rewriting in WSDL and XML Schema](https://membrane-soa.org/service-proxy-doc/4.2/url-rewriting-wsdl.htm)
+-   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
+-   [Auth0 REST vs SOAP - Building Modern Applications](https://auth0.com/learn/rest-vs-soap/)
+-   [O'Reilly SOAP session scope](https://www.oreilly.com/library/view/apache-axis2-web/9781849511568/ch10s05.html)
+-   [WebLogic Communications Services Gatekeeper Application Developer's Guide](https://docs.oracle.com/cd/E50778_01/doc.60/e50769/app_sessmgr.htm#SGAPP138)
+-   [InterSystems SOAP Session Management](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSOAP_SESSIONS)
+-   [SOAP request from command line using curl](https://browse-tutorials.com/tutorial/soap-request-command-line-using-curl)
+-   [Session Management in Java – HttpServlet, Cookies, URL Rewriting](https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
+-   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)
+-   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
+-   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
+-   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
+-   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
+-   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
+-   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
+-   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
 
 ## About me 👨🏽‍💻🚀
 

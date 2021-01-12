@@ -34,6 +34,8 @@
 
 #### Subjects
 
+1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`. `h:commandLink`
+
 #### Modules
 
 ### [jee-app-3-3-wildfly](jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
