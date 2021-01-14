@@ -22,6 +22,7 @@ For this app we cover:
 4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
 5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
 6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
+7. `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
 
 ## Test Endpoints
 
@@ -33,6 +34,7 @@ You can always log in via `admin`/`admin`, `username`/`password` combination:
 1. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/index.xhtml
 2. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/messages.jsp - Localization context
 3. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/history/palace/servlet - isCallerInRole
+4. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/waitingroom.jsp - Calling protected bean directly via JSP. What happens?
 
 ### POST requests
 
@@ -266,6 +268,8 @@ Our users are kings and queens of Spain:
 
 ## Context References
 
+-   [Palace of Valsain](https://en.wikipedia.org/wiki/Palace_of_Valsain)
+-   [House of Trastámara](https://en.wikipedia.org/wiki/House_of_Trast%C3%A1mara)
 -   [List of Spanish monarchs](https://en.wikipedia.org/wiki/List_of_Spanish_monarchs)
 -   [John I of Portugal](https://en.wikipedia.org/wiki/John_I_of_Portugal)
 -   [History of Portugal](https://en.wikipedia.org/wiki/History_of_Portugal)
