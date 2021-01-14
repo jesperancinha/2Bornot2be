@@ -1,9 +1,4 @@
 #!/bin/sh
-
-cp backup/standalone-full.xml ../../wildfly-16.0.0.Final/standalone/configuration/
-mvn clean install;
-
-
 cd ../../wildfly-16.0.0.Final/bin
 
 wget  https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar

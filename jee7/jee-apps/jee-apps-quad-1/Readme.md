@@ -39,6 +39,7 @@
 3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
 4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
 5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
+6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 
 #### Modules
 

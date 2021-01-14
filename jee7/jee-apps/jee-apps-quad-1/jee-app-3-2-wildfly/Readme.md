@@ -21,10 +21,18 @@ For this app we cover:
 3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
 4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
 5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
+6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 
 ## Test Endpoints
 
 ### GET / Browser tests
+
+For all of these pages, please pick a user from the table below and login.
+You can always log in via `admin`/`admin`, `username`/`password` combination:
+
+1. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/index.xhtml
+2. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/messages.jsp - Localization context
+3. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/history/palace/servlet - isCallerInRole
 
 ### POST requests
 
@@ -40,18 +48,27 @@ mvn clean install -Parq-wildfly-managed
 
 ## WildFly configuration
 
-
 ### Security Domain, users, and roles
+
+Note that in the full working example [standalone-full.xm](backup/standalone-full.xml), we have this security domain duplicated.
+This is because that for some libraries it is calling `java:/jaas/securedbdomain` and for others `securedbdomain`.
+
 ```xml
-<security-domain name="dbdomain" cache-type="default">
+ <security-domain name="java:/jaas/securedbdomain" cache-type="default">
     <authentication>
         <login-module code="Database" flag="required">
-            <module-option name="dsJndiName" value="
-    java:jboss/datasources/KingsDS"/>
-            <module-option name="principalsQuery" value="select passwd from
-    USERS where login=?"/>
-            <module-option name="rolesQuery" value="select role ‘Roles’
-    from USER_ROLES where login=?"/>
+            <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
+            <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
+            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+        </login-module>
+    </authentication>
+</security-domain>
+<security-domain name="securedbdomain" cache-type="default">
+    <authentication>
+        <login-module code="Database" flag="required">
+            <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
+            <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
+            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
         </login-module>
     </authentication>
 </security-domain>
@@ -179,15 +196,24 @@ cp backup/standalone-full.xml ../../wildfly-16.0.0.Final/standalone/configuratio
 
 Be sure to run the automated installation having the sever <b>RUNNING</b>:
 
+1. [setup.sh](setup.sh)
 ```bash
-installAll.sh
+./setup.sh
 ```
 
-<b>ALWAYS start WildFly this way:</b>
+2. [add-user.sh](../../wildfly-16.0.0.Final/bin/add-user.sh)
+   
+3. <b>ALWAYS start WildFly this way:</b>
 
 ```bash
 ./standalone.sh -c standalone-full.xml
 ```
+
+4. [installModules.sh](./installModules.sh)
+```bash
+./installModules.sh
+```
+
 ## PostgreSQL
 
 For this module, you'll need a ready available database.
@@ -223,6 +249,21 @@ A file like this will show up in your installation [module.xml](../../wildfly-16
     </dependencies>
 </module>
 ```
+
+## Login credentials
+
+You probably noticed through the code, that the admin user is available and that its password is admin.
+For this module we are not doing any encryption on purpose.
+The idea is to master security annotations.
+
+We will use users and credentials for this.
+Our users are kings and queens of Spain:
+
+|Monarch|Name|Dynasty|username|password|
+|---|---|---|---|---|
+|Administrator|Administrator|Administrator|admin|admin|
+
+
 ## Context References
 
 -   [List of Spanish monarchs](https://en.wikipedia.org/wiki/List_of_Spanish_monarchs)
@@ -233,7 +274,8 @@ A file like this will show up in your installation [module.xml](../../wildfly-16
 
 ## References
 
--   [Securing a web application     ](https://openliberty.io/guides/security-intro.html)
+-   [Database Authentication](https://docs.jboss.org/author/display/WFLY/Database%20Authentication%20Migration.html)
+-   [Securing a web application](https://openliberty.io/guides/security-intro.html)
 -   [Connect JDBC driver as Wildfly module](https://javadev.org/appservers/wildfly/8.2/jdbc/postgresql/)
 -   [service-java-notificacoes](https://github.com/fas-alves/service-java-notificacoes)
 -   [18.2. ROLE-BASED SECURITY IN APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html/development_guide/sect-role-based_security_in_applications)
