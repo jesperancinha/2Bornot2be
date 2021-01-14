@@ -20,6 +20,7 @@ For this app we cover:
 2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
 3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
 4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
+5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
 
 ## Test Endpoints
 
@@ -37,6 +38,191 @@ sdk use java 11.0.9.hs-adpt
 mvn clean install -Parq-wildfly-managed
 ```
 
+## WildFly configuration
+
+
+### Security Domain, users, and roles
+```xml
+<security-domain name="dbdomain" cache-type="default">
+    <authentication>
+        <login-module code="Database" flag="required">
+            <module-option name="dsJndiName" value="
+    java:jboss/datasources/KingsDS"/>
+            <module-option name="principalsQuery" value="select passwd from
+    USERS where login=?"/>
+            <module-option name="rolesQuery" value="select role ‘Roles’
+    from USER_ROLES where login=?"/>
+        </login-module>
+    </authentication>
+</security-domain>
+```
+
+### Database
+
+-   We make a clean installation by removing the whole h2 configuration:
+
+```xml
+<datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true"
+            use-java-context="true"
+            statistics-enabled="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}">
+    <connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
+    <driver>h2</driver>
+    <security>
+        <user-name>sa</user-name>
+        <password>sa</password>
+    </security>
+</datasource>
+<drivers>
+    <driver name="h2" module="com.h2database.h2">
+        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+    </driver>
+</drivers>
+```
+
+-   Then we configure the PostgreSQL installation:
+
+```xml
+<datasource jndi-name="java:jboss/datasources/KingsAndQueensDS" pool-name="default" enabled="true" use-java-context="true">
+    <connection-url>jdbc:postgresql://localhost:5432/postgres</connection-url>
+    <driver-class>org.postgresql.Driver</driver-class>
+    <driver>postgresql</driver>
+    <security>
+        <user-name>postgres</user-name>
+        <password>admin</password>
+    </security>
+    <connection-property name="driver-class">org.postgresql.Driver</connection-property>
+    <connection-property name="connection-url">jdbc:postgresql://localhost:5432/postgres</connection-property>
+</datasource>
+<drivers>
+    <driver name="postgresql" module="postgresql">
+        <driver-class>org.postgresql.Driver</driver-class>
+        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+    </driver>
+</drivers>
+```
+
+## Domain
+
+```xml
+<subsystem xmlns="urn:jboss:domain:ejb3:5.0">
+...
+    <default-security-domain value="securedbdomain"/>
+</subsystem>
+```
+
+```xml
+ <subsystem xmlns="urn:jboss:domain:ee:4.0">
+...
+    <default-bindings 
+            context-service="java:jboss/ee/concurrency/context/default" 
+            datasource="java:jboss/datasources/KingsAndQueensDS" 
+            jms-connection-factory="java:jboss/DefaultJMSConnectionFactory" 
+            managed-executor-service="java:jboss/ee/concurrency/executor/default" 
+            managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default" 
+            managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
+</subsystem>
+```
+## Secure login
+
+```xml
+<subsystem xmlns="urn:jboss:domain:security:2.0">
+    <security-domains>
+        <security-domain name="securedbdomain" cache-type="default">
+            <authentication>
+                <login-module code="Database" flag="required">
+                    <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
+                    <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
+                    <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+                </login-module>
+            </authentication>
+        </security-domain>
+...
+    </security-domains>
+</subsystem>
+```
+
+NOTE: It is extremely important that the return parameters match ther expectation of the `j_` authentication parameters.
+We NEED to:
+
+-   return `password` for `principalsQuery`
+-   return `role`, `Roles` for `rolesQuery`
+
+These two parameters can be difficult to find in new and old Wildfly documentation, the come, the casts and small things can make whole difference.
+
+1. Query for `principalsQuery`:
+
+```sql
+select passwd as password from USERS where login=?
+```
+
+2. Query for `rolesQuery`
+
+```sql
+select role, 'Roles' from USER_ROLES where login=?
+```
+
+## How to run
+
+This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
+
+```bash
+jenv local system
+sdk use java 11.0.9.hs-adpt 
+java -version
+```
+
+Run this command first <b>WITHOUT</b> the server running:
+
+```bash
+cp backup/standalone-full.xml ../../wildfly-16.0.0.Final/standalone/configuration/
+```
+
+Be sure to run the automated installation having the sever <b>RUNNING</b>:
+
+```bash
+installAll.sh
+```
+
+<b>ALWAYS start WildFly this way:</b>
+
+```bash
+./standalone.sh -c standalone-full.xml
+```
+## PostgreSQL
+
+For this module, you'll need a ready available database.
+We make our security tests with a running database.
+It cannot be done with H2 because of WilflyInitialization and because we want to see records being affected in the database
+
+Please install a compatible version to your system via [postgres-postgresql-downloads](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
+
+Also make sure your postgres default user has password admin/admin.
+
+Then we need to install the adapter:
+
+```bash
+cd ../../wildfly-16.0.0.Final/modules
+wget  https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar
+rm -r ../modules/org/postgresql
+rm -r ../modules/postgresql
+./jboss-cli.sh -c --command="module add --name=postgresql --resources=postgresql-42.2.18.jar"
+```
+
+A file like this will show up in your installation [module.xml](../../wildfly-16.0.0.Final/modules/postgresql/main/module.xml):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.0" name="postgresql">
+    <resources>
+        <resource-root path="postgresql-9.4-1201.jdbc41.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+    </dependencies>
+</module>
+```
 ## Context References
 
 -   [List of Spanish monarchs](https://en.wikipedia.org/wiki/List_of_Spanish_monarchs)
@@ -47,6 +233,13 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+-   [Securing a web application     ](https://openliberty.io/guides/security-intro.html)
+-   [Connect JDBC driver as Wildfly module](https://javadev.org/appservers/wildfly/8.2/jdbc/postgresql/)
+-   [service-java-notificacoes](https://github.com/fas-alves/service-java-notificacoes)
+-   [18.2. ROLE-BASED SECURITY IN APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html/development_guide/sect-role-based_security_in_applications)
+-   [What Are Realms, Users, Groups, and Roles?](https://docs.oracle.com/javaee/6/tutorial/doc/bnbxj.html)
+-   [Examples: Securing Enterprise Beans](https://javaee.github.io/tutorial/security-javaee003.html)
+-   [WS-Security](https://en.wikipedia.org/wiki/WS-Security)
 -   [JSTL - Core <fmt:message> Tag](https://www.tutorialspoint.com/jsp/jstl_format_message_tag.htm)
 -   [JSTL - Core <fmt:bundle> Tag](https://www.tutorialspoint.com/jsp/jstl_format_bundle_tag.htm)
 -   [JSP - Standard Tag Library (JSTL) Tutorial](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm)
