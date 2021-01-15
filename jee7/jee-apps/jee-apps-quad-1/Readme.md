@@ -42,6 +42,7 @@
 6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 7. `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
 8. `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
+9. `NONE`, `INTEGRAL`, `CONFIDENTIAL`
 
 #### Modules
 

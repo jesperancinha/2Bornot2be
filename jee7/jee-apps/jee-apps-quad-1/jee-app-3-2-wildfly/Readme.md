@@ -24,6 +24,7 @@ For this app we cover:
 6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 7. `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
 8. `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
+9. `NONE`, `INTEGRAL`, `CONFIDENTIAL`
 
 ## Test Endpoints
 
@@ -39,6 +40,8 @@ You can always log in via `admin`/`admin`, `username`/`password` combination:
 5. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/app/history/palace/rest/palace - When to call getCallerPrincipal, getUserPrincipal and isCallerInRole
 
 ### POST requests
+
+-   
 
 ### WebSockets
 
@@ -267,6 +270,48 @@ Our users are kings and queens of Spain:
 |---|---|---|---|---|
 |Administrator|Administrator|Administrator|admin|admin|
 
+## Differences between NONE, INTEGRAL and CONFIDENTIAL  guarantees:
+
+1. NONE
+```xml
+<user-data-constraint>
+    <transport-guarantee>NONE</transport-guarantee>
+</user-data-constraint>
+```
+This is a `no worries` configuration where data is exchanged in plain sight.
+Data is thus exposed to redirection and MITM (Man In The Middle) attacks.
+
+2. INTEGRAL
+```xml
+<user-data-constraint>
+    <transport-guarantee>INTEGRAL</transport-guarantee>
+</user-data-constraint>
+```
+For this configuration, certificates need to be installed in the client.
+If we go to http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml as an example, we are immediately redirected to https://localhost:8443/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml.
+We are now trying a secure connection SSL/TLS. Since we do not have a right certificate at the moment, we won't be able to check the page.
+This is a check for the integrity of the message.
+This means that if the data is changed in transit, that will be detected and the message will be rejected.
+
+3. CONFIDENTIAL
+
+```xml
+<user-data-constraint>
+    <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+</user-data-constraint>
+```
+For this configuration, certificates need to be installed in the client.
+If we go to http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml as an example, we are immediately redirected to https://localhost:8443/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml.
+We are now trying a secure connection SSL/TLS. Since we do not have a right certificate at the moment, we won't be able to check the page.
+This is a check for the confidentiality of the message.
+This means that it is not possible to check the data in transit. Only the receiver can decrypt the message and read it.
+
+--- 
+
+In both previous cases, without the correct certificate installation, your browser should alert you of a potential unsafe website like this:
+
+![alt text](./docs/jee-app-3-2-wildfly-unsafe.png)
+
 
 ## Context References
 
@@ -280,6 +325,7 @@ Our users are kings and queens of Spain:
 
 ## References
 
+-   [Fusion Middleware Developing Web Applications, Servlets, and JSPs for Oracle WebLogic Server](https://docs.oracle.com/cd/E24329_01/web.1211/e21049/web_xml.htm#WBAPP502)
 -   [Database Authentication](https://docs.jboss.org/author/display/WFLY/Database%20Authentication%20Migration.html)
 -   [Securing a web application](https://openliberty.io/guides/security-intro.html)
 -   [Connect JDBC driver as Wildfly module](https://javadev.org/appservers/wildfly/8.2/jdbc/postgresql/)

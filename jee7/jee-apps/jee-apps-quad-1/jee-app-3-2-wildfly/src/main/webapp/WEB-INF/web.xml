@@ -40,8 +40,7 @@
             <role-name>Trastamara</role-name>
         </auth-constraint>
         <user-data-constraint>
-            <!-- TODO: try to change to CONFIDENTIAL or INTEGRAL, reffer to web-common_3_1.xsd -->
-            <transport-guarantee>NONE</transport-guarantee>
+            <transport-guarantee>INTEGRAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
     <!--    <login-config>-->
