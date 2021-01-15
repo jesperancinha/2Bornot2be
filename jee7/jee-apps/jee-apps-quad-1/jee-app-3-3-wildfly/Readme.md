@@ -1,4 +1,4 @@
-# jee-app-3-2-wildfly History of Spain
+# jee-app-3-3-wildfly History of The Netherlands
 
 ---
 
@@ -16,28 +16,12 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
-1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
-2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
-3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
-4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
-5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
-6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
-7. `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
-8. `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
-9. `NONE`, `INTEGRAL`, `CONFIDENTIAL`
-
 ## Test Endpoints
 
 ### GET / Browser tests
 
 For all of these pages, please pick a user from the table below and login.
 You can always log in via `admin`/`admin`, `username`/`password` combination:
-
-1. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/index.xhtml
-2. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/messages.jsp - Localization context
-3. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/history/palace/servlet - isCallerInRole
-4. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/waitingroom.jsp - Calling protected bean directly via JSP. What happens?
-5. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/app/history/palace/rest/palace - When to call getCallerPrincipal, getUserPrincipal and isCallerInRole
 
 ### POST requests
 
@@ -65,8 +49,8 @@ This is because that for some libraries it is calling `java:/jaas/securedbdomain
     <authentication>
         <login-module code="Database" flag="required">
             <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-            <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
-            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+            <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
+            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLE_NL where login=?"/>
         </login-module>
     </authentication>
 </security-domain>
@@ -74,8 +58,8 @@ This is because that for some libraries it is calling `java:/jaas/securedbdomain
     <authentication>
         <login-module code="Database" flag="required">
             <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-            <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
-            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+            <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
+            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLE_NL where login=?"/>
         </login-module>
     </authentication>
 </security-domain>
@@ -155,8 +139,8 @@ This is because that for some libraries it is calling `java:/jaas/securedbdomain
             <authentication>
                 <login-module code="Database" flag="required">
                     <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-                    <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
-                    <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+                    <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
+                    <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLE_NL where login=?"/>
                 </login-module>
             </authentication>
         </security-domain>
@@ -176,13 +160,13 @@ These two parameters can be difficult to find in new and old Wildfly documentati
 1. Query for `principalsQuery`:
 
 ```sql
-select passwd as password from USERS where login=?
+select passwd as password from USERS_NL where login=?
 ```
 
 2. Query for `rolesQuery`
 
 ```sql
-select role, 'Roles' from USER_ROLES where login=?
+select role, 'Roles' from USER_ROLE_NL where login=?
 ```
 
 ## How to run
@@ -269,11 +253,6 @@ Our users are kings and queens of Spain:
 |Monarch|Name|Dynasty|username|password|
 |---|---|---|---|---|
 |Administrator|Administrator|Administrator|admin|admin|
-|Isabel I|Isabel I|Trastamara|admin|admin|
-|Fernando II|Fernando II|Trastamara|admin|admin|
-|Fernando IV|Fernando V|Trastamara|admin|admin|
-|Juana I|Juana I|Trastamara|admin|admin|
-|Felipe I|Felipe I|Trastamara|admin|admin|
 
 ## Differences between NONE, INTEGRAL and CONFIDENTIAL  guarantees:
 

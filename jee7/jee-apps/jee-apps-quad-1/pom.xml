@@ -13,6 +13,7 @@
     <modules>
         <module>jee-app-3-1-wildfly</module>
         <module>jee-app-3-2-wildfly</module>
+        <module>jee-app-3-3-wildfly</module>
     </modules>
 
     <properties>

@@ -143,11 +143,22 @@ The ones without any notice, are considered done, but they will be subject to im
 `@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
 `Encoder.Text`, `Decoder.Text`, `init`, `destroy`, `decode`, `encode`, `encoders`, `decoders`
 `MessageHandler.Partial`, `MessageHandler.Whole`, `@OnMessage`, `isLast`
+`navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
+`http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
+`xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
+`<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
+`j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
+`getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
+`@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
+`SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
+`NONE`, `INTEGRAL`, `CONFIDENTIAL`
 
 #### Applications:
 
 -   [jee-app-3-1-wildfly](./jee-apps-quad-1/jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
 -   [jee-app-3-2-wildfly](./jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain - 🇪🇸
+-   [jee-app-3-3-wildfly](./jee-apps-quad-1/jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
+-   [jee-app-3-4-wildfly](./jee-apps-quad-1/jee-app-3-4-wildfly) - History of the United Kingdom - 🇬🇧
 
 ## References
 
