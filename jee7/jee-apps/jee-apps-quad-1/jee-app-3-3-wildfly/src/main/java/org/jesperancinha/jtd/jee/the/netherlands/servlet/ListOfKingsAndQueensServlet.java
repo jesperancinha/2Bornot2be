@@ -10,11 +10,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet("/history")
+import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+
+@WebServlet("/history/dynasties")
 public class ListOfKingsAndQueensServlet extends HttpServlet {
 
     @Inject
     private ListOfKingsAndQueensBean listOfKingsAndQueensBean;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -22,7 +26,24 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
 
         final PrintWriter writer = resp.getWriter();
 
+        writer.println("<h1>This is the Royal Orange-Nassau first Dynasty</h1>");
+        printGreenGenericLn("You are currently logged in as %s", req.getUserPrincipal());
         orangeNassau.forEach(writer::println);
 
+        writer.println(String.format("You are currently logged in as %s", req.getUserPrincipal()));
+
+        try {
+
+            final List<String> nassau = listOfKingsAndQueensBean.getNassau();
+            writer.println("<h1>This is the Nassau Dynasty</h1>");
+            nassau.forEach(writer::println);
+
+        } catch (Exception e) {
+            printRedGenericLn("This may be expected! -> %s", e.getMessage());
+            printGreenGenericLn(
+                "Check your user. It has to have the Manager role, otherwise they cannot see the Nassau dynasty member list");
+        }
+
+        writer.println("<p><a href=\"../index.xhtml\">Back</a></p>");
     }
 }

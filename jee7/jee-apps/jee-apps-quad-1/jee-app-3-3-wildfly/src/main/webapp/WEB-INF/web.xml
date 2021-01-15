@@ -56,4 +56,8 @@
             <form-error-page>/error.xhtml</form-error-page>
         </form-login-config>
     </login-config>
+    
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
 </web-app>

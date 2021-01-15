@@ -12,5 +12,6 @@
 <% session.invalidate(); %>
 You've been logged out!
 </body>
+<p><a href="./">Back to Index and login again</a></p>
 
 </html>

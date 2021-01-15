@@ -8,8 +8,15 @@ import java.util.List;
 @Stateless
 public class ListOfKingsAndQueensBean {
 
-    @RolesAllowed({"Manager"})
-    public List<String> getOrangeNassau(){
-        return Arrays.asList("Willem I","Maurice", "Frederik Hendrik","Willem II","Willem III","Willem IV","Willem V");
+    @RolesAllowed({ "Manager", "Civilian" })
+    public List<String> getOrangeNassau() {
+        return Arrays.asList("Willem I", "Maurice", "Frederik Hendrik", "Willem II", "Willem III", "Willem IV",
+            "Willem V");
+    }
+
+    @RolesAllowed({ "Manager" })
+    public List<String> getNassau() {
+        return Arrays.asList("Jan VI", "Willem Lodewijk", "Ernst Casimir I", "Hendrik Casimir I", "Willem Frederik",
+            "Hendrik Casimir II", "Johan Willem Friso");
     }
 }
