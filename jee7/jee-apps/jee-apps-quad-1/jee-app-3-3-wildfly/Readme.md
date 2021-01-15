@@ -310,6 +310,13 @@ In both previous cases, without the correct certificate installation, your brows
     1. Verify identity claims
     2. Verify authorization claims
 
+3. WS-Security supports these security credential types:
+   1. X.509 certificates
+   2. Kerberos tickets
+   3. User ID/Password credentials
+   4. SAML Assertions
+   5. custom-defined tokens
+
 ## Context References
 
 -   [List of monarchs of the Netherlands](https://en.wikipedia.org/wiki/List_of_monarchs_of_the_Netherlands)
