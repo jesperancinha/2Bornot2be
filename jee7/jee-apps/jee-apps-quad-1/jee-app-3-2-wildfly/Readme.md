@@ -23,6 +23,7 @@ For this app we cover:
 5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
 6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 7. `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
+8. `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
 
 ## Test Endpoints
 
@@ -35,6 +36,7 @@ You can always log in via `admin`/`admin`, `username`/`password` combination:
 2. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/messages.jsp - Localization context
 3. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/history/palace/servlet - isCallerInRole
 4. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/waitingroom.jsp - Calling protected bean directly via JSP. What happens?
+5. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/app/history/palace/rest/palace - When to call getCallerPrincipal, getUserPrincipal and isCallerInRole
 
 ### POST requests
 
