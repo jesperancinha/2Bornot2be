@@ -51,6 +51,7 @@
 #### Subjects
 
 1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`,
+2. `@Named`, `@Default`, `@Any`
 
 #### Modules
 

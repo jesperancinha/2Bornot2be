@@ -17,6 +17,7 @@ The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`
+2. `@Named`, `@Default`, `@Any`
 
 ## Test Endpoints
 
@@ -331,6 +332,15 @@ In both previous cases, without the correct certificate installation, your brows
 
 ## References
 
+-   [Chapter 2. Concepts](https://docs.jboss.org/cdi/spec/1.0/html/concepts.html)
+-   [Native CDI Qualifiers: @Any and @Default](https://abhirockzz.wordpress.com/2015/09/27/native-cdi-qualifiers-any-and-default/)
+-   [The built-in qualifiers @Default and @Any](https://dzone.com/articles/built-qualifiers-default-and)
+-   [JBoss - Chapter 3. Programming model](https://docs.jboss.org/cdi/spec/1.0/html/implementation.html)
+-   [Annotation Type Inject](https://docs.oracle.com/javaee/6/api/javax/inject/Inject.html)
+-   [Dependency Injection, Annotations, and why Java is Better Than you Think it is](https://www.objc.io/issues/11-android/dependency-injection-in-java/)
+-   [Chapter 37. Partial Deployment Descriptors](https://docs.jboss.org/ejb3/docs/tutorial/1.0.7/html/Partial_deployment_descriptor.html)
+-   [Deployment Descriptor Schema and Document Type Definitions Reference](https://docs.oracle.com/cd/E11035_01/wls100/ejb/DD_defs_reference.html)
+-   [Java EE 7 Deployment Descriptors](https://antoniogoncalves.org/2013/06/04/java-ee-7-deployment-descriptors/)
 -   [Fusion Middleware Developing Web Applications, Servlets, and JSPs for Oracle WebLogic Server](https://docs.oracle.com/cd/E24329_01/web.1211/e21049/web_xml.htm#WBAPP502)
 -   [Database Authentication](https://docs.jboss.org/author/display/WFLY/Database%20Authentication%20Migration.html)
 -   [Securing a web application](https://openliberty.io/guides/security-intro.html)
