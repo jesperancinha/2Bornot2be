@@ -20,6 +20,19 @@ These modules can be used for education purposes or for certain types of exames 
 
 -   [JEE Crums](jee-crums) -  A set of modules with quick learning  / fast track exercises without context
 -   [JEE Applications](jee-apps) - A set of applications written in JEE using diffeen servers like Glassfish and Weblogic
+    - [jee-apps-triad-1](jee-apps/jee-apps-triad-1) - Triad 1
+        - [jee-app-1-wildfly](jee-apps/jee-apps-triad-1/jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
+        - [jee-app-2-wildfly](jee-apps/jee-apps-triad-1/jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
+        - [jee-app-3-wildfly](jee-apps/jee-apps-triad-1/jee-app-3-wildfly) - A lesson on teeth health and the odd cases - Java 11
+    - [jee-apps-triad-2](jee-apps/jee-apps-triad-2) - Triad 2
+        - [jee-app-2-1-wildfly](jee-apps/jee-apps-triad-2/jee-app-2-1-wildfly) - Boy Bands in the 90's - Java 11
+        - [jee-app-2-2-wildfly](jee-apps/jee-apps-triad-2/jee-app-2-2-wildfly) - Girl Bands - Java 11
+        - [jee-app-2-3-wildfly](jee-apps/jee-apps-triad-2/jee-app-2-3-wildfly) - Soul Music - Java 11
+    - [jee-apps-quad-1](jee-apps/jee-apps-quad-1) - Quad 1
+        - [jee-app-3-1-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-1-wildfly) - History of Portugal 🇵🇹 - Java 11
+        - [jee-app-3-2-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain 🇪🇸 - Java 11
+        - [jee-app-3-3-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-3-wildfly) - History of The Netherlands 🇳🇱 - Java 11
+        - [jee-app-3-4-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-4-wildfly) - History of the United Kingdom 🇬🇧 - Java 11
 
 I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like.
 For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java).
