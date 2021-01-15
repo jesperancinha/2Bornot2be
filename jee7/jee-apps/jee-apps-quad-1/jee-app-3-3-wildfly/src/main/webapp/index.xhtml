@@ -9,6 +9,7 @@
 <h2>You are logged in as <h:outputText value="${request.userPrincipal}"/> </h2>
 <h2>Your user is a Manager? <h:outputText value="${request.isUserInRole('Manager')}"/> </h2>
 <h2>Your user is a Civilian? <h:outputText value="${request.isUserInRole('Civilian')}"/> </h2>
+<h2>Your user is an OranjeNassau? <h:outputText value="${request.isUserInRole('OranjeNassau')}"/> </h2>
 <p>Please check Readme.md for more username/password combinations</p>
 <p>For now admin is a Manager and admin2 is a Civilian. Both of them have password admin</p>
 <a href="http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/history/dynasties">History</a>

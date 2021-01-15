@@ -256,6 +256,7 @@ Our users are kings and queens of Spain:
 |---|---|---|---|---|
 |Administrator|Manager|Administrator|admin|admin|
 |Administrator2|Civilian|Administrator|admin2|admin|
+|Willem I|Willem I|OranjeNassau|WillemI|admin|admin|
 
 ## Differences between NONE, INTEGRAL and CONFIDENTIAL  guarantees:
 

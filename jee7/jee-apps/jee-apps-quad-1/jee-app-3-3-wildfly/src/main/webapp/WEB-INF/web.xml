@@ -38,6 +38,7 @@
         <auth-constraint>
             <role-name>Manager</role-name>
             <role-name>Civilian</role-name>
+            <role-name>OranjeNassau</role-name>
         </auth-constraint>
         <user-data-constraint>
             <transport-guarantee>NONE</transport-guarantee>
@@ -48,6 +49,9 @@
     </security-role>
     <security-role>
         <role-name>Civilian</role-name>
+    </security-role>
+    <security-role>
+        <role-name>OranjeNassau</role-name>
     </security-role>
     <login-config>
         <auth-method>FORM</auth-method>

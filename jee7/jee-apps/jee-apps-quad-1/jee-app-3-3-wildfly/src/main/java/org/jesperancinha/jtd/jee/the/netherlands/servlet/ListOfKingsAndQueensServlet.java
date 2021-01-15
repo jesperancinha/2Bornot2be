@@ -11,6 +11,8 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @WebServlet("/history/dynasties")
@@ -19,21 +21,43 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
     @Inject
     private ListOfKingsAndQueensBean listOfKingsAndQueensBean;
 
+    @Inject
+    private ListOfKingsAndQueensBeanForOrangeNassau listOfKingsAndQueensBeanForOrangeNassau;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        final List<String> orangeNassau = listOfKingsAndQueensBean.getOrangeNassau();
-
         final PrintWriter writer = resp.getWriter();
-
-        writer.println("<h1>This is the Royal Orange-Nassau first Dynasty</h1>");
-        printGreenGenericLn("You are currently logged in as %s", req.getUserPrincipal());
-        orangeNassau.forEach(writer::println);
-
-        writer.println(String.format("You are currently logged in as %s", req.getUserPrincipal()));
+        writer.println("<html><head></head><body");
+        printGreenGenericLn("<p>You are currently logged in as %s</p>", req.getUserPrincipal());
+        writer.println(String.format("<p>You are currently logged in as %s</p>", req.getUserPrincipal()));
 
         try {
+            final List<String> orangeNassau = listOfKingsAndQueensBean.getOrangeNassau();
+            writer.println("<h1>This is the Royal Orange-Nassau first Dynasty</h1>");
+            orangeNassau.forEach(writer::println);
+        } catch (Exception e) {
+            printRedGenericLn("This may be expected! -> %s", e.getMessage());
+            printGreenGenericLn(
+                "Check your user. It has to have the Manager or Civilian role, otherwise they cannot see the common Orange Nassau list");
+            printRainbowTitleLn("They can, however, use the royal one ;-)");
+        }
 
+
+        try {
+            final List<String> orangeNassau = listOfKingsAndQueensBeanForOrangeNassau.getOrangeNassau();
+            final List<String> nassau = listOfKingsAndQueensBeanForOrangeNassau.getNassau();
+            writer.println("<h1>This is the Royal Orange-Nassau first Dynasty from a Royal perspective</h1>");
+            orangeNassau.forEach(writer::println);
+            writer.println("<h1>This is the Nassau Dynasty from a Royal perspective</h1>");
+            nassau.forEach(writer::println);
+        } catch (Exception e) {
+            printRedGenericLn("This may be expected! -> %s", e.getMessage());
+            printGreenGenericLn(
+                "Check your user. It has to have the OranjeNassau profile, otherwise they cannot see the royal Orange Nassau list");
+            printRainbowTitleLn("They can, however, use the royal one ;-)");
+        }
+        try {
             final List<String> nassau = listOfKingsAndQueensBean.getNassau();
             writer.println("<h1>This is the Nassau Dynasty</h1>");
             nassau.forEach(writer::println);
@@ -45,5 +69,6 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
         }
 
         writer.println("<p><a href=\"../index.xhtml\">Back</a></p>");
+        writer.println("</body></html>");
     }
 }
