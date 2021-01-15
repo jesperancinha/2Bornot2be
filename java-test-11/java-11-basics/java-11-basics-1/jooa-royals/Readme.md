@@ -34,7 +34,7 @@ org.jesperancinha.java11.people.People$Martians@4c203ea1
 A person can only show the martians. Note that although we can show the martians, we cannot create them
 I am now showing the martians
 org.jesperancinha.java11.people.People$Martians@27f674d
-A Peasant also can only show the martians
+A Civilian also can only show the martians
 I am now showing the martians
 org.jesperancinha.java11.people.People$Martians@1d251891
 BONUS Exercise: Find the Lyric!

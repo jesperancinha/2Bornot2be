@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.royals;
 
-import org.jesperancinha.java11.peasant.Peasant;
+import org.jesperancinha.java11.civilian.Civilian;
 import org.jesperancinha.java11.people.People;
 import org.jesperancinha.java11.people.ReallyCommonPeople;
 
 public class RoyalsRunner {
     public static void main(String[] args) {
-        var peasant = new Peasant();
+        var civilian = new Civilian();
         var person = new People();
         var reallyCommonPeople = new ReallyCommonPeople();
         var princess =  new Princess();
@@ -29,8 +29,8 @@ public class RoyalsRunner {
         System.out.println("A person can only show the martians. Note that although we can show the martians, we cannot create them");
         person.showTheMartians();
 
-        System.out.println("A Peasant also can only show the martians");
-        peasant.showTheMartians();
+        System.out.println("A Civilian also can only show the martians");
+        civilian.showTheMartians();
 
         System.out.println("BONUS Exercise: Find the Lyric!");
     }

@@ -268,7 +268,7 @@ Our users are kings and queens of Spain:
 
 |Monarch|Name|Dynasty|username|password|
 |---|---|---|---|---|
-|Administrator|Administrator|Administrator|admin|admin|
+|Administrator|Administrator|Manager|admin|admin|
 |Isabel I|Isabel I|Trastamara|admin|admin|
 |Fernando II|Fernando II|Trastamara|admin|admin|
 |Fernando IV|Fernando V|Trastamara|admin|admin|

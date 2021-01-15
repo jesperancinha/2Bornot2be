@@ -488,8 +488,8 @@
                     <authentication>
                         <login-module code="Database" flag="required">
                             <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-                            <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
-                            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+                            <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
+                            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES_NL where login=?"/>
                         </login-module>
                     </authentication>
                 </security-domain>

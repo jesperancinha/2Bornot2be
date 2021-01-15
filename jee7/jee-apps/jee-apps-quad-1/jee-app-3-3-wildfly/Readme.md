@@ -16,6 +16,8 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
+1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`
+
 ## Test Endpoints
 
 ### GET / Browser tests
@@ -252,7 +254,8 @@ Our users are kings and queens of Spain:
 
 |Monarch|Name|Dynasty|username|password|
 |---|---|---|---|---|
-|Administrator|Administrator|Administrator|admin|admin|
+|Administrator|Manager|Administrator|admin|admin|
+|Administrator2|Civilian|Administrator|admin2|admin|
 
 ## Differences between NONE, INTEGRAL and CONFIDENTIAL  guarantees:
 
@@ -308,6 +311,8 @@ In both previous cases, without the correct certificate installation, your brows
 
 ## Context References
 
+-   [List of monarchs of the Netherlands](https://en.wikipedia.org/wiki/List_of_monarchs_of_the_Netherlands)
+-   [Monarchy of the Netherlands](https://en.wikipedia.org/wiki/Monarchy_of_the_Netherlands)
 -   [Palace of Valsain](https://en.wikipedia.org/wiki/Palace_of_Valsain)
 -   [House of Trastámara](https://en.wikipedia.org/wiki/House_of_Trast%C3%A1mara)
 -   [List of Spanish monarchs](https://en.wikipedia.org/wiki/List_of_Spanish_monarchs)

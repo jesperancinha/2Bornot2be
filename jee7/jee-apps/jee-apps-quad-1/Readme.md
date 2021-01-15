@@ -50,6 +50,8 @@
 
 #### Subjects
 
+1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`,
+
 #### Modules
 
 ### [jee-app-3-4-wildfly](jee-app-3-4-wildfly) - History of The United Kingdom - 🇬🇧

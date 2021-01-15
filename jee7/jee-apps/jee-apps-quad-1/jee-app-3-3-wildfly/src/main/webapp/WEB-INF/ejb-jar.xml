@@ -1,0 +1,13 @@
+<ejb-jar xmlns="https://jakarta.ee/xml/ns/jakartaee" version="4.0">
+
+    <assembly-descriptor>
+        <method-permission>
+            <role-name>Manager</role-name>
+            <role-name>Civilian</role-name>
+            <method>
+                <ejb-name>org.jesperancinha.jtd.jee.the.netherlands.servlet.ListOfKingsAndQueensBean</ejb-name>
+                <method-name>*</method-name>
+            </method>
+        </method-permission>
+    </assembly-descriptor>
+</ejb-jar>
