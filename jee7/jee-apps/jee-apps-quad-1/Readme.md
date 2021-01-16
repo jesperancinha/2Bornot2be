@@ -69,6 +69,7 @@
 
 1. `<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
 2. `BatchRuntime`, `JobOperator`, `getRunningExecutions`, `getJobExecution`, `getBatchStatus`
+3. `@RequestScoped`, `@SessionScoped`, `@ApplicationScoped`
 
 #### Modules
 

@@ -18,11 +18,15 @@ For this app we cover:
 
 1. `<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
 2. `BatchRuntime`, `JobOperator`, `getRunningExecutions`, `getJobExecution`, `getBatchStatus`
+3. `@RequestScoped`, `@SessionScoped`, `@ApplicationScoped`
 
 ## Test Endpoints
 
 1. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/history/victoria/cooking
 2. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/history/victoria/cooking/stop
+3. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/monarchsrequest.xhtml
+4. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/monarchssession.xhtml
+5. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/monarchsapplication.xhtml
 
 ### GET / Browser tests
 
