@@ -207,6 +207,7 @@ In both previous cases, without the correct certificate installation, your brows
 
 ## References
 
+-   [JSR 352: Batch Applications for the Java Platform](https://jcp.org/en/jsr/detail?id=352)
 -   [An Overview of Batch Processing in Java EE 7.0](https://www.oracle.com/technical-resources/articles/java/batch-processing-ee-7.html)
 -   [CDI @RequestScoped](https://tomee.apache.org/examples-trunk/cdi-request-scope/)
 -   [An Overview of CDI Events](https://dzone.com/articles/an-overview-of-cdi-events)
