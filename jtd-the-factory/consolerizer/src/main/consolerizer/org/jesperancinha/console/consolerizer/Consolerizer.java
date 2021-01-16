@@ -73,6 +73,10 @@ public class Consolerizer {
         return sb.toString();
     }
 
+    public static void printRainbowFlag(String flagText, Object... args) {
+        printRainbowFlag(String.format(flagText, args));
+    }
+
     /**
      * Follows the 19:10 rule for general flags
      * @param flagText The text to be placed at the center of the flag

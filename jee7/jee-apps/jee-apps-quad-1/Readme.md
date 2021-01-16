@@ -52,6 +52,7 @@
 
 1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`,
 2. `@Named`, `@Default`, `@Any`
+3. `@Observes`, `Reception.IF_EXISTS`, `Reception.ALWAYS`
 
 #### Modules
 
