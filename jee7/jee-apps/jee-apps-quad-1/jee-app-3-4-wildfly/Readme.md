@@ -17,6 +17,7 @@ The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
 1. `<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
+2. `BatchRuntime`, `JobOperator`, `getRunningExecutions`, `getJobExecution`, `getBatchStatus`
 
 ## Test Endpoints
 
