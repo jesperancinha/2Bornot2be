@@ -78,15 +78,25 @@ public class Consolerizer {
      * @param flagText The text to be placed at the center of the flag
      */
     public static void printRainbowFlag(String flagText) {
-        int heightPerColorBar = (int) ((double) (titleSpread) * 10d / 19d) / 6 / 2;
-        heightPerColorBar = heightPerColorBar == 0 ?
+        int heightPerColorBar = (int) ((double) (titleSpread) * 10d / 19d) / 6 / 4;
+        heightPerColorBar = heightPerColorBar <= 0 ?
             1 :
             heightPerColorBar;
         final List<ConColor> consoleRainbow = ConColor.getConsoleRainbowEnumList();
-        for (ConColor color : consoleRainbow) {
-            printColor(color);
-            for (int j = 0; j < heightPerColorBar; j++) {
-                printPrivateText("*".repeat(titleSpread));
+        final int ranbowColorSize = consoleRainbow.size();
+        final int height = ranbowColorSize * heightPerColorBar;
+        int iMiddle = height / 2;
+        iMiddle = height % 2 == 0 ?
+            iMiddle - 1 :
+            iMiddle;
+        for (int i = 0, k = 0; i < ranbowColorSize; i++) {
+            printColor(consoleRainbow.get(i));
+            for (int j = 0; j < heightPerColorBar; j++, k++) {
+                if (k == iMiddle || k == iMiddle + 1) {
+                    printPrivateText(createTitleLine(flagText, '*'));
+                } else {
+                    printPrivateText("*".repeat(titleSpread));
+                }
                 printNewLine();
             }
         }
@@ -117,16 +127,8 @@ public class Consolerizer {
     }
 
     public static void printBlueGenericTitleLn(Object text) {
-        final String fullText = text.toString();
-        var remaining = titleSpread - fullText.length() - 2;
-        var padding = (int) Math.ceil(remaining / 2f);
-        printBlueGeneric(new String(new char[padding]).replace('\0', '=')
-            .concat(" ")
-            .concat(fullText)
-            .concat(" ")
-            .concat(new String(new char[padding]).replace('\0', '='))
-            .substring(0, titleSpread)
-            .concat("\n"));
+        final String titleString = createTitleLineLn(text, '=');
+        printBlueGeneric(titleString);
     }
 
     public static void printBlueGeneric(String text) {
@@ -629,4 +631,27 @@ public class Consolerizer {
         System.out.print(conColor.getConsoleColor());
     }
 
+    private static String createTitleLineLn(Object text, char limitingChar) {
+        return createTitleLineLn(text, limitingChar, true);
+    }
+
+    private static String createTitleLine(Object text, char limitingChar) {
+        return createTitleLineLn(text, limitingChar, false);
+    }
+
+    private static String createTitleLineLn(Object text, char limitingChar, boolean newLine) {
+        final String fullText = text.toString();
+        var remaining = titleSpread - fullText.length() - 2;
+        var padding = (int) Math.ceil(remaining / 2f);
+        final String substring = new String(new char[padding]).replace('\0', limitingChar)
+            .concat(" ")
+            .concat(fullText)
+            .concat(" ")
+            .concat(new String(new char[padding]).replace('\0', limitingChar))
+            .substring(0, titleSpread);
+        if (newLine) {
+            return substring.concat("\n");
+        }
+        return substring;
+    }
 }
