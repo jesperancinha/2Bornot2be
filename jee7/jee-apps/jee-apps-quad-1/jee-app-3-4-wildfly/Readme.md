@@ -1,4 +1,4 @@
-# jee-app-3-3-wildfly History of The Netherlands
+# jee-app-3-4-wildfly History of the United Kingdom
 
 ---
 
@@ -16,22 +16,12 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
-1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`
-2. `@Named`, `@Default`, `@Any`
-3. `@Observes`, `Reception.IF_EXISTS`, `Reception.ALWAYS`
-4. `@Observes`, `Reception.BEFORE_COMPLETION`, `Reception.AFTER_COMPLETION`,  `Reception.AFTER_SUCCESS`
-
 ## Test Endpoints
 
 ### GET / Browser tests
 
 For all of these pages, please pick a user from the table below and login.
 You can always log in via `admin`/`admin`, `username`/`password` combination:
-
-1. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/app/arrival/Maurits
-2. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/logout.jsp
-3. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/
-4. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/history/dynasties
 
 ### POST requests
 
@@ -48,136 +38,6 @@ mvn clean install -Parq-wildfly-managed
 ```
 
 ## WildFly configuration
-
-### Security Domain, users, and roles
-
-Note that in the full working example [standalone-full.xm](backup/standalone-full.xml), we have this security domain duplicated.
-This is because that for some libraries it is calling `java:/jaas/securedbdomain` and for others `securedbdomain`.
-
-```xml
- <security-domain name="java:/jaas/securedbdomain" cache-type="default">
-    <authentication>
-        <login-module code="Database" flag="required">
-            <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-            <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
-            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLE_NL where login=?"/>
-        </login-module>
-    </authentication>
-</security-domain>
-<security-domain name="securedbdomain" cache-type="default">
-    <authentication>
-        <login-module code="Database" flag="required">
-            <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-            <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
-            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLE_NL where login=?"/>
-        </login-module>
-    </authentication>
-</security-domain>
-```
-
-### Database
-
--   We make a clean installation by removing the whole h2 configuration:
-
-```xml
-<datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true"
-            use-java-context="true"
-            statistics-enabled="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}">
-    <connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
-    <driver>h2</driver>
-    <security>
-        <user-name>sa</user-name>
-        <password>sa</password>
-    </security>
-</datasource>
-<drivers>
-    <driver name="h2" module="com.h2database.h2">
-        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
-    </driver>
-</drivers>
-```
-
--   Then we configure the PostgreSQL installation:
-
-```xml
-<datasource jndi-name="java:jboss/datasources/KingsAndQueensDS" pool-name="default" enabled="true" use-java-context="true">
-    <connection-url>jdbc:postgresql://localhost:5432/postgres</connection-url>
-    <driver-class>org.postgresql.Driver</driver-class>
-    <driver>postgresql</driver>
-    <security>
-        <user-name>postgres</user-name>
-        <password>admin</password>
-    </security>
-    <connection-property name="driver-class">org.postgresql.Driver</connection-property>
-    <connection-property name="connection-url">jdbc:postgresql://localhost:5432/postgres</connection-property>
-</datasource>
-<drivers>
-    <driver name="postgresql" module="postgresql">
-        <driver-class>org.postgresql.Driver</driver-class>
-        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
-    </driver>
-</drivers>
-```
-
-## Domain
-
-```xml
-<subsystem xmlns="urn:jboss:domain:ejb3:5.0">
-...
-    <default-security-domain value="securedbdomain"/>
-</subsystem>
-```
-
-```xml
- <subsystem xmlns="urn:jboss:domain:ee:4.0">
-...
-    <default-bindings 
-            context-service="java:jboss/ee/concurrency/context/default" 
-            datasource="java:jboss/datasources/KingsAndQueensDS" 
-            jms-connection-factory="java:jboss/DefaultJMSConnectionFactory" 
-            managed-executor-service="java:jboss/ee/concurrency/executor/default" 
-            managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default" 
-            managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
-</subsystem>
-```
-## Secure login
-
-```xml
-<subsystem xmlns="urn:jboss:domain:security:2.0">
-    <security-domains>
-        <security-domain name="securedbdomain" cache-type="default">
-            <authentication>
-                <login-module code="Database" flag="required">
-                    <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-                    <module-option name="principalsQuery" value="select passwd as password from USERS_NL where login=?"/>
-                    <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLE_NL where login=?"/>
-                </login-module>
-            </authentication>
-        </security-domain>
-...
-    </security-domains>
-</subsystem>
-```
-
-NOTE: It is extremely important that the return parameters match ther expectation of the `j_` authentication parameters.
-We NEED to:
-
--   return `password` for `principalsQuery`
--   return `role`, `Roles` for `rolesQuery`
-
-These two parameters can be difficult to find in new and old Wildfly documentation, the come, the casts and small things can make whole difference.
-
-1. Query for `principalsQuery`:
-
-```sql
-select passwd as password from USERS_NL where login=?
-```
-
-2. Query for `rolesQuery`
-
-```sql
-select role, 'Roles' from USER_ROLE_NL where login=?
-```
 
 ## How to run
 
@@ -250,21 +110,6 @@ A file like this will show up in your installation [module.xml](../../wildfly-16
     </dependencies>
 </module>
 ```
-
-## Login credentials
-
-You probably noticed through the code, that the admin user is available and that its password is admin.
-For this module we are not doing any encryption on purpose.
-The idea is to master security annotations.
-
-We will use users and credentials for this.
-Our users are kings and queens of Spain:
-
-|Monarch|Name|Dynasty|username|password|
-|---|---|---|---|---|
-|Administrator|Manager|Administrator|admin|admin|
-|Administrator2|Civilian|Administrator|admin2|admin|
-|Willem I|Willem I|OranjeNassau|WillemI|admin|admin|
 
 ## Differences between NONE, INTEGRAL and CONFIDENTIAL  guarantees:
 
