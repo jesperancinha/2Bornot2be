@@ -19,6 +19,7 @@ For this app we cover:
 1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`
 2. `@Named`, `@Default`, `@Any`
 3. `@Observes`, `Reception.IF_EXISTS`, `Reception.ALWAYS`
+4. `@Observes`, `Reception.BEFORE_COMPLETION`, `Reception.AFTER_COMPLETION`,  `Reception.AFTER_SUCCESS`
 
 ## Test Endpoints
 
@@ -333,6 +334,7 @@ In both previous cases, without the correct certificate installation, your brows
 
 ## References
 
+-   [An Overview of CDI Events](https://dzone.com/articles/an-overview-of-cdi-events)
 -   [Using Events in CDI Applications](https://docs.oracle.com/javaee/6/tutorial/doc/gkhic.html)
 -   [Chapter 2. Concepts](https://docs.jboss.org/cdi/spec/1.0/html/concepts.html)
 -   [Native CDI Qualifiers: @Any and @Default](https://abhirockzz.wordpress.com/2015/09/27/native-cdi-qualifiers-any-and-default/)
