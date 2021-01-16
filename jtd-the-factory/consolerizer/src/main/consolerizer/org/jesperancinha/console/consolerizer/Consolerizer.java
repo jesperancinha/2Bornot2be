@@ -73,6 +73,25 @@ public class Consolerizer {
         return sb.toString();
     }
 
+    /**
+     * Follows the 19:10 rule for general flags
+     * @param flagText The text to be placed at the center of the flag
+     */
+    public static void printRainbowFlag(String flagText) {
+        int heightPerColorBar = (int) ((double) (titleSpread) * 10d / 19d) / 6 / 2;
+        heightPerColorBar = heightPerColorBar == 0 ?
+            1 :
+            heightPerColorBar;
+        final List<ConColor> consoleRainbow = ConColor.getConsoleRainbowEnumList();
+        for (ConColor color : consoleRainbow) {
+            printColor(color);
+            for (int j = 0; j < heightPerColorBar; j++) {
+                printPrivateText("*".repeat(titleSpread));
+                printNewLine();
+            }
+        }
+    }
+
     public Consolerizer conColor(ConColor conColor) {
         this.conColor = conColor;
         return this;
@@ -609,4 +628,5 @@ public class Consolerizer {
         currentColor = conColor;
         System.out.print(conColor.getConsoleColor());
     }
+
 }

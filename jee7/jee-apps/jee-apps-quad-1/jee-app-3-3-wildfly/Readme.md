@@ -332,6 +332,7 @@ In both previous cases, without the correct certificate installation, your brows
 
 ## References
 
+-   [Using Events in CDI Applications](https://docs.oracle.com/javaee/6/tutorial/doc/gkhic.html)
 -   [Chapter 2. Concepts](https://docs.jboss.org/cdi/spec/1.0/html/concepts.html)
 -   [Native CDI Qualifiers: @Any and @Default](https://abhirockzz.wordpress.com/2015/09/27/native-cdi-qualifiers-any-and-default/)
 -   [The built-in qualifiers @Default and @Any](https://dzone.com/articles/built-qualifiers-default-and)
