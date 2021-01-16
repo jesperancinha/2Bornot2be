@@ -16,7 +16,12 @@
 The apps under [jee-apps](../..), cover lots of topics.
 For this app we cover:
 
+1. `<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
+
 ## Test Endpoints
+
+1. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/history/victoria/cooking
+2. http://localhost:8080/jee-app-3-4-wildfly-1.0.0-SNAPSHOT/history/victoria/cooking/stop
 
 ### GET / Browser tests
 
@@ -172,6 +177,10 @@ In both previous cases, without the correct certificate installation, your brows
 
 ## Context References
 
+-   [Ballettes of Foie Gras à l'Impériale](https://www.historicfood.com/Bllate.htm)
+-   [Queen Victoria](https://en.wikipedia.org/wiki/Queen_Victoria)
+-   [List of British monarchs by longevity](https://en.wikipedia.org/wiki/List_of_British_monarchs_by_longevity)
+-   [List of British monarchs](https://en.wikipedia.org/wiki/List_of_British_monarchs)
 -   [List of monarchs of the Netherlands](https://en.wikipedia.org/wiki/List_of_monarchs_of_the_Netherlands)
 -   [Monarchy of the Netherlands](https://en.wikipedia.org/wiki/Monarchy_of_the_Netherlands)
 -   [Palace of Valsain](https://en.wikipedia.org/wiki/Palace_of_Valsain)
@@ -182,8 +191,18 @@ In both previous cases, without the correct certificate installation, your brows
 -   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
 -   [List of Portuguese monarchs](https://en.wikipedia.org/wiki/List_of_Portuguese_monarchs)
 
+
+<div align="center">
+      <a title="The Very Elaborate Way Queen Victoria Had Her Eggs | Royal Upstairs Downstairs | Real Royalty" href="https://www.youtube.com/watch?v=p4HKB0NqsWg">
+     <img 
+          src="https://img.youtube.com/vi/p4HKB0NqsWg/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ## References
 
+-   [An Overview of Batch Processing in Java EE 7.0](https://www.oracle.com/technical-resources/articles/java/batch-processing-ee-7.html)
 -   [CDI @RequestScoped](https://tomee.apache.org/examples-trunk/cdi-request-scope/)
 -   [An Overview of CDI Events](https://dzone.com/articles/an-overview-of-cdi-events)
 -   [Using Events in CDI Applications](https://docs.oracle.com/javaee/6/tutorial/doc/gkhic.html)

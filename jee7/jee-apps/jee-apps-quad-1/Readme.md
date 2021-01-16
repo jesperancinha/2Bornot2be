@@ -30,6 +30,8 @@
 
 #### Modules
 
+-   [jee-app-3-1-wildfly](jee-app-3-1-wildfly)
+
 ### [jee-app-3-2-wildfly](jee-app-3-2-wildfly) - History of Spain - 🇪🇸
 
 #### Subjects
@@ -46,6 +48,8 @@
 
 #### Modules
 
+-   [jee-app-3-2-wildfly](jee-app-3-2-wildfly)
+
 ### [jee-app-3-3-wildfly](jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
 
 #### Subjects
@@ -57,11 +61,17 @@
 
 #### Modules
 
+-   [jee-app-3-3-wildfly](jee-app-3-3-wildfly)
+
 ### [jee-app-3-4-wildfly](jee-app-3-4-wildfly) - History of The United Kingdom - 🇬🇧
 
 #### Subjects
 
+1. `<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
+
 #### Modules
+
+-   [jee-app-3-4-wildfly](jee-app-3-4-wildfly)
 
 ## References
 

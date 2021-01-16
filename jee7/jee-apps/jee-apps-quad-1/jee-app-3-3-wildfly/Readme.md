@@ -32,6 +32,7 @@ You can always log in via `admin`/`admin`, `username`/`password` combination:
 2. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/logout.jsp
 3. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/
 4. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/history/dynasties
+5. http://localhost:8080/jee-app-3-3-wildfly-1.0.0-SNAPSHOT/history/crown
 
 ### POST requests
 
