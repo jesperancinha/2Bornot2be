@@ -5,8 +5,6 @@
 In this exercise we will go through music that one way or the other, has been involved in PRIDE events.
 
 ## Context References
-
-
 <div align="center">
       <a title="Divine - You Think You're a Man" href="https://www.youtube.com/watch?v=063RGou-P_8">
      <img 
