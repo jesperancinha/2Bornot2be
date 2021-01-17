@@ -53,7 +53,7 @@ public enum ConColor {
     }
 
     public void printGenericLn(Object text, Object... args) {
-       colorManager.printGenericLn(text, args);
+        colorManager.printGenericLn(text, args);
     }
 
     public void printGenericLn(Object text) {
@@ -69,13 +69,13 @@ public enum ConColor {
     }
 
     public void printGenericTitleLn(Object text, Object... args) {
-        printGenericTitleLn(String.format("" + text, args));
+        colorManager.printGenericTitleLn(text, args);
     }
 
     public void printGenericTitleLn(Object text) {
-        final String titleString = Consolerizer.createTitleLineLn(text, '=');
-        printGeneric(titleString);
+        colorManager.printGenericTitleLn(text);
     }
+
     public static List<String> getConsoleRainbow() {
         return Arrays.asList(RED.getConsoleColor(), ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
                 GREEN.getConsoleColor(), BLUE.getConsoleColor(), MAGENTA.getConsoleColor());

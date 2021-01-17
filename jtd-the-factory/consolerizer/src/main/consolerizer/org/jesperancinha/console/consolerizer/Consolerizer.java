@@ -80,22 +80,19 @@ public class Consolerizer {
     }
 
     public static void printBlueGenericLn(String text, Object... args) {
-        printBlueGeneric(text.concat("\n"), args);
-
+        BLUE.printGenericLn(text, args);
     }
 
     public static void printBlueGenericLn(Object text) {
-        printBlueGeneric(text.toString()
-                .concat("\n"));
+        BLUE.printGenericLn(text);
     }
 
     public static void printBlueGenericTitleLn(Object text, Object... args) {
-        printBlueGenericTitleLn(String.format("" + text, args));
+        BLUE.printGenericTitleLn(text, args);
     }
 
     public static void printBlueGenericTitleLn(Object text) {
-        final String titleString = createTitleLineLn(text, '=');
-        printBlueGeneric(titleString);
+        BLUE.printGenericTitleLn(text);
     }
 
     public static void printBlueGeneric(String text) {
@@ -640,5 +637,16 @@ public class Consolerizer {
     public void printGeneric(String text, Object... args) {
         printColor(conColor);
         printPrivateText(text, args);
+    }
+
+    public void printGenericTitleLn(Object text, Object... args) {
+        printColor(conColor);
+        printGenericTitleLn(String.format("" + text, args));
+    }
+
+    public void printGenericTitleLn(Object text) {
+        printColor(conColor);
+        final String titleString = Consolerizer.createTitleLineLn(text, '=');
+        printGeneric(titleString);
     }
 }
