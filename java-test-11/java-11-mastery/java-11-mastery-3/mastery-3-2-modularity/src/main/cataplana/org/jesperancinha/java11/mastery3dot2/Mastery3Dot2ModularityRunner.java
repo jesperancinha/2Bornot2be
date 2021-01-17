@@ -1,10 +1,10 @@
 package org.jesperancinha.java11.mastery3dot2;
 
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 
 public class Mastery3Dot2ModularityRunner {
     public static void main(String[] args) {
-        Consolerizer.printMagentaGenericLn("Cataplana dish is being served...");
+        MAGENTA.printGenericLn("Cataplana dish is being served...");
     }
 }

@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum3;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum3 {
@@ -38,14 +38,14 @@ public class Crum3 {
         var b1 = new B1();
         var b2 = new B2();
 
-        printMagentaGenericLn("Up until this point everything is pretty much what we expect");
+        MAGENTA.printGenericLn("Up until this point everything is pretty much what we expect");
 
         BLUE.printGenericLn("        var a = new A();\n" + "        a = new B1();\n" + "        a = new B2();\n"
             + "        var b1 = new B1();\n" + "        var b2 = new B2();");
 
-        printMagentaGenericLn(a);
-        printMagentaGenericLn(b1);
-        printMagentaGenericLn(b2);
+        MAGENTA.printGenericLn(a);
+        MAGENTA.printGenericLn(b1);
+        MAGENTA.printGenericLn(b2);
 
         try {
             b1 = (B1) new A();

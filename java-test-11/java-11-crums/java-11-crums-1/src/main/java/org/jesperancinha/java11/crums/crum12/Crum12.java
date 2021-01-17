@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum12;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum12 {
@@ -13,10 +13,10 @@ public class Crum12 {
         final String c = a + b;
         final Object d = new Object();
 
-        printMagentaGenericLn("We just created three strings:");
-        printMagentaGenericLn(a);
-        printMagentaGenericLn(b);
-        printMagentaGenericLn(c);
+        MAGENTA.printGenericLn("We just created three strings:");
+        MAGENTA.printGenericLn(a);
+        MAGENTA.printGenericLn(b);
+        MAGENTA.printGenericLn(c);
 
         printOrangeGenericLn(a == b);
         printOrangeGenericLn(b == c);

@@ -1,16 +1,16 @@
 package org.jesperancinha.java11.crums.crum37;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum37 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 37 - Exceptions are final");
 
-        printMagentaGenericLn("A very simple concept is that thrown exceptions from a multi-catch are final");
-        printMagentaGenericLn("We'll test this now:");
+        MAGENTA.printGenericLn("A very simple concept is that thrown exceptions from a multi-catch are final");
+        MAGENTA.printGenericLn("We'll test this now:");
 
         try {
             throw new IndexOutOfBoundsException();

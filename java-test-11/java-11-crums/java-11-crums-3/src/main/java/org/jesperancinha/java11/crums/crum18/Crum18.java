@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum18 {
@@ -50,7 +50,7 @@ public class Crum18 {
         streamOfInts.boxed()
             .max(compareTo);
 
-        printMagentaGenericLn("The first thing to understand is that Numberic Object and Strings are comparables:");
+        MAGENTA.printGenericLn("The first thing to understand is that Numberic Object and Strings are comparables:");
         printOrangeGenericLn("Integer -> %s ", Integer.valueOf(100) instanceof Comparable);
         printOrangeGenericLn("Double -> %s ", Double.valueOf(100) instanceof Comparable);
         printOrangeGenericLn("Float -> %s ", Float.valueOf(100) instanceof Comparable);
@@ -59,29 +59,28 @@ public class Crum18 {
         printOrangeGenericLn("Character -> %s ", Character.valueOf((char) 100) instanceof Comparable);
         printOrangeGenericLn("String -> %s ", "Whatevever" instanceof Comparable);
 
-        printMagentaGenericLn("This means that they all implement method compareTo");
+        MAGENTA.printGenericLn("This means that they all implement method compareTo");
 
-        printMagentaGenericLn(
-            "In lambda experssions, when we implement Comparators and use the standard compareTo, we can do that because the elements are Comparable");
+        MAGENTA.printGenericLn("In lambda experssions, when we implement Comparators and use the standard compareTo, we can do that because the elements are Comparable");
 
-        printMagentaGenericLn("In our list of plates we have:");
+        MAGENTA.printGenericLn("In our list of plates we have:");
 
         var plateList = List.of(new Plate("Chinese Porcelain", LocalDateTime.now()),
             new Plate("Delft Porcelain", LocalDateTime.now()), new Plate("Braga Porcelain", LocalDateTime.now()));
 
         printOrangeGenericLn(plateList);
 
-        printMagentaGenericLn("If we sort by the first comparator we've made, we find:");
+        MAGENTA.printGenericLn("If we sort by the first comparator we've made, we find:");
         printOrangeGenericLn(plateList.stream()
             .sorted(comparator)
             .collect(Collectors.toList()));
 
-        printMagentaGenericLn("If we sort by the second comparator we've made, we find:");
+        MAGENTA.printGenericLn("If we sort by the second comparator we've made, we find:");
         printOrangeGenericLn(plateList.stream()
             .sorted(comparator2)
             .collect(Collectors.toList()));
 
-        printMagentaGenericLn("If we sort by the third comparator we've made, we find:");
+        MAGENTA.printGenericLn("If we sort by the third comparator we've made, we find:");
         printOrangeGenericLn(plateList.stream()
             .sorted(comparator3)
             .collect(Collectors.toList()));

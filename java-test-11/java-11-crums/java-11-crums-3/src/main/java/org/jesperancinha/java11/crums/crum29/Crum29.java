@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum29;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum29 {
@@ -16,7 +16,7 @@ public class Crum29 {
 
         var stringB = "" + c;
 
-        printMagentaGenericLn("Although strip() flows the UTF standard, it is a slective way of striping strings");
+        MAGENTA.printGenericLn("Although strip() flows the UTF standard, it is a slective way of striping strings");
 
         printOrangeGenericLn("With strip, stringA is not empty -> %s", stringA.strip() == "");
         printOrangeGenericLn("With strip, stringB is also not empty -> %s", stringB.strip() == "");

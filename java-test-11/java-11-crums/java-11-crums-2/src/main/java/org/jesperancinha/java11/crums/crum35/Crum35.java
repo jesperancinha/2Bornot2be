@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum35;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum35 {
@@ -17,18 +17,17 @@ public class Crum35 {
 
         var stringE = c + "I'm only happy when its complicated" + c;
 
-        printMagentaGenericLn("from: https://genius.com/This-mortal-coil-song-to-the-siren-lyrics");
-        printMagentaGenericLn("from: https://genius.com/Garbage-only-happy-when-it-rains-lyrics");
-        printMagentaGenericLn(
-            "from: https://www.journaldev.com/33291/java-string-trim-method-examples#:~:text=String%20trim");
-        printMagentaGenericLn("We are presented the following strings:");
+        MAGENTA.printGenericLn("from: https://genius.com/This-mortal-coil-song-to-the-siren-lyrics");
+        MAGENTA.printGenericLn("from: https://genius.com/Garbage-only-happy-when-it-rains-lyrics");
+        MAGENTA.printGenericLn("from: https://www.journaldev.com/33291/java-string-trim-method-examples#:~:text=String%20trim");
+        MAGENTA.printGenericLn("We are presented the following strings:");
         printOrangeGenericLn(stringA);
         printOrangeGenericLn(stringB);
         printOrangeGenericLn(stringC);
         printOrangeGenericLn(stringD);
         printOrangeGenericLn(stringE);
 
-        printMagentaGenericLn("This is what happens with a trim:");
+        MAGENTA.printGenericLn("This is what happens with a trim:");
         printOrangeGenericLn("%s, %d", stringA.trim(), stringA.trim()
             .length());
         printOrangeGenericLn("%s, %d", stringB.trim(), stringB.trim()
@@ -40,7 +39,7 @@ public class Crum35 {
         printOrangeGenericLn("%s, %d", stringE.trim(), stringE.trim()
             .length());
 
-        printMagentaGenericLn("This is what happens with a strip:");
+        MAGENTA.printGenericLn("This is what happens with a strip:");
         printOrangeGenericLn("%s, %d", stringA.strip(), stringA.strip()
             .length());
         printOrangeGenericLn("%s, %d", stringB.strip(), stringB.strip()
@@ -52,7 +51,7 @@ public class Crum35 {
         printOrangeGenericLn("%s, %d", stringE.strip(), stringE.strip()
             .length());
 
-        printMagentaGenericLn("We can also just strip left:");
+        MAGENTA.printGenericLn("We can also just strip left:");
         printOrangeGenericLn("%s, %d", stringA.stripLeading(), stringA.stripLeading()
             .length());
         printOrangeGenericLn("%s, %d", stringB.stripLeading(), stringB.stripLeading()
@@ -64,7 +63,7 @@ public class Crum35 {
         printOrangeGenericLn("%s, %d", stringE.stripLeading(), stringE.stripLeading()
             .length());
 
-        printMagentaGenericLn("Or strip right:");
+        MAGENTA.printGenericLn("Or strip right:");
         printOrangeGenericLn("%s, %d", stringA.stripTrailing(), stringA.stripTrailing()
             .length());
         printOrangeGenericLn("%s, %d", stringB.stripTrailing(), stringB.stripTrailing()

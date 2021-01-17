@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum17;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 
 public class Crum17 {
 
@@ -11,8 +11,8 @@ public class Crum17 {
         MainOne.main(null);
         MainTwo.main(null );
 
-        printMagentaGenericLn("Notice that we are able to create two classes in one file");
-        printMagentaGenericLn("For this to be possible, they have to be package protected");
-        printMagentaGenericLn("Methods can be public");
+        MAGENTA.printGenericLn("Notice that we are able to create two classes in one file");
+        MAGENTA.printGenericLn("For this to be possible, they have to be package protected");
+        MAGENTA.printGenericLn("Methods can be public");
     }
 }

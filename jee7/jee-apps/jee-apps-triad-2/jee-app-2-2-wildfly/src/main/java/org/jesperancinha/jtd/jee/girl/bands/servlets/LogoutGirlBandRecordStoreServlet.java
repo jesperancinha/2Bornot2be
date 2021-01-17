@@ -9,8 +9,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @WebServlet("/LogoutGirlBandRecordStoreServlet")
@@ -34,7 +34,7 @@ public class LogoutGirlBandRecordStoreServlet extends HttpServlet {
             }
         }
         HttpSession httpSesssion = request.getSession(false);
-        printMagentaGenericLn("Username is=%s", httpSesssion.getAttribute("username"));
+        MAGENTA.printGenericLn("Username is=%s", httpSesssion.getAttribute("username"));
         if (httpSesssion != null) {
             httpSesssion.invalidate();
         }

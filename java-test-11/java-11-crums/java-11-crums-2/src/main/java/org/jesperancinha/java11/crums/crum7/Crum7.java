@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum7 {
@@ -14,7 +14,7 @@ public class Crum7 {
 
         var arrayInt = new int[][] { { 1, 2, 3 }, null };
 
-        printMagentaGenericLn("First we generate a NullPointerException");
+        MAGENTA.printGenericLn("First we generate a NullPointerException");
 
         try {
             var value = arrayInt[1][0];
@@ -35,7 +35,7 @@ public class Crum7 {
 
         var strings = new String[] { "all", "I", "want", "for", "xmas", "is", "you" };
 
-        printMagentaGenericLn("If we have an array of strings -> %s", Arrays.stream(strings)
+        MAGENTA.printGenericLn("If we have an array of strings -> %s", Arrays.stream(strings)
             .collect(Collectors.toList()));
 
         try {

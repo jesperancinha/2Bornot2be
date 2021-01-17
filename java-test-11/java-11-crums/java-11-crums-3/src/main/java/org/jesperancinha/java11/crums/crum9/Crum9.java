@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum9;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum9 {
     public static void main(String[] args) {
@@ -10,8 +10,7 @@ public class Crum9 {
 
         final int i = calculateTheCalculation();
 
-        printMagentaGenericLn("When running this, please uncomment line with // return 100. For now this returns %d",
-            i);
+        MAGENTA.printGenericLn("When running this, please uncomment line with // return 100. For now this returns %d", i);
         printGreenGenericLn(
             "The reason why the code does not compile is because both the try and the catch return a value");
         printGreenGenericLn("If we uncomment the final block, it will always return 400");

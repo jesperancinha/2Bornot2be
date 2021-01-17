@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum9;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum9 {
@@ -11,11 +11,11 @@ public class Crum9 {
 
         var sale = "Peixinho fresquinho";
 
-        printMagentaGenericLn("The fisherman says:");
+        MAGENTA.printGenericLn("The fisherman says:");
 
         printOrangeGenericLn(sale.concat(" a 5 euros o kilo!"));
 
-        printMagentaGenericLn("The fisherman alos says:");
+        MAGENTA.printGenericLn("The fisherman alos says:");
 
         var sb = new StringBuilder(sale);
 

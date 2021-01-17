@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
@@ -44,8 +44,8 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
             .forEach(Consolerizer::printYellowGenericLn);
 
         Consolerizer.printUnicornsLn(100);
-        printMagentaGenericLn(wsContext.getMessageContext());
-        printMagentaGenericLn(wsContext.getUserPrincipal());
+        MAGENTA.printGenericLn(wsContext.getMessageContext());
+        MAGENTA.printGenericLn(wsContext.getUserPrincipal());
         Consolerizer.printUnicornsLn(100);
 
         final MessageContext mc = this.wsContext.getMessageContext();

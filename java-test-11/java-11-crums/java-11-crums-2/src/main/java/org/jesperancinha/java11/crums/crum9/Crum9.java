@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum9;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum9 extends B implements A {
@@ -10,11 +10,11 @@ public class Crum9 extends B implements A {
         BLUE.printGenericTitleLn("Crum 9 - Shadowing in static members?");
         // Reference to 'a' is ambiguous, both 'B.a' and 'A.a' match
         // a = 40;
-        printMagentaGenericLn("This is possible -> %d", A.a);
-        printMagentaGenericLn("This is possible -> %d", B.a);
+        MAGENTA.printGenericLn("This is possible -> %d", A.a);
+        MAGENTA.printGenericLn("This is possible -> %d", B.a);
 
-        printMagentaGenericLn("This is possible -> %d", b);
-        printMagentaGenericLn("This is possible -> %d", C.b);
+        MAGENTA.printGenericLn("This is possible -> %d", b);
+        MAGENTA.printGenericLn("This is possible -> %d", C.b);
 
         // 'org.jesperancinha.java11.crums.crum9.C' is not an enclosing class
         // C.this.b;
@@ -32,11 +32,11 @@ public class Crum9 extends B implements A {
     }
 
     private void fromInstance() {
-        printMagentaGenericLn("This is possible -> %d", A.a);
-        printMagentaGenericLn("This is possible -> %d", B.a);
+        MAGENTA.printGenericLn("This is possible -> %d", A.a);
+        MAGENTA.printGenericLn("This is possible -> %d", B.a);
 
-        printMagentaGenericLn("This is possible -> %d", b);
-        printMagentaGenericLn("This is possible -> %d", C.b);
+        MAGENTA.printGenericLn("This is possible -> %d", b);
+        MAGENTA.printGenericLn("This is possible -> %d", C.b);
 
     }
 }

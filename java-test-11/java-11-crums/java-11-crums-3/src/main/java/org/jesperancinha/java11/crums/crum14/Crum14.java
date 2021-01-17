@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum14;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum14 {
@@ -28,7 +28,7 @@ public class Crum14 {
         final @Special String bibi = "Bibi";
         var kittenName = new @Special String(bibi);
         var kitten2 = new @Special Kitten(kittenName);
-        printMagentaGenericLn("We have created two kittens:");
+        MAGENTA.printGenericLn("We have created two kittens:");
 
         printOrangeGenericLn("This is %s, %s", foxy, kitten);
         printOrangeGenericLn("This is %s, %s", bibi, kitten2);

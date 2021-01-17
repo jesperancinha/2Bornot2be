@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 
 public class Crum2 {
@@ -19,11 +19,11 @@ public class Crum2 {
         final List<String> options = Arrays.stream(args)
             .collect(Collectors.toList());
         final boolean skipTime = options.contains("-skipTime");
-        printMagentaGenericLn("We know that ArrayList implements the RandomAccessInterface");
-        printMagentaGenericLn("We know that LinkedList does not implement the RandomAccessInterface");
+        MAGENTA.printGenericLn("We know that ArrayList implements the RandomAccessInterface");
+        MAGENTA.printGenericLn("We know that LinkedList does not implement the RandomAccessInterface");
 
-        printMagentaGenericLn("The first is said to a have a constant time access to each of their elements.");
-        printMagentaGenericLn("The second is said to take longer for the last elements for each retrieval");
+        MAGENTA.printGenericLn("The first is said to a have a constant time access to each of their elements.");
+        MAGENTA.printGenericLn("The second is said to take longer for the last elements for each retrieval");
 
         LocalDateTime time1 = LocalDateTime.now();
         var arrayList = new ArrayList<Integer>();
@@ -43,8 +43,8 @@ public class Crum2 {
         }
         LocalDateTime time3 = LocalDateTime.now();
 
-        printMagentaGenericLn("It took %s nanoseconds to fill the array list", time1.until(time2, ChronoUnit.NANOS));
-        printMagentaGenericLn("It took %s nanoseconds to fill the linked list", time2.until(time3, ChronoUnit.NANOS));
+        MAGENTA.printGenericLn("It took %s nanoseconds to fill the array list", time1.until(time2, ChronoUnit.NANOS));
+        MAGENTA.printGenericLn("It took %s nanoseconds to fill the linked list", time2.until(time3, ChronoUnit.NANOS));
 
         for (int i = 0; i < 10; i++) {
             calculate(arrayList, linkedList);
@@ -79,13 +79,9 @@ public class Crum2 {
         LocalDateTime time7 = LocalDateTime.now();
 
         printRainbowLn('-', 10);
-        printMagentaGenericLn("It took %s nanoseconds to get the last element of the array list",
-            time3.until(time4, ChronoUnit.NANOS));
-        printMagentaGenericLn("It took %s nanoseconds to get the first element of the array list",
-            time4.until(time5, ChronoUnit.NANOS));
-        printMagentaGenericLn("It took %s nanoseconds to get the last element of the linked list",
-            time5.until(time6, ChronoUnit.NANOS));
-        printMagentaGenericLn("It took %s nanoseconds to get the first element of the linked list",
-            time6.until(time7, ChronoUnit.NANOS));
+        MAGENTA.printGenericLn("It took %s nanoseconds to get the last element of the array list", time3.until(time4, ChronoUnit.NANOS));
+        MAGENTA.printGenericLn("It took %s nanoseconds to get the first element of the array list", time4.until(time5, ChronoUnit.NANOS));
+        MAGENTA.printGenericLn("It took %s nanoseconds to get the last element of the linked list", time5.until(time6, ChronoUnit.NANOS));
+        MAGENTA.printGenericLn("It took %s nanoseconds to get the first element of the linked list", time6.until(time7, ChronoUnit.NANOS));
     }
 }

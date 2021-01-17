@@ -3,12 +3,12 @@ package org.jesperancinha.java11.crums.crum30;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 
 public class Crum30 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 30 - @Repeatable annotation");
-        printMagentaGenericLn(new MashedPotatoes());
+        MAGENTA.printGenericLn(new MashedPotatoes());
 
         Consolerizer.printGreenGenericLn("Remember that the rule is that @Repeatable must have a container class");
         Consolerizer.printGreenGenericLn("The container class must have an array of the repeating type");

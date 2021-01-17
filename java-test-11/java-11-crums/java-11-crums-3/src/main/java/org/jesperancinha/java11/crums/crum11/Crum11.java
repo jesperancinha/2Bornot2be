@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -60,30 +60,24 @@ public class Crum11 {
         BLUE.printGenericTitleLn("Crum 11 - Overriding and overloading generics");
 
         printYellowGenericLn("from: https://genius.com/Hall-and-oates-out-of-touch-lyrics ");
-        printMagentaGenericLn("1 - %s", new Main1().areYouOutOfTouch(Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("2 - %s", new Main1().areYouOutOfTouch(Collections.singletonList("You're out of touch")));
-        printMagentaGenericLn("3 - %s",
-            new Main1().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("4 - %s", new Main2().areYouOutOfTouch(Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("5 - %s",
-            new Main2().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("6 - %s", new Main3().areYouOutOfTouch(Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("7 - %s",
-            new Main3().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("8 - %s", new Main4().areYouOutOfTouch(Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("9 - %s",
-            new Main4().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("10 - %s", new BaseSuper().areYouOutOfTouch(Arrays.asList("You're out of touch")));
-        printMagentaGenericLn("11 - %s", new BaseSuper().areYouOutOfTouch(Arrays.asList(1123443432342L)));
+        MAGENTA.printGenericLn("1 - %s", new Main1().areYouOutOfTouch(Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("2 - %s", new Main1().areYouOutOfTouch(Collections.singletonList("You're out of touch")));
+        MAGENTA.printGenericLn("3 - %s", new Main1().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("4 - %s", new Main2().areYouOutOfTouch(Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("5 - %s", new Main2().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("6 - %s", new Main3().areYouOutOfTouch(Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("7 - %s", new Main3().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("8 - %s", new Main4().areYouOutOfTouch(Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("9 - %s", new Main4().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("10 - %s", new BaseSuper().areYouOutOfTouch(Arrays.asList("You're out of touch")));
+        MAGENTA.printGenericLn("11 - %s", new BaseSuper().areYouOutOfTouch(Arrays.asList(1123443432342L)));
         final Collection<? super CharSequence> objects = new BaseSuper().areYouOutOfTouch(
             new ArrayList<>(Arrays.asList("I'm out of time!")));
-        printMagentaGenericLn("12 - %s", objects);
+        MAGENTA.printGenericLn("12 - %s", objects);
         objects.add(new StringBuilder());
         final Object next = objects.iterator()
             .next();
-        printMagentaGenericLn(
-            "Notice that '%s' is an Object! Using super in a wildcard allows us to write only specific types but offers no guarantee about the read type",
-            next);
+        MAGENTA.printGenericLn("Notice that '%s' is an Object! Using super in a wildcard allows us to write only specific types but offers no guarantee about the read type", next);
         // Required type:
         // capture of ? super CharSequence
         // objects.add(1L);

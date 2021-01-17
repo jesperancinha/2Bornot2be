@@ -1,15 +1,15 @@
 package org.jesperancinha.java11.crums.crum32;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum32 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 32 - How to unbox");
 
-        printMagentaGenericLn("Unboxing operations can be done multiple ways");
+        MAGENTA.printGenericLn("Unboxing operations can be done multiple ways");
         final Integer a = 123;
         final int aU = a;
         final long bU = a;
@@ -28,14 +28,14 @@ public class Crum32 {
         printOrangeGenericLn(fU);
         printOrangeGenericLn(gU);
 
-        printMagentaGenericLn("These are examples of unbxing operations that work as unboxing from an Integer");
+        MAGENTA.printGenericLn("These are examples of unbxing operations that work as unboxing from an Integer");
         BLUE.printGenericLn("        final Integer a = 123;\n" + "        final int aU = a;\n"
             + "        final long bU = a;\n" + "        final float cU = a;\n" + "        final double dU = a;\n"
             + "        final byte eU = a.byteValue();\n" + "        final short fU = a.shortValue();\n"
             + "        final char gU = (char) a.shortValue();");
 
 
-        printMagentaGenericLn("These are examples of unbxing operations that work as unboxing from an Byte");
+        MAGENTA.printGenericLn("These are examples of unbxing operations that work as unboxing from an Byte");
         final Byte bB = 123;
         final byte bAB = bB;
         final short bBB = bB;

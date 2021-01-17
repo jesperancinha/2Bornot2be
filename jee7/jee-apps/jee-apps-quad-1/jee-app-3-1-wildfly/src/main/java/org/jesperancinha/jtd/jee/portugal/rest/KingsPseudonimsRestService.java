@@ -8,8 +8,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 @Path("history/pseudonyms")
 public class KingsPseudonimsRestService {
@@ -20,7 +20,7 @@ public class KingsPseudonimsRestService {
         @PathParam("name")
             String name) {
         BLUE.printGenericTitleLn("Generic REST endpoint");
-        printMagentaGenericLn("You've reached the most generic endpoint.");
+        MAGENTA.printGenericLn("You've reached the most generic endpoint.");
         printGreenGenericLn("The reason is that there is no other more specific endpoint.");
         return String.join(",", HistoryContentCreator.getKingsMap()
             .get(name));
@@ -30,7 +30,7 @@ public class KingsPseudonimsRestService {
     @Path("/burgundy/Sancho I")
     public String getPseudonymById() {
         BLUE.printGenericTitleLn("Specific REST endpoint");
-        printMagentaGenericLn("If you've reached this, then you have reached Sancho I fixed enpoint.");
+        MAGENTA.printGenericLn("If you've reached this, then you have reached Sancho I fixed enpoint.");
         printGreenGenericLn("This means that although the other endpoint could also account for Sancho I, since this is more specific, it gets called first.");
         return String.join(",", HistoryContentCreator.getKingsMap()
             .get("Sancho I"));
@@ -39,7 +39,7 @@ public class KingsPseudonimsRestService {
     @Path("/burgundy")
         public String getPseudonymById(@QueryParam("id") Integer id) {
         BLUE.printGenericTitleLn("Query param REST endpoint");
-        printMagentaGenericLn("If you've reached this, then you have reached QueryParam enpoint.");
+        MAGENTA.printGenericLn("If you've reached this, then you have reached QueryParam enpoint.");
         printGreenGenericLn("This is how we get query params to enter our REST endpoint.");
         return String.join(",", HistoryContentCreator.getKingsMap()
             .values().toArray()[id].toString());

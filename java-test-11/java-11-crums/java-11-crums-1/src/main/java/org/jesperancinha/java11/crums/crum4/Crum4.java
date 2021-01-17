@@ -1,8 +1,7 @@
 package org.jesperancinha.java11.crums.crum4;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 
 public class Crum4 {
@@ -13,11 +12,10 @@ public class Crum4 {
         // int i;
         int i = 0;
         for (; i < 10; i++) {
-            printMagentaGeneric(i);
+            MAGENTA.printGeneric(i);
         }
         printNewLine();
-        printMagentaGenericLn("The point is that all variables in a for loop need to be initialized");
-        printMagentaGenericLn(
-            "This is pretty much the case of every local variable before using them for the first time");
+        MAGENTA.printGenericLn("The point is that all variables in a for loop need to be initialized");
+        MAGENTA.printGenericLn("This is pretty much the case of every local variable before using them for the first time");
     }
 }

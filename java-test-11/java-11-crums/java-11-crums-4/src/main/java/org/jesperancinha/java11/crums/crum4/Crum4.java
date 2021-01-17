@@ -5,8 +5,8 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum4 {
 
@@ -31,11 +31,11 @@ public class Crum4 {
 
         final TourBoat tourBoat = crum4.new TourBoat();
 
-        printMagentaGenericLn("For the %s boat we have:", armonaBoat.getClass());
+        MAGENTA.printGenericLn("For the %s boat we have:", armonaBoat.getClass());
         Arrays.stream(armonaBoat.getClass()
             .getAnnotations())
             .forEach(Consolerizer::printBrightCyanGenericLn);
-        printMagentaGenericLn("For the %s boat we have:", tourBoat.getClass());
+        MAGENTA.printGenericLn("For the %s boat we have:", tourBoat.getClass());
         Arrays.stream(tourBoat.getClass()
             .getAnnotations())
             .forEach(Consolerizer::printBrightCyanGenericLn);

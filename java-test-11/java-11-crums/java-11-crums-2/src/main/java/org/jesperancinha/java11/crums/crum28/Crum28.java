@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum28 {
     public static void main(String[] args) {
@@ -25,21 +25,21 @@ public class Crum28 {
             }
         };
 
-        printMagentaGenericLn("Comparator is quite something else than a Comparator");
+        MAGENTA.printGenericLn("Comparator is quite something else than a Comparator");
         final int i = comparable1.compareTo(109);
-        printMagentaGenericLn(i);
+        MAGENTA.printGenericLn(i);
         final int j  =  comparator1.compare(10,11);
-        printMagentaGenericLn(j);
-        printMagentaGenericLn("We create a list of stones");
+        MAGENTA.printGenericLn(j);
+        MAGENTA.printGenericLn("We create a list of stones");
 
         var stones = Arrays.asList(new Stone("Icestone", 111),new Stone("Coblestone", 45), new Stone("Marblestone", 123));
 
-        printMagentaGenericLn("Unordered:");
-        printMagentaGenericLn(stones);
-        printMagentaGenericLn("Collection ordered");
+        MAGENTA.printGenericLn("Unordered:");
+        MAGENTA.printGenericLn(stones);
+        MAGENTA.printGenericLn("Collection ordered");
         Collections.sort(stones);
-        printMagentaGenericLn(stones);
-        printMagentaGenericLn("Custom Comparator ordered");
+        MAGENTA.printGenericLn(stones);
+        MAGENTA.printGenericLn("Custom Comparator ordered");
         stones.sort(new Comparator<Stone>() {
             @Override
             public int compare(Stone o1, Stone o2) {
@@ -49,7 +49,7 @@ public class Crum28 {
                 return o2.number.compareTo(o1.number);
             }
         });
-        printMagentaGenericLn(stones);
+        MAGENTA.printGenericLn(stones);
 
         printGreenGenericLn("Notice the subtle but very function difference between Comparator and Comparable");
         printGreenGenericLn("Comparable is used in an implementation of a type");

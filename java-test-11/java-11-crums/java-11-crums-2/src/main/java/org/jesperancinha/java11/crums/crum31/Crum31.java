@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum31 {
     public static void main(String[] args) {
@@ -18,9 +18,9 @@ public class Crum31 {
 
         final List<Sandwich> sandwiches = Arrays.asList(new Sandwich(3, "Bolas de Berlin"),
             new Sandwich(4, "Bolo de arroz"), new Sandwich(1, "Bolo de arroz"), new Sandwich(2, "Dom Rodrigo"));
-        printMagentaGenericLn("We have a list of sandwiches");
-        printMagentaGenericLn(sandwiches);
-        printMagentaGenericLn("We can organize them by id");
+        MAGENTA.printGenericLn("We have a list of sandwiches");
+        MAGENTA.printGenericLn(sandwiches);
+        MAGENTA.printGenericLn("We can organize them by id");
 
         final List<Sandwich> collect = sandwiches.stream()
             .sorted((a, b) -> a.getId()
@@ -28,16 +28,16 @@ public class Crum31 {
             .peek(Consolerizer::printOrangeGenericLn)
             .collect(Collectors.toList());
 
-        printMagentaGenericLn(collect);
+        MAGENTA.printGenericLn(collect);
 
-        printMagentaGenericLn("We can also organize them by name");
+        MAGENTA.printGenericLn("We can also organize them by name");
 
         final List<Sandwich> collect1 = sandwiches.stream()
             .sorted(Comparator.comparing(s -> s.getName()))
             .peek(Consolerizer::printOrangeGenericLn)
             .collect(Collectors.toList());
 
-        printMagentaGenericLn(collect1);
+        MAGENTA.printGenericLn(collect1);
 
         final Comparator<Sandwich> comparing = Comparator.comparing(s -> s.getName());
         final Comparator<Sandwich> comparator = comparing.thenComparing((a, b) -> a.getId()
@@ -47,13 +47,13 @@ public class Crum31 {
             .peek(Consolerizer::printOrangeGenericLn)
             .collect(Collectors.toList());
 
-        printMagentaGenericLn("We can also organize first by Id and then name");
-        printMagentaGenericLn(collect2);
+        MAGENTA.printGenericLn("We can also organize first by Id and then name");
+        MAGENTA.printGenericLn(collect2);
 
         final Stream<Sandwich> sorted = sandwiches.stream()
             .sorted();
-        printMagentaGenericLn("Finally we can sort them with a terminating function");
-        printMagentaGenericLn(sorted);
+        MAGENTA.printGenericLn("Finally we can sort them with a terminating function");
+        MAGENTA.printGenericLn(sorted);
         printGreenGenericLn("We can make our own comparators");
         printGreenGenericLn(
             "If we know we are only using an item to compare or even if we have more we can use Comparator and thenComparing if further must follow suit");

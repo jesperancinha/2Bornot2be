@@ -6,8 +6,8 @@ import javax.management.relation.RoleUnresolvedList;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum1 {
@@ -15,10 +15,9 @@ public class Crum1 {
         BLUE.printGenericTitleLn("Crum 1 - The subclasses of ArrayList");
 
         var arrayList = List.of("Madonna", "Mariah Carey", "Jennifer Lopez", "Shakira", "Beyonce", "Kelly Rowland");
-        printMagentaGenericLn(
-            "There are indeed three extra sub-types of ArrayList: AttributeList, RoleList, RoleUnresolvedList");
+        MAGENTA.printGenericLn("There are indeed three extra sub-types of ArrayList: AttributeList, RoleList, RoleUnresolvedList");
 
-        printMagentaGenericLn("We can present a super music singer list this way:");
+        MAGENTA.printGenericLn("We can present a super music singer list this way:");
 
         printOrangeGenericLn(arrayList);
 
@@ -30,7 +29,7 @@ public class Crum1 {
         attributeList.add(0, "Beyonce");
         attributeList.add(0, "Kelly Rowland");
 
-        printMagentaGenericLn("We then can use an Attribute List:");
+        MAGENTA.printGenericLn("We then can use an Attribute List:");
         printOrangeGenericLn(attributeList);
 
         var roleList = new RoleList();
@@ -41,7 +40,7 @@ public class Crum1 {
         roleList.add(0, "Beyonce");
         roleList.add(0, "Kelly Rowland");
 
-        printMagentaGenericLn("We then can use an RoleList List:");
+        MAGENTA.printGenericLn("We then can use an RoleList List:");
         printOrangeGenericLn(roleList);
 
         var roleUnresolvedList = new RoleUnresolvedList();
@@ -52,7 +51,7 @@ public class Crum1 {
         roleUnresolvedList.add(0, "Beyonce");
         roleUnresolvedList.add(0, "Kelly Rowland");
 
-        printMagentaGenericLn("Finally we can use an RoleUnresolvedList List:");
+        MAGENTA.printGenericLn("Finally we can use an RoleUnresolvedList List:");
         printOrangeGenericLn(roleUnresolvedList);
 
         printGreenGenericLn("We can think of the three sub ArrayList types as just roles and attributes");

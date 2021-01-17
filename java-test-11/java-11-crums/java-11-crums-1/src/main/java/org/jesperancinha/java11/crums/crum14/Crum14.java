@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum14 {
     public static void main(String[] args) {
@@ -22,8 +22,8 @@ public class Crum14 {
         printBrightCyanGenericLn(list.containsAll(List.of(111d)));
         printBrightCyanGenericLn(list.containsAll(Collections.singletonList(111d)));
 
-        printMagentaGenericLn("Notice that you can only add elements strictly of the type of the array");
-        printMagentaGenericLn("Contains works with all types though");
-        printMagentaGenericLn("Contains expects and Object and containsAll expects a list of Objects");
+        MAGENTA.printGenericLn("Notice that you can only add elements strictly of the type of the array");
+        MAGENTA.printGenericLn("Contains works with all types though");
+        MAGENTA.printGenericLn("Contains expects and Object and containsAll expects a list of Objects");
     }
 }

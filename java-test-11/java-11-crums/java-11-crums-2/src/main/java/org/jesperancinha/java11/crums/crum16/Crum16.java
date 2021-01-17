@@ -19,15 +19,14 @@ import java.util.Vector;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum16 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 16 - Using Lists on a Map");
 
-        printMagentaGenericLn(
-            "AbstractList, AbstractSequentialList, ArrayList, AttributeList, CopyOnWriteArrayList, LinkedList, RoleList, RoleUnresolvedList, Stack, Vector");
+        MAGENTA.printGenericLn("AbstractList, AbstractSequentialList, ArrayList, AttributeList, CopyOnWriteArrayList, LinkedList, RoleList, RoleUnresolvedList, Stack, Vector");
 
         final List<String> colors1 = List.of("blue", "rose", "red", "blue");
         final ArrayList<String> colors2 = new ArrayList<>(colors1);
@@ -79,18 +78,18 @@ public class Crum16 {
         flowers10.put("campanula", colors10);
         flowers11.put("saxifragas", colors11);
 
-        printMagentaGenericLn("We can see a lot of different representations of map and Lists within:");
-        printMagentaGenericLn(flowers1);
-        printMagentaGenericLn(flowers2);
-        printMagentaGenericLn(flowers3);
-        printMagentaGenericLn(flowers4);
-        printMagentaGenericLn(flowers5);
-        printMagentaGenericLn(flowers6);
-        printMagentaGenericLn(flowers7);
-        printMagentaGenericLn(flowers8);
-        printMagentaGenericLn(flowers9);
-        printMagentaGenericLn(flowers10);
-        printMagentaGenericLn(flowers11);
+        MAGENTA.printGenericLn("We can see a lot of different representations of map and Lists within:");
+        MAGENTA.printGenericLn(flowers1);
+        MAGENTA.printGenericLn(flowers2);
+        MAGENTA.printGenericLn(flowers3);
+        MAGENTA.printGenericLn(flowers4);
+        MAGENTA.printGenericLn(flowers5);
+        MAGENTA.printGenericLn(flowers6);
+        MAGENTA.printGenericLn(flowers7);
+        MAGENTA.printGenericLn(flowers8);
+        MAGENTA.printGenericLn(flowers9);
+        MAGENTA.printGenericLn(flowers10);
+        MAGENTA.printGenericLn(flowers11);
 
         printGreenGenericLn("When defining maps and lists, our types must be the same or subtypes");
         printGreenGenericLn("Diamond notation cannot be enclosed. This means that this new HashMap<String, List<>> is illegal");

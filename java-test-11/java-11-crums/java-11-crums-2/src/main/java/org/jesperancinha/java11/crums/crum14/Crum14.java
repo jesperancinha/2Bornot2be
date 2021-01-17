@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum14 {
@@ -19,15 +19,15 @@ public class Crum14 {
         var listOfArray1 = List.of(array);
         var listOfArray2 = Arrays.asList(array);
 
-        printMagentaGenericLn("We start out from array %s", Arrays.stream(array)
+        MAGENTA.printGenericLn("We start out from array %s", Arrays.stream(array)
             .collect(Collectors.toList()));
         printBrightMagentaGenericLn("We have these lists:");
         printYellowGenericLn(listOfArray1);
         printYellowGenericLn(listOfArray2);
 
-        printMagentaGenericLn("If we change the source array:");
+        MAGENTA.printGenericLn("If we change the source array:");
         array[0] = 9;
-        printMagentaGenericLn(Arrays.stream(array)
+        MAGENTA.printGenericLn(Arrays.stream(array)
             .collect(Collectors.toList()));
 
         printBrightMagentaGenericLn("Checking any of our lists again we should not have the same values:");
@@ -44,12 +44,11 @@ public class Crum14 {
         printYellowGenericLn(listOfArray3);
         printYellowGenericLn(listOfArray4);
 
-        printMagentaGenericLn("Notice that we didn't create a list of Integers");
-        printMagentaGenericLn(listOfArray3.get(0));
-        printMagentaGenericLn("Instead, we have created a List of an array of integers");
-        printMagentaGenericLn(
-            "This is because Generic Lists are prepared to work with objects and ca interpret an array of objects");
-        printMagentaGenericLn("They do not, however interpret an array of primitive values such as int.");
+        MAGENTA.printGenericLn("Notice that we didn't create a list of Integers");
+        MAGENTA.printGenericLn(listOfArray3.get(0));
+        MAGENTA.printGenericLn("Instead, we have created a List of an array of integers");
+        MAGENTA.printGenericLn("This is because Generic Lists are prepared to work with objects and ca interpret an array of objects");
+        MAGENTA.printGenericLn("They do not, however interpret an array of primitive values such as int.");
 
         // Type argument cannot be of primitive type
         // List<int> abc = new ArrayList<>();

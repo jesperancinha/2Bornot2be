@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum26;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum26 {
     public static void main(String[] args) {
@@ -13,21 +13,19 @@ public class Crum26 {
         final int intStream1Value = IntStream.range(0, 1000)
             .sum();
 
-        printMagentaGenericLn("When we calculate sum from an intStream we get a result int value %d", intStream1Value);
+        MAGENTA.printGenericLn("When we calculate sum from an intStream we get a result int value %d", intStream1Value);
 
         final double doubleStreamValue = IntStream.range(0, 1000)
             .asDoubleStream()
             .average()
             .orElse(0);
 
-        printMagentaGenericLn("When we calculate the average from a double stream we get a result int value %f",
-            doubleStreamValue);
+        MAGENTA.printGenericLn("When we calculate the average from a double stream we get a result int value %f", doubleStreamValue);
 
         final int intStreamSumValueFromAReduceOperation = IntStream.range(0, 1000)
             .boxed()
             .reduce(0, Integer::sum);
-        printMagentaGenericLn("When we calculate sum from a stream we get a result int value %d",
-            intStreamSumValueFromAReduceOperation);
+        MAGENTA.printGenericLn("When we calculate sum from a stream we get a result int value %d", intStreamSumValueFromAReduceOperation);
 
         printGreenGenericLn("A few differences between DoubleStream and IntStream");
         printGreenGenericLn("It should be obvious that and IntStream has range and DoubleStream doesn't.");

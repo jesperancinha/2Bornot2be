@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum5;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.java11.crums.crum5.Type.B;
 
@@ -42,18 +42,16 @@ class RunningModule {
         final Type a = Type.A;
         final Type b = B;
 
-        printMagentaGenericLn("We create reference for type A -> %s", a);
-        printMagentaGenericLn("Then the reference for type B -> %s", b);
+        MAGENTA.printGenericLn("We create reference for type A -> %s", a);
+        MAGENTA.printGenericLn("Then the reference for type B -> %s", b);
 
-        printMagentaGenericLn("We can also create types which contain others");
-        printMagentaGenericLn("We create a SubTypeA -> %s", SubTypeA.AA);
-        printMagentaGenericLn("We can also create another SubTypeA -> %s", SubTypeA.AB);
-        printMagentaGenericLn("We know that any SubTypeA contains a reference to a static A member -> %s",
-            SubTypeA.AB.getA());
-        printMagentaGenericLn("Using an interface we get the same -> %s", ((ISubTypeA) (SubTypeA.AB)).getA());
+        MAGENTA.printGenericLn("We can also create types which contain others");
+        MAGENTA.printGenericLn("We create a SubTypeA -> %s", SubTypeA.AA);
+        MAGENTA.printGenericLn("We can also create another SubTypeA -> %s", SubTypeA.AB);
+        MAGENTA.printGenericLn("We know that any SubTypeA contains a reference to a static A member -> %s", SubTypeA.AB.getA());
+        MAGENTA.printGenericLn("Using an interface we get the same -> %s", ((ISubTypeA) (SubTypeA.AB)).getA());
 
-        printMagentaGenericLn("We can also use instances to access types in the same way -> %s",
-            new RunningModule().getType());
+        MAGENTA.printGenericLn("We can also use instances to access types in the same way -> %s", new RunningModule().getType());
 
         printGreenGenericLn("What we see is that enums are full of surprised");
         printGreenGenericLn("An enum is final and cannot be extended");

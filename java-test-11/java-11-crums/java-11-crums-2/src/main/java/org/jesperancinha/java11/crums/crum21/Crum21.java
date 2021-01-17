@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum21;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum21 {
@@ -60,7 +60,7 @@ public class Crum21 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 21 - Overriding return types");
 
-        printMagentaGenericLn("Revising again the overriding capabilities of Java");
+        MAGENTA.printGenericLn("Revising again the overriding capabilities of Java");
 
         final Crum21 crum21 = new Crum21();
         final Bird bird = crum21.new Bird();
@@ -71,9 +71,9 @@ public class Crum21 {
         final A a = plane.getA();
         final A a1 = flying.getA();
 
-        printMagentaGenericLn("We create a B from bird -> %s", b);
-        printMagentaGenericLn("We create an A from plane -> %s", a);
-        printMagentaGenericLn("We create an A from flying -> %s", a1);
+        MAGENTA.printGenericLn("We create a B from bird -> %s", b);
+        MAGENTA.printGenericLn("We create an A from plane -> %s", a);
+        MAGENTA.printGenericLn("We create an A from flying -> %s", a1);
 
         printGreenGenericLn("The principle is that the return type, if an an object, it must be of the same type or a subtype of the overriden type.");
         printGreenGenericLn("Overriding happens with the same type of parameters.");

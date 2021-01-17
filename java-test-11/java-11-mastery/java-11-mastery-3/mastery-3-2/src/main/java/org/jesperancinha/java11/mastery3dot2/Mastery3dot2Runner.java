@@ -39,9 +39,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -143,15 +143,15 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("In our report however, we can only put a word with 7 characters.");
         printGreenGenericLn("We might be able to save this situation by using setLength");
         final StringBuilder sb = new StringBuilder("Slender-billed Gull");
-        printMagentaGenericLn("This is our current word -> %s ", sb);
+        MAGENTA.printGenericLn("This is our current word -> %s ", sb);
         sb.setLength(7);
-        printMagentaGenericLn("This is our changed word -> %s ", sb);
+        MAGENTA.printGenericLn("This is our changed word -> %s ", sb);
         sb.append("-billed Gull");
-        printMagentaGenericLn("But hey, now we can put way more characters and now we reinstate the rest -> %s ", sb);
+        MAGENTA.printGenericLn("But hey, now we can put way more characters and now we reinstate the rest -> %s ", sb);
         sb.setLength(30);
-        printMagentaGenericLn("And we can also make this a bigger string -> %s ", sb);
+        MAGENTA.printGenericLn("And we can also make this a bigger string -> %s ", sb);
         sb.append(".");
-        printMagentaGenericLn("If the size is changed to more than what already is, the actual word doesn't change size -> %s ", sb);
+        MAGENTA.printGenericLn("If the size is changed to more than what already is, the actual word doesn't change size -> %s ", sb);
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. setLength can decrease a String size inside StrinbBuilder");
         printGreenGenericLn("2. setLength can may increase the size of the String, but nothing happnes if it surpasses original size");
@@ -167,15 +167,11 @@ public class Mastery3dot2Runner {
                 "Purple Swamphen", "Little Bittern",
                 "Purple Heron", "Collared Pratincole",
                 "Audouin’s Gull", "Greater Flamingo");
-        printMagentaGenericLn("We see all of these birds-> %s", allBirdsSeen);
-        printMagentaGenericLn("Did we see any `Eurasian Spoonbill`? -> %s",
-                allBirdsSeen.stream().anyMatch("Eurasian Spoonbill"::equals));
-        printMagentaGenericLn("So none of them matched right? -> %s",
-                allBirdsSeen.stream().noneMatch("Eurasian Spoonbill"::equals));
-        printMagentaGenericLn("How about the `Little Bittern`? -> %s",
-                allBirdsSeen.stream().anyMatch("Little Bittern"::equals));
-        printMagentaGenericLn("Do all of them match this? -> %s",
-                allBirdsSeen.stream().allMatch("Little Bittern"::equals));
+        MAGENTA.printGenericLn("We see all of these birds-> %s", allBirdsSeen);
+        MAGENTA.printGenericLn("Did we see any `Eurasian Spoonbill`? -> %s", allBirdsSeen.stream().anyMatch("Eurasian Spoonbill"::equals));
+        MAGENTA.printGenericLn("So none of them matched right? -> %s", allBirdsSeen.stream().noneMatch("Eurasian Spoonbill"::equals));
+        MAGENTA.printGenericLn("How about the `Little Bittern`? -> %s", allBirdsSeen.stream().anyMatch("Little Bittern"::equals));
+        MAGENTA.printGenericLn("Do all of them match this? -> %s", allBirdsSeen.stream().allMatch("Little Bittern"::equals));
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. allMatch, noneMatch, anyMatch and in general Match operations, return a boolean");
     }
@@ -200,7 +196,7 @@ public class Mastery3dot2Runner {
         try (var fis = new FileInputStream("/tmp/fishersCatch.obj")) {
             var ois = new ObjectInputStream(fis);
             Pesca o = (Pesca) ois.readObject();
-            printMagentaGenericLn("We got the data! And the fisher catched %s", o);
+            MAGENTA.printGenericLn("We got the data! And the fisher catched %s", o);
 
         } catch (IOException | ClassNotFoundException e) {
             printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
@@ -235,7 +231,7 @@ public class Mastery3dot2Runner {
         var allBaits = createBaitFishList(nBaits);
         var organizedBaits = allBaits
                 .stream().sorted().collect(Collectors.toList());
-        printMagentaGenericLn("We get -> %s ", organizedBaits);
+        MAGENTA.printGenericLn("We get -> %s ", organizedBaits);
         var allBaitObjects = new ArrayList<Catch>(organizedBaits);
         var oneFish = createRandomFishList(1);
         allBaitObjects.addAll(oneFish);
@@ -289,7 +285,7 @@ public class Mastery3dot2Runner {
         var organizedCatch = allCatch
                 .stream().sorted(peixeComparator).collect(Collectors.toList());
         printYellowGenericLn("This is our organized catch -> %s", organizedCatch);
-        printMagentaGenericLn("Finally we can put our fishes in the matching boxes in a mutch faster way!.");
+        MAGENTA.printGenericLn("Finally we can put our fishes in the matching boxes in a mutch faster way!.");
         organizedCatch.forEach(peixe -> {
             CrateSize[] values = CrateSize.values();
             for (CrateSize crateSize : values) {
@@ -299,7 +295,7 @@ public class Mastery3dot2Runner {
                 }
             }
         });
-        printMagentaGenericLn(organizedCatch);
+        MAGENTA.printGenericLn(organizedCatch);
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. thenCompare works cumulatively");
         printGreenGenericLn("2. thenCompare sections each comparison in separate groups");
@@ -369,9 +365,9 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("In our case we will try to order one \"Galão\" that is also a \"Garoto\".");
         printGreenGenericLn("Can we do it?");
         var garoto = Garoto.create();
-        printMagentaGenericLn("For a starters we can create one %s", garoto);
+        MAGENTA.printGenericLn("For a starters we can create one %s", garoto);
         var galao = Galao.create();
-        printMagentaGenericLn("We can also create one create one %s", galao);
+        MAGENTA.printGenericLn("We can also create one create one %s", galao);
         printGreenGenericLn("The point here is that if classes have package protected constructors, and belong to different packages, they can never be sub-classes of eacht other");
         printGreenGenericLn("This makes this:");
         printGreenGenericLn("        var garoto =new Garoto();");
@@ -488,14 +484,14 @@ public class Mastery3dot2Runner {
             printRedGenericLn("Note that capacity limit does not show in ArrayDeque, because ArrayDeque grow automatically -> %s", e);
         }
         boolean offer = dequeQueue.offer("4Kg Gambas");
-        printMagentaGenericLn("This Deque has now reached its limit of %d elemenst", dequeQueue.size());
-        printMagentaGenericLn("With offer, it's essentially giving an offer to the Deque. %s", offer);
+        MAGENTA.printGenericLn("This Deque has now reached its limit of %d elemenst", dequeQueue.size());
+        MAGENTA.printGenericLn("With offer, it's essentially giving an offer to the Deque. %s", offer);
         boolean offer2 = dequeQueue.offerFirst("4Kg Shrimps");
-        printMagentaGenericLn("With offerFirst, It's the same. %s", offer2);
-        printMagentaGenericLn(offer2);
+        MAGENTA.printGenericLn("With offerFirst, It's the same. %s", offer2);
+        MAGENTA.printGenericLn(offer2);
         boolean offer3 = dequeQueue.offerLast("2Kg Oysters");
-        printMagentaGenericLn("With offerLast, It's also the same. %s", offer3);
-        printMagentaGenericLn(dequeQueue);
+        MAGENTA.printGenericLn("With offerLast, It's also the same. %s", offer3);
+        MAGENTA.printGenericLn(dequeQueue);
         printGreenGenericLn("Deque is a collection");
         printGreenGenericLn("It's a circular collection and there are lots of implementations.");
         printGreenGenericLn("ArrayDeque -> Not Thread-Safe and automatically expands");
@@ -513,7 +509,7 @@ public class Mastery3dot2Runner {
             // Unfortunately this is not possible!
             // variables created in a try clause are always immplicitly final
             // fis = Mastery3dot2Runner.class.getResourceAsStream("./bacalhau.assado.txt")
-            printMagentaGenericLn(new String(fis.readAllBytes()));
+            MAGENTA.printGenericLn(new String(fis.readAllBytes()));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -635,9 +631,9 @@ public class Mastery3dot2Runner {
         printGreenGenericLn("we cannot find the most common material!");
         printGreenGenericLn("Let's see how we register and then get the data.");
         var mercadoDeOlhao = new Market(5f, 26f, 11.5f, "bricks");
-        printMagentaGenericLn("We register our data in %s", mercadoDeOlhao);
-        printMagentaGenericLn("We register our data in %s", ((Building) mercadoDeOlhao).toString());
-        printMagentaGenericLn("We register our data in %s", ((Construction) mercadoDeOlhao).toString());
+        MAGENTA.printGenericLn("We register our data in %s", mercadoDeOlhao);
+        MAGENTA.printGenericLn("We register our data in %s", ((Building) mercadoDeOlhao).toString());
+        MAGENTA.printGenericLn("We register our data in %s", ((Construction) mercadoDeOlhao).toString());
         BLUE.printGenericLn("Sending data to file system...");
         var fileName = "/tmp/mastery3.3.obj";
         try (FileOutputStream outputStream = new FileOutputStream(fileName)) {
@@ -651,7 +647,7 @@ public class Mastery3dot2Runner {
         try (FileInputStream fileInputStream = new FileInputStream(fileName)) {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             var newMarket = (Market) objectInputStream.readObject();
-            printMagentaGenericLn("We read our data back from the file system and it is %s", newMarket);
+            MAGENTA.printGenericLn("We read our data back from the file system and it is %s", newMarket);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

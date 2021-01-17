@@ -81,25 +81,8 @@ public class Consolerizer {
         return this;
     }
 
-    public static void printMagentaGenericLn(String text, Object... args) {
-        MAGENTA.printGenericLn(text, args);
-    }
-
-    public static void printMagentaGenericLn(Object text) {
-        MAGENTA.printGenericLn(text);
-    }
-
-    public static void printMagentaGeneric(Object text) {
-        MAGENTA.printGeneric(text);
-    }
-
-    public static void printMagentaGeneric(String text, Object... args) {
-        MAGENTA.printGeneric(text, args);
-    }
-
     public static void printRandomColorGenericLn(String text, Object... args) {
         printRandomColorGeneric(text.concat("\n"), args);
-
     }
 
     public static void printRandomColorGenericLn(Object text) {

@@ -8,17 +8,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum4 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 4 - The contents of a BufferedReader");
 
-        printMagentaGenericLn("A buffered reader provides buffered functionality to a reader");
-        printMagentaGenericLn(
-            "This is actually the reason why a BufferedReader can be initialized with any reader, including itself");
+        MAGENTA.printGenericLn("A buffered reader provides buffered functionality to a reader");
+        MAGENTA.printGenericLn("This is actually the reason why a BufferedReader can be initialized with any reader, including itself");
 
         var bufferedReader1 = new BufferedReader(
             new InputStreamReader(new ByteArrayInputStream("This is a good String".getBytes())));

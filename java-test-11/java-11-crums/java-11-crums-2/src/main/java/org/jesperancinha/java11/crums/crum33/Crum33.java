@@ -5,9 +5,8 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -15,14 +14,14 @@ public class Crum33 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 33 - Enumerates and how they work");
 
-        printMagentaGenericLn("We can list all enumerates if we just call values");
-        printMagentaGenericLn("The printed value is exactly the same key we define in the code");
+        MAGENTA.printGenericLn("We can list all enumerates if we just call values");
+        MAGENTA.printGenericLn("The printed value is exactly the same key we define in the code");
         Arrays.stream(CashContainer.values())
             .forEach(Consolerizer::printOrangeGenericLn);
 
-        printMagentaGenericLn("We can also retrieve the value per key String:");
+        MAGENTA.printGenericLn("We can also retrieve the value per key String:");
         printOrangeGenericLn("%s has index %s", "KITTENACCOUNT", CashContainer.valueOf("KITTENACCOUNT"));
-        printMagentaGenericLn("It is case sensitive!");
+        MAGENTA.printGenericLn("It is case sensitive!");
         try {
             printOrangeGenericLn("%s has index %s", "KITTENAccount", CashContainer.valueOf("KITTENAccount"));
         } catch (IllegalArgumentException e) {
@@ -30,7 +29,7 @@ public class Crum33 {
                 "This is expected! Note that an invalid value results in a RuntimeException of type IllegalArgumentException -> %s",
                 e);
         }
-        printMagentaGenericLn("And if we try to clone it:");
+        MAGENTA.printGenericLn("And if we try to clone it:");
         try {
             CashContainer.LIONACCOUNT.tryToClone();
         } catch (CloneNotSupportedException e) {

@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum10;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum10 {
     public static void main(String[] args) {
@@ -16,15 +16,15 @@ public class Crum10 {
         final int[] d = new int[] { 1, 4, 5, 6, 8, 10 };
         final int[] e = new int[] { 1, 4, 5, 8, 8, 10 };
 
-        printMagentaGenericLn("The result of comparing a with b should be 1 => %d", Arrays.compare(a, b));
-        printMagentaGenericLn("The result of comparing a with c should be 3 => %d", Arrays.compare(a, c));
-        printMagentaGenericLn("The result of comparing a with d should be -2 => %d", Arrays.compare(a, d));
-        printMagentaGenericLn("The result of comparing a with e should be -1 => %d", Arrays.compare(a, e));
+        MAGENTA.printGenericLn("The result of comparing a with b should be 1 => %d", Arrays.compare(a, b));
+        MAGENTA.printGenericLn("The result of comparing a with c should be 3 => %d", Arrays.compare(a, c));
+        MAGENTA.printGenericLn("The result of comparing a with d should be -2 => %d", Arrays.compare(a, d));
+        MAGENTA.printGenericLn("The result of comparing a with e should be -1 => %d", Arrays.compare(a, e));
 
-        printMagentaGenericLn("The result of mismatching a with b should be 1 => %d", Arrays.mismatch(a, b));
-        printMagentaGenericLn("The result of mismatching a with c should be 1 => %d", Arrays.mismatch(a, c));
-        printMagentaGenericLn("The result of mismatching a with d should be 4 => %d", Arrays.mismatch(a, d));
-        printMagentaGenericLn("The result of mismatching a with e should be 3 => %d", Arrays.mismatch(a, e));
+        MAGENTA.printGenericLn("The result of mismatching a with b should be 1 => %d", Arrays.mismatch(a, b));
+        MAGENTA.printGenericLn("The result of mismatching a with c should be 1 => %d", Arrays.mismatch(a, c));
+        MAGENTA.printGenericLn("The result of mismatching a with d should be 4 => %d", Arrays.mismatch(a, d));
+        MAGENTA.printGenericLn("The result of mismatching a with e should be 3 => %d", Arrays.mismatch(a, e));
 
         printGreenGenericLn("Rules to make comparison aren't too simple");
         printGreenGenericLn(

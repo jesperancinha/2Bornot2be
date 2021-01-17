@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum20;
 import java.nio.BufferOverflowException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -12,22 +12,16 @@ public class Crum20 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 20 - Accessibility and Extensibility - Defending against DOS");
 
-        printMagentaGenericLn(
-            "Let' make a method that doesn't follow Guideline 4-1 / EXTEND-1: Limit the accessibility of classes, interfaces, methods, and fields");
+        MAGENTA.printGenericLn("Let' make a method that doesn't follow Guideline 4-1 / EXTEND-1: Limit the accessibility of classes, interfaces, methods, and fields");
         printRedGenericLn(getAStrawberry());
-        printMagentaGenericLn(
-            "It is public, so anyone from the outside can access it. It's simple. We make it private:");
+        MAGENTA.printGenericLn("It is public, so anyone from the outside can access it. It's simple. We make it private:");
         printRedGenericLn(getAStrawberryPrivate());
-        printMagentaGenericLn(
-            "Now let's just make multiple copies of it and we'll specify a size of a buffer we want to copy it to:");
+        MAGENTA.printGenericLn("Now let's just make multiple copies of it and we'll specify a size of a buffer we want to copy it to:");
         printRedGenericLn(makeStrawberryCopy(getAStrawberryPrivate(), 1000));
-        printMagentaGenericLn(
-            "Sounds, good, but we are creating a char array without checking the size of the destination array.");
-        printMagentaGenericLn(
-            "This will still violate Java Security guideline Guideline 1-3 / DOS-3: Resource limit checks should not suffer from integer overflow");
+        MAGENTA.printGenericLn("Sounds, good, but we are creating a char array without checking the size of the destination array.");
+        MAGENTA.printGenericLn("This will still violate Java Security guideline Guideline 1-3 / DOS-3: Resource limit checks should not suffer from integer overflow");
 
-        printMagentaGenericLn(
-            "In this case we can create a new method which checks that there is no overflow of the integer parameter");
+        MAGENTA.printGenericLn("In this case we can create a new method which checks that there is no overflow of the integer parameter");
 
         try {
             printRainbowTitleLn(makeStrawberryCopySafe(getAStrawberryPrivate(), Integer.MAX_VALUE));

@@ -1,36 +1,35 @@
 package org.jesperancinha.java11.crums.crum23;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum23 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 23 - Flash conversion exercises ⚡️");
 
-        printMagentaGenericLn("The value of 'a' is:");
-        printMagentaGenericLn((int) 'a');
+        MAGENTA.printGenericLn("The value of 'a' is:");
+        MAGENTA.printGenericLn((int) 'a');
         try {
-            printMagentaGenericLn("The value of `a` can also be %d", 'a');
+            MAGENTA.printGenericLn("The value of `a` can also be %d", 'a');
         } catch (IllegalArgumentException e) {
             printRedGenericLn("This is expected. Formatting doesn't automatically convert from char to int. -> %s", e);
         }
-        printMagentaGenericLn("And also %c", 'a');
+        MAGENTA.printGenericLn("And also %c", 'a');
 
         byte ab = 97;
         char ac = (char) ab;
 
-        printMagentaGenericLn("A can be represent in it's byte form, '%d', or in its char form, '%c'", ab, ac);
-        printMagentaGenericLn("The value of an a cam also be a %c", 97);
-        printMagentaGenericLn("This is possible. An integer can be directly converted to a char via the formatter.");
+        MAGENTA.printGenericLn("A can be represent in it's byte form, '%d', or in its char form, '%c'", ab, ac);
+        MAGENTA.printGenericLn("The value of an a cam also be a %c", 97);
+        MAGENTA.printGenericLn("This is possible. An integer can be directly converted to a char via the formatter.");
 
         ab = (byte) ac;
 
         printBrightMagentaGenericLn("Interconversions between char and byte need casting always -> %d", ab);
-        printMagentaGeneric("Remember that:");
+        MAGENTA.printGeneric("Remember that:");
         printBrightMagentaGenericLn("char is a two byte 2^16 representation of a character. From %d to %d",
             (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
         printBrightMagentaGenericLn("byte is a one byte 2^8 representation of a number. From %d to %d", Byte.MIN_VALUE,
@@ -42,8 +41,8 @@ public class Crum23 {
         ac = (char) as;
 
         printBrightMagentaGenericLn("Interconversions between char and short need casting always -> %d", as);
-        printMagentaGenericLn("The new char can result from a conversion from short -> %c", ac);
-        printMagentaGeneric("Remember that:");
+        MAGENTA.printGenericLn("The new char can result from a conversion from short -> %c", ac);
+        MAGENTA.printGeneric("Remember that:");
         printBrightMagentaGenericLn("char is a two byte 2^16 representation of a character. From %d to %d",
             (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
         printBrightMagentaGenericLn("short is a two byte 2^16 representation of a number. From %d to %d",
@@ -55,8 +54,8 @@ public class Crum23 {
 
         printBrightMagentaGenericLn(
             "Interconversions between char and int need casting from int to charm but not from char to int -> %d", ai);
-        printMagentaGenericLn("The new char can result from a conversion from int -> %c", ac);
-        printMagentaGeneric("Remember that:");
+        MAGENTA.printGenericLn("The new char can result from a conversion from int -> %c", ac);
+        MAGENTA.printGeneric("Remember that:");
         printBrightMagentaGenericLn("char is a two byte 2^16 representation of a character. From %d to %d",
             (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
         printBrightMagentaGenericLn("int is a four byte 2^32 representation of a number. From %d to %d",

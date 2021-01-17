@@ -1,14 +1,14 @@
 package org.jesperancinha.java11.crums.crum2;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum2 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 2 - Max of Max");
-        printMagentaGenericLn("Let's get the Maxiums of the different integral and non-integral types");
+        MAGENTA.printGenericLn("Let's get the Maxiums of the different integral and non-integral types");
         printBrightMagentaGenericLn("Maximum of byte is -> %s", Byte.MAX_VALUE);
         printBrightMagentaGenericLn("Maximum of short is -> %s", Short.MAX_VALUE);
         printBrightMagentaGenericLn("Maximum of char is (note that char cannot be printed as a number with %%s) -> %s",

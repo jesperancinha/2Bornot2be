@@ -1,10 +1,10 @@
 package org.jesperancinha.java11.crums.crum13;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowStack;
 
 public class Crum13 {
@@ -18,7 +18,7 @@ public class Crum13 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 13 - Getting static values from a null reference");
 
-        printMagentaGenericLn("Pretty bewildering this example if you don't know it, but it is possible! 😱");
+        MAGENTA.printGenericLn("Pretty bewildering this example if you don't know it, but it is possible! 😱");
 
         final Crum13 instance = getInstance();
         printBrightCyanGenericLn("Our crum instance is %s", instance);

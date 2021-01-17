@@ -5,8 +5,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -14,7 +14,7 @@ public class Crum6 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 6 - Setting up Locales and translation bundles");
 
-        printMagentaGenericLn("In this case, we are missing the language");
+        MAGENTA.printGenericLn("In this case, we are missing the language");
 
         Locale.setDefault(new Locale("", "PT"));
 
@@ -43,17 +43,14 @@ public class Crum6 {
 
         var locale2 = new Locale.Builder().setRegion("ES")
             .build();
-        printMagentaGenericLn(
-            "We can also read a bundle file, if we only have the country code of it -> %s. This is only possible with two underscores though",
-            locale2);
+        MAGENTA.printGenericLn("We can also read a bundle file, if we only have the country code of it -> %s. This is only possible with two underscores though", locale2);
         final ResourceBundle resourceBundleEs = ResourceBundle.getBundle("messages", locale2);
         printOrangeGenericLn(resourceBundleEs.getString("goodnight"));
 
         var locale3 = new Locale.Builder().setLanguage("pt")
             .setRegion("PT")
             .build();
-        printMagentaGenericLn("We can also read a bundle file, if we have the language and the country code -> %s",
-            locale3);
+        MAGENTA.printGenericLn("We can also read a bundle file, if we have the language and the country code -> %s", locale3);
         final ResourceBundle resourceBundlePtPt = ResourceBundle.getBundle("messages", locale3);
         printOrangeGenericLn(resourceBundlePtPt.getString("goodmorning"));
 

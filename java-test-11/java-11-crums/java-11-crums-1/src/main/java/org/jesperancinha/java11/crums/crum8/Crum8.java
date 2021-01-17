@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum8 {
@@ -16,8 +16,8 @@ public class Crum8 {
             "instanceof", "return", "transient", "catch", "extends", "int", "short", "try", "char", "final",
             "interface", "static", "void", "class", "finally", "long", "strictfp", "volatile", "const", "float",
             "native", "super", "while");
-        printMagentaGenericLn("You can find all Java keywords on the oracle website:");
-        printMagentaGenericLn("https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html");
+        MAGENTA.printGenericLn("You can find all Java keywords on the oracle website:");
+        MAGENTA.printGenericLn("https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html");
         int i = 0;
         int a = 0;
         OHNO:
@@ -36,8 +36,8 @@ public class Crum8 {
         printYellowGenericLn("A should be 200 ->  %s", a);
         LINE:
         if (i < 2) {
-            printMagentaGenericLn("These are all the keywords:");
-            printMagentaGenericLn(keywords);
+            MAGENTA.printGenericLn("These are all the keywords:");
+            MAGENTA.printGenericLn(keywords);
             i++;
             break LINE;
         }

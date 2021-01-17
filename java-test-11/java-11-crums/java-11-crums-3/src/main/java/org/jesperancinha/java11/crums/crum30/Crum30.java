@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum30;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum30 {
 
@@ -29,12 +29,12 @@ public class Crum30 {
         BLUE.printGenericTitleLn("Crum 30 - RUNTIME annotations");
 
         Arrays.stream(Table.class.getAnnotations())
-            .forEach(annotation -> printMagentaGenericLn(annotation));
+            .forEach(annotation -> MAGENTA.printGenericLn(annotation));
 
         try {
             Arrays.stream(BigTable.class.getMethod("test", String[].class)
                 .getAnnotations())
-                .forEach(annotation -> printMagentaGenericLn(annotation));
+                .forEach(annotation -> MAGENTA.printGenericLn(annotation));
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }

@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum25 {
     public static void main(String[] args) throws InterruptedException {
@@ -25,19 +25,19 @@ public class Crum25 {
         a = null;
         long after = getMemoryAllocation(skipTime);
         long objectSize = before - after;
-        printMagentaGenericLn("This is the estimated byte object size -> %d bytes", objectSize);
+        MAGENTA.printGenericLn("This is the estimated byte object size -> %d bytes", objectSize);
         a = IntStream.range(0, Integer.MAX_VALUE / 1000)
             .boxed()
             .map(Object::toString)
             .collect(Collectors.joining());
         before = getMemoryAllocation(skipTime);
-        printMagentaGenericLn("This is the estimated byte object size doing the same test -> %d bytes", objectSize);
+        MAGENTA.printGenericLn("This is the estimated byte object size doing the same test -> %d bytes", objectSize);
         after = getMemoryAllocation(skipTime);
-        printMagentaGenericLn("This difference if we don't point to null -> %d bytes", before - after);
+        MAGENTA.printGenericLn("This difference if we don't point to null -> %d bytes", before - after);
         a = null;
         after = getMemoryAllocation(skipTime);
         objectSize = before - after;
-        printMagentaGenericLn("This is the estimated byte object size for the second time -> %d bytes", objectSize);
+        MAGENTA.printGenericLn("This is the estimated byte object size for the second time -> %d bytes", objectSize);
 
         printGreenGenericLn(
             "What we need to bear in mind is that, although we are using the same reference, if we set it to null, the object instance loses its references");

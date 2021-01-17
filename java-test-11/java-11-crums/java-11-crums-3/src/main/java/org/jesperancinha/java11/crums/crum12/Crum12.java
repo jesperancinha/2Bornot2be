@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum12;
 import java.awt.*;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum12 {
 
@@ -31,14 +31,13 @@ public class Crum12 {
 
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 12 - Equally applicable fields");
-        printMagentaGenericLn(
-            "If you run with this following code, you'll get the following error. This happens upon compilation but not the one from your IDE. You need to complete a full compilation from the command line or just do a normal run to generate the following error.");
-        printMagentaGenericLn("Before running you need to switch the commmented lines");
+        MAGENTA.printGenericLn("If you run with this following code, you'll get the following error. This happens upon compilation but not the one from your IDE. You need to complete a full compilation from the command line or just do a normal run to generate the following error.");
+        MAGENTA.printGenericLn("Before running you need to switch the commmented lines");
         BLUE.printGenericLn("             Crum12.java:21:20\n" + "             java: reference to color is ambiguous\n"
             + "             both variable color in org.jesperancinha.java11.crums.crum12.Crum12.RoundBerry and variable color\n"
             + "             in org.jesperancinha.java11.crums.crum12.Crum12.Berry match\n"
             + "             return color;");
-        printMagentaGenericLn(new BlueBerry().getColor());
+        MAGENTA.printGenericLn(new BlueBerry().getColor());
 
         printGreenGenericLn(
             "The point here is that both the interface and the class are implementing the same static member");

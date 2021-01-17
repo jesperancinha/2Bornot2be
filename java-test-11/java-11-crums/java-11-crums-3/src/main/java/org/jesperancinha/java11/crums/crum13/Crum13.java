@@ -8,8 +8,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -18,8 +18,7 @@ public class Crum13 {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         BLUE.printGenericTitleLn("Crum 13 - Serialization of objects into files. The non serialized");
 
-        printMagentaGenericLn(
-            "We create a table model 5A, which is 5 meters tall and 25 square meters area. Tall table eh? 😊");
+        MAGENTA.printGenericLn("We create a table model 5A, which is 5 meters tall and 25 square meters area. Tall table eh? 😊");
 
         var table = new Table5A();
 

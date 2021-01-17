@@ -40,9 +40,9 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
@@ -89,12 +89,12 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("You've registered Joan Baez to perform but in the wrong register!");
         printGreenGenericLn("What will happen?");
         var depprecatedRegistration = new DeprecatedArtist("Joan Baez");
-        printMagentaGenericLn("Oh no! You've registered Joan Baez in the wrong book: %s", depprecatedRegistration);
+        MAGENTA.printGenericLn("Oh no! You've registered Joan Baez in the wrong book: %s", depprecatedRegistration);
         var artist = new Artist("Joan Baez",
                 LocalDateTime.of(1968, 8, 16, 3, 0),
                 LocalDateTime.of(1968, 8, 16, 3, 45)
         );
-        printMagentaGenericLn("You sneak into the back and fix your mistake: %s", artist);
+        MAGENTA.printGenericLn("You sneak into the back and fix your mistake: %s", artist);
         BLUE.printGenericLn("We don't see the difference running the code");
         BLUE.printGenericLn("This is because @Deprecated activates during compile time");
         BLUE.printGenericLn("You should be getting this from your compiler: %s", "'DeprecatedArtist(java.lang.String)' is deprecated \n" +
@@ -117,8 +117,8 @@ public class Mastery4Dot1Runner {
                 "Country Joe McDonald", "Santana", "John Sebastian", "Keef Hartley Band",
                 "The Incredible String Band", "Canned Heat", "Mountain", "Grateful Dead",
                 "Creedence Clearwater Revival"));
-        printMagentaGenericLn("So now we've hidden our list and any possibility of changing it!");
-        printMagentaGenericLn("We can still select random artist 😉 %s", radio.getRandomArtist());
+        MAGENTA.printGenericLn("So now we've hidden our list and any possibility of changing it!");
+        MAGENTA.printGenericLn("We can still select random artist 😉 %s", radio.getRandomArtist());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Encapsulation is a simple concept");
         printGreenGenericLn("2. Encapsulation allows to hice unwanted members and methods from public access");
@@ -139,10 +139,10 @@ public class Mastery4Dot1Runner {
                 LocalDateTime.of(1968, 8, 16, 3, 0),
                 LocalDateTime.of(1968, 8, 16, 3, 45)
         );
-        printMagentaGenericLn("In your ticket it says: %s", artist);
-        printMagentaGenericLn("And the other date is start: %s", ((Venue) artist).start);
-        printMagentaGenericLn("And the other date is end: %s", ((Venue) artist).end);
-        printMagentaGenericLn("Right! This is actually the time Woodstock '69 in %s starts and ends!", artist.location);
+        MAGENTA.printGenericLn("In your ticket it says: %s", artist);
+        MAGENTA.printGenericLn("And the other date is start: %s", ((Venue) artist).start);
+        MAGENTA.printGenericLn("And the other date is end: %s", ((Venue) artist).end);
+        MAGENTA.printGenericLn("Right! This is actually the time Woodstock '69 in %s starts and ends!", artist.location);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Members in interfaces are implicitly static");
         printGreenGenericLn("2. Static members can be shadowed by instance members");
@@ -158,21 +158,21 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("We'll look at the listings to see what's happening for today and tomorrow.");
         BLUE.printGenericLn("Switch case for day 15 and day 16");
         var testDay = 15;
-        printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
+        MAGENTA.printGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
         testDay = 16;
-        printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
+        MAGENTA.printGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
         BLUE.printGenericLn("Switch case for Joan Baez");
         var artist = "Joan Baez";
-        printMagentaGenericLn("%s is playing these songs:\n%s", artist, getSongsByArtist(artist));
+        MAGENTA.printGenericLn("%s is playing these songs:\n%s", artist, getSongsByArtist(artist));
         BLUE.printGenericLn("Switch case for who played 5 songs only");
         var songs = (byte) 5;
-        printMagentaGenericLn("These artists are playing %d songs: %s", songs, getArtistsPerSungSongs(songs));
+        MAGENTA.printGenericLn("These artists are playing %d songs: %s", songs, getArtistsPerSungSongs(songs));
         BLUE.printGenericLn("Switch case for artists who played for 45 minutes = 2700 seconds");
         var duration = (short) 2700;
-        printMagentaGenericLn("These artists played for %d seconds:\n%s", duration, getArtitstByDuration(duration));
+        MAGENTA.printGenericLn("These artists played for %d seconds:\n%s", duration, getArtitstByDuration(duration));
         var character = 'C';
         BLUE.printGenericLn("Switch case for artists who start with a C.");
-        printMagentaGenericLn("These artists played for %s seconds:\n%s", character, getArtitstByFirstCharacter(character));
+        MAGENTA.printGenericLn("These artists played for %s seconds:\n%s", character, getArtitstByFirstCharacter(character));
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. for switch case, the allowed primitive types are int, short, char and byte");
         printGreenGenericLn("2. for switch case, the allowed boxing types are Integer, Short, Character and Byte");
@@ -252,10 +252,10 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("Based on this, we will now see how can two classes with exactly the same code, can make properties accessible and non-accessible.");
         var supremeCourtSession = new SupremeCourt("from:https://en.wikipedia.org/wiki/1960s_in_LGBT_rights\nThe United States Supreme Court denies certiorari to Frank Kameny's petition to review the legality of his firing by the United States Army's Map Service in 1957, bringing his four-year legal battle to a close");
         BLUE.printGenericLn("Court Session is opened:");
-        printMagentaGenericLn(supremeCourtSession.getCourtCaseDescription());
+        MAGENTA.printGenericLn(supremeCourtSession.getCourtCaseDescription());
         var supremeCourtSessionArchived = new SupremeCourtArchive(supremeCourtSession.getCourtCaseDescription());
         BLUE.printGenericLn("Court Session is closed:");
-        printMagentaGenericLn(supremeCourtSessionArchived.getCourtCaseDescription());
+        MAGENTA.printGenericLn(supremeCourtSessionArchived.getCourtCaseDescription());
         BLUE.printGenericLn("If we check via reflection:");
         try {
             Field courtCaseField = supremeCourtSessionArchived.getClass().getDeclaredField("courtCase");
@@ -264,7 +264,7 @@ public class Mastery4Dot1Runner {
             Field courtCaseStringField = courtCase.getClass().getDeclaredField("courtCase");
             courtCaseStringField.setAccessible(true);
             String courtCaseString = (String) courtCaseStringField.get(courtCase);
-            printMagentaGenericLn(courtCaseString);
+            MAGENTA.printGenericLn(courtCaseString);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             printRedThrowableAndExit(e);
         }
@@ -294,7 +294,7 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("We will validate evey file and check for pattern /tmp/pentagon to avoid path traversal.");
         final String[] fileNames = {"/tmp/pentagon_paper1.txt", "/tmp/pentagon_paper2.txt", "/tmp/pentagon_paper3.txt"};
         processFilesToMainServer(fileNames);
-        printMagentaGenericLn("Check your /tmp/tmp folder for the results!");
+        MAGENTA.printGenericLn("Check your /tmp/tmp folder for the results!");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Guideline 1-1 / DOS-1: Beware of activities that may use disproportionate resources");
         printGreenGenericLn("2. Guideline 1-2 / DOS-2: Release resources in all cases");
@@ -349,12 +349,12 @@ public class Mastery4Dot1Runner {
             p.setProperty("user", "sa");
             p.setProperty("password", "");
             Connection conn = DriverManager.getConnection("jdbc:h2:mem:", p);
-            printMagentaGenericLn("Connection: %s / %s", conn.getMetaData().getDatabaseProductName(), conn.getCatalog());
-            printMagentaGenericLn("Current auto-commit setting: %s", conn.getAutoCommit());
-            printMagentaGenericLn("We can configure this because our dependency com.h2database:h2:1.4.200 contains:");
-            printMagentaGenericLn("1. file java.sql.Driver in /META-INF/services/java.sql.Driver");
-            printMagentaGenericLn("2. this file contains: org.h2.Driver");
-            printMagentaGenericLn("This way, the runtime knows which driver to use.");
+            MAGENTA.printGenericLn("Connection: %s / %s", conn.getMetaData().getDatabaseProductName(), conn.getCatalog());
+            MAGENTA.printGenericLn("Current auto-commit setting: %s", conn.getAutoCommit());
+            MAGENTA.printGenericLn("We can configure this because our dependency com.h2database:h2:1.4.200 contains:");
+            MAGENTA.printGenericLn("1. file java.sql.Driver in /META-INF/services/java.sql.Driver");
+            MAGENTA.printGenericLn("2. this file contains: org.h2.Driver");
+            MAGENTA.printGenericLn("This way, the runtime knows which driver to use.");
             PreparedStatement statement = conn.prepareStatement(
                     "CREATE TABLE Operations(ID IDENTITY AUTO_INCREMENT NOT NULL, DESCRIPTION VARCHAR(1000), SOURCE VARCHAR(50), YEAR INT);");
             statement.executeUpdate();
@@ -366,10 +366,10 @@ public class Mastery4Dot1Runner {
             statement = conn.prepareStatement("SELECT * FROM OPERATIONS;");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                printMagentaGenericLn("The result is %s", resultSet.getString(1));
-                printMagentaGenericLn("The result is %s", resultSet.getString(2));
-                printMagentaGenericLn("The result is %s", resultSet.getString(3));
-                printMagentaGenericLn("The result is %s", resultSet.getString(4));
+                MAGENTA.printGenericLn("The result is %s", resultSet.getString(1));
+                MAGENTA.printGenericLn("The result is %s", resultSet.getString(2));
+                MAGENTA.printGenericLn("The result is %s", resultSet.getString(3));
+                MAGENTA.printGenericLn("The result is %s", resultSet.getString(4));
             }
             conn.close();
         } catch (Exception e) {
@@ -388,17 +388,17 @@ public class Mastery4Dot1Runner {
         var sum1FromIntStream = Arrays.stream(votes).sum();
         var sum1FromObjStream = Arrays.stream(votes).mapToObj(i -> i).reduce(0, (a, b) -> a + b);
         var sum1FromBoxedStrem = Arrays.stream(votes).boxed().reduce(0, Integer::sum);
-        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via IntStream)", "Richard Nixon", sum1FromIntStream);
-        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via ObjStream)", "Richard Nixon", sum1FromObjStream);
-        printMagentaGenericLn("The sum of electoral votes for %s in 1968 was %d (via BoxedStream)", "Richard Nixon", sum1FromBoxedStrem);
+        MAGENTA.printGenericLn("The sum of electoral votes for %s in 1968 was %d (via IntStream)", "Richard Nixon", sum1FromIntStream);
+        MAGENTA.printGenericLn("The sum of electoral votes for %s in 1968 was %d (via ObjStream)", "Richard Nixon", sum1FromObjStream);
+        MAGENTA.printGenericLn("The sum of electoral votes for %s in 1968 was %d (via BoxedStream)", "Richard Nixon", sum1FromBoxedStrem);
         var avg1FromIntStream = Arrays.stream(votes).average().getAsDouble();
         var avg1FromBoxedStreamDouble = Arrays.stream(votes).boxed().collect(Collectors.averagingDouble(i -> i));
         var avg1FromBoxedStreamInt = Arrays.stream(votes).boxed().collect(Collectors.averagingInt(i -> i));
         var avg1FromBoxedStreamLong = Arrays.stream(votes).boxed().collect(Collectors.averagingLong(i -> i));
-        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via IntStream)", avg1FromIntStream);
-        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingDouble)", avg1FromBoxedStreamDouble);
-        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingInt)", avg1FromBoxedStreamInt);
-        printMagentaGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingLong)", avg1FromBoxedStreamLong);
+        MAGENTA.printGenericLn("So the electoral vote average for Richard Nixon was %f (via IntStream)", avg1FromIntStream);
+        MAGENTA.printGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingDouble)", avg1FromBoxedStreamDouble);
+        MAGENTA.printGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingInt)", avg1FromBoxedStreamInt);
+        MAGENTA.printGenericLn("So the electoral vote average for Richard Nixon was %f (via averagingLong)", avg1FromBoxedStreamLong);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. All average calculation using streams result in a double result");
         printGreenGenericLn("2. There are at least two ways of doing this. One via collectors and the other via the average method of a Number Stream");
@@ -411,11 +411,11 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("This was the time to make a move, and make a move LBJ did!");
         printGreenGenericLn("Marylin Monroe, didn't sing Happy B'Day to LBJ though.");
         var lbjGovernment = new LBJGovernment();
-        printMagentaGenericLn("Work to do:");
-        printMagentaGenericLn("Civil Rights Bill passed: %s", lbjGovernment.civilRightsBill);
-        printMagentaGenericLn("Happy birthday passed: %s", lbjGovernment.bDay);
-        printMagentaGenericLn("But wait! This is not an instance member!: %s", LBJGovernment.bDay);
-        printMagentaGenericLn("So no `Happy Birthday Mr. President`for LBJ");
+        MAGENTA.printGenericLn("Work to do:");
+        MAGENTA.printGenericLn("Civil Rights Bill passed: %s", lbjGovernment.civilRightsBill);
+        MAGENTA.printGenericLn("Happy birthday passed: %s", lbjGovernment.bDay);
+        MAGENTA.printGenericLn("But wait! This is not an instance member!: %s", LBJGovernment.bDay);
+        MAGENTA.printGenericLn("So no `Happy Birthday Mr. President`for LBJ");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Since we cannot have a subclass of multiple classes, only interfaces, then there is no multiple inheritance of state in Java");
     }
@@ -434,9 +434,9 @@ public class Mastery4Dot1Runner {
             printRedGenericLn("However we also generically specify that if input parameters are numbers, then it should return a `Double` number.");
             printRedGenericLn("This is why it fail this way. Let's make it good now.");
         }
-        printMagentaGenericLn(theGreatSocietyString.printSocietyAdapterMethod("The civil liberties act was signed off by LBJ in ", 1963));
+        MAGENTA.printGenericLn(theGreatSocietyString.printSocietyAdapterMethod("The civil liberties act was signed off by LBJ in ", 1963));
         var theGreatSocietyDouble = new TheGreatSocietyAdapter<Double>();
-        printMagentaGenericLn("The Great Society term was coined in %d which led to the creation of the Civil Rights act of %f", 1964, theGreatSocietyDouble.printSocietyAdapterMethod(1963, 1));
+        MAGENTA.printGenericLn("The Great Society term was coined in %d which led to the creation of the Civil Rights act of %f", 1964, theGreatSocietyDouble.printSocietyAdapterMethod(1963, 1));
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. We can specify a generic type for one specify class before runtime or during runtime with anonymous classes");
         printGreenGenericLn("2. We can also, regardless of the class generic type, specify the input params of each individual method of an instance object during runtime");
@@ -452,7 +452,7 @@ public class Mastery4Dot1Runner {
 
         try {
             try {
-                printMagentaGenericLn("Patrons are having after hours fun!");
+                MAGENTA.printGenericLn("Patrons are having after hours fun!");
                 throw new RaidException();
             } finally {
                 try {
@@ -501,8 +501,8 @@ public class Mastery4Dot1Runner {
         var presidentName = "JFK";
         presidentSearch(presidentName, presidentName, presidentName = mapPresidentName.get("LBJ"));
         final int years = array[mapYearToNumber.get(mapNameToYear.get(mapPresidentName.get("LBJ"))) - 1] = yearsInPower = 3;
-        printMagentaGenericLn("I guess our calculation is correct. They were %d years!", years);
-        printMagentaGenericLn("An now it is corrected also in our data structures: %d years!", yearsInPower);
+        MAGENTA.printGenericLn("I guess our calculation is correct. They were %d years!", years);
+        MAGENTA.printGenericLn("An now it is corrected also in our data structures: %d years!", yearsInPower);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Expression evaluation can be seriously complicated");
         printGreenGenericLn("2. Most counter intuitive rule might be that the left operand is evaluated first.");
@@ -520,13 +520,13 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("Case: Three students are making resets: Katie, Chloe and Susan");
         BLUE.printGenericLn("Teacher: In what year was JFK assigned to the ONI field office at Headquarters");
         final String katieResponse = null;
-        printMagentaGenericLn("Katie: Hmmmm.... " + katieResponse);
+        MAGENTA.printGenericLn("Katie: Hmmmm.... " + katieResponse);
         BLUE.printGenericLn("T: That is not correct. Chloe?");
         final var chloeResponse = "";
-        printMagentaGenericLn("Chloe: I don't know, maybe, %s", chloeResponse);
+        MAGENTA.printGenericLn("Chloe: I don't know, maybe, %s", chloeResponse);
         BLUE.printGenericLn("T: You also don't know? How about you Susan?");
         final Object susanResponse = "January 1942";
-        printMagentaGenericLn("Susan: Of course I do! It was in %s", susanResponse);
+        MAGENTA.printGenericLn("Susan: Of course I do! It was in %s", susanResponse);
 
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. An empty string does not generate output");
@@ -552,19 +552,19 @@ public class Mastery4Dot1Runner {
             question(scanner, "When did JFK graduated?", "1940", new SeniorException());
             question(scanner, "How many copies did `Why England Slept` sold?", "80000", new SuperSeniorException());
         } catch (SuperSeniorException e) {
-            printMagentaGenericLn("You are a Super Senior!");
+            MAGENTA.printGenericLn("You are a Super Senior!");
         } catch (SeniorException e) {
-            printMagentaGenericLn("You are a Senior!");
+            MAGENTA.printGenericLn("You are a Senior!");
         } catch (ExpertException e) {
-            printMagentaGenericLn("You are a Expert!");
+            MAGENTA.printGenericLn("You are a Expert!");
         } catch (MediorException e) {
-            printMagentaGenericLn("You are a Medior!");
+            MAGENTA.printGenericLn("You are a Medior!");
         } catch (JuniorException e) {
-            printMagentaGenericLn("You are a Junior!");
+            MAGENTA.printGenericLn("You are a Junior!");
         } catch (BeginnerException e) {
-            printMagentaGenericLn("You are a Beginner!");
+            MAGENTA.printGenericLn("You are a Beginner!");
         } catch (RookieException e) {
-            printMagentaGenericLn("You are a Rookie!");
+            MAGENTA.printGenericLn("You are a Rookie!");
         } catch (Exception e) {
             printRedThrowableAndExit(e);
         }

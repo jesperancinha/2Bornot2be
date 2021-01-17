@@ -14,9 +14,8 @@ import javax.persistence.PersistenceContextType;
 import javax.persistence.TransactionRequiredException;
 import javax.transaction.TransactionSynchronizationRegistry;
 
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -58,7 +57,7 @@ public class ToothServiceTx {
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public Tooth addTootRequiredRollback(final Tooth tooth) {
         this.a = 1000;
-        printMagentaGenericLn("We just made a=%d", this.a);
+        MAGENTA.printGenericLn("We just made a=%d", this.a);
         throw new RuntimeException();
     }
     @TransactionAttribute(TransactionAttributeType.REQUIRED)

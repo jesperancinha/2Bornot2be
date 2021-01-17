@@ -52,10 +52,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -135,12 +135,12 @@ public class Mastery4Dot2Runner {
                 "Viaje de estudios (reedición)", "Cuando el destino nos alcance",
                 "Impronta"};
         int foundIndex = Arrays.binarySearch(albums, "D");
-        printMagentaGenericLn("Our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
-        printMagentaGenericLn("Our insertion point results in %d. This result makes no sense, purely because our array isn't sorted", foundIndex);
+        MAGENTA.printGenericLn("Our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
+        MAGENTA.printGenericLn("Our insertion point results in %d. This result makes no sense, purely because our array isn't sorted", foundIndex);
         Arrays.sort(albums);
-        printMagentaGenericLn("After sorting, our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
+        MAGENTA.printGenericLn("After sorting, our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
         foundIndex = Arrays.binarySearch(albums, "D");
-        printMagentaGenericLn("Once sorted, we finally have insertion point %d. This is correct", foundIndex);
+        MAGENTA.printGenericLn("Once sorted, we finally have insertion point %d. This is correct", foundIndex);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. In order to make binarySearch for Arrays, we have to sort them first");
         printGreenGenericLn("2. Sorting arrays and therefore being able to perform a faster and more accurate binary search isn't specific to Java");
@@ -163,9 +163,9 @@ public class Mastery4Dot2Runner {
         } catch (IOException e) {
             printRedThrowableAndExit(e);
         }
-        printMagentaGenericLn("We just read the lyrics");
+        MAGENTA.printGenericLn("We just read the lyrics");
         printBrightMagentaGenericLn(source);
-        printMagentaGenericLn("We will now write this to file in UTF(Unicode Transformation Format) %s", "/tmp/mn1.txt");
+        MAGENTA.printGenericLn("We will now write this to file in UTF(Unicode Transformation Format) %s", "/tmp/mn1.txt");
         try (var fos = new FileOutputStream("/tmp/mn1.txt")) {
             final ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeUTF(source);
@@ -204,7 +204,7 @@ public class Mastery4Dot2Runner {
 
     private static void readFile(String resultFilename) {
         try (var fis = new FileInputStream(resultFilename)) {
-            printMagentaGenericLn("We just read this from file %s", resultFilename);
+            MAGENTA.printGenericLn("We just read this from file %s", resultFilename);
             final String s = new String(fis.readAllBytes(), Charset.defaultCharset());
             printBrightMagentaGenericLn(s);
         } catch (FileNotFoundException e) {
@@ -227,22 +227,22 @@ public class Mastery4Dot2Runner {
             put("Cientocero", Arrays.stream(cientoCero).collect(Collectors.toList()));
             put("Supersubmarina", Arrays.stream(supersubmarina).collect(Collectors.toList()));
         }};
-        printMagentaGenericLn("Ciento cero is %s", String.join(",", cientoCero));
-        printMagentaGenericLn("Supersubmarina is %s", String.join(",", supersubmarina));
+        MAGENTA.printGenericLn("Ciento cero is %s", String.join(",", cientoCero));
+        MAGENTA.printGenericLn("Supersubmarina is %s", String.join(",", supersubmarina));
         BLUE.printGenericLn("Let's tail this from %s:", "Cientocero");
-        printMagentaGenericLn("%s", albums.tailMap("Cientocero"));
+        MAGENTA.printGenericLn("%s", albums.tailMap("Cientocero"));
         BLUE.printGenericLn("And now from %s:", "Supersubmarina");
-        printMagentaGenericLn("%s", albums.tailMap("Supersubmarina"));
+        MAGENTA.printGenericLn("%s", albums.tailMap("Supersubmarina"));
         BLUE.printGenericLn("Let's head this from %s:", "Cientocero");
-        printMagentaGenericLn("%s", albums.headMap("Cientocero"));
+        MAGENTA.printGenericLn("%s", albums.headMap("Cientocero"));
         BLUE.printGenericLn("And now from %s:", "Supersubmarina");
-        printMagentaGenericLn("%s", albums.headMap("Supersubmarina"));
+        MAGENTA.printGenericLn("%s", albums.headMap("Supersubmarina"));
         final Map.Entry<String, List<String>> firstLending = albums.pollFirstEntry();
-        printMagentaGenericLn("We just took out the first album: %s", firstLending);
-        printMagentaGenericLn("So the our album collection looks like this: %s", albums);
+        MAGENTA.printGenericLn("We just took out the first album: %s", firstLending);
+        MAGENTA.printGenericLn("So the our album collection looks like this: %s", albums);
         final Map.Entry<String, List<String>> lastLending = albums.pollLastEntry();
-        printMagentaGenericLn("We just took out the last album: %s", lastLending);
-        printMagentaGenericLn("So the our album collection should be empty now: %s", albums);
+        MAGENTA.printGenericLn("We just took out the last album: %s", lastLending);
+        MAGENTA.printGenericLn("So the our album collection should be empty now: %s", albums);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Navigable maps are very simple");
         printGreenGenericLn("2. Important methods are pollFirstEntry, pollLastEntry, tailMap and headMaps");
@@ -267,7 +267,7 @@ public class Mastery4Dot2Runner {
                 "A Cualquier Otra parte",
                 "Te Echamos de Menos (Undo Remix)",
                 "Horas Bajas (Undo Remix)", "El Temblor (Lovo Remix)", "Verte Amanecer"};
-        printMagentaGenericLn("This is our possible list:");
+        MAGENTA.printGenericLn("This is our possible list:");
         printOrangeGenericLn("%s", String.join(",", songs));
         final Compilation compilation = new Compilation();
 
@@ -291,14 +291,14 @@ public class Mastery4Dot2Runner {
                 while (songSet.size() > 0) {
                     final Iterator<String> iterator = compilation.iterator();
                     while (iterator.hasNext()) {
-                        printMagentaGenericLn("Got song %s", iterator.next());
+                        MAGENTA.printGenericLn("Got song %s", iterator.next());
                         Thread.sleep(500);
                     }
                     printBrightMagentaGenericLn("One Iteration done!");
                 }
                 final Iterator<String> iterator = compilation.iterator();
                 while (iterator.hasNext()) {
-                    printMagentaGenericLn("Got song %s", iterator.next());
+                    MAGENTA.printGenericLn("Got song %s", iterator.next());
                     Thread.sleep(500);
                 }
                 printBrightMagentaGenericLn("Last iteration done!");
@@ -313,7 +313,7 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         final Iterator<String> iterator = compilation.iterator();
-        printMagentaGenericLn("No exception has occurred and everything went well.");
+        MAGENTA.printGenericLn("No exception has occurred and everything went well.");
         BLUE.printGenericLn("Can we change the list with this iterator though?");
         try {
             iterator.remove();
@@ -333,7 +333,7 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("We'll create its registry and see the many different ways we can initialize final values.");
         printGreenGenericLn("Have a look in the code. All these fields are mandatory and cannot change because they are final");
         var dorian = new Indie("Dorian");
-        printMagentaGenericLn("This is our band %s", dorian);
+        MAGENTA.printGenericLn("This is our band %s", dorian);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. All final fields have to be initialized");
         printGreenGenericLn("2. There is no difference in this mandatory action between static and instance members");
@@ -420,7 +420,7 @@ public class Mastery4Dot2Runner {
         } catch (NoSuchAlgorithmException e) {
             printRedThrowableAndExit(e);
         }
-        printMagentaGenericLn("This is our new and improved cristal ball:\n%s", superBolaDeCristal);
+        MAGENTA.printGenericLn("This is our new and improved cristal ball:\n%s", superBolaDeCristal);
         BLUE.printGenericLn("Note that we've made this Cristal Ball so safe that it now obeys guidelines 6 and 7!");
         BLUE.printGenericLn("Therefore, for this module, there isn't much to test.");
         BLUE.printGenericLn("Please follow the code for a better understandinf of what's happening and namely have a look at the comments.");
@@ -491,17 +491,17 @@ public class Mastery4Dot2Runner {
         ), "Vetusta Morla");
         var paulinaRubio = new GenericBand(1, List.of("Paulina Rubio"), "Paulina Rubio");
         var rosarioFlores = new GenericBand(1, List.of("Rosario Flores"), "Rosario Flores");
-        printMagentaGenericLn("These are our bands:\n%s\n%s\n%s\n%s\n%s", band, quintetBand, genericBand, paulinaRubio, rosarioFlores);
+        MAGENTA.printGenericLn("These are our bands:\n%s\n%s\n%s\n%s\n%s", band, quintetBand, genericBand, paulinaRubio, rosarioFlores);
         var effectiveBandManager = new EffectiveBandManager();
         var generalBandManager = new GeneralBandManager();
         var quintetBandManager = new QuintetBandManager();
         final Map<Band, Temporal> upcomingDates = effectiveBandManager.getUpcomingDates(band, LocalDateTime.now());
         final Map<GenericBand, LocalDateTime> upcomingDates1 = generalBandManager.getUpcomingDates(genericBand, LocalDateTime.now());
         final Map<QuintetBand, LocalDate> upcomingDates2 = quintetBandManager.getUpcomingDates(quintetBand, LocalDate.now());
-        printMagentaGenericLn("The first maps are now ready:\n%s\n%s\n%s", upcomingDates, upcomingDates1, upcomingDates2);
+        MAGENTA.printGenericLn("The first maps are now ready:\n%s\n%s\n%s", upcomingDates, upcomingDates1, upcomingDates2);
         upcomingDates1.put(paulinaRubio, LocalDateTime.now());
         upcomingDates1.put(rosarioFlores, LocalDateTime.now());
-        printMagentaGenericLn("Adding two more artists to this new concert we get:\n%s", upcomingDates1);
+        MAGENTA.printGenericLn("Adding two more artists to this new concert we get:\n%s", upcomingDates1);
         final Map<GenericBand, LocalDateTime> upcomingDates3 = generalBandManager.getUpcomingDates((Band) genericBand, LocalDateTime.now());
         final Map<QuintetBand, LocalDate> upcomingDates4 = quintetBandManager.getUpcomingDates((Band) quintetBand, LocalDate.now());
         printBrightMagentaGenericLn("Had we used the overriden methods we would have gotten:\n%s\nand\n%s", upcomingDates3, upcomingDates4);
@@ -525,7 +525,7 @@ public class Mastery4Dot2Runner {
         var month = 11;
         var year = 2011;
         if (pepeIsOffOn(year, month, 24) || pepeIsOffOn(year, month, 25)) {
-            printMagentaGenericLn("Pepe won't be coming to work this november!");
+            MAGENTA.printGenericLn("Pepe won't be coming to work this november!");
         }
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Logic operators such as || and && can short circuit in Java");
@@ -540,13 +540,13 @@ public class Mastery4Dot2Runner {
         if (concertVetustaDate.getYear() == year &&
                 concertVetustaDate.getMonthValue() == month &&
                 concertVetustaDate.getDayOfMonth() == day) {
-            printMagentaGenericLn("Pepe is going to see Vetusta Morla on the %s", concertVetustaDate);
+            MAGENTA.printGenericLn("Pepe is going to see Vetusta Morla on the %s", concertVetustaDate);
             return true;
         }
         if (concertVetustaDate.getYear() == year &&
                 concertSidonieDate.getMonthValue() == month &&
                 concertSidonieDate.getDayOfMonth() == day) {
-            printMagentaGenericLn("Pepe is going to see Sidonie on the %s", concertSidonieDate);
+            MAGENTA.printGenericLn("Pepe is going to see Sidonie on the %s", concertSidonieDate);
             return true;
         }
         return false;
@@ -592,7 +592,7 @@ public class Mastery4Dot2Runner {
         } catch (InterruptedException e) {
             printRedThrowableAndExit(e);
         }
-        printMagentaGenericLn("The result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
+        MAGENTA.printGenericLn("The result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
         printGreenGenericLn("We would get the same result if we had used putIfAbsent:");
         final var ticketMap2 = new ConcurrentHashMap<Ticket, String>();
         executorService = Executors.newFixedThreadPool(7);
@@ -609,7 +609,7 @@ public class Mastery4Dot2Runner {
         } catch (InterruptedException e) {
             printRedThrowableAndExit(e);
         }
-        printMagentaGenericLn("The new result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
+        MAGENTA.printGenericLn("The new result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
         printGreenGenericLn("These operations will not fail for non-thread safe maps:");
         final var ticketMap3 = new HashMap<Ticket, String>();
         executorService = Executors.newFixedThreadPool(7);
@@ -626,7 +626,7 @@ public class Mastery4Dot2Runner {
         } catch (InterruptedException e) {
             printRedThrowableAndExit(e);
         }
-        printMagentaGenericLn("The new result is also what we are looking for:\n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
+        MAGENTA.printGenericLn("The new result is also what we are looking for:\n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. In order to add to a hashmap in a concurrent way, we should use an atomic operation.");
         printGreenGenericLn("2. putIfAbsent performs a check if exists and add then if not, it puts an element into the map in an atomic way.");
@@ -744,12 +744,12 @@ public class Mastery4Dot2Runner {
         } catch (NoSuchAlgorithmException e) {
             printRedThrowableAndExit(e);
         }
-        printMagentaGenericLn("This is the Cristal Ball of Episode I\n%s", bolaDeCristal);
-        printMagentaGenericLn("We can get the from the available ones\n%s", CristalBall.getHost(bolaDeCristal));
-        printMagentaGenericLn("We can get it from the available ones\n%s", CristalBall.getCristalBall(bolaDeCristal.getPriv()));
+        MAGENTA.printGenericLn("This is the Cristal Ball of Episode I\n%s", bolaDeCristal);
+        MAGENTA.printGenericLn("We can get the from the available ones\n%s", CristalBall.getHost(bolaDeCristal));
+        MAGENTA.printGenericLn("We can get it from the available ones\n%s", CristalBall.getCristalBall(bolaDeCristal.getPriv()));
         printBrightCyanGenericLn("We can also comment it out:");
         bolaDeCristal.setComment("Me encanta este show! Super guay!!");
-        printMagentaGenericLn("And then we get a comment on our Cristal Ball\n%s", bolaDeCristal);
+        MAGENTA.printGenericLn("And then we get a comment on our Cristal Ball\n%s", bolaDeCristal);
         printBrightCyanGenericLn("And if we check if this is immutable:");
         Date date = bolaDeCristal.getDate();
         Date dateSafeCopy = bolaDeCristal.getDateSafeCopy();
@@ -757,7 +757,7 @@ public class Mastery4Dot2Runner {
         LocalDateTime localDateTime = bolaDeCristal.getLocalDateTime();
         Band band = bolaDeCristal.getBand();
         String host = bolaDeCristal.getHost();
-        printMagentaGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
+        MAGENTA.printGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
         printBrightCyanGenericLn("Let's tamper that and see if we can change it!");
         date.setYear(200);
         dateSafeCopy.setTime(200);
@@ -765,7 +765,7 @@ public class Mastery4Dot2Runner {
         printBrightCyanGenericLn("Note that LocalDate and LocalDateTime are already immutable");
         printBrightCyanGenericLn("We did change the date objects and the capacity.");
         printBrightCyanGenericLn("From the outside we get the impression that we changed our original cristal ball:");
-        printMagentaGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
+        MAGENTA.printGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
         printBrightCyanGenericLn("But from the inside we see that nothing has changed:");
         date = bolaDeCristal.getDate();
         dateSafeCopy = bolaDeCristal.getDateSafeCopy();
@@ -773,10 +773,10 @@ public class Mastery4Dot2Runner {
         localDateTime = bolaDeCristal.getLocalDateTime();
         band = bolaDeCristal.getBand();
         host = bolaDeCristal.getHost();
-        printMagentaGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
+        MAGENTA.printGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
         printBrightCyanGenericLn("If we make a copy of it, we can use our method. Remember that we made a copy method to make a copy easy and follow the secuirty guidelines:");
         try {
-            printMagentaGenericLn("This is our copy:\n%s", bolaDeCristal.copy());
+            MAGENTA.printGenericLn("This is our copy:\n%s", bolaDeCristal.copy());
         } catch (NoSuchProviderException e) {
             printRedThrowableAndExit(e);
         } catch (NoSuchAlgorithmException e) {
@@ -803,24 +803,23 @@ public class Mastery4Dot2Runner {
                 "ES", 123232341342312L, LocalDateTime.of(2019, 4, 27, 0, 0, 0));
         var ticket3 = new Ticket("La casa azul", "Seville, " +
                 "ES", 193874567394857L, LocalDateTime.of(2019, 6, 29, 0, 0, 0));
-        printMagentaGenericLn("Our first ticket is -> %s", ticket1);
-        printMagentaGenericLn("Our second ticket is -> %s", ticket2);
-        printMagentaGenericLn("Our third ticket is -> %s", ticket3);
-        printMagentaGenericLn("We have all the tickets for \"La casa azul\":\n%s", getTicketsStringNumbers("La casa azul"));
-        printMagentaGenericLn("Some of them are just numbers:\n%s", getTicketsLongNumbers("La casa azul"));
+        MAGENTA.printGenericLn("Our first ticket is -> %s", ticket1);
+        MAGENTA.printGenericLn("Our second ticket is -> %s", ticket2);
+        MAGENTA.printGenericLn("Our third ticket is -> %s", ticket3);
+        MAGENTA.printGenericLn("We have all the tickets for \"La casa azul\":\n%s", getTicketsStringNumbers("La casa azul"));
+        MAGENTA.printGenericLn("Some of them are just numbers:\n%s", getTicketsLongNumbers("La casa azul"));
         printBrightCyanGenericLn("We realize that we can only go to the latest one!");
         printBrightCyanGenericLn("Let's unregister te last two tickets");
         var ticket1U = Ticket.unregisterTicket("ES23424ES23432");
         var ticket2U = Ticket.unregisterTicket(123232341342312L);
         assert ticket1.equals(ticket1U);
         assert ticket2.equals(ticket2U);
-        printMagentaGenericLn("We've unregistered tickets\n%s\nand\n%s", ticket1U, ticket2U);
+        MAGENTA.printGenericLn("We've unregistered tickets\n%s\nand\n%s", ticket1U, ticket2U);
         final var allTicketsLaCasaAzul = getTicketsStringNumbers("La casa azul");
-        printMagentaGenericLn("We finally should only have one ticket in our reservation:\n%s", allTicketsLaCasaAzul);
+        MAGENTA.printGenericLn("We finally should only have one ticket in our reservation:\n%s", allTicketsLaCasaAzul);
         final var ticketNumber = allTicketsLaCasaAzul.get(0);
         final var finalTicket = Ticket.getTicket(ticketNumber);
-        printMagentaGenericLn("Hurrah! We are going to %s to watch %s with ticket %s on the %s",
-                finalTicket.getVenue(), finalTicket.getBandName(), finalTicket.getTicketNumber(), finalTicket.getLocalDateTime());
+        MAGENTA.printGenericLn("Hurrah! We are going to %s to watch %s with ticket %s on the %s", finalTicket.getVenue(), finalTicket.getBandName(), finalTicket.getTicketNumber(), finalTicket.getLocalDateTime());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Methods can be overloaded if their parameters are different both in number and in types");
         printGreenGenericLn("2. The compiler cannot tell two methods apart if they differ only in their return type");
@@ -858,23 +857,23 @@ public class Mastery4Dot2Runner {
                 "Guillermo Galván",
                 "Juanma Latorre"
         ), "Vetusta Morla");
-        printMagentaGenericLn("This is band #1 -> %s", band);
-        printMagentaGenericLn("This is band #2 -> %s", quintetBand);
-        printMagentaGenericLn("This is band #3 -> %s", genericBand);
+        MAGENTA.printGenericLn("This is band #1 -> %s", band);
+        MAGENTA.printGenericLn("This is band #2 -> %s", quintetBand);
+        MAGENTA.printGenericLn("This is band #3 -> %s", genericBand);
         printGreenGenericLn("We notice a few things that may sound odd.");
         printGreenGenericLn("1. Capacity is different for the subclasses of Band.");
         printGreenGenericLn("2. Capacity didn't limit the number of allowed members.");
-        printMagentaGenericLn("Band #1 has %d members", band.capacity);
-        printMagentaGenericLn("Band #2 has %d members", ((Band) quintetBand).capacity);
-        printMagentaGenericLn("Band #3 has %d members", ((Band) genericBand).capacity);
+        MAGENTA.printGenericLn("Band #1 has %d members", band.capacity);
+        MAGENTA.printGenericLn("Band #2 has %d members", ((Band) quintetBand).capacity);
+        MAGENTA.printGenericLn("Band #3 has %d members", ((Band) genericBand).capacity);
         printGreenGenericLn("Well, we know that for the last two bands this is not true. This is why we have our common getters.");
-        printMagentaGenericLn("Band #1 has %d members", band.getCapacity());
-        printMagentaGenericLn("Band #2 has %d members", quintetBand.getCapacity());
-        printMagentaGenericLn("Band #3 has %d members", genericBand.getCapacity());
+        MAGENTA.printGenericLn("Band #1 has %d members", band.getCapacity());
+        MAGENTA.printGenericLn("Band #2 has %d members", quintetBand.getCapacity());
+        MAGENTA.printGenericLn("Band #3 has %d members", genericBand.getCapacity());
         printGreenGenericLn("This is true, but do methods get overriden?");
-        printMagentaGenericLn("Band #1 has %d members", band.getCapacity());
-        printMagentaGenericLn("Band #2 has %d members", ((Band) quintetBand).getCapacity());
-        printMagentaGenericLn("Band #3 has %d members", ((Band) genericBand).getCapacity());
+        MAGENTA.printGenericLn("Band #1 has %d members", band.getCapacity());
+        MAGENTA.printGenericLn("Band #2 has %d members", ((Band) quintetBand).getCapacity());
+        MAGENTA.printGenericLn("Band #3 has %d members", ((Band) genericBand).getCapacity());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Shadowing involves covering another variable. There is no limitation on how this can be done");
         printGreenGenericLn("2. The overshadowing member will also overshadow the scope");
@@ -912,21 +911,21 @@ public class Mastery4Dot2Runner {
         printGreenGenericLn("\"Who cares as to what to I do? Who cares as to what do I say? I am like this, I will always be like this and I will never change.\"");
 
         var i = 1984;
-        printMagentaGenericLn("In year %d version %s was released.", i, getYearMusic(i));
+        MAGENTA.printGenericLn("In year %d version %s was released.", i, getYearMusic(i));
         i = 2002;
-        printMagentaGenericLn("In year %d version %s was released.", i, getYearMusic(i));
+        MAGENTA.printGenericLn("In year %d version %s was released.", i, getYearMusic(i));
         i = 2011;
-        printMagentaGenericLn("In year %d version %s was released.", i, getYearMusic(i));
+        MAGENTA.printGenericLn("In year %d version %s was released.", i, getYearMusic(i));
         i = 2017;
         var m = 6;
-        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        MAGENTA.printGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
         m = 12;
-        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        MAGENTA.printGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
         i = 2020;
         m = 6;
-        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        MAGENTA.printGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
         m = 7;
-        printMagentaGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
+        MAGENTA.printGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
 
         printGreenGenericLn("Curiosities about switch and other accolades:");
 
@@ -1019,7 +1018,7 @@ public class Mastery4Dot2Runner {
         // 'org.jesperancinha.java11.mastery4dot2.record.Company' is not an enclosing class
         // Company.this
         BLUE.printGenericLn("The only reason why %s works is because %s is an enclosing class of %s.", "Company.this.company", "Company", "Music");
-        printMagentaGenericLn(music.getTheMusic());
+        MAGENTA.printGenericLn(music.getTheMusic());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. `this` is more commonly used within a class to refer to the instance members");
         printGreenGenericLn("2. It cannot be used for static members");
@@ -1037,38 +1036,38 @@ public class Mastery4Dot2Runner {
         final byte issnLeft = 0164;
         printBrightCyanGenericLn("Byte - one byte - 2^8");
         printBrightCyanGenericLn("Range from %s to %s", Byte.MIN_VALUE, Byte.MAX_VALUE);
-        printMagentaGenericLn("If we look at the left side of the issn, we a small number.");
-        printMagentaGenericLn("164, is however, too big for the maximum allowed value for a byte.");
-        printMagentaGenericLn("In this case, we can use its octed representation, which in turn is a smaller number than a 164.");
-        printMagentaGenericLn("Octet radix numbers are represented with a 0 as a prefix.");
-        printMagentaGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(issnLeft, 10));
-        printMagentaGenericLn("And this is what we want: %s", Integer.toString(issnLeft, 8));
+        MAGENTA.printGenericLn("If we look at the left side of the issn, we a small number.");
+        MAGENTA.printGenericLn("164, is however, too big for the maximum allowed value for a byte.");
+        MAGENTA.printGenericLn("In this case, we can use its octed representation, which in turn is a smaller number than a 164.");
+        MAGENTA.printGenericLn("Octet radix numbers are represented with a 0 as a prefix.");
+        MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(issnLeft, 10));
+        MAGENTA.printGenericLn("And this is what we want: %s", Integer.toString(issnLeft, 8));
         printBrightMagentaGenericLn("Note that we are able to pass a byte in the toString of Integer, just because the range of Integer covers the byte range");
         printBrightMagentaGenericLn("Also, bear in mind that primitive numbers without decimals are interpreted as integers. except for byte and short");
         printRainbowLn("###");
         short lossesPerIssue = 20000;
         printBrightCyanGenericLn("Short two bytes - 2^16");
         printBrightCyanGenericLn("Range from %s to %s", Short.MIN_VALUE, Short.MAX_VALUE);
-        printMagentaGenericLn("In early beginnings, Fangoria magazine wasn't selling that much.");
-        printMagentaGenericLn("The losses amounted to USD$20000 per issue");
-        printMagentaGenericLn("We cannot put this number in a byte. It just falls out of range");
-        printMagentaGenericLn("If we use a short though, we can safely accomodate it");
-        printMagentaGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(lossesPerIssue, 10));
-        printMagentaGenericLn("Just for fun, we can look at its octal representation: %s", Integer.toString(lossesPerIssue, 8));
-        printMagentaGenericLn("Which if we use that in the code we get: %s", 047040);
+        MAGENTA.printGenericLn("In early beginnings, Fangoria magazine wasn't selling that much.");
+        MAGENTA.printGenericLn("The losses amounted to USD$20000 per issue");
+        MAGENTA.printGenericLn("We cannot put this number in a byte. It just falls out of range");
+        MAGENTA.printGenericLn("If we use a short though, we can safely accomodate it");
+        MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(lossesPerIssue, 10));
+        MAGENTA.printGenericLn("Just for fun, we can look at its octal representation: %s", Integer.toString(lossesPerIssue, 8));
+        MAGENTA.printGenericLn("Which if we use that in the code we get: %s", 047040);
         printBrightMagentaGenericLn("Note that shor, just as byte, is often overlooked because it's just not common enough");
         printBrightMagentaGenericLn("However, the benefits of using primitives like these two for small numbers can represent an advantage");
         printRainbowLn("###");
         int oclc = 4618144;
         printBrightCyanGenericLn("Integer four bytes - 2^32");
         printBrightCyanGenericLn("Range from %s to %s", Integer.MIN_VALUE, Integer.MAX_VALUE);
-        printMagentaGenericLn("As reported by wikipedia, the OCLC is the Ohio College Library Center number.");
-        printMagentaGenericLn("We want to register this reference number for the publishing of issue 7 of Fangoria Magazine.");
-        printMagentaGenericLn("For this, we cannot use Short anymore. It falls out of the range needed.");
-        printMagentaGenericLn("We'll try with Integer.");
-        printMagentaGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(oclc, 10));
-        printMagentaGenericLn("Just for fun, we can look at its octal representation: %s", Integer.toString(oclc, 8));
-        printMagentaGenericLn("Which if we use that in the code we get: %s", 021473640);
+        MAGENTA.printGenericLn("As reported by wikipedia, the OCLC is the Ohio College Library Center number.");
+        MAGENTA.printGenericLn("We want to register this reference number for the publishing of issue 7 of Fangoria Magazine.");
+        MAGENTA.printGenericLn("For this, we cannot use Short anymore. It falls out of the range needed.");
+        MAGENTA.printGenericLn("We'll try with Integer.");
+        MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(oclc, 10));
+        MAGENTA.printGenericLn("Just for fun, we can look at its octal representation: %s", Integer.toString(oclc, 8));
+        MAGENTA.printGenericLn("Which if we use that in the code we get: %s", 021473640);
         printBrightMagentaGenericLn("Important to note is again, how integer is always the type pointed out by the compiler");
         printBrightMagentaGenericLn("Especially if you look the octals, they are interpreted as int.");
         printBrightMagentaGenericLn("They only get converted when they match the range.");
@@ -1076,13 +1075,12 @@ public class Mastery4Dot2Runner {
         long firstPublicationMs = 283_996_800_000L;
         printBrightCyanGenericLn("Long eight bytes - 2^64");
         printBrightCyanGenericLn("Range from %s to %s", Long.MIN_VALUE, Long.MAX_VALUE);
-        printMagentaGenericLn("The first publication of Fangoria happened on a specific date.");
-        printMagentaGenericLn("We found the number in milliseconds.");
-        printMagentaGenericLn("If we convert that to some epoch representation, we then convert from %d to %s", firstPublicationMs,
-                LocalDateTime.ofInstant(Instant.ofEpochMilli(firstPublicationMs), ZoneId.systemDefault()));
-        printMagentaGenericLn("This is our number as we would read it in decimal: %s", Long.toString(firstPublicationMs, 10));
-        printMagentaGenericLn("Just for fun, we can look at its octal representation: %s", Long.toString(firstPublicationMs, 8));
-        printMagentaGenericLn("Which if we use that in the code we get: %s", 04103741642000L);
+        MAGENTA.printGenericLn("The first publication of Fangoria happened on a specific date.");
+        MAGENTA.printGenericLn("We found the number in milliseconds.");
+        MAGENTA.printGenericLn("If we convert that to some epoch representation, we then convert from %d to %s", firstPublicationMs, LocalDateTime.ofInstant(Instant.ofEpochMilli(firstPublicationMs), ZoneId.systemDefault()));
+        MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Long.toString(firstPublicationMs, 10));
+        MAGENTA.printGenericLn("Just for fun, we can look at its octal representation: %s", Long.toString(firstPublicationMs, 8));
+        MAGENTA.printGenericLn("Which if we use that in the code we get: %s", 04103741642000L);
         printBrightMagentaGenericLn("You probably noticed that we are using L to specify that it is a long.");
         printBrightMagentaGenericLn("The compiler needs to know what do we actually mean if the number falls out of the integer range.");
         printBrightMagentaGenericLn("If it falls out of the range of Integer and we want it to be long, we specify that with an appended L or l.");
@@ -1091,20 +1089,19 @@ public class Mastery4Dot2Runner {
         printBrightCyanGenericLn("Float 4 bytes - 2^32");
         printBrightCyanGenericLn("Range from %s to %s with a min normal %s", Float.MIN_VALUE, Float.MAX_VALUE, Float.MIN_NORMAL);
         printBrightCyanGenericLn("It stores up 6 to 7 significant numbers");
-        printMagentaGenericLn("Before continuing in this section you probably noticed a strange conversion.");
-        printMagentaGenericLn("A long to a float? Well that can happen simply because a long fits in a float range.");
-        printMagentaGenericLn("And although float occupies less amount of bytes (4) than long (8), its implementation allows this to happen.");
-        printMagentaGenericLn("This means that even with a float, the rule that it fits, is accepted is still valid.");
-        printMagentaGenericLn("The only difference is that we need to specify L if its bigger than an int.");
-        printMagentaGenericLn("If we convert that to some epoch representation from a float, we then convert from %f to %s", firstPublicationMs2,
-                LocalDateTime.ofInstant(Instant.ofEpochMilli((long) firstPublicationMs2), ZoneId.systemDefault()));
+        MAGENTA.printGenericLn("Before continuing in this section you probably noticed a strange conversion.");
+        MAGENTA.printGenericLn("A long to a float? Well that can happen simply because a long fits in a float range.");
+        MAGENTA.printGenericLn("And although float occupies less amount of bytes (4) than long (8), its implementation allows this to happen.");
+        MAGENTA.printGenericLn("This means that even with a float, the rule that it fits, is accepted is still valid.");
+        MAGENTA.printGenericLn("The only difference is that we need to specify L if its bigger than an int.");
+        MAGENTA.printGenericLn("If we convert that to some epoch representation from a float, we then convert from %f to %s", firstPublicationMs2, LocalDateTime.ofInstant(Instant.ofEpochMilli((long) firstPublicationMs2), ZoneId.systemDefault()));
         printBrightMagentaGenericLn("Notice that we had to upcast it to long. This is because the compiler does not understand that we are converting to a type with a lower range. Although the number fits, type float does not fit in the long range.");
         float parallelUniversePublications1 = (3_000_000f * 12 * 30 * 10);
-        printMagentaGenericLn("Let's imagine that 10 universes are working together.");
-        printMagentaGenericLn("The same thing happens in all of those 10 universes to our magazine.");
-        printMagentaGenericLn("The website gets 3 million visits per month");
-        printMagentaGenericLn("And we are calculating what would have happened if during the course of 30 years of existence, the numbers would have kept stable");
-        printMagentaGenericLn("In the end we get all of these hits: %s", parallelUniversePublications1);
+        MAGENTA.printGenericLn("Let's imagine that 10 universes are working together.");
+        MAGENTA.printGenericLn("The same thing happens in all of those 10 universes to our magazine.");
+        MAGENTA.printGenericLn("The website gets 3 million visits per month");
+        MAGENTA.printGenericLn("And we are calculating what would have happened if during the course of 30 years of existence, the numbers would have kept stable");
+        MAGENTA.printGenericLn("In the end we get all of these hits: %s", parallelUniversePublications1);
         printBrightMagentaGenericLn("Did you notice the f? f, means float. Without the f, the calculation would result in a numeric overflow warning from the compiler");
         printBrightMagentaGenericLn("Since one of the elements is now a float, the compiler will check if the result fits within the float range.");
         printBrightMagentaGenericLn("During runtime, well get a float as a result.");
@@ -1113,11 +1110,11 @@ public class Mastery4Dot2Runner {
         double parallelUniversePublications3 = (3_000_000d * 12 * 30 * 1e+300);
         printBrightCyanGenericLn("Float 4 bytes - 2^32");
         printBrightCyanGenericLn("Range from %s to %s with a min normal %s", Double.MIN_VALUE, Double.MAX_VALUE, Double.MIN_NORMAL);
-        printMagentaGenericLn("In the same way with Float, we can make a calculation if we have %s universes", 1e+200);
+        MAGENTA.printGenericLn("In the same way with Float, we can make a calculation if we have %s universes", 1e+200);
         printBrightMagentaGenericLn("Notice the d. Now we specify that the number is a double.");
-        printMagentaGenericLn("If the number is too big, we'll get a different lind of mathematical notation.");
-        printMagentaGenericLn("If we try with %s universes", parallelUniversePublications3);
-        printMagentaGenericLn("A very high number is also considered a number, but Double specifies it as %s", parallelUniversePublications3);
+        MAGENTA.printGenericLn("If the number is too big, we'll get a different lind of mathematical notation.");
+        MAGENTA.printGenericLn("If we try with %s universes", parallelUniversePublications3);
+        MAGENTA.printGenericLn("A very high number is also considered a number, but Double specifies it as %s", parallelUniversePublications3);
         printBrightCyanGenericLn("Reminder: double values are 64 bit floating point numbers with a precision of 15 to 16 significant number digits.");
         printBrightCyanGenericLn("Doubles range from\n%s to %s in normal values", Double.MIN_NORMAL, Double.MAX_VALUE);
         printBrightCyanGenericLn("Doubles can also be: %s and be %f or %f", Double.MIN_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY);
@@ -1132,25 +1129,25 @@ public class Mastery4Dot2Runner {
         double maxTest4 = 3.4028235e+38;
         double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38;
         double maxTest6 = 1.79769313486231572234324324324e+308;
-        printMagentaGenericLn("double maxTest = 3.40282353482789473289473289477899659000892042934820984928423804e+38:");
+        MAGENTA.printGenericLn("double maxTest = 3.40282353482789473289473289477899659000892042934820984928423804e+38:");
         printBrightMagentaGenericLn("%f", maxTest);
-        printMagentaGenericLn("float maxTest2 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f:");
+        MAGENTA.printGenericLn("float maxTest2 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f:");
         printBrightMagentaGenericLn("%f", maxTest2);
-        printMagentaGenericLn("float maxTest3 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f:");
+        MAGENTA.printGenericLn("float maxTest3 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f:");
         printBrightMagentaGenericLn("%f", maxTest3);
-        printMagentaGenericLn("double maxTest4 = 3.4028235e+38:");
+        MAGENTA.printGenericLn("double maxTest4 = 3.4028235e+38:");
         printBrightMagentaGenericLn("%f", maxTest4);
-        printMagentaGenericLn("double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38:");
+        MAGENTA.printGenericLn("double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38:");
         printBrightMagentaGenericLn("%f", maxTest5);
-        printMagentaGenericLn("double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38");
+        MAGENTA.printGenericLn("double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38");
         printBrightMagentaGenericLn("%s", Double.toString(maxTest5));
-        printMagentaGenericLn("Float.MAX_VALUE:");
+        MAGENTA.printGenericLn("Float.MAX_VALUE:");
         printBrightMagentaGenericLn("%f", Float.MAX_VALUE);
-        printMagentaGenericLn("Double.MAX_VALUE:");
+        MAGENTA.printGenericLn("Double.MAX_VALUE:");
         printBrightMagentaGenericLn("%f", Double.MAX_VALUE);
-        printMagentaGenericLn("double maxTest6 = 1.79769313486231572234324324324e+308;");
+        MAGENTA.printGenericLn("double maxTest6 = 1.79769313486231572234324324324e+308;");
         printBrightMagentaGenericLn("%f", maxTest6);
-        printMagentaGenericLn("Double.toString(Double.MAX_VALUE):");
+        MAGENTA.printGenericLn("Double.toString(Double.MAX_VALUE):");
         printBrightMagentaGenericLn("%s", Double.toString(Double.MAX_VALUE));
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Primitive type conversion rules and ranges are not simple");

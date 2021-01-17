@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum17;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum17 {
 
@@ -33,7 +33,7 @@ public class Crum17 {
 
         final Green blackCurrant = (Green) (Bush) crum17.new BlackCurrant();
 
-        printMagentaGenericLn("This cast does work and we get a Green -> %s" , blackCurrant);
+        MAGENTA.printGenericLn("This cast does work and we get a Green -> %s", blackCurrant);
 
         printGreenGenericLn("Although mostly unnecessary, a double casting is perfectly acceptable in Java");
     }

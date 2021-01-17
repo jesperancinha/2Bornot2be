@@ -7,8 +7,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -66,13 +66,13 @@ public class Crum22 {
         final One one = new One();
         final List<Integer> numbersOneInt = one.getNumbers(new HashSet<>());
 
-        printMagentaGenericLn("We can call two different methods on Two");
-        printMagentaGenericLn("Then we get:");
+        MAGENTA.printGenericLn("We can call two different methods on Two");
+        MAGENTA.printGenericLn("Then we get:");
         printYellowGenericLn(numbersTwoInt);
-        printMagentaGenericLn("And");
+        MAGENTA.printGenericLn("And");
         printYellowGenericLn(numbersTwoLong);
-        printMagentaGenericLn("In One, we can just call one method and yield:");
-        printMagentaGenericLn(numbersOneInt);
+        MAGENTA.printGenericLn("In One, we can just call one method and yield:");
+        MAGENTA.printGenericLn(numbersOneInt);
 
         printGreenGenericLn("Overloading happens in general if overriding is not possible");
         printGreenGenericLn("If type erasure is the same, neither overriding nor overloading is possible");

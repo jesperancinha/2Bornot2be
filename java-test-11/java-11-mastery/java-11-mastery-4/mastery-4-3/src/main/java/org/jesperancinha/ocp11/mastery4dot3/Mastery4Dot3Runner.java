@@ -48,11 +48,10 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
@@ -102,10 +101,10 @@ public class Mastery4Dot3Runner {
         var testCurtain = "After the curtain".replace("curtain", "curtain") == "After the curtain";
         var testC = "After the curtain".replace('c', 'c') == "After the curtain";
 
-        printMagentaGenericLn("Testing \"After the curtain\" with Strings:");
-        printMagentaGenericLn(testCurtain);
-        printMagentaGenericLn("Testing \"After the curtain\" with Character:");
-        printMagentaGenericLn(testC);
+        MAGENTA.printGenericLn("Testing \"After the curtain\" with Strings:");
+        MAGENTA.printGenericLn(testCurtain);
+        MAGENTA.printGenericLn("Testing \"After the curtain\" with Character:");
+        MAGENTA.printGenericLn(testC);
         BLUE.printGenericLn("This strange phenomenon happen because of this:");
         BLUE.printGenericLn("    public String replace(char oldChar, char newChar) {\n" + "        if (oldChar != newChar) {\n"
                 + "            String ret = isLatin1() ? StringLatin1.replace(value, oldChar, newChar)\n"
@@ -158,7 +157,7 @@ public class Mastery4Dot3Runner {
             }
         };
 
-        printMagentaGenericLn("This is our guitar at the moment -> %s", guitar);
+        MAGENTA.printGenericLn("This is our guitar at the moment -> %s", guitar);
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
             "1. Although a very simple concept, it is important to notice that no abstractions may exist in instances.");
@@ -205,9 +204,9 @@ public class Mastery4Dot3Runner {
             put("Painting With", 12);
         }});
 
-        printMagentaGenericLn("This is our album collection:");
-        printMagentaGenericLn(albumCalculator);
-        printMagentaGenericLn("And here are different ways to calculate average songs per album:");
+        MAGENTA.printGenericLn("This is our album collection:");
+        MAGENTA.printGenericLn(albumCalculator);
+        MAGENTA.printGenericLn("And here are different ways to calculate average songs per album:");
 
         final byte averageByte = albumCalculator.getAverageByte();
         final char averageCharacter = albumCalculator.getAverageCharacter();
@@ -217,13 +216,13 @@ public class Mastery4Dot3Runner {
         final long averageLong = albumCalculator.getAverageLong();
         final short averageShort = albumCalculator.getAverageShort();
 
-        printMagentaGenericLn("Byte -> %s", averageByte);
-        printMagentaGenericLn("Character -> %s", averageCharacter);
-        printMagentaGenericLn("Double -> %s", averageDouble);
-        printMagentaGenericLn("Float -> %s", averageFloat);
-        printMagentaGenericLn("Integer -> %s", averageInt);
-        printMagentaGenericLn("Long -> %s", averageLong);
-        printMagentaGenericLn("Short -> %s", averageShort);
+        MAGENTA.printGenericLn("Byte -> %s", averageByte);
+        MAGENTA.printGenericLn("Character -> %s", averageCharacter);
+        MAGENTA.printGenericLn("Double -> %s", averageDouble);
+        MAGENTA.printGenericLn("Float -> %s", averageFloat);
+        MAGENTA.printGenericLn("Integer -> %s", averageInt);
+        MAGENTA.printGenericLn("Long -> %s", averageLong);
+        MAGENTA.printGenericLn("Short -> %s", averageShort);
 
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
@@ -246,8 +245,8 @@ public class Mastery4Dot3Runner {
         printYellowGenericLn(
             "     'add(E)' in 'java.util.ArrayList' clashes with 'add(Object)' in 'org.jesperancinha.java11.mastery4dot3.record.AnimalCollectiveList';\n"
                 + "     both methods have same erasure, yet neither overrides the other");
-        printMagentaGenericLn("This is our record collection:");
-        printMagentaGenericLn(acList);
+        MAGENTA.printGenericLn("This is our record collection:");
+        MAGENTA.printGenericLn(acList);
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
             "1. We cannot overload or override any of the original ArrayList methods with Object because of type erasure.");
@@ -280,8 +279,8 @@ public class Mastery4Dot3Runner {
             printRedThrowableAndExit(e);
         }
 
-        printMagentaGenericLn("Lyrics have  been written to \"/tmp/floridada.txt\".");
-        printMagentaGenericLn(lyrics);
+        MAGENTA.printGenericLn("Lyrics have  been written to \"/tmp/floridada.txt\".");
+        MAGENTA.printGenericLn(lyrics);
         BLUE.printGenericLn("Please check file contents!");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. The underlying close operation flushes the content to file.");
@@ -301,8 +300,8 @@ public class Mastery4Dot3Runner {
             "Case: We will examine the position on the charts for Animal Collective at present: 2020/12/06");
         printGreenGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
         final var peakPositionsMPP = new int[] { 13, 4, 63, 31, 25, 46, 58, 21, 37, 26 };
-        printMagentaGenericLn("These are the peak positions for differenct countries:");
-        printMagentaGenericLn(Arrays.stream(peakPositionsMPP)
+        MAGENTA.printGenericLn("These are the peak positions for differenct countries:");
+        MAGENTA.printGenericLn(Arrays.stream(peakPositionsMPP)
             .boxed()
             .collect(Collectors.toList()));
         final IntPredicate topTen = position -> position <= 10;
@@ -310,20 +309,20 @@ public class Mastery4Dot3Runner {
         final var topTenCount = IntStream.of(peakPositionsMPP)
             .filter(topTen)
             .count();
-        printMagentaGenericLn("This many counties reached the top ten:");
-        printMagentaGenericLn(topTenCount);
+        MAGENTA.printGenericLn("This many counties reached the top ten:");
+        MAGENTA.printGenericLn(topTenCount);
         final var topTenCount1 = IntStream.of(peakPositionsMPP)
             .filter(topTen1)
             .count();
-        printMagentaGenericLn("If we want to specify type, we can, but its not needed:");
-        printMagentaGenericLn(topTenCount1);
+        MAGENTA.printGenericLn("If we want to specify type, we can, but its not needed:");
+        MAGENTA.printGenericLn(topTenCount1);
         IntUnaryOperator takeItToNumberOne = a -> a - 3;
         final var toNumberOne = IntStream.of(peakPositionsMPP)
             .map(takeItToNumberOne)
             .parallel()
             .collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
-        printMagentaGenericLn("We can also pretend that they reached number 1 with a mapping trick:");
-        printMagentaGenericLn(toNumberOne);
+        MAGENTA.printGenericLn("We can also pretend that they reached number 1 with a mapping trick:");
+        MAGENTA.printGenericLn(toNumberOne);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. IntStream is different than Stream.");
         printGreenGenericLn(
@@ -355,7 +354,7 @@ public class Mastery4Dot3Runner {
         BLUE.printGenericLn("        int z = 10;\n" + "        int w = 20;\n" + "        z= ++w;\n" + "        w += --z;\n"
                 + "        if( (w == w + 4 - z--) & ( w == --z)){\n" + "            z -=20;\n" + "        }");
         Scanner sc = new Scanner(System.in);
-        printMagentaGeneric("Please guess what is the value of z at the end of this execution:");
+        MAGENTA.printGeneric("Please guess what is the value of z at the end of this execution:");
         int guess;
         if (skipQuestions) {
             printGreenGenericLn("18");
@@ -364,8 +363,8 @@ public class Mastery4Dot3Runner {
             guess = sc.nextInt();
         }
         if (guess == z) {
-            printMagentaGenericLn("You got it right!");
-            printMagentaGenericLn(z);
+            MAGENTA.printGenericLn("You got it right!");
+            MAGENTA.printGenericLn(z);
         } else {
             printRedThrowableAndExit(
                 new Exception(String.format("Unfortunately your guess %d, isn't correct. Please try again...", guess)));
@@ -389,20 +388,19 @@ public class Mastery4Dot3Runner {
 
         var console = System.console();
         if (Objects.isNull(console)) {
-            printMagentaGenericLn(
-                "Unfortunately, console is only available if you invoke this program via the command line");
+            MAGENTA.printGenericLn("Unfortunately, console is only available if you invoke this program via the command line");
             printYellowGenericLn("Please build this project and run:");
             printYellowGenericLn("java  -jar target/mastery-4-3-1.0.0-SNAPSHOT.jar ");
         } else {
             final char[] password = console.readPassword();
             final String passwordString = new String(password);
-            printMagentaGenericLn("You've typed '%s' as a password", passwordString);
+            MAGENTA.printGenericLn("You've typed '%s' as a password", passwordString);
             if (!passwordString.equals("More than a mystery")) {
                 printRedThrowableAndExit(new Exception(
                     String.format("Your password '%s' is wrong! We have to stop here. Please try again",
                         passwordString)));
             }
-            printMagentaGenericLn("You got it right!");
+            MAGENTA.printGenericLn("You got it right!");
             printGreenGenericLn("Take-away");
             printGreenGenericLn("1. New String also accepts a char array");
             printGreenGenericLn(
@@ -421,8 +419,8 @@ public class Mastery4Dot3Runner {
 
         var recordList = List.of(new AlbumForSale("In a Tidal Wave of Mystery", 2016L),
             new AlbumForSale("Solarize", 2019L), new AlbumForSale("Solarize", 2018L));
-        printMagentaGenericLn("Our album list:");
-        printMagentaGenericLn(recordList);
+        MAGENTA.printGenericLn("Our album list:");
+        MAGENTA.printGenericLn(recordList);
         try {
             final Map<String, Long> collect = recordList.stream()
                 .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase));
@@ -431,13 +429,13 @@ public class Mastery4Dot3Runner {
                 "This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s",
                 e);
         }
-        printMagentaGenericLn("We can't go back, so now we have to define a way to disambiguate this.");
-        printMagentaGenericLn("We do that with a merge function which is a BinaryOperator.");
-        printMagentaGenericLn("We'll consider the most recent purchase year.");
+        MAGENTA.printGenericLn("We can't go back, so now we have to define a way to disambiguate this.");
+        MAGENTA.printGenericLn("We do that with a merge function which is a BinaryOperator.");
+        MAGENTA.printGenericLn("We'll consider the most recent purchase year.");
         final Map<String, Long> collect = recordList.stream()
             .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase, Math::max));
-        printMagentaGenericLn("We finally get our disambiguated map:");
-        printMagentaGenericLn(collect);
+        MAGENTA.printGenericLn("We finally get our disambiguated map:");
+        MAGENTA.printGenericLn(collect);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. If there are repeated keys, the map collection fails by default.");
         printGreenGenericLn("2. A merge strategy can be implemented.");
@@ -458,14 +456,14 @@ public class Mastery4Dot3Runner {
         int j;
         for (i = 0, j = 0; j == i && i < 10; ++j, i++) {
 
-            printMagentaGenericLn("I count %d and my friend counts %d", i, j);
+            MAGENTA.printGenericLn("I count %d and my friend counts %d", i, j);
         }
-        printMagentaGenericLn("I counted %d and my friend counted %d", i, j);
+        MAGENTA.printGenericLn("I counted %d and my friend counted %d", i, j);
         for (i = 0, j = 0; j == i && j < 10; ++j, i++) {
 
-            printMagentaGenericLn("I count %d and my friend counts %d", i, j);
+            MAGENTA.printGenericLn("I count %d and my friend counts %d", i, j);
         }
-        printMagentaGenericLn("I counted %d and my friend counted %d", i, j);
+        MAGENTA.printGenericLn("I counted %d and my friend counted %d", i, j);
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
             "1. Although may look confusing, the point of this exercise is to show that ++ on the left side or on the right side, do not make a difference in an ordinary for loop.");
@@ -501,29 +499,27 @@ public class Mastery4Dot3Runner {
         double q = f;
         double r = e;
 
-        printMagentaGenericLn("This album lasts for 46m 29s.");
+        MAGENTA.printGenericLn("This album lasts for 46m 29s.");
         final Double doubleDuration1 = (46d + 29d / 60);
         final Double doubleDuration2 = (46d + 29 / 60);
         final Double doubleDuration3 = (46 + 29d / 60);
-        printMagentaGenericLn("Which in minutes can also be:");
-        printMagentaGenericLn("%s %s %s (minutes) in double", doubleDuration1, doubleDuration2, doubleDuration3);
-        printMagentaGenericLn("or");
+        MAGENTA.printGenericLn("Which in minutes can also be:");
+        MAGENTA.printGenericLn("%s %s %s (minutes) in double", doubleDuration1, doubleDuration2, doubleDuration3);
+        MAGENTA.printGenericLn("or");
         final Float floatDuration1 = (46f + 29f / 60);
         final Float floatDuration2 = (46f + 29 / 60);
         final Float floatDuration3 = (46 + 29f / 60);
-        printMagentaGenericLn("%s %s %s (minutes) in double", floatDuration1, floatDuration2, floatDuration3);
+        MAGENTA.printGenericLn("%s %s %s (minutes) in double", floatDuration1, floatDuration2, floatDuration3);
         final Integer yearInteger = 2008;
         final Long yearLong = 2008L;
-        printMagentaGenericLn("This album was published on the year %d and %d", yearInteger, yearLong);
+        MAGENTA.printGenericLn("This album was published on the year %d and %d", yearInteger, yearLong);
         final Character c = 'H';
         final Character c1 = 72;
         final Byte byteNumber = 46;
         final Short shortNumber = 2008;
-        printMagentaGenericLn("The album starts with letter '%s' which is an %d in the integer form.", c, (int) c1);
-        printMagentaGenericLn("Since the duration is shorter than %d, we can register it in a Byte %d.", Byte.MAX_VALUE,
-            byteNumber);
-        printMagentaGenericLn("Finally the published year can be registered in a two byte type like Short %d.",
-            shortNumber);
+        MAGENTA.printGenericLn("The album starts with letter '%s' which is an %d in the integer form.", c, (int) c1);
+        MAGENTA.printGenericLn("Since the duration is shorter than %d, we can register it in a Byte %d.", Byte.MAX_VALUE, byteNumber);
+        MAGENTA.printGenericLn("Finally the published year can be registered in a two byte type like Short %d.", shortNumber);
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
             "1. In Boxing, the only possible conversions are from int to Byte, Short, Character and Integer.");
@@ -550,13 +546,13 @@ public class Mastery4Dot3Runner {
             "Case: Hercules and Love Affair is on tour and you are going to see them in the backstage!");
         printGreenGenericLn("Can you go on their trailer? Probably not ☹️. We'll look into the not case.");
         var tourTrailerHLA = new TourTrailer("Hercules and Love Affair");
-        printMagentaGenericLn("This is the band in the trailer: %s", tourTrailerHLA);
+        MAGENTA.printGenericLn("This is the band in the trailer: %s", tourTrailerHLA);
         var limoFriends = new Limousine(List.of("You", "Joan", "Edith", "Margaret", "Dorothy"));
-        printMagentaGenericLn("You and your friends %s are now in the limo!", limoFriends);
+        MAGENTA.printGenericLn("You and your friends %s are now in the limo!", limoFriends);
         final Transport transportHLA = tourTrailerHLA;
         final Transport transportFriends = limoFriends;
-        printMagentaGenericLn("The Transport for the Trailer is %s", transportHLA);
-        printMagentaGenericLn("The Transport for the Limousine is %s", transportFriends);
+        MAGENTA.printGenericLn("The Transport for the Trailer is %s", transportHLA);
+        MAGENTA.printGenericLn("The Transport for the Limousine is %s", transportFriends);
         // Inconvertible types; cannot cast 'org.jesperancinha.java11.mastery4dot3.transport.Limousine' to 'org.jesperancinha.java11.mastery4dot3.transport.TourTrailer'
         // final TourTrailer trailerFriends = (TourTrailer)limoFriends;
         try {
@@ -569,9 +565,9 @@ public class Mastery4Dot3Runner {
             printRedGenericLn("If the instance is a Limousine, then it cannot be a Trailer at the same time.");
         }
         final Trailer trailerHLA = tourTrailerHLA;
-        printMagentaGenericLn("Finally a tour trailer HLA is also just a trailer");
-        printMagentaGenericLn("The subclass TourTrailer is just a more specific case of Trailer");
-        printMagentaGenericLn("And so we have the Trailer as %s", trailerHLA);
+        MAGENTA.printGenericLn("Finally a tour trailer HLA is also just a trailer");
+        MAGENTA.printGenericLn("The subclass TourTrailer is just a more specific case of Trailer");
+        MAGENTA.printGenericLn("And so we have the Trailer as %s", trailerHLA);
 
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
@@ -629,12 +625,10 @@ public class Mastery4Dot3Runner {
             List.of());
         var modernVampiresOfTheCity = new Album("Modern Vampires of The City", "Vampire Weekend", List.of());
         var contra = new Album("Contra", "Vampire Weekend", List.of());
-        printMagentaGenericLn("Albunm %s won the grammys -> %s", fatherOfTheBride,
-            predicateWithType.test(fatherOfTheBride));
+        MAGENTA.printGenericLn("Albunm %s won the grammys -> %s", fatherOfTheBride, predicateWithType.test(fatherOfTheBride));
         // Unchecked call to 'test(T)' as a member of raw type 'java.util.function.Predicate'
-        printMagentaGenericLn("Album %s won the grammys -> %s", modernVampiresOfTheCity,
-            predicateWithoutType.test(modernVampiresOfTheCity));
-        printMagentaGenericLn("Album %s won the grammys -> %s", contra, predicateWithTypeOnlyOnReference.test(contra));
+        MAGENTA.printGenericLn("Album %s won the grammys -> %s", modernVampiresOfTheCity, predicateWithoutType.test(modernVampiresOfTheCity));
+        MAGENTA.printGenericLn("Album %s won the grammys -> %s", contra, predicateWithTypeOnlyOnReference.test(contra));
         printGreenGenericLn("Take-away");
         printGreenGenericLn(
             "1. Predicate with types are checked and therefore the reference much be checked as well for type");
@@ -666,7 +660,7 @@ public class Mastery4Dot3Runner {
                 final String next = iterator.next();
                 raf.writeUTF(next);
                 raf.writeUTF("\n");
-                printMagentaGenericLn(next);
+                MAGENTA.printGenericLn(next);
             } catch (FileNotFoundException e) {
                 printRedThrowableAndExit(e);
             } catch (IOException e) {
@@ -678,7 +672,7 @@ public class Mastery4Dot3Runner {
                     final String next = iterator.next();
                     fos.write(next.getBytes(StandardCharsets.UTF_8));
                     fos.write("\n".getBytes(StandardCharsets.UTF_8));
-                    printMagentaGenericLn(next);
+                    MAGENTA.printGenericLn(next);
 
                 }
             } catch (FileNotFoundException e) {
@@ -718,23 +712,23 @@ public class Mastery4Dot3Runner {
         var orangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
             List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
                 "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
-        printMagentaGenericLn("This is the album you were about to lend:");
-        printMagentaGenericLn(orangeAlbum);
-        printMagentaGenericLn("If you had lend it to %s", friend);
+        MAGENTA.printGenericLn("This is the album you were about to lend:");
+        MAGENTA.printGenericLn(orangeAlbum);
+        MAGENTA.printGenericLn("If you had lend it to %s", friend);
         friend.lendAlbum(orangeAlbum);
-        printMagentaGenericLn("This would be the returned album:");
-        printMagentaGenericLn(orangeAlbum);
+        MAGENTA.printGenericLn("This would be the returned album:");
+        MAGENTA.printGenericLn(orangeAlbum);
         printRainbowLn('-');
-        printMagentaGenericLn("But since you are pretty safe in what you do, you are going to lend:");
+        MAGENTA.printGenericLn("But since you are pretty safe in what you do, you are going to lend:");
         var yourOrangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
             List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
                 "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
         final Album copy = yourOrangeAlbum.copy();
         friend.lendAlbum(copy);
-        printMagentaGenericLn("And so, although your friend did this to your copy:");
-        printMagentaGenericLn(copy);
-        printMagentaGenericLn("Your original is still there 😉!!");
-        printMagentaGenericLn(yourOrangeAlbum);
+        MAGENTA.printGenericLn("And so, although your friend did this to your copy:");
+        MAGENTA.printGenericLn(copy);
+        MAGENTA.printGenericLn("Your original is still there 😉!!");
+        MAGENTA.printGenericLn(yourOrangeAlbum);
         printRainbowLn('-');
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Guideline 6-6 / MUTABLE-6: Treat passing input to untrusted object as output");
@@ -749,8 +743,8 @@ public class Mastery4Dot3Runner {
         printGreenGenericLn("Let's have a look at the math behind it");
         var peakPositionsPerCountry = Map.of("US", 38, "AUS", 6, "BEL", 10, "CAN", 24, "FRA", 22, "GER", 65, "IRL", 5,
             "NZ", 13, "SWI", 68, "UK", 8);
-        printMagentaGenericLn("This is their peak register on the charts on the  16th November 2020");
-        printMagentaGenericLn(peakPositionsPerCountry);
+        MAGENTA.printGenericLn("This is their peak register on the charts on the  16th November 2020");
+        MAGENTA.printGenericLn(peakPositionsPerCountry);
         printRainbowLn('-');
         // <R> R collect(Supplier<R> supplier,
         // ObjIntConsumer<R> accumulator,
@@ -761,9 +755,8 @@ public class Mastery4Dot3Runner {
             .collect(ArrayList::new, new ObjIntConsumer<ArrayList<Integer>>() {
                 @Override
                 public void accept(ArrayList<Integer> integers, int value) {
-                    printMagentaGenericLn(
-                        "When our stream is sequential, we can see things nicely, but performance goes away:");
-                    printMagentaGenericLn("Adding value %d", value);
+                    MAGENTA.printGenericLn("When our stream is sequential, we can see things nicely, but performance goes away:");
+                    MAGENTA.printGenericLn("Adding value %d", value);
                     integers.add(value);
                 }
             }, ArrayList::addAll);
@@ -776,16 +769,16 @@ public class Mastery4Dot3Runner {
                 integers.add(value);
                 printBrightMagentaGeneric(value);
             }, (integers, integers2) -> {
-                printMagentaGeneric("I'm reaching this now, because I'm a parallel stream!");
-                printMagentaGeneric(integers);
-                printMagentaGeneric(integers2);
+                MAGENTA.printGeneric("I'm reaching this now, because I'm a parallel stream!");
+                MAGENTA.printGeneric(integers);
+                MAGENTA.printGeneric(integers2);
                 integers.addAll(integers2);
             });
         printRainbowLn('-');
-        printMagentaGenericLn("Sequential list result -> %s", list01);
-        printMagentaGenericLn("Sequential list result -> %s", list02);
+        MAGENTA.printGenericLn("Sequential list result -> %s", list01);
+        MAGENTA.printGenericLn("Sequential list result -> %s", list02);
         printRainbowLn('-');
-        printMagentaGenericLn("If we want to calculate the average this way and with high performance, we can!");
+        MAGENTA.printGenericLn("If we want to calculate the average this way and with high performance, we can!");
         final double avg = peakPositionsPerCountry.values()
             .stream()
             .mapToInt(i -> i)
@@ -804,69 +797,59 @@ public class Mastery4Dot3Runner {
             .doubleValue() / peakPositionsPerCountry.values()
             .size();
 
-        printMagentaGenericLn("This is the result -> %f", avg);
+        MAGENTA.printGenericLn("This is the result -> %f", avg);
         printRainbowLn('-');
-        printMagentaGenericLn(
-            "However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+        MAGENTA.printGenericLn("However, Number streams, already contain average methods. This is the reason why a collector doesn't make sense to have in a Number stream");
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .collect(Collectors.averagingDouble(i -> i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+                .collect(Collectors.averagingDouble(i11 -> i11)));
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .collect(Collectors.averagingInt(i -> i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+                .collect(Collectors.averagingInt(i10 -> i10)));
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .collect(Collectors.averagingLong(i -> i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+                .collect(Collectors.averagingLong(i9 -> i9)));
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .mapToInt(i -> i)
-                .mapToObj(i -> i)
-                .collect(Collectors.averagingLong(i -> i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+                .mapToInt(i8 -> i8)
+                .mapToObj(i8 -> i8)
+                .collect(Collectors.averagingLong(i8 -> i8)));
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .mapToInt(i -> i)
+                .mapToInt(i7 -> i7)
                 .boxed()
-                .collect(Collectors.averagingLong(i -> i)));
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+                .collect(Collectors.averagingLong(i7 -> i7)));
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .mapToInt(i -> i)
+                .mapToInt(i6 -> i6)
                 .average()
                 .getAsDouble());
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .mapToInt(i -> i)
-                .mapToDouble(i -> i)
+                .mapToInt(i5 -> i5)
+                .mapToDouble(i5 -> i5)
                 .average()
                 .getAsDouble());
-        printMagentaGenericLn("Oracle Spectacular reached an average peak of %f around the world",
-            peakPositionsPerCountry.values()
+        MAGENTA.printGenericLn("Oracle Spectacular reached an average peak of %f around the world", peakPositionsPerCountry.values()
                 .stream()
-                .mapToInt(i -> i)
-                .mapToLong(i -> i)
+                .mapToInt(i4 -> i4)
+                .mapToLong(i4 -> i4)
                 .average()
                 .getAsDouble());
         printRainbowLn('-');
-        printMagentaGenericLn("Curiosity 1 (Forcing Doubles) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i -> i)
-            .collect(Collectors.averagingDouble(i -> i)));
-        printMagentaGenericLn("Curiosity 2 (Forcing Longs) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i -> i)
+        MAGENTA.printGenericLn("Curiosity 1 (Forcing Doubles) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+            .mapToObj(i3 -> i3)
+            .collect(Collectors.averagingDouble(i3 -> i3)));
+        MAGENTA.printGenericLn("Curiosity 2 (Forcing Longs) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+            .mapToObj(i2 -> i2)
             .collect(Collectors.averagingLong(Double::longValue)));
-        printMagentaGenericLn("Curiosity 3 (Forcing Ints) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+        MAGENTA.printGenericLn("Curiosity 3 (Forcing Ints) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
+            .mapToObj(i1 -> i1)
+            .collect(Collectors.averagingInt(Double::intValue)));
+        MAGENTA.printGenericLn("Curiosity 4 (no values) ->  %f", DoubleStream.of()
             .mapToObj(i -> i)
             .collect(Collectors.averagingInt(Double::intValue)));
-        printMagentaGenericLn("Curiosity 4 (no values) ->  %f", DoubleStream.of()
-            .mapToObj(i -> i)
-            .collect(Collectors.averagingInt(Double::intValue)));
-        printMagentaGenericLn(
-            "Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
+        MAGENTA.printGenericLn("Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
         printRainbowLn('-');
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Calculating average can be done in different ways.");
@@ -921,7 +904,7 @@ public class Mastery4Dot3Runner {
             printRedThrowableAndExit(e);
         }
         if (executeCreation) {
-            printMagentaGeneric("Table Song is created!");
+            MAGENTA.printGeneric("Table Song is created!");
         }
 
         // It doesn't look like it, but this Connection is effectively final.
@@ -935,7 +918,7 @@ public class Mastery4Dot3Runner {
                 statement.setLong(3, song.getHitLocalDate()
                     .getYear());
                 if (statement.execute()) {
-                    printMagentaGeneric("Inserted song %s", song);
+                    MAGENTA.printGeneric("Inserted song %s", song);
                 }
             } catch (SQLException e) {
                 printRedThrowableAndExit(e);
@@ -963,22 +946,22 @@ public class Mastery4Dot3Runner {
                 final Float hitYearFloat3 = resultSet.getFloat(3);
                 final Array hitYearArray = resultSet.getArray("HITYEAR");
                 final Array hitYearArray3 = resultSet.getArray(3);
-                printMagentaGenericLn("resultSet.getString(\"SONG\"); -> %s", song);
-                printMagentaGenericLn("resultSet.getString(1); -> %s", song1);
-                printMagentaGenericLn("resultSet.getString(\"BAND\"); -> %s", band);
-                printMagentaGenericLn("resultSet.getString(2); -> %s", band2);
-                printMagentaGenericLn("resultSet.getArray(\"BAND\"); -> %s", bandArray);
-                printMagentaGenericLn("resultSet.getArray(2);-> %s", bandArray2);
-                printMagentaGenericLn("resultSet.getLong(\"HITYEAR\");-> %s", hitYear);
-                printMagentaGenericLn("resultSet.getLong(3); -> %s", hitYearLong3);
-                printMagentaGenericLn("resultSet.getInt(\"HITYEAR\");-> %s", hitYearInt);
-                printMagentaGenericLn("resultSet.getInt(3);-> %s", hitYearInt3);
-                printMagentaGenericLn("resultSet.getBigDecimal(\"HITYEAR\");-> %s", hitYearBigDecimal);
-                printMagentaGenericLn("resultSet.getBigDecimal(3); -> %s", hitYearBigDecimal3);
-                printMagentaGenericLn("resultSet.getFloat(\"HITYEAR\");-> %s", hitYearFloat);
-                printMagentaGenericLn("resultSet.getFloat(3); -> %s", hitYearFloat3);
-                printMagentaGenericLn("resultSet.getArray(\"HITYEAR\");-> %s", hitYearArray);
-                printMagentaGenericLn("resultSet.getArray(3); -> %s", hitYearArray3);
+                MAGENTA.printGenericLn("resultSet.getString(\"SONG\"); -> %s", song);
+                MAGENTA.printGenericLn("resultSet.getString(1); -> %s", song1);
+                MAGENTA.printGenericLn("resultSet.getString(\"BAND\"); -> %s", band);
+                MAGENTA.printGenericLn("resultSet.getString(2); -> %s", band2);
+                MAGENTA.printGenericLn("resultSet.getArray(\"BAND\"); -> %s", bandArray);
+                MAGENTA.printGenericLn("resultSet.getArray(2);-> %s", bandArray2);
+                MAGENTA.printGenericLn("resultSet.getLong(\"HITYEAR\");-> %s", hitYear);
+                MAGENTA.printGenericLn("resultSet.getLong(3); -> %s", hitYearLong3);
+                MAGENTA.printGenericLn("resultSet.getInt(\"HITYEAR\");-> %s", hitYearInt);
+                MAGENTA.printGenericLn("resultSet.getInt(3);-> %s", hitYearInt3);
+                MAGENTA.printGenericLn("resultSet.getBigDecimal(\"HITYEAR\");-> %s", hitYearBigDecimal);
+                MAGENTA.printGenericLn("resultSet.getBigDecimal(3); -> %s", hitYearBigDecimal3);
+                MAGENTA.printGenericLn("resultSet.getFloat(\"HITYEAR\");-> %s", hitYearFloat);
+                MAGENTA.printGenericLn("resultSet.getFloat(3); -> %s", hitYearFloat3);
+                MAGENTA.printGenericLn("resultSet.getArray(\"HITYEAR\");-> %s", hitYearArray);
+                MAGENTA.printGenericLn("resultSet.getArray(3); -> %s", hitYearArray3);
                 printRainbowLn('-');
             }
         } catch (SQLException e) {

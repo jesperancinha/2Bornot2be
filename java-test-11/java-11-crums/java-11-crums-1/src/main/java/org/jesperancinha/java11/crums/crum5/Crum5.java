@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum5;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum5 {
@@ -25,8 +25,7 @@ public class Crum5 {
         case 6:
             printYellowGenericLn("6");
         }
-        printMagentaGenericLn("Note that although some code is unreachable, this complete code is compilable");
-        printMagentaGenericLn(
-            "Also not that unreachable means in this case that the individual cases are note selectable given that 10 is set before entering the switch");
+        MAGENTA.printGenericLn("Note that although some code is unreachable, this complete code is compilable");
+        MAGENTA.printGenericLn("Also not that unreachable means in this case that the individual cases are note selectable given that 10 is set before entering the switch");
     }
 }

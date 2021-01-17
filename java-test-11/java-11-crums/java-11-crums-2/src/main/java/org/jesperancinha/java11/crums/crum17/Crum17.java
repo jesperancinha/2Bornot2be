@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum17 {
     public static void main(String[] args) {
@@ -22,12 +22,12 @@ public class Crum17 {
             return name.charAt(0);
         });
 
-        printMagentaGenericLn("Nothing has happened yet to the stream.");
-        printMagentaGenericLn("Now we call the terminating function.");
+        MAGENTA.printGenericLn("Nothing has happened yet to the stream.");
+        MAGENTA.printGenericLn("Now we call the terminating function.");
 
         final List<Character> collect = characterStream.collect(Collectors.toList());
 
-        printMagentaGenericLn("And this is the character list -> %s", collect);
+        MAGENTA.printGenericLn("And this is the character list -> %s", collect);
 
         printGreenGenericLn("Lambda functions are only called once the terminating function is called");
         printGreenGenericLn(

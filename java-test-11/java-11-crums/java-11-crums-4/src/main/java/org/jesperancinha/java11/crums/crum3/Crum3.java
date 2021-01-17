@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum3;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitle;
 
@@ -22,14 +22,14 @@ public class Crum3 {
 
         }
 
-        printMagentaGenericLn("We cannot use var do declare variables in a compound");
+        MAGENTA.printGenericLn("We cannot use var do declare variables in a compound");
 
         for (int i = 0, j = 10; i < 10; i++) {
             printRainbowTitle("" + i + " " + j);
         }
         printNewLine();
 
-        printMagentaGenericLn("We an however declare var outside the for loop:");
+        MAGENTA.printGenericLn("We an however declare var outside the for loop:");
 
         var a = 0;
         for (; a < 20; a++) {

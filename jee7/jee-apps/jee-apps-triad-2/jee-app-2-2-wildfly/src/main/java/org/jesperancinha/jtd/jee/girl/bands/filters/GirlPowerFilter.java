@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 
 @WebFilter(urlPatterns = { "/app/secure/*" }, description = "Session Checker Filter")
@@ -39,9 +40,9 @@ public class GirlPowerFilter implements Filter {
         Consolerizer.printOrangeGenericLn(
             "We are going to have a look and see if LOGGED_IN is available as session attribute");
         Consolerizer.printOrangeGenericLn("This is the role of a WebFilter");
-        Consolerizer.printMagentaGenericLn("A WebFilter allows us to create a set of rules for a set of servlets");
-        Consolerizer.printMagentaGenericLn("We could in theory configure this same thing per servlet.");
-        Consolerizer.printMagentaGenericLn("However that would mean on specific configuration per servlet.");
+        MAGENTA.printGenericLn("A WebFilter allows us to create a set of rules for a set of servlets");
+        MAGENTA.printGenericLn("We could in theory configure this same thing per servlet.");
+        MAGENTA.printGenericLn("However that would mean on specific configuration per servlet.");
 
         if (!request.getRequestURI()
             .endsWith("/") && request.getSession()

@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum21;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -22,7 +22,7 @@ public class Crum21 {
 
 
         printYellowGenericLn("from https://genius.com/Sade-smooth-operator-lyrics");
-        printMagentaGenericLn("We can access SMOOTH_OPERATOR:");
+        MAGENTA.printGenericLn("We can access SMOOTH_OPERATOR:");
 
         printOrangeGenericLn(Saxophone.SMOOTH_OPERATOR);
 

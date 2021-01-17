@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum11 {
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Crum11 {
         bandList.add("PJ Harvey");
         bandList.add("Nick Cave and the bad seeds");
 
-        printMagentaGenericLn("We can have a band list with a generic type List -> %s", bandList);
+        MAGENTA.printGenericLn("We can have a band list with a generic type List -> %s", bandList);
 
         final List<?> bandListWildcard = bandList;
         // Required type:
@@ -30,9 +30,7 @@ public class Crum11 {
         // String
         // bandListWildcard.add("sneaky");
 
-        printMagentaGenericLn(
-            "If you play with this new reference, you'll realize you cannot easily add an element to the list -> %s",
-            bandListWildcard);
+        MAGENTA.printGenericLn("If you play with this new reference, you'll realize you cannot easily add an element to the list -> %s", bandListWildcard);
 
         final List<? extends String> bandListWildcardExtends = bandList;
         bandList.add("Sneaky");
@@ -43,7 +41,7 @@ public class Crum11 {
         // String test = "Anna Domino";
         // bandListWildcardExtends.add(test);
 
-        printMagentaGenericLn("Even with extend, you'll be faced with the same problem -> %s", bandListWildcardExtends);
+        MAGENTA.printGenericLn("Even with extend, you'll be faced with the same problem -> %s", bandListWildcardExtends);
 
         final List<String> bandListDiamond = new ArrayList<>();
         bandListDiamond.add("Vampire Weekend");
@@ -51,7 +49,7 @@ public class Crum11 {
         bandListDiamond.add("The Cure");
         bandListDiamond.add("PJ Harvey");
         bandListDiamond.add("Nick Cave and the bad seeds");
-        printMagentaGenericLn("We can create a band list with diamond notation -> %s", bandListDiamond);
+        MAGENTA.printGenericLn("We can create a band list with diamond notation -> %s", bandListDiamond);
 
         final List<Object> bandListObject = new ArrayList<>();
         bandListObject.add("Vampire Weekend");
@@ -60,8 +58,8 @@ public class Crum11 {
         bandListObject.add("PJ Harvey");
         bandListObject.add("Nick Cave and the bad seeds");
         bandListObject.add(1234567890);
-        printMagentaGenericLn("If we create a list of objects, we can create big mess -> %s", bandListObject);
-        printMagentaGenericLn("And if we analyze its types -> %s", bandListObject.stream()
+        MAGENTA.printGenericLn("If we create a list of objects, we can create big mess -> %s", bandListObject);
+        MAGENTA.printGenericLn("And if we analyze its types -> %s", bandListObject.stream()
             .map(Object::getClass)
             .collect(Collectors.toList()));
 
@@ -70,19 +68,16 @@ public class Crum11 {
                 "Nick Cave and the bad seeds"));
         final Object o = bandListWildcardDiamond.get(0);
         printBrightCyanGenericLn(o);
-        printMagentaGenericLn("We can create wildcard lists in combinastion with diamond notation created instances.");
-        printMagentaGenericLn(
-            "Note that since the reference is a wildcard, adding is also not an easy option in this case");
+        MAGENTA.printGenericLn("We can create wildcard lists in combinastion with diamond notation created instances.");
+        MAGENTA.printGenericLn("Note that since the reference is a wildcard, adding is also not an easy option in this case");
 
         printGreenGenericLn(
             "Bottom line is that generic are good, use of Object is sloppy, diamond notation saves text and wildcards is better not to use");
         printGreenGenericLn("Wildcards, can be used if you don't care about type check");
-        printMagentaGenericLn("Generics are perfect for type safety");
-        printMagentaGenericLn("Objects do not guarantee type safety and can create fairly complicated code");
-        printMagentaGenericLn(
-            "Diamond notation saves text and the diamond is always placed on the right side of the assignment");
-        printMagentaGenericLn(
-            "Wildcard notation may be justified to use in seldom situations and is always placed on the left side of the assignment");
-        printMagentaGenericLn("Wildcard and diamond notation can be used at the same time in one assignment operation");
+        MAGENTA.printGenericLn("Generics are perfect for type safety");
+        MAGENTA.printGenericLn("Objects do not guarantee type safety and can create fairly complicated code");
+        MAGENTA.printGenericLn("Diamond notation saves text and the diamond is always placed on the right side of the assignment");
+        MAGENTA.printGenericLn("Wildcard notation may be justified to use in seldom situations and is always placed on the left side of the assignment");
+        MAGENTA.printGenericLn("Wildcard and diamond notation can be used at the same time in one assignment operation");
     }
 }

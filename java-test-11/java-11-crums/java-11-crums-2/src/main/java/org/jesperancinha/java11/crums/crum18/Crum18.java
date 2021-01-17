@@ -7,8 +7,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum18 {
@@ -23,7 +23,7 @@ public class Crum18 {
             .setRegion("WW")
             .build();
 
-        printMagentaGenericLn("We first try a happy case with locale -> %s", locale);
+        MAGENTA.printGenericLn("We first try a happy case with locale -> %s", locale);
         ResourceBundle resourceBundle = ResourceBundle.getBundle("dictionary", locale);
         resourceBundle.getKeys()
             .asIterator()
@@ -32,7 +32,7 @@ public class Crum18 {
             .asIterator()
             .forEachRemaining(Consolerizer::printOrangeGenericLn);
 
-        printMagentaGenericLn("Now we first try an unhappy case with locale -> %s", locale2);
+        MAGENTA.printGenericLn("Now we first try an unhappy case with locale -> %s", locale2);
         try {
             ResourceBundle resourceBundle2 = ResourceBundle.getBundle("dictionary", locale2);
             resourceBundle2.getKeys()

@@ -43,9 +43,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
@@ -152,9 +152,9 @@ public class Mastery3Dot1Runner {
         var ticketFinal = new FinalTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
         var ticketPrivate = PrivateTicket.createTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
         printGreenGenericLn("Current Tickets");
-        printMagentaGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
-        printMagentaGenericLn("Final Ticket -> %s", ticketFinal);
-        printMagentaGenericLn("Private Ticket -> %s", ticketPrivate);
+        MAGENTA.printGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
+        MAGENTA.printGenericLn("Final Ticket -> %s", ticketFinal);
+        MAGENTA.printGenericLn("Private Ticket -> %s", ticketPrivate);
         final Date dateUnsafe = ticketUnsafe.getDate();
         dateUnsafe.setDate(17);
         final Date dateFinal = ticketFinal.getDate();
@@ -162,9 +162,9 @@ public class Mastery3Dot1Runner {
         final Date datePrivate = ticketPrivate.getDate();
         datePrivate.setTime(17);
         printGreenGenericLn("New Tickets");
-        printMagentaGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
-        printMagentaGenericLn("Final Ticket -> %s", ticketFinal);
-        printMagentaGenericLn("Private Ticket -> %s", ticketPrivate);
+        MAGENTA.printGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
+        MAGENTA.printGenericLn("Final Ticket -> %s", ticketFinal);
+        MAGENTA.printGenericLn("Private Ticket -> %s", ticketPrivate);
         printGreenGenericLn("These tickets actually cannot be changed to anything convincing.");
         printGreenGenericLn("However, one of the is not entirely immutable. We were able to change the date though.");
         printGreenGenericLn("Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.");
@@ -177,10 +177,10 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("We will now count them");
         final String[] allAlbums = {"Verhalen vanuit de Sofa", "Mayonaise voor de ziel", "Lange nachten, korte dagen", "Do it yourself", "Golven", "Karavaan"};
         var count = Arrays.stream(allAlbums).count();
-        printMagentaGenericLn("Diggy Dex has published %d albums!", count);
-        printMagentaGenericLn("The type of this count is long.");
+        MAGENTA.printGenericLn("Diggy Dex has published %d albums!", count);
+        MAGENTA.printGenericLn("The type of this count is long.");
         long countConvert = count;
-        printMagentaGenericLn("From long: %d", countConvert);
+        MAGENTA.printGenericLn("From long: %d", countConvert);
         printGreenGenericLn("Stream counts are always long.");
     }
 
@@ -219,15 +219,15 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("Let's create a list of the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
-        printMagentaGenericLn("The array is %10s", band);
-        printMagentaGenericLn("This is the band: %s", java.util.Arrays.toString(band));
+        MAGENTA.printGenericLn("The array is %10s", (Object[]) band);
+        MAGENTA.printGenericLn("This is the band: %s", Arrays.toString(band));
         var bandList = java.util.Arrays.stream(band).collect(Collectors.toList());
-        printMagentaGenericLn("This is the band  list : %s", bandList);
+        MAGENTA.printGenericLn("This is the band  list : %s", bandList);
         bandList.forEach(member -> member.concat("(realName)"));
-        printMagentaGenericLn("The band didn't change! %s", bandList);
+        MAGENTA.printGenericLn("The band didn't change! %s", bandList);
         var realNameList = new LinkedList<>(List.of("Olivier Mitshel Locadia", "Alfred Tratlehner", "Pepijn Lanen", "Bas Bron"));
         List<String> completeBand = bandList.stream().map(member -> member.concat("(").concat(realNameList.remove()).concat(")")).collect(Collectors.toList());
-        printMagentaGenericLn("We finally got all the names!! 😉 %s", completeBand);
+        MAGENTA.printGenericLn("We finally got all the names!! 😉 %s", completeBand);
         printGreenGenericLn("For loops do not affect elements directly. They may only affect their contents...");
     }
 
@@ -237,7 +237,7 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
         BLUE.printGenericLn("final String[]  band = {\"Willie Wartaal\", \"Vieze Fur\", \"Faberyayo\", \"Bas Bron\"};");
-        printMagentaGenericLn("This is the band: %s", String.join(",", band));
+        MAGENTA.printGenericLn("This is the band: %s", String.join(",", band));
     }
 
     private static void exercise8() {
@@ -247,7 +247,7 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("Let's create one!");
 
         var recordCase = new RecordCase(100);
-        printMagentaGenericLn("Case details -> %s", recordCase);
+        MAGENTA.printGenericLn("Case details -> %s", recordCase);
         recordCase.printStuff();
         printGreenGenericLn("Take notice on the member calling before creation.");
         printGreenGenericLn("Which methods are actually called and why?");
@@ -271,9 +271,9 @@ public class Mastery3Dot1Runner {
         itemsWithNoName.add("Hip Hop");
         Object singers = itemsWithNoName.get(0);
         printYellowGenericLn("        Object singers = itemsWithNoName.get(0);\n");
-        printMagentaGenericLn("This is the type of this list, %s", itemsWithNoName.getClass());
-        printMagentaGenericLn("And these are the types of its contents, %s", itemsWithNoName.getClass());
-        printMagentaGenericLn("We can only list the singers, %s, `Object`'s", singers);
+        MAGENTA.printGenericLn("This is the type of this list, %s", itemsWithNoName.getClass());
+        MAGENTA.printGenericLn("And these are the types of its contents, %s", itemsWithNoName.getClass());
+        MAGENTA.printGenericLn("We can only list the singers, %s, `Object`'s", singers);
         printGreenGenericLn("The point is, just like in any List, the type is important when retrieving the items.");
         printGreenGenericLn("Although diamond notation is handy in the old syntax, with the use of `var` it becomes rather obsolete and leads to confusing code.");
     }
@@ -283,7 +283,7 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("Case: We placed our files somewhere, but how do we call the root?");
         printYellowGenericLn("Path.of(\"/tmp\").getRoot()");
-        printMagentaGenericLn(Path.of("/tmp").getRoot());
+        MAGENTA.printGenericLn(Path.of("/tmp").getRoot());
         printGreenGenericLn("That's it! Slashes are part of root, not of individual paths");
     }
 
@@ -297,15 +297,15 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("Let's see how he does it:");
 
         var record = new VinylRecord("2742984738947894790942370470", "De stilte voorbij", "2000", "[PIAS] Holland", "Normal");
-        printMagentaGenericLn("This is our record. It's a vinyl! %s", record);
-        printMagentaGenericLn("We'll call `checkItem` in different ways!");
-        printMagentaGenericLn("Shop.checkItem(record);");
+        MAGENTA.printGenericLn("This is our record. It's a vinyl! %s", record);
+        MAGENTA.printGenericLn("We'll call `checkItem` in different ways!");
+        MAGENTA.printGenericLn("Shop.checkItem(record);");
         Shop.checkItem(record);
-        printMagentaGenericLn("Shop.checkItem((Record) record);");
+        MAGENTA.printGenericLn("Shop.checkItem((Record) record);");
         Shop.checkItem((Record) record);
-        printMagentaGenericLn("Shop.checkItem((ShopItem) record);");
+        MAGENTA.printGenericLn("Shop.checkItem((ShopItem) record);");
         Shop.checkItem((ShopItem) record);
-        printMagentaGenericLn("Finally we make a machine a start the `checkItem` procedure without a record");
+        MAGENTA.printGenericLn("Finally we make a machine a start the `checkItem` procedure without a record");
         Shop.checkItem(null);
         printGreenGenericLn("Never forget that a call with null will search for the most specific overloading!");
     }
@@ -315,21 +315,21 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("Case: We want to buy a record of Maaike Ouboter");
         printGreenGenericLn("We made a selection of an article we really want to buy.");
-        printMagentaGenericLn("Customer -> Good morning, do you have Maaike Ouboter album \"Vanaf nu is het van jou?\"");
-        printMagentaGenericLn("Clerk -> Yes I do, let me check...");
+        MAGENTA.printGenericLn("Customer -> Good morning, do you have Maaike Ouboter album \"Vanaf nu is het van jou?\"");
+        MAGENTA.printGenericLn("Clerk -> Yes I do, let me check...");
         var albumsInStore = List.of(
                 new ShopItem("2742984738947894790942370470", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Normal"),
                 new ShopItem("2394720347320943290482084328", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special"),
                 new ShopItem("9839043805934789054378573895", "En hoe het dan ook weer dag wordt", "2015", "Sony Music Entertainment", "Normal")
         );
-        printMagentaGenericLn("Clerk -> So that album was published in %s, by %s, one moment...", "2018", "Sony Music Entertainment");
+        MAGENTA.printGenericLn("Clerk -> So that album was published in %s, by %s, one moment...", "2018", "Sony Music Entertainment");
         List<ShopItem> itemsInStore = albumsInStore.stream().filter(shopItem -> shopItem.equals(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Normal")))
                 .collect(Collectors.toList());
-        printMagentaGenericLn("Clerk -> We seem to have two of those, do you know exactly the one you want?\n%s", itemsInStore);
-        printMagentaGenericLn("Customer -> Yes, I want the special super special please");
-        printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. We don't sorry. Do you have another selection?", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "SuperSpecial")));
-        printMagentaGenericLn("Customer -> Yes, I want the special edition please");
-        printMagentaGenericLn("Clerk -> Yes, let me check if we have it... %b. Yes! We do! Great! 😉", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special")));
+        MAGENTA.printGenericLn("Clerk -> We seem to have two of those, do you know exactly the one you want?\n%s", itemsInStore);
+        MAGENTA.printGenericLn("Customer -> Yes, I want the special super special please");
+        MAGENTA.printGenericLn("Clerk -> Yes, let me check if we have it... %b. We don't sorry. Do you have another selection?", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "SuperSpecial")));
+        MAGENTA.printGenericLn("Customer -> Yes, I want the special edition please");
+        MAGENTA.printGenericLn("Clerk -> Yes, let me check if we have it... %b. Yes! We do! Great! 😉", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special")));
         printGreenGenericLn("Important take out here is that `@Override` must be done with `Object` and equals can of course be overloaded.");
     }
 
@@ -340,7 +340,7 @@ public class Mastery3Dot1Runner {
         printGreenGenericLn("We took the lyrics from https://www.musixmatch.com/lyrics/Abel/Onderweg,");
         printGreenGenericLn("but now we have no access to the internet and we have to deliver our work in 2 hours! Help!");
         printGreenGenericLn("In this exercise we will find Abel's lyrics in our tmp folder. We hope the system hasn't deleted it yet...");
-        printMagentaGenericLn("We will try to find our file in /tmp. Remember to run ./prepare.sh. Check Readme.md for more details:");
+        MAGENTA.printGenericLn("We will try to find our file in /tmp. Remember to run ./prepare.sh. Check Readme.md for more details:");
 
         try {
             var temporaryFolder = Paths.get("/tmp");

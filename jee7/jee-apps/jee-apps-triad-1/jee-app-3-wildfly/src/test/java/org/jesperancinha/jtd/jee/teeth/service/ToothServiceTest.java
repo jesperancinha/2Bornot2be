@@ -31,6 +31,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
@@ -77,7 +78,7 @@ public class ToothServiceTest {
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
         assertEquals(jaw1.getUuid(), toothResult.getJaw()
             .getUuid());
-        Consolerizer.printMagentaGenericLn("from: https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html");
+        MAGENTA.printGenericLn("from: https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html");
         Consolerizer.printBrightMagentaGenericLn("The class must be annotated with the javax.persistence.Entity annotation.");
         Consolerizer.printBrightMagentaGenericLn("The class must have a public or protected, no-argument constructor. The class may have other constructors.");
         Consolerizer.printBrightMagentaGenericLn("The class must not be declared final. No methods or persistent instance variables must be declared final.");

@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum3;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum3 {
@@ -25,14 +25,14 @@ public class Crum3 {
         final A a = new Crum3().new A();
         final B b = new Crum3().new B();
 
-        printMagentaGenericLn("We create A -> %s", a);
-        printMagentaGenericLn("We create B -> %s", b);
+        MAGENTA.printGenericLn("We create A -> %s", a);
+        MAGENTA.printGenericLn("We create B -> %s", b);
 
         A a1 = a.createA();
         B b1 = b.createB();
 
-        printMagentaGenericLn("We create A1 from A -> %s which ia instance of %s", a1, a1.getClass());
-        printMagentaGenericLn("We create B1 from B -> %s", b1);
+        MAGENTA.printGenericLn("We create A1 from A -> %s which ia instance of %s", a1, a1.getClass());
+        MAGENTA.printGenericLn("We create B1 from B -> %s", b1);
 
         try {
             b1 = (B) a1;
@@ -42,7 +42,7 @@ public class Crum3 {
 
         a1 = b1;
 
-        printMagentaGenericLn("We can however assign A1 to B1 -> %s", a1);
+        MAGENTA.printGenericLn("We can however assign A1 to B1 -> %s", a1);
 
         printGreenGenericLn(
             "The upper in the class in the hierarchy you are the broader are the instances your reference can be assigned to.");

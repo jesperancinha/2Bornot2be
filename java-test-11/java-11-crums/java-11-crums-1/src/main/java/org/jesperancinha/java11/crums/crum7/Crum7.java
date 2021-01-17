@@ -1,11 +1,10 @@
 package org.jesperancinha.java11.crums.crum7;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum7 {
@@ -22,6 +21,6 @@ public class Crum7 {
 
         list.add(0, "peanuts");
         list.add(0,"almonds");
-        Consolerizer.printMagentaGenericLn(list);
+        MAGENTA.printGenericLn(list);
     }
 }

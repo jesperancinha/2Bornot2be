@@ -1,9 +1,8 @@
 package org.jesperancinha.java11.crums.crum15;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum15 {
 
@@ -15,15 +14,15 @@ public class Crum15 {
     private static int b;
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 15 - Coexistence of instance and static members");
-        printMagentaGenericLn("Note that we could not create a static member named a");
+        MAGENTA.printGenericLn("Note that we could not create a static member named a");
         final Crum15 crum15 = new Crum15();
-        printMagentaGenericLn("This is because we already have an instance member named  a=%s", crum15.a);
-        printMagentaGenericLn("And so  we have to name our static variable something else such as b=%s", b);
+        MAGENTA.printGenericLn("This is because we already have an instance member named  a=%s", crum15.a);
+        MAGENTA.printGenericLn("And so  we have to name our static variable something else such as b=%s", b);
 
-        printMagentaGenericLn("The same is valid for methods:");
-        printMagentaGenericLn("This is because we already have an instance member named  a=%s", crum15.getA());
-        printMagentaGenericLn("And so  we have to name our static variable something else such as b=%s", crum15.getB());
-        printMagentaGenericLn("And so  we have to name our static variable something else such as b=%s", getB());
+        MAGENTA.printGenericLn("The same is valid for methods:");
+        MAGENTA.printGenericLn("This is because we already have an instance member named  a=%s", crum15.getA());
+        MAGENTA.printGenericLn("And so  we have to name our static variable something else such as b=%s", crum15.getB());
+        MAGENTA.printGenericLn("And so  we have to name our static variable something else such as b=%s", getB());
 
         printGreenGenericLn("Variable initialization is mandatory in local scopes");
         printGreenGenericLn("For instance and static scopes, we do not need to initialize them");

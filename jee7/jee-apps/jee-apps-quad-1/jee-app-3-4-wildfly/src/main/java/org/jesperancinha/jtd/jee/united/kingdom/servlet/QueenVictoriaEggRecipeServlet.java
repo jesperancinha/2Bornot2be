@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.Properties;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConGraphs.printRainbowFlag;
 
 @WebServlet("/history/victoria/cooking")
@@ -43,7 +43,7 @@ public class QueenVictoriaEggRecipeServlet extends HttpServlet {
         writer.println("<p><a href=\"../../index.xhtml\">Back</a></p>");
         writer.println("</body></html>");
 
-        printMagentaGenericLn("Running job with id %s", processId);
+        MAGENTA.printGenericLn("Running job with id %s", processId);
     }
 
     private long startNewBatchJob() {
