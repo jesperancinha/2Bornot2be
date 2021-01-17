@@ -36,7 +36,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.ConGraphs.printUnicornsLn;
 
 public class Master2Dot2Runner {
     public static void main(String[] args) {

@@ -45,4 +45,13 @@ public class ConGraphs {
             }
         }
     }
+
+    public static void printUnicornsLn(final int nUnicorns) {
+        Consolerizer.printRainbowLn('-', nUnicorns / 4);
+        for (int i = 0; i < nUnicorns; i++) {
+            System.out.print("🦄");
+        }
+        Consolerizer.printNewLine();
+        Consolerizer.printRainbowLn('-', nUnicorns / 4);
+    }
 }

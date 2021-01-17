@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.girl.bands.soap;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConGraphs;
 
 import javax.annotation.Resource;
 import javax.jws.WebService;
@@ -45,10 +45,10 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
         Arrays.stream(EXPECTED_LYRICS)
             .forEach(text -> YELLOW.printGenericLn(text));
 
-        Consolerizer.printUnicornsLn(100);
+        ConGraphs.printUnicornsLn(100);
         MAGENTA.printGenericLn(wsContext.getMessageContext());
         MAGENTA.printGenericLn(wsContext.getUserPrincipal());
-        Consolerizer.printUnicornsLn(100);
+        ConGraphs.printUnicornsLn(100);
 
         final MessageContext mc = this.wsContext.getMessageContext();
         final var sr = mc.get(MessageContext.SERVLET_REQUEST);

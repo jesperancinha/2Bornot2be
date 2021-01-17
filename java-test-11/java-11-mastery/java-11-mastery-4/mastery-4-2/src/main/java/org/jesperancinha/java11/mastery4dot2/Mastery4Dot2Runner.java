@@ -61,7 +61,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer.ConGraphs.printUnicornsLn;
 import static org.jesperancinha.java11.mastery4dot2.concert.Ticket.getTicketsLongNumbers;
 import static org.jesperancinha.java11.mastery4dot2.concert.Ticket.getTicketsStringNumbers;
 

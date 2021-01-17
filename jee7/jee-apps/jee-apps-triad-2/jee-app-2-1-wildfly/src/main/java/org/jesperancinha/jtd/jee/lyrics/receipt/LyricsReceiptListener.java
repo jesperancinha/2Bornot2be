@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.lyrics.receipt;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConGraphs;
 
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
@@ -21,7 +21,7 @@ public class LyricsReceiptListener implements MessageListener {
             try {
                 BLUE.printGenericTitleLn("Received a message!");
                 ORANGE.printGenericLn(textMessage.getText());
-                Consolerizer.printUnicornsLn(100);
+                ConGraphs.printUnicornsLn(100);
                 message.acknowledge();
             } catch (Exception  ex) {
                 ex.printStackTrace(System.err);
