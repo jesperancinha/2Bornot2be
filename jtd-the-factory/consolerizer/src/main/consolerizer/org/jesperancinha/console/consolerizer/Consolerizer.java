@@ -47,6 +47,10 @@ public class Consolerizer {
         this.typingWait = typingWait;
     }
 
+    public Consolerizer(ConColor conColor) {
+        this.conColor = conColor;
+    }
+
     public static void setupFastDefault() {
         typingWaitGlobal = 0;
         maxLineCharsGlobal = 100;
@@ -79,20 +83,21 @@ public class Consolerizer {
 
     /**
      * Follows the 19:10 rule for general flags
+     *
      * @param flagText The text to be placed at the center of the flag
      */
     public static void printRainbowFlag(String flagText) {
         int heightPerColorBar = (int) ((double) (titleSpread) * 10d / 19d) / 6 / 4;
         heightPerColorBar = heightPerColorBar <= 0 ?
-            1 :
-            heightPerColorBar;
+                1 :
+                heightPerColorBar;
         final List<ConColor> consoleRainbow = ConColor.getConsoleRainbowEnumList();
         final int ranbowColorSize = consoleRainbow.size();
         final int height = ranbowColorSize * heightPerColorBar;
         int iMiddle = height / 2;
         iMiddle = height % 2 == 0 ?
-            iMiddle - 1 :
-            iMiddle;
+                iMiddle - 1 :
+                iMiddle;
         for (int i = 0, k = 0; i < ranbowColorSize; i++) {
             printColor(consoleRainbow.get(i));
             for (int j = 0; j < heightPerColorBar; j++, k++) {
@@ -123,7 +128,7 @@ public class Consolerizer {
 
     public static void printBlueGenericLn(Object text) {
         printBlueGeneric(text.toString()
-            .concat("\n"));
+                .concat("\n"));
     }
 
     public static void printBlueGenericTitleLn(Object text, Object... args) {
@@ -152,7 +157,7 @@ public class Consolerizer {
 
     public static void printMagentaGenericLn(Object text) {
         printMagentaGeneric(("" + text).trim()
-            .concat("\n"));
+                .concat("\n"));
     }
 
     public static void printMagentaGeneric(Object text) {
@@ -172,7 +177,7 @@ public class Consolerizer {
 
     public static void printRandomColorGenericLn(Object text) {
         printRandomColorGeneric(("" + text).trim()
-            .concat("\n"));
+                .concat("\n"));
     }
 
     public static void printRandomColorGeneric(Object text) {
@@ -192,7 +197,7 @@ public class Consolerizer {
 
     public static void printBrightMagentaGenericLn(Object text) {
         printBrightMagentaGeneric(text.toString()
-            .concat("\n"));
+                .concat("\n"));
     }
 
     public static void printBrightMagentaGeneric(Object text) {
@@ -243,13 +248,13 @@ public class Consolerizer {
 
     public static void printYellowGenericLn(Object text) {
         printYellowGeneric(text.toString()
-            .concat("\n"));
+                .concat("\n"));
 
     }
 
     public static void printYellowGenericLn(Object text, Object... args) {
         printYellowGeneric(text.toString()
-            .concat("\n"), args);
+                .concat("\n"), args);
     }
 
     public static void printOrangeGeneric(String text) {
@@ -259,7 +264,7 @@ public class Consolerizer {
 
     public static void printOrangeGenericLn(Object text) {
         printOrangeGeneric(text.toString()
-            .concat("\n"));
+                .concat("\n"));
     }
 
     public static void printOrangeGenericLn(String text, Object... args) {
@@ -375,7 +380,7 @@ public class Consolerizer {
         }
         if (vars instanceof String[][]) {
             printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal,
-                new Object[] { processMultiArrays2((String[][]) vars) });
+                    new Object[]{processMultiArrays2((String[][]) vars)});
         } else {
             for (int i = 0; i < vars.length; i++) {
                 var variable = vars[i];
@@ -388,31 +393,31 @@ public class Consolerizer {
                     var e = (Throwable) variable;
                     var stackTrace = e.getStackTrace();
                     var sb = new StringBuilder(e.getClass()
-                        .getCanonicalName());
+                            .getCanonicalName());
                     if (Objects.nonNull(e.getMessage())) {
                         sb.append("\n\t");
                         sb.append(e.getMessage());
                     }
                     Arrays.stream(stackTrace)
-                        .forEach(stackTraceElement -> {
-                            sb.append("\n\t");
-                            sb.append(stackTraceElement.toString());
-                        });
+                            .forEach(stackTraceElement -> {
+                                sb.append("\n\t");
+                                sb.append(stackTraceElement.toString());
+                            });
                     if (variable instanceof Error) {
                         Throwable cause = e.getCause();
                         if (Objects.nonNull(cause)) {
                             sb.append("\n");
                             sb.append(cause.getClass()
-                                .getCanonicalName());
+                                    .getCanonicalName());
                             if (Objects.nonNull(cause.getMessage())) {
                                 sb.append("\n\t");
                                 sb.append(cause.getMessage());
                             }
                             Arrays.stream(cause.getStackTrace())
-                                .forEach(stackTraceElement -> {
-                                    sb.append("\n\t");
-                                    sb.append(stackTraceElement.toString());
-                                });
+                                    .forEach(stackTraceElement -> {
+                                        sb.append("\n\t");
+                                        sb.append(stackTraceElement.toString());
+                                    });
                         }
                     }
                     vars[i] = sb.toString();
@@ -420,12 +425,12 @@ public class Consolerizer {
                     vars[i] = processMultiArrays2((String[][]) vars[i]);
                 } else if (variable instanceof String[]) {
                     vars[i] = "[".concat(String.join(",", (String[]) variable))
-                        .concat("]");
+                            .concat("]");
                 } else if (variable instanceof int[]) {
                     vars[i] = "[".concat(IntStream.of((int[]) variable)
-                        .mapToObj(Integer::toString)
-                        .collect(joining(","))
-                        .concat("]"));
+                            .mapToObj(Integer::toString)
+                            .collect(joining(","))
+                            .concat("]"));
                 }
             }
             printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal, vars);
@@ -434,10 +439,10 @@ public class Consolerizer {
 
     private static String processMultiArrays2(String[][] vars) {
         return "[".concat(Arrays.stream(vars)
-            .flatMap(x -> Stream.of("[".concat(String.join(",", x))
-                .concat("]")))
-            .collect(joining(",")))
-            .concat("]");
+                .flatMap(x -> Stream.of("[".concat(String.join(",", x))
+                        .concat("]")))
+                .collect(joining(",")))
+                .concat("]");
     }
 
     private static void printPrivateText(String text, int typingWait, int maxLineChars) {
@@ -470,31 +475,31 @@ public class Consolerizer {
 
     private static void printPerLine(String printText, int typingWait, int maxLineChars) {
         final List<List<String>> collect = Arrays.stream(printText.split("\n"))
-            .map(paragraph -> Arrays.stream(getSplit(maxLineChars, paragraph))
-                .map(Consolerizer::trim)
-                .collect(Collectors.toList()))
-            .collect(Collectors.toList());
+                .map(paragraph -> Arrays.stream(getSplit(maxLineChars, paragraph))
+                        .map(Consolerizer::trim)
+                        .collect(Collectors.toList()))
+                .collect(Collectors.toList());
         for (List<String> list : collect) {
             for (String line : list) {
                 Arrays.stream(line.split("\n"))
-                    .forEach(subLine -> {
-                        for (int i = 0; i < subLine.length(); i++) {
-                            if (typingWait > 0) {
-                                try {
-                                    sleep(typingWait);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
+                        .forEach(subLine -> {
+                            for (int i = 0; i < subLine.length(); i++) {
+                                if (typingWait > 0) {
+                                    try {
+                                        sleep(typingWait);
+                                    } catch (InterruptedException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                                printColor(currentColor);
+                                final char c = subLine.charAt(i);
+                                System.out.print(c);
+                                if (c == '\n') {
+                                    printColor(currentColor);
                                 }
                             }
-                            printColor(currentColor);
-                            final char c = subLine.charAt(i);
-                            System.out.print(c);
-                            if (c == '\n') {
-                                printColor(currentColor);
-                            }
-                        }
-                        printNewLine();
-                    });
+                            printNewLine();
+                        });
             }
         }
     }
@@ -542,7 +547,7 @@ public class Consolerizer {
 
     public static void printRainbowTitleLn(final Object title) {
         printRainbowTitle(title.toString()
-            .trim());
+                .trim());
         System.out.print("\n");
         printColor(WHITE);
     }
@@ -571,14 +576,14 @@ public class Consolerizer {
 
     public static void printRainbowLn(final char c, int nchars) {
         printRainbowLn(Stream.generate(((Character) c)::toString)
-            .limit(nchars)
-            .collect(joining()));
+                .limit(nchars)
+                .collect(joining()));
     }
 
     public static void printRainbowLn(final char c) {
         printRainbowLn(Stream.generate(((Character) c)::toString)
-            .limit(rainbowLineChars)
-            .collect(joining()));
+                .limit(rainbowLineChars)
+                .collect(joining()));
     }
 
     public static void printRainbowLn(final String theme) {
@@ -588,18 +593,18 @@ public class Consolerizer {
 
     public static void printRainbow(final String theme) {
         ConColor.getConsoleRainbow()
-            .forEach(color -> {
-                System.out.print(color);
-                System.out.print(theme);
-            });
+                .forEach(color -> {
+                    System.out.print(color);
+                    System.out.print(theme);
+                });
     }
 
     public static void printRainbowStack(final String theme) {
         ConColor.getConsoleRainbow()
-            .forEach(color -> {
-                System.out.print(color);
-                System.out.println(theme);
-            });
+                .forEach(color -> {
+                    System.out.print(color);
+                    System.out.println(theme);
+                });
     }
 
     public static void printUnicornsLn(final int nUnicorns) {
@@ -635,7 +640,7 @@ public class Consolerizer {
         System.out.print(conColor.getConsoleColor());
     }
 
-    private static String createTitleLineLn(Object text, char limitingChar) {
+    static String createTitleLineLn(Object text, char limitingChar) {
         return createTitleLineLn(text, limitingChar, true);
     }
 
@@ -648,14 +653,34 @@ public class Consolerizer {
         var remaining = titleSpread - fullText.length() - 2;
         var padding = (int) Math.ceil(remaining / 2f);
         final String substring = new String(new char[padding]).replace('\0', limitingChar)
-            .concat(" ")
-            .concat(fullText)
-            .concat(" ")
-            .concat(new String(new char[padding]).replace('\0', limitingChar))
-            .substring(0, titleSpread);
+                .concat(" ")
+                .concat(fullText)
+                .concat(" ")
+                .concat(new String(new char[padding]).replace('\0', limitingChar))
+                .substring(0, titleSpread);
         if (newLine) {
             return substring.concat("\n");
         }
         return substring;
+    }
+
+
+    public void printGenericLn(Object text, Object... args) {
+        printGeneric(text.toString().concat("\n"), args);
+
+    }
+
+    public void printGenericLn(Object text) {
+        printGeneric(("" + text).trim().concat("\n"));
+    }
+
+    public void printGeneric(Object text) {
+        printColor(conColor);
+        printPrivateText(text.toString());
+    }
+
+    public void printGeneric(String text, Object... args) {
+        printColor(conColor);
+        printPrivateText(text, args);
     }
 }
