@@ -39,12 +39,12 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -85,7 +85,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise20() {
-        printBrightCyanGenericLn("--- 20. `Files.copy` and symbolic links");
+        BRIGHT_CYAN.printGenericLn("--- 20. `Files.copy` and symbolic links");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We'll create symbolic links to files we create.");
         GREEN.printGenericLn("In this case, a world wide known description of the fantastic City of Olhão.");
@@ -113,11 +113,11 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise19() {
-        printBrightCyanGenericLn("--- 19. `Supplier` and `get`");
+        BRIGHT_CYAN.printGenericLn("--- 19. `Supplier` and `get`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We are going to visit the worldwide known \"Chalé Dr. João Lúcio\"");
         GREEN.printGenericLn("Of course that, in order to visit it, we need someone to give a ticket to go insinde.");
-        printBrightCyanGenericLn("Clerk - Good afternoon sir, how can I help you?");
+        BRIGHT_CYAN.printGenericLn("Clerk - Good afternoon sir, how can I help you?");
         YELLOW.printGenericLn("Client - One ticket please!");
         var ticketSupplier = new Supplier<Ticket>() {
             @Override
@@ -126,9 +126,9 @@ public class Mastery3dot2Runner {
             }
         };
         final Supplier<Ticket> ticketSupplier1 = () -> new Ticket("Copy");
-        printBrightCyanGenericLn("CK - Here you go!");
-        printBrightCyanGenericLn("CK - This is your ticket %s", ticketSupplier.get());
-        printBrightCyanGenericLn("CK - And this is a copy! Enjoy your visit! %s", ticketSupplier1.get());
+        BRIGHT_CYAN.printGenericLn("CK - Here you go!");
+        BRIGHT_CYAN.printGenericLn("CK - This is your ticket %s", ticketSupplier.get());
+        BRIGHT_CYAN.printGenericLn("CK - And this is a copy! Enjoy your visit! %s", ticketSupplier1.get());
         YELLOW.printGenericLn("CL - Thank you so much!");
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. Suppliers return a value without the need of parameters");
@@ -137,7 +137,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise18() {
-        printBrightCyanGenericLn("--- 18. `StringBuilder` and `setLength`");
+        BRIGHT_CYAN.printGenericLn("--- 18. `StringBuilder` and `setLength`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: During a bird-watch, we see a species called: `Slender-billed Gull`");
         GREEN.printGenericLn("In our report however, we can only put a word with 7 characters.");
@@ -158,7 +158,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise17() {
-        printBrightCyanGenericLn("--- 17. `noneMatch` vs `anyMatch`");
+        BRIGHT_CYAN.printGenericLn("--- 17. `noneMatch` vs `anyMatch`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We are now in `Quinta de Marim` in Olhão.");
         GREEN.printGenericLn("We are birdwatching and trying to distinguish the bird species");
@@ -177,7 +177,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise16() {
-        printBrightCyanGenericLn("--- 16. Serializing arrays and Lists");
+        BRIGHT_CYAN.printGenericLn("--- 16. Serializing arrays and Lists");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Sometimes we register a fish catch in a List.");
         GREEN.printGenericLn("Other times we register this info in an array");
@@ -222,7 +222,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise15() {
-        printBrightCyanGenericLn("--- 15. `sorted`, `Comparable` and `ClassCastException`");
+        BRIGHT_CYAN.printGenericLn("--- 15. `sorted`, `Comparable` and `ClassCastException`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: During the sorting of the fish bait, one fisher dropped some real fishes");
         GREEN.printGenericLn("Now we are going to organize this. Will this work?");
@@ -250,7 +250,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise14() {
-        printBrightCyanGenericLn("--- 14. `Consumer` in `for` loops");
+        BRIGHT_CYAN.printGenericLn("--- 14. `Consumer` in `for` loops");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: A bunch of cats is eating left over fish from the fishermen");
         var nFishes = 5;
@@ -272,7 +272,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise13() {
-        printBrightCyanGenericLn("--- 13. `thenComparing`");
+        BRIGHT_CYAN.printGenericLn("--- 13. `thenComparing`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We receive a whole lot of fish by DocaPesca");
         GREEN.printGenericLn("We have to tag all of them, sort them by size and then sort them by species.");
@@ -324,7 +324,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise12() {
-        printBrightCyanGenericLn("--- 12. `ExceptionInInitializerError`");
+        BRIGHT_CYAN.printGenericLn("--- 12. `ExceptionInInitializerError`");
         printRainbowLn("==");
         try {
             new Lingueirao();
@@ -357,7 +357,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise11() {
-        printBrightCyanGenericLn("--- 11. Package protected constructors");
+        BRIGHT_CYAN.printGenericLn("--- 11. Package protected constructors");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We are ordering a coffee in Olhão.");
         GREEN.printGenericLn("In good portuguese tradition we ask for a short coffee by calling it one \"garoto\".");
@@ -377,7 +377,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise10() {
-        printBrightCyanGenericLn("--- 10. local `DateFormat` and `Locale`");
+        BRIGHT_CYAN.printGenericLn("--- 10. local `DateFormat` and `Locale`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: What is the day of the City of Olhão and on which year did it occur?");
         DateFormat dateTimeInstance = DateFormat.getDateTimeInstance();
@@ -398,7 +398,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise9() {
-        printBrightCyanGenericLn("--- 9. `RandomAccessFile` and `writeUTF`");
+        BRIGHT_CYAN.printGenericLn("--- 9. `RandomAccessFile` and `writeUTF`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We want to cook \"Bacalhau à Brás\"");
         GREEN.printGenericLn("We went to the market and bought some pieces of raw, dried and salted cod fish");
@@ -428,7 +428,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise8() {
-        printBrightCyanGenericLn("--- 8. A case for `final` `var` in a `for` loop");
+        BRIGHT_CYAN.printGenericLn("--- 8. A case for `final` `var` in a `for` loop");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Let's get some veggies.");
         GREEN.printGenericLn("We'll go to the supermarket and get some final vegetables.");
@@ -451,7 +451,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise7() {
-        printBrightCyanGenericLn("--- 7. Base modules and the rest");
+        BRIGHT_CYAN.printGenericLn("--- 7. Base modules and the rest");
         printRainbowLn("==");
         BLUE.printGenericLn("Expected output:\n%s", "Cataplana dish is being served...\n" +
                 "cataplana.jar -> java.base\n" +
@@ -467,7 +467,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise6() {
-        printBrightCyanGenericLn("--- 6. `Deque` and `offerLast`, and other methods.");
+        BRIGHT_CYAN.printGenericLn("--- 6. `Deque` and `offerLast`, and other methods.");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: There is a list of clients waiting and the fish seller is registering everything");
         GREEN.printGenericLn("As we ask for the fish request, it goes to a Deque in order to be processed");
@@ -500,7 +500,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise5() {
-        printBrightCyanGenericLn("--- 5. `final` in `try` with resources");
+        BRIGHT_CYAN.printGenericLn("--- 5. `final` in `try` with resources");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We wanted to cook codfish (Bacalhau).");
         GREEN.printGenericLn("But we made a mistake when creating the input stream!");
@@ -517,7 +517,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise4() {
-        printBrightCyanGenericLn("--- 4. Static method inheritance and overriding");
+        BRIGHT_CYAN.printGenericLn("--- 4. Static method inheritance and overriding");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We have a stroll around the market and finally we come across some displays");
         GREEN.printGenericLn("There we can see how Space's are built across the city.");
@@ -541,7 +541,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise3() {
-        printBrightCyanGenericLn("--- 3. Sorting Immutable `List`'s");
+        BRIGHT_CYAN.printGenericLn("--- 3. Sorting Immutable `List`'s");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We finally got the listings of the \"Festival do Marisco 2019\"");
         GREEN.printGenericLn("We want to keep these listings safe, will anyone be able to change them?");
@@ -576,7 +576,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise2() {
-        printBrightCyanGenericLn("--- 2. Multi-dimensional arrays and ways to create them");
+        BRIGHT_CYAN.printGenericLn("--- 2. Multi-dimensional arrays and ways to create them");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We are staying at a 5 star hotel in Olhão");
         GREEN.printGenericLn("The hotel serves us a 2X2 portion of cooked oysters plate.");
@@ -624,7 +624,7 @@ public class Mastery3dot2Runner {
     }
 
     private static void exercise1() {
-        printBrightCyanGenericLn("--- 1. Serialization and polymorphism");
+        BRIGHT_CYAN.printGenericLn("--- 1. Serialization and polymorphism");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We are taking info from the \"Mercado de Olhão\"");
         GREEN.printGenericLn("When try to get the information from the registration website,");

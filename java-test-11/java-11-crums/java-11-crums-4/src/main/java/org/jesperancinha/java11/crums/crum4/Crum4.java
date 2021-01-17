@@ -1,10 +1,9 @@
 package org.jesperancinha.java11.crums.crum4;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 
@@ -34,11 +33,11 @@ public class Crum4 {
         MAGENTA.printGenericLn("For the %s boat we have:", armonaBoat.getClass());
         Arrays.stream(armonaBoat.getClass()
             .getAnnotations())
-            .forEach(Consolerizer::printBrightCyanGenericLn);
+            .forEach(text1 -> BRIGHT_CYAN.printGenericLn(text1));
         MAGENTA.printGenericLn("For the %s boat we have:", tourBoat.getClass());
         Arrays.stream(tourBoat.getClass()
             .getAnnotations())
-            .forEach(Consolerizer::printBrightCyanGenericLn);
+            .forEach(text -> BRIGHT_CYAN.printGenericLn(text));
 
         GREEN.printGenericLn("We need to be aware that although we made our annotation Boat repeatable, it is not dependent on Boats");
         GREEN.printGenericLn("The code declaration of Boats allow us to use the Boat annotation independently and repeatedly");

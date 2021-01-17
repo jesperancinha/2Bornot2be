@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 
 public class Crum14 {
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class Crum14 {
                 }));
 
         MAGENTA.printGenericLn("This is our organized band list ");
-        printBrightCyanGenericLn(map1);
+        BRIGHT_CYAN.printGenericLn(map1);
 
         YELLOW.printGenericLn("Now we just double the values to reduce the ticket to price 0. We found discounts on the web!!!");
 

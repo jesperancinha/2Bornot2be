@@ -41,6 +41,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
@@ -83,17 +84,17 @@ public class Mastery2Dot1Runner {
                 new FileReader(
                         new File(Mastery2Dot1Runner
                                 .class.getResource("/lyrics.txt").toURI())))) {
-            Consolerizer.printBrightCyanGenericLn("The Reader class does not support mark %s", new Reader() {
-                @Override
-                public int read(char[] cbuf, int off, int len) throws IOException {
-                    return 0;
-                }
+            BRIGHT_CYAN.printGenericLn("The Reader class does not support mark %s", new Reader() {
+                    @Override
+                    public int read(char[] cbuf, int off, int len) throws IOException {
+                        return 0;
+                    }
 
-                @Override
-                public void close() throws IOException {
+                    @Override
+                    public void close() throws IOException {
 
-                }
-            }.markSupported());
+                    }
+                }.markSupported());
             BLUE.printGenericLn("The BufferedReader class does support mark %s", r.markSupported());
             if (r.markSupported()) {
                 BufferedReader in = (BufferedReader) r;

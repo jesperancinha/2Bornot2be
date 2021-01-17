@@ -16,6 +16,7 @@ import java.util.Vector;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Mastery1Dot2Runner {
     public static void main(String[] args) throws InterruptedException {
@@ -39,15 +40,15 @@ public class Mastery1Dot2Runner {
         console.printText("These all report to %s:\n%s\n", splinterMain, mapTurtles.toString());
         console.conColor(ConColor.YELLOW);
         console.printText("@@ As you can see a Map is no collection!\n");
-        console.printGreen("var mapTurtles = new HashMap<String, String>() {{\n" +
+        GREEN.printGeneric("var mapTurtles = new HashMap<String, String>() {{\n" +
                 "            String splinter = splinterMain;\n" +
                 "            put(\"Leonardo\", splinter);\n" +
                 "            put(\"Raphael\", splinter);\n" +
                 "            put(\"Michelangelo\", splinter);\n" +
                 "            put(\"Donatello\", splinter);\n" +
                 "        }};\n");
-        console.printRed("Collection test2 = mapTurtles;\n");
-        console.printGreen("Map test = mapTurtles;\n");
+        RED.printGeneric("Collection test2 = mapTurtles;\n");
+        GREEN.printGeneric("Map test = mapTurtles;\n");
 
         var villains = List.of(
                 "The Shredder",
@@ -56,9 +57,9 @@ public class Mastery1Dot2Runner {
                 "Krang",
                 "Bebop",
                 "Rocksteady");
-        console.printBrightCyan("These all report to %s\n%s\n", "Shredder", villains.toString());
+        BRIGHT_CYAN.printGeneric("These all report to %s\n%s\n", "Shredder", villains.toString());
         console.printText("@@ As you can see a List is no Map!\n");
-        console.printGreen(" var villains = List.of(\n" +
+        GREEN.printGeneric(" var villains = List.of(\n" +
                 "                \"The Shredder\",\n" +
                 "                \"Karai\",\n" +
                 "                \"Baxter Stockman\",\n" +
@@ -66,8 +67,8 @@ public class Mastery1Dot2Runner {
                 "                \"Bebop\",\n" +
                 "                \"Rocksteady\");\n");
 
-        console.printRed("Map test= villains;\n");
-        console.printGreen("Collection test2 = villains;\n");
+        RED.printGeneric("Map test= villains;\n");
+        GREEN.printGeneric("Collection test2 = villains;\n");
 
         // 2. Thread-safe and thread-unsafe standard collections
         console.printText("@@ Same collections but with thread unsafe instances\n");
@@ -79,11 +80,11 @@ public class Mastery1Dot2Runner {
             put("Michelangelo", splinter);
             put("Donatello", splinter);
         }};
-        console.printGreen("We remove Donatello from the Hashtable to see what happens\n");
+        GREEN.printGeneric("We remove Donatello from the Hashtable to see what happens\n");
         try {
             mapTurtlesSynchronizedUnsafe.forEach((s, s2) -> mapTurtlesSynchronizedUnsafe.remove("Donatello"));
         } catch (ConcurrentModificationException e) {
-            console.printRed("A ConcurrentModificationException has occurred! It's not safe!%s\n", e.getMessage());
+            RED.printGeneric("A ConcurrentModificationException has occurred! It's not safe!%s\n", e.getMessage());
         }
 
         var villainsSynchronizedUnsafe = new Vector<String>();
@@ -93,20 +94,20 @@ public class Mastery1Dot2Runner {
         villainsSynchronizedUnsafe.add("Krang");
         villainsSynchronizedUnsafe.add("Bebop");
         villainsSynchronizedUnsafe.add("Rocksteady");
-        console.printGreen("We remove Krang from the Vector to see what happens\n");
+        GREEN.printGeneric("We remove Krang from the Vector to see what happens\n");
         try {
             villainsSynchronizedUnsafe.forEach((s) -> villainsSynchronizedUnsafe.remove("Karai"));
         } catch (ConcurrentModificationException e) {
-            console.printRed("A ConcurrentModificationException has occurred! It's not safe!%s\n", e.getMessage());
+            RED.printGeneric("A ConcurrentModificationException has occurred! It's not safe!%s\n", e.getMessage());
         }
 
         console.printText("@@ As a cherry on the cake let's modify an unmodifiable list\n");
-        console.printBrightCyan("var villainsUnmodifiable = Collections.unmodifiableCollection(villains);\n");
+        BRIGHT_CYAN.printGeneric("var villainsUnmodifiable = Collections.unmodifiableCollection(villains);\n");
         var villainsUnmodifiable = Collections.unmodifiableCollection(villains);
         try {
             villainsUnmodifiable.add("Rookie");
         } catch (UnsupportedOperationException e) {
-            console.printRed("We cannot modify, unmodifiable collections ok?\n");
+            RED.printGeneric("We cannot modify, unmodifiable collections ok?\n");
         }
 
         // 4. Default methods multi-implementation

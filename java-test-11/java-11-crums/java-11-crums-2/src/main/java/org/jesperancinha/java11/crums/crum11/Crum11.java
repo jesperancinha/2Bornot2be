@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 
 public class Crum11 {
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Crum11 {
         final List<? extends String> bandListWildcardExtends = bandList;
         bandList.add("Sneaky");
         final String band1 = bandListWildcardExtends.get(0);
-        printBrightCyanGenericLn(band1);
+        BRIGHT_CYAN.printGenericLn(band1);
 
         // capture of ? extends String
         // String test = "Anna Domino";
@@ -67,7 +67,7 @@ public class Crum11 {
             Arrays.asList("Vampire Weekend", "Los Campesinos!", "The Cure", "PJ Harvey",
                 "Nick Cave and the bad seeds"));
         final Object o = bandListWildcardDiamond.get(0);
-        printBrightCyanGenericLn(o);
+        BRIGHT_CYAN.printGenericLn(o);
         MAGENTA.printGenericLn("We can create wildcard lists in combinastion with diamond notation created instances.");
         MAGENTA.printGenericLn("Note that since the reference is a wildcard, adding is also not an easy option in this case");
 

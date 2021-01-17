@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 
 public class Crum14 {
     public static void main(String[] args) {
@@ -15,12 +15,12 @@ public class Crum14 {
         final List<Double> list = new ArrayList<>();
         list.add(111d);
 
-        printBrightCyanGenericLn(list);
-        printBrightCyanGenericLn(list.contains(111d));
-        printBrightCyanGenericLn(list.contains(111f));
-        printBrightCyanGenericLn(list.contains("WOW"));
-        printBrightCyanGenericLn(list.containsAll(List.of(111d)));
-        printBrightCyanGenericLn(list.containsAll(Collections.singletonList(111d)));
+        BRIGHT_CYAN.printGenericLn(list);
+        BRIGHT_CYAN.printGenericLn(list.contains(111d));
+        BRIGHT_CYAN.printGenericLn(list.contains(111f));
+        BRIGHT_CYAN.printGenericLn(list.contains("WOW"));
+        BRIGHT_CYAN.printGenericLn(list.containsAll(List.of(111d)));
+        BRIGHT_CYAN.printGenericLn(list.containsAll(Collections.singletonList(111d)));
 
         MAGENTA.printGenericLn("Notice that you can only add elements strictly of the type of the array");
         MAGENTA.printGenericLn("Contains works with all types though");

@@ -52,13 +52,13 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -103,7 +103,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise19() {
-        printBrightCyanGenericLn("--- 19. `try-with-resources` `open` and `close` methods.");
+        BRIGHT_CYAN.printGenericLn("--- 19. `try-with-resources` `open` and `close` methods.");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We are at the end of our mastery module");
         GREEN.printGenericLn("If you noticed, drums are a part of almost all spanish music");
@@ -125,7 +125,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise18() {
-        printBrightCyanGenericLn("--- 18. `Arrays` `binarySearch`");
+        BRIGHT_CYAN.printGenericLn("--- 18. `Arrays` `binarySearch`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We have compiled a list of of all Lori Meyers albums we know");
         GREEN.printGenericLn("Lori Meyers started in 1998. You are now in possession of a lot of their records.");
@@ -148,7 +148,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise17() {
-        printBrightCyanGenericLn("--- 17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`");
+        BRIGHT_CYAN.printGenericLn("--- 17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: In the year 2000, spanish singer, Monica Naranjo, came into the music scene with her hit \"Sobreviviré\"");
         GREEN.printGenericLn("Given the raw energy of the lyrics of the songs and its meaning, \"Sobreviviré\" became an anthem of those who fight to be understood and accepted");
@@ -215,7 +215,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise16() {
-        printBrightCyanGenericLn("--- 16. NavigableMap and `pollLastEntry` and `pollFirstEntry`");
+        BRIGHT_CYAN.printGenericLn("--- 16. NavigableMap and `pollLastEntry` and `pollFirstEntry`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: \"Supersubmarina\" is a band from Spain.");
         GREEN.printGenericLn("In 2008 and 2009, they've edited their first two EP(Extended Play)s");
@@ -250,7 +250,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise15() {
-        printBrightCyanGenericLn("--- 15. Iterating through a `CopyOnWriteArrayList` and the `UnsupportedOperationException`");
+        BRIGHT_CYAN.printGenericLn("--- 15. Iterating through a `CopyOnWriteArrayList` and the `UnsupportedOperationException`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Someone is compiling songs of the band Dorian for you.");
         GREEN.printGenericLn("Your other half is waiting impatiently for the mix result.");
@@ -327,7 +327,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise14() {
-        printBrightCyanGenericLn("--- 14. Static and instance initialization of final `members`");
+        BRIGHT_CYAN.printGenericLn("--- 14. Static and instance initialization of final `members`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We know that the band Dorian is mostly classified as being an Indie pop group.");
         GREEN.printGenericLn("We'll create its registry and see the many different ways we can initialize final values.");
@@ -342,7 +342,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise13() {
-        printBrightCyanGenericLn("--- 13. `Float.POSITIVE_INFINITY` vs `Float.NEGATIVE_INFINITY`");
+        BRIGHT_CYAN.printGenericLn("--- 13. `Float.POSITIVE_INFINITY` vs `Float.NEGATIVE_INFINITY`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Vetusta Morla publish in 2020 its fith studio album entitled \"Mismo Sitio Distinto Lugar - Canciones dentro de canciones\".");
         GREEN.printGenericLn("They came up with this original concept of songs within songs.");
@@ -398,7 +398,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise12() {
-        printBrightCyanGenericLn("--- 12. Immutability with Guidelines 7 and 6");
+        BRIGHT_CYAN.printGenericLn("--- 12. Immutability with Guidelines 7 and 6");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We just made a much safer Cristal Ball for Alaska to use.");
         GREEN.printGenericLn("Let's give it a try!.");
@@ -460,7 +460,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise11() {
-        printBrightCyanGenericLn("--- 11. Method overloading and overriding with `extends`");
+        BRIGHT_CYAN.printGenericLn("--- 11. Method overloading and overriding with `extends`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Some of us like music \"Rosario Flores\" style, others prefer something more edgy like \"Dorian\".");
         GREEN.printGenericLn("We now have to manage the upcoming dates and for that we have created just one BandManager abstraction");
@@ -514,7 +514,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise10() {
-        printBrightCyanGenericLn("--- 10. Evaluation order of conditional operators");
+        BRIGHT_CYAN.printGenericLn("--- 10. Evaluation order of conditional operators");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Pepe is a manager that loves going to concerts.");
         GREEN.printGenericLn("In your team, you know that he is crazy about \"Vetusta Morla\".");
@@ -553,7 +553,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise9() {
-        printBrightCyanGenericLn("--- 9. Why use `putIfAbsent`?");
+        BRIGHT_CYAN.printGenericLn("--- 9. Why use `putIfAbsent`?");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Someone in your group of friends suggested to go to the next concert of Paulina Rubio.");
         GREEN.printGenericLn("Unfortunatelly you cannot go.");
@@ -660,7 +660,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise8() {
-        printBrightCyanGenericLn("--- 8. Overwriting with `FileOutputStream`");
+        BRIGHT_CYAN.printGenericLn("--- 8. Overwriting with `FileOutputStream`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: \"Sueño su boca\" was the first big hit of Raúl Cuenca in Spain.");
         GREEN.printGenericLn("In the year 2000, this hit was being played all across spanish speaking countries and the rest of the latin world.");
@@ -717,7 +717,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise7() {
-        printBrightCyanGenericLn("--- 7. Immutability standards and using `LocalDate` and `LocalDateTime`");
+        BRIGHT_CYAN.printGenericLn("--- 7. Immutability standards and using `LocalDate` and `LocalDateTime`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Alaska started a show in 1984 based on the writings of Dolores Rico Oliver called \"La bola de cristal\".");
         GREEN.printGenericLn("\"La bola de cristal\", if yo haven't guessed already means \"The cristal ball\"");
@@ -747,10 +747,10 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("This is the Cristal Ball of Episode I\n%s", bolaDeCristal);
         MAGENTA.printGenericLn("We can get the from the available ones\n%s", CristalBall.getHost(bolaDeCristal));
         MAGENTA.printGenericLn("We can get it from the available ones\n%s", CristalBall.getCristalBall(bolaDeCristal.getPriv()));
-        printBrightCyanGenericLn("We can also comment it out:");
+        BRIGHT_CYAN.printGenericLn("We can also comment it out:");
         bolaDeCristal.setComment("Me encanta este show! Super guay!!");
         MAGENTA.printGenericLn("And then we get a comment on our Cristal Ball\n%s", bolaDeCristal);
-        printBrightCyanGenericLn("And if we check if this is immutable:");
+        BRIGHT_CYAN.printGenericLn("And if we check if this is immutable:");
         Date date = bolaDeCristal.getDate();
         Date dateSafeCopy = bolaDeCristal.getDateSafeCopy();
         LocalDate localDate = bolaDeCristal.getLocalDate();
@@ -758,15 +758,15 @@ public class Mastery4Dot2Runner {
         Band band = bolaDeCristal.getBand();
         String host = bolaDeCristal.getHost();
         MAGENTA.printGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
-        printBrightCyanGenericLn("Let's tamper that and see if we can change it!");
+        BRIGHT_CYAN.printGenericLn("Let's tamper that and see if we can change it!");
         date.setYear(200);
         dateSafeCopy.setTime(200);
         band.capacity = 1000;
-        printBrightCyanGenericLn("Note that LocalDate and LocalDateTime are already immutable");
-        printBrightCyanGenericLn("We did change the date objects and the capacity.");
-        printBrightCyanGenericLn("From the outside we get the impression that we changed our original cristal ball:");
+        BRIGHT_CYAN.printGenericLn("Note that LocalDate and LocalDateTime are already immutable");
+        BRIGHT_CYAN.printGenericLn("We did change the date objects and the capacity.");
+        BRIGHT_CYAN.printGenericLn("From the outside we get the impression that we changed our original cristal ball:");
         MAGENTA.printGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
-        printBrightCyanGenericLn("But from the inside we see that nothing has changed:");
+        BRIGHT_CYAN.printGenericLn("But from the inside we see that nothing has changed:");
         date = bolaDeCristal.getDate();
         dateSafeCopy = bolaDeCristal.getDateSafeCopy();
         localDate = bolaDeCristal.getLocalDate();
@@ -774,7 +774,7 @@ public class Mastery4Dot2Runner {
         band = bolaDeCristal.getBand();
         host = bolaDeCristal.getHost();
         MAGENTA.printGenericLn("We get that\n%s had a band:\n%s\nand the pilot show aired on spanish television on the:%s\n%s\n%s\n%s ", host, band, date, dateSafeCopy, localDate, localDateTime);
-        printBrightCyanGenericLn("If we make a copy of it, we can use our method. Remember that we made a copy method to make a copy easy and follow the secuirty guidelines:");
+        BRIGHT_CYAN.printGenericLn("If we make a copy of it, we can use our method. Remember that we made a copy method to make a copy easy and follow the secuirty guidelines:");
         try {
             MAGENTA.printGenericLn("This is our copy:\n%s", bolaDeCristal.copy());
         } catch (NoSuchProviderException e) {
@@ -792,7 +792,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise6() {
-        printBrightCyanGenericLn("--- 6. Bypassing overloading methods with different return types");
+        BRIGHT_CYAN.printGenericLn("--- 6. Bypassing overloading methods with different return types");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We want to go one of the \"La casa azul\" concerts.");
         GREEN.printGenericLn("Time is running out to book them, we don't know to which one we can go to.");
@@ -808,8 +808,8 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("Our third ticket is -> %s", ticket3);
         MAGENTA.printGenericLn("We have all the tickets for \"La casa azul\":\n%s", getTicketsStringNumbers("La casa azul"));
         MAGENTA.printGenericLn("Some of them are just numbers:\n%s", getTicketsLongNumbers("La casa azul"));
-        printBrightCyanGenericLn("We realize that we can only go to the latest one!");
-        printBrightCyanGenericLn("Let's unregister te last two tickets");
+        BRIGHT_CYAN.printGenericLn("We realize that we can only go to the latest one!");
+        BRIGHT_CYAN.printGenericLn("Let's unregister te last two tickets");
         var ticket1U = Ticket.unregisterTicket("ES23424ES23432");
         var ticket2U = Ticket.unregisterTicket(123232341342312L);
         assert ticket1.equals(ticket1U);
@@ -828,7 +828,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise5() {
-        printBrightCyanGenericLn("--- 5. Hiding and shadowing instance members");
+        BRIGHT_CYAN.printGenericLn("--- 5. Hiding and shadowing instance members");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: \"Love of Lesbian\" was founded in 1997.");
         GREEN.printGenericLn("Alaska actually started in a band called \"Alaska y los Pegamoides\" in 1979.");
@@ -883,7 +883,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise4() {
-        printBrightCyanGenericLn("--- 4. The `java.desktop` module");
+        BRIGHT_CYAN.printGenericLn("--- 4. The `java.desktop` module");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We want an app that lets us surf the web for short stories about Spanish music");
         GREEN.printGenericLn("We'll make our first prototype using the \"Bandido\". A famous spanish album from \"Miguel Bosé\" containing famous anthem \"Amante bandido\"");
@@ -900,7 +900,7 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise3() {
-        printBrightCyanGenericLn("--- 3. The body of `switch`");
+        BRIGHT_CYAN.printGenericLn("--- 3. The body of `switch`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: \"¿A quién le importa?\" is a single from 1984 sung by Alaska and Dinamara, and edited by Nacho Canut and Carlos Berlanga.");
         GREEN.printGenericLn("There have been a lot of switches in styles up until present for this song. Several covers.");
@@ -1006,7 +1006,7 @@ public class Mastery4Dot2Runner {
 
 
     private static void exercise2() {
-        printBrightCyanGenericLn("--- 2. Different ways to use `this`");
+        BRIGHT_CYAN.printGenericLn("--- 2. Different ways to use `this`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: In 1981, Hispavox edited and published single \"Juntos\" by Paloma San Basilio");
         GREEN.printGenericLn("Since then, this song has been sung and remixed by different artists.");
@@ -1027,15 +1027,15 @@ public class Mastery4Dot2Runner {
     }
 
     private static void exercise1() {
-        printBrightCyanGenericLn("--- 1. Primitives Revised");
+        BRIGHT_CYAN.printGenericLn("--- 1. Primitives Revised");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Music group Fangoria was created in 1989.");
         GREEN.printGenericLn("The name of the group was inspired by the love the group members, Alaska and Nacho Canut have for the magazine of the same name");
         GREEN.printGenericLn("We'll have a look at numbers related to that magazine and explore java primitive types with it");
         printRainbowLn("###");
         final byte issnLeft = 0164;
-        printBrightCyanGenericLn("Byte - one byte - 2^8");
-        printBrightCyanGenericLn("Range from %s to %s", Byte.MIN_VALUE, Byte.MAX_VALUE);
+        BRIGHT_CYAN.printGenericLn("Byte - one byte - 2^8");
+        BRIGHT_CYAN.printGenericLn("Range from %s to %s", Byte.MIN_VALUE, Byte.MAX_VALUE);
         MAGENTA.printGenericLn("If we look at the left side of the issn, we a small number.");
         MAGENTA.printGenericLn("164, is however, too big for the maximum allowed value for a byte.");
         MAGENTA.printGenericLn("In this case, we can use its octed representation, which in turn is a smaller number than a 164.");
@@ -1046,8 +1046,8 @@ public class Mastery4Dot2Runner {
         BRIGHT_MAGENTA.printGenericLn("Also, bear in mind that primitive numbers without decimals are interpreted as integers. except for byte and short");
         printRainbowLn("###");
         short lossesPerIssue = 20000;
-        printBrightCyanGenericLn("Short two bytes - 2^16");
-        printBrightCyanGenericLn("Range from %s to %s", Short.MIN_VALUE, Short.MAX_VALUE);
+        BRIGHT_CYAN.printGenericLn("Short two bytes - 2^16");
+        BRIGHT_CYAN.printGenericLn("Range from %s to %s", Short.MIN_VALUE, Short.MAX_VALUE);
         MAGENTA.printGenericLn("In early beginnings, Fangoria magazine wasn't selling that much.");
         MAGENTA.printGenericLn("The losses amounted to USD$20000 per issue");
         MAGENTA.printGenericLn("We cannot put this number in a byte. It just falls out of range");
@@ -1059,8 +1059,8 @@ public class Mastery4Dot2Runner {
         BRIGHT_MAGENTA.printGenericLn("However, the benefits of using primitives like these two for small numbers can represent an advantage");
         printRainbowLn("###");
         int oclc = 4618144;
-        printBrightCyanGenericLn("Integer four bytes - 2^32");
-        printBrightCyanGenericLn("Range from %s to %s", Integer.MIN_VALUE, Integer.MAX_VALUE);
+        BRIGHT_CYAN.printGenericLn("Integer four bytes - 2^32");
+        BRIGHT_CYAN.printGenericLn("Range from %s to %s", Integer.MIN_VALUE, Integer.MAX_VALUE);
         MAGENTA.printGenericLn("As reported by wikipedia, the OCLC is the Ohio College Library Center number.");
         MAGENTA.printGenericLn("We want to register this reference number for the publishing of issue 7 of Fangoria Magazine.");
         MAGENTA.printGenericLn("For this, we cannot use Short anymore. It falls out of the range needed.");
@@ -1073,8 +1073,8 @@ public class Mastery4Dot2Runner {
         BRIGHT_MAGENTA.printGenericLn("They only get converted when they match the range.");
         printRainbowLn("###");
         long firstPublicationMs = 283_996_800_000L;
-        printBrightCyanGenericLn("Long eight bytes - 2^64");
-        printBrightCyanGenericLn("Range from %s to %s", Long.MIN_VALUE, Long.MAX_VALUE);
+        BRIGHT_CYAN.printGenericLn("Long eight bytes - 2^64");
+        BRIGHT_CYAN.printGenericLn("Range from %s to %s", Long.MIN_VALUE, Long.MAX_VALUE);
         MAGENTA.printGenericLn("The first publication of Fangoria happened on a specific date.");
         MAGENTA.printGenericLn("We found the number in milliseconds.");
         MAGENTA.printGenericLn("If we convert that to some epoch representation, we then convert from %d to %s", firstPublicationMs, LocalDateTime.ofInstant(Instant.ofEpochMilli(firstPublicationMs), ZoneId.systemDefault()));
@@ -1086,9 +1086,9 @@ public class Mastery4Dot2Runner {
         BRIGHT_MAGENTA.printGenericLn("If it falls out of the range of Integer and we want it to be long, we specify that with an appended L or l.");
         printRainbowLn("###");
         float firstPublicationMs2 = 283_996_800_000L;
-        printBrightCyanGenericLn("Float 4 bytes - 2^32");
-        printBrightCyanGenericLn("Range from %s to %s with a min normal %s", Float.MIN_VALUE, Float.MAX_VALUE, Float.MIN_NORMAL);
-        printBrightCyanGenericLn("It stores up 6 to 7 significant numbers");
+        BRIGHT_CYAN.printGenericLn("Float 4 bytes - 2^32");
+        BRIGHT_CYAN.printGenericLn("Range from %s to %s with a min normal %s", Float.MIN_VALUE, Float.MAX_VALUE, Float.MIN_NORMAL);
+        BRIGHT_CYAN.printGenericLn("It stores up 6 to 7 significant numbers");
         MAGENTA.printGenericLn("Before continuing in this section you probably noticed a strange conversion.");
         MAGENTA.printGenericLn("A long to a float? Well that can happen simply because a long fits in a float range.");
         MAGENTA.printGenericLn("And although float occupies less amount of bytes (4) than long (8), its implementation allows this to happen.");
@@ -1108,19 +1108,19 @@ public class Mastery4Dot2Runner {
         printRainbowLn("###");
         double parallelUniversePublications2 = (3_000_000d * 12 * 30 * 1e+200);
         double parallelUniversePublications3 = (3_000_000d * 12 * 30 * 1e+300);
-        printBrightCyanGenericLn("Float 4 bytes - 2^32");
-        printBrightCyanGenericLn("Range from %s to %s with a min normal %s", Double.MIN_VALUE, Double.MAX_VALUE, Double.MIN_NORMAL);
+        BRIGHT_CYAN.printGenericLn("Float 4 bytes - 2^32");
+        BRIGHT_CYAN.printGenericLn("Range from %s to %s with a min normal %s", Double.MIN_VALUE, Double.MAX_VALUE, Double.MIN_NORMAL);
         MAGENTA.printGenericLn("In the same way with Float, we can make a calculation if we have %s universes", 1e+200);
         BRIGHT_MAGENTA.printGenericLn("Notice the d. Now we specify that the number is a double.");
         MAGENTA.printGenericLn("If the number is too big, we'll get a different lind of mathematical notation.");
         MAGENTA.printGenericLn("If we try with %s universes", parallelUniversePublications3);
         MAGENTA.printGenericLn("A very high number is also considered a number, but Double specifies it as %s", parallelUniversePublications3);
-        printBrightCyanGenericLn("Reminder: double values are 64 bit floating point numbers with a precision of 15 to 16 significant number digits.");
-        printBrightCyanGenericLn("Doubles range from\n%s to %s in normal values", Double.MIN_NORMAL, Double.MAX_VALUE);
-        printBrightCyanGenericLn("Doubles can also be: %s and be %f or %f", Double.MIN_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY);
-        printBrightCyanGenericLn(parallelUniversePublications1);
-        printBrightCyanGenericLn(parallelUniversePublications2);
-        printBrightCyanGenericLn(parallelUniversePublications3);
+        BRIGHT_CYAN.printGenericLn("Reminder: double values are 64 bit floating point numbers with a precision of 15 to 16 significant number digits.");
+        BRIGHT_CYAN.printGenericLn("Doubles range from\n%s to %s in normal values", Double.MIN_NORMAL, Double.MAX_VALUE);
+        BRIGHT_CYAN.printGenericLn("Doubles can also be: %s and be %f or %f", Double.MIN_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY);
+        BRIGHT_CYAN.printGenericLn(parallelUniversePublications1);
+        BRIGHT_CYAN.printGenericLn(parallelUniversePublications2);
+        BRIGHT_CYAN.printGenericLn(parallelUniversePublications3);
         printRainbowLn("###");
         GREEN.printGenericLn("Curiosities about primitive types:");
         double maxTest = 3.40282353482789473289473289477899659000892042934820984928423804e+38;

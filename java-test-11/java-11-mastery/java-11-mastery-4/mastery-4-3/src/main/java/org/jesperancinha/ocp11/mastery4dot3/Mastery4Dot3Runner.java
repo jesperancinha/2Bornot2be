@@ -48,12 +48,12 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -92,7 +92,7 @@ public class Mastery4Dot3Runner {
         exercise17();
         exercise18();
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 19. `String` `replace` old/new");
+        BRIGHT_CYAN.printGenericLn("--- 19. `String` `replace` old/new");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We are closing this module with \"After the Curtain\" from musical group Beirut.");
         GREEN.printGenericLn("After this module, please continue your studies. Look out for new modules as they will keep coming");
@@ -120,7 +120,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise18() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 18. Abstract classes and the `new` keyword");
+        BRIGHT_CYAN.printGenericLn("--- 18. Abstract classes and the `new` keyword");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We have a plan for a guitar. It is probably the most important instrument in Indie music.");
         GREEN.printGenericLn("Deadline is approaching and you have to deliver it! It's not ready!");
@@ -161,7 +161,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise17() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`");
+        BRIGHT_CYAN.printGenericLn("--- 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend..,Again!");
         GREEN.printGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
@@ -176,7 +176,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise16() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 16. Overriding methods returning primitives");
+        BRIGHT_CYAN.printGenericLn("--- 16. Overriding methods returning primitives");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We are going to see how many songs per record, on average, are Animal Collective developing.");
         GREEN.printGenericLn("We want one or more methods that return different types: Byte, Short, Character, Integer, Long, Float and Double");
@@ -223,7 +223,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise15() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 15. add `override` in an `ArrayList`");
+        BRIGHT_CYAN.printGenericLn("--- 15. add `override` in an `ArrayList`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We are going to store our Animal Collective record collection in and ArrayList.");
         GREEN.printGenericLn("But is isn't no ordinary list! This is a AnimalCollectiveList!");
@@ -246,7 +246,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise14() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 14. When to call `flush`");
+        BRIGHT_CYAN.printGenericLn("--- 14. When to call `flush`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We'll save lyrics of Animal Collective's single \"FloriDada\" from 2016 into a file.");
         GREEN.printGenericLn("Do we need to flush it?");
@@ -276,7 +276,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise13() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 13. Creating and filtering an `IntStream`");
+        BRIGHT_CYAN.printGenericLn("--- 13. Creating and filtering an `IntStream`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We will examine the position on the charts for Animal Collective at present: 2020/12/06");
         GREEN.printGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
@@ -316,7 +316,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise12() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 12. Complex `operands` and `operators`");
+        BRIGHT_CYAN.printGenericLn("--- 12. Complex `operands` and `operators`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: In this case, there isn't really much we can do in terms of our Indie Theme.");
         GREEN.printGenericLn("In this exercise we just want to make a random execution flow and guess what is happening.");
@@ -355,7 +355,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise11() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 11. `readPassword` in `Console`");
+        BRIGHT_CYAN.printGenericLn("--- 11. `readPassword` in `Console`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: Capital Cities made a funny video, where to get to their video set, a password is asked at the entrance.");
         GREEN.printGenericLn("See the video here: https://www.youtube.com/watch?v=w7JFSLu8OHI");
@@ -384,7 +384,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise10() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 10. Collecting duplicate entries to a `Map`");
+        BRIGHT_CYAN.printGenericLn("--- 10. Collecting duplicate entries to a `Map`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We have a collection of Capital Cities CD's");
         GREEN.printGenericLn("Now we want put those in a Map so that we have a reference to the year we bought them.");
@@ -417,7 +417,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise9() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 9. `++i` `i++` in a loop");
+        BRIGHT_CYAN.printGenericLn("--- 9. `++i` `i++` in a loop");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
         GREEN.printGenericLn("There are 10 in the normal edition and we are two people counting!");
@@ -442,7 +442,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise8() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 8. Boxing and the difference between primitives");
+        BRIGHT_CYAN.printGenericLn("--- 8. Boxing and the difference between primitives");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: The album \"Hercules and The Love Affair\" of the band of the same name was published on the 10th of March 2008.");
         GREEN.printGenericLn("We are going to use the numerology related to this album to explore boxing from primitive values");
@@ -493,7 +493,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise7() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 7. `jdeps` alternative `commands`");
+        BRIGHT_CYAN.printGenericLn("--- 7. `jdeps` alternative `commands`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
         GREEN.printGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
@@ -504,7 +504,7 @@ public class Mastery4Dot3Runner {
     }
 
     private static void exercise6() {
-        printBrightCyanGenericLn("--- 6. Downcasting and Upcasting");
+        BRIGHT_CYAN.printGenericLn("--- 6. Downcasting and Upcasting");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: Hercules and Love Affair is on tour and you are going to see them in the backstage!");
         GREEN.printGenericLn("Can you go on their trailer? Probably not ☹️. We'll look into the not case.");
@@ -542,7 +542,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise5() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 5. `Predicate` of types");
+        BRIGHT_CYAN.printGenericLn("--- 5. `Predicate` of types");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: Vampire Weekend had 2 wind by the Grammys for two of their albums.");
         GREEN.printGenericLn("We'll build some predicates based on this and see the small differences.");
@@ -596,7 +596,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise4() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 4. Valid modes in `RandomAccessFile`. Difference from using `append`");
+        BRIGHT_CYAN.printGenericLn("--- 4. Valid modes in `RandomAccessFile`. Difference from using `append`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We are writing the lyrics to Contra");
         GREEN.printGenericLn("We will use alternative methods to do so and alternate");
@@ -647,7 +647,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise3() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 3. Mutability Guidelines with focus on 6.6.");
+        BRIGHT_CYAN.printGenericLn("--- 3. Mutability Guidelines with focus on 6.6.");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: In January 2020, Vampire Weekend won the best Album of the Year at the Grammy's.");
         GREEN.printGenericLn("At the same time they have had already released a limited edition orange vinyl version of this album.");
@@ -685,7 +685,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise2() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 2. Using `mapToObj`");
+        BRIGHT_CYAN.printGenericLn("--- 2. Using `mapToObj`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
         GREEN.printGenericLn("Let's have a look at the math behind it");
@@ -811,7 +811,7 @@ public class Mastery4Dot3Runner {
 
     private static void exercise1() {
         printRainbowLn('=');
-        printBrightCyanGenericLn("--- 1. Indexes in a `ResultSet`");
+        BRIGHT_CYAN.printGenericLn("--- 1. Indexes in a `ResultSet`");
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We are wondering what happened to MGMT and why we don't hear about them anymore.");
         GREEN.printGenericLn("On this first exercise we will investigate their triad of hits.");

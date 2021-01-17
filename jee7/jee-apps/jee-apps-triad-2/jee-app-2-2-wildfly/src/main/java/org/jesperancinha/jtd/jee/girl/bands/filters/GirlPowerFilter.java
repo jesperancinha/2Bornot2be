@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 
 @WebFilter(urlPatterns = { "/app/secure/*" }, description = "Session Checker Filter")
 public class GirlPowerFilter implements Filter {
@@ -27,7 +27,7 @@ public class GirlPowerFilter implements Filter {
         this.config = config;
         config.getServletContext()
             .log(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
-        printBrightCyanGenericLn(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
+        BRIGHT_CYAN.printGenericLn(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
     }
 
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
@@ -54,6 +54,6 @@ public class GirlPowerFilter implements Filter {
     public void destroy() {
         config.getServletContext()
             .log(GIRL_POWER_FILTER_IS_BEING_REMOVED);
-        printBrightCyanGenericLn(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
+        BRIGHT_CYAN.printGenericLn(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
     }
 }

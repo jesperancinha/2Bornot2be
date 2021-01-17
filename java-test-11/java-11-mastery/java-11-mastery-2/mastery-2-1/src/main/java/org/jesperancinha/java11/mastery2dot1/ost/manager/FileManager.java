@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGeneric;
 
 public class FileManager {
 
@@ -34,7 +34,7 @@ public class FileManager {
         RED.printGeneric(strings.toString());
         final List<String> strings1 = executeFunction2(test);
         RED.printGeneric(strings1.toString());
-        printBrightCyanGeneric("%s\n", allOSTFiles.toString());
+        BRIGHT_CYAN.printGeneric("%s\n", allOSTFiles.toString());
     }
 
     List<File> allOSTFiles = Collections.singletonList(new File("/tmp/ost.txt"));

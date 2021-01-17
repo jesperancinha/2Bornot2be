@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.girl.bands.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -10,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @WebServlet("/LoginGirlBandRecordStoreServlet")
@@ -41,8 +39,8 @@ public class LoginGirlBandRecordStoreServlet extends HttpServlet {
                         .equals("JSESSIONID")) {
                         printRainbowTitleLn("JSESSIONID=%s", cookie.getValue());
                     } else {
-                        printBrightCyanGenericLn("Found cookie %s!", cookie);
-                        printBrightCyanGenericLn("%s=%s", cookie.getName(), cookie.getValue());
+                        BRIGHT_CYAN.printGenericLn("Found cookie %s!", cookie);
+                        BRIGHT_CYAN.printGenericLn("%s=%s", cookie.getName(), cookie.getValue());
                     }
                 }
             }
@@ -52,7 +50,7 @@ public class LoginGirlBandRecordStoreServlet extends HttpServlet {
             var userName = new Cookie("username", user);
             response.addCookie(userName);
             var encodedURL = response.encodeRedirectURL("store_main.jsp");
-            Consolerizer.printBrightCyanGenericLn(encodedURL);
+            BRIGHT_CYAN.printGenericLn(encodedURL);
             response.sendRedirect(encodedURL);
         } else {
             var writer = response.getWriter();

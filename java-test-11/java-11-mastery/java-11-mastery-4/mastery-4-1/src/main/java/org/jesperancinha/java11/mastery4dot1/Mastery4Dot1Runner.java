@@ -40,10 +40,10 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
@@ -82,7 +82,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise15() {
-        printBrightCyanGenericLn("---  15. What does `@Deprecated` actually do?");
+        BRIGHT_CYAN.printGenericLn("---  15. What does `@Deprecated` actually do?");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: You are one of the organizers of Woodstock '69");
         GREEN.printGenericLn("You realized you made a mistake!");
@@ -107,7 +107,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise14() {
-        printBrightCyanGenericLn("---  14. What encapsulation CANNOT do!");
+        BRIGHT_CYAN.printGenericLn("---  14. What encapsulation CANNOT do!");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: You were so impressed with day 16th of August 1969 at Woodstock, that you decided to make a radio of it");
         GREEN.printGenericLn("The best thing about radio is always the surprise factor and the fact that you do not control it");
@@ -130,7 +130,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise13() {
-        printBrightCyanGenericLn("--- 13. References operation in shadowing static interface members with class members");
+        BRIGHT_CYAN.printGenericLn("--- 13. References operation in shadowing static interface members with class members");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: You don't want to miss the time Joan Baez is going to perform");
         GREEN.printGenericLn("Your ticket has two dates and times on it, but which one is the one from your concert?");
@@ -152,7 +152,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise12() {
-        printBrightCyanGenericLn("--- 12. All possible `switch`");
+        BRIGHT_CYAN.printGenericLn("--- 12. All possible `switch`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: It is the 15th of August 1969 and you just went to have fun with your pals.");
         GREEN.printGenericLn("We'll look at the listings to see what's happening for today and tomorrow.");
@@ -240,7 +240,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise11() {
-        printBrightCyanGenericLn("--- 11. Using `private` in inner classes");
+        BRIGHT_CYAN.printGenericLn("--- 11. Using `private` in inner classes");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: In 1957, Frank Kameny's was fired from the United States Army.");
         GREEN.printGenericLn("The case seemed to come from institutionalized homophobia. In fact he was discharged for being found to be a homosexual");
@@ -277,13 +277,13 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise10() {
-        printBrightCyanGenericLn("--- 10. Using non-modularized jars in modularized jars");
+        BRIGHT_CYAN.printGenericLn("--- 10. Using non-modularized jars in modularized jars");
         printRainbowLn("==");
         GREEN.printGenericLn("Please check module mastery-4-1-modularity to continue.");
     }
 
     private static void exercise9() {
-        printBrightCyanGenericLn("--- 9. DOS attacks in Java");
+        BRIGHT_CYAN.printGenericLn("--- 9. DOS attacks in Java");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: It's 1967, you work for the Pentagon and you come across some papers about the USA involvement in the Vietnam war.");
         GREEN.printGenericLn("You have to keep these papers safe, so you decide to make a copy of these files to your safe.");
@@ -335,7 +335,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise8() {
-        printBrightCyanGenericLn("--- 8. Loading drivers in JDBC 4.0");
+        BRIGHT_CYAN.printGenericLn("--- 8. Loading drivers in JDBC 4.0");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We need to record the different missions that took place in the Vietnam War.");
         GREEN.printGenericLn("The Vietnam war is a period that lasted between 1887 and 1975.");
@@ -381,7 +381,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise7() {
-        printBrightCyanGenericLn("--- 7. Calculating averages with `collector`'s or with Number typed streams");
+        BRIGHT_CYAN.printGenericLn("--- 7. Calculating averages with `collector`'s or with Number typed streams");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We will count the average count of electoral votes per state in the results of the 1968th USA presidential election.");
         final int[] votes = {3, 5, 40, 6, 3, 14, 4, 26, 13, 9, 7, 9, 12, 4, 5, 3, 4, 17, 4, 12, 4, 26, 8, 6, 8, 4, 11, 4, 3, 12, 12, 3};
@@ -405,7 +405,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise6() {
-        printBrightCyanGenericLn("--- 6. Java Inheritance of state");
+        BRIGHT_CYAN.printGenericLn("--- 6. Java Inheritance of state");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: After JFK's assassination, LBJ inherited the bill of rights which JFK had fought for, for so long.");
         GREEN.printGenericLn("This was the time to make a move, and make a move LBJ did!");
@@ -421,7 +421,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise5() {
-        printBrightCyanGenericLn("--- 5. Generics separation between `<T>` and `T`");
+        BRIGHT_CYAN.printGenericLn("--- 5. Generics separation between `<T>` and `T`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Lyndon B. Johnson envisioned `The Great Society plan` in 1963.");
         GREEN.printGenericLn("This led through the years to the civil rights act of 1964 and 1965.");
@@ -444,7 +444,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise4() {
-        printBrightCyanGenericLn("--- 4. Last `Exception` to execute before exiting program abruptly");
+        BRIGHT_CYAN.printGenericLn("--- 4. Last `Exception` to execute before exiting program abruptly");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: It is 1969, June 28th and you went downtown NY to the famous `The Stonewall Inn`");
         GREEN.printGenericLn("It was a nice cosy night and now its early morning and all of the sudden the police charges in!");
@@ -475,7 +475,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise3() {
-        printBrightCyanGenericLn("--- 3. JLS evaluation order in multiple operands");
+        BRIGHT_CYAN.printGenericLn("--- 3. JLS evaluation order in multiple operands");
         printRainbowLn("==");
         GREEN.printGenericLn("https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html");
         GREEN.printGenericLn("Case: We have the initials LBJ and we want to know how many years was he/she president.");
@@ -511,11 +511,11 @@ public class Mastery4Dot1Runner {
     }
 
     private static void presidentSearch(String presidentName, String presidentName1, String lbj) {
-        printBrightCyanGenericLn("We though it was %s, but then it wasn't %s and instead it was %s", presidentName, presidentName1, lbj);
+        BRIGHT_CYAN.printGenericLn("We though it was %s, but then it wasn't %s and instead it was %s", presidentName, presidentName1, lbj);
     }
 
     private static void exercise2() {
-        printBrightCyanGenericLn("--- 2. What is the output of `String` for it's 3 different kind of values: `null`, \"\" and \"Something\"");
+        BRIGHT_CYAN.printGenericLn("--- 2. What is the output of `String` for it's 3 different kind of values: `null`, \"\" and \"Something\"");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Three students are making resets: Katie, Chloe and Susan");
         BLUE.printGenericLn("Teacher: In what year was JFK assigned to the ONI field office at Headquarters");
@@ -535,7 +535,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void exercise1() {
-        printBrightCyanGenericLn("--- 1. `Exception` `catch` order");
+        BRIGHT_CYAN.printGenericLn("--- 1. `Exception` `catch` order");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We have just made a test about the history of the United States of America.");
         GREEN.printGenericLn("You are applying for a United States residency and nationality.");
@@ -573,7 +573,7 @@ public class Mastery4Dot1Runner {
     }
 
     private static void question(Scanner scanner, String s, String s2, RookieException e) throws RookieException {
-        printBrightCyanGenericLn(s);
+        BRIGHT_CYAN.printGenericLn(s);
         String a7;
         if (skipQuestions) {
             a7 = s2;

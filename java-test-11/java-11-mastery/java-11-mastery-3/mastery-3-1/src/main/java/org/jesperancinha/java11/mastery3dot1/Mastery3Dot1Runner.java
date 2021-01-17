@@ -43,12 +43,12 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -86,7 +86,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise16() {
-        printBrightCyanGenericLn("--- 16. Accessibility `@Override`");
+        BRIGHT_CYAN.printGenericLn("--- 16. Accessibility `@Override`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We hve different versions of `Verdronken Vlinder`.");
         GREEN.printGenericLn("How many ways can we get them?");
@@ -99,7 +99,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise15() {
-        printBrightCyanGenericLn("--- 15. `java.lang.OutOfMemoryError` and `Error` classes");
+        BRIGHT_CYAN.printGenericLn("--- 15. `java.lang.OutOfMemoryError` and `Error` classes");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!");
         GREEN.printGenericLn("What will happen if too many people buy it?");
@@ -125,7 +125,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise14() {
-        printBrightCyanGenericLn("--- 14. Accessing `static` `interface` methods");
+        BRIGHT_CYAN.printGenericLn("--- 14. Accessing `static` `interface` methods");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We received a record case and want to see its descriptions.");
         GREEN.printGenericLn("Do we need its instance?.");
@@ -143,7 +143,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise13() {
-        printBrightCyanGenericLn("--- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)");
+        BRIGHT_CYAN.printGenericLn("--- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show");
         GREEN.printGenericLn("However, the show on the ticket is from a missed show in Villa Thallia in Rotterdam which took  place 8 days ago.");
@@ -171,7 +171,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise12() {
-        printBrightCyanGenericLn("--- 12. `Stream` count types");
+        BRIGHT_CYAN.printGenericLn("--- 12. `Stream` count types");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We have the complete collection of `Diggy Dex` records.");
         GREEN.printGenericLn("We will now count them");
@@ -185,7 +185,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise11() throws InterruptedException {
-        printBrightCyanGenericLn("--- 11. Thread safe `Object` s");
+        BRIGHT_CYAN.printGenericLn("--- 11. Thread safe `Object` s");
         printRainbowLn("==");
 
         var liveConcert = new LiveConcert(50);
@@ -215,7 +215,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise10() {
-        printBrightCyanGenericLn("--- 10. Passing variables by value and not returning in `Stream`");
+        BRIGHT_CYAN.printGenericLn("--- 10. Passing variables by value and not returning in `Stream`");
         printRainbowLn("==");
         GREEN.printGenericLn("Let's create a list of the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
@@ -232,7 +232,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise9() {
-        printBrightCyanGenericLn("--- 9. Declaring a `String` array.");
+        BRIGHT_CYAN.printGenericLn("--- 9. Declaring a `String` array.");
         printRainbowLn("==");
         GREEN.printGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
@@ -241,7 +241,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise8() {
-        printBrightCyanGenericLn("--- 8. Initialization of invisible `primitive` members");
+        BRIGHT_CYAN.printGenericLn("--- 8. Initialization of invisible `primitive` members");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: Our shop has grown a lot and we need a brand new bookcase!");
         GREEN.printGenericLn("Let's create one!");
@@ -255,7 +255,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise7() {
-        printBrightCyanGenericLn("--- 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`");
+        BRIGHT_CYAN.printGenericLn("--- 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We've created a list of elements but didn't gave it a type with diamond notation!");
         GREEN.printGenericLn("We can't sell these at our shop this way, but what is their type?");
@@ -279,7 +279,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise6() {
-        printBrightCyanGenericLn("--- 6. How `getRoot()` exhibits the root `Path`");
+        BRIGHT_CYAN.printGenericLn("--- 6. How `getRoot()` exhibits the root `Path`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We placed our files somewhere, but how do we call the root?");
         YELLOW.printGenericLn("Path.of(\"/tmp\").getRoot()");
@@ -288,7 +288,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise5() {
-        printBrightCyanGenericLn("--- 5. How `null` is interpreted in overloading");
+        BRIGHT_CYAN.printGenericLn("--- 5. How `null` is interpreted in overloading");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We receive different shop items.");
         GREEN.printGenericLn("Now we want to check their state.");
@@ -311,7 +311,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise4() {
-        printBrightCyanGenericLn("--- 4. `@Override` in `equals`");
+        BRIGHT_CYAN.printGenericLn("--- 4. `@Override` in `equals`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We want to buy a record of Maaike Ouboter");
         GREEN.printGenericLn("We made a selection of an article we really want to buy.");
@@ -334,7 +334,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise3() {
-        printBrightCyanGenericLn("--- 3. `Files.newDirectoryStream` Listings and the `glob` pattern");
+        BRIGHT_CYAN.printGenericLn("--- 3. `Files.newDirectoryStream` Listings and the `glob` pattern");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We saved a part of Abel's Lyrics somewhere, for our social study work, but we don't know where the file is.");
         GREEN.printGenericLn("We took the lyrics from https://www.musixmatch.com/lyrics/Abel/Onderweg,");
@@ -411,7 +411,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise2() {
-        printBrightCyanGenericLn("--- 2. Labels and `break` in loops");
+        BRIGHT_CYAN.printGenericLn("--- 2. Labels and `break` in loops");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: You are a fan of \"De Jeugd van Tegenwoordig\" and you just keep buying their records.");
         GREEN.printGenericLn("You have a shelf with three rows where your records are organized by most favourite too less favourite album.");
@@ -482,7 +482,7 @@ public class Mastery3Dot1Runner {
     }
 
     private static void exercise1() {
-        printBrightCyanGenericLn("--- 1. `Integer` Mathematical Bases `parseInt`");
+        BRIGHT_CYAN.printGenericLn("--- 1. `Integer` Mathematical Bases `parseInt`");
         printRainbowLn("==");
         GREEN.printGenericLn("According to NPO(https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein),  Diggy Dex single, \"Grote Mannen Worden Klein\" was releases in 2014");
         GREEN.printGenericLn("Let's see different ways to visualize this:");

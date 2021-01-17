@@ -103,62 +103,6 @@ public class Consolerizer {
         printPrivateText(text);
     }
 
-    public void printRed(String text) {
-        RED.printGeneric(text);
-    }
-
-    public void printRed(Object text, Object... args) {
-        RED.printGeneric(text, args);
-    }
-
-    public void printGreen(String text) {
-        GREEN.printGeneric(text);
-    }
-
-    public void printBlue(String text) {
-        BLUE.printGeneric(text);
-    }
-
-    public static void printBrightCyanGenericLn(final Object text, final Object... args) {
-        BRIGHT_CYAN.printGenericLn(text, args);
-    }
-
-    public static void printBrightCyanGenericLn(Object text) {
-        BRIGHT_CYAN.printGenericLn(text);
-    }
-
-    public static void printBrightCyanGeneric(Object text) {
-        BRIGHT_CYAN.printGeneric(text);
-    }
-
-    public static void printBrightCyanGeneric(String text, Object... args) {
-        BRIGHT_CYAN.printGeneric(text, args);
-    }
-
-    public static void printWhiteGenericLn(final String text, final Object... args) {
-        WHITE.printGenericLn(text, args);
-    }
-
-    public static void printWhiteGenericLn(Object text) {
-        WHITE.printGenericLn(text);
-    }
-
-    public static void printWhiteGeneric(Object text) {
-        WHITE.printGeneric(text);
-    }
-
-    public static void printWhiteGeneric(String text, Object... args) {
-        WHITE.printGeneric(text, args);
-    }
-
-    public void printBrightCyan(Object text) {
-        BRIGHT_CYAN.printGeneric(text);
-    }
-
-    public void printBrightCyan(String text, Object... args) {
-        BRIGHT_CYAN.printGeneric(text, args);
-    }
-
     public void printText(String text) {
         printColor(conColor);
         printPrivateText(text);
