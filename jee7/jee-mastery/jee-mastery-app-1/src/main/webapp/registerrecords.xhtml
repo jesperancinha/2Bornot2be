@@ -19,18 +19,21 @@
 <h:body>
     <h1>Register records at store</h1>
 
-   <p><h:outputText for="recordTitleId" value="Record Title:"/>
-       <h:inputText id="recordTitleId" value="#{registerCart.newRecord.name}"/></p>
+    <h:form id="recordFormId">
+        <p><h:outputText for="recordTitleId" value="Record Title:"/>
+            <h:inputText id="recordTitleId" value="#{registerCart.newRecord.name}"/></p>
 
-   <p><h:outputText for="recordTypeId" value="Record Type:"/>
-       <h:inputText id="recordTypeId" value="#{registerCart.newRecord.type}"/></p>
+        <p><h:outputText for="recordTypeId" value="Record Type:"/>
+            <h:inputText id="recordTypeId" value="#{registerCart.newRecord.type}"/></p>
 
-   <p><h:outputText for="recordYearId" value="Record Year:"/>
-       <h:inputText id="recordYearId" value="#{registerCart.newRecord.year}"/></p>
+        <p><h:outputText for="recordYearId" value="Record Year:"/>
+            <h:inputText id="recordYearId" value="#{registerCart.newRecord.year}"/></p>
 
-   <p><h:outputText for="recordArtistId" value="Record Artist:"/>
-       <h:inputText id="recordArtistId" value="#{registerCart.newRecord.artist}"/></p>
+        <p><h:outputText for="recordArtistId" value="Record Artist:"/>
+            <h:inputText id="recordArtistId" value="#{registerCart.newRecord.artist}"/></p>
 
+        <p><h:commandButton value="Save" action="#{registerCart.saveRecord()}"/></p>
+    </h:form>
 </h:body>
 
 </html>
