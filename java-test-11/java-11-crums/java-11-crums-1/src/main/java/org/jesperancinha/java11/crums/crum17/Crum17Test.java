@@ -1,11 +1,11 @@
 package org.jesperancinha.java11.crums.crum17;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 
 class MainOne {
     public static void main(String[] args) {
 
-        Consolerizer.printBlueGenericLn("This is Main One");
+        BLUE.printGenericLn("This is Main One");
 
     }
 }
@@ -13,7 +13,7 @@ class MainOne {
 class MainTwo {
     public static void main(String[] args) {
 
-        Consolerizer.printBlueGenericLn("This is Main Two");
+        BLUE.printGenericLn("This is Main Two");
 
     }
 }

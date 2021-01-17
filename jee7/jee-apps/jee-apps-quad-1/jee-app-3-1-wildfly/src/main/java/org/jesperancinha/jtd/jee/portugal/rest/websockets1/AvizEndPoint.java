@@ -12,7 +12,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 @ServerEndpoint("/aviz")
@@ -24,7 +24,7 @@ public class AvizEndPoint {
 
     @OnMessage
     public void onMessage(Session session, String message) throws IOException {
-        printBlueGenericTitleLn("OnMessage from %s called!", this.getClass()
+        BLUE.printGenericTitleLn("OnMessage from %s called!", this.getClass()
             .getCanonicalName());
         printGreenGenericLn("Message receive is: %s", message);
         final var returnMessage = String.format("Q: %s\n A: %s", message, "So you want to be part of the House of Aviz huh!?!");
@@ -39,7 +39,7 @@ public class AvizEndPoint {
 
     @OnOpen
     public void onOpen(Session session, EndpointConfig conf) throws IOException, EncodeException {
-        printBlueGenericTitleLn("OnOpen from %s called!", this.getClass()
+        BLUE.printGenericTitleLn("OnOpen from %s called!", this.getClass()
             .getCanonicalName());
         session.getBasicRemote()
             .sendText("Welcome to the house of Aviz!");
@@ -56,13 +56,13 @@ public class AvizEndPoint {
 
     @OnError
     public void onError(Session session, Throwable error) {
-        printBlueGenericTitleLn("onError from %s called!", this.getClass()
+        BLUE.printGenericTitleLn("onError from %s called!", this.getClass()
             .getCanonicalName());
     }
 
     @OnClose
     public void onClose(Session session, CloseReason reason) throws IOException {
-        printBlueGenericTitleLn("onClose from %s called!", this.getClass()
+        BLUE.printGenericTitleLn("onClose from %s called!", this.getClass()
             .getCanonicalName());
         session.getBasicRemote().sendText("Connection closed!");
         session.getBasicRemote().sendText(reason.getReasonPhrase());

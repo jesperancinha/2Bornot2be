@@ -1,7 +1,6 @@
 package org.jesperancinha.java11.crums.crum3;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
@@ -10,10 +9,9 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTi
 public class Crum3 {
     public static void main(String[] args) {
 
-        printBlueGenericTitleLn("Crum 3 - Creating different types of fors");
+        BLUE.printGenericTitleLn("Crum 3 - Creating different types of fors");
 
-        printBlueGenericLn(
-            "        //'var' is not allowed in a compound declaration\n" + "        // for(var a=0, b=0; b<10; b++){\n"
+        BLUE.printGenericLn("        //'var' is not allowed in a compound declaration\n" + "        // for(var a=0, b=0; b<10; b++){\n"
                 + "        //     \n" + "        // }");
         //'var' is not allowed in a compound declaration
         // for(var a=0, b=0; b<10; b++){

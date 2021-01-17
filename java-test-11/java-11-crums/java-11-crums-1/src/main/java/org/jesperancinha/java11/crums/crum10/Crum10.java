@@ -1,11 +1,11 @@
 package org.jesperancinha.java11.crums.crum10;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum10 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 10 - Modulus operator investigation");
+        BLUE.printGenericTitleLn("Crum 10 - Modulus operator investigation");
 
         printYellowGenericLn(33.33 % 2);
         printYellowGenericLn(33.33 % 3);

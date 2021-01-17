@@ -8,8 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -19,7 +18,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 
 public class Crum14 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 14 - Working with Collectors.toMap");
+        BLUE.printGenericTitleLn("Crum 14 - Working with Collectors.toMap");
 
         final List<String> bandsInConcert = List.of("REM - Price = 20.3", "B-52's - Price = 34.5",
             "Paul Simon - Price = 102.4", "Sarah Brightman  - Price = 1.34", "John Cale  - Price = 24.0",
@@ -52,7 +51,7 @@ public class Crum14 {
                 return ticketPrice1 - ticketPrice2;
             }, LinkedHashMap::new));
         concertsWithDiscount.forEach(
-            (var artistName, var ticketSumValue) -> printBlueGenericLn("%s = $%.2f\n", artistName, ticketSumValue));
+                (var artistName, var ticketSumValue) -> BLUE.printGenericLn("%s = $%.2f\n", artistName, ticketSumValue));
 
         printMagentaGenericLn("But can still change this, because we created a LinkeHashMap now.");
         printMagentaGenericLn("This means that we can change our results");

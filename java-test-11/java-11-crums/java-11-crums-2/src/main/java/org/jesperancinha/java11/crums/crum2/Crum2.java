@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum2;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -9,7 +9,7 @@ public class Crum2 {
     private static final int dob = 1979;
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 2 - Accessing static variables");
+        BLUE.printGenericTitleLn("Crum 2 - Accessing static variables");
 
         printMagentaGenericLn("The year was %d", dob);
         printMagentaGenericLn("The year was also %d", Crum2.dob);

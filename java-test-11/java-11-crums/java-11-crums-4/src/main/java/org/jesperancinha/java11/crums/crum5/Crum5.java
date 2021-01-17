@@ -1,13 +1,12 @@
 package org.jesperancinha.java11.crums.crum5;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
 public class Crum5 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 5 - Exception handling");
+        BLUE.printGenericTitleLn("Crum 5 - Exception handling");
         Crum5 crum5 = new Crum5();
         try {
             try {
@@ -27,7 +26,7 @@ public class Crum5 {
             printRedGeneric("This is expected. We are throwing a NullPointerException -> %s", e);
         }
 
-        printBlueGenericLn(" Crum35 crum35 = new Crum35();\n" + "        try {\n" + "            crum35.method1();\n"
+        BLUE.printGenericLn(" Crum35 crum35 = new Crum35();\n" + "        try {\n" + "            crum35.method1();\n"
             + "        } catch (CustomException e) {\n"
             + "            // Please comment the try catch to see the effect.\n" + "            try {\n"
             + "                // Unhandled exception: org.jesperancinha.java11.crums.crum35.CustomException\n"

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum13;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
@@ -20,7 +20,7 @@ public class Crum13 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 13 - Overriding throws");
+        BLUE.printGenericTitleLn("Crum 13 - Overriding throws");
 
         final Crum13 crum13 = new Crum13();
         Running running = crum13.new Marathon();

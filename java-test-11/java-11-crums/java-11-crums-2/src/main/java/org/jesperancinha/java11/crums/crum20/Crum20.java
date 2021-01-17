@@ -1,11 +1,11 @@
 package org.jesperancinha.java11.crums.crum20;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum20 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 20 - Revise security Guideline 2.3");
+        BLUE.printGenericTitleLn("Crum 20 - Revise security Guideline 2.3");
 
         printGreenGenericLn("From: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
         printGreenGenericLn("Guideline 2-3 / CONFIDENTIAL-3: Consider purging highly sensitive from memory after use\n"

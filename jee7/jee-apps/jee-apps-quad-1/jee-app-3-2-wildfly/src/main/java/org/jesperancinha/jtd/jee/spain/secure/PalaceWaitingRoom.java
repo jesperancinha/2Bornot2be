@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 import java.io.Serializable;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -72,7 +72,7 @@ public class PalaceWaitingRoom implements Serializable {
 
     @PostConstruct
     public void postConstruct() {
-        printBlueGenericTitleLn("@PostConstruct");
+        BLUE.printGenericTitleLn("@PostConstruct");
         try {
             printOrangeGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
                 .getCallerPrincipal(), contextProvider.getContext()
@@ -110,7 +110,7 @@ public class PalaceWaitingRoom implements Serializable {
 
     @PreDestroy
     public void preDestroy() {
-        printBlueGenericTitleLn("@PreDestroy");
+        BLUE.printGenericTitleLn("@PreDestroy");
         try {
             printOrangeGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
                 .getCallerPrincipal(), contextProvider.getContext()

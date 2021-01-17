@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum29;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
@@ -39,7 +39,7 @@ public class Crum29 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 29 - Overriding (NOT) static methods with instance methods and vice-versa");
+        BLUE.printGenericTitleLn("Crum 29 - Overriding (NOT) static methods with instance methods and vice-versa");
         Wall.methodB();
         WaillingWall.methodB();
 

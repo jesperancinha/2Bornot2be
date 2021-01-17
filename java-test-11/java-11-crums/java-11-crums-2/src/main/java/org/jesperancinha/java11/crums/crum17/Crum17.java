@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum17 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 17 - Terminating functions in lambda sequences");
+        BLUE.printGenericTitleLn("Crum 17 - Terminating functions in lambda sequences");
 
         final Stream<String> names = Stream.of("Isla Fisher", "Amy Adams", "Jessica Chastain", "Bryce Dallas");
 

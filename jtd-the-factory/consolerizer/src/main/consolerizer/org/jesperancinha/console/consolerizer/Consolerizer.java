@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
@@ -80,30 +79,6 @@ public class Consolerizer {
     public Consolerizer typingWait(int typingWait) {
         this.typingWait = typingWait;
         return this;
-    }
-
-    public static void printBlueGenericLn(String text, Object... args) {
-        BLUE.printGenericLn(text, args);
-    }
-
-    public static void printBlueGenericLn(Object text) {
-        BLUE.printGenericLn(text);
-    }
-
-    public static void printBlueGenericTitleLn(Object text, Object... args) {
-        BLUE.printGenericTitleLn(text, args);
-    }
-
-    public static void printBlueGenericTitleLn(Object text) {
-        BLUE.printGenericTitleLn(text);
-    }
-
-    public static void printBlueGeneric(String text) {
-        BLUE.printGeneric(text);
-    }
-
-    public static void printBlueGeneric(String text, Object... args) {
-        BLUE.printGeneric(text, args);
     }
 
     public static void printMagentaGenericLn(String text, Object... args) {
@@ -248,7 +223,7 @@ public class Consolerizer {
     }
 
     public static void printBrightCyanGenericLn(Object text) {
-       BRIGHT_CYAN.printGenericLn(text);
+        BRIGHT_CYAN.printGenericLn(text);
     }
 
     public static void printBrightCyanGeneric(Object text) {
@@ -260,7 +235,7 @@ public class Consolerizer {
     }
 
     public static void printWhiteGenericLn(final String text, final Object... args) {
-        WHITE.printGenericLn(text,args);
+        WHITE.printGenericLn(text, args);
     }
 
     public static void printWhiteGenericLn(Object text) {
@@ -268,7 +243,7 @@ public class Consolerizer {
     }
 
     public static void printWhiteGeneric(Object text) {
-       WHITE.printGeneric(text);
+        WHITE.printGeneric(text);
     }
 
     public static void printWhiteGeneric(String text, Object... args) {
@@ -280,7 +255,7 @@ public class Consolerizer {
     }
 
     public void printBrightCyan(String text, Object... args) {
-        BRIGHT_CYAN.printGeneric(text,args);
+        BRIGHT_CYAN.printGeneric(text, args);
     }
 
     public void printText(String text) {

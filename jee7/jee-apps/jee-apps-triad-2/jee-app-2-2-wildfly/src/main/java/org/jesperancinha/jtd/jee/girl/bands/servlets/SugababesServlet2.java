@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConGraphs.getUnicorns;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 
@@ -27,7 +27,7 @@ public class SugababesServlet2 extends HttpServlet {
         printGreenGenericLn(
             FILTERS_CANNOT_BE_USED_AS_SERVLETS_BUT_THEY_CAN_WORK_TOGETHER_WITH_SERVETS_AND_REST_ENDPOINTS);
         printGreenGenericLn("In this second installment of the same thing we are examining the use of filter-mapping directly to servlets instead of via path:");
-        printBlueGenericLn("<filter-mapping>\n" + "        <filter-name>CaghtUpInTheMiddle22</filter-name>\n"
+        BLUE.printGenericLn("<filter-mapping>\n" + "        <filter-name>CaghtUpInTheMiddle22</filter-name>\n"
             + "        <servlet-name>SugababesServlet2</servlet-name>\n" + "</filter-mapping>");
         printGreenGenericLn("We reference the filters to be used in a certain servlet and also the url-mapping for the servlet itself");
     }

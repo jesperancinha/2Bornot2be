@@ -20,7 +20,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
@@ -80,7 +80,7 @@ public class ToothRESTService {
         printOrangeGenericLn(jaw2);
 
         final List<Tooth> all = toothService.findAll();
-        printBlueGenericLn(all);
+        BLUE.printGenericLn(all);
         return all;
     }
 }

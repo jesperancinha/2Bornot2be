@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -57,7 +57,7 @@ public class Crum22 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 22 - Overriding with type erasure");
+        BLUE.printGenericTitleLn("Crum 22 - Overriding with type erasure");
 
         final Two two = new Two();
         final List<Integer> numbersTwoLong = two.getNumbers(new HashSet<Long>());

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -38,7 +38,7 @@ public class Crum18 {
 
     public static void main(String[] args) {
 
-        printBlueGenericTitleLn("Crum 18 - Understanding Comparator and Comparable");
+        BLUE.printGenericTitleLn("Crum 18 - Understanding Comparator and Comparable");
 
         final Comparator<Plate> comparator = (p1, p2) -> p1.getDesign()
             .compareTo(p2.getDesign());

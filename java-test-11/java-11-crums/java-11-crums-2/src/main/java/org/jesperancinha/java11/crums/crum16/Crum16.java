@@ -18,13 +18,13 @@ import java.util.Stack;
 import java.util.Vector;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum16 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 16 - Using Lists on a Map");
+        BLUE.printGenericTitleLn("Crum 16 - Using Lists on a Map");
 
         printMagentaGenericLn(
             "AbstractList, AbstractSequentialList, ArrayList, AttributeList, CopyOnWriteArrayList, LinkedList, RoleList, RoleUnresolvedList, Stack, Vector");

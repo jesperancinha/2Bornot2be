@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum24;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -28,7 +28,7 @@ public class Crum24 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 24 - Overriding methods");
+        BLUE.printGenericTitleLn("Crum 24 - Overriding methods");
 
         printMagentaGeneric("We cannot shadow methods, but we can override them.");
         printMagentaGeneric(

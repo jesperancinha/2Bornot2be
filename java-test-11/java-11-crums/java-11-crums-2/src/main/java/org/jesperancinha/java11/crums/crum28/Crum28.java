@@ -3,16 +3,14 @@ package org.jesperancinha.java11.crums.crum28;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
-import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum28 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 28 - Comparator and Comparable");
+        BLUE.printGenericTitleLn("Crum 28 - Comparator and Comparable");
 
         final Comparator<Integer> comparator1 = new Comparator<Integer>() {
             @Override

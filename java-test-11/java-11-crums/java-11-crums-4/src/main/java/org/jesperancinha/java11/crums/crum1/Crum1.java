@@ -14,7 +14,7 @@ import java.security.ProtectionDomain;
 import java.security.SecurityPermission;
 import java.util.function.Function;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
@@ -23,7 +23,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowa
 
 public class Crum1 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 1 - File permissions");
+        BLUE.printGenericTitleLn("Crum 1 - File permissions");
 
         final Function<String, String> f1 = (file) -> file;
         final Function<String, String> f2 = (file) -> {

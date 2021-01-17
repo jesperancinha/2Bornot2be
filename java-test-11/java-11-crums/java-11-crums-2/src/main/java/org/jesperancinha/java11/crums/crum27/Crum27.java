@@ -1,14 +1,13 @@
 package org.jesperancinha.java11.crums.crum27;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum27 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 27 - Boxing and Autoboxing");
+        BLUE.printGenericTitleLn("Crum 27 - Boxing and Autoboxing");
 
         final Boolean aBoolean = true;
         final Byte aByte = 127;
@@ -20,7 +19,7 @@ public class Crum27 {
         final Double aDouble = 1881.1881;
 
         printMagentaGenericLn("These are the basic boxing operations:");
-        printBlueGenericLn("        final Boolean aBoolean = true;\n" + "        final Byte aByte = 127;\n"
+        BLUE.printGenericLn("        final Boolean aBoolean = true;\n" + "        final Byte aByte = 127;\n"
             + "        final Short aShort = 32767;\n" + "        final Integer aInteger = 1122334455;\n"
             + "        final Long aLong = 2233445566778899L;\n" + "        final Float aFloat = 1881.1881f;\n"
             + "        final Double aDouble = 1881.1881;");
@@ -28,8 +27,7 @@ public class Crum27 {
 
         final String iAmANumberInAString = 12345 + " - This is a number. Did you notice the boxing operation?";
 
-        printBlueGenericLn(
-            "        final String iAmANumberInAString = 12345 + \" - This is a number. Did you notice the boxing operation?\";");
+        BLUE.printGenericLn("        final String iAmANumberInAString = 12345 + \" - This is a number. Did you notice the boxing operation?\";");
 
         printOrangeGenericLn("All numbers so far:");
         printOrangeGenericLn(aBoolean);

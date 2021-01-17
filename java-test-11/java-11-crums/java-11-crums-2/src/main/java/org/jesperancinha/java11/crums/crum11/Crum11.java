@@ -5,14 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum11 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 11 - Wildcards, diamonds, generics and objects");
+        BLUE.printGenericTitleLn("Crum 11 - Wildcards, diamonds, generics and objects");
 
         final List<String> bandList = new ArrayList<String>();
         bandList.add("Vampire Weekend");

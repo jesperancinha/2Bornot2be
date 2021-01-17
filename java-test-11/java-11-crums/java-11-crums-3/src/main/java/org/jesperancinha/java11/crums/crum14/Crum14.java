@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum14;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -21,7 +21,7 @@ public class Crum14 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 14 - Annotations on types");
+        BLUE.printGenericTitleLn("Crum 14 - Annotations on types");
         final @Special String foxy = "Foxy";
         var kitten = new @Special Kitten(foxy);
 

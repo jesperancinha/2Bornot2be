@@ -2,13 +2,13 @@ package org.jesperancinha.java11.crums.crum26;
 
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum26 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 26 - Making arithmetic calculations with streams");
+        BLUE.printGenericTitleLn("Crum 26 - Making arithmetic calculations with streams");
 
         final int intStream1Value = IntStream.range(0, 1000)
             .sum();

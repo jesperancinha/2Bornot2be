@@ -4,14 +4,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum25 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 25 - Using try with resources");
+        BLUE.printGenericTitleLn("Crum 25 - Using try with resources");
 
         printMagentaGenericLn("There are many ways to use a try with resources");
         printMagentaGenericLn("Please check the code in order to understand.");
@@ -31,7 +30,7 @@ public class Crum25 {
             e.printStackTrace();
         }
 
-        printBlueGenericLn("        // FileOutputStream fos;\n" + "        // Unknown class: 'fos'\n"
+        BLUE.printGenericLn("        // FileOutputStream fos;\n" + "        // Unknown class: 'fos'\n"
             + "        // try(fos = new FileOutputStream(\"tmp.txt\")){\n" + "        // \n"
             + "        // } catch (FileNotFoundException e) {\n" + "        //     e.printStackTrace();\n"
             + "        // } catch (IOException e) {\n" + "        //     e.printStackTrace();\n" + "        // }");

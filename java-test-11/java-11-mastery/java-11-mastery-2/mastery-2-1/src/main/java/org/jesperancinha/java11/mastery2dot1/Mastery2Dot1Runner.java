@@ -40,7 +40,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
@@ -100,24 +100,24 @@ public class Mastery2Dot1Runner {
 
                 }
             }.markSupported());
-            Consolerizer.printBlueGenericLn("The BufferedReader class does support mark %s", r.markSupported());
+            BLUE.printGenericLn("The BufferedReader class does support mark %s", r.markSupported());
             if (r.markSupported()) {
                 BufferedReader in = (BufferedReader) r;
                 Consolerizer.printGreenGenericLn(in.readLine());
                 in.mark(5);
-                Consolerizer.printBlueGenericLn(in.readLine());
+                BLUE.printGenericLn(in.readLine());
                 Consolerizer.printGreenGenericLn(in.readLine());
                 in.reset();
-                Consolerizer.printBlueGenericLn(in.readLine());
+                BLUE.printGenericLn(in.readLine());
                 in.reset();
-                Consolerizer.printBlueGenericLn(in.readLine());
+                BLUE.printGenericLn(in.readLine());
                 Consolerizer.printGreenGenericLn(in.readLine());
                 Consolerizer.printGreenGenericLn(in.readLine());
                 Consolerizer.printGreenGenericLn(in.readLine());
                 Consolerizer.printGreenGenericLn(in.readLine());
                 Consolerizer.printGreenGenericLn(in.readLine());
                 in.reset();
-                Consolerizer.printBlueGenericLn(in.readLine());
+                BLUE.printGenericLn(in.readLine());
             } else {
                 Consolerizer.printRedGenericLn("Mark Not Supported");
             }
@@ -208,13 +208,13 @@ public class Mastery2Dot1Runner {
         var mapOfAnimals6 = new HashMap<>();
         var mapOfAnimals7 = new HashMap<Animal, List<Animal>>();
 
-        printBlueGenericLn("Map<String, List<Animal>> mapOfAnimals1 = new HashMap<String, List<Animal>>(); -> %s", mapOfAnimals1.getClass());
-        printBlueGenericLn("Map<String, List<Animal>> mapOfAnimals2= new HashMap<>();", mapOfAnimals2.getClass());
-        printBlueGenericLn("Map<?, List<Animal>> mapOfAnimals3 = new HashMap<>(); -> %s", mapOfAnimals3.getClass());
-        printBlueGenericLn("Map<?, List<?>> mapOfAnimals4 = new HashMap<>(); -> %s", mapOfAnimals4.getClass());
-        printBlueGenericLn("Map<?,?> mapOfAnimals5 = new HashMap<>(); -> %s", mapOfAnimals5.getClass());
-        printBlueGenericLn("var mapOfAnimals6 = new HashMap<>(); -> %s", mapOfAnimals6.getClass());
-        printBlueGenericLn("var mapOfAnimals7 = new HashMap<Animal, List<Animal>>(); -> %s", mapOfAnimals7.getClass());
+        BLUE.printGenericLn("Map<String, List<Animal>> mapOfAnimals1 = new HashMap<String, List<Animal>>(); -> %s", mapOfAnimals1.getClass());
+        BLUE.printGenericLn("Map<String, List<Animal>> mapOfAnimals2= new HashMap<>();", mapOfAnimals2.getClass());
+        BLUE.printGenericLn("Map<?, List<Animal>> mapOfAnimals3 = new HashMap<>(); -> %s", mapOfAnimals3.getClass());
+        BLUE.printGenericLn("Map<?, List<?>> mapOfAnimals4 = new HashMap<>(); -> %s", mapOfAnimals4.getClass());
+        BLUE.printGenericLn("Map<?,?> mapOfAnimals5 = new HashMap<>(); -> %s", mapOfAnimals5.getClass());
+        BLUE.printGenericLn("var mapOfAnimals6 = new HashMap<>(); -> %s", mapOfAnimals6.getClass());
+        BLUE.printGenericLn("var mapOfAnimals7 = new HashMap<Animal, List<Animal>>(); -> %s", mapOfAnimals7.getClass());
 
         // 10. provider() in modularity
         printRainbowLn("==");
@@ -283,7 +283,7 @@ public class Mastery2Dot1Runner {
         boolean c = a == b;
         boolean d = a != b;
         int f = a = b;
-        printBlueGenericLn("        int a = 10; => %d\n" +
+        BLUE.printGenericLn("        int a = 10; => %d\n" +
                 "        int b = 20; => %d \n" +
                 "        boolean c = a == b; => %s\n" +
                 "        boolean d = a != b; => %s\n" +
@@ -293,7 +293,7 @@ public class Mastery2Dot1Runner {
         printRainbowLn("==");
         printYellowGenericLn("### 15. Static imports are also possible for static inner classes");
         var food = new Food();
-        printBlueGenericLn("var food  = new Food();");
+        BLUE.printGenericLn("var food  = new Food();");
 
         // 16. `null` role in collection copies
         printRainbowLn("==");

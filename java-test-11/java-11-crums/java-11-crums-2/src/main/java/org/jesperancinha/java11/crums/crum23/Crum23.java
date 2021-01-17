@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum23;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
@@ -9,7 +9,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum23 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 23 - Flash conversion exercises ⚡️");
+        BLUE.printGenericTitleLn("Crum 23 - Flash conversion exercises ⚡️");
 
         printMagentaGenericLn("The value of 'a' is:");
         printMagentaGenericLn((int) 'a');

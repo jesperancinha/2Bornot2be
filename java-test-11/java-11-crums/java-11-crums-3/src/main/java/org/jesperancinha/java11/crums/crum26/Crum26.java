@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -12,7 +12,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum26 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 26 - List.of and List.copyOf do not support null elements");
+        BLUE.printGenericTitleLn("Crum 26 - List.of and List.copyOf do not support null elements");
 
         var strings = new String[]{"Paul Simon","PJ Harvey","Courtney Love",null,"Roy Orbinson"};
 

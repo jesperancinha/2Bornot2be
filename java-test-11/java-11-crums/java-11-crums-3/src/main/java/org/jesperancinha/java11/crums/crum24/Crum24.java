@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum24;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
@@ -8,7 +8,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 
 public class Crum24 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 24 - Break with label and continue with label");
+        BLUE.printGenericTitleLn("Crum 24 - Break with label and continue with label");
 
         printBrightMagentaGenericLn("Break with label");
 

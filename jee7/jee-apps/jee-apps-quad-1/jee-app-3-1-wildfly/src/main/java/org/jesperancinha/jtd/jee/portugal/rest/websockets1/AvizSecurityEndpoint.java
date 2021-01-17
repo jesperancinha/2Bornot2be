@@ -9,7 +9,7 @@ import javax.websocket.server.ServerEndpoint;
 
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
@@ -18,7 +18,7 @@ public class AvizSecurityEndpoint {
 
     @OnOpen
     public void onOpen(Session session, EndpointConfig conf) {
-        printBlueGenericTitleLn("");
+        BLUE.printGenericTitleLn("");
     }
 
     @OnMessage

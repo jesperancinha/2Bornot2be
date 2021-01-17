@@ -39,7 +39,7 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -56,8 +56,8 @@ public class Mastery4Dot1Runner {
             skipQuestions = "-skip".equals(args[0]);
         }
         Consolerizer.typingWaitGlobal = 0;
-        printBlueGenericLn("==================== Master Module mastery-4-1 ====================");
-        printBlueGenericLn("Note that this mastery need the prepare.sh script to be run first.");
+        BLUE.printGenericLn("==================== Master Module mastery-4-1 ====================");
+        BLUE.printGenericLn("Note that this mastery need the prepare.sh script to be run first.");
         exercise1();
         exercise2();
         exercise3();
@@ -95,9 +95,9 @@ public class Mastery4Dot1Runner {
                 LocalDateTime.of(1968, 8, 16, 3, 45)
         );
         printMagentaGenericLn("You sneak into the back and fix your mistake: %s", artist);
-        printBlueGenericLn("We don't see the difference running the code");
-        printBlueGenericLn("This is because @Deprecated activates during compile time");
-        printBlueGenericLn("You should be getting this from your compiler: %s", "'DeprecatedArtist(java.lang.String)' is deprecated \n" +
+        BLUE.printGenericLn("We don't see the difference running the code");
+        BLUE.printGenericLn("This is because @Deprecated activates during compile time");
+        BLUE.printGenericLn("You should be getting this from your compiler: %s", "'DeprecatedArtist(java.lang.String)' is deprecated \n" +
                 "'org.jesperancinha.ocp11.mastery4dot1.concert.DeprecatedArtist' is deprecated");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. @Deprecated triggers compilers to show warnings");
@@ -156,22 +156,22 @@ public class Mastery4Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("Case: It is the 15th of August 1969 and you just went to have fun with your pals.");
         printGreenGenericLn("We'll look at the listings to see what's happening for today and tomorrow.");
-        printBlueGenericLn("Switch case for day 15 and day 16");
+        BLUE.printGenericLn("Switch case for day 15 and day 16");
         var testDay = 15;
         printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
         testDay = 16;
         printMagentaGenericLn("On day %d these bands:\n%s\nwill play!", testDay, getArtistsPerDay(testDay));
-        printBlueGenericLn("Switch case for Joan Baez");
+        BLUE.printGenericLn("Switch case for Joan Baez");
         var artist = "Joan Baez";
         printMagentaGenericLn("%s is playing these songs:\n%s", artist, getSongsByArtist(artist));
-        printBlueGenericLn("Switch case for who played 5 songs only");
+        BLUE.printGenericLn("Switch case for who played 5 songs only");
         var songs = (byte) 5;
         printMagentaGenericLn("These artists are playing %d songs: %s", songs, getArtistsPerSungSongs(songs));
-        printBlueGenericLn("Switch case for artists who played for 45 minutes = 2700 seconds");
+        BLUE.printGenericLn("Switch case for artists who played for 45 minutes = 2700 seconds");
         var duration = (short) 2700;
         printMagentaGenericLn("These artists played for %d seconds:\n%s", duration, getArtitstByDuration(duration));
         var character = 'C';
-        printBlueGenericLn("Switch case for artists who start with a C.");
+        BLUE.printGenericLn("Switch case for artists who start with a C.");
         printMagentaGenericLn("These artists played for %s seconds:\n%s", character, getArtitstByFirstCharacter(character));
         printGreenGenericLn("Take-aways");
         printGreenGenericLn("1. for switch case, the allowed primitive types are int, short, char and byte");
@@ -251,12 +251,12 @@ public class Mastery4Dot1Runner {
         printGreenGenericLn("This case was closed back then");
         printGreenGenericLn("Based on this, we will now see how can two classes with exactly the same code, can make properties accessible and non-accessible.");
         var supremeCourtSession = new SupremeCourt("from:https://en.wikipedia.org/wiki/1960s_in_LGBT_rights\nThe United States Supreme Court denies certiorari to Frank Kameny's petition to review the legality of his firing by the United States Army's Map Service in 1957, bringing his four-year legal battle to a close");
-        printBlueGenericLn("Court Session is opened:");
+        BLUE.printGenericLn("Court Session is opened:");
         printMagentaGenericLn(supremeCourtSession.getCourtCaseDescription());
         var supremeCourtSessionArchived = new SupremeCourtArchive(supremeCourtSession.getCourtCaseDescription());
-        printBlueGenericLn("Court Session is closed:");
+        BLUE.printGenericLn("Court Session is closed:");
         printMagentaGenericLn(supremeCourtSessionArchived.getCourtCaseDescription());
-        printBlueGenericLn("If we check via reflection:");
+        BLUE.printGenericLn("If we check via reflection:");
         try {
             Field courtCaseField = supremeCourtSessionArchived.getClass().getDeclaredField("courtCase");
             courtCaseField.setAccessible(true);
@@ -268,7 +268,7 @@ public class Mastery4Dot1Runner {
         } catch (NoSuchFieldException | IllegalAccessException e) {
             printRedThrowableAndExit(e);
         }
-        printBlueGenericLn("This means that although the courtCase is private now, it is still registered for the future.");
+        BLUE.printGenericLn("This means that although the courtCase is private now, it is still registered for the future.");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. private members can always be accessed from the outer and inner classes alike");
         printGreenGenericLn("2. the scope, however, changes when the class is taken out");
@@ -518,13 +518,13 @@ public class Mastery4Dot1Runner {
         printBrightCyanGenericLn("--- 2. What is the output of `String` for it's 3 different kind of values: `null`, \"\" and \"Something\"");
         printRainbowLn("==");
         printGreenGenericLn("Case: Three students are making resets: Katie, Chloe and Susan");
-        printBlueGenericLn("Teacher: In what year was JFK assigned to the ONI field office at Headquarters");
+        BLUE.printGenericLn("Teacher: In what year was JFK assigned to the ONI field office at Headquarters");
         final String katieResponse = null;
         printMagentaGenericLn("Katie: Hmmmm.... " + katieResponse);
-        printBlueGenericLn("T: That is not correct. Chloe?");
+        BLUE.printGenericLn("T: That is not correct. Chloe?");
         final var chloeResponse = "";
         printMagentaGenericLn("Chloe: I don't know, maybe, %s", chloeResponse);
-        printBlueGenericLn("T: You also don't know? How about you Susan?");
+        BLUE.printGenericLn("T: You also don't know? How about you Susan?");
         final Object susanResponse = "January 1942";
         printMagentaGenericLn("Susan: Of course I do! It was in %s", susanResponse);
 

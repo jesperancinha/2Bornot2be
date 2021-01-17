@@ -1,9 +1,10 @@
 package org.jesperancinha.java11.mastery4dot3.community;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.java11.mastery4dot3.record.Album;
 
 import java.util.Arrays;
+
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 
 public class Frenemy {
     private final String name;
@@ -17,8 +18,8 @@ public class Frenemy {
     }
 
     public void lendAlbum(Album album){
-        Consolerizer.printBlueGenericLn("Thanks for the album!");
-        Consolerizer.printBlueGenericLn(album);
+        BLUE.printGenericLn("Thanks for the album!");
+        BLUE.printGenericLn(album);
         scratchAlbum(album);
     }
 

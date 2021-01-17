@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -13,7 +13,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum16 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 16 - Zipping in Java 11");
+        BLUE.printGenericTitleLn("Crum 16 - Zipping in Java 11");
 
         printMagentaGenericLn("We can zip in Java 11 in multiple ways");
         printMagentaGenericLn("One way is to just use the indexes of a list");

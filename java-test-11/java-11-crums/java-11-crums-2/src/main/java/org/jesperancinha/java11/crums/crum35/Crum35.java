@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.crums.crum35;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum35 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 35 - trimming and stripping Strings");
+        BLUE.printGenericTitleLn("Crum 35 - trimming and stripping Strings");
 
         var stringA = "    I did all my best to smile    ";
         var stringB = "    ";

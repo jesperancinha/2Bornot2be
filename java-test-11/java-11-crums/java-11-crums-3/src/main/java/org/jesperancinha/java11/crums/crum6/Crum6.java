@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -12,7 +12,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum6 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 6 - Setting up Locales and translation bundles");
+        BLUE.printGenericTitleLn("Crum 6 - Setting up Locales and translation bundles");
 
         printMagentaGenericLn("In this case, we are missing the language");
 

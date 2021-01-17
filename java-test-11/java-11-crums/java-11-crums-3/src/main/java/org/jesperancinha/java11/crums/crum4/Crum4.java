@@ -7,14 +7,14 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum4 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 4 - The contents of a BufferedReader");
+        BLUE.printGenericTitleLn("Crum 4 - The contents of a BufferedReader");
 
         printMagentaGenericLn("A buffered reader provides buffered functionality to a reader");
         printMagentaGenericLn(

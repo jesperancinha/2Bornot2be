@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum22;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum22 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 22 - System properties and HashTable");
+        BLUE.printGenericTitleLn("Crum 22 - System properties and HashTable");
 
         StringBuilder sb = new StringBuilder();
         for (var key : System.getProperties()

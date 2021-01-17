@@ -8,6 +8,8 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+
 @MessageDriven(activationConfig = {
     @ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/jms/LyricsQueue") })
 public class LyricsListener implements MessageListener {
@@ -16,7 +18,7 @@ public class LyricsListener implements MessageListener {
         if (message instanceof TextMessage) {
             TextMessage textMessage = (TextMessage) message;
             try {
-                Consolerizer.printBlueGenericTitleLn("Received a message!");
+                BLUE.printGenericTitleLn("Received a message!");
                 Consolerizer.printOrangeGenericLn(textMessage.getText());
                 Consolerizer.printUnicornsLn(100);
             } catch (Exception ex) {

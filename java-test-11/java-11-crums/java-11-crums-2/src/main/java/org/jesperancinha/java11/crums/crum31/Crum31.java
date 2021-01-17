@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum31 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 31 - The things a Comparator do");
+        BLUE.printGenericTitleLn("Crum 31 - The things a Comparator do");
 
         final List<Sandwich> sandwiches = Arrays.asList(new Sandwich(3, "Bolas de Berlin"),
             new Sandwich(4, "Bolo de arroz"), new Sandwich(1, "Bolo de arroz"), new Sandwich(2, "Dom Rodrigo"));

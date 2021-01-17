@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum34;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum34 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 34 - Assignment return values");
+        BLUE.printGenericTitleLn("Crum 34 - Assignment return values");
 
         printMagentaGenericLn("An assignment returns a value");
         int a;

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum23;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -8,7 +8,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 
 public class Crum23 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 23 - Parsers return type");
+        BLUE.printGenericTitleLn("Crum 23 - Parsers return type");
 
         printMagentaGenericLn("Parsers always return a primitive in their commond method:");
 

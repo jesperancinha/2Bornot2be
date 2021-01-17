@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -17,7 +17,7 @@ public class Master2Dot2Runner {
 
         Consolerizer.typingWaitGlobal = 0;
 
-        printBlueGenericLn("================== Master Module mastery-2-2-deserializer ==================");
+        BLUE.printGenericLn("================== Master Module mastery-2-2-deserializer ==================");
 
         printRainbowTitleLn("1. Serializing `FileOutputStream` and `FileInputStream`");
         printRainbowLn("==");

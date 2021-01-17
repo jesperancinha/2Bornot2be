@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 @WebServlet("/tooth/servlet/tx/all")
@@ -77,7 +78,7 @@ public class ToothTransactionAttributeServlet extends HttpServlet {
         } catch (RollbackException e) {
             e.printStackTrace();
         }
-        Consolerizer.printBlueGenericLn(tooth1);
+        BLUE.printGenericLn(tooth1);
 
         printOrangeGenericLn(tooth1);
         printOrangeGenericLn(jaw1);

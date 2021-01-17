@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum17;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -27,7 +27,7 @@ public class Crum17 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 17 - Double Casting and how it can be done");
+        BLUE.printGenericTitleLn("Crum 17 - Double Casting and how it can be done");
 
         final Crum17 crum17 = new Crum17();
 

@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -15,7 +15,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum15 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 15 - Unmutable vs Concurrent HashMaps");
+        BLUE.printGenericTitleLn("Crum 15 - Unmutable vs Concurrent HashMaps");
 
         final List<String> plantsInDutch = List.of("Rhododendrons", "Camile", "tulpen");
         final Map<String, Integer> initPlants = plantsInDutch.stream()

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -12,7 +12,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum7 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 7 - indexOf and contains");
+        BLUE.printGenericTitleLn("Crum 7 - indexOf and contains");
 
         printMagentaGenericLn("indexOf and contains accept Object.");
         final List<String> strings = Arrays.asList("Doja Cat", "Nicky Minaj", "Cardi B", "Cher");

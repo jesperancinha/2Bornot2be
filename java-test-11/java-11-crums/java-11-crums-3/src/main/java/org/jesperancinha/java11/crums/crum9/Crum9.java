@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum9;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum9 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 9 - Unreachable after a try catch");
+        BLUE.printGenericTitleLn("Crum 9 - Unreachable after a try catch");
 
         final int i = calculateTheCalculation();
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -12,7 +12,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 
 public class Crum14 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 14 - Creating a list from an array");
+        BLUE.printGenericTitleLn("Crum 14 - Creating a list from an array");
 
         final Integer[] array = new Integer[] { 1, 2, 3, 4, 5, 6, 7 };
 

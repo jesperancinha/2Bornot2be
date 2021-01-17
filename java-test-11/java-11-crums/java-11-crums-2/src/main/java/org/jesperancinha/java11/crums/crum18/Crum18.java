@@ -6,14 +6,14 @@ import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum18 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 18 - Locale building and resources");
+        BLUE.printGenericTitleLn("Crum 18 - Locale building and resources");
 
         final Locale locale = new Locale.Builder().setLanguage("portunol")
             .setRegion("ZZ")

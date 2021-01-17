@@ -51,7 +51,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
@@ -74,10 +74,10 @@ public class Mastery4Dot2Runner {
         }
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 200;
-        printBlueGenericLn("==================== Master Module mastery-4-2 ====================");
-        printBlueGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
-        printBlueGenericLn("----> Run with -skip to skip questions");
-        printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
+        BLUE.printGenericLn("==================== Master Module mastery-4-2 ====================");
+        BLUE.printGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
+        BLUE.printGenericLn("----> Run with -skip to skip questions");
+        BLUE.printGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
         exercise1();
         exercise2();
@@ -229,13 +229,13 @@ public class Mastery4Dot2Runner {
         }};
         printMagentaGenericLn("Ciento cero is %s", String.join(",", cientoCero));
         printMagentaGenericLn("Supersubmarina is %s", String.join(",", supersubmarina));
-        printBlueGenericLn("Let's tail this from %s:", "Cientocero");
+        BLUE.printGenericLn("Let's tail this from %s:", "Cientocero");
         printMagentaGenericLn("%s", albums.tailMap("Cientocero"));
-        printBlueGenericLn("And now from %s:", "Supersubmarina");
+        BLUE.printGenericLn("And now from %s:", "Supersubmarina");
         printMagentaGenericLn("%s", albums.tailMap("Supersubmarina"));
-        printBlueGenericLn("Let's head this from %s:", "Cientocero");
+        BLUE.printGenericLn("Let's head this from %s:", "Cientocero");
         printMagentaGenericLn("%s", albums.headMap("Cientocero"));
-        printBlueGenericLn("And now from %s:", "Supersubmarina");
+        BLUE.printGenericLn("And now from %s:", "Supersubmarina");
         printMagentaGenericLn("%s", albums.headMap("Supersubmarina"));
         final Map.Entry<String, List<String>> firstLending = albums.pollFirstEntry();
         printMagentaGenericLn("We just took out the first album: %s", firstLending);
@@ -314,7 +314,7 @@ public class Mastery4Dot2Runner {
         }
         final Iterator<String> iterator = compilation.iterator();
         printMagentaGenericLn("No exception has occurred and everything went well.");
-        printBlueGenericLn("Can we change the list with this iterator though?");
+        BLUE.printGenericLn("Can we change the list with this iterator though?");
         try {
             iterator.remove();
         } catch (UnsupportedOperationException e) {
@@ -352,40 +352,40 @@ public class Mastery4Dot2Runner {
         var nosongs = Float.NEGATIVE_INFINITY;
         printOrangeGenericLn(songs);
         printOrangeGenericLn(nosongs);
-        printBlueGenericLn("But how can we generate infinite songs?");
+        BLUE.printGenericLn("But how can we generate infinite songs?");
         var infiniteSongs = 1 / 0.0f;
         var noSongsToInfinity = -1 / 0.0f;
         printOrangeGenericLn(infiniteSongs);
         printOrangeGenericLn(noSongsToInfinity);
-        printBlueGenericLn("Can we use double for this?");
+        BLUE.printGenericLn("Can we use double for this?");
         var songsDouble = Double.POSITIVE_INFINITY;
         var nosongsDouble = Double.NEGATIVE_INFINITY;
         printOrangeGenericLn(songsDouble);
         printOrangeGenericLn(nosongsDouble);
-        printBlueGenericLn("But how can we generate double infinite songs?");
+        BLUE.printGenericLn("But how can we generate double infinite songs?");
         var infiniteSongsDouble = 1 / 0.0;
         var noSongsToInfinityDouble = -1 / 0.0;
         printOrangeGenericLn(infiniteSongsDouble);
         printOrangeGenericLn(noSongsToInfinityDouble);
-        printBlueGenericLn("Sounds good, but how about that overflow Exception?");
+        BLUE.printGenericLn("Sounds good, but how about that overflow Exception?");
         try {
             var notWithLongs = 1 / 0L;
         } catch (ArithmeticException e) {
             printRedGenericLn("Nope, no Longs allowed! -> %s", e);
         }
-        printBlueGenericLn("Ok... and ints?");
+        BLUE.printGenericLn("Ok... and ints?");
         try {
             var notWithIntegers = 1 / 0;
         } catch (ArithmeticException e) {
             printRedGenericLn("Nope, no ints either! -> %s", e);
         }
-        printBlueGenericLn("Shorts?");
+        BLUE.printGenericLn("Shorts?");
         try {
             var notWithShorts = 1 / (short) 0;
         } catch (ArithmeticException e) {
             printRedGenericLn("Shorts also won't do! -> %s", e);
         }
-        printBlueGenericLn("Then I guess Byte won't also work?");
+        BLUE.printGenericLn("Then I guess Byte won't also work?");
         try {
             var notWithBytes = 1 / (byte) 0;
         } catch (ArithmeticException e) {
@@ -421,10 +421,10 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         printMagentaGenericLn("This is our new and improved cristal ball:\n%s", superBolaDeCristal);
-        printBlueGenericLn("Note that we've made this Cristal Ball so safe that it now obeys guidelines 6 and 7!");
-        printBlueGenericLn("Therefore, for this module, there isn't much to test.");
-        printBlueGenericLn("Please follow the code for a better understandinf of what's happening and namely have a look at the comments.");
-        printBlueGenericLn("Of course read the guidelines here -> https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        BLUE.printGenericLn("Note that we've made this Cristal Ball so safe that it now obeys guidelines 6 and 7!");
+        BLUE.printGenericLn("Therefore, for this module, there isn't much to test.");
+        BLUE.printGenericLn("Please follow the code for a better understandinf of what's happening and namely have a look at the comments.");
+        BLUE.printGenericLn("Of course read the guidelines here -> https://www.oracle.com/java/technologies/javase/seccodeguide.html");
         // Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes
         SecurityManager setSecurityManager = new SecurityManager() {
             @Override
@@ -684,8 +684,8 @@ public class Mastery4Dot2Runner {
         } catch (Exception e) {
             printRedThrowableAndExit(e);
         }
-        printBlueGenericLn("Check your file contents in the file system: /tmp/raul_lyrics2.txt.");
-        printBlueGenericLn("Press ENTER twice to continue...");
+        BLUE.printGenericLn("Check your file contents in the file system: /tmp/raul_lyrics2.txt.");
+        BLUE.printGenericLn("Press ENTER twice to continue...");
         if (!skipQuestions) {
             try {
                 System.in.read();
@@ -930,7 +930,7 @@ public class Mastery4Dot2Runner {
 
         printGreenGenericLn("Curiosities about switch and other accolades:");
 
-        printBlueGenericLn("        int k =0;\n" +
+        BLUE.printGenericLn("        int k =0;\n" +
                 "        for (; k < 100; k++) ;\n" +
                 "        while(k < 100);\n" +
                 "        do {} while (k<100);\n" +
@@ -1018,8 +1018,7 @@ public class Mastery4Dot2Runner {
                 LocalDateTime.of(1981, 1, 1, 0, 0, 0));
         // 'org.jesperancinha.java11.mastery4dot2.record.Company' is not an enclosing class
         // Company.this
-        printBlueGenericLn("The only reason why %s works is because %s is an enclosing class of %s.",
-                "Company.this.company", "Company", "Music");
+        BLUE.printGenericLn("The only reason why %s works is because %s is an enclosing class of %s.", "Company.this.company", "Company", "Music");
         printMagentaGenericLn(music.getTheMusic());
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. `this` is more commonly used within a class to refer to the instance members");

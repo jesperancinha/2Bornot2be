@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum14 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 14 - Type Arrays legal operations");
+        BLUE.printGenericTitleLn("Crum 14 - Type Arrays legal operations");
 
         final List<Double> list = new ArrayList<>();
         list.add(111d);

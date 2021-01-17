@@ -2,11 +2,11 @@ package org.jesperancinha.java11.crums.crum18;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 
 public class Crum18 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 18 - Fun with numbers and formats");
+        BLUE.printGenericTitleLn("Crum 18 - Fun with numbers and formats");
 
         Consolerizer.printMagentaGenericLn("%c", 'a');
         Consolerizer.printMagentaGenericLn("%c", 'b');

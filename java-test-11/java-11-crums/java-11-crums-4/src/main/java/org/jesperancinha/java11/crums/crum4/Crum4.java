@@ -4,7 +4,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -23,7 +23,7 @@ public class Crum4 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 4 - Repeatable annotations");
+        BLUE.printGenericTitleLn("Crum 4 - Repeatable annotations");
 
         final Crum4 crum4 = new Crum4();
 

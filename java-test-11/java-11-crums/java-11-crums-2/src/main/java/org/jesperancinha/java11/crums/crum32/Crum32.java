@@ -1,14 +1,13 @@
 package org.jesperancinha.java11.crums.crum32;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum32 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 32 - How to unbox");
+        BLUE.printGenericTitleLn("Crum 32 - How to unbox");
 
         printMagentaGenericLn("Unboxing operations can be done multiple ways");
         final Integer a = 123;
@@ -30,7 +29,7 @@ public class Crum32 {
         printOrangeGenericLn(gU);
 
         printMagentaGenericLn("These are examples of unbxing operations that work as unboxing from an Integer");
-        printBlueGenericLn("        final Integer a = 123;\n" + "        final int aU = a;\n"
+        BLUE.printGenericLn("        final Integer a = 123;\n" + "        final int aU = a;\n"
             + "        final long bU = a;\n" + "        final float cU = a;\n" + "        final double dU = a;\n"
             + "        final byte eU = a.byteValue();\n" + "        final short fU = a.shortValue();\n"
             + "        final char gU = (char) a.shortValue();");
@@ -53,7 +52,7 @@ public class Crum32 {
         printOrangeGenericLn(bEB);
         printOrangeGenericLn(bFB);
         printOrangeGenericLn(bGB);
-        printBlueGenericLn("        final Byte bB = 123;\n" + "        final byte bAB = bB;\n"
+        BLUE.printGenericLn("        final Byte bB = 123;\n" + "        final byte bAB = bB;\n"
             + "        final short bBB = bB;\n" + "        final char bCB = Character.highSurrogate(bB);\n"
             + "        final int bDB = bB;\n" + "        final long bEB = bB;\n" + "        final float bFB = bB;\n"
             + "        final double bGB = bB;");

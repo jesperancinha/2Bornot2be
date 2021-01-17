@@ -6,14 +6,14 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum27 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 27 - Partition by is partitioned via a boolean value");
+        BLUE.printGenericTitleLn("Crum 27 - Partition by is partitioned via a boolean value");
 
         final String[] bands = { "The Pogues", "Nick Cave and The Bad Seeds", "Henry Rollings Band", "Faith No More" };
 

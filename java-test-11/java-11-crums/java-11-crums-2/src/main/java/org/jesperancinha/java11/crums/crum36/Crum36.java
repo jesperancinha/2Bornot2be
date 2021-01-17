@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.crums.crum36;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum36 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 36 - When return from try and finally compete with each other");
+        BLUE.printGenericTitleLn("Crum 36 - When return from try and finally compete with each other");
 
         String result1 = getNumber(1);
         String result2 = getNumber(2);

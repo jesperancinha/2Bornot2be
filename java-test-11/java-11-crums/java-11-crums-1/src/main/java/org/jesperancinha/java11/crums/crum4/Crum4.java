@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.crums.crum4;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 
 public class Crum4 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 4 - Variable initialization on for loops");
+        BLUE.printGenericTitleLn("Crum 4 - Variable initialization on for loops");
 
         // Variable 'i' might not have been initialized
         // int i;

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -15,7 +15,7 @@ public class Crum25 {
             .collect(Collectors.toList());
         final boolean skipTime = options.contains("-skipTime");
 
-        printBlueGenericTitleLn("Crum 25 - When does GC washes away an object");
+        BLUE.printGenericTitleLn("Crum 25 - When does GC washes away an object");
 
         String a = IntStream.range(0, Integer.MAX_VALUE / 1000)
             .boxed()

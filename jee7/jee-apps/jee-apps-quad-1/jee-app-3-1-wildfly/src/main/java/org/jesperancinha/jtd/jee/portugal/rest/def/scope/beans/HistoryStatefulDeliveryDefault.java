@@ -12,8 +12,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Stack;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -33,7 +32,7 @@ public class HistoryStatefulDeliveryDefault implements Serializable {
     }
 
     public String getLatestElementOfHistory() {
-        printBlueGenericLn("This is instance of type %s with hash %s and elements %s", this.getClass()
+        BLUE.printGenericLn("This is instance of type %s with hash %s and elements %s", this.getClass()
             .getCanonicalName(), this.hashCode(), stackOfEvents1);
         return stackOfEvents1.pop();
     }
@@ -41,31 +40,31 @@ public class HistoryStatefulDeliveryDefault implements Serializable {
     @PostConstruct
     public void postConstruct() {
         Consolerizer.titleSpread = 150;
-        printBlueGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
+        BLUE.printGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
             .getCanonicalName(), this.hashCode());
     }
 
     @PrePassivate
     public void prePassivate() {
-        printBlueGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
+        BLUE.printGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
             .getCanonicalName(), this.hashCode());
     }
 
     @PostActivate
     public void postActivate() {
-        printBlueGenericTitleLn("Bean %s with hash %s has been activated", this.getClass()
+        BLUE.printGenericTitleLn("Bean %s with hash %s has been activated", this.getClass()
             .getCanonicalName(), this.hashCode());
     }
 
     @Remove
     public void remove() {
-        printBlueGenericTitleLn("Bean %s with hash %s is being removed", this.getClass()
+        BLUE.printGenericTitleLn("Bean %s with hash %s is being removed", this.getClass()
             .getCanonicalName(), this.hashCode());
     }
 
     @PreDestroy
     public void destroy() {
-        printBlueGenericTitleLn("Bean %s with hash %s is being destroyed", this.getClass()
+        BLUE.printGenericTitleLn("Bean %s with hash %s is being destroyed", this.getClass()
             .getCanonicalName(), this.hashCode());
     }
 }

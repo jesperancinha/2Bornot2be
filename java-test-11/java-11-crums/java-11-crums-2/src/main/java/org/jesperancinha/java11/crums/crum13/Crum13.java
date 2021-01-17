@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum13;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
@@ -16,7 +16,7 @@ public class Crum13 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 13 - Getting static values from a null reference");
+        BLUE.printGenericTitleLn("Crum 13 - Getting static values from a null reference");
 
         printMagentaGenericLn("Pretty bewildering this example if you don't know it, but it is possible! 😱");
 

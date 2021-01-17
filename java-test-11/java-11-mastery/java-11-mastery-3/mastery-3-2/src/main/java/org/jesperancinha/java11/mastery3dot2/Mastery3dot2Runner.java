@@ -38,7 +38,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -54,7 +54,7 @@ public class Mastery3dot2Runner {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 150;
 
-        printBlueGenericLn("================== Master Module mastery-3-2 ==================");
+        BLUE.printGenericLn("================== Master Module mastery-3-2 ==================");
 
         exercise1();
         exercise2();
@@ -189,7 +189,7 @@ public class Mastery3dot2Runner {
         var fishCatch = createRandomFishList(2);
         var fishArray = fishCatch.toArray(new Peixe[0]);
         var pesca = new Pesca(fishCatch, fishArray);
-        printBlueGenericLn("The fisher catches %s", pesca);
+        BLUE.printGenericLn("The fisher catches %s", pesca);
         try (final var fos = new FileOutputStream("/tmp/fishersCatch.obj")) {
             var oos = new ObjectOutputStream(fos);
             oos.writeObject(pesca);
@@ -457,7 +457,7 @@ public class Mastery3dot2Runner {
     private static void exercise7() {
         printBrightCyanGenericLn("--- 7. Base modules and the rest");
         printRainbowLn("==");
-        printBlueGenericLn("Expected output:\n%s", "Cataplana dish is being served...\n" +
+        BLUE.printGenericLn("Expected output:\n%s", "Cataplana dish is being served...\n" +
                 "cataplana.jar -> java.base\n" +
                 "   org.jesperancinha.console.consolerizer             -> java.io                                            java.base\n" +
                 "   org.jesperancinha.console.consolerizer             -> java.lang                                          java.base\n" +
@@ -612,13 +612,13 @@ public class Mastery3dot2Runner {
         mussels[1][0] = "CookedMussel";
         mussels[1][1] = "CookedMussel";
         mussels[1][2] = "CookedMussel";
-        printBlueGenericLn("var cookedOysters1 = new String[][]{{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}}; -> %s", cookedOysters1, "");
-        printBlueGenericLn("final String[][] cookedOysters2 = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}}; -> %s", cookedOysters2);
-        printBlueGenericLn("final String[][] cookedOysters3 = new String[2][2]; -> %s", cookedOysters3);
-        printBlueGenericLn("final String[] cookedOysters4 [] = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}};", cookedOysters4);
-        printBlueGenericLn("final String cookedOysters5 [][] = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}};", cookedOysters5);
-        printBlueGenericLn("final String [][] rawOysters = new String[2][2];", rawOysters);
-        printBlueGenericLn("final String [] mussels [] = new String[2][];", mussels);
+        BLUE.printGenericLn("var cookedOysters1 = new String[][]{{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}}; -> %s", cookedOysters1, "");
+        BLUE.printGenericLn("final String[][] cookedOysters2 = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}}; -> %s", (Object[]) cookedOysters2);
+        BLUE.printGenericLn("final String[][] cookedOysters3 = new String[2][2]; -> %s", (Object[]) cookedOysters3);
+        BLUE.printGenericLn("final String[] cookedOysters4 [] = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}};", (Object[]) cookedOysters4);
+        BLUE.printGenericLn("final String cookedOysters5 [][] = {{\"CookedOyster\", \"CookedOyster\"}, {\"CookedOyster\", \"CookedOyster\"}};", (Object[]) cookedOysters5);
+        BLUE.printGenericLn("final String [][] rawOysters = new String[2][2];", (Object[]) rawOysters);
+        BLUE.printGenericLn("final String [] mussels [] = new String[2][];", (Object[]) mussels);
         printGreenGenericLn("Big takeouts here for something seemingly simple:");
         printGreenGenericLn("1. All arrays must have at least one dimension");
         printGreenGenericLn("2. The first dimension MUST have a defined size upon initialization");
@@ -638,7 +638,7 @@ public class Mastery3dot2Runner {
         printMagentaGenericLn("We register our data in %s", mercadoDeOlhao);
         printMagentaGenericLn("We register our data in %s", ((Building) mercadoDeOlhao).toString());
         printMagentaGenericLn("We register our data in %s", ((Construction) mercadoDeOlhao).toString());
-        printBlueGenericLn("Sending data to file system...");
+        BLUE.printGenericLn("Sending data to file system...");
         var fileName = "/tmp/mastery3.3.obj";
         try (FileOutputStream outputStream = new FileOutputStream(fileName)) {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
@@ -646,8 +646,8 @@ public class Mastery3dot2Runner {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        printBlueGenericLn("Data Sent!");
-        printBlueGenericLn("Retrieving data from file system...");
+        BLUE.printGenericLn("Data Sent!");
+        BLUE.printGenericLn("Retrieving data from file system...");
         try (FileInputStream fileInputStream = new FileInputStream(fileName)) {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             var newMarket = (Market) objectInputStream.readObject();

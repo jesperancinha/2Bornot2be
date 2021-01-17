@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum20;
 
 import java.nio.BufferOverflowException;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -10,7 +10,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum20 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 20 - Accessibility and Extensibility - Defending against DOS");
+        BLUE.printGenericTitleLn("Crum 20 - Accessibility and Extensibility - Defending against DOS");
 
         printMagentaGenericLn(
             "Let' make a method that doesn't follow Guideline 4-1 / EXTEND-1: Limit the accessibility of classes, interfaces, methods, and fields");

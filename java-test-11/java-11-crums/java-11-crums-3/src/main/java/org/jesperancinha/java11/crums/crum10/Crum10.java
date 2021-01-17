@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum10;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum10 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 10 - ClassNotFoundException and NotSuchFieldException");
+        BLUE.printGenericTitleLn("Crum 10 - ClassNotFoundException and NotSuchFieldException");
 
         try {
             calculateExceptions();

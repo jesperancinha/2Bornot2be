@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum29;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -8,7 +8,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGen
 public class Crum29 {
     public static void main(String[] args) {
 
-        printBlueGenericTitleLn("Crum 29 - isBlank or strip?");
+        BLUE.printGenericTitleLn("Crum 29 - isBlank or strip?");
 
         char c = Character.LINE_SEPARATOR;
 

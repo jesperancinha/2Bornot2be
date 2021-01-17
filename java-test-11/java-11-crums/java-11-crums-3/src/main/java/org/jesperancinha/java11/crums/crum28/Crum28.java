@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum28;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum28 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 28 - Loss of precision with Float and double");
+        BLUE.printGenericTitleLn("Crum 28 - Loss of precision with Float and double");
 
         int a = 2222;
         float b = a;

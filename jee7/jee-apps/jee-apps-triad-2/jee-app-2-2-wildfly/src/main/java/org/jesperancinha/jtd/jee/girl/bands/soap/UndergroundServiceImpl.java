@@ -2,7 +2,7 @@ package org.jesperancinha.jtd.jee.girl.bands.soap;
 
 import javax.jws.WebService;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -33,7 +33,7 @@ public class UndergroundServiceImpl implements UndergroundService {
     // at java.util.List
     // public List<String> bandMembers() {
     public String[] bandMembers() {
-        printBlueGenericTitleLn("JAXB doesn't handle interfaces");
+        BLUE.printGenericTitleLn("JAXB doesn't handle interfaces");
         printYellowGenericLn(
             "    // Caused by: com.sun.xml.ws.spi.db.DatabindingException: com.sun.xml.bind.v2.runtime.IllegalAnnotationsException:\n"
                 + "    // 1 counts of IllegalAnnotationExceptions\n"

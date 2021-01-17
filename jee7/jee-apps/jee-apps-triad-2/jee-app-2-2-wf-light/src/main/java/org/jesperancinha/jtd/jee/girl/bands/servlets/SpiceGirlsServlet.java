@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.girl.bands.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,8 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class SpiceGirlsServlet extends HttpServlet {
@@ -20,7 +17,7 @@ public class SpiceGirlsServlet extends HttpServlet {
 
         printGreenGenericLn("This is the servlet that I expect you to hit in your browser");
         printGreenGenericLn("Analysing the XML config:");
-        printBlueGenericLn("<web-app xmlns=\"http://xmlns.jcp.org/xml/ns/javaee\"\n"
+        BLUE.printGenericLn("<web-app xmlns=\"http://xmlns.jcp.org/xml/ns/javaee\"\n"
             + "         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
             + "         xsi:schemaLocation=\"http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd\"\n"
             + "         version=\"4.0\">\n" + "    <display-name>Girl Bands Web Service Fast Track</display-name>\n"

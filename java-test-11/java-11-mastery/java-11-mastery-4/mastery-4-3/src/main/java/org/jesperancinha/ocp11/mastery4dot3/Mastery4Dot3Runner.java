@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
@@ -69,10 +69,10 @@ public class Mastery4Dot3Runner {
         Consolerizer.typingWaitGlobal = 0;
         Consolerizer.maxLineCharsGlobal = 200;
         Consolerizer.rainbowLineChars = 20;
-        printBlueGenericLn("==================== Master Module mastery-4-3 And Then Indie ====================");
-        printBlueGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
-        printBlueGenericLn("----> Run with -skip to skip questions");
-        printBlueGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
+        BLUE.printGenericLn("==================== Master Module mastery-4-3 And Then Indie ====================");
+        BLUE.printGenericLn("----> Run with VM command -ea or -enableassertions for a more accurate run");
+        BLUE.printGenericLn("----> Run with -skip to skip questions");
+        BLUE.printGenericLn("----> Note that this mastery need the prepare.sh script to be run first.");
 
         exercise1();
         exercise2();
@@ -106,9 +106,8 @@ public class Mastery4Dot3Runner {
         printMagentaGenericLn(testCurtain);
         printMagentaGenericLn("Testing \"After the curtain\" with Character:");
         printMagentaGenericLn(testC);
-        printBlueGenericLn("This strange phenomenon happen because of this:");
-        printBlueGenericLn(
-            "    public String replace(char oldChar, char newChar) {\n" + "        if (oldChar != newChar) {\n"
+        BLUE.printGenericLn("This strange phenomenon happen because of this:");
+        BLUE.printGenericLn("    public String replace(char oldChar, char newChar) {\n" + "        if (oldChar != newChar) {\n"
                 + "            String ret = isLatin1() ? StringLatin1.replace(value, oldChar, newChar)\n"
                 + "                                    : StringUTF16.replace(value, oldChar, newChar);\n"
                 + "            if (ret != null) {\n" + "                return ret;\n" + "            }\n"
@@ -283,7 +282,7 @@ public class Mastery4Dot3Runner {
 
         printMagentaGenericLn("Lyrics have  been written to \"/tmp/floridada.txt\".");
         printMagentaGenericLn(lyrics);
-        printBlueGenericLn("Please check file contents!");
+        BLUE.printGenericLn("Please check file contents!");
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. The underlying close operation flushes the content to file.");
         printGreenGenericLn(
@@ -353,8 +352,7 @@ public class Mastery4Dot3Runner {
         if ((w == w + 4 - z--) & (w == --z)) {
             z -= 20;
         }
-        printBlueGenericLn(
-            "        int z = 10;\n" + "        int w = 20;\n" + "        z= ++w;\n" + "        w += --z;\n"
+        BLUE.printGenericLn("        int z = 10;\n" + "        int w = 20;\n" + "        z= ++w;\n" + "        w += --z;\n"
                 + "        if( (w == w + 4 - z--) & ( w == --z)){\n" + "            z -=20;\n" + "        }");
         Scanner sc = new Scanner(System.in);
         printMagentaGeneric("Please guess what is the value of z at the end of this execution:");

@@ -1,11 +1,11 @@
 package org.jesperancinha.jtd.jee.portugal.rest.websockets1;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.junit.jupiter.api.Test;
 
 import javax.websocket.EncodeException;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 
 class AvizEncoderTest {
 
@@ -17,7 +17,7 @@ class AvizEncoderTest {
         avizEncodedMessage.setEncodedMessage(message);
         final String encode = avizEncoder.encode(avizEncodedMessage);
 
-        Consolerizer.printBlueGenericLn(encode);
+        BLUE.printGenericLn(encode);
 
         assertThat(encode).isEqualTo(
             "wbnb v jnf xvat bs cbeghtny ur vf erpbtavmrq puvrsyl sbe uvf ebyr va cbeghtnyf ivpgbel va n fhpprffvba jne jvgu pnfgvyr cerfreivat uvf pbhagelf vaqrcraqrapr naq rfgnoyvfuvat gur nivm  be wbnavan qlanfgl ba gur cbeghthrfr guebar");

@@ -5,14 +5,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum6 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 6 - groupingBy");
+        BLUE.printGenericTitleLn("Crum 6 - groupingBy");
 
         var teaBags = Arrays.asList(
             new TeaBag("Black", 100),

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum3;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -21,7 +21,7 @@ public class Crum3 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 3 - Subclasses and upper classes");
+        BLUE.printGenericTitleLn("Crum 3 - Subclasses and upper classes");
         final A a = new Crum3().new A();
         final B b = new Crum3().new B();
 

@@ -2,13 +2,13 @@ package org.jesperancinha.java11.crums.crum10;
 
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum10 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 10 - compare and mismatch in arrays");
+        BLUE.printGenericTitleLn("Crum 10 - compare and mismatch in arrays");
 
         final int[] a = new int[] { 1, 4, 5, 6 };
         final int[] b = new int[] { 1, 2, 5, 6, 7, 8 };

@@ -8,14 +8,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 
 public class Crum2 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 2 - java.util.RandomAccess interface");
+        BLUE.printGenericTitleLn("Crum 2 - java.util.RandomAccess interface");
         final List<String> options = Arrays.stream(args)
             .collect(Collectors.toList());
         final boolean skipTime = options.contains("-skipTime");

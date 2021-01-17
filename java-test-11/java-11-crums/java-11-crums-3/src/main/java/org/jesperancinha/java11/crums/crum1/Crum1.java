@@ -5,14 +5,14 @@ import javax.management.relation.RoleList;
 import javax.management.relation.RoleUnresolvedList;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum1 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 1 - The subclasses of ArrayList");
+        BLUE.printGenericTitleLn("Crum 1 - The subclasses of ArrayList");
 
         var arrayList = List.of("Madonna", "Mariah Carey", "Jennifer Lopez", "Shakira", "Beyonce", "Kelly Rowland");
         printMagentaGenericLn(

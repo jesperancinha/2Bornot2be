@@ -28,7 +28,7 @@ import java.util.stream.Stream;
 
 import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -44,7 +44,7 @@ public class Master2Dot2Runner {
 
         Consolerizer.typingWaitGlobal = 0;
 
-        printBlueGenericLn("================== Master Module mastery-2-2 ==================");
+        BLUE.printGenericLn("================== Master Module mastery-2-2 ==================");
 
         printRainbowTitleLn("1. Serializing `FileOutputStream` and `FileInputStream`");
         printRainbowLn("==");
@@ -98,15 +98,15 @@ public class Master2Dot2Runner {
         printRainbowTitleLn("3. TYPE_USE and TYPE_PARAMETER");
         printRainbowLn("==");
         printYellowGenericLn("### A TYPE_USE case");
-        printBlueGenericLn("@Rocket String rocket1 = \"Saturn V\";");
+        BLUE.printGenericLn("@Rocket String rocket1 = \"Saturn V\";");
         @Rocket String rocket1 = "Saturn V";
-        printBlueGenericLn("var rocket2 = (@Rocket String) \"Saturn V\";");
+        BLUE.printGenericLn("var rocket2 = (@Rocket String) \"Saturn V\";");
         var rocket2 = (@Rocket String) "Saturn V";
-        printBlueGenericLn("Function<Integer, String> f = ( @Rocket Integer val ) -> Integer.toHexString(val);");
+        BLUE.printGenericLn("Function<Integer, String> f = ( @Rocket Integer val ) -> Integer.toHexString(val);");
         Function<Integer, String> f = (@Rocket Integer val) -> Integer.toHexString(val);
         printYellowGenericLn("### A TYPE_PARAMETER case");
         var missionModified = new MissionDataTyped<String>();
-        printBlueGenericLn("var missionModified = new MissionDataTyped<String>();");
+        BLUE.printGenericLn("var missionModified = new MissionDataTyped<String>();");
         printYellowGenericLn("### Not that TYPE_PARAMETER is a part of TYPE_USE. If you have TYPE_USE, you don't need TYPE_PARAMETER");
 
         printRainbowTitleLn("4. Switch valid numeric types and their limits");
@@ -135,13 +135,13 @@ public class Master2Dot2Runner {
         printRainbowLn("==");
         printYellowGenericLn("### We try to assign an absolute number");
         float fNumber = 1000;
-        printBlueGenericLn(fNumber);
+        BLUE.printGenericLn(fNumber);
         printYellowGenericLn("### We try to assign a number with decimals. Think that by default they are double");
         fNumber = 100.12345f;
-        printBlueGenericLn(fNumber);
+        BLUE.printGenericLn(fNumber);
         printYellowGenericLn("### With a double, we do not need to cast");
         double dNumber = 100.45677;
-        printBlueGenericLn(dNumber);
+        BLUE.printGenericLn(dNumber);
 
         printRainbowTitleLn("6. Conflicting exports in modularization");
         printRainbowLn("==");
@@ -150,12 +150,12 @@ public class Master2Dot2Runner {
         printRainbowTitleLn("7. Multi interface inheritance");
         printRainbowLn("==");
         printYellowGenericLn("### Check the two interfaces. There is a subclass which overrides the superclass method. This is Ok");
-        printBlueGenericLn("public interface BriefingTrajectory {\n" +
+        BLUE.printGenericLn("public interface BriefingTrajectory {\n" +
                 "    String getOriginLocation();\n" +
                 "    String getDestinationLocation();\n" +
                 "}");
         printYellowGenericLn("### And this is the sub interface");
-        printBlueGenericLn("public interface MissionBriefingControl extends BriefingDate, BriefingTrajectory {\n" +
+        BLUE.printGenericLn("public interface MissionBriefingControl extends BriefingDate, BriefingTrajectory {\n" +
                 "    String getDestinationLocation();\n" +
                 "    String getDestinationLocation(MissionData missionData);\n" +
                 "    LocalDateTime getBriefingDate();\n" +
@@ -338,13 +338,13 @@ public class Master2Dot2Runner {
         printYellowGenericLn("### It may give the feeling that the cause of it are parallel streams");
         printYellowGenericLn("### We pick a list of the actors of Apollo 13");
         var actors = List.of("Tom Hanks", "Bill Paxton", "Kevin Bacon", "Gary Sinise");
-        printBlueGenericLn("This is the list: %s", "var actors = List.of(\"Tom Hanks\", \"Bill Paxton\",\"Kevin Bacon\",\"Gary Sinise\");");
-        printBlueGenericLn("We select one with findAny and a parallel stream:\n %s", "        var actorParallel = actors. parallelStream()\n" +
+        BLUE.printGenericLn("This is the list: %s", "var actors = List.of(\"Tom Hanks\", \"Bill Paxton\",\"Kevin Bacon\",\"Gary Sinise\");");
+        BLUE.printGenericLn("We select one with findAny and a parallel stream:\n %s", "        var actorParallel = actors. parallelStream()\n" +
                 "                .findAny().orElse(null);");
         var actorParallel = actors.parallelStream()
                 .findAny().orElse(null);
         printOrangeGenericLn("We've found actor %s. Note that if you run this several times, you'll still get %s. However you would not be able to determine that before-hand right?", actorParallel, actorParallel);
-        printBlueGenericLn("We select one with findAny and a sequential stream:\n %s", "        var actorParallel2 = actors.stream()\n" +
+        BLUE.printGenericLn("We select one with findAny and a sequential stream:\n %s", "        var actorParallel2 = actors.stream()\n" +
                 "                .findAny().orElse(null);");
         var actorParallel2 = actors.stream()
                 .findAny().orElse(null);
@@ -388,23 +388,23 @@ public class Master2Dot2Runner {
         printYellowGenericLn("### Here are some examples");
         class Moon {
             public <T extends CharSequence> Collection<String> translateData(Collection<T> list) {
-                printBlueGenericLn("We now print the moon with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)");
+                BLUE.printGenericLn("We now print the moon with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)");
                 return new ArrayList<>();
             }
 
             public <T extends String> Collection<String> translateData(List<T> list) {
-                printBlueGenericLn("We now print the moon with -> public <T extends String> Collection<String> translateData(List<T> list)");
+                BLUE.printGenericLn("We now print the moon with -> public <T extends String> Collection<String> translateData(List<T> list)");
                 return new ArrayList<>();
             }
         }
         class MoonBase extends Moon {
             public <T extends CharSequence> Collection<String> translateData(Collection<T> list) {
-                printBlueGenericLn("We now print the moon-base with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)");
+                BLUE.printGenericLn("We now print the moon-base with -> public <T extends CharSequence> Collection<String> translateData(Collection<T> list)");
                 return super.translateData(list);
             }
 
             public <T extends String> Collection<String> translateData(List<T> list) {
-                printBlueGenericLn("We now print the moon-base with -> public <T extends String> Collection<String> translateData(List<T> list)");
+                BLUE.printGenericLn("We now print the moon-base with -> public <T extends String> Collection<String> translateData(List<T> list)");
                 return super.translateData(list);
             }
         }

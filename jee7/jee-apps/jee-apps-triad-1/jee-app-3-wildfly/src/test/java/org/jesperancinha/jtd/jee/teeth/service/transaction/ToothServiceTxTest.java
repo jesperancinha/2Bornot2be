@@ -27,7 +27,7 @@ import javax.ejb.EJBTransactionRequiredException;
 import javax.persistence.EntityManager;
 import javax.transaction.UserTransaction;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -54,8 +54,8 @@ public class ToothServiceTxTest extends TestCase {
 
     @Before
     public void setUp(){
-        printBlueGenericLn("References");
-        printBlueGenericLn("- https://blog.frankel.ch/transaction-management-ejb3-vs-spring/");
+        BLUE.printGenericLn("References");
+        BLUE.printGenericLn("- https://blog.frankel.ch/transaction-management-ejb3-vs-spring/");
     }
 
     @Test

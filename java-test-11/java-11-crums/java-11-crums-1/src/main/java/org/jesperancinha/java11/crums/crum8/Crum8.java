@@ -3,13 +3,13 @@ package org.jesperancinha.java11.crums.crum8;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum8 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 8 - Keywords and Values");
+        BLUE.printGenericTitleLn("Crum 8 - Keywords and Values");
         final List<String> keywords = Arrays.asList("abstract", "continue", "for", "new", "switch", "assert", "default",
             "goto", "package", "synchronized", "boolean", "do", "if", "private", "this", "break", "double",
             "implements", "protected", "throw", "byte", "else", "import", "public", "throws", "case", "enum",

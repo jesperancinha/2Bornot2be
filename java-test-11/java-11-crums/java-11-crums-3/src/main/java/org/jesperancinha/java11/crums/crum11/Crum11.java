@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -57,7 +57,7 @@ public class Crum11 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 11 - Overriding and overloading generics");
+        BLUE.printGenericTitleLn("Crum 11 - Overriding and overloading generics");
 
         printYellowGenericLn("from: https://genius.com/Hall-and-oates-out-of-touch-lyrics ");
         printMagentaGenericLn("1 - %s", new Main1().areYouOutOfTouch(Arrays.asList("You're out of touch")));

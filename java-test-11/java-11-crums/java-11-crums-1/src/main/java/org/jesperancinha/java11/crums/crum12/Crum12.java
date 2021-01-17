@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum12;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum12 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 12 - How many strings we create");
+        BLUE.printGenericTitleLn("Crum 12 - How many strings we create");
 
         final String a = "Whatup?";
         final String b = new String(a);

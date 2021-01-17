@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -38,7 +38,7 @@ public class LogoutGirlBandRecordStoreServlet extends HttpServlet {
         if (httpSesssion != null) {
             httpSesssion.invalidate();
         }
-        printBlueGenericLn("Session %s is now invalidated", httpSesssion);
+        BLUE.printGenericLn("Session %s is now invalidated", httpSesssion);
         response.sendRedirect("/jee-app-2-2-wildfly-1.0.0-SNAPSHOT");
     }
 

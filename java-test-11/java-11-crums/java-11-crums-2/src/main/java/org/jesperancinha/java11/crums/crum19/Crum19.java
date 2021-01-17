@@ -2,13 +2,13 @@ package org.jesperancinha.java11.crums.crum19;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum19 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 19 - Atomic numbers");
+        BLUE.printGenericTitleLn("Crum 19 - Atomic numbers");
 
         final var atomicInteger1 = new AtomicInteger();
         final var atomicInteger2 = new AtomicInteger(50);

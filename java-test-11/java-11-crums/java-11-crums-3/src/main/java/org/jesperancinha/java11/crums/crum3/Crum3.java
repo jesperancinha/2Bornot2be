@@ -1,7 +1,6 @@
 package org.jesperancinha.java11.crums.crum3;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -31,7 +30,7 @@ public class Crum3 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 3 - Casting Exceptions at compile and runtime");
+        BLUE.printGenericTitleLn("Crum 3 - Casting Exceptions at compile and runtime");
 
         var a = new A();
         a = new B1();
@@ -41,7 +40,7 @@ public class Crum3 {
 
         printMagentaGenericLn("Up until this point everything is pretty much what we expect");
 
-        printBlueGenericLn("        var a = new A();\n" + "        a = new B1();\n" + "        a = new B2();\n"
+        BLUE.printGenericLn("        var a = new A();\n" + "        a = new B1();\n" + "        a = new B2();\n"
             + "        var b1 = new B1();\n" + "        var b2 = new B2();");
 
         printMagentaGenericLn(a);

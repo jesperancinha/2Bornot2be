@@ -4,7 +4,7 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -13,7 +13,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum33 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 33 - Enumerates and how they work");
+        BLUE.printGenericTitleLn("Crum 33 - Enumerates and how they work");
 
         printMagentaGenericLn("We can list all enumerates if we just call values");
         printMagentaGenericLn("The printed value is exactly the same key we define in the code");

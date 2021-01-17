@@ -42,7 +42,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -59,7 +59,7 @@ public class Mastery3Dot1Runner {
     public static void main(String[] args) throws InterruptedException {
         Consolerizer.typingWaitGlobal = 0;
 
-        printBlueGenericLn("================== Master Module mastery-3-1 ==================");
+        BLUE.printGenericLn("================== Master Module mastery-3-1 ==================");
 
         exercise1();
         exercise2();
@@ -103,8 +103,8 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!");
         printGreenGenericLn("What will happen if too many people buy it?");
-        printBlueGenericLn("Please wait...");
-        printBlueGenericLn("...");
+        BLUE.printGenericLn("Please wait...");
+        BLUE.printGenericLn("...");
         var soldAlbums = new ArrayList<String>();
         try {
             for (; ; ) {
@@ -236,7 +236,7 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         printGreenGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
-        printBlueGenericLn("final String[]  band = {\"Willie Wartaal\", \"Vieze Fur\", \"Faberyayo\", \"Bas Bron\"};");
+        BLUE.printGenericLn("final String[]  band = {\"Willie Wartaal\", \"Vieze Fur\", \"Faberyayo\", \"Bas Bron\"};");
         printMagentaGenericLn("This is the band: %s", String.join(",", band));
     }
 
@@ -392,7 +392,7 @@ public class Mastery3Dot1Runner {
             Spliterator<Path> spliterator5 = ds5.spliterator();
             if (!spliterator5.tryAdvance(file -> {
                 try (var fis = new FileInputStream(file.toFile())) {
-                    printBlueGenericLn(new String(fis.readAllBytes(), Charset.defaultCharset()));
+                    BLUE.printGenericLn(new String(fis.readAllBytes(), Charset.defaultCharset()));
                 } catch (IOException e) {
                     printRedGenericLn("This was not supposed to have happened! %s", e);
                     System.exit(1);

@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum8;
 
 import java.nio.file.Path;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -10,7 +10,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum8 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 8 - Relativizing Paths");
+        BLUE.printGenericTitleLn("Crum 8 - Relativizing Paths");
         var path1 = Path.of("/tmp/file1");
         var path2 = Path.of("/tmp/file2");
 

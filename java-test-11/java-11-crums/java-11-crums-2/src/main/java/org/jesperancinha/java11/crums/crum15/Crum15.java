@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum15;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
@@ -14,7 +14,7 @@ public class Crum15 {
 
     private static int b;
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 15 - Coexistence of instance and static members");
+        BLUE.printGenericTitleLn("Crum 15 - Coexistence of instance and static members");
         printMagentaGenericLn("Note that we could not create a static member named a");
         final Crum15 crum15 = new Crum15();
         printMagentaGenericLn("This is because we already have an instance member named  a=%s", crum15.a);

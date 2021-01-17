@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum5;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -11,7 +11,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneri
 
 public class Crum5 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 5 - DateTimeFormatter of pattern");
+        BLUE.printGenericTitleLn("Crum 5 - DateTimeFormatter of pattern");
 
         var dateTimeFormatter = DateTimeFormatter.ofPattern("e d y h H s m 'wow!' 'This is cool'");
         printOrangeGenericLn(dateTimeFormatter);

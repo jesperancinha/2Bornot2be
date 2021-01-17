@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.crums.crum16;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum16 {
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 16 - Advanced ways of using super between interfaces and classes");
+        BLUE.printGenericTitleLn("Crum 16 - Advanced ways of using super between interfaces and classes");
 
         var class2 = new Class2();
         printMagentaGenericLn(class2.howDoesItFeel());

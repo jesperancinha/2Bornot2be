@@ -2,7 +2,7 @@ package org.jesperancinha.java11.mastery4dot1.modularity.hangar;
 
 import org.jesperancinha.java11.mastery4dot1.modularity.pilot.Pilot;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Plane {
@@ -10,11 +10,11 @@ public class Plane {
     private String model;
 
     public static void transportPilot() {
-        printBlueGenericLn("***");
+        BLUE.printGenericLn("***");
         printGreenGenericLn("--- Pilot is getting transported by the airplane ---");
         Pilot.presentPilot();
         printGreenGenericLn("--- %s ---", new Plane("Royal Navy F-4 Phantom II"));
-        printBlueGenericLn("***");
+        BLUE.printGenericLn("***");
     }
 
     private Plane(String model) {

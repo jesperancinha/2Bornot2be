@@ -7,14 +7,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum8 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 8 - Falling out of indexes in prepared statements");
+        BLUE.printGenericTitleLn("Crum 8 - Falling out of indexes in prepared statements");
 
         final String query = "Select  * from PAINTING where AUTHOR = ?";
 

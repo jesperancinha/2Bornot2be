@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
 public class Crum7 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 7 - unmodifiableList");
+        BLUE.printGenericTitleLn("Crum 7 - unmodifiableList");
 
         var numA = new Integer[] { 11, 22 };
         var list1 = new ArrayList<Integer>(List.of(numA));

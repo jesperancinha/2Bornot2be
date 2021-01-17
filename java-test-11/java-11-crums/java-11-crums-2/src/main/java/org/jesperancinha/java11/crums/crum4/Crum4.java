@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum4;
 
 import java.util.Random;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -60,7 +60,7 @@ public class Crum4 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 4 - Overriding with primitive types");
+        BLUE.printGenericTitleLn("Crum 4 - Overriding with primitive types");
 
         var a = new Crum4.A();
 

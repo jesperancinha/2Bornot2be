@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum30;
 
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
@@ -26,7 +26,7 @@ public class Crum30 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 30 - RUNTIME annotations");
+        BLUE.printGenericTitleLn("Crum 30 - RUNTIME annotations");
 
         Arrays.stream(Table.class.getAnnotations())
             .forEach(annotation -> printMagentaGenericLn(annotation));

@@ -4,14 +4,14 @@ import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum6 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 6 - Using Console in java");
+        BLUE.printGenericTitleLn("Crum 6 - Using Console in java");
 
         var console = System.console();
         if (Objects.isNull(console)) {

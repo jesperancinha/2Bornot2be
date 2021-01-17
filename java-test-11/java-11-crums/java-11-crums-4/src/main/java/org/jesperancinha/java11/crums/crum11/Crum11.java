@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum11;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum11 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 11 - Advanced String literal comparison");
+        BLUE.printGenericTitleLn("Crum 11 - Advanced String literal comparison");
 
         final String a = "Java";
 

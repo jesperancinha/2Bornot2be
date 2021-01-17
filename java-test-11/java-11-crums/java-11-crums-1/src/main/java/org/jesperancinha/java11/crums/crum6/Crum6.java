@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.crums.crum6;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum6 {
     public static void main(String[] args) {
         final String text = "Crum 6 - String length() is not length nor is it size()";
-        printBlueGenericTitleLn(text);
+        BLUE.printGenericTitleLn(text);
         printMagentaGenericLn("This string has %s characters", text.length());
         // Cannot resolve symbol 'length'
         // printMagentaGenericLn("This string has %s characters", text.length);

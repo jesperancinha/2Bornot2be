@@ -5,12 +5,12 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum7 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 7 - List can be added by index");
+        BLUE.printGenericTitleLn("Crum 7 - List can be added by index");
 
         final List<String> list = new ArrayList<>();
 

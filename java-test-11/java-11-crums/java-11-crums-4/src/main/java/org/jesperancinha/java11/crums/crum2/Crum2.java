@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
@@ -20,7 +20,7 @@ public class Crum2 {
     }
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 2 - List, Collections and bounded types");
+        BLUE.printGenericTitleLn("Crum 2 - List, Collections and bounded types");
 
         printMagentaGenericLn("We have these boat names:");
 

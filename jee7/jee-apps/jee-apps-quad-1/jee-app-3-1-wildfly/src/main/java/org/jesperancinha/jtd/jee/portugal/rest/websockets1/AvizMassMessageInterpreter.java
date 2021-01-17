@@ -2,7 +2,6 @@ package org.jesperancinha.jtd.jee.portugal.rest.websockets1;
 
 import javax.websocket.EncodeException;
 import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.PongMessage;
@@ -11,7 +10,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
@@ -20,7 +19,7 @@ public class AvizMassMessageInterpreter {
 
     @OnOpen
     public void onOpen(Session session, EndpointConfig conf) throws IOException, EncodeException {
-        printBlueGenericTitleLn("OnOpen from %s called!", this.getClass()
+        BLUE.printGenericTitleLn("OnOpen from %s called!", this.getClass()
             .getCanonicalName());
     }
 

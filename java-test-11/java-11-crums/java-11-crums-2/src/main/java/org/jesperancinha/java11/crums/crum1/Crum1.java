@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.crums.crum1;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 
 public class Crum1 {
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 1 - Method parameters, since var is not allowed");
+        BLUE.printGenericTitleLn("Crum 1 - Method parameters, since var is not allowed");
         printGreenGenericLn("Different ways to overload a method");
 
         printMagentaGenericLn("If a < 10 or b < 20 or c < 30, we cannot calculate our int average -> %d",

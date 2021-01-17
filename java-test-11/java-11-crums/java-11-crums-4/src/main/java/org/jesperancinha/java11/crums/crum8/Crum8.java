@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum8;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -8,7 +8,7 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGen
 public class Crum8 implements B {
 
     public static void main(String[] args) {
-        printBlueGenericTitleLn("Crum 8 - Overriding interface methods and creating methods after Java 9");
+        BLUE.printGenericTitleLn("Crum 8 - Overriding interface methods and creating methods after Java 9");
 
         final Crum8 crum8 = new Crum8();
 
