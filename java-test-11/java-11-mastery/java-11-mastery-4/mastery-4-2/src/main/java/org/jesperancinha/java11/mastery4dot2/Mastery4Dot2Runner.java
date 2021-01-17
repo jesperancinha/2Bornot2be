@@ -60,7 +60,6 @@ import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.ConGraphs.printUnicornsLn;
 import static org.jesperancinha.java11.mastery4dot2.concert.Ticket.getTicketsLongNumbers;
 import static org.jesperancinha.java11.mastery4dot2.concert.Ticket.getTicketsStringNumbers;
@@ -159,9 +158,9 @@ public class Mastery4Dot2Runner {
         try (var fis = new FileInputStream("/tmp/monica_naranjo_lyrics.txt")) {
             source = new String(fis.readAllBytes(), Charset.defaultCharset());
         } catch (FileNotFoundException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("We just read the lyrics");
         BRIGHT_MAGENTA.printGenericLn(source);
@@ -171,9 +170,9 @@ public class Mastery4Dot2Runner {
             oos.writeUTF(source);
             oos.flush();
         } catch (FileNotFoundException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         readFile("/tmp/mn1.txt");
         try (var bw = new BufferedWriter(new FileWriter("/tmp/mn2.txt", Charset.defaultCharset()))) {
@@ -183,7 +182,7 @@ public class Mastery4Dot2Runner {
             bw.write('-');
             bw.write(source);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         readFile("/tmp/mn2.txt");
         try (var fos = new FileOutputStream("/tmp/mn3.txt")) {
@@ -191,9 +190,9 @@ public class Mastery4Dot2Runner {
             osw.write(source);
             osw.flush();
         } catch (FileNotFoundException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Take-away");
         readFile("/tmp/mn3.txt");
@@ -208,9 +207,9 @@ public class Mastery4Dot2Runner {
             final String s = new String(fis.readAllBytes(), Charset.defaultCharset());
             BRIGHT_MAGENTA.printGenericLn(s);
         } catch (FileNotFoundException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
     }
 
@@ -281,7 +280,7 @@ public class Mastery4Dot2Runner {
                     Thread.sleep(100);
                 }
             } catch (InterruptedException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             }
 
 
@@ -303,14 +302,14 @@ public class Mastery4Dot2Runner {
                 }
                 BRIGHT_MAGENTA.printGenericLn("Last iteration done!");
             } catch (InterruptedException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             }
         });
         executorService.shutdown();
         try {
             executorService.awaitTermination(15, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         final Iterator<String> iterator = compilation.iterator();
         MAGENTA.printGenericLn("No exception has occurred and everything went well.");
@@ -416,9 +415,9 @@ public class Mastery4Dot2Runner {
                                     "Carlos Berlanga"
                             ), "Alaska y los Pegamoides"));
         } catch (NoSuchProviderException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (NoSuchAlgorithmException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("This is our new and improved cristal ball:\n%s", superBolaDeCristal);
         BLUE.printGenericLn("Note that we've made this Cristal Ball so safe that it now obeys guidelines 6 and 7!");
@@ -590,7 +589,7 @@ public class Mastery4Dot2Runner {
         try {
             executorService.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("The result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
         GREEN.printGenericLn("We would get the same result if we had used putIfAbsent:");
@@ -607,7 +606,7 @@ public class Mastery4Dot2Runner {
         try {
             executorService.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("The new result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
         GREEN.printGenericLn("These operations will not fail for non-thread safe maps:");
@@ -624,7 +623,7 @@ public class Mastery4Dot2Runner {
         try {
             executorService.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("The new result is also what we are looking for:\n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
         GREEN.printGenericLn("Take-away");
@@ -678,11 +677,11 @@ public class Mastery4Dot2Runner {
                 YELLOW.printGenericLn(new String(buffer).trim());
             }
         } catch (FileNotFoundException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (Exception e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         BLUE.printGenericLn("Check your file contents in the file system: /tmp/raul_lyrics2.txt.");
         BLUE.printGenericLn("Press ENTER twice to continue...");
@@ -690,7 +689,7 @@ public class Mastery4Dot2Runner {
             try {
                 System.in.read();
             } catch (IOException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             }
         }
         try (
@@ -703,11 +702,11 @@ public class Mastery4Dot2Runner {
             fos.write(buffer, 0, bytes);
             YELLOW.printGenericLn(new String(buffer).trim());
         } catch (FileNotFoundException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (Exception e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. By default, FileOutputStream is configured to have the appendMode to false.");
@@ -740,9 +739,9 @@ public class Mastery4Dot2Runner {
                                     "Carlos Berlanga"
                             ), "Alaska y los Pegamoides"));
         } catch (NoSuchProviderException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (NoSuchAlgorithmException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("This is the Cristal Ball of Episode I\n%s", bolaDeCristal);
         MAGENTA.printGenericLn("We can get the from the available ones\n%s", CristalBall.getHost(bolaDeCristal));
@@ -778,9 +777,9 @@ public class Mastery4Dot2Runner {
         try {
             MAGENTA.printGenericLn("This is our copy:\n%s", bolaDeCristal.copy());
         } catch (NoSuchProviderException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (NoSuchAlgorithmException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. We followed the Java Security Guidelines for Mutability from point 1 to 5, which are the most common");

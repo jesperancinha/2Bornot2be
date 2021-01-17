@@ -21,7 +21,6 @@ import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 @WebService(name = "be-there", endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.BeThereLyricsService")
 public class BeThereLyricsServiceImpl implements BeThereLyricsService {
@@ -93,7 +92,7 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
                 return "COMPLETED";
             }
         } else {
-            printRedThrowableAndExit(new RuntimeException(String.format("sr=%s", sr)));
+            RED.printThrowableAndExit(new RuntimeException(String.format("sr=%s", sr)));
         }
         return "OK";
     }

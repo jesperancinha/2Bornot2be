@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum4 {
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Crum4 {
                 YELLOW.printGeneric((char) read);
             }
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
 
         Consolerizer.printNewLine();
@@ -43,7 +43,7 @@ public class Crum4 {
                 YELLOW.printGeneric((char) read);
             }
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         Consolerizer.printNewLine();
 

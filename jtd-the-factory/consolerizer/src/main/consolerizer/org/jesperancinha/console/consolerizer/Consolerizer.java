@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
 
 public class Consolerizer {
@@ -32,14 +31,16 @@ public class Consolerizer {
     public static int titleSpread = TITLE_SPREAD;
     public static boolean blackAndWhite;
 
-    private ConColor conColor = CON_COLOR_DEFAULT;
+    private final ConColor conColor;
 
     public Consolerizer() {
         typingWait = TYPING_DEFAULT_MS;
+        this.conColor = CON_COLOR_DEFAULT;
     }
 
     public Consolerizer(int typingWait) {
         this.typingWait = typingWait;
+        this.conColor = CON_COLOR_DEFAULT;
     }
 
     public Consolerizer(ConColor conColor) {
@@ -58,15 +59,6 @@ public class Consolerizer {
         maxLineCharsGlobal = 0;
         titleSpread = 100;
         blackAndWhite = false;
-    }
-
-    public static Consolerizer createGreen() {
-        return new Consolerizer().conColor(ConColor.BRIGHT_GREEN);
-    }
-
-    public Consolerizer conColor(ConColor conColor) {
-        this.conColor = conColor;
-        return this;
     }
 
     public Consolerizer typingWait(int typingWait) {
@@ -217,7 +209,7 @@ public class Consolerizer {
     private static void printPerLine(String printText, int typingWait, int maxLineChars) {
         final List<List<String>> collect = Arrays.stream(printText.split("\n"))
                 .map(paragraph -> Arrays.stream(getSplit(maxLineChars, paragraph))
-                        .map(Consolerizer::trim)
+                        .map(ConTexts::trim)
                         .collect(Collectors.toList()))
                 .collect(Collectors.toList());
         for (List<String> list : collect) {
@@ -274,12 +266,12 @@ public class Consolerizer {
     }
 
     private static String[] getSplit(int maxLineChars, String printText) {
-        String[] split = trim(printText).split("(?<=\\G.{" + maxLineChars + "})");
+        String[] split = ConTexts.trim(printText).split("(?<=\\G.{" + maxLineChars + "})");
         if (split.length > 1 && split[1].length() > maxLineChars) {
             String[] newSplit = getSplit(maxLineChars, split[1]);
             int newLength = newSplit.length + 1;
             String[] newStrings = new String[newLength];
-            newStrings[0] = trim(split[0]);
+            newStrings[0] = ConTexts.trim(split[0]);
             System.arraycopy(newSplit, 0, newStrings, 1, newSplit.length);
             return newStrings;
         }
@@ -357,16 +349,6 @@ public class Consolerizer {
         System.out.print("\n");
     }
 
-    public static String trim(String string) {
-        return string.replaceAll("^[\n]+|[\n]+$", "");
-    }
-
-    public static void printRedThrowableAndExit(Throwable e) {
-        RED.printGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
-        RED.printGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
-        System.exit(1);
-    }
-
     static void printColor(ConColor conColor) {
         currentColor = conColor;
         System.out.print(conColor.getConsoleColor());
@@ -408,5 +390,12 @@ public class Consolerizer {
         printColor(conColor);
         final String titleString = Consolerizer.createTitleLineLn(text, '=');
         printGeneric(titleString);
+    }
+
+    public void printThrowableAndExit(Throwable e) {
+        printColor(conColor);
+        printGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
+        printGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
+        System.exit(1);
     }
 }

@@ -17,4 +17,8 @@ public class ConTexts {
         }
         return substring;
     }
+
+    static String trim(String string) {
+        return string.replaceAll("^[\n]+|[\n]+$", "");
+    }
 }

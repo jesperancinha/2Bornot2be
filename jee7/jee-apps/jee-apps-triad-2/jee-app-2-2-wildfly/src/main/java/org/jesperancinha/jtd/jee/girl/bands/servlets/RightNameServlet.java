@@ -1,11 +1,10 @@
 package org.jesperancinha.jtd.jee.girl.bands.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
+
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class RightNameServlet extends HttpServlet {
 
@@ -18,7 +17,7 @@ public class RightNameServlet extends HttpServlet {
             writer.println(leftName +" Forever");
             writer.close();
         } catch (Exception e) {
-            Consolerizer.printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
     }
 

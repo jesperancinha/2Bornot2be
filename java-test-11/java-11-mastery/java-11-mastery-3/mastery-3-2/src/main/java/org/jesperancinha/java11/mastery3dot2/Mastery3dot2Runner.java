@@ -46,7 +46,6 @@ import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.ConGraphs.printUnicornsLn;
 
 public class Mastery3dot2Runner {
@@ -94,7 +93,7 @@ public class Mastery3dot2Runner {
             var oos = new ObjectOutputStream(fos);
             oos.writeObject("Olhão da Restauração. Cidade cubista");
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         var fishersLink = "/tmp/fishers-link.txt";
         var fishersLink2 = "/tmp/fishers-link2.txt";
@@ -102,7 +101,7 @@ public class Mastery3dot2Runner {
             Files.createLink(Paths.get(fishersLink), Paths.get(fishersWorld));
             Files.copy(Paths.get(fishersLink), Paths.get(fishersLink2));
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Check your file system and look at the results. Change the files via the command line.");
         GREEN.printGenericLn("Notice that chaging %s will also affect the contents of %s.", fishersWorld, fishersLink);

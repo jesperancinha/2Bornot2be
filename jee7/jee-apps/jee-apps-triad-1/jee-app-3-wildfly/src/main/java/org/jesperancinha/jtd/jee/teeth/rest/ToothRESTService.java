@@ -22,7 +22,7 @@ import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 @Path("/tooth/rest/")
 @RequestScoped
@@ -64,17 +64,17 @@ public class ToothRESTService {
                 .add(tooth1);
             jaw2 = jawService.updateItRight(jaw1);
         } catch (NamingException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (NotSupportedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (SystemException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         ORANGE.printGenericLn(tooth1);
         ORANGE.printGenericLn(jaw2);

@@ -55,7 +55,6 @@ import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.ConGraphs.printUnicornsLn;
 
 public class Mastery4Dot3Runner {
@@ -261,7 +260,7 @@ public class Mastery4Dot3Runner {
         try (final BufferedWriter bfw = new BufferedWriter(new FileWriter("/tmp/floridada.txt"))) {
             bfw.write(lyrics, 0, lyrics.length());
         } catch (IOException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
 
         MAGENTA.printGenericLn("Lyrics have  been written to \"/tmp/floridada.txt\".");
@@ -343,8 +342,7 @@ public class Mastery4Dot3Runner {
             MAGENTA.printGenericLn("You got it right!");
             MAGENTA.printGenericLn(z);
         } else {
-            printRedThrowableAndExit(
-                new Exception(String.format("Unfortunately your guess %d, isn't correct. Please try again...", guess)));
+            RED.printThrowableAndExit(new Exception(String.format("Unfortunately your guess %d, isn't correct. Please try again...", guess)));
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. Operand evaluation is difficult. Keep an eye out for module java11-mastery-logics for more exercises like this.");
@@ -371,9 +369,9 @@ public class Mastery4Dot3Runner {
             final String passwordString = new String(password);
             MAGENTA.printGenericLn("You've typed '%s' as a password", passwordString);
             if (!passwordString.equals("More than a mystery")) {
-                printRedThrowableAndExit(new Exception(
-                    String.format("Your password '%s' is wrong! We have to stop here. Please try again",
-                        passwordString)));
+                RED.printThrowableAndExit(new Exception(
+                            String.format("Your password '%s' is wrong! We have to stop here. Please try again",
+                                passwordString)));
             }
             MAGENTA.printGenericLn("You got it right!");
             GREEN.printGenericLn("Take-away");
@@ -617,9 +615,9 @@ public class Mastery4Dot3Runner {
                 raf.writeUTF("\n");
                 MAGENTA.printGenericLn(next);
             } catch (FileNotFoundException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             } catch (IOException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             }
 
             try (var fos = new FileOutputStream(name, true)) {
@@ -631,9 +629,9 @@ public class Mastery4Dot3Runner {
 
                 }
             } catch (FileNotFoundException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             } catch (IOException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             }
         }
         printRainbowLn('-');
@@ -827,7 +825,7 @@ public class Mastery4Dot3Runner {
         try {
             connection = DriverManager.getConnection("jdbc:h2:mem:", "sa", "");
         } catch (SQLException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         PreparedStatement preparedStatementCreate = null;
         try {
@@ -836,14 +834,14 @@ public class Mastery4Dot3Runner {
                 "CREATE TABLE Song (" + "   id INT AUTO_INCREMENT NOT NULL, \n" + "   SONG VARCHAR(50) NOT NULL, \n"
                     + "   BAND VARCHAR(50) NOT NULL, \n" + "   HITYEAR INT " + ");");
         } catch (SQLException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         boolean executeCreation = false;
         try {
             assert preparedStatementCreate != null;
             executeCreation = preparedStatementCreate.execute();
         } catch (SQLException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         if (executeCreation) {
             MAGENTA.printGeneric("Table Song is created!");
@@ -863,7 +861,7 @@ public class Mastery4Dot3Runner {
                     MAGENTA.printGeneric("Inserted song %s", song);
                 }
             } catch (SQLException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             }
 
         });
@@ -907,12 +905,12 @@ public class Mastery4Dot3Runner {
                 printRainbowLn('-');
             }
         } catch (SQLException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         try {
             connection.close();
         } catch (SQLException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. In Result sets, indexes are 1 based");

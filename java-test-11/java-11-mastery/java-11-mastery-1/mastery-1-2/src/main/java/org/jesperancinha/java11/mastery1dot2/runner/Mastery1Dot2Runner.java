@@ -1,7 +1,5 @@
 package org.jesperancinha.java11.mastery1dot2.runner;
 
-import org.jesperancinha.console.consolerizer.ConColor;
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.java11.mastery1dot2.runn1er.FailMutantTurtle;
 
 import java.sql.Connection;
@@ -22,10 +20,9 @@ public class Mastery1Dot2Runner {
     public static void main(String[] args) throws InterruptedException {
         // 1. Root Interfaces Collection and Map
         var typingWait = 0;
-        var console = Consolerizer.createGreen().typingWait(typingWait);
+        var console = GREEN.getColorManager().typingWait(typingWait);
         var slogan = "Heroes in a half shell. Turtle power!";
         console.printText("@@@@@@@@@ Welcome to %s @@@@@@@@@\n", slogan);
-        console.conColor(ConColor.RED);
         console.printText("WOW!\n");
 
         String splinterMain = "Splinter";
@@ -36,9 +33,7 @@ public class Mastery1Dot2Runner {
             put("Michelangelo", splinter);
             put("Donatello", splinter);
         }};
-        console.conColor(BRIGHT_CYAN);
         console.printText("These all report to %s:\n%s\n", splinterMain, mapTurtles.toString());
-        console.conColor(ConColor.YELLOW);
         console.printText("@@ As you can see a Map is no collection!\n");
         GREEN.printGeneric("var mapTurtles = new HashMap<String, String>() {{\n" +
                 "            String splinter = splinterMain;\n" +

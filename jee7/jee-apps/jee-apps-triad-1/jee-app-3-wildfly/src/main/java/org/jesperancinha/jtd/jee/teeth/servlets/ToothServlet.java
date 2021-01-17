@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 @WebServlet("/tooth/servlet/all")
 public class ToothServlet extends HttpServlet {
@@ -53,17 +53,17 @@ public class ToothServlet extends HttpServlet {
         try {
             tooth1 = toothService.updateItRight(tooth);
         } catch (NamingException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (NotSupportedException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (SystemException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         ORANGE.printGenericLn(tooth1);
         ORANGE.printGenericLn(jaw1);

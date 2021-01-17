@@ -45,7 +45,6 @@ import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.ConGraphs.printUnicornsLn;
 
 public class Mastery4Dot1Runner {
@@ -266,7 +265,7 @@ public class Mastery4Dot1Runner {
             String courtCaseString = (String) courtCaseStringField.get(courtCase);
             MAGENTA.printGenericLn(courtCaseString);
         } catch (NoSuchFieldException | IllegalAccessException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         BLUE.printGenericLn("This means that although the courtCase is private now, it is still registered for the future.");
         GREEN.printGenericLn("Take-away");
@@ -322,15 +321,15 @@ public class Mastery4Dot1Runner {
                         } while (result > -1 && ++i <= 1);
                     } catch (FileNotFoundException e) {
                         RED.printGenericLn("File was not found!");
-                        printRedThrowableAndExit(e);
+                        RED.printThrowableAndExit(e);
                     } catch (IOException e) {
                         RED.printGenericLn("An error occurred!");
-                        printRedThrowableAndExit(e);
+                        RED.printThrowableAndExit(e);
                     }
                 }
             }
         } catch (Throwable e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
     }
 
@@ -566,7 +565,7 @@ public class Mastery4Dot1Runner {
         } catch (RookieException e) {
             MAGENTA.printGenericLn("You are a Rookie!");
         } catch (Exception e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. In a try with multiple catches, the order is more specific to more generic");

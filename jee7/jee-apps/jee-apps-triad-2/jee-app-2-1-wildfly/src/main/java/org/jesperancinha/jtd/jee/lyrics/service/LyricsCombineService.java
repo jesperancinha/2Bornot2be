@@ -1,12 +1,11 @@
 package org.jesperancinha.jtd.jee.lyrics.service;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.enterprise.inject.Alternative;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 @jakarta.enterprise.inject.Alternative
 @Alternative
@@ -27,7 +26,7 @@ public class LyricsCombineService implements LyricsService {
             final var bis2 = new BufferedInputStream(resourceAsStream2)) {
             return new String(bis.readAllBytes()) + "\n" + new String(bis2.readAllBytes());
         } catch (IOException e) {
-            Consolerizer.printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
 
         return null;

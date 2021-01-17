@@ -3,7 +3,7 @@ package org.jesperancinha.java11.mastery4dot2;
 import javax.swing.*;
 import java.awt.*;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Jetuber extends JFrame {
 
@@ -23,7 +23,7 @@ public class Jetuber extends JFrame {
         try {
             pane.setPage("https://es.wikipedia.org/wiki/Bandido_(%C3%A1lbum)");
         } catch (Throwable e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
 
     }

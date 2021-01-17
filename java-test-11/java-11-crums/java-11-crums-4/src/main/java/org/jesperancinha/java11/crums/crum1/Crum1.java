@@ -18,7 +18,6 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum1 {
     public static void main(String[] args) {
@@ -31,7 +30,7 @@ public class Crum1 {
                 oos.writeUTF("You spin me round round baby round round like a record");
                 oos.flush();
             } catch (IOException e) {
-                printRedThrowableAndExit(e);
+                RED.printThrowableAndExit(e);
             } catch (AccessControlException e) {
                 RED.printGenericLn("This is expected! We are not allowing to write to file -> %s", e);
             }

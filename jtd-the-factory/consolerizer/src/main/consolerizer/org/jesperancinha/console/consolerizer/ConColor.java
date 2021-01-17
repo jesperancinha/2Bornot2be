@@ -76,6 +76,10 @@ public enum ConColor {
         colorManager.printGenericTitleLn(text);
     }
 
+    public void printThrowableAndExit(Throwable e) {
+        colorManager.printThrowableAndExit(e);
+    }
+
     public static List<String> getConsoleRainbow() {
         return Arrays.asList(RED.getConsoleColor(), ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
                 GREEN.getConsoleColor(), BLUE.getConsoleColor(), MAGENTA.getConsoleColor());

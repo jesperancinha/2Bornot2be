@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum13;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum13 {
     class Running {
@@ -27,7 +27,7 @@ public class Crum13 {
         try {
             running.running();
         } catch (Exception e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
 
         GREEN.printGenericLn("The rule is always that the method overriding is always more specific if we choose to override the exception");
