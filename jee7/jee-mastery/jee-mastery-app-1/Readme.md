@@ -1,7 +1,24 @@
 # jee-mastery-app-1
 
 ## Exercise
+
+In this exercise we will go through music that one way or the other, has been involved in PRIDE events.
+
 ## Context References
+
+
+<div align="center">
+      <a titl="Divine - You Think You're a Man" href="https://www.youtube.com/watch?v=063RGou-P_8">
+     <img 
+          src="https://img.youtube.com/vi/063RGou-P_8/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a titl="Full Frontal - You Think You're a Man" href="https://www.youtube.com/watch?v=Esxotxomw8s">
+     <img 
+          src="https://img.youtube.com/vi/Esxotxomw8s/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ## References
 
