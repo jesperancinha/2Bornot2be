@@ -1,5 +1,4 @@
-<%@ page import="org.jesperancinha.console.consolerizer.Consolerizer" %>
-<%@ page import="static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn" %>
+<%@ page import="static org.jesperancinha.console.consolerizer.ConColor.RED" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
@@ -12,7 +11,7 @@
 <%
     String user = null;
     if (session.getAttribute("username") == null) {
-        Consolerizer.printRedGenericLn(
+        RED.printGenericLn(
                 "This is a protection agains URL rewriting. Although we can add a JSESSION id to the URL, our session also determines if we are logged or not.");
         response.sendRedirect("/jee-app-2-2-wildfly-1.0.0-SNAPSHOT");
     } else

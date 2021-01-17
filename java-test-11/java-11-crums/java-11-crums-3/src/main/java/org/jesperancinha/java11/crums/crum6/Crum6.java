@@ -7,8 +7,8 @@ import java.util.ResourceBundle;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum6 {
     public static void main(String[] args) {
@@ -32,13 +32,9 @@ public class Crum6 {
             printOrangeGenericLn(resourceBundlePt.getString("goodmorning"));
 
         } catch (MissingResourceException e) {
-            printRedGenericLn(
-                "This is expected! Since we cannot find the resource \"goodmorning\", we throw this exception -> %s",
-                e);
-            printRedGenericLn(
-                "The reason for this is that file messages_pt_PT.properties, is only valid for a Locale with country PT");
-            printRedGenericLn(
-                "Since this is not the case with our java.util.Locale, our code will throw a java.util.MissingResourceException");
+            RED.printGenericLn("This is expected! Since we cannot find the resource \"goodmorning\", we throw this exception -> %s", e);
+            RED.printGenericLn("The reason for this is that file messages_pt_PT.properties, is only valid for a Locale with country PT");
+            RED.printGenericLn("Since this is not the case with our java.util.Locale, our code will throw a java.util.MissingResourceException");
         }
 
         var locale2 = new Locale.Builder().setRegion("ES")

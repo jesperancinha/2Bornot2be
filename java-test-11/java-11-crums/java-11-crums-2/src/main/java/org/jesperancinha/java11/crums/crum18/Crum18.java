@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum18 {
     public static void main(String[] args) {
@@ -42,10 +42,10 @@ public class Crum18 {
                 .asIterator()
                 .forEachRemaining(Consolerizer::printOrangeGenericLn);
         } catch (final MissingResourceException e) {
-            printRedGenericLn("This is expected. In this case we should have some files that do not exist");
-            printRedGenericLn("We should have had dictionary_portunol_WW.properties or any of the default files");
-            printRedGenericLn("These would be dictionary.properties or dictionary_portunol.properties");
-            printRedGenericLn("Exception thrown -> %s", e);
+            RED.printGenericLn("This is expected. In this case we should have some files that do not exist");
+            RED.printGenericLn("We should have had dictionary_portunol_WW.properties or any of the default files");
+            RED.printGenericLn("These would be dictionary.properties or dictionary_portunol.properties");
+            RED.printGenericLn("Exception thrown -> %s", e);
         }
 
         GREEN.printGenericLn("For the resource bundle to work we have some default hierarchy to follow");

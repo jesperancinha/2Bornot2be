@@ -11,14 +11,14 @@ import java.util.Stack;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 @Singleton
 public class HistorySingletonDelivery implements Serializable {
     final Stack<String> stackOfEvents1 = HistoryContentCreator.stackOfEvents1();
 
     public HistorySingletonDelivery() {
-        printRedGenericLn("This is a %s with hash %s", this.getClass()
+        RED.printGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
 
         GREEN.printGenericLn("A @Singleton bean is never passivated and only has two stages:");

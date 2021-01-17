@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum7 {
     public static void main(String[] args) {
@@ -19,18 +19,15 @@ public class Crum7 {
         try {
             var value = arrayInt[1][0];
         } catch (NullPointerException e) {
-            printRedGenericLn(
-                "What we did here is to reach to position 1, which we know is null and then try to reach any of its elements");
-            printRedGenericLn(
-                "We cannot do that because the position 0 of a null element results in a NullPointerException -> %s",
-                e);
+            RED.printGenericLn("What we did here is to reach to position 1, which we know is null and then try to reach any of its elements");
+            RED.printGenericLn("We cannot do that because the position 0 of a null element results in a NullPointerException -> %s", e);
         }
 
         try {
             var value = arrayInt[-1];
         } catch (IndexOutOfBoundsException e) {
-            printRedGenericLn("Position -1 does not exist!");
-            printRedGenericLn("And so we get a IndexOutOfBoundsException -> %s", e);
+            RED.printGenericLn("Position -1 does not exist!");
+            RED.printGenericLn("And so we get a IndexOutOfBoundsException -> %s", e);
         }
 
         var strings = new String[] { "all", "I", "want", "for", "xmas", "is", "you" };
@@ -41,18 +38,16 @@ public class Crum7 {
         try {
             var value = strings[-1];
         } catch (IndexOutOfBoundsException e) {
-            printRedGenericLn("Position -1 does not exist!");
-            printRedGenericLn("And so we get a IndexOutOfBoundsException -> %s", e);
+            RED.printGenericLn("Position -1 does not exist!");
+            RED.printGenericLn("And so we get a IndexOutOfBoundsException -> %s", e);
         }
 
         try {
             "Mariah Carey".charAt(1000);
         } catch (StringIndexOutOfBoundsException e) {
-            printRedGenericLn("The StringIndexOutOfBoundsException is also an IndexOutOfBoundsException");
-            printRedGenericLn(
-                "It is platform dependent and so it is not a good idea in general to catch such a specific exception");
-            printRedGenericLn(
-                "But we will get this exception or the IndexOutOfBoundsException if we are out of range -> %s", e);
+            RED.printGenericLn("The StringIndexOutOfBoundsException is also an IndexOutOfBoundsException");
+            RED.printGenericLn("It is platform dependent and so it is not a good idea in general to catch such a specific exception");
+            RED.printGenericLn("But we will get this exception or the IndexOutOfBoundsException if we are out of range -> %s", e);
         }
 
         GREEN.printGenericLn("The point is that we can generate NullPointerException if we try to access an indez of something that is already Null");

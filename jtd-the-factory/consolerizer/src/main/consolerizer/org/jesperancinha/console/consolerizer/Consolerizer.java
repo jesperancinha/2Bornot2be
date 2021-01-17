@@ -13,10 +13,8 @@ import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
@@ -98,22 +96,6 @@ public class Consolerizer {
     public static void printRandomColorGeneric(String text, Object... args) {
         printColor(ConColor.getRandomColor());
         printPrivateText(text, args);
-    }
-
-    public static void printRedGenericLn(String text, Object... args) {
-        RED.printGenericLn(text, args);
-    }
-
-    public static void printRedGeneric(String text, Object... args) {
-        RED.printGeneric(text, args);
-    }
-
-    public static void printRedGenericLn(Object text) {
-        RED.printGenericLn(text);
-    }
-
-    public static void printRedGeneric(String text) {
-        RED.printGeneric(text);
     }
 
     public static void printYellowGenericLn(Object text) {
@@ -482,8 +464,8 @@ public class Consolerizer {
     }
 
     public static void printRedThrowableAndExit(Throwable e) {
-        printRedGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
-        printRedGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
+        RED.printGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
+        RED.printGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
         System.exit(1);
     }
 

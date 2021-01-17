@@ -7,8 +7,8 @@ import java.util.Arrays;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum33 {
     public static void main(String[] args) {
@@ -25,23 +25,20 @@ public class Crum33 {
         try {
             printOrangeGenericLn("%s has index %s", "KITTENAccount", CashContainer.valueOf("KITTENAccount"));
         } catch (IllegalArgumentException e) {
-            printRedGenericLn(
-                "This is expected! Note that an invalid value results in a RuntimeException of type IllegalArgumentException -> %s",
-                e);
+            RED.printGenericLn("This is expected! Note that an invalid value results in a RuntimeException of type IllegalArgumentException -> %s", e);
         }
         MAGENTA.printGenericLn("And if we try to clone it:");
         try {
             CashContainer.LIONACCOUNT.tryToClone();
         } catch (CloneNotSupportedException e) {
-            printRedGenericLn(
-                "This is expected, we tried to make clone accessible to the outside world. That is not possible. For enum throws a direct exception");
-            printRedGenericLn("If we got to (java.lang.Enum) we find:");
-            printRedGenericLn("    /**\n" + "     * Throws CloneNotSupportedException.  This guarantees that enums\n"
-                + "     * are never cloned, which is necessary to preserve their \"singleton\"\n" + "     * status.\n"
-                + "     *\n" + "     * @return (never returns)\n" + "     */\n"
-                + "    protected final Object clone() throws CloneNotSupportedException {\n"
-                + "        throw new CloneNotSupportedException();\n" + "    }");
-            printRedGenericLn("And then we get this exception ->", e);
+            RED.printGenericLn("This is expected, we tried to make clone accessible to the outside world. That is not possible. For enum throws a direct exception");
+            RED.printGenericLn("If we got to (java.lang.Enum) we find:");
+            RED.printGenericLn("    /**\n" + "     * Throws CloneNotSupportedException.  This guarantees that enums\n"
+                    + "     * are never cloned, which is necessary to preserve their \"singleton\"\n" + "     * status.\n"
+                    + "     *\n" + "     * @return (never returns)\n" + "     */\n"
+                    + "    protected final Object clone() throws CloneNotSupportedException {\n"
+                    + "        throw new CloneNotSupportedException();\n" + "    }");
+            RED.printGenericLn("And then we get this exception ->", e);
         }
         GREEN.printGenericLn("Enums only have two public methods available to the outside world");
         GREEN.printGenericLn("One gives you an array with all enum possible values");

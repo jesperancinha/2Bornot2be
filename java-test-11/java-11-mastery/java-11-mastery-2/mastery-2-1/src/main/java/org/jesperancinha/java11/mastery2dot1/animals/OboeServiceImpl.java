@@ -1,12 +1,12 @@
 package org.jesperancinha.java11.mastery2dot1.animals;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class OboeServiceImpl implements OboeService {
 
     @Override
     public void play() {
-        Consolerizer.printRedGenericLn("Playing the oboe...");
+        RED.printGenericLn("Playing the oboe...");
 
     }
 }

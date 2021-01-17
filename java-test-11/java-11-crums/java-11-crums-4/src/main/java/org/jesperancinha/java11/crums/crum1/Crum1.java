@@ -16,9 +16,8 @@ import java.util.function.Function;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum1 {
@@ -34,7 +33,7 @@ public class Crum1 {
             } catch (IOException e) {
                 printRedThrowableAndExit(e);
             } catch (AccessControlException e) {
-                printRedGenericLn("This is expected! We are not allowing to write to file -> %s", e);
+                RED.printGenericLn("This is expected! We are not allowing to write to file -> %s", e);
             }
             return "Ok!";
         };
@@ -72,9 +71,7 @@ public class Crum1 {
         try {
             System.setSecurityManager(securityManager);
         } catch (AccessControlException e) {
-            printRedGeneric(
-                "This is expected! We have changed permissions in such a way that we can no longer change the SecurityManqger during runtime. Safe! -> %s",
-                e);
+            RED.printGeneric("This is expected! We have changed permissions in such a way that we can no longer change the SecurityManqger during runtime. Safe! -> %s", e);
         }
         GREEN.printGenericLn("Make sure to study this code. This is how you make sure to reduce privileges from a high privileged user on demand");
     }

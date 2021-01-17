@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.mastery2dot1.animals;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class FluteServiceImpl {
     public static FluteService provider(){
         return new FluteService() {
             @Override
             public void play() {
-                Consolerizer.printRedGenericLn("Playing the flute...");
+                RED.printGenericLn("Playing the flute...");
             }
         };
     }

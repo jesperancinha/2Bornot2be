@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum3;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum3 {
 
@@ -37,7 +37,7 @@ public class Crum3 {
         try {
             b1 = (B) a1;
         } catch (ClassCastException e) {
-            printRedGenericLn("We cannot assign B1 to A1 -> %s", e);
+            RED.printGenericLn("We cannot assign B1 to A1 -> %s", e);
         }
 
         a1 = b1;

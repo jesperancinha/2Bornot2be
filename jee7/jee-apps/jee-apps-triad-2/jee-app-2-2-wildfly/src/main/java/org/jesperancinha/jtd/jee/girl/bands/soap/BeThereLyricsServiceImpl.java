@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 @WebService(name = "be-there", endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.BeThereLyricsService")
@@ -69,8 +69,7 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
                     value.add(line);
                     session.setAttribute("currentLyrics", value);
                 } else {
-                    printRedGenericLn(
-                        "🔴 This is not correct. Please listen to the song more to get the exact next line");
+                    RED.printGenericLn("🔴 This is not correct. Please listen to the song more to get the exact next line");
                     return "WRONG";
                 }
             } else if (currentLyrics.size() >= EXPECTED_LYRICS.length) {
@@ -81,8 +80,7 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
                     currentLyrics.add(line);
                     session.setAttribute("currentLyrics", currentLyrics);
                 } else {
-                    printRedGenericLn(
-                        "🔴 This is not correct. Please listen to the song more to get the exact next line");
+                    RED.printGenericLn("🔴 This is not correct. Please listen to the song more to get the exact next line");
                     return "WRONG";
                 }
             }

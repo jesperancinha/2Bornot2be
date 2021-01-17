@@ -1,8 +1,7 @@
 package org.jesperancinha.java11.mastery4dot2.instrument;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public final class Drums implements AutoCloseable {
 
@@ -15,7 +14,7 @@ public final class Drums implements AutoCloseable {
     }
 
     public final void playWrongDrum() throws DrumException {
-        Consolerizer.printRedGenericLn("Oh no! I think I hit the wrong drum!");
+        RED.printGenericLn("Oh no! I think I hit the wrong drum!");
         throw new DrumException();
     }
 

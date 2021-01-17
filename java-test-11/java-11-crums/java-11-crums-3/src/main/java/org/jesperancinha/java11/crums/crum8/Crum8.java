@@ -5,8 +5,8 @@ import java.nio.file.Path;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum8 {
     public static void main(String[] args) {
@@ -26,8 +26,7 @@ public class Crum8 {
             printOrangeGenericLn(path1.relativize(path3));
             printOrangeGenericLn(path3.relativize(path1));
         } catch (IllegalArgumentException e) {
-            printRedGenericLn(
-                "This is expected! Relativizing a filename with a filename with a path does not make sense -> %s", e);
+            RED.printGenericLn("This is expected! Relativizing a filename with a filename with a path does not make sense -> %s", e);
         }
 
         MAGENTA.printGenericLn("We can also resolve but in this case, since we are actually building and not referencing one path with the other, no exception occurs in any of the previous four cases");

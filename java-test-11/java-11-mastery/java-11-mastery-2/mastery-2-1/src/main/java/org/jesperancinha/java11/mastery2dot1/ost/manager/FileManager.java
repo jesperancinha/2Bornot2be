@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
 
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
 public class FileManager {
 
@@ -31,9 +31,9 @@ public class FileManager {
             return file.getName();
         };
         final List<String> strings = executeFunction(test);
-        printRedGeneric(strings.toString());
+        RED.printGeneric(strings.toString());
         final List<String> strings1 = executeFunction2(test);
-        printRedGeneric(strings1.toString());
+        RED.printGeneric(strings1.toString());
         printBrightCyanGeneric("%s\n", allOSTFiles.toString());
     }
 

@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum26 {
     public static void main(String[] args) {
@@ -25,13 +25,13 @@ public class Crum26 {
         try {
             List.of(strings);
         } catch (NullPointerException e){
-            printRedGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s",e);
+            RED.printGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s", e);
         }
 
         try {
             List.copyOf(Arrays.asList(strings));
         } catch (NullPointerException e){
-            printRedGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s",e);
+            RED.printGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s", e);
         }
 
         GREEN.printGenericLn("It is important to understand the null values aren't accepted in some list creations.");

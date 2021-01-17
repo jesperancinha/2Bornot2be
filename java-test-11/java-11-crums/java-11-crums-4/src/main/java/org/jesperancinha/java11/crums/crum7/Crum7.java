@@ -6,8 +6,8 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
 public class Crum7 {
     public static void main(String[] args) {
@@ -25,8 +25,7 @@ public class Crum7 {
         try {
             var list4 = List.of(list1.toArray(new Integer[0]));
         } catch (NullPointerException e) {
-            printRedGeneric(
-                "This is expected! Although Collections.unmodifiableList allow Null values, List.Of do not! -> %s", e);
+            RED.printGeneric("This is expected! Although Collections.unmodifiableList allow Null values, List.Of do not! -> %s", e);
         }
         list1.set(2, 99);
         List<List<Integer>> list3 = List.of(list1, list2);

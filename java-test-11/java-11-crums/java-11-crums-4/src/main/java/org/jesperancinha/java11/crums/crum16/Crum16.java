@@ -8,8 +8,8 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum16 {
     public static void main(String[] args) {
@@ -31,9 +31,7 @@ public class Crum16 {
                 .boxed()
                 .collect(Collectors.toMap(cups::get, prices::get));
         } catch (IllegalStateException e) {
-            printRedGenericLn(
-                "This is expected! We did not implement a disambiguation! Black Cup exists more than once in the list -> %s",
-                e);
+            RED.printGenericLn("This is expected! We did not implement a disambiguation! Black Cup exists more than once in the list -> %s", e);
         }
 
         MAGENTA.printGenericLn("So let's disambiguate now:");

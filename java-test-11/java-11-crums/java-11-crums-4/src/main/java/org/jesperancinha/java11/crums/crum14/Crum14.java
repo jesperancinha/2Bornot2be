@@ -11,9 +11,9 @@ import java.util.stream.Stream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum14 {
@@ -85,7 +85,7 @@ public class Crum14 {
         try {
             umutableConcerts.put("REM", 40_000.2222);
         } catch (UnsupportedOperationException e) {
-            printRedGenericLn("This is expected! We cannot change our map and we have free tickets! -> %s", e);
+            RED.printGenericLn("This is expected! We cannot change our map and we have free tickets! -> %s", e);
         }
 
         GREEN.printGenericLn("Let's remember that Collectors.toMap uses indexes or whatever value in the stream to setup the keys we need and the values");

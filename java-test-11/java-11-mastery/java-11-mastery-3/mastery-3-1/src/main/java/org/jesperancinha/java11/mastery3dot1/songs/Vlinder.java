@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.mastery3dot1.songs;
 
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Vlinder extends RawVlinder{
     @Override
@@ -11,9 +11,9 @@ public class Vlinder extends RawVlinder{
 
     @Override
     public void publicPoint() {
-        printRedGenericLn("In this case you can just call the public method. Note that the abstraction is package protected.");
-        printRedGenericLn("This means that it is the strictest next to `private`");
-        printRedGenericLn("So we can implement it with `protected` and `public` only.");
+        RED.printGenericLn("In this case you can just call the public method. Note that the abstraction is package protected.");
+        RED.printGenericLn("This means that it is the strictest next to `private`");
+        RED.printGenericLn("So we can implement it with `protected` and `public` only.");
     }
 
     // 'playVlinder()' in 'org.jesperancinha.java11.mastery3dot1.songs.Vlinder' clashes with 'playVlinder()' in 'org.jesperancinha.java11.mastery3dot1.songs.RawVlinder';

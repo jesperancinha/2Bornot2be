@@ -11,9 +11,9 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @WebServlet("/history/dynasties")
 public class ListOfKingsAndQueensServlet extends HttpServlet {
@@ -37,7 +37,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
             writer.println("<h1>This is the Royal Orange-Nassau first Dynasty</h1>");
             orangeNassau.forEach(writer::println);
         } catch (Exception e) {
-            printRedGenericLn("This may be expected! -> %s", e.getMessage());
+            RED.printGenericLn("This may be expected! -> %s", e.getMessage());
             GREEN.printGenericLn("Check your user. It has to have the Manager or Civilian role, otherwise they cannot see the common Orange Nassau list");
             printRainbowTitleLn("They can, however, use the royal one ;-)");
         }
@@ -51,7 +51,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
             writer.println("<h1>This is the Nassau Dynasty from a Royal perspective</h1>");
             nassau.forEach(writer::println);
         } catch (Exception e) {
-            printRedGenericLn("This may be expected! -> %s", e.getMessage());
+            RED.printGenericLn("This may be expected! -> %s", e.getMessage());
             GREEN.printGenericLn("Check your user. It has to have the OranjeNassau profile, otherwise they cannot see the royal Orange Nassau list");
             printRainbowTitleLn("They can, however, use the royal one ;-)");
         }
@@ -61,7 +61,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
             nassau.forEach(writer::println);
 
         } catch (Exception e) {
-            printRedGenericLn("This may be expected! -> %s", e.getMessage());
+            RED.printGenericLn("This may be expected! -> %s", e.getMessage());
             GREEN.printGenericLn("Check your user. It has to have the Manager role, otherwise they cannot see the Nassau dynasty member list");
         }
 

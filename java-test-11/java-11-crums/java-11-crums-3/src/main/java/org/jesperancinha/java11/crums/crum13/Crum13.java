@@ -10,7 +10,7 @@ import java.io.ObjectOutputStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum13 {
@@ -36,10 +36,8 @@ public class Crum13 {
                 "See, with the uncommented default empty constructors you were able to deserialize our Table5A: %s",
                 table5A);
         } catch (InvalidClassException e) {
-            printRedGenericLn(
-                "This is expected! All classes in the hierarchy must have a default public empty constructor when deserializing -> %s",
-                e);
-            printRedGenericLn("Try again with the uncommented constructors to see how this works.");
+            RED.printGenericLn("This is expected! All classes in the hierarchy must have a default public empty constructor when deserializing -> %s", e);
+            RED.printGenericLn("Try again with the uncommented constructors to see how this works.");
         }
         GREEN.printGenericLn("There is a difference between creating serializable classes in inner classes");
         GREEN.printGenericLn("In a normal case, is the subclass is serializable, the others must have a default empty constructor");

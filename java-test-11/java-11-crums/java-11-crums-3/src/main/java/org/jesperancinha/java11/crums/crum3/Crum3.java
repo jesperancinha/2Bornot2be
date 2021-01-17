@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum3;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum3 {
 
@@ -50,8 +50,8 @@ public class Crum3 {
         try {
             b1 = (B1) new A();
         } catch (RuntimeException e) {
-            printRedGenericLn("This is expected. A ClassCastException is thrown if we make a wrong casting -> %s", e);
-            printRedGenericLn("This did not generated any compile time error");
+            RED.printGenericLn("This is expected. A ClassCastException is thrown if we make a wrong casting -> %s", e);
+            RED.printGenericLn("This did not generated any compile time error");
         }
 
         // Required type:

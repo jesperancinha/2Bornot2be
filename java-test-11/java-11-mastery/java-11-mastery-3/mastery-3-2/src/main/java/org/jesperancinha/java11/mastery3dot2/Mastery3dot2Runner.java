@@ -41,10 +41,10 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -190,7 +190,7 @@ public class Mastery3dot2Runner {
             var oos = new ObjectOutputStream(fos);
             oos.writeObject(pesca);
         } catch (IOException e) {
-            printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
+            RED.printGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
             System.exit(1);
         }
         try (var fis = new FileInputStream("/tmp/fishersCatch.obj")) {
@@ -199,7 +199,7 @@ public class Mastery3dot2Runner {
             MAGENTA.printGenericLn("We got the data! And the fisher catched %s", o);
 
         } catch (IOException | ClassNotFoundException e) {
-            printRedGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
+            RED.printGenericLn("Ooops! This is wrong -> %s. Please check your system", e);
             System.exit(1);
         }
         GREEN.printGenericLn("Take-aways");
@@ -239,8 +239,8 @@ public class Mastery3dot2Runner {
             var reOrganizedBaits = allBaitObjects
                     .stream().sorted().collect(Collectors.toList());
         } catch (ClassCastException e) {
-            printRedGenericLn("As we expected, we cannot run a default comparator if it is not defined in the objects of a list");
-            printRedGenericLn("The fisher has to wash all of their baits -> %s", e);
+            RED.printGenericLn("As we expected, we cannot run a default comparator if it is not defined in the objects of a list");
+            RED.printGenericLn("The fisher has to wash all of their baits -> %s", e);
         }
         GREEN.printGenericLn("Take-aways");
         GREEN.printGenericLn("1. We can provide a comparator to the sorted intermediate operation of sorted");
@@ -329,24 +329,24 @@ public class Mastery3dot2Runner {
         try {
             new Lingueirao();
         } catch (ExceptionInInitializerError e) {
-            printRedGenericLn("Note we can't catch the Linguerão due to an Error coming from a static initialization -> %s", e);
+            RED.printGenericLn("Note we can't catch the Linguerão due to an Error coming from a static initialization -> %s", e);
         }
         try {
             Lingueirao.fishLingueirao();
         } catch (NoClassDefFoundError e) {
-            printRedGenericLn("Notice that there is no class definition found. This makes sense. We actually have no class since initializing  has failed! -> %s", e);
+            RED.printGenericLn("Notice that there is no class definition found. This makes sense. We actually have no class since initializing  has failed! -> %s", e);
         }
         printYellowGenericLn("Essentially Lingueirão has gone into the oblivion because of the bird. 🦅");
         printYellowGenericLn("What about this Caranguejo? 🦀");
         try {
             new Caranguejo();
         } catch (RuntimeException e) {
-            printRedGenericLn("In this case, an exception is thrown during an instance initialization. The Exception is thrown as is -> %s", e);
+            RED.printGenericLn("In this case, an exception is thrown during an instance initialization. The Exception is thrown as is -> %s", e);
         }
         try {
             Caranguejo.fishCaranguejo();
         } catch (RuntimeException e) {
-            printRedGenericLn("The same when calling the fishing factory method -> %s", e);
+            RED.printGenericLn("The same when calling the fishing factory method -> %s", e);
         }
         GREEN.printGenericLn("Take-aways:");
         GREEN.printGenericLn("1. Static initialization can fail, but don't stop a program from running.");
@@ -420,7 +420,7 @@ public class Mastery3dot2Runner {
                 printYellowGenericLn(line);
             }
         } catch (IOException e) {
-            printRedGenericLn("Ooops! This shouldn't have happened! Check your runtime -> %s", e);
+            RED.printGenericLn("Ooops! This shouldn't have happened! Check your runtime -> %s", e);
         }
         GREEN.printGenericLn("RandomAccessFile uses different interfaces than FileInputStream.");
         GREEN.printGenericLn("But they are all Closeable.");
@@ -481,7 +481,7 @@ public class Mastery3dot2Runner {
         try {
             dequeQueue.add("5Kg Cockles");
         } catch (IllegalStateException e) {
-            printRedGenericLn("Note that capacity limit does not show in ArrayDeque, because ArrayDeque grow automatically -> %s", e);
+            RED.printGenericLn("Note that capacity limit does not show in ArrayDeque, because ArrayDeque grow automatically -> %s", e);
         }
         boolean offer = dequeQueue.offer("4Kg Gambas");
         MAGENTA.printGenericLn("This Deque has now reached its limit of %d elemenst", dequeQueue.size());
@@ -555,21 +555,21 @@ public class Mastery3dot2Runner {
         try {
             allArtists.sort(Artist::compare);
         } catch (UnsupportedOperationException e) {
-            printRedGenericLn("We are attempting to change a well established list.");
-            printRedGenericLn("allArtists.sort(Artist::compare); -> This list is marked as immutable. We get this error: %s", e);
+            RED.printGenericLn("We are attempting to change a well established list.");
+            RED.printGenericLn("allArtists.sort(Artist::compare); -> This list is marked as immutable. We get this error: %s", e);
         }
         try {
             List.copyOf(allArtists).sort(Artist::compare);
         } catch (UnsupportedOperationException e) {
-            printRedGenericLn("Making a copy of immutable also doesn't work");
-            printRedGenericLn("List.copyOf(allArtists).sort(Artist::compare); -> This list is marked as immutable. We get this error: %s", e);
+            RED.printGenericLn("Making a copy of immutable also doesn't work");
+            RED.printGenericLn("List.copyOf(allArtists).sort(Artist::compare); -> This list is marked as immutable. We get this error: %s", e);
         }
         try {
             new ArrayList<>(allArtists).sort(Artist::compare);
             GREEN.printGenericLn("new ArrayList<>(allArtists).sort(Artist::compare); -> This is probably the only way to get a changed list and make modifications on it.");
             GREEN.printGenericLn("We just create a new ArrayList from the immutable list in order to get a mutable list.");
         } catch (UnsupportedOperationException e) {
-            printRedGenericLn("Ooops... This should not have happened. Please check your runtime: %s", e);
+            RED.printGenericLn("Ooops... This should not have happened. Please check your runtime: %s", e);
         }
         GREEN.printGenericLn("Immutability principles are very common and traverse the whole JDK.");
         GREEN.printGenericLn("When working with collections it is important to understand when to we get immutables and when do we get mutables");

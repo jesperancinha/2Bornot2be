@@ -10,9 +10,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 // Caused by: org.jboss.weld.exceptions.DefinitionException:
@@ -44,8 +44,7 @@ public class PalaceWaitingRoom implements Serializable {
                 .getCallerPrincipal(), contextProvider.getContext()
                 .isCallerInRole(roleName));
         } catch (Exception exception) {
-            printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             printRainbowTitleLn(contextProvider.getContext()
                 .getCallerPrincipal());
@@ -54,8 +53,7 @@ public class PalaceWaitingRoom implements Serializable {
             printOrangeGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
                 .getCallerPrincipal(), context.isCallerInRole(roleName));
         } catch (Exception exception) {
-            printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             printRainbowTitleLn(context.getCallerPrincipal());
         }
@@ -78,16 +76,13 @@ public class PalaceWaitingRoom implements Serializable {
                 .getCallerPrincipal(), contextProvider.getContext()
                 .isCallerInRole("roleName"));
         } catch (Exception exception) {
-            printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             try {
                 printOrangeGenericLn(contextProvider.getContext()
                     .getCallerPrincipal());
             } catch (Exception exception) {
-                printRedGenericLn(
-                    "This is expected! We cannot access call the Principle in a Post Construct phase-> %s",
-                    exception.getMessage());
+                RED.printGenericLn("This is expected! We cannot access call the Principle in a Post Construct phase-> %s", exception.getMessage());
 
             }
         }
@@ -95,15 +90,12 @@ public class PalaceWaitingRoom implements Serializable {
             printOrangeGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
                 .getCallerPrincipal(), context.isCallerInRole("roleName"));
         } catch (Exception exception) {
-            printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             try {
                 printOrangeGenericLn(context.getCallerPrincipal());
             } catch (Exception exception) {
-                printRedGenericLn(
-                    "This is expected! We cannot access call the Principle in a Post Construct phase-> %s",
-                    exception.getMessage());
+                RED.printGenericLn("This is expected! We cannot access call the Principle in a Post Construct phase-> %s", exception.getMessage());
             }
         }
     }
@@ -116,31 +108,25 @@ public class PalaceWaitingRoom implements Serializable {
                 .getCallerPrincipal(), contextProvider.getContext()
                 .isCallerInRole("roleName"));
         } catch (Exception exception) {
-            printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             try {
                 printOrangeGenericLn(contextProvider.getContext()
                     .getCallerPrincipal());
             } catch (Exception exception) {
-                printRedGenericLn(
-                    "This is expected! We cannot access call the Principle in a Pre Destroy phase-> %s",
-                    exception.getMessage());
+                RED.printGenericLn("This is expected! We cannot access call the Principle in a Pre Destroy phase-> %s", exception.getMessage());
             }
         }
         try {
             printOrangeGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
                 .getCallerPrincipal(), context.isCallerInRole("roleName"));
         } catch (Exception exception) {
-            printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             try {
                 printOrangeGenericLn(context.getCallerPrincipal());
             } catch (Exception exception) {
-                printRedGenericLn(
-                    "This is expected! We cannot access call the Principle in a Pre Destroy phase-> %s",
-                    exception.getMessage());
+                RED.printGenericLn("This is expected! We cannot access call the Principle in a Pre Destroy phase-> %s", exception.getMessage());
             }
         }
     }

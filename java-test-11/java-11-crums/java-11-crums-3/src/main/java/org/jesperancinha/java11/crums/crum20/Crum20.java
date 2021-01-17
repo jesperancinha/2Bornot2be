@@ -5,19 +5,19 @@ import java.nio.BufferOverflowException;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum20 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 20 - Accessibility and Extensibility - Defending against DOS");
 
         MAGENTA.printGenericLn("Let' make a method that doesn't follow Guideline 4-1 / EXTEND-1: Limit the accessibility of classes, interfaces, methods, and fields");
-        printRedGenericLn(getAStrawberry());
+        RED.printGenericLn(getAStrawberry());
         MAGENTA.printGenericLn("It is public, so anyone from the outside can access it. It's simple. We make it private:");
-        printRedGenericLn(getAStrawberryPrivate());
+        RED.printGenericLn(getAStrawberryPrivate());
         MAGENTA.printGenericLn("Now let's just make multiple copies of it and we'll specify a size of a buffer we want to copy it to:");
-        printRedGenericLn(makeStrawberryCopy(getAStrawberryPrivate(), 1000));
+        RED.printGenericLn(makeStrawberryCopy(getAStrawberryPrivate(), 1000));
         MAGENTA.printGenericLn("Sounds, good, but we are creating a char array without checking the size of the destination array.");
         MAGENTA.printGenericLn("This will still violate Java Security guideline Guideline 1-3 / DOS-3: Resource limit checks should not suffer from integer overflow");
 
@@ -26,9 +26,8 @@ public class Crum20 {
         try {
             printRainbowTitleLn(makeStrawberryCopySafe(getAStrawberryPrivate(), Integer.MAX_VALUE));
         } catch (BufferOverflowException | OutOfMemoryError e) {
-            printRedGenericLn("This is expected. Our final method is now inline with Guidelines 4-1 and 1-3 -> %s", e);
-            printRedGenericLn(
-                "Note that if you get an OutOfMemoryError, that is ok for now, but the code should also be protected against that");
+            RED.printGenericLn("This is expected. Our final method is now inline with Guidelines 4-1 and 1-3 -> %s", e);
+            RED.printGenericLn("Note that if you get an OutOfMemoryError, that is ok for now, but the code should also be protected against that");
         }
 
         GREEN.printGenericLn("It is important that from a security perspective that our code follows certain guideline");

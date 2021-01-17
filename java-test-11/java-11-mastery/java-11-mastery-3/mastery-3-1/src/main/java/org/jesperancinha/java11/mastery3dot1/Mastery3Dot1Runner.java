@@ -45,12 +45,12 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printSameLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -115,10 +115,10 @@ public class Mastery3Dot1Runner {
             }
         } catch (Exception e) {
             printNewLine();
-            printRedGenericLn("This is an exception that should have not happened %s", e);
+            RED.printGenericLn("This is an exception that should have not happened %s", e);
         } catch (Error e) {
             printNewLine();
-            printRedGenericLn("This is the expected error %s", e);
+            RED.printGenericLn("This is the expected error %s", e);
         }
         GREEN.printGenericLn("OutOfMemory is always an Error.");
         GREEN.printGenericLn("We can catch it!");
@@ -134,7 +134,7 @@ public class Mastery3Dot1Runner {
         recordCase.describeMe();
         GREEN.printGenericLn("This is possible: ((Case)recordCase).describeMe();");
         ((Case) recordCase).describeMe();
-        printRedGenericLn("This is not possible: ((Container)recordCase).describeMe();");
+        RED.printGenericLn("This is not possible: ((Container)recordCase).describeMe();");
         GREEN.printGenericLn("This is possible: Container.describeMe();");
         Container.describeMe();
         GREEN.printGenericLn("The point is that interface static methods cannot be called via an instance.");
@@ -351,7 +351,7 @@ public class Mastery3Dot1Runner {
             if (spliterator1.tryAdvance(Consolerizer::printYellowGenericLn)) {
                 spliterator1.forEachRemaining(Consolerizer::printYellowGenericLn);
             } else {
-                printRedGenericLn("No file found!");
+                RED.printGenericLn("No file found!");
             }
             var glob2 = "*.{txt}";
             GREEN.printGenericLn("This was the wrong extension! If we use a glob filter of %s we get:", glob2);
@@ -360,8 +360,8 @@ public class Mastery3Dot1Runner {
             if (spliterator2.tryAdvance(Consolerizer::printYellowGenericLn)) {
                 spliterator2.forEachRemaining(Consolerizer::printYellowGenericLn);
             } else {
-                printRedGenericLn("No file found!");
-                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                RED.printGenericLn("No file found!");
+                RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
             final String glob3 = "[ebal][ebal][ebal][ebal].[rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde].{txt}";
@@ -371,8 +371,8 @@ public class Mastery3Dot1Runner {
             if (spliterator3.tryAdvance(Consolerizer::printYellowGenericLn)) {
                 spliterator3.forEachRemaining(Consolerizer::printYellowGenericLn);
             } else {
-                printRedGenericLn("No file found!");
-                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                RED.printGenericLn("No file found!");
+                RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
             final String glob4 = "abel.onderweg.?";
@@ -382,8 +382,8 @@ public class Mastery3Dot1Runner {
             if (spliterator4.tryAdvance(Consolerizer::printYellowGenericLn)) {
                 spliterator4.forEachRemaining(Consolerizer::printYellowGenericLn);
             } else {
-                printRedGenericLn("No file found!");
-                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                RED.printGenericLn("No file found!");
+                RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
             final String glob5 = "abel.onderweg.{txt}";
@@ -394,18 +394,18 @@ public class Mastery3Dot1Runner {
                 try (var fis = new FileInputStream(file.toFile())) {
                     BLUE.printGenericLn(new String(fis.readAllBytes(), Charset.defaultCharset()));
                 } catch (IOException e) {
-                    printRedGenericLn("This was not supposed to have happened! %s", e);
+                    RED.printGenericLn("This was not supposed to have happened! %s", e);
                     System.exit(1);
                 }
                 printYellowGenericLn(file);
                 printRainbowTitleLn("We finally found it!");
             })) {
-                printRedGenericLn("No file found!");
-                printRedGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
+                RED.printGenericLn("No file found!");
+                RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
                 System.exit(1);
             }
         } catch (IOException e) {
-            printRedGenericLn("This was not supposed to have happened! %s", e);
+            RED.printGenericLn("This was not supposed to have happened! %s", e);
             System.exit(1);
         }
     }
@@ -474,7 +474,7 @@ public class Mastery3Dot1Runner {
         if (repetitions == atomicInteger.get()) {
             GREEN.printGenericLn("You made it champ!! There are indeed %d repetitions found! 🥇", atomicInteger.get());
         } else {
-            printRedGenericLn("You failed this time, but try again. %d repetitions were found. Your participation awards you with a medal of courage! 🎖", atomicInteger.get());
+            RED.printGenericLn("You failed this time, but try again. %d repetitions were found. Your participation awards you with a medal of courage! 🎖", atomicInteger.get());
         }
         GREEN.printGenericLn("1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)");
         GREEN.printGenericLn("2. https://www.youtube.com/watch?v=cNMXSKfWfLQ");

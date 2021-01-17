@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum12;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum12 {
@@ -80,10 +80,9 @@ public class Crum12 {
             sb2.setLength(-1);
             sb3.setLength(-1);
         } catch (StringIndexOutOfBoundsException e) {
-            printRedGenericLn("As you can see, this is not possible.");
-            printRedGenericLn("And this makes sense because there is a check for length in the 'setLength' method.");
-            printRedGenericLn(
-                "Either way, always recommended to catch this exception with an IndexOutOfBoundsException -> %s", e);
+            RED.printGenericLn("As you can see, this is not possible.");
+            RED.printGenericLn("And this makes sense because there is a check for length in the 'setLength' method.");
+            RED.printGenericLn("Either way, always recommended to catch this exception with an IndexOutOfBoundsException -> %s", e);
         }
         GREEN.printGenericLn("Capacity is an optimization measure in place to build strings");
         GREEN.printGenericLn("There is no practical effect except when performance tests are done");

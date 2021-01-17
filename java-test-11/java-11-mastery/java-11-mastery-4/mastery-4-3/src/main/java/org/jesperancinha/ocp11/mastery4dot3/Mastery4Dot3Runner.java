@@ -51,9 +51,9 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -400,9 +400,7 @@ public class Mastery4Dot3Runner {
             final Map<String, Long> collect = recordList.stream()
                 .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase));
         } catch (IllegalStateException e) {
-            printRedGenericLn(
-                "This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s",
-                e);
+            RED.printGenericLn("This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s", e);
         }
         MAGENTA.printGenericLn("We can't go back, so now we have to define a way to disambiguate this.");
         MAGENTA.printGenericLn("We do that with a merge function which is a BinaryOperator.");
@@ -524,11 +522,10 @@ public class Mastery4Dot3Runner {
         try {
             final TourTrailer trailerFriends = (TourTrailer) transportFriends;
         } catch (ClassCastException e) {
-            printRedGenericLn("This is expected %s", e);
-            printRedGenericLn(
-                "There is no compilation error, because we are downcasting from transportFriends, which is a reference to a Transport interface");
-            printRedGenericLn("Transport interfaces can be Trailers but of course they can also be Limousines.");
-            printRedGenericLn("If the instance is a Limousine, then it cannot be a Trailer at the same time.");
+            RED.printGenericLn("This is expected %s", e);
+            RED.printGenericLn("There is no compilation error, because we are downcasting from transportFriends, which is a reference to a Transport interface");
+            RED.printGenericLn("Transport interfaces can be Trailers but of course they can also be Limousines.");
+            RED.printGenericLn("If the instance is a Limousine, then it cannot be a Trailer at the same time.");
         }
         final Trailer trailerHLA = tourTrailerHLA;
         MAGENTA.printGenericLn("Finally a tour trailer HLA is also just a trailer");

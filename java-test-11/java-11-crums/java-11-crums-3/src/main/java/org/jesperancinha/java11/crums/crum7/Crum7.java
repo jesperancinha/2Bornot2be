@@ -7,8 +7,8 @@ import java.util.List;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum7 {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Crum7 {
         try {
             strings.add("What?");
         } catch (UnsupportedOperationException e) {
-            printRedGenericLn("This is expected! Arrays.asList returns a fixed size list -> %s", e);
+            RED.printGenericLn("This is expected! Arrays.asList returns a fixed size list -> %s", e);
             MAGENTA.printGenericLn("What we can do is swap Nicky Minaj with just Nicky:");
             strings.set(1, "Nicky");
             printOrangeGenericLn(strings);

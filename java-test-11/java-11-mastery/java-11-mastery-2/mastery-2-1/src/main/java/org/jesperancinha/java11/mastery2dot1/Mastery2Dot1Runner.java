@@ -42,8 +42,8 @@ import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -114,7 +114,7 @@ public class Mastery2Dot1Runner {
                 in.reset();
                 BLUE.printGenericLn(in.readLine());
             } else {
-                Consolerizer.printRedGenericLn("Mark Not Supported");
+                RED.printGenericLn("Mark Not Supported");
             }
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
@@ -301,12 +301,12 @@ public class Mastery2Dot1Runner {
         try {
             var listOfAnimals = List.of(animals);
         } catch (NullPointerException e) {
-            printRedGenericLn("%s was thrown on trying to copy the array into an immutableList -> var listOfAnimals = List.of(animals);", e);
+            RED.printGenericLn("%s was thrown on trying to copy the array into an immutableList -> var listOfAnimals = List.of(animals);", e);
         }
         try {
             List<Animal> animalList = List.of(wolf, duck, null, bird, null, cat);
         } catch (NullPointerException e) {
-            printRedGenericLn("%s was thrown on trying to create an immutable list directly -> List<Animal> animalList = List.of(wolf, duck, null, bird, null, cat);", e);
+            RED.printGenericLn("%s was thrown on trying to create an immutable list directly -> List<Animal> animalList = List.of(wolf, duck, null, bird, null, cat);", e);
         }
 
         List<Animal> animalList = Arrays.asList(wolf, duck, null, bird, null, cat);
@@ -393,7 +393,7 @@ public class Mastery2Dot1Runner {
         try {
             p1.relativize(p2);
         } catch (java.lang.IllegalArgumentException e) {
-            printRedGenericLn("%s -> Process failed for p1=%s and p2=%s", e ,p1, p2);
+            RED.printGenericLn("%s -> Process failed for p1=%s and p2=%s", e, p1, p2);
         }
         p2 = Path.of("tmp");
         GREEN.printGenericLn("Process didn't fail for p1=%s and p2=%s and the result for p2.relativize(p1) is: %s", p1, p2, p2.relativize(p1));

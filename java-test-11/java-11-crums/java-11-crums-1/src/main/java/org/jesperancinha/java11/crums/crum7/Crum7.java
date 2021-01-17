@@ -5,7 +5,7 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum7 {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Crum7 {
         try {
             list.add(4, "peanuts");
         } catch (IndexOutOfBoundsException e){
-            printRedGenericLn("This exception happens because the list isn't that big yet, so 0 is our only option in the beginning -> %s", e);
+            RED.printGenericLn("This exception happens because the list isn't that big yet, so 0 is our only option in the beginning -> %s", e);
         }
 
         list.add(0, "peanuts");

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 /**
  * This is not possible to do
@@ -25,7 +25,7 @@ public class StatefulTimerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final PrintWriter writer = resp.getWriter();
-        printRedGenericLn("This is not possible. Check your browser. A Timer service cannot be generated from a @Stateful bean");
+        RED.printGenericLn("This is not possible. Check your browser. A Timer service cannot be generated from a @Stateful bean");
         statefulTimerSessionBean.createTimer(1000);
         writer.println(statefulTimerSessionBean.hashCode());
     }

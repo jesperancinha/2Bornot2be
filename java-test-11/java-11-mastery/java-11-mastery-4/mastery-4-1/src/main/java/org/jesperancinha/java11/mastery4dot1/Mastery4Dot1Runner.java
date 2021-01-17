@@ -42,9 +42,9 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 
@@ -321,10 +321,10 @@ public class Mastery4Dot1Runner {
                             bufferedWriter.write(chars, i * 1000, 1000);
                         } while (result > -1 && ++i <= 1);
                     } catch (FileNotFoundException e) {
-                        printRedGenericLn("File was not found!");
+                        RED.printGenericLn("File was not found!");
                         printRedThrowableAndExit(e);
                     } catch (IOException e) {
-                        printRedGenericLn("An error occurred!");
+                        RED.printGenericLn("An error occurred!");
                         printRedThrowableAndExit(e);
                     }
                 }
@@ -430,9 +430,9 @@ public class Mastery4Dot1Runner {
         try {
             final String theGreatSociety = theGreatSocietyString.printSocietyAdapterMethod(1963, 1);
         } catch (ClassCastException e) {
-            printRedGenericLn("This happens because we specified that the `printSocietyAdapterMethod` would return `String` -> %s", e);
-            printRedGenericLn("However we also generically specify that if input parameters are numbers, then it should return a `Double` number.");
-            printRedGenericLn("This is why it fail this way. Let's make it good now.");
+            RED.printGenericLn("This happens because we specified that the `printSocietyAdapterMethod` would return `String` -> %s", e);
+            RED.printGenericLn("However we also generically specify that if input parameters are numbers, then it should return a `Double` number.");
+            RED.printGenericLn("This is why it fail this way. Let's make it good now.");
         }
         MAGENTA.printGenericLn(theGreatSocietyString.printSocietyAdapterMethod("The civil liberties act was signed off by LBJ in ", 1963));
         var theGreatSocietyDouble = new TheGreatSocietyAdapter<Double>();
@@ -458,16 +458,16 @@ public class Mastery4Dot1Runner {
                 try {
                     throw new ResponseException();
                 } catch (ResponseException e) {
-                    printRedGenericLn("This should be first exception: %s", e);
-                    printRedGenericLn("If our story had ended here, the raid would have never happened.");
-                    printRedGenericLn("In other words, System.exit(1), would have not allowed to see the output of RaidException.");
+                    RED.printGenericLn("This should be first exception: %s", e);
+                    RED.printGenericLn("If our story had ended here, the raid would have never happened.");
+                    RED.printGenericLn("In other words, System.exit(1), would have not allowed to see the output of RaidException.");
                     // System.exit(1);
                 }
             }
         } catch (RaidException e) {
-            printRedGenericLn("Notice when this exception occurs: %s", e);
+            RED.printGenericLn("Notice when this exception occurs: %s", e);
         } finally {
-            printRedGenericLn("You see this here, but if you did a System.exit(1) in the previous location, you wouldn't see this message");
+            RED.printGenericLn("You see this here, but if you did a System.exit(1) in the previous location, you wouldn't see this message");
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. Although finally always occurs in a try catch, the exception doesn't do anything yet although it has been thrown, if no catch is declared");
@@ -497,7 +497,7 @@ public class Mastery4Dot1Runner {
         }};
         var array = new Integer[45];
         var yearsInPower = 2;
-        printRedGenericLn("We seem to have found a mistake. It wasn't %d years. That's for sure!", yearsInPower);
+        RED.printGenericLn("We seem to have found a mistake. It wasn't %d years. That's for sure!", yearsInPower);
         var presidentName = "JFK";
         presidentSearch(presidentName, presidentName, presidentName = mapPresidentName.get("LBJ"));
         final int years = array[mapYearToNumber.get(mapNameToYear.get(mapPresidentName.get("LBJ"))) - 1] = yearsInPower = 3;

@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum5;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.java11.crums.crum5.Type.B;
 
 interface ISubTypeA {
@@ -25,7 +25,7 @@ enum SubTypeA implements ISubTypeA {
         try {
             return (Type) clone();
         } catch (CloneNotSupportedException e) {
-            printRedGenericLn("An enum is not cloneable. Remember that these are static values -> %s", e);
+            RED.printGenericLn("An enum is not cloneable. Remember that these are static values -> %s", e);
         }
         return null;
     }

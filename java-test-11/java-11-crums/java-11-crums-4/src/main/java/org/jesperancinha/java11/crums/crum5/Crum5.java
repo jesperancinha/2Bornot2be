@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum5;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum5 {
     public static void main(String[] args) {
@@ -17,13 +17,13 @@ public class Crum5 {
                     // Unhandled exception: org.jesperancinha.java11.crums.crum35.CustomException
                     crum5.method1();
                 } catch (CustomException customException) {
-                    printRedGeneric("This is expected. Please comment this try catch to see the effect -> %s", e);
+                    RED.printGeneric("This is expected. Please comment this try catch to see the effect -> %s", e);
                 }
             } finally {
                 crum5.method2();
             }
         } catch (NullPointerException e) {
-            printRedGeneric("This is expected. We are throwing a NullPointerException -> %s", e);
+            RED.printGeneric("This is expected. We are throwing a NullPointerException -> %s", e);
         }
 
         BLUE.printGenericLn(" Crum35 crum35 = new Crum35();\n" + "        try {\n" + "            crum35.method1();\n"

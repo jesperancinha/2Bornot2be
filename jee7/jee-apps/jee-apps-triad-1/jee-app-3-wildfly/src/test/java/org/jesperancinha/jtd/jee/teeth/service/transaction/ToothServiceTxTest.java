@@ -29,8 +29,8 @@ import javax.transaction.UserTransaction;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @RunWith(Arquillian.class)
 public class ToothServiceTxTest extends TestCase {
@@ -105,7 +105,7 @@ public class ToothServiceTxTest extends TestCase {
         try {
             toothService.addTootRequiredRollback(createTooth());
         } catch (Exception e) {
-            printRedGenericLn("This is expected! -> %s", e.getMessage());
+            RED.printGenericLn("This is expected! -> %s", e.getMessage());
 
         }
         printOrangeGenericLn(toothService.getA());

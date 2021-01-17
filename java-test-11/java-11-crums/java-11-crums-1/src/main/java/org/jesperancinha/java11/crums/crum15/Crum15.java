@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum15;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum15 {
     public static void main(String[] args) {
@@ -21,8 +21,8 @@ public class Crum15 {
         /**************/
         /*************/
 
-        printRedGenericLn("        /* // /**** /* */ /**cc */");
-        printRedGenericLn("        /***********************/\n" + "        /**********************/\n"
+        RED.printGenericLn("        /* // /**** /* */ /**cc */");
+        RED.printGenericLn("        /***********************/\n" + "        /**********************/\n"
             + "        /*********************/\n" + "        /********************/\n"
             + "        /*******************/\n" + "        /******************/\n" + "        /*****************/\n"
             + "        /****************/\n" + "        /***************/\n" + "        /**************/\n"

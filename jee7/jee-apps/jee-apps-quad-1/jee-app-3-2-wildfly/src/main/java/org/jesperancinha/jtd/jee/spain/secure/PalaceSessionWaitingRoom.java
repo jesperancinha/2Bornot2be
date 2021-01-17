@@ -10,6 +10,8 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
+
 // Caused by: org.jboss.weld.exceptions.DefinitionException:
 // WELD-000082: Scope interface javax.enterprise.context.SessionScoped
 // is not allowed on stateless session beans for class
@@ -37,8 +39,7 @@ public class PalaceSessionWaitingRoom implements Serializable {
                 .getCallerPrincipal(), contextProvider.getContext()
                 .isCallerInRole(roleName));
         } catch (Exception exception) {
-            Consolerizer.printRedGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s",
-                exception.getMessage());
+            RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             Consolerizer.printRainbowTitleLn(context.getCallerPrincipal());
         }

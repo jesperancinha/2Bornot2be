@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
 public class Crum15 {
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Crum15 {
         try {
             initPlants.put("rose", plantsInDutch.size());
         } catch (UnsupportedOperationException exception) {
-            printRedGeneric("This is expected! We cannot ever change an unmutable list! -> %s", exception);
+            RED.printGeneric("This is expected! We cannot ever change an unmutable list! -> %s", exception);
         }
 
         MAGENTA.printGenericLn("We can also make a concurrent Map and give it another try:");

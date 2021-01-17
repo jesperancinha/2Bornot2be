@@ -30,11 +30,11 @@ import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -121,15 +121,15 @@ public class Master2Dot2Runner {
         printYellowGenericLn("### char");
         GREEN.printGenericLn("%d <= char <= %d", (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
         GREEN.printGenericLn("%c <= char <= %c", Character.MIN_VALUE, Character.MAX_VALUE);
-        printRedGenericLn("### Not permitted Values");
-        printRedGenericLn("### bool");
-        printRedGenericLn("%s <= bool <= %s", Boolean.FALSE, Boolean.TRUE);
-        printRedGenericLn("### long");
-        printRedGenericLn("%s <= long <= %s", Long.MIN_VALUE, Long.MAX_VALUE);
-        printRedGenericLn("### float");
-        printRedGenericLn("%s <= float <= %s", Float.MIN_VALUE, Float.MAX_VALUE);
-        printRedGenericLn("### double");
-        printRedGenericLn("%s <= double <= %s", Double.MIN_VALUE, Double.MAX_VALUE);
+        RED.printGenericLn("### Not permitted Values");
+        RED.printGenericLn("### bool");
+        RED.printGenericLn("%s <= bool <= %s", Boolean.FALSE, Boolean.TRUE);
+        RED.printGenericLn("### long");
+        RED.printGenericLn("%s <= long <= %s", Long.MIN_VALUE, Long.MAX_VALUE);
+        RED.printGenericLn("### float");
+        RED.printGenericLn("%s <= float <= %s", Float.MIN_VALUE, Float.MAX_VALUE);
+        RED.printGenericLn("### double");
+        RED.printGenericLn("%s <= double <= %s", Double.MIN_VALUE, Double.MAX_VALUE);
 
         printRainbowTitleLn("5. Float value declaration");
         printRainbowLn("==");
@@ -206,7 +206,7 @@ public class Master2Dot2Runner {
             fos.write("2,949,136".getBytes());
             throw new NullPointerException("See? I can throw NullPointerException whenever I want!");
         } catch (IOException | NullPointerException e) {
-            printRedGenericLn("%s", e);
+            RED.printGenericLn("%s", e);
         }
         FileInputStream fisOut = null;
         try (FileInputStream fis = new FileInputStream(rocketInfoFile)) {
@@ -214,13 +214,13 @@ public class Master2Dot2Runner {
             GREEN.printGenericLn(new String(bytes));
             fisOut = fis;
         } catch (IOException e) {
-            printRedGenericLn("%s", e);
+            RED.printGenericLn("%s", e);
         }
         try {
             fisOut.close();
             printYellowGenericLn("### We re-close the FileInputStream, but note that, that one also throws IOException.");
         } catch (IOException e) {
-            printRedGenericLn("%s", e);
+            RED.printGenericLn("%s", e);
         }
 
         printRainbowTitleLn("13. `Files` list and walk");
@@ -233,7 +233,7 @@ public class Master2Dot2Runner {
             allFiles1 = Files.list(Paths.get("/**/rocket*.txt"));
         } catch (IOException e) {
             printYellowGenericLn("### It is also safer to assume that if something goes on reading, it will throw a IOException, instead of possibly the NoSuchFileException");
-            printRedGenericLn("%s", e);
+            RED.printGenericLn("%s", e);
             try {
                 allFiles1 = Files.list(Paths.get("/tmp"));
                 GREEN.printGenericLn("These are the files with list: %s", allFiles1.collect(Collectors.toList()));
@@ -248,7 +248,7 @@ public class Master2Dot2Runner {
                     -> p.endsWith("rocket-info.txt") && a.isRegularFile());
             GREEN.printGenericLn("These are the files with find: %s", allFiles1.collect(Collectors.toList()));
         } catch (IOException e) {
-            printRedGenericLn("%s", e);
+            RED.printGenericLn("%s", e);
         }
         // Cannot resolve method 'walk(java.nio.file.Path, java.lang.String)'
         // allFiles1= Files.walk(Paths.get("/tmp/rocket-info.txt"), "test.txt");
@@ -256,7 +256,7 @@ public class Master2Dot2Runner {
             allFiles1 = Files.walk(Paths.get("/tmp/rocket-info.txt"), 0);
             GREEN.printGenericLn("These are the files with walk: %s", allFiles1.collect(Collectors.toList()));
         } catch (IOException e) {
-            printRedGenericLn("%s", e);
+            RED.printGenericLn("%s", e);
         }
 
         printRainbowTitleLn("14. Reading sub-paths `Path.subpath`");
@@ -364,7 +364,7 @@ public class Master2Dot2Runner {
                 MOON:
                 while (k++ < 10) {
                     ACCIDENT:
-                    printRedGenericLn("This will never break");
+                    RED.printGenericLn("This will never break");
                     if (k == 5) {
                         printOrangeGenericLn("We leave the countdown with i=%d, j=%d, k=%d", i, j, k);
                         DODO:

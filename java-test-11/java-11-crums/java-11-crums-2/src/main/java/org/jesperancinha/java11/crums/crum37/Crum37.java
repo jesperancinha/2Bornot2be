@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum37;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum37 {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Crum37 {
             throw new IndexOutOfBoundsException();
         } catch (IndexOutOfBoundsException | NullPointerException e) {
             // e = new Exception();
-            printRedGenericLn("This is expected -> %s", e);
+            RED.printGenericLn("This is expected -> %s", e);
 
         }
         GREEN.printGenericLn("We cannot reassign exceptions coming from a multi catch");

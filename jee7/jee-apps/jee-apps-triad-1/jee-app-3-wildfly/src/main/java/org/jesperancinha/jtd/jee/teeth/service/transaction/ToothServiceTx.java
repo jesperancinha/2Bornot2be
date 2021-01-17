@@ -16,8 +16,8 @@ import javax.transaction.TransactionSynchronizationRegistry;
 
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
@@ -76,7 +76,7 @@ public class ToothServiceTx {
         try {
             return mergeTooth(tooth);
         } catch (TransactionRequiredException e) {
-            printRedGenericLn("This is expected! The transaction has been suspended -> %s", e);
+            RED.printGenericLn("This is expected! The transaction has been suspended -> %s", e);
             return null;
         }
     }
@@ -87,9 +87,7 @@ public class ToothServiceTx {
         try {
             final Tooth merge = entityManager.merge(tooth);
         } catch (TransactionRequiredException ejbException) {
-            printRedGenericLn(
-                "This is expected! Note that this TransactionRequiredException comes from javax.persistence -> %s",
-                ejbException);
+            RED.printGenericLn("This is expected! Note that this TransactionRequiredException comes from javax.persistence -> %s", ejbException);
         }
         GREEN.printGenericLn(tsr.getTransactionKey());
         return null;

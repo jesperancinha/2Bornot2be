@@ -4,7 +4,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum23 {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Crum23 {
         try {
             MAGENTA.printGenericLn("The value of `a` can also be %d", 'a');
         } catch (IllegalArgumentException e) {
-            printRedGenericLn("This is expected. Formatting doesn't automatically convert from char to int. -> %s", e);
+            RED.printGenericLn("This is expected. Formatting doesn't automatically convert from char to int. -> %s", e);
         }
         MAGENTA.printGenericLn("And also %c", 'a');
 

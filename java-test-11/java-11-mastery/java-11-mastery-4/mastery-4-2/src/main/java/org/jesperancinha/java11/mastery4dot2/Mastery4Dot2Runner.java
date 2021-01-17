@@ -55,10 +55,10 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -114,7 +114,7 @@ public class Mastery4Dot2Runner {
             drum.playDrum();
             drum.playWrongDrum();
         } catch (DrumException | DrumsIOException e) {
-            printRedGenericLn("It's all good! We failed to play, closing failed and this is expected -> %s", e);
+            RED.printGenericLn("It's all good! We failed to play, closing failed and this is expected -> %s", e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. We can use try-with-resources even after we've created our autocloseable instance");
@@ -318,7 +318,7 @@ public class Mastery4Dot2Runner {
         try {
             iterator.remove();
         } catch (UnsupportedOperationException e) {
-            printRedGenericLn("We cannot! And this is because this iterator is working with an array that is allowed to be copied and discarded -> %s", e);
+            RED.printGenericLn("We cannot! And this is because this iterator is working with an array that is allowed to be copied and discarded -> %s", e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. CopyOnWriteArrayList make a copy on every write operation");
@@ -371,25 +371,25 @@ public class Mastery4Dot2Runner {
         try {
             var notWithLongs = 1 / 0L;
         } catch (ArithmeticException e) {
-            printRedGenericLn("Nope, no Longs allowed! -> %s", e);
+            RED.printGenericLn("Nope, no Longs allowed! -> %s", e);
         }
         BLUE.printGenericLn("Ok... and ints?");
         try {
             var notWithIntegers = 1 / 0;
         } catch (ArithmeticException e) {
-            printRedGenericLn("Nope, no ints either! -> %s", e);
+            RED.printGenericLn("Nope, no ints either! -> %s", e);
         }
         BLUE.printGenericLn("Shorts?");
         try {
             var notWithShorts = 1 / (short) 0;
         } catch (ArithmeticException e) {
-            printRedGenericLn("Shorts also won't do! -> %s", e);
+            RED.printGenericLn("Shorts also won't do! -> %s", e);
         }
         BLUE.printGenericLn("Then I guess Byte won't also work?");
         try {
             var notWithBytes = 1 / (byte) 0;
         } catch (ArithmeticException e) {
-            printRedGenericLn("Bingo! -> %s", e);
+            RED.printGenericLn("Bingo! -> %s", e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. There infinity representations for Float and Double calculations");
@@ -443,7 +443,7 @@ public class Mastery4Dot2Runner {
             // Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes
             superBolaDeCristal.leaveEarth();
         } catch (RuntimeException e) {
-            printRedGenericLn("The reason why this exception is thrown is that our SecurityManager doesn't let us exit with an error:\n%s\nIt's magic!", e);
+            RED.printGenericLn("The reason why this exception is thrown is that our SecurityManager doesn't let us exit with an error:\n%s\nIt's magic!", e);
         }
         System.setSecurityManager(null);
 

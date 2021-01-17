@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum10;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum10 {
     public static void main(String[] args) {
@@ -11,19 +11,17 @@ public class Crum10 {
         try {
             calculateExceptions();
         } catch (NoSuchFieldException e) {
-            printRedGenericLn(
-                "This is expected! NoSuchFieldException is a checked exception that needs to be in throws -> %s", e);
+            RED.printGenericLn("This is expected! NoSuchFieldException is a checked exception that needs to be in throws -> %s", e);
         }
         try {
             calculateException2();
         } catch (ClassNotFoundException e) {
-            printRedGenericLn(
-                "This is expected! ClassNotFoundException is a checked exception that needs to be in throws -> %s", e);
+            RED.printGenericLn("This is expected! ClassNotFoundException is a checked exception that needs to be in throws -> %s", e);
         }
         try {
             calculateException3();
         } catch (Exception e) {
-            printRedGenericLn("This is expected! Exception is a checked exception that needs to be in throws -> %s", e);
+            RED.printGenericLn("This is expected! Exception is a checked exception that needs to be in throws -> %s", e);
         }
 
         GREEN.printGenericLn("It is important to know that subclasses of ReflectiveOperationException are also checked exceptions");

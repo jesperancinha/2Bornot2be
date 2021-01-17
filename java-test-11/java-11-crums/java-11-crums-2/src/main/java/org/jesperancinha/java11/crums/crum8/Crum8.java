@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum8 {
@@ -26,10 +26,8 @@ public class Crum8 {
             ps.setString(0, "Favourite Author");
 
         } catch (JdbcSQLDataException e) {
-            printRedGenericLn(
-                "The specific exception is a JdbcSQLDataException which is also a SQLException. Note that Data is not in the name of the base class");
-            printRedGenericLn(
-                "Index 0 and bellow will not work. Prepared statements only work with 1 based indexes -> %s", e);
+            RED.printGenericLn("The specific exception is a JdbcSQLDataException which is also a SQLException. Note that Data is not in the name of the base class");
+            RED.printGenericLn("Index 0 and bellow will not work. Prepared statements only work with 1 based indexes -> %s", e);
         } catch (SQLException throwables) {
             printRedThrowableAndExit(throwables);
         }
