@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowFlag;
+import static org.jesperancinha.console.consolerizer.ConGraphs.printRainbowFlag;
 
 @WebServlet("/history/victoria/cooking")
 public class QueenVictoriaEggRecipeServlet extends HttpServlet {

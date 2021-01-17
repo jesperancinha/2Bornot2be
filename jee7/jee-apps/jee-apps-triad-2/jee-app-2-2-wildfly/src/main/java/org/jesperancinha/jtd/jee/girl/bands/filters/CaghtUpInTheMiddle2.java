@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.girl.bands.filters;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConGraphs;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -37,7 +37,7 @@ public class CaghtUpInTheMiddle2 implements Filter {
         throws IOException, ServletException {
 
         final PrintWriter writer = response.getWriter();
-        writer.println(Consolerizer.getUnicorns(100));
+        writer.println(ConGraphs.getUnicorns(100));
         writer.println(FROM);
         writer.println(LYRIC);
 

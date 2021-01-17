@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowFlag;
+import static org.jesperancinha.console.consolerizer.ConGraphs.printRainbowFlag;
 
 @WebServlet("/history/victoria/cooking/stop")
 public class QueenVictoriaEggRecipeStopServlet extends HttpServlet {

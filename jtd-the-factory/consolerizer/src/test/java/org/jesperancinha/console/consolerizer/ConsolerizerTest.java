@@ -12,7 +12,7 @@ class ConsolerizerTest {
 
     @Test
     void testPrintRainbowFlag_whenText_thenTextInMiddle() {
-        Consolerizer.printRainbowFlag("Happy PRIDE Everyone!");
+        ConGraphs.printRainbowFlag("Happy PRIDE Everyone!");
     }
 
     @AfterEach

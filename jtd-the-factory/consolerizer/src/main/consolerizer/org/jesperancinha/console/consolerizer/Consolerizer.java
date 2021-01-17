@@ -69,48 +69,6 @@ public class Consolerizer {
         return new Consolerizer().conColor(ConColor.BRIGHT_GREEN);
     }
 
-    public static String getUnicorns(int i) {
-        final var sb = new StringBuilder();
-        for (int j = 0; j < i; j++) {
-            sb.append("🦄");
-        }
-        return sb.toString();
-    }
-
-    public static void printRainbowFlag(String flagText, Object... args) {
-        printRainbowFlag(String.format(flagText, args));
-    }
-
-    /**
-     * Follows the 19:10 rule for general flags
-     *
-     * @param flagText The text to be placed at the center of the flag
-     */
-    public static void printRainbowFlag(String flagText) {
-        int heightPerColorBar = (int) ((double) (titleSpread) * 10d / 19d) / 6 / 4;
-        heightPerColorBar = heightPerColorBar <= 0 ?
-                1 :
-                heightPerColorBar;
-        final List<ConColor> consoleRainbow = ConColor.getConsoleRainbowEnumList();
-        final int ranbowColorSize = consoleRainbow.size();
-        final int height = ranbowColorSize * heightPerColorBar;
-        int iMiddle = height / 2;
-        iMiddle = height % 2 == 0 ?
-                iMiddle - 1 :
-                iMiddle;
-        for (int i = 0, k = 0; i < ranbowColorSize; i++) {
-            printColor(consoleRainbow.get(i));
-            for (int j = 0; j < heightPerColorBar; j++, k++) {
-                if (k == iMiddle || k == iMiddle + 1) {
-                    printPrivateText(createTitleLine(flagText, '*'));
-                } else {
-                    printPrivateText("*".repeat(titleSpread));
-                }
-                printNewLine();
-            }
-        }
-    }
-
     public Consolerizer conColor(ConColor conColor) {
         this.conColor = conColor;
         return this;
@@ -367,7 +325,7 @@ public class Consolerizer {
         printPrivateText(text, vars);
     }
 
-    private static void printPrivateText(String text) {
+    static void printPrivateText(String text) {
         if (blackAndWhite) {
             printColor(WHITE);
         }
@@ -635,7 +593,7 @@ public class Consolerizer {
         System.exit(1);
     }
 
-    private static void printColor(ConColor conColor) {
+    static void printColor(ConColor conColor) {
         currentColor = conColor;
         System.out.print(conColor.getConsoleColor());
     }
@@ -644,7 +602,7 @@ public class Consolerizer {
         return createTitleLineLn(text, limitingChar, true);
     }
 
-    private static String createTitleLine(Object text, char limitingChar) {
+    static String createTitleLine(Object text, char limitingChar) {
         return createTitleLineLn(text, limitingChar, false);
     }
 
