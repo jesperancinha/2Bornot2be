@@ -1,95 +1,66 @@
-# jee-app-2-1-wildfly
-
----
-
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
-
----
+# jee-mastery-app-1
 
 ## Exercise
-
-The apps under [jee-apps](../..), cover lots of topics.
-For this app we cover:
-
-1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
-2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
-3. `<alternatives>`, `@Alternative`, `@Default`
-4. `JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
-
-## Test Endpoints
-
-1. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric/receipt - MDB's with receipt
-2. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric/durable - Durable MDB's
-3. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric - MDB
-
-## Run Arquillian tests
-
-```bash
-jenv local system
-sdk use java 11.0.9.hs-adpt
-mvn clean install -Parq-wildfly-managed
-```
-
-## Installation
-
-The configuration file for WildFly is as usual located in [standalone-full.xml](./backup).
-
-These three entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
-
-1. Queue
-
-```xml
-<jms-queue name="TestQueue" entries="java:jboss/activemq/queue/TestQueue"/>
-<jms-queue name="LyricsQueue" entries="java:/jms/LyricsQueue" durable="true"/>
-<jms-queue name="LyricsReceiptQueue" entries="java:/jms/LyricsReceiptQueue" durable="true"/>
-<jms-queue name="LyricsDurableQueue" entries="java:/jms/LyricsDurableQueue" durable="true"/>
-```
-
-2. Queue Factory
-
-```xml
-<connection-factory name="LyricsQueueFactory" entries="java:/jms/LyricsQueueFactory" connectors="in-vm"/>
-```
-3. Topics
-
-```xml
-<jms-topic name="LyricsTopic" entries="java:/jms/LyricsTopic" />
-```
-
 ## Context References
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=SVBIfSt0lAo">
-     <img alt="Could it be magic - Take That"
-          src="https://img.youtube.com/vi/SVBIfSt0lAo/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=E6HAK-aZFX0">
-     <img alt="I'll be the one - Backstreet Boys"
-          src="https://img.youtube.com/vi/E6HAK-aZFX0/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=RkWQDDv_qdg">
-     <img alt="All rise - Blue"
-          src="https://img.youtube.com/vi/RkWQDDv_qdg/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=EvOPoQrtFGI">
-     <img alt="Boys in the Band - New Kids on the Block" 
-          src="https://img.youtube.com/vi/EvOPoQrtFGI/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
 
 ## References
 
+-   [JSR 352: Batch Applications for the Java Platform](https://jcp.org/en/jsr/detail?id=352)
+-   [An Overview of Batch Processing in Java EE 7.0](https://www.oracle.com/technical-resources/articles/java/batch-processing-ee-7.html)
+-   [CDI @RequestScoped](https://tomee.apache.org/examples-trunk/cdi-request-scope/)
+-   [An Overview of CDI Events](https://dzone.com/articles/an-overview-of-cdi-events)
+-   [Using Events in CDI Applications](https://docs.oracle.com/javaee/6/tutorial/doc/gkhic.html)
+-   [Chapter 2. Concepts](https://docs.jboss.org/cdi/spec/1.0/html/concepts.html)
+-   [Native CDI Qualifiers: @Any and @Default](https://abhirockzz.wordpress.com/2015/09/27/native-cdi-qualifiers-any-and-default/)
+-   [The built-in qualifiers @Default and @Any](https://dzone.com/articles/built-qualifiers-default-and)
+-   [JBoss - Chapter 3. Programming model](https://docs.jboss.org/cdi/spec/1.0/html/implementation.html)
+-   [Annotation Type Inject](https://docs.oracle.com/javaee/6/api/javax/inject/Inject.html)
+-   [Dependency Injection, Annotations, and why Java is Better Than you Think it is](https://www.objc.io/issues/11-android/dependency-injection-in-java/)
+-   [Chapter 37. Partial Deployment Descriptors](https://docs.jboss.org/ejb3/docs/tutorial/1.0.7/html/Partial_deployment_descriptor.html)
+-   [Deployment Descriptor Schema and Document Type Definitions Reference](https://docs.oracle.com/cd/E11035_01/wls100/ejb/DD_defs_reference.html)
+-   [Java EE 7 Deployment Descriptors](https://antoniogoncalves.org/2013/06/04/java-ee-7-deployment-descriptors/)
+-   [Fusion Middleware Developing Web Applications, Servlets, and JSPs for Oracle WebLogic Server](https://docs.oracle.com/cd/E24329_01/web.1211/e21049/web_xml.htm#WBAPP502)
+-   [Database Authentication](https://docs.jboss.org/author/display/WFLY/Database%20Authentication%20Migration.html)
+-   [Securing a web application](https://openliberty.io/guides/security-intro.html)
+-   [Connect JDBC driver as Wildfly module](https://javadev.org/appservers/wildfly/8.2/jdbc/postgresql/)
+-   [service-java-notificacoes](https://github.com/fas-alves/service-java-notificacoes)
+-   [18.2. ROLE-BASED SECURITY IN APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html/development_guide/sect-role-based_security_in_applications)
+-   [What Are Realms, Users, Groups, and Roles?](https://docs.oracle.com/javaee/6/tutorial/doc/bnbxj.html)
+-   [Examples: Securing Enterprise Beans](https://javaee.github.io/tutorial/security-javaee003.html)
+-   [WS-Security](https://en.wikipedia.org/wiki/WS-Security)
+-   [JSTL - Core <fmt:message> Tag](https://www.tutorialspoint.com/jsp/jstl_format_message_tag.htm)
+-   [JSTL - Core <fmt:bundle> Tag](https://www.tutorialspoint.com/jsp/jstl_format_bundle_tag.htm)
+-   [JSP - Standard Tag Library (JSTL) Tutorial](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm)
+-   [JSF 2 Templating with Facelets example](https://mkyong.com/jsf2/jsf-2-templating-with-facelets-example/)
+-   [23.4 About CDI Managed Beans](https://docs.oracle.com/javaee/7/tutorial/cdi-basic004.htm)
+-   [JSF Navigation Rule Example Tutorial](https://www.journaldev.com/7042/jsf-navigation-rule-example-tutorial)
+-   [Caesar Cipher Encrypt & Decrypt](https://md5decrypt.net/en/Caesar/)
+-   [18 Java API for WebSocket](http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket.htm)
+-   [WebSocket Client API in Java EE 7](https://dzone.com/articles/websocket-client-api-in-java-ee-7)
+-   [Java EE 7: Building Web Applications with WebSocket, JavaScript and HTML5](oracle.com/webfolder/technetwork/tutorials/obe/java/HomeWebsocket/WebsocketHome.html#:~:text=By%20maintaining%20a%20constant%20connection,into%20Java%20EE%207%20applications.)
+-   [Creating Custom JAX-RS MessageBodyReader](https://memorynotfound.com/jax-rs-messagebodyreader/)
+-   [Creating Custom JAX-RS MessageBodyWriter](https://memorynotfound.com/jax-rs-messagebodywriter/)
+-   [Chapter 4. RESTful Web Services](https://www.oreilly.com/library/view/java-ee-7/9781449370589/ch04.html)
+-   [XMLHttpRequest.response](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response)
+-   [29.2 Creating a RESTful Root Resource Class](https://docs.oracle.com/javaee/7/tutorial/jaxrs002.htm)
+-   [32.7 The Lifecycles of Enterprise Beans](https://docs.oracle.com/javaee/7/tutorial/ejb-intro007.htm)
+-   [Annotation Type Path](https://docs.oracle.com/javaee/7/api/javax/ws/rs/Path.html)
+-   [jsp:useBean action tag](https://www.javatpoint.com/jsp-useBean-action)
+-   [How can I print error stack trace in JSP page?](https://stackoverflow.com/questions/8135980/how-can-i-print-error-stack-trace-in-jsp-page/8136065)
+-   [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
+-   [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
+-   [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
+-   [Define and Map Filters](https://help.perforce.com/hydraexpress/4.3.0/html/rwsfexpservletug/4-8.html#:~:text=The%20filter%20element%20of%20a,for%20this%20particular%20filter%20instance.)
+-   [How do I define a filter using @WebFilter annotation?](https://kodejava.org/how-do-i-define-a-filter-using-webfilter-annotation/)
+-   [URL Rewriting in WSDL and XML Schema](https://membrane-soa.org/service-proxy-doc/4.2/url-rewriting-wsdl.htm)
+-   [Web Services Custom Resource (prior to V3.3)](https://hub.verj.io/ebase/doc/WebServicesCustomResource.htm#Session_Management)
+-   [Auth0 REST vs SOAP - Building Modern Applications](https://auth0.com/learn/rest-vs-soap/)
+-   [O'Reilly SOAP session scope](https://www.oreilly.com/library/view/apache-axis2-web/9781849511568/ch10s05.html)
+-   [WebLogic Communications Services Gatekeeper Application Developer's Guide](https://docs.oracle.com/cd/E50778_01/doc.60/e50769/app_sessmgr.htm#SGAPP138)
+-   [InterSystems SOAP Session Management](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSOAP_SESSIONS)
+-   [SOAP request from command line using curl](https://browse-tutorials.com/tutorial/soap-request-command-line-using-curl)
+-   [Session Management in Java – HttpServlet, Cookies, URL Rewriting](https://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
+-   [URL Rewriting](https://www.javatpoint.com/url-rewriting-in-session-tracking)
 -   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
 -   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
 -   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)

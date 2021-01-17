@@ -1,4 +1,4 @@
-# jee-app-2-1-wildfly
+# jee-mastery
 
 ---
 
@@ -11,92 +11,57 @@
 
 ---
 
-## Exercise
+## Introduction
 
-The apps under [jee-apps](../..), cover lots of topics.
-For this app we cover:
+To further deepen our understanding of JEE7, we will go through mastery modules.
+These modules serve the purpose of exploring in depth, the knowledge acquired from buiilding the [jee-apps](../jee-apps).
 
-1. `@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
-2. `acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
-3. `<alternatives>`, `@Alternative`, `@Default`
-4. `JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
+</i>João Esperancinha, on the 17th of January 2021</i>
 
-## Test Endpoints
+## Prepare the environment
 
-1. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric/receipt - MDB's with receipt
-2. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric/durable - Durable MDB's
-3. http://localhost:8080/jee-app-2-1-wildfly/send/random-lyric - MDB
+### Wildfly 16.0
 
-## Run Arquillian tests
+1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
+2. Unpack the contents of that package to this root.
 
-```bash
-jenv local system
-sdk use java 11.0.9.hs-adpt
-mvn clean install -Parq-wildfly-managed
-```
+You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
 
-## Installation
+### End Installation notes
 
-The configuration file for WildFly is as usual located in [standalone-full.xml](./backup).
+This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-These three entries need to be added to node `urn:jboss:domain:messaging-activemq:6.0`:
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
+The ones without any notice, are considered done, but they will be subject to improvements from time to time.
 
-1. Queue
+## Mastery Apps
 
-```xml
-<jms-queue name="TestQueue" entries="java:jboss/activemq/queue/TestQueue"/>
-<jms-queue name="LyricsQueue" entries="java:/jms/LyricsQueue" durable="true"/>
-<jms-queue name="LyricsReceiptQueue" entries="java:/jms/LyricsReceiptQueue" durable="true"/>
-<jms-queue name="LyricsDurableQueue" entries="java:/jms/LyricsDurableQueue" durable="true"/>
-```
+### [jee-mastery-app-1](./jee-mastery-app-1) - PRIDE Edition 1
 
-2. Queue Factory
+#### Subjects:
 
-```xml
-<connection-factory name="LyricsQueueFactory" entries="java:/jms/LyricsQueueFactory" connectors="in-vm"/>
-```
-3. Topics
+---
 
-```xml
-<jms-topic name="LyricsTopic" entries="java:/jms/LyricsTopic" />
-```
-
-## Context References
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=SVBIfSt0lAo">
-     <img alt="Could it be magic - Take That"
-          src="https://img.youtube.com/vi/SVBIfSt0lAo/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=E6HAK-aZFX0">
-     <img alt="I'll be the one - Backstreet Boys"
-          src="https://img.youtube.com/vi/E6HAK-aZFX0/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=RkWQDDv_qdg">
-     <img alt="All rise - Blue"
-          src="https://img.youtube.com/vi/RkWQDDv_qdg/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a href="https://www.youtube.com/watch?v=EvOPoQrtFGI">
-     <img alt="Boys in the Band - New Kids on the Block" 
-          src="https://img.youtube.com/vi/EvOPoQrtFGI/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
+---
 
 ## References
 
--   [PublisherSubscriberTest.java](https://github.com/WASdev/sample.javaee7.jms/blob/master/src/main/java/com/ibm/ws/jms20/samples/PublisherSubscriberTest.java)
--   [Guaranteed Delivery using JMS Message Acknowledgement](https://jstobigdata.com/jms/guaranteed-delivery-using-jms-message-acknowledgement/)
--   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
--   [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
--   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
--   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
--   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+-   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
+-   [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
+-   [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
+-   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+-   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+-   [Pluralsight](https://www.pluralsight.com/)
+-   [Whizlabs](https://www.whizlabs.com/)
+-   [Enthuware](https://enthuware.com/)
+-   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+-   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+-   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+-   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+-   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+-   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+-   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+-   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ## About me 👨🏽‍💻🚀
 

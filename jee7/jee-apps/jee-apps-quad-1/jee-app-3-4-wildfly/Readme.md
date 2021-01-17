@@ -195,8 +195,6 @@ In both previous cases, without the correct certificate installation, your brows
 -   [History of Portugal](https://en.wikipedia.org/wiki/History_of_Portugal)
 -   [ABBA](https://nl.wikipedia.org/wiki/ABBA)
 -   [List of Portuguese monarchs](https://en.wikipedia.org/wiki/List_of_Portuguese_monarchs)
-
-
 <div align="center">
       <a title="The Very Elaborate Way Queen Victoria Had Her Eggs | Royal Upstairs Downstairs | Real Royalty" href="https://www.youtube.com/watch?v=p4HKB0NqsWg">
      <img 

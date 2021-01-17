@@ -10,8 +10,6 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
-
-
 ## Introduction
 
 For a good understanding of JEE I've created different Triads.
@@ -22,6 +20,9 @@ This way I hope to make your path to JEE certification a fun success! Enjoy!
 
 </i>João Esperancinha, on the 5th of January 2021</i>
 
+Note that the quad module is a conclusion module for the triads.
+We will continue with the [mastery web-apps](../jee-mastery).
+
 ## Prepare the environment
 
 ### Wildfly 16.0
@@ -31,16 +32,12 @@ This way I hope to make your path to JEE certification a fun success! Enjoy!
 
 You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
 
-### Tomcat
-
 ### End Installation notes
 
 This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
 Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
 The ones without any notice, are considered done, but they will be subject to improvements from time to time.
-
-
 
 ## Triads
 
@@ -152,6 +149,9 @@ The ones without any notice, are considered done, but they will be subject to im
 `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
 `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
 `NONE`, `INTEGRAL`, `CONFIDENTIAL`
+`<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
+`BatchRuntime`, `JobOperator`, `getRunningExecutions`, `getJobExecution`, `getBatchStatus`
+`@RequestScoped`, `@SessionScoped`, `@ApplicationScoped`
 
 #### Applications:
 
