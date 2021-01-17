@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 @WebServlet("/periodontitis")
 public class PeriodontitisServlet extends HttpServlet {
@@ -34,8 +34,7 @@ public class PeriodontitisServlet extends HttpServlet {
                     var ic = new InitialContext();
                     periodontitisPassivation = (PeriodontitisPassivation) ic.lookup("java:module/PeriodontitisBean!"
                         + "org.jesperancinha.jtd.jee.teeth.serialization.PeriodontitisPassivation");
-                    printOrangeGenericLn("The passivation object is -> %s -> %s", periodontitisPassivation,
-                        periodontitisPassivation.hashCode());
+                    ORANGE.printGenericLn("The passivation object is -> %s -> %s", periodontitisPassivation, periodontitisPassivation.hashCode());
                     periodontitisPassivation.setPropertyObject(
                         new PeriodontitisObject(String.format("Mr Patient has %d teeth with periodontitis!!", i)));
                     request.getSession()

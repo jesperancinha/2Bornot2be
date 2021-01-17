@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @WebServlet("/LoginGirlBandRecordStoreServlet")
 public class LoginGirlBandRecordStoreServlet extends HttpServlet {
@@ -47,7 +47,7 @@ public class LoginGirlBandRecordStoreServlet extends HttpServlet {
                 }
             }
             var maxTime = 60;
-            printYellowGenericLn("We'll make the session inactive after %s seconds...", maxTime);
+            YELLOW.printGenericLn("We'll make the session inactive after %s seconds...", maxTime);
             httpSession.setMaxInactiveInterval(maxTime);
             var userName = new Cookie("username", user);
             response.addCookie(userName);

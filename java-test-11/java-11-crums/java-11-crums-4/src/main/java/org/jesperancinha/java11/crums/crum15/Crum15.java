@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 public class Crum15 {
@@ -23,7 +23,7 @@ public class Crum15 {
 
         MAGENTA.printGenericLn("We've just created a list with some flowers we've initialized to %d", plantsInDutch.size());
 
-        printOrangeGenericLn(initPlants);
+        ORANGE.printGenericLn(initPlants);
         final String rose = "Rose";
         MAGENTA.printGenericLn("If we try to add a %s to it:", rose);
         try {
@@ -37,12 +37,12 @@ public class Crum15 {
         final ConcurrentMap<String, Integer> initPlants2 = plantsInDutch.stream()
             .collect(Collectors.toConcurrentMap(s -> s, t -> plantsInDutch.size()));
 
-        printOrangeGenericLn("We now have a map that seems to be the same:");
-        printOrangeGenericLn(initPlants2);
+        ORANGE.printGenericLn("We now have a map that seems to be the same:");
+        ORANGE.printGenericLn(initPlants2);
         MAGENTA.printGenericLn("If we try to add a rose to it:");
         initPlants2.put("rose", plantsInDutch.size());
-        printOrangeGenericLn("We realize that we can!!");
-        printOrangeGenericLn(initPlants2);
+        ORANGE.printGenericLn("We realize that we can!!");
+        ORANGE.printGenericLn(initPlants2);
         MAGENTA.printGenericLn("Can we add a \"Woestijnviolier\" to it while we iterate through it?");
         MAGENTA.printGenericLn("We can try that!");
 
@@ -55,7 +55,7 @@ public class Crum15 {
        }
 
         MAGENTA.printGenericLn("And this is our final result!");
-        printOrangeGenericLn(initPlants2);
+        ORANGE.printGenericLn(initPlants2);
 
         GREEN.printGenericLn("Please note that a ConcurrentHashMap is a heavier operation than another kind of Map, because operations are synchronized and thread safe");
         GREEN.printGenericLn("An unmutable collection such as an UnmutableHashMap, cannot be changed after its creation");

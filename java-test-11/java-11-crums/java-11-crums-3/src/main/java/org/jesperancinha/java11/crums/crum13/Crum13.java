@@ -11,7 +11,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum13 {
 
@@ -32,9 +32,7 @@ public class Crum13 {
         var ois = new ObjectInputStream(input);
         try {
             Table5A table5A = (Table5A) ois.readObject();
-            printYellowGenericLn(
-                "See, with the uncommented default empty constructors you were able to deserialize our Table5A: %s",
-                table5A);
+            YELLOW.printGenericLn("See, with the uncommented default empty constructors you were able to deserialize our Table5A: %s", table5A);
         } catch (InvalidClassException e) {
             RED.printGenericLn("This is expected! All classes in the hierarchy must have a default public empty constructor when deserializing -> %s", e);
             RED.printGenericLn("Try again with the uncommented constructors to see how this works.");

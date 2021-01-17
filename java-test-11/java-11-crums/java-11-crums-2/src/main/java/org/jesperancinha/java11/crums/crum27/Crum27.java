@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum27;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum27 {
     public static void main(String[] args) {
@@ -29,16 +29,16 @@ public class Crum27 {
 
         BLUE.printGenericLn("        final String iAmANumberInAString = 12345 + \" - This is a number. Did you notice the boxing operation?\";");
 
-        printOrangeGenericLn("All numbers so far:");
-        printOrangeGenericLn(aBoolean);
-        printOrangeGenericLn(aByte);
-        printOrangeGenericLn(aShort);
-        printOrangeGenericLn(character);
-        printOrangeGenericLn(aInteger);
-        printOrangeGenericLn(aLong);
-        printOrangeGenericLn(aFloat);
-        printOrangeGenericLn(aDouble);
-        printOrangeGenericLn(iAmANumberInAString);
+        ORANGE.printGenericLn("All numbers so far:");
+        ORANGE.printGenericLn(aBoolean);
+        ORANGE.printGenericLn(aByte);
+        ORANGE.printGenericLn(aShort);
+        ORANGE.printGenericLn(character);
+        ORANGE.printGenericLn(aInteger);
+        ORANGE.printGenericLn(aLong);
+        ORANGE.printGenericLn(aFloat);
+        ORANGE.printGenericLn(aDouble);
+        ORANGE.printGenericLn(iAmANumberInAString);
 
         MAGENTA.printGenericLn("The reason why adding with \"+\" a number to String results in boxing operations is because that the number implicitly boxed so that the toString is called");
         MAGENTA.printGenericLn("It's difficult to determine this and to assess what is going on but we'll try");

@@ -29,8 +29,8 @@ import javax.transaction.UserTransaction;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 @RunWith(Arquillian.class)
 public class ToothServiceTxTest extends TestCase {
@@ -108,14 +108,14 @@ public class ToothServiceTxTest extends TestCase {
             RED.printGenericLn("This is expected! -> %s", e.getMessage());
 
         }
-        printOrangeGenericLn(toothService.getA());
+        ORANGE.printGenericLn(toothService.getA());
         GREEN.printGenericLn("Note that a has been rollback to its initial value of 10 before the transaction");
     }
 
     @Test
     public void addToothRequiredNoRollback() {
         toothService.addTootRequiredNoRollback(createTooth());
-        printOrangeGenericLn(toothService.getA());
+        ORANGE.printGenericLn(toothService.getA());
         GREEN.printGenericLn("Since no rollback occured, this means that a is changed.");
     }
 

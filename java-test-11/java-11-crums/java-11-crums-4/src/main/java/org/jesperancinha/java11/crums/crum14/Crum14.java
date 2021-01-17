@@ -11,10 +11,10 @@ import java.util.stream.Stream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum14 {
     public static void main(String[] args) {
@@ -24,30 +24,29 @@ public class Crum14 {
             "Paul Simon - Price = 102.4", "Sarah Brightman  - Price = 1.34", "John Cale  - Price = 24.0",
             "REM  - Price = 55.5");
         MAGENTA.printGenericLn("We were given an unorganized list of bands playing and their ticket prices");
-        printOrangeGenericLn(bandsInConcert);
+        ORANGE.printGenericLn(bandsInConcert);
         MAGENTA.printGenericLn("We will now turn our list into a map of band and price");
         MAGENTA.printGenericLn("Then we'll solve the ambiguity by summing up the prices found");
         Map<String, Double> map1 = bandsInConcert.stream()
             .collect(Collectors.toMap(band -> band.split(" - Price = ")[0],
                 band -> Double.parseDouble(band.split(" - Price = ")[1]), (ticketPrice1, ticketPrice2) -> {
-                    printOrangeGenericLn("ticketPrice1=$%.2f, ticketPrice1=$%.2f", ticketPrice1, ticketPrice2);
-                    final double totalTicketPrice = ticketPrice1 + ticketPrice2;
-                    printOrangeGenericLn("You have a band playing with price $%.2f", totalTicketPrice);
-                    printOrangeGenericLn("Can you guess which  on is it?", totalTicketPrice);
-                    return totalTicketPrice;
+                        ORANGE.printGenericLn("ticketPrice1=$%.2f, ticketPrice1=$%.2f", ticketPrice1, ticketPrice2);
+                        final double totalTicketPrice = ticketPrice1 + ticketPrice2;
+                        ORANGE.printGenericLn("You have a band playing with price $%.2f", totalTicketPrice);
+                        ORANGE.printGenericLn("Can you guess which  on is it?", totalTicketPrice);
+                        return totalTicketPrice;
                 }));
 
         MAGENTA.printGenericLn("This is our organized band list ");
         printBrightCyanGenericLn(map1);
 
-        printYellowGenericLn(
-            "Now we just double the values to reduce the ticket to price 0. We found discounts on the web!!!");
+        YELLOW.printGenericLn("Now we just double the values to reduce the ticket to price 0. We found discounts on the web!!!");
 
         final LinkedHashMap<String, Double> concertsWithDiscount = Stream.of(map1.entrySet(), map1.entrySet())
             .flatMap(Collection::stream)
             .sorted(Map.Entry.comparingByValue())
             .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (ticketPrice1, ticketPrice2) -> {
-                printOrangeGenericLn("ticketPrice1=$%.2f, ticketPrice2=$%.2f", ticketPrice1, ticketPrice2);
+                ORANGE.printGenericLn("ticketPrice1=$%.2f, ticketPrice2=$%.2f", ticketPrice1, ticketPrice2);
                 return ticketPrice1 - ticketPrice2;
             }, LinkedHashMap::new));
         concertsWithDiscount.forEach(
@@ -57,16 +56,16 @@ public class Crum14 {
         MAGENTA.printGenericLn("This means that we can change our results");
         concertsWithDiscount.put("REM", 40_000.2222);
 
-        printOrangeGenericLn(concertsWithDiscount);
+        ORANGE.printGenericLn(concertsWithDiscount);
 
         map1 = bandsInConcert.stream()
             .collect(Collectors.toMap(band -> band.split(" - Price = ")[0],
                 band -> Double.parseDouble(band.split(" - Price = ")[1]), (ticketPrice1, ticketPrice2) -> {
-                    printOrangeGenericLn("ticketPrice1=$%.2f, ticketPrice1=$%.2f", ticketPrice1, ticketPrice2);
-                    final double totalTicketPrice = ticketPrice1 + ticketPrice2;
-                    printOrangeGenericLn("You have a band playing with price $%.2f", totalTicketPrice);
-                    printOrangeGenericLn("Can you guess which  on is it?", totalTicketPrice);
-                    return totalTicketPrice;
+                        ORANGE.printGenericLn("ticketPrice1=$%.2f, ticketPrice1=$%.2f", ticketPrice1, ticketPrice2);
+                        final double totalTicketPrice = ticketPrice1 + ticketPrice2;
+                        ORANGE.printGenericLn("You have a band playing with price $%.2f", totalTicketPrice);
+                        ORANGE.printGenericLn("Can you guess which  on is it?", totalTicketPrice);
+                        return totalTicketPrice;
                 }));
 
         MAGENTA.printGenericLn("So let's try again");
@@ -75,11 +74,11 @@ public class Crum14 {
                 .flatMap(Collection::stream)
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (ticketPrice1, ticketPrice2) -> {
-                    printOrangeGenericLn("ticketPrice1=$%.2f, ticketPrice2=$%.2f", ticketPrice1, ticketPrice2);
+                    ORANGE.printGenericLn("ticketPrice1=$%.2f, ticketPrice2=$%.2f", ticketPrice1, ticketPrice2);
                     return ticketPrice1 - ticketPrice2;
                 })));
 
-        printOrangeGenericLn(umutableConcerts);
+        ORANGE.printGenericLn(umutableConcerts);
         MAGENTA.printGenericLn("Let's see if we can change them:");
 
         try {

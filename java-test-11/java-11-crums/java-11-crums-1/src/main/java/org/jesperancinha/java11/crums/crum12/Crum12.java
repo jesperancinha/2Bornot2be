@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum12;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum12 {
     public static void main(String[] args) {
@@ -18,16 +18,16 @@ public class Crum12 {
         MAGENTA.printGenericLn(b);
         MAGENTA.printGenericLn(c);
 
-        printOrangeGenericLn(a == b);
-        printOrangeGenericLn(b == c);
-        printOrangeGenericLn(a == c);
-        printOrangeGenericLn(a == "Whatup?");
-        printOrangeGenericLn(b == "Whatup?");
-        printOrangeGenericLn(b.equals(a));
-        printOrangeGenericLn(a.hashCode());
-        printOrangeGenericLn(b.hashCode());
-        printOrangeGenericLn(c.hashCode());
-        printOrangeGenericLn("Oh, and we created object d -> %s", d);
+        ORANGE.printGenericLn(a == b);
+        ORANGE.printGenericLn(b == c);
+        ORANGE.printGenericLn(a == c);
+        ORANGE.printGenericLn(a == "Whatup?");
+        ORANGE.printGenericLn(b == "Whatup?");
+        ORANGE.printGenericLn(b.equals(a));
+        ORANGE.printGenericLn(a.hashCode());
+        ORANGE.printGenericLn(b.hashCode());
+        ORANGE.printGenericLn(c.hashCode());
+        ORANGE.printGenericLn("Oh, and we created object d -> %s", d);
 
     }
 }

@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum22 {
 
     private static class One {
 
         public List<Integer> getNumbers(Set<Integer> numberSet) {
-            printOrangeGenericLn("List<Integer> getNumbers(Set<Integer> numberSet) called!");
+            ORANGE.printGenericLn("List<Integer> getNumbers(Set<Integer> numberSet) called!");
             java.util.Random random = new java.util.Random();
             numberSet.add(random.nextInt());
             return numberSet.stream().mapToInt(Math::toIntExact).boxed().collect(Collectors.toList());
@@ -32,14 +32,14 @@ public class Crum22 {
         // both methods have same erasure, yet neither overrides the other
         // public List<Integer> getNumbers(Set<String> numberSet){
         public List<Integer> getNumbers(HashSet<Long> numberSet) {
-            printOrangeGenericLn("List<Integer> getNumbers(HashSet<Long> numberSet) called!");
+            ORANGE.printGenericLn("List<Integer> getNumbers(HashSet<Long> numberSet) called!");
             final java.util.Random random = new java.util.Random();
             numberSet.add(random.nextLong());
             return numberSet.stream().mapToInt(Long::intValue).boxed().collect(Collectors.toList());
         }
 
         public List<Integer> getNumbers(Set<Integer> numberSet) {
-            printOrangeGenericLn("List<Integer> getNumbers(Set<Integer> numberSet) called!");
+            ORANGE.printGenericLn("List<Integer> getNumbers(Set<Integer> numberSet) called!");
             java.util.Random random = new java.util.Random();
             numberSet.add(random.nextInt());
             return new ArrayList<>(numberSet);
@@ -68,9 +68,9 @@ public class Crum22 {
 
         MAGENTA.printGenericLn("We can call two different methods on Two");
         MAGENTA.printGenericLn("Then we get:");
-        printYellowGenericLn(numbersTwoInt);
+        YELLOW.printGenericLn(numbersTwoInt);
         MAGENTA.printGenericLn("And");
-        printYellowGenericLn(numbersTwoLong);
+        YELLOW.printGenericLn(numbersTwoLong);
         MAGENTA.printGenericLn("In One, we can just call one method and yield:");
         MAGENTA.printGenericLn(numbersOneInt);
 

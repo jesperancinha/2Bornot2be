@@ -19,6 +19,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
@@ -42,7 +43,7 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
             "I'll match it to what is stated in https://genius.com/Spice-girls-say-youll-be-there-lyrics");
 
         Arrays.stream(EXPECTED_LYRICS)
-            .forEach(Consolerizer::printYellowGenericLn);
+            .forEach(text -> YELLOW.printGenericLn(text));
 
         Consolerizer.printUnicornsLn(100);
         MAGENTA.printGenericLn(wsContext.getMessageContext());

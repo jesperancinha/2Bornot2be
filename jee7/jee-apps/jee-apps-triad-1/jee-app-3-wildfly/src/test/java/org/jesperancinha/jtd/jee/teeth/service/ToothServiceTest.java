@@ -33,6 +33,7 @@ import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
@@ -72,10 +73,10 @@ public class ToothServiceTest {
         tooth.setJaw(jaw);
 
         final Tooth tooth1 = toothService.updateItRight(tooth);
-        Consolerizer.printOrangeGenericLn(tooth1);
+        ORANGE.printGenericLn(tooth1);
         final Tooth toothResult = toothService.findTooth(uuid);
 
-        Consolerizer.printOrangeGenericLn(toothResult);
+        ORANGE.printGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
         assertEquals(jaw1.getUuid(), toothResult.getJaw()
             .getUuid());

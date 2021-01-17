@@ -43,22 +43,21 @@ import java.util.stream.Stream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery2Dot1Runner {
     public static void main(String[] args) throws Exception {
         Consolerizer.typingWaitGlobal = 0;
         // 1. Interface Inheritance
         printRainbowLn("==");
-        printYellowGeneric("### 1. Creating wolf. Interface cannot access everything\n");
+        YELLOW.printGeneric("### 1. Creating wolf. Interface cannot access everything\n");
         Animal wolf = new WolfCharacter("The Wolf");
         wolf.saySomething();
         GREEN.printGeneric("The wolf name is: %s. Of course now we use down casting\n", ((Wolf) wolf).name);
         // 2. Comparing with `thenComparing`
         printRainbowLn("==");
-        printYellowGeneric("### 2. Creating Bird. Interface cannot access everything\n");
+        YELLOW.printGeneric("### 2. Creating Bird. Interface cannot access everything\n");
         Animal bird = new BirdCharacter("Sasha");
         var list = List.of(wolf, bird);
         Comparator<Animal> comparator = Comparator.comparing(Animal::getName);
@@ -70,16 +69,16 @@ public class Mastery2Dot1Runner {
 
         // 3. AccessController and Permissions
         printRainbowLn("==");
-        printYellowGeneric("### 3. We will save our OST in /tmp/ost.txt.\n");
-        printYellowGeneric("### After running there should be just one TEST text written on that file.\n");
+        YELLOW.printGeneric("### 3. We will save our OST in /tmp/ost.txt.\n");
+        YELLOW.printGeneric("### After running there should be just one TEST text written on that file.\n");
         var filenameManager = new FileManager();
         filenameManager.testFile();
 
         // 4. Marking with `markSupported`s
         printRainbowLn("==");
-        printYellowGenericLn("### 4. Checking how marking works with a BufferedReader");
-        printYellowGenericLn("### Don't forget that readAhead is an optimization parameter");
-        printYellowGenericLn("### It has no logic influence");
+        YELLOW.printGenericLn("### 4. Checking how marking works with a BufferedReader");
+        YELLOW.printGenericLn("### Don't forget that readAhead is an optimization parameter");
+        YELLOW.printGenericLn("### It has no logic influence");
         try (Reader r = new BufferedReader(
                 new FileReader(
                         new File(Mastery2Dot1Runner
@@ -122,8 +121,8 @@ public class Mastery2Dot1Runner {
 
         // 5. `StringBuilder` vs `StringBuffer`
         printRainbowLn("==");
-        printYellowGenericLn("### 5. StringBuilder and StringBuffer have the same methods but their implementations are different.");
-        printYellowGenericLn("### StringBuilder and StringBuffer do not have a trim() method like String does!.");
+        YELLOW.printGenericLn("### 5. StringBuilder and StringBuffer have the same methods but their implementations are different.");
+        YELLOW.printGenericLn("### StringBuilder and StringBuffer do not have a trim() method like String does!.");
 
         var sBuilder = new StringBuilder();
         sBuilder.ensureCapacity(10);
@@ -147,10 +146,10 @@ public class Mastery2Dot1Runner {
 
         // 6. Super constructors
         printRainbowLn("==");
-        printYellowGenericLn("### 6. When you develop a subclass, its constructors must know which super constructor to call");
-        printYellowGenericLn("### If none is available, then the default, zero argument constructor is called");
-        printYellowGenericLn("### One or more are available, then the subclass constructor must determine which constructor to use using super");
-        printYellowGenericLn("### One or more constructors are implemented and none default is available, then the default is no longer available");
+        YELLOW.printGenericLn("### 6. When you develop a subclass, its constructors must know which super constructor to call");
+        YELLOW.printGenericLn("### If none is available, then the default, zero argument constructor is called");
+        YELLOW.printGenericLn("### One or more are available, then the subclass constructor must determine which constructor to use using super");
+        YELLOW.printGenericLn("### One or more constructors are implemented and none default is available, then the default is no longer available");
 
         var birdCharacter = new BirdCharacter("Sasha");
         GREEN.printGenericLn(birdCharacter.getName());
@@ -158,17 +157,17 @@ public class Mastery2Dot1Runner {
 
         // 7. Abstraction: Interfaces vs Classes
         printRainbowLn("==");
-        printYellowGenericLn("### 7. Know a few things about Interfaces");
-        printYellowGenericLn("### All methods without a body are implicitly abstract and public");
-        printYellowGenericLn("### public and abstract are redundant for these implicit properties");
+        YELLOW.printGenericLn("### 7. Know a few things about Interfaces");
+        YELLOW.printGenericLn("### All methods without a body are implicitly abstract and public");
+        YELLOW.printGenericLn("### public and abstract are redundant for these implicit properties");
         GREEN.printGenericLn(wolf.getName());
         GREEN.printGenericLn(wolf.getInstrument());
 
         // 8. Stream filters
         printRainbowLn("==");
-        printYellowGenericLn("### 8. A parallel stream can change to be a sequential stream");
-        printYellowGenericLn("### BaseStream.sequential() vs BaseStream.parallel");
-        printYellowGenericLn("### Also in partitionBy the way to distinguish is using Boolean");
+        YELLOW.printGenericLn("### 8. A parallel stream can change to be a sequential stream");
+        YELLOW.printGenericLn("### BaseStream.sequential() vs BaseStream.parallel");
+        YELLOW.printGenericLn("### Also in partitionBy the way to distinguish is using Boolean");
         var duck = new DuckCharacter("Bruce");
         var cat = new CatCharacter("Louis");
 
@@ -188,12 +187,12 @@ public class Mastery2Dot1Runner {
 
         // 9. Question mark in Mappings (left vs right)
         printRainbowLn("==");
-        printYellowGenericLn("### 9. You do not need to know the type on the left operand of an assignment operation");
-        printYellowGenericLn("### You also cannot use diamond notation. You can use question marks as placeholders");
-        printYellowGenericLn("### Question marks are not allowed on the right");
-        printYellowGenericLn("### On a practical note it seems to be because a question mark is a wildcard");
-        printYellowGenericLn("### Wildcards do not make sense during creation.");
-        printYellowGenericLn("### Diamond notation always knows that its type is defined on the left ");
+        YELLOW.printGenericLn("### 9. You do not need to know the type on the left operand of an assignment operation");
+        YELLOW.printGenericLn("### You also cannot use diamond notation. You can use question marks as placeholders");
+        YELLOW.printGenericLn("### Question marks are not allowed on the right");
+        YELLOW.printGenericLn("### On a practical note it seems to be because a question mark is a wildcard");
+        YELLOW.printGenericLn("### Wildcards do not make sense during creation.");
+        YELLOW.printGenericLn("### Diamond notation always knows that its type is defined on the left ");
 
         Map<String, List<Animal>> mapOfAnimals1 = new HashMap<String, List<Animal>>();
         Map<String, List<Animal>> mapOfAnimals2 = new HashMap<>();
@@ -213,14 +212,14 @@ public class Mastery2Dot1Runner {
 
         // 10. provider() in modularity
         printRainbowLn("==");
-        printYellowGenericLn("### 10. Key things to remember:");
-        printYellowGenericLn("### There is no implements in module!");
-        printYellowGenericLn("### provides is always followed by with");
-        printYellowGenericLn("### using a service requires you to use it in the module definition");
-        printYellowGenericLn("### to be able to implement a service outside the source module you need requires");
-        printYellowGenericLn("### You can provide an implementation statically or with an instance");
-        printYellowGenericLn("### Flute service is static");
-        printYellowGenericLn("### Oboe service is an instance");
+        YELLOW.printGenericLn("### 10. Key things to remember:");
+        YELLOW.printGenericLn("### There is no implements in module!");
+        YELLOW.printGenericLn("### provides is always followed by with");
+        YELLOW.printGenericLn("### using a service requires you to use it in the module definition");
+        YELLOW.printGenericLn("### to be able to implement a service outside the source module you need requires");
+        YELLOW.printGenericLn("### You can provide an implementation statically or with an instance");
+        YELLOW.printGenericLn("### Flute service is static");
+        YELLOW.printGenericLn("### Oboe service is an instance");
 
         ServiceLoader<FluteService> loader = ServiceLoader.load(FluteService.class);
         FluteService fluteService = loader.findFirst().orElseThrow(() -> new Exception("Fail!"));
@@ -231,9 +230,9 @@ public class Mastery2Dot1Runner {
 
         // 11. `IndexOutOfBoundsException`
         printRainbowLn("==");
-        printYellowGenericLn("### 11. ArrayIndexOutOfBoundsException is not thrown by a charAt.");
-        printYellowGenericLn("### IndexOutOfBoundsException is  thrown by a charAt.");
-        printYellowGenericLn("### StringIndexOutOfBoundsException may be thrown by a charAt (It is implementation dependent).");
+        YELLOW.printGenericLn("### 11. ArrayIndexOutOfBoundsException is not thrown by a charAt.");
+        YELLOW.printGenericLn("### IndexOutOfBoundsException is  thrown by a charAt.");
+        YELLOW.printGenericLn("### StringIndexOutOfBoundsException may be thrown by a charAt (It is implementation dependent).");
 
         var testString = "Can't make it? Oh. Huh.";
         try {
@@ -244,9 +243,9 @@ public class Mastery2Dot1Runner {
 
         // 12. `allMatch` in stream
         printRainbowLn("==");
-        printYellowGenericLn("### 12. allMatch means that one doesn't match, it will return false, otherwise true");
-        printYellowGenericLn("### It is prone to fail fast, given that the false condition determines when the filtering stops");
-        printYellowGenericLn("### This operation depends opn how many cores your machine is running on");
+        YELLOW.printGenericLn("### 12. allMatch means that one doesn't match, it will return false, otherwise true");
+        YELLOW.printGenericLn("### It is prone to fail fast, given that the false condition determines when the filtering stops");
+        YELLOW.printGenericLn("### This operation depends opn how many cores your machine is running on");
 
         AtomicInteger atomicInteger = new AtomicInteger();
         var streamOfCharacters = Stream.of(wolf, cat, bird, duck);
@@ -262,7 +261,7 @@ public class Mastery2Dot1Runner {
 
         // 10. provider() in modularity
         printRainbowLn("==");
-        printYellowGenericLn("### 10. Double providers in modularity");
+        YELLOW.printGenericLn("### 10. Double providers in modularity");
         ServiceLoader<FluteService> loader2Times = ServiceLoader.load(FluteService.class);
         Iterator<FluteService> iterator = loader.iterator();
         FluteService fluteServiceOne = iterator.next();
@@ -272,7 +271,7 @@ public class Mastery2Dot1Runner {
 
         // 14. One line assignment operations
         printRainbowLn("==");
-        printYellowGenericLn("### 14. One liner operators and different assignments");
+        YELLOW.printGenericLn("### 14. One liner operators and different assignments");
         int a = 10;
         int b = 20;
         boolean c = a == b;
@@ -286,17 +285,17 @@ public class Mastery2Dot1Runner {
 
         // 15. Method calling and inner class instantiation
         printRainbowLn("==");
-        printYellowGenericLn("### 15. Static imports are also possible for static inner classes");
+        YELLOW.printGenericLn("### 15. Static imports are also possible for static inner classes");
         var food = new Food();
         BLUE.printGenericLn("var food  = new Food();");
 
         // 16. `null` role in collection copies
         printRainbowLn("==");
-        printYellowGenericLn("### 16. Copies of null values from Arrays to immutable Lists  always fail");
-        printYellowGenericLn("### Copies of null values from Arrays always to Unmodifiable lists don't fail");
-        printYellowGenericLn("### Unmodifiable means you have a reference that doesn't allow you to modify the list");
-        printYellowGenericLn("### Although if you have the reference to the original List, then you can change it that way");
-        printYellowGenericLn("### Immutable means you cannot modify the list");
+        YELLOW.printGenericLn("### 16. Copies of null values from Arrays to immutable Lists  always fail");
+        YELLOW.printGenericLn("### Copies of null values from Arrays always to Unmodifiable lists don't fail");
+        YELLOW.printGenericLn("### Unmodifiable means you have a reference that doesn't allow you to modify the list");
+        YELLOW.printGenericLn("### Although if you have the reference to the original List, then you can change it that way");
+        YELLOW.printGenericLn("### Immutable means you cannot modify the list");
         var animals = new Animal[]{wolf, duck, null, bird, null, cat};
         try {
             var listOfAnimals = List.of(animals);
@@ -318,18 +317,18 @@ public class Mastery2Dot1Runner {
 
         // 17. `String`'s `isBlank`
         printRainbowLn("==");
-        printYellowGenericLn("### 17. Test is String is blank");
+        YELLOW.printGenericLn("### 17. Test is String is blank");
         var blankSimple = "";
         var blankComplicated = "      ";
         GREEN.printGenericLn("blankSimple is blank? %s, blankComplicated is blank? %s", blankSimple.isBlank(), blankComplicated.isBlank());
 
         // 18. Flow control ans specification of Exceptions
         printRainbowLn("==");
-        printYellowGenericLn("### 18. Always use control flow in detriment to Exceptions");
+        YELLOW.printGenericLn("### 18. Always use control flow in detriment to Exceptions");
 
         // 19. Constructor rules vs Method rules in overriding
         printRainbowLn("==");
-        printYellowGenericLn("### 19. Constructor exception implementation rules are inversely proportional to method return parameter implementation rules");
+        YELLOW.printGenericLn("### 19. Constructor exception implementation rules are inversely proportional to method return parameter implementation rules");
         var grandFather = new GrandFatherCharacter("The Grandfather");
         GREEN.printGenericLn(grandFather.getName());
         GREEN.printGenericLn(grandFather.name);
@@ -337,14 +336,14 @@ public class Mastery2Dot1Runner {
 
         // 20. Simple `File` creation with `FileWriter`
         printRainbowLn("==");
-        printYellowGenericLn("### 20. FileWriter always creates a file");
+        YELLOW.printGenericLn("### 20. FileWriter always creates a file");
         var file = new FileWriter("/tmp/wolfdata.txt");
         file.close();
         GREEN.printGenericLn("Check your %s folder", file.toString());
 
         // 21. Overriding with generics
         printRainbowLn("==");
-        printYellowGenericLn("### 21. Golden rule of Overriding methods is that the return value is always of a sub-class or the same as of the overridden one");
+        YELLOW.printGenericLn("### 21. Golden rule of Overriding methods is that the return value is always of a sub-class or the same as of the overridden one");
         abstract class Multiplexer {
             abstract <T> Collection<T> toList(Collection<T> list);
 
@@ -374,7 +373,7 @@ public class Mastery2Dot1Runner {
 
         // 22. `var` in `for` loops
         printRainbowLn("==");
-        printYellowGenericLn("### 22. var can be used in for just like int");
+        YELLOW.printGenericLn("### 22. var can be used in for just like int");
         printRainbowLn("-");
         for (int i = 0; i < 10; i++) {
             GREEN.printGeneric(i);
@@ -387,7 +386,7 @@ public class Mastery2Dot1Runner {
 
         // 23. relativize of `Path`
         printRainbowLn("==");
-        printYellowGenericLn("### 23. relativize will fail if paths have a different sort");
+        YELLOW.printGenericLn("### 23. relativize will fail if paths have a different sort");
         var p1 = Path.of("wolf");
         var p2 = Path.of("/tmp/wolf");
         try {
@@ -404,7 +403,7 @@ public class Mastery2Dot1Runner {
 
         // 24. Creating methods in inner anonymous classes
         printRainbowLn("==");
-        printYellowGenericLn("### 24. If we create an anonymous class and therein we crate methods,those methods are onle reachable via reflection or inside the instance itself");
+        YELLOW.printGenericLn("### 24. If we create an anonymous class and therein we crate methods,those methods are onle reachable via reflection or inside the instance itself");
         var wolfFood = new Food() {
             public void giveMeApples() {
                 GREEN.printGeneric("You did this? You just cannot reach this method without reflection and so The Wolf gets no apples!");

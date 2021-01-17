@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum27 {
     public static void main(String[] args) {
@@ -23,11 +23,11 @@ public class Crum27 {
             Collectors.partitioningBy(s -> s.split(" ").length > 2));
 
         MAGENTA.printGenericLn("We have found this map:");
-        printOrangeGenericLn(partitionMap);
+        ORANGE.printGenericLn(partitionMap);
         MAGENTA.printGenericLn("This means that a band with more than two letters is:");
-        printOrangeGenericLn(partitionMap.get(true));
+        ORANGE.printGenericLn(partitionMap.get(true));
         MAGENTA.printGenericLn("This means that a band with less than or with two letters is:");
-        printOrangeGenericLn(partitionMap.get(false));
+        ORANGE.printGenericLn(partitionMap.get(false));
 
         GREEN.printGenericLn("The whole point of this exercise is to show that partitions are made with boolean values.");
 

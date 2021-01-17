@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum4 {
@@ -25,7 +26,7 @@ public class Crum4 {
         int read;
         try {
             while ((read = bufferedReader1.read()) != -1) {
-                Consolerizer.printYellowGeneric((char) read);
+                YELLOW.printGeneric((char) read);
             }
         } catch (IOException e) {
             printRedThrowableAndExit(e);
@@ -39,7 +40,7 @@ public class Crum4 {
 
         try {
             while ((read = bufferedReader2.read()) != -1) {
-                Consolerizer.printYellowGeneric((char) read);
+                YELLOW.printGeneric((char) read);
             }
         } catch (IOException e) {
             printRedThrowableAndExit(e);

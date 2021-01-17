@@ -1,7 +1,5 @@
 package org.jesperancinha.java11.crums.crum31;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -11,6 +9,7 @@ import java.util.stream.Stream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum31 {
     public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class Crum31 {
         final List<Sandwich> collect = sandwiches.stream()
             .sorted((a, b) -> a.getId()
                 .compareTo(b.getId()))
-            .peek(Consolerizer::printOrangeGenericLn)
+            .peek(text2 -> ORANGE.printGenericLn(text2))
             .collect(Collectors.toList());
 
         MAGENTA.printGenericLn(collect);
@@ -34,7 +33,7 @@ public class Crum31 {
 
         final List<Sandwich> collect1 = sandwiches.stream()
             .sorted(Comparator.comparing(s -> s.getName()))
-            .peek(Consolerizer::printOrangeGenericLn)
+            .peek(text1 -> ORANGE.printGenericLn(text1))
             .collect(Collectors.toList());
 
         MAGENTA.printGenericLn(collect1);
@@ -44,7 +43,7 @@ public class Crum31 {
             .compareTo(b.getId()));
         final List<Sandwich> collect2 = sandwiches.stream()
             .sorted(comparator)
-            .peek(Consolerizer::printOrangeGenericLn)
+            .peek(text -> ORANGE.printGenericLn(text))
             .collect(Collectors.toList());
 
         MAGENTA.printGenericLn("We can also organize first by Id and then name");

@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum28;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum28 {
     public static void main(String[] args) {
@@ -10,13 +10,13 @@ public class Crum28 {
 
         int a = 2222;
         float b = a;
-        printOrangeGenericLn("The result %d - %d = %d", a, (int) b, (int) b - a);
+        ORANGE.printGenericLn("The result %d - %d = %d", a, (int) b, (int) b - a);
         a = 222222222;
         b = a;
-        printOrangeGenericLn("The result %d - %d = %d", a, (int) b, (int) b - a);
+        ORANGE.printGenericLn("The result %d - %d = %d", a, (int) b, (int) b - a);
         a = 222222222;
         double c = a;
-        printOrangeGenericLn("The result %d - %d = %d", a, (int) c, (int) c - a);
+        ORANGE.printGenericLn("The result %d - %d = %d", a, (int) c, (int) c - a);
 
         GREEN.printGenericLn("Note that the reason we don't get 0 on the second exercise is because float loses precision when the number has more than 6 significant digits");
 

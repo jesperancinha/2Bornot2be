@@ -1,8 +1,7 @@
 package org.jesperancinha.java11.mastery3dot1.furniture;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Case implements Container {
 
@@ -16,11 +15,11 @@ public class Case implements Container {
     }
 
     public void showCapacity() {
-        printOrangeGenericLn("This Case has a capacity of %d elements", capacity);
+        ORANGE.printGenericLn("This Case has a capacity of %d elements", capacity);
     }
 
     public void printStuff() {
-        printOrangeGenericLn("I have nothing to say.");
+        ORANGE.printGenericLn("I have nothing to say.");
     }
 
     @Override
@@ -31,6 +30,6 @@ public class Case implements Container {
     }
 
     public static void describeMe() {
-        Consolerizer.printYellowGenericLn("I'm a case class -> %s", Case.class.getName());
+        YELLOW.printGenericLn("I'm a case class -> %s", Case.class.getName());
     }
 }

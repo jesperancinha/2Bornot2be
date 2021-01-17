@@ -1,18 +1,18 @@
 package org.jesperancinha.java11.mastery3dot2.marisco;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Lingueirao {
 
    static  {
-        printYellowGenericLn("Lingueirão comes out to clean up his house! 🪒");
-        if (true) {
+       YELLOW.printGenericLn("Lingueirão comes out to clean up his house! 🪒");
+       if (true) {
             throw new RuntimeException("Oh no! A bird just caught him! We won't fish this one! 🦅");
         }
     }
 
     public static Lingueirao fishLingueirao() {
-        printYellowGenericLn("Trying to catch Lingueirão 🕸");
+        YELLOW.printGenericLn("Trying to catch Lingueirão 🕸");
         return new Lingueirao();
     }
 }

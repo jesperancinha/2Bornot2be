@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum36;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum36 {
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Crum36 {
 
     @Override
     public String toString() {
-        printYellowGenericLn("As you can see, the return operations still happen, regardless.");
+        YELLOW.printGenericLn("As you can see, the return operations still happen, regardless.");
         return super.toString();
     }
 }

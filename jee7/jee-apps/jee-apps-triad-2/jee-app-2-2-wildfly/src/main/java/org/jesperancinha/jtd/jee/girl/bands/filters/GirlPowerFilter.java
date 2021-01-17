@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.girl.bands.filters;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -14,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 
 @WebFilter(urlPatterns = { "/app/secure/*" }, description = "Session Checker Filter")
@@ -37,9 +36,8 @@ public class GirlPowerFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
 
-        Consolerizer.printOrangeGenericLn(
-            "We are going to have a look and see if LOGGED_IN is available as session attribute");
-        Consolerizer.printOrangeGenericLn("This is the role of a WebFilter");
+        ORANGE.printGenericLn("We are going to have a look and see if LOGGED_IN is available as session attribute");
+        ORANGE.printGenericLn("This is the role of a WebFilter");
         MAGENTA.printGenericLn("A WebFilter allows us to create a set of rules for a set of servlets");
         MAGENTA.printGenericLn("We could in theory configure this same thing per servlet.");
         MAGENTA.printGenericLn("However that would mean on specific configuration per servlet.");

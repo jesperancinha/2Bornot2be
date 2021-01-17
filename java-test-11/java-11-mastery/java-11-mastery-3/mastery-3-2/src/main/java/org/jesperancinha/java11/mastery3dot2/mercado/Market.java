@@ -1,11 +1,10 @@
 package org.jesperancinha.java11.mastery3dot2.mercado;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.io.Serializable;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Market extends Building implements Serializable {
 
@@ -13,15 +12,15 @@ public class Market extends Building implements Serializable {
 
     public Market(float height, float dimX, float dimY, String mainMaterial) {
         super(height, dimX, dimY, mainMaterial);
-        printOrangeGenericLn("Market constructor has been called! %s", this.toString());
+        ORANGE.printGenericLn("Market constructor has been called! %s", this.toString());
     }
 
     public Market() {
-        printOrangeGenericLn("Market (no-args) constructor has been called! %s", this.toString());
+        ORANGE.printGenericLn("Market (no-args) constructor has been called! %s", this.toString());
     }
 
     public static void getInfo() {
-        Consolerizer.printYellowGenericLn("A Market has a UUID");
+        YELLOW.printGenericLn("A Market has a UUID");
     }
 
 

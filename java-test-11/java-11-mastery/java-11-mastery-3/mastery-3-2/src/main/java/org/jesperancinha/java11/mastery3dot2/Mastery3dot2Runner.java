@@ -41,13 +41,13 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery3dot2Runner {
     public static void main(String[] args) {
@@ -118,7 +118,7 @@ public class Mastery3dot2Runner {
         GREEN.printGenericLn("Case: We are going to visit the worldwide known \"Chalé Dr. João Lúcio\"");
         GREEN.printGenericLn("Of course that, in order to visit it, we need someone to give a ticket to go insinde.");
         printBrightCyanGenericLn("Clerk - Good afternoon sir, how can I help you?");
-        printYellowGenericLn("Client - One ticket please!");
+        YELLOW.printGenericLn("Client - One ticket please!");
         var ticketSupplier = new Supplier<Ticket>() {
             @Override
             public Ticket get() {
@@ -129,7 +129,7 @@ public class Mastery3dot2Runner {
         printBrightCyanGenericLn("CK - Here you go!");
         printBrightCyanGenericLn("CK - This is your ticket %s", ticketSupplier.get());
         printBrightCyanGenericLn("CK - And this is a copy! Enjoy your visit! %s", ticketSupplier1.get());
-        printYellowGenericLn("CL - Thank you so much!");
+        YELLOW.printGenericLn("CL - Thank you so much!");
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. Suppliers return a value without the need of parameters");
         GREEN.printGenericLn("2. var isn't very convenient to use also with Suppliers because of the code");
@@ -255,11 +255,11 @@ public class Mastery3dot2Runner {
         GREEN.printGenericLn("Case: A bunch of cats is eating left over fish from the fishermen");
         var nFishes = 5;
         var allCatch = createRandomFishList(nFishes);
-        final Consumer<Peixe> cat = peixe -> printOrangeGenericLn("Cat eats %s", peixe);
+        final Consumer<Peixe> cat = peixe -> ORANGE.printGenericLn("Cat eats %s", peixe);
         var varCat = new Consumer<Peixe>() {
             @Override
             public void accept(Peixe peixe) {
-                printOrangeGenericLn("Var Cat eats %s", peixe);
+                ORANGE.printGenericLn("Var Cat eats %s", peixe);
             }
         };
         allCatch.forEach(cat);
@@ -279,12 +279,12 @@ public class Mastery3dot2Runner {
         GREEN.printGenericLn("This is the ideal case to use the `thenCompare` method.");
         var nFishes = 10;
         var allCatch = createRandomFishList(nFishes);
-        printYellowGenericLn("These are all our catches: %s\nLet's organize them!", allCatch);
+        YELLOW.printGenericLn("These are all our catches: %s\nLet's organize them!", allCatch);
         Comparator<Peixe> comparator = Comparator.comparing(o -> o.commonName);
         Comparator<Peixe> peixeComparator = comparator.thenComparing(o -> o.size);
         var organizedCatch = allCatch
                 .stream().sorted(peixeComparator).collect(Collectors.toList());
-        printYellowGenericLn("This is our organized catch -> %s", organizedCatch);
+        YELLOW.printGenericLn("This is our organized catch -> %s", organizedCatch);
         MAGENTA.printGenericLn("Finally we can put our fishes in the matching boxes in a mutch faster way!.");
         organizedCatch.forEach(peixe -> {
             CrateSize[] values = CrateSize.values();
@@ -336,8 +336,8 @@ public class Mastery3dot2Runner {
         } catch (NoClassDefFoundError e) {
             RED.printGenericLn("Notice that there is no class definition found. This makes sense. We actually have no class since initializing  has failed! -> %s", e);
         }
-        printYellowGenericLn("Essentially Lingueirão has gone into the oblivion because of the bird. 🦅");
-        printYellowGenericLn("What about this Caranguejo? 🦀");
+        YELLOW.printGenericLn("Essentially Lingueirão has gone into the oblivion because of the bird. 🦅");
+        YELLOW.printGenericLn("What about this Caranguejo? 🦀");
         try {
             new Caranguejo();
         } catch (RuntimeException e) {
@@ -382,17 +382,17 @@ public class Mastery3dot2Runner {
         GREEN.printGenericLn("Case: What is the day of the City of Olhão and on which year did it occur?");
         DateFormat dateTimeInstance = DateFormat.getDateTimeInstance();
         Locale locale = new Locale.Builder().setLanguage("pt").build();
-        printYellowGenericLn(dateTimeInstance.format(new Date(-92, Calendar.JUNE, 16)));
-        printYellowGenericLn(locale);
+        YELLOW.printGenericLn(dateTimeInstance.format(new Date(-92, Calendar.JUNE, 16)));
+        YELLOW.printGenericLn(locale);
         GREEN.printGenericLn("The point here is that Locale and DateFormat are independent.");
         GREEN.printGenericLn("They can, however be bound together:");
         for (int i = 0; i < 4; i++) {
             DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(i, 1, locale);
-            printYellowGenericLn("DateFormat.getDateTimeInstance(i,%d, locale) -> %s", i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE, 16)));
+            YELLOW.printGenericLn("DateFormat.getDateTimeInstance(i,%d, locale) -> %s", i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE, 16)));
         }
         for (int i = 0; i < 4; i++) {
             DateFormat dateTimeInstance2 = DateFormat.getDateTimeInstance(0, i, locale);
-            printYellowGenericLn("DateFormat.getDateTimeInstance(0,%d, locale) -> %s", i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE, 16)));
+            YELLOW.printGenericLn("DateFormat.getDateTimeInstance(0,%d, locale) -> %s", i, dateTimeInstance2.format(new Date(-92, Calendar.JUNE, 16)));
         }
         GREEN.printGenericLn("We can change to different pre-defined styles");
     }
@@ -405,19 +405,19 @@ public class Mastery3dot2Runner {
         GREEN.printGenericLn("The rest of the ingredients are at home");
         GREEN.printGenericLn("We get home and read our recipe again:");
         try (var raf = new RandomAccessFile("/tmp/bacalhau.a.bras.txt", "rw")) {
-            printYellowGenericLn(raf.readLine());
+            YELLOW.printGenericLn(raf.readLine());
             long filePointer = raf.getFilePointer();
-            printYellowGenericLn(raf.readLine());
+            YELLOW.printGenericLn(raf.readLine());
             raf.writeUTF("I'm corrupting the recipe\n");
             raf.seek(filePointer);
             String line;
             while ((line = raf.readLine()) != null) {
-                printYellowGenericLn(line);
+                YELLOW.printGenericLn(line);
             }
-            printOrangeGenericLn("Wait! I forgot something!");
+            ORANGE.printGenericLn("Wait! I forgot something!");
             raf.seek(filePointer);
             while ((line = raf.readLine()) != null) {
-                printYellowGenericLn(line);
+                YELLOW.printGenericLn(line);
             }
         } catch (IOException e) {
             RED.printGenericLn("Ooops! This shouldn't have happened! Check your runtime -> %s", e);
@@ -437,11 +437,11 @@ public class Mastery3dot2Runner {
         for (final var vegetable : vegetableToShopList) {
             // This is not possible because var is marked as final
             // vegetable = "wow";
-            printYellowGenericLn(vegetable);
+            YELLOW.printGenericLn(vegetable);
         }
         for (var vegetable : vegetableToShopList) {
             vegetable += " with fungus";
-            printYellowGenericLn(vegetable);
+            YELLOW.printGenericLn(vegetable);
         }
         GREEN.printGenericLn("We can use the word final in combination with var to mark it effectively final");
         GREEN.printGenericLn("Vars are effectively final until they suffer some change.");
@@ -527,9 +527,9 @@ public class Mastery3dot2Runner {
         Construction.getInfo();
         Building.getInfo();
         Market.getInfo();
-        printYellowGenericLn(construction.getCurrentInfo());
-        printYellowGenericLn(((Construction) building).getCurrentInfo());
-        printYellowGenericLn(((Construction) market).getCurrentInfo());
+        YELLOW.printGenericLn(construction.getCurrentInfo());
+        YELLOW.printGenericLn(((Construction) building).getCurrentInfo());
+        YELLOW.printGenericLn(((Construction) market).getCurrentInfo());
         Construction.getInfo();
         Construction.getInfo();
         Construction.getInfo();

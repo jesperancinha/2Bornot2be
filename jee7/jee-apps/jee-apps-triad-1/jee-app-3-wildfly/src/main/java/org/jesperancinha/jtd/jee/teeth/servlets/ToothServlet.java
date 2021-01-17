@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.teeth.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 import org.jesperancinha.jtd.jee.teeth.service.JawService;
@@ -18,13 +17,12 @@ import javax.transaction.HeuristicRollbackException;
 import javax.transaction.NotSupportedException;
 import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
-import java.io.Console;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 @WebServlet("/tooth/servlet/all")
@@ -67,8 +65,8 @@ public class ToothServlet extends HttpServlet {
         } catch (RollbackException e) {
             printRedThrowableAndExit(e);
         }
-        printOrangeGenericLn(tooth1);
-        printOrangeGenericLn(jaw1);
+        ORANGE.printGenericLn(tooth1);
+        ORANGE.printGenericLn(jaw1);
 
         all.forEach(toothAll -> writer.println(String.format("<p>%s</p>", toothAll.getUuid())));
     }

@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum5;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum5 {
     public static void main(String[] args) {
@@ -11,19 +11,19 @@ public class Crum5 {
         final int i = 10;
         switch (i) {
         default:
-            printYellowGenericLn("Default");
-        case 1:
-            printYellowGenericLn("1");
-        case 2:
-            printYellowGenericLn("2");
-        case 3:
-            printYellowGenericLn("3");
-        case 4:
-            printYellowGenericLn("4");
-        case 5:
-            printYellowGenericLn("5");
-        case 6:
-            printYellowGenericLn("6");
+            YELLOW.printGenericLn("Default");
+            case 1:
+                YELLOW.printGenericLn("1");
+            case 2:
+                YELLOW.printGenericLn("2");
+            case 3:
+                YELLOW.printGenericLn("3");
+            case 4:
+                YELLOW.printGenericLn("4");
+            case 5:
+                YELLOW.printGenericLn("5");
+            case 6:
+                YELLOW.printGenericLn("6");
         }
         MAGENTA.printGenericLn("Note that although some code is unreachable, this complete code is compilable");
         MAGENTA.printGenericLn("Also not that unreachable means in this case that the individual cases are note selectable given that 10 is set before entering the switch");

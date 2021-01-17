@@ -8,7 +8,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum14 {
     public static void main(String[] args) {
@@ -22,8 +22,8 @@ public class Crum14 {
         MAGENTA.printGenericLn("We start out from array %s", Arrays.stream(array)
             .collect(Collectors.toList()));
         BRIGHT_MAGENTA.printGenericLn("We have these lists:");
-        printYellowGenericLn(listOfArray1);
-        printYellowGenericLn(listOfArray2);
+        YELLOW.printGenericLn(listOfArray1);
+        YELLOW.printGenericLn(listOfArray2);
 
         MAGENTA.printGenericLn("If we change the source array:");
         array[0] = 9;
@@ -31,8 +31,8 @@ public class Crum14 {
             .collect(Collectors.toList()));
 
         BRIGHT_MAGENTA.printGenericLn("Checking any of our lists again we should not have the same values:");
-        printYellowGenericLn(listOfArray1);
-        printYellowGenericLn(listOfArray2);
+        YELLOW.printGenericLn(listOfArray1);
+        YELLOW.printGenericLn(listOfArray2);
 
         final int array2[] = new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
@@ -40,8 +40,8 @@ public class Crum14 {
         var listOfArray4 = Arrays.asList(array2);
 
         BRIGHT_MAGENTA.printGenericLn("Last curiosity is if we try to creatr the same Lists from an array of primitive values:");
-        printYellowGenericLn(listOfArray3);
-        printYellowGenericLn(listOfArray4);
+        YELLOW.printGenericLn(listOfArray3);
+        YELLOW.printGenericLn(listOfArray4);
 
         MAGENTA.printGenericLn("Notice that we didn't create a list of Integers");
         MAGENTA.printGenericLn(listOfArray3.get(0));

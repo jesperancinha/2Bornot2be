@@ -6,22 +6,22 @@ import java.time.format.DateTimeFormatter;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum5 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 5 - DateTimeFormatter of pattern");
 
         var dateTimeFormatter = DateTimeFormatter.ofPattern("e d y h H s m 'wow!' 'This is cool'");
-        printOrangeGenericLn(dateTimeFormatter);
+        ORANGE.printGenericLn(dateTimeFormatter);
         MAGENTA.printGenericLn(dateTimeFormatter.format(LocalDateTime.now()));
         var dateTimeFormatter2 = DateTimeFormatter.ofPattern("ee dd yy hh HH ss mm");
-        printOrangeGenericLn(dateTimeFormatter2);
+        ORANGE.printGenericLn(dateTimeFormatter2);
         MAGENTA.printGenericLn(dateTimeFormatter2.format(LocalDateTime.now()));
         try {
             var dateTimeFormatter3 = DateTimeFormatter.ofPattern("eee ddd yyy hhh HHH sss mmm");
-            printOrangeGenericLn(dateTimeFormatter3);
+            ORANGE.printGenericLn(dateTimeFormatter3);
             MAGENTA.printGenericLn(dateTimeFormatter3.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
             RED.printGenericLn("This is expected. The parameter for day of the month may only have 2 digits at max -> %s", e);
@@ -29,7 +29,7 @@ public class Crum5 {
 
         try {
             var dateTimeFormatter3 = DateTimeFormatter.ofPattern("eee dd yyy hhh HHH sss mmm");
-            printOrangeGenericLn(dateTimeFormatter3);
+            ORANGE.printGenericLn(dateTimeFormatter3);
             MAGENTA.printGenericLn(dateTimeFormatter3.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
             RED.printGenericLn("This is expected. The parameter for hour may only have 2 digits at max -> %s", e);
@@ -37,7 +37,7 @@ public class Crum5 {
 
         try {
             var dateTimeFormatter3 = DateTimeFormatter.ofPattern("eee dd yyy hh HHH sss mmm");
-            printOrangeGenericLn(dateTimeFormatter3);
+            ORANGE.printGenericLn(dateTimeFormatter3);
             MAGENTA.printGenericLn(dateTimeFormatter3.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
             RED.printGenericLn("This is expected. The parameter for 24 hour may only have 2 digits at max -> %s", e);
@@ -45,7 +45,7 @@ public class Crum5 {
 
         try {
             var dateTimeFormatter3 = DateTimeFormatter.ofPattern("eee dd yyy hh HH ss mmm");
-            printOrangeGenericLn(dateTimeFormatter3);
+            ORANGE.printGenericLn(dateTimeFormatter3);
             MAGENTA.printGenericLn(dateTimeFormatter3.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
             RED.printGenericLn("This is expected. The parameter for seconds may only have 2 digits at max -> %s", e);
@@ -53,27 +53,27 @@ public class Crum5 {
 
         try {
             var dateTimeFormatter3 = DateTimeFormatter.ofPattern("eee dd yyy hh HH ss mmm");
-            printOrangeGenericLn(dateTimeFormatter3);
+            ORANGE.printGenericLn(dateTimeFormatter3);
             MAGENTA.printGenericLn(dateTimeFormatter3.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
             RED.printGenericLn("This is expected. The parameter for minutes may only have 2 digits at max -> %s", e);
         }
 
         var dateTimeFormatter3 = DateTimeFormatter.ofPattern("eee dd yyy hh HH ss mm");
-        printOrangeGenericLn(dateTimeFormatter3);
+        ORANGE.printGenericLn(dateTimeFormatter3);
         MAGENTA.printGenericLn(dateTimeFormatter3.format(LocalDateTime.now()));
 
         var dateTimeFormatter4 = DateTimeFormatter.ofPattern("eeee dd yyyy hh HH ss mm");
-        printOrangeGenericLn(dateTimeFormatter4);
+        ORANGE.printGenericLn(dateTimeFormatter4);
         MAGENTA.printGenericLn(dateTimeFormatter4.format(LocalDateTime.now()));
 
         var dateTimeFormatter5 = DateTimeFormatter.ofPattern("eeeee dd yyyyy hh HH ss mm");
-        printOrangeGenericLn(dateTimeFormatter5);
+        ORANGE.printGenericLn(dateTimeFormatter5);
         MAGENTA.printGenericLn(dateTimeFormatter5.format(LocalDateTime.now()));
 
         try {
             var dateTimeFormatter6 = DateTimeFormatter.ofPattern("eeeeee dd yyyyyy hh HH ss mm");
-            printOrangeGenericLn(dateTimeFormatter6);
+            ORANGE.printGenericLn(dateTimeFormatter6);
             MAGENTA.printGenericLn(dateTimeFormatter6.format(LocalDateTime.now()));
         } catch (java.lang.IllegalArgumentException e) {
             RED.printGenericLn("This is expected. The maximum repetition possible for any patter is 5 -> %s", e);

@@ -45,15 +45,15 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printSameLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery3Dot1Runner {
     public static void main(String[] args) throws InterruptedException {
@@ -205,10 +205,10 @@ public class Mastery3Dot1Runner {
         executorService3.awaitTermination(10, TimeUnit.SECONDS);
         executorService4.awaitTermination(10, TimeUnit.SECONDS);
         GREEN.printGenericLn("Please wait while concert goers go inside the arenas...");
-        printOrangeGenericLn("Live concert has %d goers", liveConcert.getCurrentCount());
-        printOrangeGenericLn("Safe live concert has %d goers", safeLiveConcert.getCurrentCount());
-        printOrangeGenericLn("Unregulated live concert has %d goers", unregulatedConcert.getCurrentCount());
-        printOrangeGenericLn("Virtual live concert has %d goers", safeLiveConcert.getCurrentCount());
+        ORANGE.printGenericLn("Live concert has %d goers", liveConcert.getCurrentCount());
+        ORANGE.printGenericLn("Safe live concert has %d goers", safeLiveConcert.getCurrentCount());
+        ORANGE.printGenericLn("Unregulated live concert has %d goers", unregulatedConcert.getCurrentCount());
+        ORANGE.printGenericLn("Virtual live concert has %d goers", safeLiveConcert.getCurrentCount());
         GREEN.printGenericLn("All thread safe concert arenas should have only 50 concert goes.");
         GREEN.printGenericLn("We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.");
         GREEN.printGenericLn("In our case, more concert goers got in the  non thread-safe spaces.");
@@ -259,7 +259,7 @@ public class Mastery3Dot1Runner {
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We've created a list of elements but didn't gave it a type with diamond notation!");
         GREEN.printGenericLn("We can't sell these at our shop this way, but what is their type?");
-        printYellowGenericLn(" var itemsWithNoName = new ArrayList<>();\n" +
+        YELLOW.printGenericLn(" var itemsWithNoName = new ArrayList<>();\n" +
                 "        itemsWithNoName.add(\"Diggy Dex Ft. Eva De Roovere\");\n" +
                 "        itemsWithNoName.add(\"Slaap Lekker (Fantastig Toch)\");\n" +
                 "        itemsWithNoName.add(2009);\n" +
@@ -270,7 +270,7 @@ public class Mastery3Dot1Runner {
         itemsWithNoName.add(2009);
         itemsWithNoName.add("Hip Hop");
         Object singers = itemsWithNoName.get(0);
-        printYellowGenericLn("        Object singers = itemsWithNoName.get(0);\n");
+        YELLOW.printGenericLn("        Object singers = itemsWithNoName.get(0);\n");
         MAGENTA.printGenericLn("This is the type of this list, %s", itemsWithNoName.getClass());
         MAGENTA.printGenericLn("And these are the types of its contents, %s", itemsWithNoName.getClass());
         MAGENTA.printGenericLn("We can only list the singers, %s, `Object`'s", singers);
@@ -282,7 +282,7 @@ public class Mastery3Dot1Runner {
         printBrightCyanGenericLn("--- 6. How `getRoot()` exhibits the root `Path`");
         printRainbowLn("==");
         GREEN.printGenericLn("Case: We placed our files somewhere, but how do we call the root?");
-        printYellowGenericLn("Path.of(\"/tmp\").getRoot()");
+        YELLOW.printGenericLn("Path.of(\"/tmp\").getRoot()");
         MAGENTA.printGenericLn(Path.of("/tmp").getRoot());
         GREEN.printGenericLn("That's it! Slashes are part of root, not of individual paths");
     }
@@ -348,8 +348,8 @@ public class Mastery3Dot1Runner {
             GREEN.printGenericLn("If we use a glob filter of %s we get:", glob1);
             DirectoryStream<Path> ds1 = Files.newDirectoryStream(temporaryFolder, glob1);
             Spliterator<Path> spliterator1 = ds1.spliterator();
-            if (spliterator1.tryAdvance(Consolerizer::printYellowGenericLn)) {
-                spliterator1.forEachRemaining(Consolerizer::printYellowGenericLn);
+            if (spliterator1.tryAdvance(text4 -> YELLOW.printGenericLn(text4))) {
+                spliterator1.forEachRemaining(text -> YELLOW.printGenericLn(text));
             } else {
                 RED.printGenericLn("No file found!");
             }
@@ -357,8 +357,8 @@ public class Mastery3Dot1Runner {
             GREEN.printGenericLn("This was the wrong extension! If we use a glob filter of %s we get:", glob2);
             DirectoryStream<Path> ds2 = Files.newDirectoryStream(temporaryFolder, glob2);
             Spliterator<Path> spliterator2 = ds2.spliterator();
-            if (spliterator2.tryAdvance(Consolerizer::printYellowGenericLn)) {
-                spliterator2.forEachRemaining(Consolerizer::printYellowGenericLn);
+            if (spliterator2.tryAdvance(text3 -> YELLOW.printGenericLn(text3))) {
+                spliterator2.forEachRemaining(text -> YELLOW.printGenericLn(text));
             } else {
                 RED.printGenericLn("No file found!");
                 RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
@@ -368,8 +368,8 @@ public class Mastery3Dot1Runner {
             GREEN.printGenericLn("But this may lead to a lot of them! If we use a glob filter of %s we get:", glob3);
             DirectoryStream<Path> ds3 = Files.newDirectoryStream(temporaryFolder, glob3);
             Spliterator<Path> spliterator3 = ds3.spliterator();
-            if (spliterator3.tryAdvance(Consolerizer::printYellowGenericLn)) {
-                spliterator3.forEachRemaining(Consolerizer::printYellowGenericLn);
+            if (spliterator3.tryAdvance(text2 -> YELLOW.printGenericLn(text2))) {
+                spliterator3.forEachRemaining(text -> YELLOW.printGenericLn(text));
             } else {
                 RED.printGenericLn("No file found!");
                 RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
@@ -379,8 +379,8 @@ public class Mastery3Dot1Runner {
             GREEN.printGenericLn("But this may still lead to a lot of them! If we use a glob filter of %s we get:", glob4);
             DirectoryStream<Path> ds4 = Files.newDirectoryStream(temporaryFolder, glob4);
             Spliterator<Path> spliterator4 = ds4.spliterator();
-            if (spliterator4.tryAdvance(Consolerizer::printYellowGenericLn)) {
-                spliterator4.forEachRemaining(Consolerizer::printYellowGenericLn);
+            if (spliterator4.tryAdvance(text1 -> YELLOW.printGenericLn(text1))) {
+                spliterator4.forEachRemaining(text -> YELLOW.printGenericLn(text));
             } else {
                 RED.printGenericLn("No file found!");
                 RED.printGenericLn("We have to stop the lesson here because the test file isn't in /tmp folder. Please check Readme.md about running ./prepare.sh. If you still have issues try copying manually.");
@@ -397,7 +397,7 @@ public class Mastery3Dot1Runner {
                     RED.printGenericLn("This was not supposed to have happened! %s", e);
                     System.exit(1);
                 }
-                printYellowGenericLn(file);
+                YELLOW.printGenericLn(file);
                 printRainbowTitleLn("We finally found it!");
             })) {
                 RED.printGenericLn("No file found!");
@@ -488,10 +488,10 @@ public class Mastery3Dot1Runner {
         GREEN.printGenericLn("Let's see different ways to visualize this:");
         var debutGroteMannen = "2014";
         GREEN.printGenericLn("*** Integer.parseInt(%s)", debutGroteMannen);
-        printYellowGenericLn("The single was \"Grote Mannen Worden Klein\" was released, in Decimal, in the year %d", Integer.parseInt(debutGroteMannen, 10));
+        YELLOW.printGenericLn("The single was \"Grote Mannen Worden Klein\" was released, in Decimal, in the year %d", Integer.parseInt(debutGroteMannen, 10));
         var binaryValue = Integer.toBinaryString(2014);
         GREEN.printGenericLn("*** Integer.parseInt(%s, 2)", binaryValue);
-        printYellowGenericLn("The single was \"Grote Mannen Worden Klein\" was released, in Binary, in the year %d", Integer.parseInt(binaryValue, 2));
+        YELLOW.printGenericLn("The single was \"Grote Mannen Worden Klein\" was released, in Binary, in the year %d", Integer.parseInt(binaryValue, 2));
         GREEN.printGenericLn("References");
         GREEN.printGenericLn("1. https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein");
         GREEN.printGenericLn("2. https://www.last.fm/music/Diggy+Dex/_/Grote+Mannen+Worden+Klein");

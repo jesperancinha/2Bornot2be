@@ -55,13 +55,13 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 import static org.jesperancinha.java11.mastery4dot2.concert.Ticket.getTicketsLongNumbers;
 import static org.jesperancinha.java11.mastery4dot2.concert.Ticket.getTicketsStringNumbers;
 
@@ -268,7 +268,7 @@ public class Mastery4Dot2Runner {
                 "Te Echamos de Menos (Undo Remix)",
                 "Horas Bajas (Undo Remix)", "El Temblor (Lovo Remix)", "Verte Amanecer"};
         MAGENTA.printGenericLn("This is our possible list:");
-        printOrangeGenericLn("%s", String.join(",", songs));
+        ORANGE.printGenericLn("%s", String.join(",", songs));
         final Compilation compilation = new Compilation();
 
         final var songSet = Arrays.stream(songs).collect(Collectors.toCollection(ConcurrentSkipListSet::new));
@@ -350,23 +350,23 @@ public class Mastery4Dot2Runner {
         GREEN.printGenericLn("We can represent the infinity of songs Vetusta Morla can make by using Float and Double.");
         var songs = Float.POSITIVE_INFINITY;
         var nosongs = Float.NEGATIVE_INFINITY;
-        printOrangeGenericLn(songs);
-        printOrangeGenericLn(nosongs);
+        ORANGE.printGenericLn(songs);
+        ORANGE.printGenericLn(nosongs);
         BLUE.printGenericLn("But how can we generate infinite songs?");
         var infiniteSongs = 1 / 0.0f;
         var noSongsToInfinity = -1 / 0.0f;
-        printOrangeGenericLn(infiniteSongs);
-        printOrangeGenericLn(noSongsToInfinity);
+        ORANGE.printGenericLn(infiniteSongs);
+        ORANGE.printGenericLn(noSongsToInfinity);
         BLUE.printGenericLn("Can we use double for this?");
         var songsDouble = Double.POSITIVE_INFINITY;
         var nosongsDouble = Double.NEGATIVE_INFINITY;
-        printOrangeGenericLn(songsDouble);
-        printOrangeGenericLn(nosongsDouble);
+        ORANGE.printGenericLn(songsDouble);
+        ORANGE.printGenericLn(nosongsDouble);
         BLUE.printGenericLn("But how can we generate double infinite songs?");
         var infiniteSongsDouble = 1 / 0.0;
         var noSongsToInfinityDouble = -1 / 0.0;
-        printOrangeGenericLn(infiniteSongsDouble);
-        printOrangeGenericLn(noSongsToInfinityDouble);
+        ORANGE.printGenericLn(infiniteSongsDouble);
+        ORANGE.printGenericLn(noSongsToInfinityDouble);
         BLUE.printGenericLn("Sounds good, but how about that overflow Exception?");
         try {
             var notWithLongs = 1 / 0L;
@@ -560,7 +560,7 @@ public class Mastery4Dot2Runner {
         GREEN.printGenericLn("However your friends, Paco, Lori, Nere, Cristina, Viktor, Carlos and Andrea, are really excited to go!");
         GREEN.printGenericLn("We need to distribute the tickets as fast as possible and store them in a map.");
         GREEN.printGenericLn("The best ticket is the front row one, so in spite of being best friends, they will struggle to get the best one first!");
-        printOrangeGenericLn("Ticket office is open!");
+        ORANGE.printGenericLn("Ticket office is open!");
         var ticketFrontRow = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES1028562319",
                 LocalDateTime.of(2010, 5, 8, 0, 0));
         var ticketRowTwo = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES0384518495",
@@ -649,7 +649,7 @@ public class Mastery4Dot2Runner {
         return () -> {
             for (var nextTicket : precedenceTickets) {
                 final String computeIfAbsent = ticketMap.computeIfAbsent(nextTicket, ticket -> {
-                    printOrangeGenericLn("Assigning ticket %s to %s", ticket, winner);
+                    ORANGE.printGenericLn("Assigning ticket %s to %s", ticket, winner);
                     return winner;
                 });
                 if (Objects.equals(computeIfAbsent, winner)) {
@@ -675,7 +675,7 @@ public class Mastery4Dot2Runner {
             int bytes;
             while ((bytes = fis.read(buffer)) != -1) {
                 fos.write(buffer, 0, bytes);
-                printYellowGenericLn(new String(buffer).trim());
+                YELLOW.printGenericLn(new String(buffer).trim());
             }
         } catch (FileNotFoundException e) {
             printRedThrowableAndExit(e);
@@ -701,7 +701,7 @@ public class Mastery4Dot2Runner {
             int bytes;
             bytes = fis.read(buffer);
             fos.write(buffer, 0, bytes);
-            printYellowGenericLn(new String(buffer).trim());
+            YELLOW.printGenericLn(new String(buffer).trim());
         } catch (FileNotFoundException e) {
             printRedThrowableAndExit(e);
         } catch (IOException e) {

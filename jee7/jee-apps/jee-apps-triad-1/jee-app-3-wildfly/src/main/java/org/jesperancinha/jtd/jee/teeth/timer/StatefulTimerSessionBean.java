@@ -7,7 +7,7 @@ import javax.ejb.Timeout;
 import javax.ejb.Timer;
 
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @Stateful
 public class StatefulTimerSessionBean {
@@ -23,7 +23,7 @@ public class StatefulTimerSessionBean {
 
     @Timeout
     public void timeOutHandler(Timer timer) {
-        printYellowGenericLn(timer.getInfo());
+        YELLOW.printGenericLn(timer.getInfo());
         timer.cancel();
     }
 }

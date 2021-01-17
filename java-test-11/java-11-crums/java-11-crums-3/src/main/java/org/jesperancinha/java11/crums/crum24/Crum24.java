@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum24;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum24 {
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Crum24 {
                 break LABEL2;
             }
         }
-        printYellowGenericLn("Value of i is now %d", i);
+        YELLOW.printGenericLn("Value of i is now %d", i);
         BRIGHT_MAGENTA.printGenericLn("Continue with label");
 
         int k = 0;
@@ -32,7 +32,7 @@ public class Crum24 {
             }
             k++;
         }
-        printYellowGenericLn("Value of k is now %d", k);
+        YELLOW.printGenericLn("Value of k is now %d", k);
 
         GREEN.printGenericLn("The difference between continue and break is that the first ignores and the second stops");
         GREEN.printGenericLn("A break can be considered as an old return or a GOTO to the next instruction");

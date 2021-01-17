@@ -16,8 +16,8 @@ import java.util.function.Function;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum1 {
@@ -61,8 +61,8 @@ public class Crum1 {
 
         AccessController.doPrivileged(new PrivilegedAction<Void>() {
             public Void run() {
-                printOrangeGenericLn(f1.apply(pathname));
-                printOrangeGenericLn(f2.apply(pathname));
+                ORANGE.printGenericLn(f1.apply(pathname));
+                ORANGE.printGenericLn(f2.apply(pathname));
                 return null;
             }
         }, new AccessControlContext(new ProtectionDomain[] { new ProtectionDomain(null, perms),

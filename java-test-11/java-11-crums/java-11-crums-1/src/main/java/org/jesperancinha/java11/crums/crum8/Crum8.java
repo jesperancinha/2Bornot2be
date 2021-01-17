@@ -5,7 +5,7 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum8 {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Crum8 {
                 break OHNO;
             }
         }
-        printYellowGenericLn("A should be 200 ->  %s", a);
+        YELLOW.printGenericLn("A should be 200 ->  %s", a);
         LINE:
         if (i < 2) {
             MAGENTA.printGenericLn("These are all the keywords:");

@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 @Path("/history/messages")
 public class RoyalPost {
@@ -19,7 +19,7 @@ public class RoyalPost {
     public Response createAccount(
         @Context
             HttpServletRequest req, KingdomMessage kingdomMessage) {
-        printOrangeGenericLn(kingdomMessage);
+        ORANGE.printGenericLn(kingdomMessage);
         return Response.ok()
             .entity(kingdomMessage)
             .build();
@@ -33,7 +33,7 @@ public class RoyalPost {
             HttpServletRequest req,
         @FormParam("message")
             String kingdomMessage) {
-        printOrangeGenericLn(kingdomMessage);
+        ORANGE.printGenericLn(kingdomMessage);
         return Response.ok()
             .entity(kingdomMessage)
             .build();

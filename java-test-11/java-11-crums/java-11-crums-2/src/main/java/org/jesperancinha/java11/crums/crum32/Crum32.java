@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum32;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum32 {
     public static void main(String[] args) {
@@ -19,14 +19,14 @@ public class Crum32 {
         final short fU = a.shortValue();
         final char gU = (char) a.shortValue();
 
-        printOrangeGenericLn(a);
-        printOrangeGenericLn(aU);
-        printOrangeGenericLn(bU);
-        printOrangeGenericLn(cU);
-        printOrangeGenericLn(dU);
-        printOrangeGenericLn(eU);
-        printOrangeGenericLn(fU);
-        printOrangeGenericLn(gU);
+        ORANGE.printGenericLn(a);
+        ORANGE.printGenericLn(aU);
+        ORANGE.printGenericLn(bU);
+        ORANGE.printGenericLn(cU);
+        ORANGE.printGenericLn(dU);
+        ORANGE.printGenericLn(eU);
+        ORANGE.printGenericLn(fU);
+        ORANGE.printGenericLn(gU);
 
         MAGENTA.printGenericLn("These are examples of unbxing operations that work as unboxing from an Integer");
         BLUE.printGenericLn("        final Integer a = 123;\n" + "        final int aU = a;\n"
@@ -44,14 +44,14 @@ public class Crum32 {
         final long bEB = bB;
         final float bFB = bB;
         final double bGB = bB;
-        printOrangeGenericLn(bB);
-        printOrangeGenericLn(bAB);
-        printOrangeGenericLn(bBB);
-        printOrangeGenericLn(bCB);
-        printOrangeGenericLn(bDB);
-        printOrangeGenericLn(bEB);
-        printOrangeGenericLn(bFB);
-        printOrangeGenericLn(bGB);
+        ORANGE.printGenericLn(bB);
+        ORANGE.printGenericLn(bAB);
+        ORANGE.printGenericLn(bBB);
+        ORANGE.printGenericLn(bCB);
+        ORANGE.printGenericLn(bDB);
+        ORANGE.printGenericLn(bEB);
+        ORANGE.printGenericLn(bFB);
+        ORANGE.printGenericLn(bGB);
         BLUE.printGenericLn("        final Byte bB = 123;\n" + "        final byte bAB = bB;\n"
             + "        final short bBB = bB;\n" + "        final char bCB = Character.highSurrogate(bB);\n"
             + "        final int bDB = bB;\n" + "        final long bEB = bB;\n" + "        final float bFB = bB;\n"

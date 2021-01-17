@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum12;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum12 {
     public static void main(String[] args) {
@@ -26,10 +26,10 @@ public class Crum12 {
         la++;
         la--;
 
-        printOrangeGenericLn(i == ia);
-        printOrangeGenericLn(j == ja);
-        printOrangeGenericLn(k == ka);
-        printOrangeGenericLn(l == la);
+        ORANGE.printGenericLn(i == ia);
+        ORANGE.printGenericLn(j == ja);
+        ORANGE.printGenericLn(k == ka);
+        ORANGE.printGenericLn(l == la);
 
         GREEN.printGenericLn("Java optimizes values from -128 to 127. The rest of the objects use cache. This is why the equals fails for the last case");
     }

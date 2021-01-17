@@ -25,6 +25,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
@@ -51,9 +52,9 @@ public class ToothService2Test {
         final var uuid = UUID.randomUUID();
         tooth.setUuid(uuid);
         final Tooth tooth1 = toothService.updateItRight(tooth);
-        Consolerizer.printOrangeGenericLn(tooth1);
+        ORANGE.printGenericLn(tooth1);
         final Tooth toothResult = toothService.findTooth(uuid);
-        Consolerizer.printOrangeGenericLn(toothResult);
+        ORANGE.printGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
     }
 

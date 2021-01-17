@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum9;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum9 {
     public static void main(String[] args) {
@@ -13,13 +13,13 @@ public class Crum9 {
 
         MAGENTA.printGenericLn("The fisherman says:");
 
-        printOrangeGenericLn(sale.concat(" a 5 euros o kilo!"));
+        ORANGE.printGenericLn(sale.concat(" a 5 euros o kilo!"));
 
         MAGENTA.printGenericLn("The fisherman alos says:");
 
         var sb = new StringBuilder(sale);
 
-        printOrangeGenericLn(sb.append(" a 5 euros o kilo!"));
+        ORANGE.printGenericLn(sb.append(" a 5 euros o kilo!"));
 
         GREEN.printGenericLn("String has concat and StringBuilder has append. That's it! Enjoy!");
     }

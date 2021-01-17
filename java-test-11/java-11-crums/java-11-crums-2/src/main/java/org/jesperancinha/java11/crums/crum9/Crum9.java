@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum9;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum9 extends B implements A {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Crum9 extends B implements A {
         // 'org.jesperancinha.java11.crums.crum9.C' is not an enclosing class
         // C.this.b;
 
-        printYellowGenericLn("From instance is the same thing:");
+        YELLOW.printGenericLn("From instance is the same thing:");
 
         new Crum9().fromInstance();
 

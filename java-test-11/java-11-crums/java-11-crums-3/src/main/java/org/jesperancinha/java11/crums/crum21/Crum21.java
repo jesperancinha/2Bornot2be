@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum21;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum21 {
 
@@ -21,10 +21,10 @@ public class Crum21 {
         BLUE.printGenericTitleLn("Crum 21 - Inner classes and static methods");
 
 
-        printYellowGenericLn("from https://genius.com/Sade-smooth-operator-lyrics");
+        YELLOW.printGenericLn("from https://genius.com/Sade-smooth-operator-lyrics");
         MAGENTA.printGenericLn("We can access SMOOTH_OPERATOR:");
 
-        printOrangeGenericLn(Saxophone.SMOOTH_OPERATOR);
+        ORANGE.printGenericLn(Saxophone.SMOOTH_OPERATOR);
 
         GREEN.printGenericLn("The nuance here is that non-static inner classes normally cannot have anything static");
         GREEN.printGenericLn("However if static members are marked at final, then it is possible to do so.");

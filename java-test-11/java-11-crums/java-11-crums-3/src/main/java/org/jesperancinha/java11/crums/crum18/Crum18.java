@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum18 {
 
@@ -51,13 +51,20 @@ public class Crum18 {
             .max(compareTo);
 
         MAGENTA.printGenericLn("The first thing to understand is that Numberic Object and Strings are comparables:");
-        printOrangeGenericLn("Integer -> %s ", Integer.valueOf(100) instanceof Comparable);
-        printOrangeGenericLn("Double -> %s ", Double.valueOf(100) instanceof Comparable);
-        printOrangeGenericLn("Float -> %s ", Float.valueOf(100) instanceof Comparable);
-        printOrangeGenericLn("Byte -> %s ", Byte.valueOf((byte) 100) instanceof Comparable);
-        printOrangeGenericLn("Short -> %s ", Short.valueOf((short) 100) instanceof Comparable);
-        printOrangeGenericLn("Character -> %s ", Character.valueOf((char) 100) instanceof Comparable);
-        printOrangeGenericLn("String -> %s ", "Whatevever" instanceof Comparable);
+        Object[] args7 = new Object[]{Integer.valueOf(100) instanceof Comparable};
+        ORANGE.printGenericLn("Integer -> %s ", args7);
+        Object[] args6 = new Object[]{Double.valueOf(100) instanceof Comparable};
+        ORANGE.printGenericLn("Double -> %s ", args6);
+        Object[] args5 = new Object[]{Float.valueOf(100) instanceof Comparable};
+        ORANGE.printGenericLn("Float -> %s ", args5);
+        Object[] args4 = new Object[]{Byte.valueOf((byte) 100) instanceof Comparable};
+        ORANGE.printGenericLn("Byte -> %s ", args4);
+        Object[] args3 = new Object[]{Short.valueOf((short) 100) instanceof Comparable};
+        ORANGE.printGenericLn("Short -> %s ", args3);
+        Object[] args2 = new Object[]{Character.valueOf((char) 100) instanceof Comparable};
+        ORANGE.printGenericLn("Character -> %s ", args2);
+        Object[] args1 = new Object[]{"Whatevever" instanceof Comparable};
+        ORANGE.printGenericLn("String -> %s ", args1);
 
         MAGENTA.printGenericLn("This means that they all implement method compareTo");
 
@@ -68,20 +75,20 @@ public class Crum18 {
         var plateList = List.of(new Plate("Chinese Porcelain", LocalDateTime.now()),
             new Plate("Delft Porcelain", LocalDateTime.now()), new Plate("Braga Porcelain", LocalDateTime.now()));
 
-        printOrangeGenericLn(plateList);
+        ORANGE.printGenericLn(plateList);
 
         MAGENTA.printGenericLn("If we sort by the first comparator we've made, we find:");
-        printOrangeGenericLn(plateList.stream()
+        ORANGE.printGenericLn(plateList.stream()
             .sorted(comparator)
             .collect(Collectors.toList()));
 
         MAGENTA.printGenericLn("If we sort by the second comparator we've made, we find:");
-        printOrangeGenericLn(plateList.stream()
+        ORANGE.printGenericLn(plateList.stream()
             .sorted(comparator2)
             .collect(Collectors.toList()));
 
         MAGENTA.printGenericLn("If we sort by the third comparator we've made, we find:");
-        printOrangeGenericLn(plateList.stream()
+        ORANGE.printGenericLn(plateList.stream()
             .sorted(comparator3)
             .collect(Collectors.toList()));
 

@@ -1,9 +1,8 @@
 package org.jesperancinha.java11.crums.crum18;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum18 {
     public static void main(String[] args) {
@@ -19,6 +18,6 @@ public class Crum18 {
         MAGENTA.printGenericLn("%n");
         MAGENTA.printGenericLn("%h", 17);
 
-        Consolerizer.printOrangeGenericLn("https://www.javatpoint.com/java-string-format");
+        ORANGE.printGenericLn("https://www.javatpoint.com/java-string-format");
     }
 }

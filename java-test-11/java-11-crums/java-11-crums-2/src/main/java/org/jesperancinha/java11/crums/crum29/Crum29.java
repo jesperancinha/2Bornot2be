@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum29;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum29 {
     public static class Wall {
@@ -11,7 +11,7 @@ public class Crum29 {
         }
 
         public static void methodB() {
-            printOrangeGenericLn("MethodB from Wall");
+            ORANGE.printGenericLn("MethodB from Wall");
         }
 
     }
@@ -20,7 +20,7 @@ public class Crum29 {
 
 
         public static void methodB() {
-            printOrangeGenericLn("MethodB from WaillingWall");
+            ORANGE.printGenericLn("MethodB from WaillingWall");
         }
 
 

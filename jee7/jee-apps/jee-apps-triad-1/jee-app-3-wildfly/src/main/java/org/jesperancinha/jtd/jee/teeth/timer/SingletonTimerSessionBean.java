@@ -3,11 +3,10 @@ package org.jesperancinha.jtd.jee.teeth.timer;
 import javax.annotation.Resource;
 import javax.ejb.SessionContext;
 import javax.ejb.Singleton;
-import javax.ejb.Stateless;
 import javax.ejb.Timeout;
 import javax.ejb.Timer;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @Singleton
 public class SingletonTimerSessionBean {
@@ -22,7 +21,7 @@ public class SingletonTimerSessionBean {
 
     @Timeout
     public void timeOutHandler(Timer timer){
-        printYellowGenericLn(timer.getInfo());
+        YELLOW.printGenericLn(timer.getInfo());
         timer.cancel();
     }
 }

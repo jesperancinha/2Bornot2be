@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 @Path("/tooth/rest/")
@@ -76,8 +76,8 @@ public class ToothRESTService {
         } catch (RollbackException e) {
             printRedThrowableAndExit(e);
         }
-        printOrangeGenericLn(tooth1);
-        printOrangeGenericLn(jaw2);
+        ORANGE.printGenericLn(tooth1);
+        ORANGE.printGenericLn(jaw2);
 
         final List<Tooth> all = toothService.findAll();
         BLUE.printGenericLn(all);

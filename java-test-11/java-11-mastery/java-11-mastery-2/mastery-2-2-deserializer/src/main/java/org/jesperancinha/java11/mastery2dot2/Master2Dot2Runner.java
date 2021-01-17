@@ -8,9 +8,9 @@ import java.io.ObjectInputStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
 
 public class Master2Dot2Runner {
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Master2Dot2Runner {
 
         printRainbowTitleLn("1. Serializing `FileOutputStream` and `FileInputStream`");
         printRainbowLn("==");
-        printYellowGeneric("### Creating Apollo 13 Mission but missing a few details\n");
+        YELLOW.printGeneric("### Creating Apollo 13 Mission but missing a few details\n");
         String fileName = "/tmp/destination";
         try (var fileInputStream = new FileInputStream(fileName);
              var objectInputStream = new ObjectInputStream(fileInputStream)) {

@@ -8,8 +8,8 @@ import java.util.stream.IntStream;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum16 {
     public static void main(String[] args) {
@@ -23,8 +23,8 @@ public class Crum16 {
         var cups = List.of("Black Cup", "Chinese Cup", "Delft Cup", "Euro cup", "Black Cup");
         var prices = List.of(12.3, 400.2, 123000.4, 40000000.12, 123.5);
 
-        printOrangeGenericLn("Our cups: %s", cups);
-        printOrangeGenericLn("Our prices: %s", prices);
+        ORANGE.printGenericLn("Our cups: %s", cups);
+        ORANGE.printGenericLn("Our prices: %s", prices);
 
         try {
             final Map<String, Double> collect = IntStream.range(0, cups.size())
@@ -41,7 +41,7 @@ public class Crum16 {
 
         MAGENTA.printGenericLn("We now have the price sum of all cups per type");
 
-        printOrangeGenericLn(summingAndCollecting);
+        ORANGE.printGenericLn(summingAndCollecting);
 
         GREEN.printGenericLn("We should always implement a disambiguation method");
         GREEN.printGenericLn("Disambiguation is not strictly necessary if we know that no element is repeated");

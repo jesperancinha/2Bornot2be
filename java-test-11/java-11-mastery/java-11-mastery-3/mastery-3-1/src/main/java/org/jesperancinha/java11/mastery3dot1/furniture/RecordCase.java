@@ -1,10 +1,9 @@
 package org.jesperancinha.java11.mastery3dot1.furniture;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.time.LocalDateTime;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class RecordCase extends Case {
 
@@ -15,15 +14,15 @@ public class RecordCase extends Case {
     }
 
     public void showCapacity() {
-        Consolerizer.printOrangeGenericLn("This RecordCase has a capacity of %d records", super.capacity);
+        ORANGE.printGenericLn("This RecordCase has a capacity of %d records", super.capacity);
     }
 
     public void printStuff() {
-        printOrangeGenericLn("Current year is %d", currentYear);
+        ORANGE.printGenericLn("Current year is %d", currentYear);
     }
 
     public static void describeMe() {
-        Consolerizer.printYellowGenericLn("I'm a record case class -> %s", RecordCase.class.getName());
+        YELLOW.printGenericLn("I'm a record case class -> %s", RecordCase.class.getName());
     }
 
 }

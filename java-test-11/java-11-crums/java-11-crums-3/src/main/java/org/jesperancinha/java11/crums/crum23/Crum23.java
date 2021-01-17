@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum23;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum23 {
     public static void main(String[] args) {
@@ -19,14 +19,14 @@ public class Crum23 {
         final float parF = Float.parseFloat("123");
         final double parD = Double.parseDouble("333444.34343");
 
-        printYellowGenericLn("These are the results:");
+        YELLOW.printGenericLn("These are the results:");
 
-        printOrangeGenericLn(parB);
-        printOrangeGenericLn(parS);
-        printOrangeGenericLn(parI);
-        printOrangeGenericLn(parL);
-        printOrangeGenericLn(parF);
-        printOrangeGenericLn(parD);
+        ORANGE.printGenericLn(parB);
+        ORANGE.printGenericLn(parS);
+        ORANGE.printGenericLn(parI);
+        ORANGE.printGenericLn(parL);
+        ORANGE.printGenericLn(parF);
+        ORANGE.printGenericLn(parD);
 
         GREEN.printGenericLn("This is just to show that all different static method parsers of the different java.lang.Number types, all return a primitive");
 

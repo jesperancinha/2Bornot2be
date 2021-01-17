@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum2 {
 
@@ -26,17 +26,17 @@ public class Crum2 {
 
         final List<? super CharSequence> boats = new Boat().getBoats();
 
-        printOrangeGenericLn(boats);
+        ORANGE.printGenericLn(boats);
         MAGENTA.printGenericLn("We have created these boats without bounded types");
         final CharSequence a_estrela = (CharSequence) new String("A Estrela");
         boats.set(0, a_estrela);
         MAGENTA.printGenericLn("This means that all elements have to be String");
-        printOrangeGenericLn(boats);
+        ORANGE.printGenericLn(boats);
         boats.set(1, "Ferreirinha");
-        printOrangeGenericLn(boats);
+        ORANGE.printGenericLn(boats);
         MAGENTA.printGenericLn("The difference here is that when we perform a get from this list, we get Object:");
         final Object text = boats.get(0);
-        printOrangeGenericLn(text);
+        ORANGE.printGenericLn(text);
 
         MAGENTA.printGenericLn("Lets now create an ArrayDeque of our boats:");
 
@@ -46,7 +46,7 @@ public class Crum2 {
             .map(x -> (String) x)
             .collect(Collectors.toList()));
 
-        printOrangeGenericLn(arrayDeque);
+        ORANGE.printGenericLn(arrayDeque);
 
         Object[] args3 = new Object[]{arrayDeque instanceof List};
         MAGENTA.printGenericLn("An ArrayDeque is not a List! -> %s", args3);

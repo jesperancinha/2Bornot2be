@@ -1,28 +1,27 @@
 package org.jesperancinha.java11.crums.crum24;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum24 {
 
     private static class Happy {
         public void showParty() {
-            Consolerizer.printOrangeGenericLn("Happy");
+            ORANGE.printGenericLn("Happy");
         }
     }
 
     private static class Hurray extends Happy {
         public void showParty() {
-            Consolerizer.printOrangeGenericLn("Hurray");
+            ORANGE.printGenericLn("Hurray");
         }
     }
 
     private static class Party extends Hurray {
         public void showParty() {
-            Consolerizer.printOrangeGenericLn("Party");
+            ORANGE.printGenericLn("Party");
         }
     }
 

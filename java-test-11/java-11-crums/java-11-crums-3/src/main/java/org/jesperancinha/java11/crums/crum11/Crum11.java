@@ -9,8 +9,8 @@ import java.util.List;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum11 {
 
@@ -30,28 +30,28 @@ public class Crum11 {
 
     private static class Main1 extends Base {
         public Collection<String> areYouOutOfTouch(List<String> lyrics) {
-            printOrangeGenericLn(lyrics);
+            ORANGE.printGenericLn(lyrics);
             return Arrays.asList("I'm out of time");
         }
     }
 
     private static class Main2 extends Base {
         public <T> Collection<T> areYouOutOfTouch(Collection<T> lyrics) {
-            printOrangeGenericLn(lyrics);
+            ORANGE.printGenericLn(lyrics);
             return (Collection<T>) Arrays.asList("I'm out of time");
         }
     }
 
     private static class Main3 extends Base {
         public <T> List<T> areYouOutOfTouch(Collection<T> lyrics) {
-            printOrangeGenericLn(lyrics);
+            ORANGE.printGenericLn(lyrics);
             return (List<T>) Arrays.asList("I'm out of time");
         }
     }
 
     private static class Main4 extends Base {
         public <T> List<T> areYouOutOfTouch(List<T> lyrics) {
-            printOrangeGenericLn(lyrics);
+            ORANGE.printGenericLn(lyrics);
             return (List<T>) Arrays.asList("I'm out of time");
         }
     }
@@ -59,7 +59,7 @@ public class Crum11 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 11 - Overriding and overloading generics");
 
-        printYellowGenericLn("from: https://genius.com/Hall-and-oates-out-of-touch-lyrics ");
+        YELLOW.printGenericLn("from: https://genius.com/Hall-and-oates-out-of-touch-lyrics ");
         MAGENTA.printGenericLn("1 - %s", new Main1().areYouOutOfTouch(Arrays.asList("You're out of touch")));
         MAGENTA.printGenericLn("2 - %s", new Main1().areYouOutOfTouch(Collections.singletonList("You're out of touch")));
         MAGENTA.printGenericLn("3 - %s", new Main1().areYouOutOfTouch((Collection) Arrays.asList("You're out of touch")));

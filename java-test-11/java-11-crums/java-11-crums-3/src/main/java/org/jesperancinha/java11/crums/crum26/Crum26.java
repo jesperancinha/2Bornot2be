@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum26 {
     public static void main(String[] args) {
@@ -16,11 +16,11 @@ public class Crum26 {
 
         var strings = new String[]{"Paul Simon","PJ Harvey","Courtney Love",null,"Roy Orbinson"};
 
-        printOrangeGenericLn("We have a list of artists:");
+        ORANGE.printGenericLn("We have a list of artists:");
 
         BRIGHT_MAGENTA.printGenericLn(Arrays.stream(strings).collect(Collectors.toList()));
 
-        printOrangeGenericLn("Let's make an immutable list of it:");
+        ORANGE.printGenericLn("Let's make an immutable list of it:");
 
         try {
             List.of(strings);

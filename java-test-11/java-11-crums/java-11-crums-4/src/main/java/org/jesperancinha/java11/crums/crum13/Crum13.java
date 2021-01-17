@@ -2,19 +2,19 @@ package org.jesperancinha.java11.crums.crum13;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum13 {
     class Running {
         public void running() throws Exception {
-            printOrangeGenericLn("We are now running....");
+            ORANGE.printGenericLn("We are now running....");
         }
     }
 
     public class Marathon extends Running {
         public void running() {
-            printOrangeGenericLn("We are now in the marathon...");
+            ORANGE.printGenericLn("We are now in the marathon...");
         }
 
     }

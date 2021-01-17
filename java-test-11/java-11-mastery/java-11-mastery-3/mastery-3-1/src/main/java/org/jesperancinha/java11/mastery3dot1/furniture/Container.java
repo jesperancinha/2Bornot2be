@@ -1,10 +1,10 @@
 package org.jesperancinha.java11.mastery3dot1.furniture;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public interface Container {
 
     static void describeMe(){
-        Consolerizer.printYellowGenericLn("I'm a container interface -> %s", Container.class.getName());
+        YELLOW.printGenericLn("I'm a container interface -> %s", Container.class.getName());
     }
 }

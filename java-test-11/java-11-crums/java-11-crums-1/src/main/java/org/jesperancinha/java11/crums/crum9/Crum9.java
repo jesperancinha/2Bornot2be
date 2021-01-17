@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum9;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum9 {
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class Crum9 {
 
         boolean a = false;
         for(;a & false;){
-          printYellowGenericLn(a);
+            YELLOW.printGenericLn(a);
         }
 
         MAGENTA.printGenericLn("The exception in this case is if");

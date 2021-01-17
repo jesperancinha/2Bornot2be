@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum21;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum21 {
 
@@ -11,7 +11,7 @@ public class Crum21 {
 
         int a;
         public A(int  a) {
-            printOrangeGenericLn("Created A");
+            ORANGE.printGenericLn("Created A");
             this.a = a;
         }
 
@@ -25,7 +25,7 @@ public class Crum21 {
         long a;
         public B(long a) {
             super((int) a);
-            printOrangeGenericLn("Created B");
+            ORANGE.printGenericLn("Created B");
             this.a = a;
         }
 

@@ -98,38 +98,6 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
-    public static void printYellowGenericLn(Object text) {
-        YELLOW.printGenericLn(text);
-    }
-
-    public static void printYellowGenericLn(Object text, Object... args) {
-        YELLOW.printGenericLn(text, args);
-    }
-
-    public static void printOrangeGeneric(String text) {
-        ORANGE.printGeneric(text);
-    }
-
-    public static void printOrangeGenericLn(Object text) {
-        ORANGE.printGenericLn(text);
-    }
-
-    public static void printOrangeGenericLn(String text, Object... args) {
-        ORANGE.printGenericLn(text, args);
-    }
-
-    public static void printOrangeGeneric(String text, Object... args) {
-        ORANGE.printGeneric(text, args);
-    }
-
-    public static void printYellowGeneric(Object text) {
-        YELLOW.printGeneric(text);
-    }
-
-    public static void printYellowGeneric(String text, Object... args) {
-        YELLOW.printGeneric(text, args);
-    }
-
     public void printColorText(final ConColor conColor, String text) {
         printColor(conColor);
         printPrivateText(text);

@@ -1,12 +1,12 @@
 package org.jesperancinha.jtd.jee.teeth.timer;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.annotation.Resource;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.ejb.Timeout;
 import javax.ejb.Timer;
+
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @Stateless
 public class StatelessTimerSessionBean {
@@ -21,7 +21,7 @@ public class StatelessTimerSessionBean {
 
     @Timeout
     public void timeOutHandler(Timer timer){
-        Consolerizer.printYellowGenericLn(timer.getInfo());
+        YELLOW.printGenericLn(timer.getInfo());
         timer.cancel();
     }
 }

@@ -13,6 +13,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @Path("/history/palace/rest")
 @RequestScoped
@@ -30,10 +31,9 @@ public class PalaceWaitingRESTService implements Serializable {
     public PalaceWaitingRESTService() {
         Consolerizer.setupFastDefault();
         if (Objects.isNull(contextProvider)) {
-            Consolerizer.printYellowGenericLn(
-                "In the constructor, injection points are usually %s. This was the Palace value", palaceWaitingRoom);
-            Consolerizer.printYellowGenericLn("%s this was the ContextProvider value", contextProvider);
-            Consolerizer.printYellowGenericLn("%s this was the palaceSessionWaitingRoom value", palaceSessionWaitingRoom);
+            YELLOW.printGenericLn("In the constructor, injection points are usually %s. This was the Palace value", palaceWaitingRoom);
+            YELLOW.printGenericLn("%s this was the ContextProvider value", contextProvider);
+            YELLOW.printGenericLn("%s this was the palaceSessionWaitingRoom value", palaceSessionWaitingRoom);
         }
     }
 

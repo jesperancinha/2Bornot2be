@@ -27,7 +27,7 @@ import javax.transaction.UserTransaction;
 import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
@@ -59,9 +59,9 @@ public class ToothService1Test {
         final var uuid = UUID.randomUUID();
         tooth.setUuid(uuid);
         final Tooth tooth1 = toothService.updateItRight(tooth);
-        printOrangeGenericLn(tooth1);
+        ORANGE.printGenericLn(tooth1);
         final Tooth toothResult = toothService.findTooth(uuid);
-        printOrangeGenericLn(toothResult);
+        ORANGE.printGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
     }
 
@@ -71,9 +71,9 @@ public class ToothService1Test {
         final var uuid = UUID.randomUUID();
         tooth.setUuid(uuid);
         final Tooth tooth1 = toothService.updateToothJustMerge(tooth);
-        printOrangeGenericLn(tooth1);
+        ORANGE.printGenericLn(tooth1);
         final Tooth toothResult = toothService.findTooth(uuid);
-        printOrangeGenericLn(toothResult);
+        ORANGE.printGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
         GREEN.printGenericLn("Remember that transactions are now managed by the container");
         GREEN.printGenericLn("In this case we do not need to specify the opening and closing of a transaction");

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot2.cafes.garoto;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 // There is no default constructor available in
 // 'org.jesperancinha.java11.mastery3dot2.cafes.galao.Galao'
@@ -13,7 +13,7 @@ public class Garoto
     // There is no default constructor available in
     // 'org.jesperancinha.java11.mastery3dot2.cafes.galao.Galao'
     Garoto() {
-        printYellowGenericLn("Garoto is served!");
+        YELLOW.printGenericLn("Garoto is served!");
 
         // 'Galao()' is not public in 'org.jesperancinha.java11.mastery3dot2.cafes.galao.Galao'.
         // Cannot be accessed from outside package

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot1.furniture;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class BookCase extends Case {
     public BookCase(int capacity) {
@@ -8,6 +8,6 @@ public class BookCase extends Case {
     }
 
     public void showCapacity() {
-        Consolerizer.printOrangeGenericLn("This RecordCase has a capacity of %d records", super.capacity);
+        ORANGE.printGenericLn("This RecordCase has a capacity of %d records", super.capacity);
     }
 }

@@ -1,14 +1,12 @@
 package org.jesperancinha.java11.crums.crum33;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum33 {
     public static void main(String[] args) {
@@ -17,13 +15,13 @@ public class Crum33 {
         MAGENTA.printGenericLn("We can list all enumerates if we just call values");
         MAGENTA.printGenericLn("The printed value is exactly the same key we define in the code");
         Arrays.stream(CashContainer.values())
-            .forEach(Consolerizer::printOrangeGenericLn);
+            .forEach(text -> ORANGE.printGenericLn(text));
 
         MAGENTA.printGenericLn("We can also retrieve the value per key String:");
-        printOrangeGenericLn("%s has index %s", "KITTENACCOUNT", CashContainer.valueOf("KITTENACCOUNT"));
+        ORANGE.printGenericLn("%s has index %s", "KITTENACCOUNT", CashContainer.valueOf("KITTENACCOUNT"));
         MAGENTA.printGenericLn("It is case sensitive!");
         try {
-            printOrangeGenericLn("%s has index %s", "KITTENAccount", CashContainer.valueOf("KITTENAccount"));
+            ORANGE.printGenericLn("%s has index %s", "KITTENAccount", CashContainer.valueOf("KITTENAccount"));
         } catch (IllegalArgumentException e) {
             RED.printGenericLn("This is expected! Note that an invalid value results in a RuntimeException of type IllegalArgumentException -> %s", e);
         }

@@ -1,9 +1,9 @@
 package org.jesperancinha.jtd.jee.united.kingdom.bean;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 @Named
 @RequestScoped
@@ -17,7 +17,7 @@ public class RequestMonarchs {
     }
 
     public void save(){
-        Consolerizer.printOrangeGenericLn("You have just recorder monarch -> %s", monarch);
+        ORANGE.printGenericLn("You have just recorder monarch -> %s", monarch);
     }
 
     public Monarch getMonarch() {

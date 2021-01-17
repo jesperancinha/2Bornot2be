@@ -6,8 +6,8 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum7 {
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class Crum7 {
         list1.set(2, 99);
         List<List<Integer>> list3 = List.of(list1, list2);
 
-        printOrangeGenericLn(list3);
+        ORANGE.printGenericLn(list3);
         GREEN.printGenericLn("Remember that unlike List.of, unmodifiableLists do allow null values");
     }
 }

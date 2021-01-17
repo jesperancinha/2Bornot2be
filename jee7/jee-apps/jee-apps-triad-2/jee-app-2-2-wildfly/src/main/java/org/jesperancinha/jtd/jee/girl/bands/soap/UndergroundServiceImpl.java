@@ -3,8 +3,8 @@ package org.jesperancinha.jtd.jee.girl.bands.soap;
 import javax.jws.WebService;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @WebService(name = "underground", endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.UndergroundService")
 public class UndergroundServiceImpl implements UndergroundService {
@@ -34,8 +34,7 @@ public class UndergroundServiceImpl implements UndergroundService {
     // public List<String> bandMembers() {
     public String[] bandMembers() {
         BLUE.printGenericTitleLn("JAXB doesn't handle interfaces");
-        printYellowGenericLn(
-            "    // Caused by: com.sun.xml.ws.spi.db.DatabindingException: com.sun.xml.bind.v2.runtime.IllegalAnnotationsException:\n"
+        YELLOW.printGenericLn("    // Caused by: com.sun.xml.ws.spi.db.DatabindingException: com.sun.xml.bind.v2.runtime.IllegalAnnotationsException:\n"
                 + "    // 1 counts of IllegalAnnotationExceptions\n"
                 + "    // java.util.List is an interface, and JAXB can't handle interfaces.\n"
                 + "    // this problem is related to the following location:\n" + "    // at java.util.List\n"
@@ -44,7 +43,7 @@ public class UndergroundServiceImpl implements UndergroundService {
     }
 
     public String getSoundOfTheUnderground(int piece) {
-        printOrangeGenericLn("Make sure the the method and param annotations remain in the interface");
+        ORANGE.printGenericLn("Make sure the the method and param annotations remain in the interface");
         return FROM + "\n" + TWO_PIECES[piece];
     }
 }

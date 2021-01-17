@@ -4,7 +4,7 @@ import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum12 {
     public static void main(String[] args) {
@@ -48,14 +48,14 @@ public class Crum12 {
         sb2.setLength(50);
         sb3.setLength(50);
 
-        printYellowGenericLn("This works in all 3 cases:\n%s\n%s\n%s", sb1, sb2, sb3);
-        printYellowGenericLn("With the new capacities:  \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
+        YELLOW.printGenericLn("This works in all 3 cases:\n%s\n%s\n%s", sb1, sb2, sb3);
+        YELLOW.printGenericLn("With the new capacities:  \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
 
         sb1.ensureCapacity(80);
         sb2.ensureCapacity(100);
         sb2.ensureCapacity(150);
         MAGENTA.printGenericLn("If we ensure other capacities:");
-        printYellowGenericLn("With the new capacities: \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
+        YELLOW.printGenericLn("With the new capacities: \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
         MAGENTA.printGenericLn("See that sb2 went from 102 to 206? Ensuring capacity can lead to exponentially increase capacity");
         MAGENTA.printGenericLn("We ensure 100 but it had 102, so it will calculate a new one = 102 * 2 + 2 = 206");
 
@@ -65,15 +65,15 @@ public class Crum12 {
         sb2.append("you'd make your mind up");
         sb3.append("you'd make your mind up");
 
-        printYellowGenericLn("This works in all 3 cases:\n%s\n%s\n%s", sb1, sb2, sb3);
-        printYellowGenericLn("With the new capacities:  \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
+        YELLOW.printGenericLn("This works in all 3 cases:\n%s\n%s\n%s", sb1, sb2, sb3);
+        YELLOW.printGenericLn("With the new capacities:  \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
 
         MAGENTA.printGenericLn("Finally we make capacities negative.");
         sb1.ensureCapacity(-1);
         sb2.ensureCapacity(-1);
         sb3.ensureCapacity(-1);
         MAGENTA.printGenericLn("No Error! But also no change:");
-        printYellowGenericLn("With the new capacities:  \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
+        YELLOW.printGenericLn("With the new capacities:  \n%d\n%d\n%d", sb1.capacity(), sb2.capacity(), sb3.capacity());
         MAGENTA.printGenericLn("How about a negative length?");
         try {
             sb1.setLength(-1);

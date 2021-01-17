@@ -4,7 +4,7 @@ import java.util.Random;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Crum13 {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Crum13 {
         final int i = random.nextInt();
         final int j = random.nextInt();
 
-        printYellowGenericLn("The maximum between %d and %d is %d", i, j, Math.max(i, j));
+        YELLOW.printGenericLn("The maximum between %d and %d is %d", i, j, Math.max(i, j));
         MAGENTA.printGenericLn("Important things to notice are that Random comes from the "
             + "java.util package and Math comes from the java.lang package");
 

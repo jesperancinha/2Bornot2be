@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum35;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum35 {
     public static void main(String[] args) {
@@ -21,58 +21,58 @@ public class Crum35 {
         MAGENTA.printGenericLn("from: https://genius.com/Garbage-only-happy-when-it-rains-lyrics");
         MAGENTA.printGenericLn("from: https://www.journaldev.com/33291/java-string-trim-method-examples#:~:text=String%20trim");
         MAGENTA.printGenericLn("We are presented the following strings:");
-        printOrangeGenericLn(stringA);
-        printOrangeGenericLn(stringB);
-        printOrangeGenericLn(stringC);
-        printOrangeGenericLn(stringD);
-        printOrangeGenericLn(stringE);
+        ORANGE.printGenericLn(stringA);
+        ORANGE.printGenericLn(stringB);
+        ORANGE.printGenericLn(stringC);
+        ORANGE.printGenericLn(stringD);
+        ORANGE.printGenericLn(stringE);
 
         MAGENTA.printGenericLn("This is what happens with a trim:");
-        printOrangeGenericLn("%s, %d", stringA.trim(), stringA.trim()
+        ORANGE.printGenericLn("%s, %d", stringA.trim(), stringA.trim()
             .length());
-        printOrangeGenericLn("%s, %d", stringB.trim(), stringB.trim()
+        ORANGE.printGenericLn("%s, %d", stringB.trim(), stringB.trim()
             .length());
-        printOrangeGenericLn("%s, %d", stringC.trim(), stringC.trim()
+        ORANGE.printGenericLn("%s, %d", stringC.trim(), stringC.trim()
             .length());
-        printOrangeGenericLn("%s, %d", stringD.trim(), stringD.trim()
+        ORANGE.printGenericLn("%s, %d", stringD.trim(), stringD.trim()
             .length());
-        printOrangeGenericLn("%s, %d", stringE.trim(), stringE.trim()
+        ORANGE.printGenericLn("%s, %d", stringE.trim(), stringE.trim()
             .length());
 
         MAGENTA.printGenericLn("This is what happens with a strip:");
-        printOrangeGenericLn("%s, %d", stringA.strip(), stringA.strip()
+        ORANGE.printGenericLn("%s, %d", stringA.strip(), stringA.strip()
             .length());
-        printOrangeGenericLn("%s, %d", stringB.strip(), stringB.strip()
+        ORANGE.printGenericLn("%s, %d", stringB.strip(), stringB.strip()
             .length());
-        printOrangeGenericLn("%s, %d", stringC.strip(), stringC.strip()
+        ORANGE.printGenericLn("%s, %d", stringC.strip(), stringC.strip()
             .length());
-        printOrangeGenericLn("%s, %d", stringD.strip(), stringD.strip()
+        ORANGE.printGenericLn("%s, %d", stringD.strip(), stringD.strip()
             .length());
-        printOrangeGenericLn("%s, %d", stringE.strip(), stringE.strip()
+        ORANGE.printGenericLn("%s, %d", stringE.strip(), stringE.strip()
             .length());
 
         MAGENTA.printGenericLn("We can also just strip left:");
-        printOrangeGenericLn("%s, %d", stringA.stripLeading(), stringA.stripLeading()
+        ORANGE.printGenericLn("%s, %d", stringA.stripLeading(), stringA.stripLeading()
             .length());
-        printOrangeGenericLn("%s, %d", stringB.stripLeading(), stringB.stripLeading()
+        ORANGE.printGenericLn("%s, %d", stringB.stripLeading(), stringB.stripLeading()
             .length());
-        printOrangeGenericLn("%s, %d", stringC.stripLeading(), stringC.stripLeading()
+        ORANGE.printGenericLn("%s, %d", stringC.stripLeading(), stringC.stripLeading()
             .length());
-        printOrangeGenericLn("%s, %d", stringD.stripLeading(), stringD.stripLeading()
+        ORANGE.printGenericLn("%s, %d", stringD.stripLeading(), stringD.stripLeading()
             .length());
-        printOrangeGenericLn("%s, %d", stringE.stripLeading(), stringE.stripLeading()
+        ORANGE.printGenericLn("%s, %d", stringE.stripLeading(), stringE.stripLeading()
             .length());
 
         MAGENTA.printGenericLn("Or strip right:");
-        printOrangeGenericLn("%s, %d", stringA.stripTrailing(), stringA.stripTrailing()
+        ORANGE.printGenericLn("%s, %d", stringA.stripTrailing(), stringA.stripTrailing()
             .length());
-        printOrangeGenericLn("%s, %d", stringB.stripTrailing(), stringB.stripTrailing()
+        ORANGE.printGenericLn("%s, %d", stringB.stripTrailing(), stringB.stripTrailing()
             .length());
-        printOrangeGenericLn("%s, %d", stringC.stripTrailing(), stringC.stripTrailing()
+        ORANGE.printGenericLn("%s, %d", stringC.stripTrailing(), stringC.stripTrailing()
             .length());
-        printOrangeGenericLn("%s, %d", stringD.stripTrailing(), stringD.stripTrailing()
+        ORANGE.printGenericLn("%s, %d", stringD.stripTrailing(), stringD.stripTrailing()
             .length());
-        printOrangeGenericLn("%s, %d", stringE.stripTrailing(), stringE.stripTrailing()
+        ORANGE.printGenericLn("%s, %d", stringE.stripTrailing(), stringE.stripTrailing()
             .length());
 
         GREEN.printGenericLn("Trim looks to do the same as strip, but there is a subtle difference");

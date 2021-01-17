@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum6 {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class Crum6 {
         final Map<String, List<TeaBag>> collect = teaBags.parallelStream()
             .collect(Collectors.groupingBy(TeaBag::getDesignation));
 
-        printOrangeGenericLn(collect);
+        ORANGE.printGenericLn(collect);
         MAGENTA.printGenericLn("We can see that we have two Rooibos teas");
 
         GREEN.printGenericLn("It may sound not very intuitive, but grouping by can be very simple and just have the grouping parameter on it");

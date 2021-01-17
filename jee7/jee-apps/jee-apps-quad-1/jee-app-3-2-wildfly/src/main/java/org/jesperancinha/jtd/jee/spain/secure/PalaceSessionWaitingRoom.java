@@ -10,7 +10,9 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 // Caused by: org.jboss.weld.exceptions.DefinitionException:
 // WELD-000082: Scope interface javax.enterprise.context.SessionScoped
@@ -29,15 +31,15 @@ public class PalaceSessionWaitingRoom implements Serializable {
 
     public boolean isUserInRole(String roleName) {
         if (Objects.isNull(contextProvider)) {
-            Consolerizer.printYellowGenericLn("The context provider session is null");
-            Consolerizer.printYellowGenericLn("You probably call this from a JSP");
-            Consolerizer.printYellowGenericLn("Try now using the REST service");
+            YELLOW.printGenericLn("The context provider session is null");
+            YELLOW.printGenericLn("You probably call this from a JSP");
+            YELLOW.printGenericLn("Try now using the REST service");
             return false;
         }
         try {
-            Consolerizer.printOrangeGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
-                .getCallerPrincipal(), contextProvider.getContext()
-                .isCallerInRole(roleName));
+            ORANGE.printGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
+                    .getCallerPrincipal(), contextProvider.getContext()
+                    .isCallerInRole(roleName));
         } catch (Exception exception) {
             RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {

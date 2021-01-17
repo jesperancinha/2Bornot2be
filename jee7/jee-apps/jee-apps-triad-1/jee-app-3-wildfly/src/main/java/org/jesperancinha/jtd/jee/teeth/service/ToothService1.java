@@ -18,7 +18,7 @@ import javax.transaction.SystemException;
 import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
@@ -40,10 +40,10 @@ public class ToothService1 {
         var context = new InitialContext();
 
 
-        printYellowGenericLn("Because we are using %s, this means we cannot perform UserTransaction code.");
-        printYellowGenericLn("This get's done by the container itself");
-        printYellowGenericLn("And so the code changes a bit to avoid the following error:");
-        printYellowGenericLn("javax.naming.NameNotFoundException: UserTransaction\n"
+        YELLOW.printGenericLn("Because we are using %s, this means we cannot perform UserTransaction code.");
+        YELLOW.printGenericLn("This get's done by the container itself");
+        YELLOW.printGenericLn("And so the code changes a bit to avoid the following error:");
+        YELLOW.printGenericLn("javax.naming.NameNotFoundException: UserTransaction\n"
             + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)\n"
             + "Caused by: java.lang.IllegalStateException: WFLYEJB0137: Only session and message-driven beans with bean-managed transaction demarcation are allowed to access UserTransaction\n"
             + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)");

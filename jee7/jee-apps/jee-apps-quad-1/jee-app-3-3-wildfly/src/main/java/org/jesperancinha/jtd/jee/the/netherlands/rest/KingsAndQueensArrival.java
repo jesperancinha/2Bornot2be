@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
 @Path("/arrival")
@@ -41,9 +41,9 @@ public class KingsAndQueensArrival implements Serializable {
         @PathParam("monarch")
             String monarch) throws InterruptedException {
         setupFastDefault();
-        printOrangeGenericLn("We will now see what will happen with our %s with hash %s", eventProcessor.getClass()
+        ORANGE.printGenericLn("We will now see what will happen with our %s with hash %s", eventProcessor.getClass()
             .getCanonicalName(), eventProcessor.hashCode());
-        printOrangeGenericLn("In the same way we'll se what happens with %s with hash %s", cleanerProcessor.getClass()
+        ORANGE.printGenericLn("In the same way we'll se what happens with %s with hash %s", cleanerProcessor.getClass()
             .getCanonicalName(), cleanerProcessor.hashCode());
         final ArrivalEvent arrivalEvent = new ArrivalEvent();
         final String message = String.format("Your Majesty King/Queen %s is arriving to the Palace", monarch);
@@ -67,7 +67,7 @@ public class KingsAndQueensArrival implements Serializable {
             String monarch) throws Exception {
         userTransaction.begin();
         setupFastDefault();
-        printOrangeGenericLn("We will now see what will happen with our %s with hash %s", eventProcessor.getClass()
+        ORANGE.printGenericLn("We will now see what will happen with our %s with hash %s", eventProcessor.getClass()
             .getCanonicalName(), eventProcessor.hashCode());
         final ArrivalEvent arrivalEvent = new ArrivalEvent();
         final String message = String.format("Your Majesty King/Queen %s is arriving to the Palace", monarch);

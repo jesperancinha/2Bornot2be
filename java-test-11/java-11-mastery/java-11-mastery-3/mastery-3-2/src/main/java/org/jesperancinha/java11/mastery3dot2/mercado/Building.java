@@ -1,8 +1,9 @@
 package org.jesperancinha.java11.mastery3dot2.mercado;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.io.Serializable;
+
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Building extends Construction implements Serializable {
     float height;
@@ -14,15 +15,15 @@ public class Building extends Construction implements Serializable {
         this.height = height;
         this.dimX = dimX;
         this.dimY = dimY;
-        Consolerizer.printOrangeGenericLn("Building constructor has been called! %s", toString());
+        ORANGE.printGenericLn("Building constructor has been called! %s", toString());
     }
 
     public Building() {
-        Consolerizer.printOrangeGenericLn("Building (no-args) constructor has been called! %s", toString());
+        ORANGE.printGenericLn("Building (no-args) constructor has been called! %s", toString());
     }
 
     public static void getInfo() {
-        Consolerizer.printYellowGenericLn("A Building has a height, dimX and  dimY");
+        YELLOW.printGenericLn("A Building has a height, dimX and  dimY");
     }
 
     public String getCurrentInfo() {

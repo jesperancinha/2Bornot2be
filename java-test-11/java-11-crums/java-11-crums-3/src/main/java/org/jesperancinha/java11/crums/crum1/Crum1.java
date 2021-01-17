@@ -8,7 +8,7 @@ import java.util.List;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 public class Crum1 {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Crum1 {
 
         MAGENTA.printGenericLn("We can present a super music singer list this way:");
 
-        printOrangeGenericLn(arrayList);
+        ORANGE.printGenericLn(arrayList);
 
         var attributeList = new AttributeList();
         attributeList.add(0, "Madonna");
@@ -30,7 +30,7 @@ public class Crum1 {
         attributeList.add(0, "Kelly Rowland");
 
         MAGENTA.printGenericLn("We then can use an Attribute List:");
-        printOrangeGenericLn(attributeList);
+        ORANGE.printGenericLn(attributeList);
 
         var roleList = new RoleList();
         roleList.add(0, "Madonna");
@@ -41,7 +41,7 @@ public class Crum1 {
         roleList.add(0, "Kelly Rowland");
 
         MAGENTA.printGenericLn("We then can use an RoleList List:");
-        printOrangeGenericLn(roleList);
+        ORANGE.printGenericLn(roleList);
 
         var roleUnresolvedList = new RoleUnresolvedList();
         roleUnresolvedList.add(0, "Madonna");
@@ -52,7 +52,7 @@ public class Crum1 {
         roleUnresolvedList.add(0, "Kelly Rowland");
 
         MAGENTA.printGenericLn("Finally we can use an RoleUnresolvedList List:");
-        printOrangeGenericLn(roleUnresolvedList);
+        ORANGE.printGenericLn(roleUnresolvedList);
 
         GREEN.printGenericLn("We can think of the three sub ArrayList types as just roles and attributes");
         GREEN.printGenericLn("We only have one subtype for AttributeList");

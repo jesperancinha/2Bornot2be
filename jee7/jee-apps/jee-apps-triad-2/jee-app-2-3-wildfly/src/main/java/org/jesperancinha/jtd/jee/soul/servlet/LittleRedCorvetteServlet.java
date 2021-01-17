@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 @WebServlet("/corvette")
 public class LittleRedCorvetteServlet extends HttpServlet {
@@ -25,7 +25,7 @@ public class LittleRedCorvetteServlet extends HttpServlet {
         final PrintWriter writer = res.getWriter();
         writer.println(FROM);
         writer.println(LITTLE_RED_CORVETTE);
-        printYellowGenericLn(LITTLE_RED_CORVETTE);
+        YELLOW.printGenericLn(LITTLE_RED_CORVETTE);
         super.service(req,res);
     }
 
@@ -34,7 +34,7 @@ public class LittleRedCorvetteServlet extends HttpServlet {
         final PrintWriter writer = resp.getWriter();
         writer.println(FROM);
         writer.println(BABY_YOU_RE_MUCH_TOO_FAST);
-        printYellowGenericLn(BABY_YOU_RE_MUCH_TOO_FAST);
+        YELLOW.printGenericLn(BABY_YOU_RE_MUCH_TOO_FAST);
         GREEN.printGenericLn("The point here is that in a normal situation the sequence is init -> service -> get -> destroy");
         GREEN.printGenericLn("This cycle can be broken if overriding doesn't continue in the super methods");
         super.service(req,resp);

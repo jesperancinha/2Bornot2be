@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.united.kingdom.servlet;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.batch.operations.JobOperator;
 import javax.batch.runtime.BatchRuntime;
 import javax.batch.runtime.JobExecution;
@@ -16,6 +14,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.ConGraphs.printRainbowFlag;
 
 @WebServlet("/history/victoria/cooking")
@@ -36,8 +35,8 @@ public class QueenVictoriaEggRecipeServlet extends HttpServlet {
             writer.println(String.format("<p>Started BoilEggsJob %s</p>", jobId));
             writer.println(String.format("<p>Job execution is %s</p>", jobExecution));
             writer.println(String.format("<p>Job status is %s</p>", jobExecution.getBatchStatus()));
-            Consolerizer.printYellowGenericLn("Job execution is %s", jobExecution);
-            Consolerizer.printYellowGenericLn("Job status is %s", jobExecution.getBatchStatus());
+            YELLOW.printGenericLn("Job execution is %s", jobExecution);
+            YELLOW.printGenericLn("Job status is %s", jobExecution.getBatchStatus());
         });
 
         writer.println("<p><a href=\"../../index.xhtml\">Back</a></p>");

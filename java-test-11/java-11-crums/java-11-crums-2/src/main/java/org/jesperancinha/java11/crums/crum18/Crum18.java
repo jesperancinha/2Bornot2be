@@ -1,7 +1,5 @@
 package org.jesperancinha.java11.crums.crum18;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
@@ -9,6 +7,7 @@ import java.util.ResourceBundle;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 
 public class Crum18 {
@@ -27,20 +26,20 @@ public class Crum18 {
         ResourceBundle resourceBundle = ResourceBundle.getBundle("dictionary", locale);
         resourceBundle.getKeys()
             .asIterator()
-            .forEachRemaining(key -> Consolerizer.printOrangeGenericLn(resourceBundle.getString(key)));
+            .forEachRemaining(key -> ORANGE.printGenericLn(resourceBundle.getString(key)));
         resourceBundle.getKeys()
             .asIterator()
-            .forEachRemaining(Consolerizer::printOrangeGenericLn);
+            .forEachRemaining(text1 -> ORANGE.printGenericLn(text1));
 
         MAGENTA.printGenericLn("Now we first try an unhappy case with locale -> %s", locale2);
         try {
             ResourceBundle resourceBundle2 = ResourceBundle.getBundle("dictionary", locale2);
             resourceBundle2.getKeys()
                 .asIterator()
-                .forEachRemaining(key -> Consolerizer.printOrangeGenericLn(resourceBundle.getString(key)));
+                .forEachRemaining(key -> ORANGE.printGenericLn(resourceBundle.getString(key)));
             resourceBundle2.getKeys()
                 .asIterator()
-                .forEachRemaining(Consolerizer::printOrangeGenericLn);
+                .forEachRemaining(text -> ORANGE.printGenericLn(text));
         } catch (final MissingResourceException e) {
             RED.printGenericLn("This is expected. In this case we should have some files that do not exist");
             RED.printGenericLn("We should have had dictionary_portunol_WW.properties or any of the default files");

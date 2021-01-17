@@ -1,11 +1,10 @@
 package org.jesperancinha.jtd.jee.united.kingdom.bean;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
+
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 
 @Named
 @ApplicationScoped
@@ -19,7 +18,7 @@ public class ApplicationMonarchs implements Serializable {
     }
 
     public void save(){
-        Consolerizer.printOrangeGenericLn("You have just recorder monarch -> %s", monarch);
+        ORANGE.printGenericLn("You have just recorder monarch -> %s", monarch);
     }
 
     public void setMonarch(Monarch monarch) {

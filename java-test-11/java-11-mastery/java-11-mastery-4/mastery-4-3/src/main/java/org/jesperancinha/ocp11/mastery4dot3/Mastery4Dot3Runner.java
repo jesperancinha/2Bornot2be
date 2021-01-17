@@ -52,11 +52,11 @@ import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Mastery4Dot3Runner {
     private static boolean skipQuestions;
@@ -231,9 +231,8 @@ public class Mastery4Dot3Runner {
         acList.add("Feels");
         acList.add("Strawberry Jam");
         acList.add("Merriweather Post Pavilion");
-        printYellowGenericLn("We would have gotten something different if we tried to override with add(Object)");
-        printYellowGenericLn(
-            "     'add(E)' in 'java.util.ArrayList' clashes with 'add(Object)' in 'org.jesperancinha.java11.mastery4dot3.record.AnimalCollectiveList';\n"
+        YELLOW.printGenericLn("We would have gotten something different if we tried to override with add(Object)");
+        YELLOW.printGenericLn("     'add(E)' in 'java.util.ArrayList' clashes with 'add(Object)' in 'org.jesperancinha.java11.mastery4dot3.record.AnimalCollectiveList';\n"
                 + "     both methods have same erasure, yet neither overrides the other");
         MAGENTA.printGenericLn("This is our record collection:");
         MAGENTA.printGenericLn(acList);
@@ -365,8 +364,8 @@ public class Mastery4Dot3Runner {
         var console = System.console();
         if (Objects.isNull(console)) {
             MAGENTA.printGenericLn("Unfortunately, console is only available if you invoke this program via the command line");
-            printYellowGenericLn("Please build this project and run:");
-            printYellowGenericLn("java  -jar target/mastery-4-3-1.0.0-SNAPSHOT.jar ");
+            YELLOW.printGenericLn("Please build this project and run:");
+            YELLOW.printGenericLn("java  -jar target/mastery-4-3-1.0.0-SNAPSHOT.jar ");
         } else {
             final char[] password = console.readPassword();
             final String passwordString = new String(password);
