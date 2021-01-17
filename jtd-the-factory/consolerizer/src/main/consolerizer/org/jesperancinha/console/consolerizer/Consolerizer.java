@@ -12,13 +12,16 @@ import java.util.stream.Stream;
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
 import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
+import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Consolerizer {
 
@@ -96,33 +99,27 @@ public class Consolerizer {
     }
 
     public static void printBlueGeneric(String text) {
-        printColor(BLUE);
-        printPrivateText(text);
+        BLUE.printGeneric(text);
     }
 
     public static void printBlueGeneric(String text, Object... args) {
-        printColor(BLUE);
-        printPrivateText(text, args);
+        BLUE.printGeneric(text, args);
     }
 
     public static void printMagentaGenericLn(String text, Object... args) {
-        printMagentaGeneric(text.concat("\n"), args);
-
+        MAGENTA.printGenericLn(text, args);
     }
 
     public static void printMagentaGenericLn(Object text) {
-        printMagentaGeneric(("" + text).trim()
-                .concat("\n"));
+        MAGENTA.printGenericLn(text);
     }
 
     public static void printMagentaGeneric(Object text) {
-        printColor(MAGENTA);
-        printPrivateText(text.toString());
+        MAGENTA.printGeneric(text);
     }
 
     public static void printMagentaGeneric(String text, Object... args) {
-        printColor(MAGENTA);
-        printPrivateText(text, args);
+        MAGENTA.printGeneric(text, args);
     }
 
     public static void printRandomColorGenericLn(String text, Object... args) {
@@ -146,99 +143,83 @@ public class Consolerizer {
     }
 
     public static void printBrightMagentaGenericLn(String text, Object... args) {
-        printBrightMagentaGeneric(text.concat("\n"), args);
-
+        BRIGHT_MAGENTA.printGenericLn(text, args);
     }
 
     public static void printBrightMagentaGenericLn(Object text) {
-        printBrightMagentaGeneric(text.toString()
-                .concat("\n"));
+        BRIGHT_MAGENTA.printGenericLn(text);
     }
 
     public static void printBrightMagentaGeneric(Object text) {
-        printColor(BRIGHT_MAGENTA);
-        printPrivateText(text.toString());
+        BRIGHT_MAGENTA.printGeneric(text);
     }
 
     public static void printBrightMagentaGeneric(String text, Object... args) {
-        printColor(BRIGHT_MAGENTA);
-        printPrivateText(text, args);
+        BRIGHT_MAGENTA.printGeneric(text, args);
     }
 
     public static void printGreenGenericLn(Object text) {
-        printGreenGeneric(trim(("" + text)).concat("\n"));
+        GREEN.printGenericLn(text);
     }
 
     public static void printGreenGeneric(Object text) {
-        printColor(GREEN);
-        printPrivateText(text.toString());
+        GREEN.printGeneric(text);
     }
 
     public static void printGreenGenericLn(String text, Object... args) {
-        printGreenGeneric(text.concat("\n"), args);
+        GREEN.printGenericLn(text, args);
     }
 
     public static void printGreenGeneric(String text, Object... args) {
-        printColor(GREEN);
-        printPrivateText(text, args);
+        GREEN.printGeneric(text, args);
     }
 
     public static void printRedGenericLn(String text, Object... args) {
-        printRedGeneric(text.concat("\n"), args);
+        RED.printGenericLn(text, args);
     }
 
     public static void printRedGeneric(String text, Object... args) {
-        printColor(RED);
-        printPrivateText(text, args);
+        RED.printGeneric(text, args);
     }
 
     public static void printRedGenericLn(Object text) {
-        printRedGeneric(trim(("" + text)).concat("\n"));
+        RED.printGenericLn(text);
     }
 
     public static void printRedGeneric(String text) {
-        printColor(RED);
-        printPrivateText(text);
+        RED.printGeneric(text);
     }
 
     public static void printYellowGenericLn(Object text) {
-        printYellowGeneric(text.toString()
-                .concat("\n"));
-
+        YELLOW.printGenericLn(text);
     }
 
     public static void printYellowGenericLn(Object text, Object... args) {
-        printYellowGeneric(text.toString()
-                .concat("\n"), args);
+        YELLOW.printGenericLn(text, args);
     }
 
     public static void printOrangeGeneric(String text) {
-        printColor(ConColor.ORANGE);
-        printPrivateText(text);
+        ORANGE.printGeneric(text);
     }
 
     public static void printOrangeGenericLn(Object text) {
-        printOrangeGeneric(text.toString()
-                .concat("\n"));
+        ORANGE.printGenericLn(text);
     }
 
     public static void printOrangeGenericLn(String text, Object... args) {
-        printOrangeGeneric(text.concat("\n"), args);
+        ORANGE.printGenericLn(text, args);
     }
 
     public static void printOrangeGeneric(String text, Object... args) {
-        printColor(ConColor.ORANGE);
-        printPrivateText(text, args);
+        ORANGE.printGeneric(text, args);
     }
 
     public static void printYellowGeneric(Object text) {
-        printColor(ConColor.YELLOW);
-        printPrivateText(text.toString());
+        YELLOW.printGeneric(text);
     }
 
     public static void printYellowGeneric(String text, Object... args) {
-        printColor(ConColor.YELLOW);
-        printPrivateText(text, args);
+        YELLOW.printGeneric(text, args);
     }
 
     public void printColorText(final ConColor conColor, String text) {
@@ -247,69 +228,59 @@ public class Consolerizer {
     }
 
     public void printRed(String text) {
-        System.out.print("\033[0;31m");
-        printPrivateText(text);
+        RED.printGeneric(text);
     }
 
-    public void printRed(String text, String... args) {
-        System.out.print("\033[0;31m");
-        printPrivateText(text, args);
+    public void printRed(Object text, Object... args) {
+        RED.printGeneric(text, args);
     }
 
     public void printGreen(String text) {
-        System.out.print("\033[1;32m");
-        printPrivateText(text);
+        GREEN.printGeneric(text);
     }
 
     public void printBlue(String text) {
-        System.out.print("\033[0;34m");
-        printPrivateText(text);
+        BLUE.printGeneric(text);
     }
 
-    public static void printBrightCyanGenericLn(final String text, final Object... args) {
-        printBrightCyanGeneric(text.concat("\n"), args);
+    public static void printBrightCyanGenericLn(final Object text, final Object... args) {
+        BRIGHT_CYAN.printGenericLn(text, args);
     }
 
     public static void printBrightCyanGenericLn(Object text) {
-        printBrightCyanGeneric(("" + text).concat("\n"));
+       BRIGHT_CYAN.printGenericLn(text);
     }
 
     public static void printBrightCyanGeneric(Object text) {
-        printColor(BRIGHT_CYAN);
-        printPrivateText(text.toString());
+        BRIGHT_CYAN.printGeneric(text);
     }
 
     public static void printBrightCyanGeneric(String text, Object... args) {
-        printColor(BRIGHT_CYAN);
-        printPrivateText(text, args);
+        BRIGHT_CYAN.printGeneric(text, args);
     }
 
     public static void printWhiteGenericLn(final String text, final Object... args) {
-        printWhiteGeneric(text.concat("\n"), args);
+        WHITE.printGenericLn(text,args);
     }
 
     public static void printWhiteGenericLn(Object text) {
-        printWhiteGeneric(("" + text).concat("\n"));
+        WHITE.printGenericLn(text);
     }
 
     public static void printWhiteGeneric(Object text) {
-        printColor(WHITE);
-        printPrivateText(text.toString());
+       WHITE.printGeneric(text);
     }
 
     public static void printWhiteGeneric(String text, Object... args) {
-        printColor(WHITE);
-        printPrivateText(text, args);
+        WHITE.printGeneric(text, args);
     }
 
     public void printBrightCyan(Object text) {
-        printColor(BRIGHT_CYAN);
-        printPrivateText(text.toString());
+        BRIGHT_CYAN.printGeneric(text);
     }
 
     public void printBrightCyan(String text, Object... args) {
-        printColor(BRIGHT_CYAN);
-        printPrivateText(text, args);
+        BRIGHT_CYAN.printGeneric(text,args);
     }
 
     public void printText(String text) {
@@ -322,11 +293,11 @@ public class Consolerizer {
         printPrivateText(text, vars);
     }
 
-    static void printPrivateText(String text) {
+    static void printPrivateText(Object text) {
         if (blackAndWhite) {
             printColor(WHITE);
         }
-        printPrivateText(text, typingWaitGlobal, maxLineCharsGlobal);
+        printPrivateText(text.toString(), typingWaitGlobal, maxLineCharsGlobal);
     }
 
     private static void printPrivateText(String text, Object... vars) {
@@ -634,9 +605,9 @@ public class Consolerizer {
         printPrivateText(text.toString());
     }
 
-    public void printGeneric(String text, Object... args) {
+    public void printGeneric(Object text, Object... args) {
         printColor(conColor);
-        printPrivateText(text, args);
+        printPrivateText(text.toString(), args);
     }
 
     public void printGenericTitleLn(Object text, Object... args) {

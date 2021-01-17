@@ -64,7 +64,7 @@ public enum ConColor {
         colorManager.printGeneric(text);
     }
 
-    public void printGeneric(String text, Object... args) {
+    public void printGeneric(Object text, Object... args) {
         colorManager.printGeneric(text, args);
     }
 
