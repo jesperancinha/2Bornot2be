@@ -11,14 +11,9 @@ import java.util.stream.Stream;
 
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConColor.RED;
 import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
 
 public class Consolerizer {
 
@@ -353,15 +348,6 @@ public class Consolerizer {
                 });
     }
 
-    public static void printUnicornsLn(final int nUnicorns) {
-        printRainbowLn('-', nUnicorns / 4);
-        for (int i = 0; i < nUnicorns; i++) {
-            System.out.print("🦄");
-        }
-        printNewLine();
-        printRainbowLn('-', nUnicorns / 4);
-    }
-
     public static void printSameLine(final String text, final Object... objects) {
         System.out.print("\r");
         System.out.printf(text, objects);
@@ -387,33 +373,16 @@ public class Consolerizer {
     }
 
     static String createTitleLineLn(Object text, char limitingChar) {
-        return createTitleLineLn(text, limitingChar, true);
+        return ConTexts.createTitleLineLn(text, limitingChar, true);
     }
 
     static String createTitleLine(Object text, char limitingChar) {
-        return createTitleLineLn(text, limitingChar, false);
-    }
-
-    private static String createTitleLineLn(Object text, char limitingChar, boolean newLine) {
-        final String fullText = text.toString();
-        var remaining = titleSpread - fullText.length() - 2;
-        var padding = (int) Math.ceil(remaining / 2f);
-        final String substring = new String(new char[padding]).replace('\0', limitingChar)
-                .concat(" ")
-                .concat(fullText)
-                .concat(" ")
-                .concat(new String(new char[padding]).replace('\0', limitingChar))
-                .substring(0, titleSpread);
-        if (newLine) {
-            return substring.concat("\n");
-        }
-        return substring;
+        return ConTexts.createTitleLineLn(text, limitingChar, false);
     }
 
 
     public void printGenericLn(Object text, Object... args) {
         printGeneric(text.toString().concat("\n"), args);
-
     }
 
     public void printGenericLn(Object text) {
