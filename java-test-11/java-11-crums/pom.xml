@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java11-crums</artifactId>
+    <artifactId>java-11-crums</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
