@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -18,7 +18,7 @@ public class Crum26 {
 
         printOrangeGenericLn("We have a list of artists:");
 
-        printBrightMagentaGenericLn(Arrays.stream(strings).collect(Collectors.toList()));
+        BRIGHT_MAGENTA.printGenericLn(Arrays.stream(strings).collect(Collectors.toList()));
 
         printOrangeGenericLn("Let's make an immutable list of it:");
 

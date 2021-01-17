@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -30,11 +30,10 @@ public class LoginGirlBandRecordStoreServlet extends HttpServlet {
         if (USER_ID.equals(user) && PASSWORD.equals(pwd)) {
             var httpSession = request.getSession();
             httpSession.setAttribute("username", "Sugababes");
-            printBrightMagentaGenericLn("We've put our username in the httpSession object -> %s",
-                httpSession.getAttributeNames());
+            BRIGHT_MAGENTA.printGenericLn("We've put our username in the httpSession object -> %s", httpSession.getAttributeNames());
             httpSession.getAttributeNames()
                 .asIterator()
-                .forEachRemaining(Consolerizer::printBrightMagentaGenericLn);
+                .forEachRemaining(text -> BRIGHT_MAGENTA.printGenericLn(text));
             Cookie[] cookies = request.getCookies();
             if (cookies != null) {
                 for (Cookie cookie : cookies) {

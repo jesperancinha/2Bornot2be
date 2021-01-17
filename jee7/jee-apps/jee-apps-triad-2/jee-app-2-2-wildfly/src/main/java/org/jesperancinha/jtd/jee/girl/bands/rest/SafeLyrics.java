@@ -1,13 +1,12 @@
 package org.jesperancinha.jtd.jee.girl.bands.rest;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 
 @Path("/secure/lyrics/spice")
 @RequestScoped
@@ -22,8 +21,8 @@ public class SafeLyrics {
     @GET
     @Produces(APPLICATION_JSON)
     public String getLyrics() {
-        Consolerizer.printBrightMagentaGenericLn(FROM);
-        Consolerizer.printBrightMagentaGenericLn(LYRIC);
+        BRIGHT_MAGENTA.printGenericLn(FROM);
+        BRIGHT_MAGENTA.printGenericLn(LYRIC);
         return FROM.concat("\n")
             .concat(LYRIC);
     }

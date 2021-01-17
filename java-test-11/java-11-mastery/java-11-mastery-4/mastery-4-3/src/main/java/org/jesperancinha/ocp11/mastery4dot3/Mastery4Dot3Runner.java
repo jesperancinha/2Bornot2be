@@ -48,9 +48,9 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -767,7 +767,7 @@ public class Mastery4Dot3Runner {
             .parallel()
             .collect(ArrayList::new, (integers, value) -> {
                 integers.add(value);
-                printBrightMagentaGeneric(value);
+                BRIGHT_MAGENTA.printGeneric(value);
             }, (integers, integers2) -> {
                 MAGENTA.printGeneric("I'm reaching this now, because I'm a parallel stream!");
                 MAGENTA.printGeneric(integers);

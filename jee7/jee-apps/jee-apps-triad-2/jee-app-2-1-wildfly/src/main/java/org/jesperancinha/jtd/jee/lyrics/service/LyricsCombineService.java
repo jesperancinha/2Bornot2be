@@ -6,7 +6,7 @@ import javax.enterprise.inject.Alternative;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 
 @jakarta.enterprise.inject.Alternative
 @Alternative
@@ -16,7 +16,7 @@ public class LyricsCombineService implements LyricsService {
         "the.one.txt" };
 
     public String getRandomLyric() {
-        printBrightMagentaGenericLn("This is type %s",this.getClass());
+        BRIGHT_MAGENTA.printGenericLn("This is type %s", this.getClass());
         var i = (int) (Math.random() * FILES.length);
         var j = (int) (Math.random() * FILES.length);
 

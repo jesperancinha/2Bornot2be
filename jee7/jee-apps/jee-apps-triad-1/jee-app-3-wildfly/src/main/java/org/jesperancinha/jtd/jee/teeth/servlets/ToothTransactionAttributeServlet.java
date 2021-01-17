@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.teeth.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 import org.jesperancinha.jtd.jee.teeth.service.JawService;
@@ -25,6 +24,7 @@ import java.io.PrintWriter;
 import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 @WebServlet("/tooth/servlet/tx/all")
@@ -54,14 +54,14 @@ public class ToothTransactionAttributeServlet extends HttpServlet {
         var tooth1 = (Tooth) null;
 
         try {
-            Consolerizer.printBrightMagentaGenericLn("No Transaction");
+            BRIGHT_MAGENTA.printGenericLn("No Transaction");
             tooth1 = toothService.addToothNone(tooth);
-            Consolerizer.printBrightMagentaGenericLn("REQUIRES_NEW");
+            BRIGHT_MAGENTA.printGenericLn("REQUIRES_NEW");
             userTransaction.begin();
             toothService.addTootRequiresNew(createTestTooth());
             toothService.addTootRequiresNew(createTestTooth());
             userTransaction.commit();
-            Consolerizer.printBrightMagentaGenericLn("MANDATORY");
+            BRIGHT_MAGENTA.printGenericLn("MANDATORY");
             userTransaction.begin();
             toothService.addToothMandatory(createTestTooth());
             toothService.addToothMandatory(createTestTooth());

@@ -5,8 +5,8 @@ import java.io.Reader;
 import java.util.Objects;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum6 {
@@ -15,8 +15,7 @@ public class Crum6 {
 
         var console = System.console();
         if (Objects.isNull(console)) {
-            printBrightMagentaGenericLn(
-                "No console found! Please run this program from the command line to be able to exercise Crum6");
+            BRIGHT_MAGENTA.printGenericLn("No console found! Please run this program from the command line to be able to exercise Crum6");
         } else {
             MAGENTA.printGenericLn("Please insert a password:");
             final char[] password = console.readPassword();

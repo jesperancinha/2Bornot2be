@@ -6,7 +6,7 @@ import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Stateful;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 
 @Stateful
 @Cache("custom-cache")
@@ -27,12 +27,12 @@ public class PeriodontitisBean implements PeriodontitisPassivation {
 
     @PrePassivate
     private void prePassivate() {
-       printBrightMagentaGenericLn("Passivating: " + periodontitisObject.getProperty());
+        BRIGHT_MAGENTA.printGenericLn("Passivating: " + periodontitisObject.getProperty());
     }
 
     @PostActivate
     private void postActivate() {
-        printBrightMagentaGenericLn("Activating: " + periodontitisObject.getProperty());
+        BRIGHT_MAGENTA.printGenericLn("Activating: " + periodontitisObject.getProperty());
     }
 
 }

@@ -1,12 +1,11 @@
 package org.jesperancinha.java11.crums.crum17;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
@@ -17,8 +16,7 @@ public class Crum17 {
         final Stream<String> names = Stream.of("Isla Fisher", "Amy Adams", "Jessica Chastain", "Bryce Dallas");
 
         final Stream<Character> characterStream = names.map(name -> {
-            Consolerizer.printBrightMagentaGenericLn("This is an indication that mapping of name %s is following next",
-                name);
+            BRIGHT_MAGENTA.printGenericLn("This is an indication that mapping of name %s is following next", name);
             return name.charAt(0);
         });
 

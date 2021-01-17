@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
@@ -25,7 +25,7 @@ public class PeriodontitisServlet extends HttpServlet {
         throws ServletException, IOException {
         var periodontitisPassivation = (PeriodontitisPassivation) null;
 
-        printBrightMagentaGenericLn("Hello from Periodontitis");
+        BRIGHT_MAGENTA.printGenericLn("Hello from Periodontitis");
         String beanCountparam = request.getParameter("count");
         if (beanCountparam != null) {
             int beanCount = Integer.parseInt(beanCountparam);

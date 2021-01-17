@@ -100,22 +100,6 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
-    public static void printBrightMagentaGenericLn(String text, Object... args) {
-        BRIGHT_MAGENTA.printGenericLn(text, args);
-    }
-
-    public static void printBrightMagentaGenericLn(Object text) {
-        BRIGHT_MAGENTA.printGenericLn(text);
-    }
-
-    public static void printBrightMagentaGeneric(Object text) {
-        BRIGHT_MAGENTA.printGeneric(text);
-    }
-
-    public static void printBrightMagentaGeneric(String text, Object... args) {
-        BRIGHT_MAGENTA.printGeneric(text, args);
-    }
-
     public static void printGreenGenericLn(Object text) {
         GREEN.printGenericLn(text);
     }

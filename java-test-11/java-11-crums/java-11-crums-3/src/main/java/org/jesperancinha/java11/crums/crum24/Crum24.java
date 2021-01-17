@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum24;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -10,7 +10,7 @@ public class Crum24 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 24 - Break with label and continue with label");
 
-        printBrightMagentaGenericLn("Break with label");
+        BRIGHT_MAGENTA.printGenericLn("Break with label");
 
         LABEL1:
         printRainbowLn("||");
@@ -22,7 +22,7 @@ public class Crum24 {
             }
         }
         printYellowGenericLn("Value of i is now %d", i);
-        printBrightMagentaGenericLn("Continue with label");
+        BRIGHT_MAGENTA.printGenericLn("Continue with label");
 
         int k = 0;
         LABEL3:

@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.teeth.service;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain1.Tooth;
 
 import javax.ejb.Stateless;
@@ -18,6 +17,7 @@ import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @Stateless
@@ -70,12 +70,12 @@ public class ToothService1 {
     // A JTA EntityManager cannot use getTransaction()
     public void updateToothGetEntityManager(final Tooth tooth) {
         final var transaction1 = entityManager.getTransaction();
-        Consolerizer.printBrightMagentaGenericLn(transaction1);
+        BRIGHT_MAGENTA.printGenericLn(transaction1);
         transaction1
             .begin();
         entityManager.merge(tooth);
         final var transaction2 = entityManager.getTransaction();
-        Consolerizer.printBrightMagentaGenericLn(transaction2);
+        BRIGHT_MAGENTA.printGenericLn(transaction2);
         transaction2
             .commit();
     }

@@ -31,6 +31,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.junit.Assert.assertEquals;
 
@@ -79,12 +80,12 @@ public class ToothServiceTest {
         assertEquals(jaw1.getUuid(), toothResult.getJaw()
             .getUuid());
         MAGENTA.printGenericLn("from: https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html");
-        Consolerizer.printBrightMagentaGenericLn("The class must be annotated with the javax.persistence.Entity annotation.");
-        Consolerizer.printBrightMagentaGenericLn("The class must have a public or protected, no-argument constructor. The class may have other constructors.");
-        Consolerizer.printBrightMagentaGenericLn("The class must not be declared final. No methods or persistent instance variables must be declared final.");
-        Consolerizer.printBrightMagentaGenericLn("If an entity instance be passed by value as a detached object, such as through a session bean’s remote business interface, the class must implement the Serializable interface.");
-        Consolerizer.printBrightMagentaGenericLn("Entities may extend both entity and non-entity classes, and non-entity classes may extend entity classes.");
-        Consolerizer.printBrightMagentaGenericLn("Persistent instance variables must be declared private, protected, or package-private, and can only be accessed directly by the entity class’s methods. Clients must access the entity’s state through accessor or business methods.");
+        BRIGHT_MAGENTA.printGenericLn("The class must be annotated with the javax.persistence.Entity annotation.");
+        BRIGHT_MAGENTA.printGenericLn("The class must have a public or protected, no-argument constructor. The class may have other constructors.");
+        BRIGHT_MAGENTA.printGenericLn("The class must not be declared final. No methods or persistent instance variables must be declared final.");
+        BRIGHT_MAGENTA.printGenericLn("If an entity instance be passed by value as a detached object, such as through a session bean’s remote business interface, the class must implement the Serializable interface.");
+        BRIGHT_MAGENTA.printGenericLn("Entities may extend both entity and non-entity classes, and non-entity classes may extend entity classes.");
+        BRIGHT_MAGENTA.printGenericLn("Persistent instance variables must be declared private, protected, or package-private, and can only be accessed directly by the entity class’s methods. Clients must access the entity’s state through accessor or business methods.");
     }
 
     @Test(expected = EJBException.class)

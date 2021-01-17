@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
@@ -29,7 +29,7 @@ public class CaghtUpInTheMiddle2 implements Filter {
     @Override
     public void init(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
-        printBrightMagentaGenericLn("This is our filter config on init -> %s", this.filterConfig);
+        BRIGHT_MAGENTA.printGenericLn("This is our filter config on init -> %s", this.filterConfig);
     }
 
     @Override
@@ -55,6 +55,6 @@ public class CaghtUpInTheMiddle2 implements Filter {
 
     @Override
     public void destroy() {
-        printBrightMagentaGenericLn("This is our filter config at the end -> %s", this.filterConfig);
+        BRIGHT_MAGENTA.printGenericLn("This is our filter config at the end -> %s", this.filterConfig);
     }
 }

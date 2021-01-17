@@ -52,9 +52,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
@@ -164,7 +164,7 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("We just read the lyrics");
-        printBrightMagentaGenericLn(source);
+        BRIGHT_MAGENTA.printGenericLn(source);
         MAGENTA.printGenericLn("We will now write this to file in UTF(Unicode Transformation Format) %s", "/tmp/mn1.txt");
         try (var fos = new FileOutputStream("/tmp/mn1.txt")) {
             final ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -206,7 +206,7 @@ public class Mastery4Dot2Runner {
         try (var fis = new FileInputStream(resultFilename)) {
             MAGENTA.printGenericLn("We just read this from file %s", resultFilename);
             final String s = new String(fis.readAllBytes(), Charset.defaultCharset());
-            printBrightMagentaGenericLn(s);
+            BRIGHT_MAGENTA.printGenericLn(s);
         } catch (FileNotFoundException e) {
             printRedThrowableAndExit(e);
         } catch (IOException e) {
@@ -294,14 +294,14 @@ public class Mastery4Dot2Runner {
                         MAGENTA.printGenericLn("Got song %s", iterator.next());
                         Thread.sleep(500);
                     }
-                    printBrightMagentaGenericLn("One Iteration done!");
+                    BRIGHT_MAGENTA.printGenericLn("One Iteration done!");
                 }
                 final Iterator<String> iterator = compilation.iterator();
                 while (iterator.hasNext()) {
                     MAGENTA.printGenericLn("Got song %s", iterator.next());
                     Thread.sleep(500);
                 }
-                printBrightMagentaGenericLn("Last iteration done!");
+                BRIGHT_MAGENTA.printGenericLn("Last iteration done!");
             } catch (InterruptedException e) {
                 printRedThrowableAndExit(e);
             }
@@ -504,7 +504,7 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("Adding two more artists to this new concert we get:\n%s", upcomingDates1);
         final Map<GenericBand, LocalDateTime> upcomingDates3 = generalBandManager.getUpcomingDates((Band) genericBand, LocalDateTime.now());
         final Map<QuintetBand, LocalDate> upcomingDates4 = quintetBandManager.getUpcomingDates((Band) quintetBand, LocalDate.now());
-        printBrightMagentaGenericLn("Had we used the overriden methods we would have gotten:\n%s\nand\n%s", upcomingDates3, upcomingDates4);
+        BRIGHT_MAGENTA.printGenericLn("Had we used the overriden methods we would have gotten:\n%s\nand\n%s", upcomingDates3, upcomingDates4);
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Overloading and overriding with extends obeys some specific rules");
         printGreenGenericLn("2. The base type is the parameter you have to use in order to override");
@@ -1042,8 +1042,8 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("Octet radix numbers are represented with a 0 as a prefix.");
         MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(issnLeft, 10));
         MAGENTA.printGenericLn("And this is what we want: %s", Integer.toString(issnLeft, 8));
-        printBrightMagentaGenericLn("Note that we are able to pass a byte in the toString of Integer, just because the range of Integer covers the byte range");
-        printBrightMagentaGenericLn("Also, bear in mind that primitive numbers without decimals are interpreted as integers. except for byte and short");
+        BRIGHT_MAGENTA.printGenericLn("Note that we are able to pass a byte in the toString of Integer, just because the range of Integer covers the byte range");
+        BRIGHT_MAGENTA.printGenericLn("Also, bear in mind that primitive numbers without decimals are interpreted as integers. except for byte and short");
         printRainbowLn("###");
         short lossesPerIssue = 20000;
         printBrightCyanGenericLn("Short two bytes - 2^16");
@@ -1055,8 +1055,8 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(lossesPerIssue, 10));
         MAGENTA.printGenericLn("Just for fun, we can look at its octal representation: %s", Integer.toString(lossesPerIssue, 8));
         MAGENTA.printGenericLn("Which if we use that in the code we get: %s", 047040);
-        printBrightMagentaGenericLn("Note that shor, just as byte, is often overlooked because it's just not common enough");
-        printBrightMagentaGenericLn("However, the benefits of using primitives like these two for small numbers can represent an advantage");
+        BRIGHT_MAGENTA.printGenericLn("Note that shor, just as byte, is often overlooked because it's just not common enough");
+        BRIGHT_MAGENTA.printGenericLn("However, the benefits of using primitives like these two for small numbers can represent an advantage");
         printRainbowLn("###");
         int oclc = 4618144;
         printBrightCyanGenericLn("Integer four bytes - 2^32");
@@ -1068,9 +1068,9 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Integer.toString(oclc, 10));
         MAGENTA.printGenericLn("Just for fun, we can look at its octal representation: %s", Integer.toString(oclc, 8));
         MAGENTA.printGenericLn("Which if we use that in the code we get: %s", 021473640);
-        printBrightMagentaGenericLn("Important to note is again, how integer is always the type pointed out by the compiler");
-        printBrightMagentaGenericLn("Especially if you look the octals, they are interpreted as int.");
-        printBrightMagentaGenericLn("They only get converted when they match the range.");
+        BRIGHT_MAGENTA.printGenericLn("Important to note is again, how integer is always the type pointed out by the compiler");
+        BRIGHT_MAGENTA.printGenericLn("Especially if you look the octals, they are interpreted as int.");
+        BRIGHT_MAGENTA.printGenericLn("They only get converted when they match the range.");
         printRainbowLn("###");
         long firstPublicationMs = 283_996_800_000L;
         printBrightCyanGenericLn("Long eight bytes - 2^64");
@@ -1081,9 +1081,9 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("This is our number as we would read it in decimal: %s", Long.toString(firstPublicationMs, 10));
         MAGENTA.printGenericLn("Just for fun, we can look at its octal representation: %s", Long.toString(firstPublicationMs, 8));
         MAGENTA.printGenericLn("Which if we use that in the code we get: %s", 04103741642000L);
-        printBrightMagentaGenericLn("You probably noticed that we are using L to specify that it is a long.");
-        printBrightMagentaGenericLn("The compiler needs to know what do we actually mean if the number falls out of the integer range.");
-        printBrightMagentaGenericLn("If it falls out of the range of Integer and we want it to be long, we specify that with an appended L or l.");
+        BRIGHT_MAGENTA.printGenericLn("You probably noticed that we are using L to specify that it is a long.");
+        BRIGHT_MAGENTA.printGenericLn("The compiler needs to know what do we actually mean if the number falls out of the integer range.");
+        BRIGHT_MAGENTA.printGenericLn("If it falls out of the range of Integer and we want it to be long, we specify that with an appended L or l.");
         printRainbowLn("###");
         float firstPublicationMs2 = 283_996_800_000L;
         printBrightCyanGenericLn("Float 4 bytes - 2^32");
@@ -1095,23 +1095,23 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("This means that even with a float, the rule that it fits, is accepted is still valid.");
         MAGENTA.printGenericLn("The only difference is that we need to specify L if its bigger than an int.");
         MAGENTA.printGenericLn("If we convert that to some epoch representation from a float, we then convert from %f to %s", firstPublicationMs2, LocalDateTime.ofInstant(Instant.ofEpochMilli((long) firstPublicationMs2), ZoneId.systemDefault()));
-        printBrightMagentaGenericLn("Notice that we had to upcast it to long. This is because the compiler does not understand that we are converting to a type with a lower range. Although the number fits, type float does not fit in the long range.");
+        BRIGHT_MAGENTA.printGenericLn("Notice that we had to upcast it to long. This is because the compiler does not understand that we are converting to a type with a lower range. Although the number fits, type float does not fit in the long range.");
         float parallelUniversePublications1 = (3_000_000f * 12 * 30 * 10);
         MAGENTA.printGenericLn("Let's imagine that 10 universes are working together.");
         MAGENTA.printGenericLn("The same thing happens in all of those 10 universes to our magazine.");
         MAGENTA.printGenericLn("The website gets 3 million visits per month");
         MAGENTA.printGenericLn("And we are calculating what would have happened if during the course of 30 years of existence, the numbers would have kept stable");
         MAGENTA.printGenericLn("In the end we get all of these hits: %s", parallelUniversePublications1);
-        printBrightMagentaGenericLn("Did you notice the f? f, means float. Without the f, the calculation would result in a numeric overflow warning from the compiler");
-        printBrightMagentaGenericLn("Since one of the elements is now a float, the compiler will check if the result fits within the float range.");
-        printBrightMagentaGenericLn("During runtime, well get a float as a result.");
+        BRIGHT_MAGENTA.printGenericLn("Did you notice the f? f, means float. Without the f, the calculation would result in a numeric overflow warning from the compiler");
+        BRIGHT_MAGENTA.printGenericLn("Since one of the elements is now a float, the compiler will check if the result fits within the float range.");
+        BRIGHT_MAGENTA.printGenericLn("During runtime, well get a float as a result.");
         printRainbowLn("###");
         double parallelUniversePublications2 = (3_000_000d * 12 * 30 * 1e+200);
         double parallelUniversePublications3 = (3_000_000d * 12 * 30 * 1e+300);
         printBrightCyanGenericLn("Float 4 bytes - 2^32");
         printBrightCyanGenericLn("Range from %s to %s with a min normal %s", Double.MIN_VALUE, Double.MAX_VALUE, Double.MIN_NORMAL);
         MAGENTA.printGenericLn("In the same way with Float, we can make a calculation if we have %s universes", 1e+200);
-        printBrightMagentaGenericLn("Notice the d. Now we specify that the number is a double.");
+        BRIGHT_MAGENTA.printGenericLn("Notice the d. Now we specify that the number is a double.");
         MAGENTA.printGenericLn("If the number is too big, we'll get a different lind of mathematical notation.");
         MAGENTA.printGenericLn("If we try with %s universes", parallelUniversePublications3);
         MAGENTA.printGenericLn("A very high number is also considered a number, but Double specifies it as %s", parallelUniversePublications3);
@@ -1130,25 +1130,25 @@ public class Mastery4Dot2Runner {
         double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38;
         double maxTest6 = 1.79769313486231572234324324324e+308;
         MAGENTA.printGenericLn("double maxTest = 3.40282353482789473289473289477899659000892042934820984928423804e+38:");
-        printBrightMagentaGenericLn("%f", maxTest);
+        BRIGHT_MAGENTA.printGenericLn("%f", maxTest);
         MAGENTA.printGenericLn("float maxTest2 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f:");
-        printBrightMagentaGenericLn("%f", maxTest2);
+        BRIGHT_MAGENTA.printGenericLn("%f", maxTest2);
         MAGENTA.printGenericLn("float maxTest3 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f:");
-        printBrightMagentaGenericLn("%f", maxTest3);
+        BRIGHT_MAGENTA.printGenericLn("%f", maxTest3);
         MAGENTA.printGenericLn("double maxTest4 = 3.4028235e+38:");
-        printBrightMagentaGenericLn("%f", maxTest4);
+        BRIGHT_MAGENTA.printGenericLn("%f", maxTest4);
         MAGENTA.printGenericLn("double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38:");
-        printBrightMagentaGenericLn("%f", maxTest5);
+        BRIGHT_MAGENTA.printGenericLn("%f", maxTest5);
         MAGENTA.printGenericLn("double maxTest5 = 3.4028235111112222233333444444555555666666777788889999111122222e+38");
-        printBrightMagentaGenericLn("%s", Double.toString(maxTest5));
+        BRIGHT_MAGENTA.printGenericLn("%s", Double.toString(maxTest5));
         MAGENTA.printGenericLn("Float.MAX_VALUE:");
-        printBrightMagentaGenericLn("%f", Float.MAX_VALUE);
+        BRIGHT_MAGENTA.printGenericLn("%f", Float.MAX_VALUE);
         MAGENTA.printGenericLn("Double.MAX_VALUE:");
-        printBrightMagentaGenericLn("%f", Double.MAX_VALUE);
+        BRIGHT_MAGENTA.printGenericLn("%f", Double.MAX_VALUE);
         MAGENTA.printGenericLn("double maxTest6 = 1.79769313486231572234324324324e+308;");
-        printBrightMagentaGenericLn("%f", maxTest6);
+        BRIGHT_MAGENTA.printGenericLn("%f", maxTest6);
         MAGENTA.printGenericLn("Double.toString(Double.MAX_VALUE):");
-        printBrightMagentaGenericLn("%s", Double.toString(Double.MAX_VALUE));
+        BRIGHT_MAGENTA.printGenericLn("%s", Double.toString(Double.MAX_VALUE));
         printGreenGenericLn("Take-away");
         printGreenGenericLn("1. Primitive type conversion rules and ranges are not simple");
         printGreenGenericLn("2. A number without decimal is considered an integer and automatically converted to a lower range if it fits it, but only on instantiation assignment.");

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 @WebServlet("/history/palace/servlet")
@@ -21,7 +21,7 @@ public class PalaceWaitingRoomServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final var context = contextProvider.getContext();
-        printBrightMagentaGenericLn(context.isCallerInRole("Manager"));
+        BRIGHT_MAGENTA.printGenericLn(context.isCallerInRole("Manager"));
         final PrintWriter writer = resp.getWriter();
         printGreenGenericLn(
             "With a correct role installation we can check with isCallerInRole from EJB SessionContext, if the user belongs to a certain role.");

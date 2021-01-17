@@ -1,9 +1,9 @@
 package org.jesperancinha.java11.crums.crum13;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowStack;
 
@@ -23,7 +23,7 @@ public class Crum13 {
         final Crum13 instance = getInstance();
         printBrightCyanGenericLn("Our crum instance is %s", instance);
         printRainbowStack(instance.expectation);
-        printBrightMagentaGenericLn("We can even get another null -> %s", instance.getInstance());
+        BRIGHT_MAGENTA.printGenericLn("We can even get another null -> %s", instance.getInstance());
         printGreenGenericLn(
             "References can be used to access static members, regardless that the instance itself is null or not");
         printGreenGenericLn("A reference is not attached to any static member");
