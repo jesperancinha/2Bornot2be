@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
@@ -26,10 +26,10 @@ public class Master2Dot2Runner {
         try (var fileInputStream = new FileInputStream(fileName);
              var objectInputStream = new ObjectInputStream(fileInputStream)) {
             var missionData = (MissionData) objectInputStream.readObject();
-            printGreenGenericLn("File has been read from this location -> %s", fileName);
-            printGreenGenericLn("Data -> %s", missionData);
-            printGreenGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
-            printGreenGenericLn("A new data would look like this -> %s", new MissionData());
+            GREEN.printGenericLn("File has been read from this location -> %s", fileName);
+            GREEN.printGenericLn("Data -> %s", missionData);
+            GREEN.printGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
+            GREEN.printGenericLn("A new data would look like this -> %s", new MissionData());
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

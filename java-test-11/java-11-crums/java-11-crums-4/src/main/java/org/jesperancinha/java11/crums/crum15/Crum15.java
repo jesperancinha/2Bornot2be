@@ -7,8 +7,8 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
@@ -57,7 +57,7 @@ public class Crum15 {
         MAGENTA.printGenericLn("And this is our final result!");
         printOrangeGenericLn(initPlants2);
 
-       printGreenGenericLn("Please note that a ConcurrentHashMap is a heavier operation than another kind of Map, because operations are synchronized and thread safe");
-       printGreenGenericLn("An unmutable collection such as an UnmutableHashMap, cannot be changed after its creation");
+        GREEN.printGenericLn("Please note that a ConcurrentHashMap is a heavier operation than another kind of Map, because operations are synchronized and thread safe");
+        GREEN.printGenericLn("An unmutable collection such as an UnmutableHashMap, cannot be changed after its creation");
     }
 }

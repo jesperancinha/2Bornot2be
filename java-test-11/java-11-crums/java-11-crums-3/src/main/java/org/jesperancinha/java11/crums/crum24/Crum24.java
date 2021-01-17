@@ -2,7 +2,7 @@ package org.jesperancinha.java11.crums.crum24;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -34,11 +34,10 @@ public class Crum24 {
         }
         printYellowGenericLn("Value of k is now %d", k);
 
-        printGreenGenericLn("The difference between continue and break is that the first ignores and the second stops");
-        printGreenGenericLn("A break can be considered as an old return or a GOTO to the next instruction");
-        printGreenGenericLn("A continue can be considered as an old if then GOTO or a GOTO to a former instruction");
-        printGreenGenericLn(
-            "The main point is that LABELS work for continue and break in the same way with different results");
+        GREEN.printGenericLn("The difference between continue and break is that the first ignores and the second stops");
+        GREEN.printGenericLn("A break can be considered as an old return or a GOTO to the next instruction");
+        GREEN.printGenericLn("A continue can be considered as an old if then GOTO or a GOTO to a former instruction");
+        GREEN.printGenericLn("The main point is that LABELS work for continue and break in the same way with different results");
 
     }
 }

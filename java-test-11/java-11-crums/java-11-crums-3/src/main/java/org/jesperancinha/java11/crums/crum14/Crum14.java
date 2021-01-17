@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum14;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum14 {
@@ -33,6 +33,6 @@ public class Crum14 {
         printOrangeGenericLn("This is %s, %s", foxy, kitten);
         printOrangeGenericLn("This is %s, %s", bibi, kitten2);
 
-        printGreenGenericLn("We were able to use this @Special annotation in type and parameter type parameters.");
+        GREEN.printGenericLn("We were able to use this @Special annotation in type and parameter type parameters.");
     }
 }

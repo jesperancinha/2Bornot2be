@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum12;
 import java.awt.*;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum12 {
 
@@ -39,12 +39,9 @@ public class Crum12 {
             + "             return color;");
         MAGENTA.printGenericLn(new BlueBerry().getColor());
 
-        printGreenGenericLn(
-            "The point here is that both the interface and the class are implementing the same static member");
-        printGreenGenericLn(
-            "This on its own is not an issue. The problem is that our subclass implements the same interface and extends from the same class");
-        printGreenGenericLn(
-            "This means that no shadowing can occur. In that sense the compiler will not know which color to pick");
-        printGreenGenericLn("If the member isn't used, the compiler just doesn't use it.");
+        GREEN.printGenericLn("The point here is that both the interface and the class are implementing the same static member");
+        GREEN.printGenericLn("This on its own is not an issue. The problem is that our subclass implements the same interface and extends from the same class");
+        GREEN.printGenericLn("This means that no shadowing can occur. In that sense the compiler will not know which color to pick");
+        GREEN.printGenericLn("If the member isn't used, the compiler just doesn't use it.");
     }
 }

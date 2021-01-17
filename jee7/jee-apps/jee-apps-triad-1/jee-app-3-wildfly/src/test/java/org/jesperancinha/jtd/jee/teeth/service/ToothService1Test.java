@@ -26,7 +26,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.junit.Assert.assertEquals;
 
@@ -75,9 +75,9 @@ public class ToothService1Test {
         final Tooth toothResult = toothService.findTooth(uuid);
         printOrangeGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
-        printGreenGenericLn("Remember that transactions are now managed by the container");
-        printGreenGenericLn("In this case we do not need to specify the opening and closing of a transaction");
-        printGreenGenericLn("The database changes are now managed by the container");
+        GREEN.printGenericLn("Remember that transactions are now managed by the container");
+        GREEN.printGenericLn("In this case we do not need to specify the opening and closing of a transaction");
+        GREEN.printGenericLn("The database changes are now managed by the container");
     }
 
     @Test(expected = EJBException.class)

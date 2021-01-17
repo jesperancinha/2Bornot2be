@@ -4,7 +4,7 @@ import org.jesperancinha.java11.mastery4dot1.modularity.hangar.Hangar;
 import org.jesperancinha.java11.mastery4dot1.modularity.hangar.Plane;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class Competition {
 
@@ -12,7 +12,7 @@ public class Competition {
 
     public static void main(String[] args) {
         BLUE.printGeneric("***");
-        printGreenGenericLn("--- We start the competition %s ---", new Competition("Daily Mail Trans-Atlantic Air Race of 1969"));
+        GREEN.printGenericLn("--- We start the competition %s ---", new Competition("Daily Mail Trans-Atlantic Air Race of 1969"));
         BLUE.printGeneric("***");
         Hangar.presentHangar();
         Plane.transportPilot();

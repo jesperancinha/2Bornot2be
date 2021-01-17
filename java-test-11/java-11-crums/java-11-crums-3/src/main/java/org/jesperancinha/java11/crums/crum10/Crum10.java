@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum10;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum10 {
@@ -26,9 +26,8 @@ public class Crum10 {
             printRedGenericLn("This is expected! Exception is a checked exception that needs to be in throws -> %s", e);
         }
 
-        printGreenGenericLn(
-            "It is important to know that subclasses of ReflectiveOperationException are also checked exceptions");
-        printGreenGenericLn("If they are thrown, they need to be catch or the method needs to have throws.");
+        GREEN.printGenericLn("It is important to know that subclasses of ReflectiveOperationException are also checked exceptions");
+        GREEN.printGenericLn("If they are thrown, they need to be catch or the method needs to have throws.");
 
     }
 

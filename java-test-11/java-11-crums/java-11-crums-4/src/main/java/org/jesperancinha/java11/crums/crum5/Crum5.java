@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum5;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
 public class Crum5 {
@@ -34,9 +34,8 @@ public class Crum5 {
             + "                customException.printStackTrace();\n" + "            }\n" + "        } finally {\n"
             + "            crum35.method2();\n" + "        }");
 
-        printGreenGenericLn("In this case, there isn't much to do than to exercise our eyes");
-        printGreenGenericLn(
-            "In the catch of this try/cath, there is another exception being thrown that is not easy to spot.");
+        GREEN.printGenericLn("In this case, there isn't much to do than to exercise our eyes");
+        GREEN.printGenericLn("In the catch of this try/cath, there is another exception being thrown that is not easy to spot.");
     }
 
     public void method1() throws CustomException {

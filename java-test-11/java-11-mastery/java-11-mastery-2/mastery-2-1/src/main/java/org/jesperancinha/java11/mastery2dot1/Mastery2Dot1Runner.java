@@ -41,8 +41,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGeneric;
@@ -56,8 +55,7 @@ public class Mastery2Dot1Runner {
         printYellowGeneric("### 1. Creating wolf. Interface cannot access everything\n");
         Animal wolf = new WolfCharacter("The Wolf");
         wolf.saySomething();
-        printGreenGeneric("The wolf name is: %s. Of course now we use down casting\n",
-                ((Wolf) wolf).name);
+        GREEN.printGeneric("The wolf name is: %s. Of course now we use down casting\n", ((Wolf) wolf).name);
         // 2. Comparing with `thenComparing`
         printRainbowLn("==");
         printYellowGeneric("### 2. Creating Bird. Interface cannot access everything\n");
@@ -65,13 +63,10 @@ public class Mastery2Dot1Runner {
         var list = List.of(wolf, bird);
         Comparator<Animal> comparator = Comparator.comparing(Animal::getName);
         Stream<Animal> animalStream = list.stream().sorted(comparator.thenComparing(Animal::found));
-        printGreenGeneric("%s\n", list.toString());
-        printGreenGeneric("The wolf name is: %s. Of course now we use down casting\n",
-                ((Wolf) wolf).name);
-        printGreenGeneric("The bird name is: %s. Of course now we use down casting\n",
-                ((BirdCharacter) bird).name);
-        printGreenGeneric("The new collection should be reordered: %s\n",
-                animalStream.collect(Collectors.toList()));
+        GREEN.printGeneric("%s\n", list.toString());
+        GREEN.printGeneric("The wolf name is: %s. Of course now we use down casting\n", ((Wolf) wolf).name);
+        GREEN.printGeneric("The bird name is: %s. Of course now we use down casting\n", ((BirdCharacter) bird).name);
+        GREEN.printGeneric("The new collection should be reordered: %s\n", animalStream.collect(Collectors.toList()));
 
         // 3. AccessController and Permissions
         printRainbowLn("==");
@@ -103,19 +98,19 @@ public class Mastery2Dot1Runner {
             BLUE.printGenericLn("The BufferedReader class does support mark %s", r.markSupported());
             if (r.markSupported()) {
                 BufferedReader in = (BufferedReader) r;
-                Consolerizer.printGreenGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
                 in.mark(5);
                 BLUE.printGenericLn(in.readLine());
-                Consolerizer.printGreenGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
                 in.reset();
                 BLUE.printGenericLn(in.readLine());
                 in.reset();
                 BLUE.printGenericLn(in.readLine());
-                Consolerizer.printGreenGenericLn(in.readLine());
-                Consolerizer.printGreenGenericLn(in.readLine());
-                Consolerizer.printGreenGenericLn(in.readLine());
-                Consolerizer.printGreenGenericLn(in.readLine());
-                Consolerizer.printGreenGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
+                GREEN.printGenericLn(in.readLine());
                 in.reset();
                 BLUE.printGenericLn(in.readLine());
             } else {
@@ -136,9 +131,9 @@ public class Mastery2Dot1Runner {
         sBuilder.append("Okay, um, hmm, in that case, the part of the Grandfather will be played by, huh, a bassoon...\n");
         sBuilder.reverse();
         sBuilder.setLength(20);
-        printGreenGenericLn(sBuilder.toString());
+        GREEN.printGenericLn(sBuilder.toString());
         sBuilder.trimToSize();
-        printGreenGenericLn(sBuilder.toString());
+        GREEN.printGenericLn(sBuilder.toString());
 
         var sBuffer = new StringBuffer();
         sBuffer.ensureCapacity(10);
@@ -146,9 +141,9 @@ public class Mastery2Dot1Runner {
         sBuffer.append("Okay, um, hmm, in that case, the part of the Grandfather will be played by, huh, a bassoon...\n");
         sBuffer.reverse();
         sBuffer.setLength(20);
-        printGreenGenericLn(sBuffer.toString());
+        GREEN.printGenericLn(sBuffer.toString());
         sBuffer.trimToSize();
-        printGreenGenericLn(sBuffer.toString());
+        GREEN.printGenericLn(sBuffer.toString());
 
         // 6. Super constructors
         printRainbowLn("==");
@@ -158,16 +153,16 @@ public class Mastery2Dot1Runner {
         printYellowGenericLn("### One or more constructors are implemented and none default is available, then the default is no longer available");
 
         var birdCharacter = new BirdCharacter("Sasha");
-        printGreenGenericLn(birdCharacter.getName());
-        printGreenGenericLn(birdCharacter.getInstrument());
+        GREEN.printGenericLn(birdCharacter.getName());
+        GREEN.printGenericLn(birdCharacter.getInstrument());
 
         // 7. Abstraction: Interfaces vs Classes
         printRainbowLn("==");
         printYellowGenericLn("### 7. Know a few things about Interfaces");
         printYellowGenericLn("### All methods without a body are implicitly abstract and public");
         printYellowGenericLn("### public and abstract are redundant for these implicit properties");
-        printGreenGenericLn(wolf.getName());
-        printGreenGenericLn(wolf.getInstrument());
+        GREEN.printGenericLn(wolf.getName());
+        GREEN.printGenericLn(wolf.getInstrument());
 
         // 8. Stream filters
         printRainbowLn("==");
@@ -179,17 +174,17 @@ public class Mastery2Dot1Runner {
 
         var streamOfCharacters1 = Stream.of(wolf, cat, bird, duck);
         var streamFull1 = streamOfCharacters1.filter(animal -> animal instanceof Bird);
-        streamFull1.forEach(Consolerizer::printGreenGenericLn);
+        streamFull1.forEach(text2 -> GREEN.printGenericLn(text2));
         var streamOfCharacters2 = Stream.of(wolf, cat, bird, duck);
         var streamFull2 = streamOfCharacters2.parallel()
                 .filter(animal -> !(animal instanceof Wolf))
                 .filter(animal -> !(animal instanceof Feline))
                 .sequential();
-        streamFull2.forEach(Consolerizer::printGreenGenericLn);
+        streamFull2.forEach(text1 -> GREEN.printGenericLn(text1));
         var streamOfCharacters3 = Stream.of(wolf, cat, bird, duck);
         Map<Boolean, List<Animal>> partitionMap = streamOfCharacters3.collect(Collectors.partitioningBy(animal -> animal instanceof Bird));
         var streamFull3 = partitionMap.get(Boolean.TRUE).stream();
-        streamFull3.forEach(Consolerizer::printGreenGenericLn);
+        streamFull3.forEach(text -> GREEN.printGenericLn(text));
 
         // 9. Question mark in Mappings (left vs right)
         printRainbowLn("==");
@@ -244,7 +239,7 @@ public class Mastery2Dot1Runner {
         try {
             testString.charAt(10000);
         } catch (IndexOutOfBoundsException e) {
-            printGreenGenericLn("If parameter of charAt surpasses the length of the String, it results in: %s", e.getClass());
+            GREEN.printGenericLn("If parameter of charAt surpasses the length of the String, it results in: %s", e.getClass());
         }
 
         // 12. `allMatch` in stream
@@ -258,11 +253,11 @@ public class Mastery2Dot1Runner {
         var allMatchesForA = streamOfCharacters.allMatch(
                 character -> {
                     atomicInteger.incrementAndGet();
-                    printGreenGenericLn(character);
+                    GREEN.printGenericLn(character);
                     return character.getName().contains("o");
                 });
-        printGreenGenericLn("We have iterated %d times! This is unpredictable", atomicInteger.get());
-        printGreenGenericLn("Has the condition matched? %s", allMatchesForA);
+        GREEN.printGenericLn("We have iterated %d times! This is unpredictable", atomicInteger.get());
+        GREEN.printGenericLn("Has the condition matched? %s", allMatchesForA);
 
 
         // 10. provider() in modularity
@@ -318,16 +313,15 @@ public class Mastery2Dot1Runner {
 
         var listOfAnimalsViaCollectionSync = Collections.synchronizedList(animalList);
         var listOfAnimalsViaCollectionUnmod = Collections.unmodifiableList(animalList);
-        printGreenGenericLn(listOfAnimalsViaCollectionSync);
-        printGreenGenericLn(listOfAnimalsViaCollectionUnmod);
+        GREEN.printGenericLn(listOfAnimalsViaCollectionSync);
+        GREEN.printGenericLn(listOfAnimalsViaCollectionUnmod);
 
         // 17. `String`'s `isBlank`
         printRainbowLn("==");
         printYellowGenericLn("### 17. Test is String is blank");
         var blankSimple = "";
         var blankComplicated = "      ";
-        printGreenGenericLn("blankSimple is blank? %s, blankComplicated is blank? %s",
-                blankSimple.isBlank(), blankComplicated.isBlank());
+        GREEN.printGenericLn("blankSimple is blank? %s, blankComplicated is blank? %s", blankSimple.isBlank(), blankComplicated.isBlank());
 
         // 18. Flow control ans specification of Exceptions
         printRainbowLn("==");
@@ -337,16 +331,16 @@ public class Mastery2Dot1Runner {
         printRainbowLn("==");
         printYellowGenericLn("### 19. Constructor exception implementation rules are inversely proportional to method return parameter implementation rules");
         var grandFather = new GrandFatherCharacter("The Grandfather");
-        printGreenGenericLn(grandFather.getName());
-        printGreenGenericLn(grandFather.name);
-        printGreenGenericLn(grandFather.found());
+        GREEN.printGenericLn(grandFather.getName());
+        GREEN.printGenericLn(grandFather.name);
+        GREEN.printGenericLn(grandFather.found());
 
         // 20. Simple `File` creation with `FileWriter`
         printRainbowLn("==");
         printYellowGenericLn("### 20. FileWriter always creates a file");
         var file = new FileWriter("/tmp/wolfdata.txt");
         file.close();
-        printGreenGenericLn("Check your %s folder", file.toString());
+        GREEN.printGenericLn("Check your %s folder", file.toString());
 
         // 21. Overriding with generics
         printRainbowLn("==");
@@ -372,22 +366,22 @@ public class Mastery2Dot1Runner {
         var dedup = new CharacterDeduplicator();
         var characterComplete = List.of(wolf, cat, bird, bird, duck, grandFather);
         var characterSet = dedup.toSet(characterComplete);
-        printGreenGenericLn(characterComplete);
-        printGreenGenericLn(characterSet);
+        GREEN.printGenericLn(characterComplete);
+        GREEN.printGenericLn(characterSet);
         var characterReComplete = dedup.toList(characterSet);
         characterReComplete.add(duck);
-        printGreenGenericLn(characterReComplete);
+        GREEN.printGenericLn(characterReComplete);
 
         // 22. `var` in `for` loops
         printRainbowLn("==");
         printYellowGenericLn("### 22. var can be used in for just like int");
         printRainbowLn("-");
         for (int i = 0; i < 10; i++) {
-            printGreenGeneric(i);
+            GREEN.printGeneric(i);
         }
         printRainbowLn("-");
         for (var i = 0; i < 10; i++) {
-            printGreenGeneric(i);
+            GREEN.printGeneric(i);
         }
         printRainbowLn("-");
 
@@ -402,18 +396,18 @@ public class Mastery2Dot1Runner {
             printRedGenericLn("%s -> Process failed for p1=%s and p2=%s", e ,p1, p2);
         }
         p2 = Path.of("tmp");
-        printGreenGenericLn("Process didn't fail for p1=%s and p2=%s and the result for p2.relativize(p1) is: %s", p1, p2, p2.relativize(p1));
+        GREEN.printGenericLn("Process didn't fail for p1=%s and p2=%s and the result for p2.relativize(p1) is: %s", p1, p2, p2.relativize(p1));
 
         p2 = Path.of("/tmp/wolf");
         p1 = Path.of("/tmp/wolf/2");
-        printGreenGenericLn("Process didn't fail for p1=%s and p2=%s and the result for p2.relativize(p1) is: %s", p1, p2, p2.relativize(p1));
+        GREEN.printGenericLn("Process didn't fail for p1=%s and p2=%s and the result for p2.relativize(p1) is: %s", p1, p2, p2.relativize(p1));
 
         // 24. Creating methods in inner anonymous classes
         printRainbowLn("==");
         printYellowGenericLn("### 24. If we create an anonymous class and therein we crate methods,those methods are onle reachable via reflection or inside the instance itself");
         var wolfFood = new Food() {
             public void giveMeApples() {
-                printGreenGeneric("You did this? You just cannot reach this method without reflection and so The Wolf gets no apples!");
+                GREEN.printGeneric("You did this? You just cannot reach this method without reflection and so The Wolf gets no apples!");
             }
         };
         Method giveMeApples = wolfFood.getClass().getMethod("giveMeApples");

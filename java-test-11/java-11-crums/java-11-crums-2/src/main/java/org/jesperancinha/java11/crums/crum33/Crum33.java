@@ -5,8 +5,8 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -43,11 +43,9 @@ public class Crum33 {
                 + "        throw new CloneNotSupportedException();\n" + "    }");
             printRedGenericLn("And then we get this exception ->", e);
         }
-        printGreenGenericLn("Enums only have two public methods available to the outside world");
-        printGreenGenericLn("One gives you an array with all enum possible values");
-        printGreenGenericLn(
-            "Another gives you the enum value by the String that case-sensitively matches the key given in the code");
-        printGreenGenericLn(
-            "We can make methods inside enum. Enums are not cloneable. Trying to call that method from inside the enum results in an exception called CloneNotSupportedException");
+        GREEN.printGenericLn("Enums only have two public methods available to the outside world");
+        GREEN.printGenericLn("One gives you an array with all enum possible values");
+        GREEN.printGenericLn("Another gives you the enum value by the String that case-sensitively matches the key given in the code");
+        GREEN.printGenericLn("We can make methods inside enum. Enums are not cloneable. Trying to call that method from inside the enum results in an exception called CloneNotSupportedException");
     }
 }

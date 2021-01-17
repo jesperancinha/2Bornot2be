@@ -10,7 +10,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 @ServerEndpoint(value = "/aviz/security", encoders = { AvizEncoder.class }, decoders = { AvizDecoder.class })
@@ -24,7 +24,7 @@ public class AvizSecurityEndpoint {
     @OnMessage
     public void onMessage(Session session, String decodedMessage) throws IOException, EncodeException {
         printOrangeGenericLn(decodedMessage);
-        printGreenGenericLn(decodedMessage);
+        GREEN.printGenericLn(decodedMessage);
         final AvizEncodedMessage data = new AvizEncodedMessage();
         data.setEncodedMessage(decodedMessage);
         session.getBasicRemote().sendObject(data);

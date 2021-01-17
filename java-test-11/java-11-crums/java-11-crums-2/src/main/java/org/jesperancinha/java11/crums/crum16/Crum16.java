@@ -19,8 +19,8 @@ import java.util.Vector;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum16 {
     public static void main(String[] args) {
@@ -91,8 +91,8 @@ public class Crum16 {
         MAGENTA.printGenericLn(flowers10);
         MAGENTA.printGenericLn(flowers11);
 
-        printGreenGenericLn("When defining maps and lists, our types must be the same or subtypes");
-        printGreenGenericLn("Diamond notation cannot be enclosed. This means that this new HashMap<String, List<>> is illegal");
+        GREEN.printGenericLn("When defining maps and lists, our types must be the same or subtypes");
+        GREEN.printGenericLn("Diamond notation cannot be enclosed. This means that this new HashMap<String, List<>> is illegal");
     }
 
 }

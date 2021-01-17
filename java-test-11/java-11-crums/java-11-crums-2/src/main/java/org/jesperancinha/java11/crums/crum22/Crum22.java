@@ -7,8 +7,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -74,10 +74,10 @@ public class Crum22 {
         MAGENTA.printGenericLn("In One, we can just call one method and yield:");
         MAGENTA.printGenericLn(numbersOneInt);
 
-        printGreenGenericLn("Overloading happens in general if overriding is not possible");
-        printGreenGenericLn("If type erasure is the same, neither overriding nor overloading is possible");
-        printGreenGenericLn("Type erasure means that on development time, the types are defined, but during compile time, the types from generics are removed");
-        printGreenGenericLn("If after removal, the types match (i.e. List<Long> != List<Integer> => List<> == List<>), then type erasure is the same and compilation cannot happen");
-        printGreenGenericLn("Type erasure rule applies to both input parameters ads well to return parameters");
+        GREEN.printGenericLn("Overloading happens in general if overriding is not possible");
+        GREEN.printGenericLn("If type erasure is the same, neither overriding nor overloading is possible");
+        GREEN.printGenericLn("Type erasure means that on development time, the types are defined, but during compile time, the types from generics are removed");
+        GREEN.printGenericLn("If after removal, the types match (i.e. List<Long> != List<Integer> => List<> == List<>), then type erasure is the same and compilation cannot happen");
+        GREEN.printGenericLn("Type erasure rule applies to both input parameters ads well to return parameters");
     }
 }

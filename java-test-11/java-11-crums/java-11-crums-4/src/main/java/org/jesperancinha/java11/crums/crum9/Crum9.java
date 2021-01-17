@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum9;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum9 {
@@ -21,6 +21,6 @@ public class Crum9 {
 
         printOrangeGenericLn(sb.append(" a 5 euros o kilo!"));
 
-        printGreenGenericLn("String has concat and StringBuilder has append. That's it! Enjoy!");
+        GREEN.printGenericLn("String has concat and StringBuilder has append. That's it! Enjoy!");
     }
 }

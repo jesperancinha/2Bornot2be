@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
@@ -33,7 +33,7 @@ public class Crum8 {
         } catch (SQLException throwables) {
             printRedThrowableAndExit(throwables);
         }
-        printGreenGenericLn("Generally speaking we get a SQLException if something goes wrong with the database");
-        printGreenGenericLn("In our specific case the most specific Exception we get is a JdbcSQLDataException");
+        GREEN.printGenericLn("Generally speaking we get a SQLException if something goes wrong with the database");
+        GREEN.printGenericLn("In our specific case the most specific Exception we get is a JdbcSQLDataException");
     }
 }

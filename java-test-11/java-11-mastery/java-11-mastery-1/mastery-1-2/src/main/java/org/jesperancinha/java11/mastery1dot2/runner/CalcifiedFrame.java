@@ -1,9 +1,9 @@
 package org.jesperancinha.java11.mastery1dot2.runner;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public interface CalcifiedFrame {
     default void protectTheShell() {
-        Consolerizer.printGreenGeneric("CalcifiedFrame");
+        GREEN.printGeneric("CalcifiedFrame");
     }
 }

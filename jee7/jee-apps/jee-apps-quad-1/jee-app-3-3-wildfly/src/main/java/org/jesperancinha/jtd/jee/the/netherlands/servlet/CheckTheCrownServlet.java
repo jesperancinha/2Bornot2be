@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
 @WebServlet("/history/crown")
@@ -33,9 +33,9 @@ public class CheckTheCrownServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         setupFastDefault();
-        printGreenGenericLn("Current ruler is %s", currentRuler);
-        printGreenGenericLn("The heir to the throne is %s", heirToTheThrone);
-        printGreenGenericLn("The static crown is %s", crownOfTheState);
+        GREEN.printGenericLn("Current ruler is %s", currentRuler);
+        GREEN.printGenericLn("The heir to the throne is %s", heirToTheThrone);
+        GREEN.printGenericLn("The static crown is %s", crownOfTheState);
 
         final PrintWriter writer = resp.getWriter();
 

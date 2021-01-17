@@ -15,7 +15,7 @@ import java.security.SecurityPermission;
 import java.util.function.Function;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -45,8 +45,7 @@ public class Crum1 {
         SecurityManager setSecurityManager = new SecurityManager() {
             @Override
             public void checkSecurityAccess(String target) {
-                printGreenGenericLn(
-                    "We are allowing the creation of an Access Control Context - createAccessControlContext");
+                GREEN.printGenericLn("We are allowing the creation of an Access Control Context - createAccessControlContext");
 
             }
         };
@@ -77,7 +76,6 @@ public class Crum1 {
                 "This is expected! We have changed permissions in such a way that we can no longer change the SecurityManqger during runtime. Safe! -> %s",
                 e);
         }
-        printGreenGenericLn(
-            "Make sure to study this code. This is how you make sure to reduce privileges from a high privileged user on demand");
+        GREEN.printGenericLn("Make sure to study this code. This is how you make sure to reduce privileges from a high privileged user on demand");
     }
 }

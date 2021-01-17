@@ -49,9 +49,9 @@ import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
@@ -94,9 +94,8 @@ public class Mastery4Dot3Runner {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 19. `String` `replace` old/new");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We are closing this module with \"After the Curtain\" from musical group Beirut.");
-        printGreenGenericLn(
-            "After this module, please continue your studies. Look out for new modules as they will keep coming");
+        GREEN.printGenericLn("Case: We are closing this module with \"After the Curtain\" from musical group Beirut.");
+        GREEN.printGenericLn("After this module, please continue your studies. Look out for new modules as they will keep coming");
 
         var testCurtain = "After the curtain".replace("curtain", "curtain") == "After the curtain";
         var testC = "After the curtain".replace('c', 'c') == "After the curtain";
@@ -111,13 +110,11 @@ public class Mastery4Dot3Runner {
                 + "                                    : StringUTF16.replace(value, oldChar, newChar);\n"
                 + "            if (ret != null) {\n" + "                return ret;\n" + "            }\n"
                 + "        }\n" + "        return this;\n" + "    }");
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. String constants can be compared with the equals logical operator.");
-        printGreenGenericLn(
-            "2. The `replace` method, with string, always returns a new string, which invalidates the use of the logic operator.");
-        printGreenGenericLn(
-            "3. The `replace` method, with a char, returns a new string, if the chars are different, which not always invalidates the use of the logic operator.");
-        printGreenGenericLn("4. Replacing with the same character returns the same String.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. String constants can be compared with the equals logical operator.");
+        GREEN.printGenericLn("2. The `replace` method, with string, always returns a new string, which invalidates the use of the logic operator.");
+        GREEN.printGenericLn("3. The `replace` method, with a char, returns a new string, if the chars are different, which not always invalidates the use of the logic operator.");
+        GREEN.printGenericLn("4. Replacing with the same character returns the same String.");
         moduleEnd();
     }
 
@@ -125,10 +122,9 @@ public class Mastery4Dot3Runner {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 18. Abstract classes and the `new` keyword");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: We have a plan for a guitar. It is probably the most important instrument in Indie music.");
-        printGreenGenericLn("Deadline is approaching and you have to deliver it! It's not ready!");
-        printGreenGenericLn("You do have an initial Blueprint and so we'll create our guitar like that!");
+        GREEN.printGenericLn("Case: We have a plan for a guitar. It is probably the most important instrument in Indie music.");
+        GREEN.printGenericLn("Deadline is approaching and you have to deliver it! It's not ready!");
+        GREEN.printGenericLn("You do have an initial Blueprint and so we'll create our guitar like that!");
 
         final Guitar guitar = new Guitar() {
             @Override
@@ -158,38 +154,33 @@ public class Mastery4Dot3Runner {
         };
 
         MAGENTA.printGenericLn("This is our guitar at the moment -> %s", guitar);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. Although a very simple concept, it is important to notice that no abstractions may exist in instances.");
-        printGreenGenericLn(
-            "2. This is why, when we crate instances of anonymous classes, we are force to implement whatever is left from the abstraction.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Although a very simple concept, it is important to notice that no abstractions may exist in instances.");
+        GREEN.printGenericLn("2. This is why, when we crate instances of anonymous classes, we are force to implement whatever is left from the abstraction.");
     }
 
     private static void exercise17() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend..,Again!");
-        printGreenGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
-        printGreenGenericLn("2. The last element of the command can be converted to an automatic module.");
-        printGreenGenericLn("3. Elements in class path are considered normal jars.");
-        printGreenGenericLn("4. Automatic modules can still read from the class path.");
-        printGreenGenericLn("5. Named modules cannot.");
-        printGreenGenericLn(
-            "6. The later two are the reason why the firs command works well and the following doesn't.");
+        GREEN.printGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend..,Again!");
+        GREEN.printGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
+        GREEN.printGenericLn("2. The last element of the command can be converted to an automatic module.");
+        GREEN.printGenericLn("3. Elements in class path are considered normal jars.");
+        GREEN.printGenericLn("4. Automatic modules can still read from the class path.");
+        GREEN.printGenericLn("5. Named modules cannot.");
+        GREEN.printGenericLn("6. The later two are the reason why the firs command works well and the following doesn't.");
     }
 
     private static void exercise16() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 16. Overriding methods returning primitives");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: We are going to see how many songs per record, on average, are Animal Collective developing.");
-        printGreenGenericLn(
-            "We want one or more methods that return different types: Byte, Short, Character, Integer, Long, Float and Double");
-        printGreenGenericLn("We will use the AlbumCalculator for that");
+        GREEN.printGenericLn("Case: We are going to see how many songs per record, on average, are Animal Collective developing.");
+        GREEN.printGenericLn("We want one or more methods that return different types: Byte, Short, Character, Integer, Long, Float and Double");
+        GREEN.printGenericLn("We will use the AlbumCalculator for that");
 
         var albumCalculator = new AlbumCalculator(new HashMap<>() {{
             put("Spirit They're Gone, Spirit They've Vanished", 10);
@@ -224,19 +215,18 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGenericLn("Long -> %s", averageLong);
         MAGENTA.printGenericLn("Short -> %s", averageShort);
 
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. Methods with primitive return types can only be overridden by methods of the same return type.");
-        printGreenGenericLn("2. There is no averagingFloat collector.");
-        printGreenGenericLn("3. Look into the code and bear in mind the different ways to calculate average.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Methods with primitive return types can only be overridden by methods of the same return type.");
+        GREEN.printGenericLn("2. There is no averagingFloat collector.");
+        GREEN.printGenericLn("3. Look into the code and bear in mind the different ways to calculate average.");
     }
 
     private static void exercise15() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 15. add `override` in an `ArrayList`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We are going to store our Animal Collective record collection in and ArrayList.");
-        printGreenGenericLn("But is isn't no ordinary list! This is a AnimalCollectiveList!");
+        GREEN.printGenericLn("Case: We are going to store our Animal Collective record collection in and ArrayList.");
+        GREEN.printGenericLn("But is isn't no ordinary list! This is a AnimalCollectiveList!");
         var acList = new AnimalCollectiveList();
         acList.add("Feels");
         acList.add("Strawberry Jam");
@@ -247,24 +237,20 @@ public class Mastery4Dot3Runner {
                 + "     both methods have same erasure, yet neither overrides the other");
         MAGENTA.printGenericLn("This is our record collection:");
         MAGENTA.printGenericLn(acList);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. We cannot overload or override any of the original ArrayList methods with Object because of type erasure.");
-        printGreenGenericLn(
-            "2. Type erasure \"Replace all type parameters in generic types with their bounds or Object if the type parameters are unbounded\"");
-        printGreenGenericLn("3. If for example we attempt to override with add(Object), this won't work");
-        printGreenGenericLn(
-            "4. Type erasure will replace add(T) with add(Object) and this will conflict with our own add(Object)");
-        printGreenGenericLn("5. Since they don't override each other, this becomes impossible to do.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. We cannot overload or override any of the original ArrayList methods with Object because of type erasure.");
+        GREEN.printGenericLn("2. Type erasure \"Replace all type parameters in generic types with their bounds or Object if the type parameters are unbounded\"");
+        GREEN.printGenericLn("3. If for example we attempt to override with add(Object), this won't work");
+        GREEN.printGenericLn("4. Type erasure will replace add(T) with add(Object) and this will conflict with our own add(Object)");
+        GREEN.printGenericLn("5. Since they don't override each other, this becomes impossible to do.");
     }
 
     private static void exercise14() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 14. When to call `flush`");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: We'll save lyrics of Animal Collective's single \"FloriDada\" from 2016 into a file.");
-        printGreenGenericLn("Do we need to flush it?");
+        GREEN.printGenericLn("Case: We'll save lyrics of Animal Collective's single \"FloriDada\" from 2016 into a file.");
+        GREEN.printGenericLn("Do we need to flush it?");
 
         var lyrics =
             "from: https://www.azlyrics.com/lyrics/animalcollective/floridada.html\nChild\n" + "Of limousines\n"
@@ -282,23 +268,19 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGenericLn("Lyrics have  been written to \"/tmp/floridada.txt\".");
         MAGENTA.printGenericLn(lyrics);
         BLUE.printGenericLn("Please check file contents!");
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. The underlying close operation flushes the content to file.");
-        printGreenGenericLn(
-            "2. Flush is usually called if you want to write sequentially to a file and not in one go.");
-        printGreenGenericLn(
-            "3. This way, we can hold  the buffer in memory and possibly perform changes before  flushing it to a file.");
-        printGreenGenericLn(
-            "4. We can also use flush, if we want to keep the buffer available for future writes to a file.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. The underlying close operation flushes the content to file.");
+        GREEN.printGenericLn("2. Flush is usually called if you want to write sequentially to a file and not in one go.");
+        GREEN.printGenericLn("3. This way, we can hold  the buffer in memory and possibly perform changes before  flushing it to a file.");
+        GREEN.printGenericLn("4. We can also use flush, if we want to keep the buffer available for future writes to a file.");
     }
 
     private static void exercise13() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 13. Creating and filtering an `IntStream`");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: We will examine the position on the charts for Animal Collective at present: 2020/12/06");
-        printGreenGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
+        GREEN.printGenericLn("Case: We will examine the position on the charts for Animal Collective at present: 2020/12/06");
+        GREEN.printGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
         final var peakPositionsMPP = new int[] { 13, 4, 63, 31, 25, 46, 58, 21, 37, 26 };
         MAGENTA.printGenericLn("These are the peak positions for differenct countries:");
         MAGENTA.printGenericLn(Arrays.stream(peakPositionsMPP)
@@ -323,26 +305,22 @@ public class Mastery4Dot3Runner {
             .collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
         MAGENTA.printGenericLn("We can also pretend that they reached number 1 with a mapping trick:");
         MAGENTA.printGenericLn(toNumberOne);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. IntStream is different than Stream.");
-        printGreenGenericLn(
-            "2. We know that collect does not take a Collector. It takes a Supplier, a ObjIntConsumer and a BiConsumer.");
-        printGreenGenericLn("3. BiConsumer only works for parallel streams.");
-        printGreenGenericLn(
-            "4. IntStream filters work with IntPredicates. They differ from normal predicates in that they only accept integers.");
-        printGreenGenericLn("5. We cannot use a common Predicate in place of a IntPredicate. They are different.");
-        printGreenGenericLn("6. We can map using a IntUnaryOperator.");
-        printGreenGenericLn(
-            "7. IntStreams only accept int or varargs of type int. Lists are not allowed. Only arrays.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. IntStream is different than Stream.");
+        GREEN.printGenericLn("2. We know that collect does not take a Collector. It takes a Supplier, a ObjIntConsumer and a BiConsumer.");
+        GREEN.printGenericLn("3. BiConsumer only works for parallel streams.");
+        GREEN.printGenericLn("4. IntStream filters work with IntPredicates. They differ from normal predicates in that they only accept integers.");
+        GREEN.printGenericLn("5. We cannot use a common Predicate in place of a IntPredicate. They are different.");
+        GREEN.printGenericLn("6. We can map using a IntUnaryOperator.");
+        GREEN.printGenericLn("7. IntStreams only accept int or varargs of type int. Lists are not allowed. Only arrays.");
     }
 
     private static void exercise12() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 12. Complex `operands` and `operators`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: In this case, there isn't really much we can do in terms of our Indie Theme.");
-        printGreenGenericLn(
-            "In this exercise we just want to make a random execution flow and guess what is happening.");
+        GREEN.printGenericLn("Case: In this case, there isn't really much we can do in terms of our Indie Theme.");
+        GREEN.printGenericLn("In this exercise we just want to make a random execution flow and guess what is happening.");
 
         int z = 10;
         int w = 20;
@@ -357,7 +335,7 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGeneric("Please guess what is the value of z at the end of this execution:");
         int guess;
         if (skipQuestions) {
-            printGreenGenericLn("18");
+            GREEN.printGenericLn("18");
             guess = 18;
         } else {
             guess = sc.nextInt();
@@ -369,22 +347,20 @@ public class Mastery4Dot3Runner {
             printRedThrowableAndExit(
                 new Exception(String.format("Unfortunately your guess %d, isn't correct. Please try again...", guess)));
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. Operand evaluation is difficult. Keep an eye out for module java11-mastery-logics for more exercises like this.");
-        printGreenGenericLn("2. Operations follow typical Math operation and follow accolade definitions.");
-        printGreenGenericLn("3. Operands get evaluated first, before the operations.");
-        printGreenGenericLn("4. Disambiguation happens from left to right.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Operand evaluation is difficult. Keep an eye out for module java11-mastery-logics for more exercises like this.");
+        GREEN.printGenericLn("2. Operations follow typical Math operation and follow accolade definitions.");
+        GREEN.printGenericLn("3. Operands get evaluated first, before the operations.");
+        GREEN.printGenericLn("4. Disambiguation happens from left to right.");
     }
 
     private static void exercise11() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 11. `readPassword` in `Console`");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: Capital Cities made a funny video, where to get to their video set, a password is asked at the entrance.");
-        printGreenGenericLn("See the video here: https://www.youtube.com/watch?v=w7JFSLu8OHI");
-        printGreenGenericLn("So, what's the password?");
+        GREEN.printGenericLn("Case: Capital Cities made a funny video, where to get to their video set, a password is asked at the entrance.");
+        GREEN.printGenericLn("See the video here: https://www.youtube.com/watch?v=w7JFSLu8OHI");
+        GREEN.printGenericLn("So, what's the password?");
 
         var console = System.console();
         if (Objects.isNull(console)) {
@@ -401,10 +377,9 @@ public class Mastery4Dot3Runner {
                         passwordString)));
             }
             MAGENTA.printGenericLn("You got it right!");
-            printGreenGenericLn("Take-away");
-            printGreenGenericLn("1. New String also accepts a char array");
-            printGreenGenericLn(
-                "2. When typing a password, nothing is shown on screen, but the String is clearly introduced in the code.");
+            GREEN.printGenericLn("Take-away");
+            GREEN.printGenericLn("1. New String also accepts a char array");
+            GREEN.printGenericLn("2. When typing a password, nothing is shown on screen, but the String is clearly introduced in the code.");
         }
     }
 
@@ -412,10 +387,10 @@ public class Mastery4Dot3Runner {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 10. Collecting duplicate entries to a `Map`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We have a collection of Capital Cities CD's");
-        printGreenGenericLn("Now we want put those in a Map so that we have a reference to the year we bought them.");
-        printGreenGenericLn("However, we made mistake and put two entries of the same album.");
-        printGreenGenericLn("Can we still collect this into a Map?");
+        GREEN.printGenericLn("Case: We have a collection of Capital Cities CD's");
+        GREEN.printGenericLn("Now we want put those in a Map so that we have a reference to the year we bought them.");
+        GREEN.printGenericLn("However, we made mistake and put two entries of the same album.");
+        GREEN.printGenericLn("Can we still collect this into a Map?");
 
         var recordList = List.of(new AlbumForSale("In a Tidal Wave of Mystery", 2016L),
             new AlbumForSale("Solarize", 2019L), new AlbumForSale("Solarize", 2018L));
@@ -436,21 +411,19 @@ public class Mastery4Dot3Runner {
             .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase, Math::max));
         MAGENTA.printGenericLn("We finally get our disambiguated map:");
         MAGENTA.printGenericLn(collect);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. If there are repeated keys, the map collection fails by default.");
-        printGreenGenericLn("2. A merge strategy can be implemented.");
-        printGreenGenericLn(
-            "3. The merge strategy is of type BinaryOperator, which is characterized by have the input and return parameters of the same type.");
-        printGreenGenericLn("4. The later is how we distinguish between operators and functions..");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. If there are repeated keys, the map collection fails by default.");
+        GREEN.printGenericLn("2. A merge strategy can be implemented.");
+        GREEN.printGenericLn("3. The merge strategy is of type BinaryOperator, which is characterized by have the input and return parameters of the same type.");
+        GREEN.printGenericLn("4. The later is how we distinguish between operators and functions..");
     }
 
     private static void exercise9() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 9. `++i` `i++` in a loop");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
-        printGreenGenericLn("There are 10 in the normal edition and we are two people counting!");
+        GREEN.printGenericLn("Case: We are going to count the number of songs in \"Hercules and The Love Affair\" album.");
+        GREEN.printGenericLn("There are 10 in the normal edition and we are two people counting!");
 
         int i;
         int j;
@@ -464,23 +437,18 @@ public class Mastery4Dot3Runner {
             MAGENTA.printGenericLn("I count %d and my friend counts %d", i, j);
         }
         MAGENTA.printGenericLn("I counted %d and my friend counted %d", i, j);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. Although may look confusing, the point of this exercise is to show that ++ on the left side or on the right side, do not make a difference in an ordinary for loop.");
-        printGreenGenericLn(
-            "2. When ++ is on the left, we sum first, then read and then return the result. This result goes in the loop.");
-        printGreenGenericLn(
-            "3. When ++ is on the right, we read first, then sum and then return the result. This result goes in the loop.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Although may look confusing, the point of this exercise is to show that ++ on the left side or on the right side, do not make a difference in an ordinary for loop.");
+        GREEN.printGenericLn("2. When ++ is on the left, we sum first, then read and then return the result. This result goes in the loop.");
+        GREEN.printGenericLn("3. When ++ is on the right, we read first, then sum and then return the result. This result goes in the loop.");
     }
 
     private static void exercise8() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 8. Boxing and the difference between primitives");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: The album \"Hercules and The Love Affair\" of the band of the same name was published on the 10th of March 2008.");
-        printGreenGenericLn(
-            "We are going to use the numerology related to this album to explore boxing from primitive values");
+        GREEN.printGenericLn("Case: The album \"Hercules and The Love Affair\" of the band of the same name was published on the 10th of March 2008.");
+        GREEN.printGenericLn("We are going to use the numerology related to this album to explore boxing from primitive values");
 
         // Just a few warm up tests before we start
         // Note that boxing is strict in its conversion
@@ -520,31 +488,29 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGenericLn("The album starts with letter '%s' which is an %d in the integer form.", c, (int) c1);
         MAGENTA.printGenericLn("Since the duration is shorter than %d, we can register it in a Byte %d.", Byte.MAX_VALUE, byteNumber);
         MAGENTA.printGenericLn("Finally the published year can be registered in a two byte type like Short %d.", shortNumber);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. In Boxing, the only possible conversions are from int to Byte, Short, Character and Integer.");
-        printGreenGenericLn("2. Long needs an L at the end of it.There is no automatic conversion.");
-        printGreenGenericLn("3. Double and Float need D and F respectively. There is no automatic conversion.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. In Boxing, the only possible conversions are from int to Byte, Short, Character and Integer.");
+        GREEN.printGenericLn("2. Long needs an L at the end of it.There is no automatic conversion.");
+        GREEN.printGenericLn("3. Double and Float need D and F respectively. There is no automatic conversion.");
     }
 
     private static void exercise7() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 7. `jdeps` alternative `commands`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
-        printGreenGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
-        printGreenGenericLn("2. Classpath only works with unamed modules/automatic modules and their dependencies.");
-        printGreenGenericLn("3. Classpath does not work for modules that depend on automatic modules.");
+        GREEN.printGenericLn("Case: Let's examine jdeps by looking at Song \"Cousins\" from Vampire Weekend");
+        GREEN.printGenericLn("Please run mastery-4-3-modularity in order to fulfill this exercise.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. You can call jdeps with -cp -classpath or --class-path.");
+        GREEN.printGenericLn("2. Classpath only works with unamed modules/automatic modules and their dependencies.");
+        GREEN.printGenericLn("3. Classpath does not work for modules that depend on automatic modules.");
     }
 
     private static void exercise6() {
         printBrightCyanGenericLn("--- 6. Downcasting and Upcasting");
         printRainbowLn('=');
-        printGreenGenericLn(
-            "Case: Hercules and Love Affair is on tour and you are going to see them in the backstage!");
-        printGreenGenericLn("Can you go on their trailer? Probably not ☹️. We'll look into the not case.");
+        GREEN.printGenericLn("Case: Hercules and Love Affair is on tour and you are going to see them in the backstage!");
+        GREEN.printGenericLn("Can you go on their trailer? Probably not ☹️. We'll look into the not case.");
         var tourTrailerHLA = new TourTrailer("Hercules and Love Affair");
         MAGENTA.printGenericLn("This is the band in the trailer: %s", tourTrailerHLA);
         var limoFriends = new Limousine(List.of("You", "Joan", "Edith", "Margaret", "Dorothy"));
@@ -569,25 +535,21 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGenericLn("The subclass TourTrailer is just a more specific case of Trailer");
         MAGENTA.printGenericLn("And so we have the Trailer as %s", trailerHLA);
 
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. var declaration plays a smaller role in downcasting and upcasting, since the type is assigned on the right side.");
-        printGreenGenericLn("2. Upcasting is automatic, when the subtype is known.");
-        printGreenGenericLn("3. Casting in general has to be explicit if the subtype is unknown.");
-        printGreenGenericLn(
-            "4. Compilation errors occurs when the subtype is known and doesn't match the type being cast to.");
-        printGreenGenericLn(
-            "5. If it is possible to downcast, the compiler has no way to differentiate the actual instance being referenced to.");
-        printGreenGenericLn(
-            "6. The later results in a ClassCastException, which is a RuntimeException because only during runtime will the actual cast be attempted.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. var declaration plays a smaller role in downcasting and upcasting, since the type is assigned on the right side.");
+        GREEN.printGenericLn("2. Upcasting is automatic, when the subtype is known.");
+        GREEN.printGenericLn("3. Casting in general has to be explicit if the subtype is unknown.");
+        GREEN.printGenericLn("4. Compilation errors occurs when the subtype is known and doesn't match the type being cast to.");
+        GREEN.printGenericLn("5. If it is possible to downcast, the compiler has no way to differentiate the actual instance being referenced to.");
+        GREEN.printGenericLn("6. The later results in a ClassCastException, which is a RuntimeException because only during runtime will the actual cast be attempted.");
     }
 
     private static void exercise5() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 5. `Predicate` of types");
         printRainbowLn('=');
-        printGreenGenericLn("Case: Vampire Weekend had 2 wind by the Grammys for two of their albums.");
-        printGreenGenericLn("We'll build some predicates based on this and see the small differences.");
+        GREEN.printGenericLn("Case: Vampire Weekend had 2 wind by the Grammys for two of their albums.");
+        GREEN.printGenericLn("We'll build some predicates based on this and see the small differences.");
 
         final Predicate<Album> predicateWithType = (Album a) -> {
             if (a.getAlbumName()
@@ -629,23 +591,20 @@ public class Mastery4Dot3Runner {
         // Unchecked call to 'test(T)' as a member of raw type 'java.util.function.Predicate'
         MAGENTA.printGenericLn("Album %s won the grammys -> %s", modernVampiresOfTheCity, predicateWithoutType.test(modernVampiresOfTheCity));
         MAGENTA.printGenericLn("Album %s won the grammys -> %s", contra, predicateWithTypeOnlyOnReference.test(contra));
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn(
-            "1. Predicate with types are checked and therefore the reference much be checked as well for type");
-        printGreenGenericLn(
-            "2. Predicate without types are unchecked and unsafe and therefore the reference cannot be typed.");
-        printGreenGenericLn(
-            "3. You don't have to define the type of the input parameter if you already have done so for the reference.");
-        printGreenGenericLn("4. The previous rule works the same way as the diamond notation works.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Predicate with types are checked and therefore the reference much be checked as well for type");
+        GREEN.printGenericLn("2. Predicate without types are unchecked and unsafe and therefore the reference cannot be typed.");
+        GREEN.printGenericLn("3. You don't have to define the type of the input parameter if you already have done so for the reference.");
+        GREEN.printGenericLn("4. The previous rule works the same way as the diamond notation works.");
     }
 
     private static void exercise4() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 4. Valid modes in `RandomAccessFile`. Difference from using `append`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We are writing the lyrics to Contra");
-        printGreenGenericLn("We will use alternative methods to do so and alternate");
-        printGreenGenericLn("file will be located in /tmp/contra.txt");
+        GREEN.printGenericLn("Case: We are writing the lyrics to Contra");
+        GREEN.printGenericLn("We will use alternative methods to do so and alternate");
+        GREEN.printGenericLn("file will be located in /tmp/contra.txt");
         printRainbowLn('-');
         var allLines = List.of("https://www.songteksten.nl/songteksten/302818/vampire-weekend/i-think-ur-a-contra.html",
             "Never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
@@ -682,31 +641,24 @@ public class Mastery4Dot3Runner {
             }
         }
         printRainbowLn('-');
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. With RandomAccessFile, we can use seek to get to a point in the file.");
-        printGreenGenericLn("2. With RandomAccessFile, we know how many bytes exist in the file.");
-        printGreenGenericLn(
-            "3. With RandomAccessFile, the position after the end of the file has an index number equal to the file size.");
-        printGreenGenericLn("4. The index is based on an inclusive start index and an exclusive end index.");
-        printGreenGenericLn(
-            "5. With FileOutputStream we can append data at the end of the file without the need for seek. The append option does this for us.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. With RandomAccessFile, we can use seek to get to a point in the file.");
+        GREEN.printGenericLn("2. With RandomAccessFile, we know how many bytes exist in the file.");
+        GREEN.printGenericLn("3. With RandomAccessFile, the position after the end of the file has an index number equal to the file size.");
+        GREEN.printGenericLn("4. The index is based on an inclusive start index and an exclusive end index.");
+        GREEN.printGenericLn("5. With FileOutputStream we can append data at the end of the file without the need for seek. The append option does this for us.");
     }
 
     private static void exercise3() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 3. Mutability Guidelines with focus on 6.6.");
         printRainbowLn('=');
-        printGreenGenericLn("Case: In January 2020, Vampire Weekend won the best Album of the Year at the Grammy's.");
-        printGreenGenericLn(
-            "At the same time they have had already released a limited edition orange vinyl version of this album.");
-        printGreenGenericLn(
-            "No doubt that with such great success, this limited will have its price inflated through the years.");
-        printGreenGenericLn(
-            "You bought this record, and now, years later, a friend asks you if you can lend they your record.");
-        printGreenGenericLn(
-            "You are very protective of such a music gem and so you decide to make a copy of it, and give lend that to your friend.");
-        printGreenGenericLn(
-            "Your friend's intention turns out to be something else in the end. They was going to scratch it for you");
+        GREEN.printGenericLn("Case: In January 2020, Vampire Weekend won the best Album of the Year at the Grammy's.");
+        GREEN.printGenericLn("At the same time they have had already released a limited edition orange vinyl version of this album.");
+        GREEN.printGenericLn("No doubt that with such great success, this limited will have its price inflated through the years.");
+        GREEN.printGenericLn("You bought this record, and now, years later, a friend asks you if you can lend they your record.");
+        GREEN.printGenericLn("You are very protective of such a music gem and so you decide to make a copy of it, and give lend that to your friend.");
+        GREEN.printGenericLn("Your friend's intention turns out to be something else in the end. They was going to scratch it for you");
         printRainbowLn('-');
         var friend = new Frenemy("Frenemy");
         var orangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
@@ -730,17 +682,17 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGenericLn("Your original is still there 😉!!");
         MAGENTA.printGenericLn(yourOrangeAlbum);
         printRainbowLn('-');
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Guideline 6-6 / MUTABLE-6: Treat passing input to untrusted object as output");
-        printGreenGenericLn("2. More info: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Guideline 6-6 / MUTABLE-6: Treat passing input to untrusted object as output");
+        GREEN.printGenericLn("2. More info: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
     }
 
     private static void exercise2() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 2. Using `mapToObj`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
-        printGreenGenericLn("Let's have a look at the math behind it");
+        GREEN.printGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
+        GREEN.printGenericLn("Let's have a look at the math behind it");
         var peakPositionsPerCountry = Map.of("US", 38, "AUS", 6, "BEL", 10, "CAN", 24, "FRA", 22, "GER", 65, "IRL", 5,
             "NZ", 13, "SWI", 68, "UK", 8);
         MAGENTA.printGenericLn("This is their peak register on the charts on the  16th November 2020");
@@ -851,29 +803,23 @@ public class Mastery4Dot3Runner {
             .collect(Collectors.averagingInt(Double::intValue)));
         MAGENTA.printGenericLn("Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
         printRainbowLn('-');
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Calculating average can be done in different ways.");
-        printGreenGenericLn(
-            "2. All ways require the return value to double in the end unless we make our custom calculation.");
-        printGreenGenericLn(
-            "3. Using collectors, the result in never an Optional and this is because that is the way collectors work.");
-        printGreenGenericLn(
-            "4. Number streams do have collectors. We calculated avg using our own average implementation, but it will always be less efficient.");
-        printGreenGenericLn(
-            "5. The collector of the Number streams are used to solve value accumulation issues. They are perfect for custom reduce operations.");
-        printGreenGenericLn(
-            "6. The BiConsumer of a Number stream collector is called only during `parallel` stream operations. It is not called at all otherwise.");
-        printGreenGenericLn(
-            "7. The `average` method of a Number stream is there to solve this problem. However, it returns an `OptionalDouble`. We then call getAsDouble to know the value.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Calculating average can be done in different ways.");
+        GREEN.printGenericLn("2. All ways require the return value to double in the end unless we make our custom calculation.");
+        GREEN.printGenericLn("3. Using collectors, the result in never an Optional and this is because that is the way collectors work.");
+        GREEN.printGenericLn("4. Number streams do have collectors. We calculated avg using our own average implementation, but it will always be less efficient.");
+        GREEN.printGenericLn("5. The collector of the Number streams are used to solve value accumulation issues. They are perfect for custom reduce operations.");
+        GREEN.printGenericLn("6. The BiConsumer of a Number stream collector is called only during `parallel` stream operations. It is not called at all otherwise.");
+        GREEN.printGenericLn("7. The `average` method of a Number stream is there to solve this problem. However, it returns an `OptionalDouble`. We then call getAsDouble to know the value.");
     }
 
     private static void exercise1() {
         printRainbowLn('=');
         printBrightCyanGenericLn("--- 1. Indexes in a `ResultSet`");
         printRainbowLn('=');
-        printGreenGenericLn("Case: We are wondering what happened to MGMT and why we don't hear about them anymore.");
-        printGreenGenericLn("On this first exercise we will investigate their triad of hits.");
-        printGreenGenericLn("MGMT came into the Indie music scene in 2008 with their album Oracular Spectacular.");
+        GREEN.printGenericLn("Case: We are wondering what happened to MGMT and why we don't hear about them anymore.");
+        GREEN.printGenericLn("On this first exercise we will investigate their triad of hits.");
+        GREEN.printGenericLn("MGMT came into the Indie music scene in 2008 with their album Oracular Spectacular.");
 
         var songTimeToPretend = new Song("Time to pretend", "MGMT", LocalDate.of(2008, 3, 3));
         var songKids = new Song("Kids", "MGMT", LocalDate.of(2008, 10, 13));
@@ -972,19 +918,18 @@ public class Mastery4Dot3Runner {
         } catch (SQLException e) {
             printRedThrowableAndExit(e);
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. In Result sets, indexes are 1 based");
-        printGreenGenericLn("2. Conversions happen automatically if they match");
-        printGreenGenericLn("3. An Int if convertible to Integer, Long, Float, Double and Big Integer");
-        printGreenGenericLn(
-            "4. We can even get a special java.sql.Array type, which  returns the data in an array form valid for all types");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. In Result sets, indexes are 1 based");
+        GREEN.printGenericLn("2. Conversions happen automatically if they match");
+        GREEN.printGenericLn("3. An Int if convertible to Integer, Long, Float, Double and Big Integer");
+        GREEN.printGenericLn("4. We can even get a special java.sql.Array type, which  returns the data in an array form valid for all types");
     }
 
     private static void moduleEnd() {
         printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Indie/Pop flavor to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
+        GREEN.printGenericLn("Hope you enjoyed this mastery into Java 11 with some Indie/Pop flavor to it.");
+        GREEN.printGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        GREEN.printGenericLn("Thank you!");
         printUnicornsLn(100);
     }
 }

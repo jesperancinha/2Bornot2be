@@ -2,8 +2,8 @@ package org.jesperancinha.java11.crums.crum2;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum2 {
     public static void main(String[] args) {
@@ -17,13 +17,10 @@ public class Crum2 {
         BRIGHT_MAGENTA.printGenericLn("Maximum of float is -> %s", Float.MAX_VALUE);
         BRIGHT_MAGENTA.printGenericLn("Maximum of double is -> %s", Double.MAX_VALUE);
 
-        printGreenGenericLn("Maximum of one byte values can only be -> %s", Byte.MAX_VALUE);
-        printGreenGenericLn("Maximum of two byte values can only be -> %s",
-            Math.max(Short.MAX_VALUE, Character.MAX_VALUE));
-        printGreenGenericLn("Maximum of four byte values can only be -> %s",
-            Math.max(Integer.MAX_VALUE, Float.MAX_VALUE));
-        printGreenGenericLn("Maximum of eight byte values can only be -> %s",
-            Math.max(Long.MAX_VALUE, Double.MAX_VALUE));
+        GREEN.printGenericLn("Maximum of one byte values can only be -> %s", Byte.MAX_VALUE);
+        GREEN.printGenericLn("Maximum of two byte values can only be -> %s", Math.max(Short.MAX_VALUE, Character.MAX_VALUE));
+        GREEN.printGenericLn("Maximum of four byte values can only be -> %s", Math.max(Integer.MAX_VALUE, Float.MAX_VALUE));
+        GREEN.printGenericLn("Maximum of eight byte values can only be -> %s", Math.max(Long.MAX_VALUE, Double.MAX_VALUE));
 
     }
 }

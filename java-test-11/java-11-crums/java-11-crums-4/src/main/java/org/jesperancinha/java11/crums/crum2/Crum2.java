@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum2 {
@@ -54,14 +54,13 @@ public class Crum2 {
         MAGENTA.printGenericLn("But the boat list is a List! -> %s", args2);
         Object[] args1 = new Object[]{arrayDeque instanceof Collection, boats instanceof Collection};
         MAGENTA.printGenericLn("And both of them are collections: %s  %s", args1);
-        printGreenGenericLn(
-            "Unbounded types or wildcards with super determine the base type that can be added to a list");
-        printGreenGenericLn("These, however, say nothing about the return type.");
-        printGreenGenericLn("Not all Collections are Lists");
-        printGreenGenericLn("An ArrayList is a List, and is also a Collection");
-        printGreenGenericLn("A List is not a Collection. They are different interfaces");
-        printGreenGenericLn("An ArrayDeque is a Collection but it is not a List");
-        printGreenGenericLn("An ArrayDeque is Deque");
+        GREEN.printGenericLn("Unbounded types or wildcards with super determine the base type that can be added to a list");
+        GREEN.printGenericLn("These, however, say nothing about the return type.");
+        GREEN.printGenericLn("Not all Collections are Lists");
+        GREEN.printGenericLn("An ArrayList is a List, and is also a Collection");
+        GREEN.printGenericLn("A List is not a Collection. They are different interfaces");
+        GREEN.printGenericLn("An ArrayDeque is a Collection but it is not a List");
+        GREEN.printGenericLn("An ArrayDeque is Deque");
 
     }
 }

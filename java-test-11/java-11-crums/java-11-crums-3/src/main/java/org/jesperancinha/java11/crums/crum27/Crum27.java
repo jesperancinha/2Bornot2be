@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum27 {
@@ -29,7 +29,7 @@ public class Crum27 {
         MAGENTA.printGenericLn("This means that a band with less than or with two letters is:");
         printOrangeGenericLn(partitionMap.get(false));
 
-        printGreenGenericLn("The whole point of this exercise is to show that partitions are made with boolean values.");
+        GREEN.printGenericLn("The whole point of this exercise is to show that partitions are made with boolean values.");
 
     }
 }

@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.lyrics.durable;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.lyrics.service.LyricsService;
 
 import javax.annotation.Resource;
@@ -20,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.UUID;
+
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 @WebServlet(urlPatterns = "/send/random-lyric/durable")
 public class LyricsServlet extends HttpServlet {
@@ -47,7 +48,7 @@ public class LyricsServlet extends HttpServlet {
                 try {
                     jmsContext.setClientID(clientID);
                 } catch (Exception e) {
-                    Consolerizer.printGreenGenericLn(e);
+                    GREEN.printGenericLn(e);
                 }
                 JMSConsumer consumer = jmsContext.createDurableConsumer(topic, "LYRICS_CONSUMER");
 
@@ -87,7 +88,7 @@ public class LyricsServlet extends HttpServlet {
 
                 }
                 writer.println("Re-reading Completed <br>");
-                Consolerizer.printGreenGenericLn("The client Id must match in order to resume operartions once the jmsContext is restarted");
+                GREEN.printGenericLn("The client Id must match in order to resume operartions once the jmsContext is restarted");
             } finally {
                 jmsContext.close();
             }

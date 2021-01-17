@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum28 {
     public static void main(String[] args) {
@@ -51,8 +51,8 @@ public class Crum28 {
         });
         MAGENTA.printGenericLn(stones);
 
-        printGreenGenericLn("Notice the subtle but very function difference between Comparator and Comparable");
-        printGreenGenericLn("Comparable is used in an implementation of a type");
-        printGreenGenericLn("Comparator is used can be used as a custom comparator for our already defined type");
+        GREEN.printGenericLn("Notice the subtle but very function difference between Comparator and Comparable");
+        GREEN.printGenericLn("Comparable is used in an implementation of a type");
+        GREEN.printGenericLn("Comparator is used can be used as a custom comparator for our already defined type");
     }
 }

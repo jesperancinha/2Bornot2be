@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum2;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum2 {
 
@@ -16,8 +16,8 @@ public class Crum2 {
         MAGENTA.printGenericLn("The year was in a very strange way also  %d", new Crum2().dob);
         MAGENTA.printGenericLn("The year was in another very strange way also  %d", new Crum2().getDob());
 
-        printGreenGenericLn("Static access looks simple, but it has a lot of nuances");
-        printGreenGenericLn("`this` can still be  used to a access static variables from a local instance context");
+        GREEN.printGenericLn("Static access looks simple, but it has a lot of nuances");
+        GREEN.printGenericLn("`this` can still be  used to a access static variables from a local instance context");
 
     }
 

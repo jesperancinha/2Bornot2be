@@ -100,22 +100,6 @@ public class Consolerizer {
         printPrivateText(text, args);
     }
 
-    public static void printGreenGenericLn(Object text) {
-        GREEN.printGenericLn(text);
-    }
-
-    public static void printGreenGeneric(Object text) {
-        GREEN.printGeneric(text);
-    }
-
-    public static void printGreenGenericLn(String text, Object... args) {
-        GREEN.printGenericLn(text, args);
-    }
-
-    public static void printGreenGeneric(String text, Object... args) {
-        GREEN.printGeneric(text, args);
-    }
-
     public static void printRedGenericLn(String text, Object... args) {
         RED.printGenericLn(text, args);
     }

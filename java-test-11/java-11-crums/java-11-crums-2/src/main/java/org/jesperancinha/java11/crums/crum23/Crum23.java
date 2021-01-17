@@ -2,8 +2,8 @@ package org.jesperancinha.java11.crums.crum23;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum23 {
@@ -55,8 +55,7 @@ public class Crum23 {
         BRIGHT_MAGENTA.printGenericLn("Since Integer encompasses the range of char, we can convert char to int without the need to cast it");
         BRIGHT_MAGENTA.printGenericLn("Character, however does not encompass the whole range of int and this is why we need to cast it");
 
-        printGreenGenericLn(
-            "Remember that for primitives, the casting rule is that if the range doesn't fit you need to cast it");
-        printGreenGenericLn("If it fits, then casting is not needed");
+        GREEN.printGenericLn("Remember that for primitives, the casting rule is that if the range doesn't fit you need to cast it");
+        GREEN.printGenericLn("If it fits, then casting is not needed");
     }
 }

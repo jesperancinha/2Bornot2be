@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum23;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -28,7 +28,7 @@ public class Crum23 {
         printOrangeGenericLn(parF);
         printOrangeGenericLn(parD);
 
-        printGreenGenericLn("This is just to show that all different static method parsers of the different java.lang.Number types, all return a primitive");
+        GREEN.printGenericLn("This is just to show that all different static method parsers of the different java.lang.Number types, all return a primitive");
 
     }
 }

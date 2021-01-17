@@ -5,7 +5,7 @@ import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class AvizEncoder implements Encoder.Text<AvizEncodedMessage> {
 
@@ -21,7 +21,7 @@ public class AvizEncoder implements Encoder.Text<AvizEncodedMessage> {
 
     @Override
     public String encode(AvizEncodedMessage message) throws EncodeException {
-        printGreenGenericLn("Note that encoders work with objects. This is why we can decode automatically into a String, but not decode back from a String.");
+        GREEN.printGenericLn("Note that encoders work with objects. This is why we can decode automatically into a String, but not decode back from a String.");
         final var lowerCaseMessage = message.getEncodedMessage().toLowerCase();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < lowerCaseMessage.length(); i++) {

@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum15;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum15 {
 
@@ -24,10 +24,10 @@ public class Crum15 {
         MAGENTA.printGenericLn("And so  we have to name our static variable something else such as b=%s", crum15.getB());
         MAGENTA.printGenericLn("And so  we have to name our static variable something else such as b=%s", getB());
 
-        printGreenGenericLn("Variable initialization is mandatory in local scopes");
-        printGreenGenericLn("For instance and static scopes, we do not need to initialize them");
-        printGreenGenericLn("Variables of the same name cannot coexist on the same class even if they are instance and static members");
-        printGreenGenericLn("We always need to pay attention that static cannot access instance, but instance can access static");
+        GREEN.printGenericLn("Variable initialization is mandatory in local scopes");
+        GREEN.printGenericLn("For instance and static scopes, we do not need to initialize them");
+        GREEN.printGenericLn("Variables of the same name cannot coexist on the same class even if they are instance and static members");
+        GREEN.printGenericLn("We always need to pay attention that static cannot access instance, but instance can access static");
     }
 
     public int getA() {

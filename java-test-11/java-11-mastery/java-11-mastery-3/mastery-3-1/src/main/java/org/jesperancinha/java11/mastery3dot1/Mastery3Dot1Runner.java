@@ -43,9 +43,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
@@ -79,17 +79,17 @@ public class Mastery3Dot1Runner {
         exercise16();
 
         printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with a dutch flavour to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
+        GREEN.printGenericLn("Hope you enjoyed this mastery into Java 11 with a dutch flavour to it.");
+        GREEN.printGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        GREEN.printGenericLn("Thank you!");
         printUnicornsLn(100);
     }
 
     private static void exercise16() {
         printBrightCyanGenericLn("--- 16. Accessibility `@Override`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We hve different versions of `Verdronken Vlinder`.");
-        printGreenGenericLn("How many ways can we get them?");
+        GREEN.printGenericLn("Case: We hve different versions of `Verdronken Vlinder`.");
+        GREEN.printGenericLn("How many ways can we get them?");
         var originalVlinder = new OriginalVlinder();
         originalVlinder.publicPoint();
         var vlinder = new Vlinder();
@@ -101,8 +101,8 @@ public class Mastery3Dot1Runner {
     private static void exercise15() {
         printBrightCyanGenericLn("--- 15. `java.lang.OutOfMemoryError` and `Error` classes");
         printRainbowLn("==");
-        printGreenGenericLn("Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!");
-        printGreenGenericLn("What will happen if too many people buy it?");
+        GREEN.printGenericLn("Case: A new top 20 NL Hits CD is Out! And everyone wants to buy it!");
+        GREEN.printGenericLn("What will happen if too many people buy it?");
         BLUE.printGenericLn("Please wait...");
         BLUE.printGenericLn("...");
         var soldAlbums = new ArrayList<String>();
@@ -120,38 +120,38 @@ public class Mastery3Dot1Runner {
             printNewLine();
             printRedGenericLn("This is the expected error %s", e);
         }
-        printGreenGenericLn("OutOfMemory is always an Error.");
-        printGreenGenericLn("We can catch it!");
+        GREEN.printGenericLn("OutOfMemory is always an Error.");
+        GREEN.printGenericLn("We can catch it!");
     }
 
     private static void exercise14() {
         printBrightCyanGenericLn("--- 14. Accessing `static` `interface` methods");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We received a record case and want to see its descriptions.");
-        printGreenGenericLn("Do we need its instance?.");
+        GREEN.printGenericLn("Case: We received a record case and want to see its descriptions.");
+        GREEN.printGenericLn("Do we need its instance?.");
         final RecordCase recordCase = new RecordCase(100);
-        printGreenGenericLn("This is possible: recordCase.describeMe();");
+        GREEN.printGenericLn("This is possible: recordCase.describeMe();");
         recordCase.describeMe();
-        printGreenGenericLn("This is possible: ((Case)recordCase).describeMe();");
+        GREEN.printGenericLn("This is possible: ((Case)recordCase).describeMe();");
         ((Case) recordCase).describeMe();
         printRedGenericLn("This is not possible: ((Container)recordCase).describeMe();");
-        printGreenGenericLn("This is possible: Container.describeMe();");
+        GREEN.printGenericLn("This is possible: Container.describeMe();");
         Container.describeMe();
-        printGreenGenericLn("The point is that interface static methods cannot be called via an instance.");
-        printGreenGenericLn("There is hardly any reason to call a static method from an instance anyways.");
-        printGreenGenericLn("They can though, but only if they belong to ordinary classes and not interfaces.");
+        GREEN.printGenericLn("The point is that interface static methods cannot be called via an instance.");
+        GREEN.printGenericLn("There is hardly any reason to call a static method from an instance anyways.");
+        GREEN.printGenericLn("They can though, but only if they belong to ordinary classes and not interfaces.");
     }
 
     private static void exercise13() {
         printBrightCyanGenericLn("--- 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show");
-        printGreenGenericLn("However, the show on the ticket is from a missed show in Villa Thallia in Rotterdam which took  place 8 days ago.");
-        printGreenGenericLn("Can we mutate any of the three tickets we have for the past show?");
+        GREEN.printGenericLn("Case: Someone is trying to get into Trix in Antwerp to watch a Gers Pardoel show");
+        GREEN.printGenericLn("However, the show on the ticket is from a missed show in Villa Thallia in Rotterdam which took  place 8 days ago.");
+        GREEN.printGenericLn("Can we mutate any of the three tickets we have for the past show?");
         var ticketUnsafe = new UnsafeTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
         var ticketFinal = new FinalTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
         var ticketPrivate = PrivateTicket.createTicket(new Date(2019, 10, 9, 19, 30), "Villa Thalia - Rotterdam", "Gers Pardoel");
-        printGreenGenericLn("Current Tickets");
+        GREEN.printGenericLn("Current Tickets");
         MAGENTA.printGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
         MAGENTA.printGenericLn("Final Ticket -> %s", ticketFinal);
         MAGENTA.printGenericLn("Private Ticket -> %s", ticketPrivate);
@@ -161,27 +161,27 @@ public class Mastery3Dot1Runner {
         dateFinal.setDate(17);
         final Date datePrivate = ticketPrivate.getDate();
         datePrivate.setTime(17);
-        printGreenGenericLn("New Tickets");
+        GREEN.printGenericLn("New Tickets");
         MAGENTA.printGenericLn("Unsafe Ticket -> %s", ticketUnsafe);
         MAGENTA.printGenericLn("Final Ticket -> %s", ticketFinal);
         MAGENTA.printGenericLn("Private Ticket -> %s", ticketPrivate);
-        printGreenGenericLn("These tickets actually cannot be changed to anything convincing.");
-        printGreenGenericLn("However, one of the is not entirely immutable. We were able to change the date though.");
-        printGreenGenericLn("Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.");
+        GREEN.printGenericLn("These tickets actually cannot be changed to anything convincing.");
+        GREEN.printGenericLn("However, one of the is not entirely immutable. We were able to change the date though.");
+        GREEN.printGenericLn("Both the Final Ticket and Private Ticket are immutable. This is because they cannot be changed in any normal execution flow.");
     }
 
     private static void exercise12() {
         printBrightCyanGenericLn("--- 12. `Stream` count types");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We have the complete collection of `Diggy Dex` records.");
-        printGreenGenericLn("We will now count them");
+        GREEN.printGenericLn("Case: We have the complete collection of `Diggy Dex` records.");
+        GREEN.printGenericLn("We will now count them");
         final String[] allAlbums = {"Verhalen vanuit de Sofa", "Mayonaise voor de ziel", "Lange nachten, korte dagen", "Do it yourself", "Golven", "Karavaan"};
         var count = Arrays.stream(allAlbums).count();
         MAGENTA.printGenericLn("Diggy Dex has published %d albums!", count);
         MAGENTA.printGenericLn("The type of this count is long.");
         long countConvert = count;
         MAGENTA.printGenericLn("From long: %d", countConvert);
-        printGreenGenericLn("Stream counts are always long.");
+        GREEN.printGenericLn("Stream counts are always long.");
     }
 
     private static void exercise11() throws InterruptedException {
@@ -204,20 +204,20 @@ public class Mastery3Dot1Runner {
         executorService2.awaitTermination(10, TimeUnit.SECONDS);
         executorService3.awaitTermination(10, TimeUnit.SECONDS);
         executorService4.awaitTermination(10, TimeUnit.SECONDS);
-        printGreenGenericLn("Please wait while concert goers go inside the arenas...");
+        GREEN.printGenericLn("Please wait while concert goers go inside the arenas...");
         printOrangeGenericLn("Live concert has %d goers", liveConcert.getCurrentCount());
         printOrangeGenericLn("Safe live concert has %d goers", safeLiveConcert.getCurrentCount());
         printOrangeGenericLn("Unregulated live concert has %d goers", unregulatedConcert.getCurrentCount());
         printOrangeGenericLn("Virtual live concert has %d goers", safeLiveConcert.getCurrentCount());
-        printGreenGenericLn("All thread safe concert arenas should have only 50 concert goes.");
-        printGreenGenericLn("We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.");
-        printGreenGenericLn("In our case, more concert goers got in the  non thread-safe spaces.");
+        GREEN.printGenericLn("All thread safe concert arenas should have only 50 concert goes.");
+        GREEN.printGenericLn("We can also say that thread safe object allow changes to happen but in a controlled manner where one thread does not influece the others result.");
+        GREEN.printGenericLn("In our case, more concert goers got in the  non thread-safe spaces.");
     }
 
     private static void exercise10() {
         printBrightCyanGenericLn("--- 10. Passing variables by value and not returning in `Stream`");
         printRainbowLn("==");
-        printGreenGenericLn("Let's create a list of the band \"De Jeugd van Tegenwoordig\"");
+        GREEN.printGenericLn("Let's create a list of the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
         MAGENTA.printGenericLn("The array is %10s", (Object[]) band);
         MAGENTA.printGenericLn("This is the band: %s", Arrays.toString(band));
@@ -228,13 +228,13 @@ public class Mastery3Dot1Runner {
         var realNameList = new LinkedList<>(List.of("Olivier Mitshel Locadia", "Alfred Tratlehner", "Pepijn Lanen", "Bas Bron"));
         List<String> completeBand = bandList.stream().map(member -> member.concat("(").concat(realNameList.remove()).concat(")")).collect(Collectors.toList());
         MAGENTA.printGenericLn("We finally got all the names!! 😉 %s", completeBand);
-        printGreenGenericLn("For loops do not affect elements directly. They may only affect their contents...");
+        GREEN.printGenericLn("For loops do not affect elements directly. They may only affect their contents...");
     }
 
     private static void exercise9() {
         printBrightCyanGenericLn("--- 9. Declaring a `String` array.");
         printRainbowLn("==");
-        printGreenGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
+        GREEN.printGenericLn("We'll just list the band \"De Jeugd van Tegenwoordig\"");
         final String[] band = {"Willie Wartaal", "Vieze Fur", "Faberyayo", "Bas Bron"};
         BLUE.printGenericLn("final String[]  band = {\"Willie Wartaal\", \"Vieze Fur\", \"Faberyayo\", \"Bas Bron\"};");
         MAGENTA.printGenericLn("This is the band: %s", String.join(",", band));
@@ -243,22 +243,22 @@ public class Mastery3Dot1Runner {
     private static void exercise8() {
         printBrightCyanGenericLn("--- 8. Initialization of invisible `primitive` members");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Our shop has grown a lot and we need a brand new bookcase!");
-        printGreenGenericLn("Let's create one!");
+        GREEN.printGenericLn("Case: Our shop has grown a lot and we need a brand new bookcase!");
+        GREEN.printGenericLn("Let's create one!");
 
         var recordCase = new RecordCase(100);
         MAGENTA.printGenericLn("Case details -> %s", recordCase);
         recordCase.printStuff();
-        printGreenGenericLn("Take notice on the member calling before creation.");
-        printGreenGenericLn("Which methods are actually called and why?");
-        printGreenGenericLn("Generally speaking, only after `super`, are the instance variable members initialized.");
+        GREEN.printGenericLn("Take notice on the member calling before creation.");
+        GREEN.printGenericLn("Which methods are actually called and why?");
+        GREEN.printGenericLn("Generally speaking, only after `super`, are the instance variable members initialized.");
     }
 
     private static void exercise7() {
         printBrightCyanGenericLn("--- 7. Type of elements in a diamond notation declared `ArrayList` assigned to `var`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We've created a list of elements but didn't gave it a type with diamond notation!");
-        printGreenGenericLn("We can't sell these at our shop this way, but what is their type?");
+        GREEN.printGenericLn("Case: We've created a list of elements but didn't gave it a type with diamond notation!");
+        GREEN.printGenericLn("We can't sell these at our shop this way, but what is their type?");
         printYellowGenericLn(" var itemsWithNoName = new ArrayList<>();\n" +
                 "        itemsWithNoName.add(\"Diggy Dex Ft. Eva De Roovere\");\n" +
                 "        itemsWithNoName.add(\"Slaap Lekker (Fantastig Toch)\");\n" +
@@ -274,27 +274,27 @@ public class Mastery3Dot1Runner {
         MAGENTA.printGenericLn("This is the type of this list, %s", itemsWithNoName.getClass());
         MAGENTA.printGenericLn("And these are the types of its contents, %s", itemsWithNoName.getClass());
         MAGENTA.printGenericLn("We can only list the singers, %s, `Object`'s", singers);
-        printGreenGenericLn("The point is, just like in any List, the type is important when retrieving the items.");
-        printGreenGenericLn("Although diamond notation is handy in the old syntax, with the use of `var` it becomes rather obsolete and leads to confusing code.");
+        GREEN.printGenericLn("The point is, just like in any List, the type is important when retrieving the items.");
+        GREEN.printGenericLn("Although diamond notation is handy in the old syntax, with the use of `var` it becomes rather obsolete and leads to confusing code.");
     }
 
     private static void exercise6() {
         printBrightCyanGenericLn("--- 6. How `getRoot()` exhibits the root `Path`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We placed our files somewhere, but how do we call the root?");
+        GREEN.printGenericLn("Case: We placed our files somewhere, but how do we call the root?");
         printYellowGenericLn("Path.of(\"/tmp\").getRoot()");
         MAGENTA.printGenericLn(Path.of("/tmp").getRoot());
-        printGreenGenericLn("That's it! Slashes are part of root, not of individual paths");
+        GREEN.printGenericLn("That's it! Slashes are part of root, not of individual paths");
     }
 
     private static void exercise5() {
         printBrightCyanGenericLn("--- 5. How `null` is interpreted in overloading");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We receive different shop items.");
-        printGreenGenericLn("Now we want to check their state.");
-        printGreenGenericLn("In our shop there are many automated ways of checking the state of items, but we generally just call the `checkItem` procedure.");
-        printGreenGenericLn("We receive a copy of the album \"De stilte voorbij\" by pop-band \"Abel\", but the store manager has found different ways to check it's authenticity.");
-        printGreenGenericLn("Let's see how he does it:");
+        GREEN.printGenericLn("Case: We receive different shop items.");
+        GREEN.printGenericLn("Now we want to check their state.");
+        GREEN.printGenericLn("In our shop there are many automated ways of checking the state of items, but we generally just call the `checkItem` procedure.");
+        GREEN.printGenericLn("We receive a copy of the album \"De stilte voorbij\" by pop-band \"Abel\", but the store manager has found different ways to check it's authenticity.");
+        GREEN.printGenericLn("Let's see how he does it:");
 
         var record = new VinylRecord("2742984738947894790942370470", "De stilte voorbij", "2000", "[PIAS] Holland", "Normal");
         MAGENTA.printGenericLn("This is our record. It's a vinyl! %s", record);
@@ -307,14 +307,14 @@ public class Mastery3Dot1Runner {
         Shop.checkItem((ShopItem) record);
         MAGENTA.printGenericLn("Finally we make a machine a start the `checkItem` procedure without a record");
         Shop.checkItem(null);
-        printGreenGenericLn("Never forget that a call with null will search for the most specific overloading!");
+        GREEN.printGenericLn("Never forget that a call with null will search for the most specific overloading!");
     }
 
     private static void exercise4() {
         printBrightCyanGenericLn("--- 4. `@Override` in `equals`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We want to buy a record of Maaike Ouboter");
-        printGreenGenericLn("We made a selection of an article we really want to buy.");
+        GREEN.printGenericLn("Case: We want to buy a record of Maaike Ouboter");
+        GREEN.printGenericLn("We made a selection of an article we really want to buy.");
         MAGENTA.printGenericLn("Customer -> Good morning, do you have Maaike Ouboter album \"Vanaf nu is het van jou?\"");
         MAGENTA.printGenericLn("Clerk -> Yes I do, let me check...");
         var albumsInStore = List.of(
@@ -330,22 +330,22 @@ public class Mastery3Dot1Runner {
         MAGENTA.printGenericLn("Clerk -> Yes, let me check if we have it... %b. We don't sorry. Do you have another selection?", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "SuperSpecial")));
         MAGENTA.printGenericLn("Customer -> Yes, I want the special edition please");
         MAGENTA.printGenericLn("Clerk -> Yes, let me check if we have it... %b. Yes! We do! Great! 😉", itemsInStore.contains(new ShopItem("", "Vanaf nu is het van jou", "2018", "Sony Music Entertainment", "Special")));
-        printGreenGenericLn("Important take out here is that `@Override` must be done with `Object` and equals can of course be overloaded.");
+        GREEN.printGenericLn("Important take out here is that `@Override` must be done with `Object` and equals can of course be overloaded.");
     }
 
     private static void exercise3() {
         printBrightCyanGenericLn("--- 3. `Files.newDirectoryStream` Listings and the `glob` pattern");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We saved a part of Abel's Lyrics somewhere, for our social study work, but we don't know where the file is.");
-        printGreenGenericLn("We took the lyrics from https://www.musixmatch.com/lyrics/Abel/Onderweg,");
-        printGreenGenericLn("but now we have no access to the internet and we have to deliver our work in 2 hours! Help!");
-        printGreenGenericLn("In this exercise we will find Abel's lyrics in our tmp folder. We hope the system hasn't deleted it yet...");
+        GREEN.printGenericLn("Case: We saved a part of Abel's Lyrics somewhere, for our social study work, but we don't know where the file is.");
+        GREEN.printGenericLn("We took the lyrics from https://www.musixmatch.com/lyrics/Abel/Onderweg,");
+        GREEN.printGenericLn("but now we have no access to the internet and we have to deliver our work in 2 hours! Help!");
+        GREEN.printGenericLn("In this exercise we will find Abel's lyrics in our tmp folder. We hope the system hasn't deleted it yet...");
         MAGENTA.printGenericLn("We will try to find our file in /tmp. Remember to run ./prepare.sh. Check Readme.md for more details:");
 
         try {
             var temporaryFolder = Paths.get("/tmp");
             var glob1 = "*.{gif,jpeg,jpg,bmp}";
-            printGreenGenericLn("If we use a glob filter of %s we get:", glob1);
+            GREEN.printGenericLn("If we use a glob filter of %s we get:", glob1);
             DirectoryStream<Path> ds1 = Files.newDirectoryStream(temporaryFolder, glob1);
             Spliterator<Path> spliterator1 = ds1.spliterator();
             if (spliterator1.tryAdvance(Consolerizer::printYellowGenericLn)) {
@@ -354,7 +354,7 @@ public class Mastery3Dot1Runner {
                 printRedGenericLn("No file found!");
             }
             var glob2 = "*.{txt}";
-            printGreenGenericLn("This was the wrong extension! If we use a glob filter of %s we get:", glob2);
+            GREEN.printGenericLn("This was the wrong extension! If we use a glob filter of %s we get:", glob2);
             DirectoryStream<Path> ds2 = Files.newDirectoryStream(temporaryFolder, glob2);
             Spliterator<Path> spliterator2 = ds2.spliterator();
             if (spliterator2.tryAdvance(Consolerizer::printYellowGenericLn)) {
@@ -365,7 +365,7 @@ public class Mastery3Dot1Runner {
                 System.exit(1);
             }
             final String glob3 = "[ebal][ebal][ebal][ebal].[rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde][rwegonde].{txt}";
-            printGreenGenericLn("But this may lead to a lot of them! If we use a glob filter of %s we get:", glob3);
+            GREEN.printGenericLn("But this may lead to a lot of them! If we use a glob filter of %s we get:", glob3);
             DirectoryStream<Path> ds3 = Files.newDirectoryStream(temporaryFolder, glob3);
             Spliterator<Path> spliterator3 = ds3.spliterator();
             if (spliterator3.tryAdvance(Consolerizer::printYellowGenericLn)) {
@@ -376,7 +376,7 @@ public class Mastery3Dot1Runner {
                 System.exit(1);
             }
             final String glob4 = "abel.onderweg.?";
-            printGreenGenericLn("But this may still lead to a lot of them! If we use a glob filter of %s we get:", glob4);
+            GREEN.printGenericLn("But this may still lead to a lot of them! If we use a glob filter of %s we get:", glob4);
             DirectoryStream<Path> ds4 = Files.newDirectoryStream(temporaryFolder, glob4);
             Spliterator<Path> spliterator4 = ds4.spliterator();
             if (spliterator4.tryAdvance(Consolerizer::printYellowGenericLn)) {
@@ -387,7 +387,7 @@ public class Mastery3Dot1Runner {
                 System.exit(1);
             }
             final String glob5 = "abel.onderweg.{txt}";
-            printGreenGenericLn("But this is not even our file!! If we use a glob filter of %s we get:", glob5);
+            GREEN.printGenericLn("But this is not even our file!! If we use a glob filter of %s we get:", glob5);
             DirectoryStream<Path> ds5 = Files.newDirectoryStream(temporaryFolder, glob5);
             Spliterator<Path> spliterator5 = ds5.spliterator();
             if (!spliterator5.tryAdvance(file -> {
@@ -413,22 +413,22 @@ public class Mastery3Dot1Runner {
     private static void exercise2() {
         printBrightCyanGenericLn("--- 2. Labels and `break` in loops");
         printRainbowLn("==");
-        printGreenGenericLn("Case: You are a fan of \"De Jeugd van Tegenwoordig\" and you just keep buying their records.");
-        printGreenGenericLn("You have a shelf with three rows where your records are organized by most favourite too less favourite album.");
-        printGreenGenericLn("However, you bought a bunch of repeated records and because of your mood wings,");
-        printGreenGenericLn("You don't even know anymore which one is your favourite and which one is not.");
-        printGreenGenericLn("So now you have 2 records on the top shelf, 4 on the second one and 10 at the bottom!");
-        printGreenGenericLn("But \"De Jeugd van Tegenwoordig\" only edited 8 albums!");
-        printGreenGenericLn("We will use old fashioned for loops to figure out this mess.");
-        printGreenGenericLn("On our example we just want to check how many iteration our for loops will perform.");
-        printGreenGenericLn("Our criteria is:");
-        printGreenGenericLn("1. For loop will break once a repetition is found");
-        printGreenGenericLn("2. The Atomic Integer counts the number of repetitions found");
-        printGreenGenericLn("3. Keep in mind that there might be more repetitions in one particular iteration, but those are not counted");
-        printGreenGenericLn("4. Remember that the for loop will break and will skip the rest of the albums on that iteration");
-        printGreenGenericLn("5. No repetitions will be counted on the same shelf");
-        printGreenGenericLn("6. I know its difficult but that's the point 😊");
-        printGreenGenericLn("Your goal is to guess how many iterations will the atomic number count");
+        GREEN.printGenericLn("Case: You are a fan of \"De Jeugd van Tegenwoordig\" and you just keep buying their records.");
+        GREEN.printGenericLn("You have a shelf with three rows where your records are organized by most favourite too less favourite album.");
+        GREEN.printGenericLn("However, you bought a bunch of repeated records and because of your mood wings,");
+        GREEN.printGenericLn("You don't even know anymore which one is your favourite and which one is not.");
+        GREEN.printGenericLn("So now you have 2 records on the top shelf, 4 on the second one and 10 at the bottom!");
+        GREEN.printGenericLn("But \"De Jeugd van Tegenwoordig\" only edited 8 albums!");
+        GREEN.printGenericLn("We will use old fashioned for loops to figure out this mess.");
+        GREEN.printGenericLn("On our example we just want to check how many iteration our for loops will perform.");
+        GREEN.printGenericLn("Our criteria is:");
+        GREEN.printGenericLn("1. For loop will break once a repetition is found");
+        GREEN.printGenericLn("2. The Atomic Integer counts the number of repetitions found");
+        GREEN.printGenericLn("3. Keep in mind that there might be more repetitions in one particular iteration, but those are not counted");
+        GREEN.printGenericLn("4. Remember that the for loop will break and will skip the rest of the albums on that iteration");
+        GREEN.printGenericLn("5. No repetitions will be counted on the same shelf");
+        GREEN.printGenericLn("6. I know its difficult but that's the point 😊");
+        GREEN.printGenericLn("Your goal is to guess how many iterations will the atomic number count");
         var albumList = List.of("Parels voor de zwijnen", "De Machine", "De lachende derde", "“Ja, Natúúrlijk!”", "X - Viering van het super decennium", "Manon", "Luek", "Anders (Different)");
         var random = new Random();
         int numberOfAlbums = albumList.size();
@@ -440,17 +440,17 @@ public class Mastery3Dot1Runner {
 
         }
         var dwtRandomizer = new RandomizerDWVT();
-        printGreenGenericLn("These are your randomized shelves:");
+        GREEN.printGenericLn("These are your randomized shelves:");
         int nShelf1 = 2;
         var shelf1 = dwtRandomizer.getAlbums(nShelf1);
-        printGreenGenericLn("Shelf 1 -> %s", shelf1);
+        GREEN.printGenericLn("Shelf 1 -> %s", shelf1);
         int nShelf2 = 4;
         var shelf2 = dwtRandomizer.getAlbums(nShelf2);
-        printGreenGenericLn("Shelf 2 -> %s", shelf2);
+        GREEN.printGenericLn("Shelf 2 -> %s", shelf2);
         int nShelf3 = 10;
         var shelf3 = dwtRandomizer.getAlbums(nShelf3);
-        printGreenGenericLn("Shelf 3 -> %s", shelf3);
-        printGreenGenericLn("Please guess how many repetitions will this method find ->", shelf3);
+        GREEN.printGenericLn("Shelf 3 -> %s", shelf3);
+        GREEN.printGenericLn("Please guess how many repetitions will this method find ->", shelf3);
         var scanner = new Scanner(System.in);
         var repetitions = scanner.nextInt();
         var atomicInteger = new AtomicInteger();
@@ -472,30 +472,30 @@ public class Mastery3Dot1Runner {
             }
         }
         if (repetitions == atomicInteger.get()) {
-            printGreenGenericLn("You made it champ!! There are indeed %d repetitions found! 🥇", atomicInteger.get());
+            GREEN.printGenericLn("You made it champ!! There are indeed %d repetitions found! 🥇", atomicInteger.get());
         } else {
             printRedGenericLn("You failed this time, but try again. %d repetitions were found. Your participation awards you with a medal of courage! 🎖", atomicInteger.get());
         }
-        printGreenGenericLn("1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)");
-        printGreenGenericLn("2. https://www.youtube.com/watch?v=cNMXSKfWfLQ");
+        GREEN.printGenericLn("1. https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep)");
+        GREEN.printGenericLn("2. https://www.youtube.com/watch?v=cNMXSKfWfLQ");
 
     }
 
     private static void exercise1() {
         printBrightCyanGenericLn("--- 1. `Integer` Mathematical Bases `parseInt`");
         printRainbowLn("==");
-        printGreenGenericLn("According to NPO(https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein),  Diggy Dex single, \"Grote Mannen Worden Klein\" was releases in 2014");
-        printGreenGenericLn("Let's see different ways to visualize this:");
+        GREEN.printGenericLn("According to NPO(https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein),  Diggy Dex single, \"Grote Mannen Worden Klein\" was releases in 2014");
+        GREEN.printGenericLn("Let's see different ways to visualize this:");
         var debutGroteMannen = "2014";
-        printGreenGenericLn("*** Integer.parseInt(%s)", debutGroteMannen);
+        GREEN.printGenericLn("*** Integer.parseInt(%s)", debutGroteMannen);
         printYellowGenericLn("The single was \"Grote Mannen Worden Klein\" was released, in Decimal, in the year %d", Integer.parseInt(debutGroteMannen, 10));
         var binaryValue = Integer.toBinaryString(2014);
-        printGreenGenericLn("*** Integer.parseInt(%s, 2)", binaryValue);
+        GREEN.printGenericLn("*** Integer.parseInt(%s, 2)", binaryValue);
         printYellowGenericLn("The single was \"Grote Mannen Worden Klein\" was released, in Binary, in the year %d", Integer.parseInt(binaryValue, 2));
-        printGreenGenericLn("References");
-        printGreenGenericLn("1. https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein");
-        printGreenGenericLn("2. https://www.last.fm/music/Diggy+Dex/_/Grote+Mannen+Worden+Klein");
-        printGreenGenericLn("3. https://www.metrolyrics.com/grote-mannen-worden-klein-lyrics-diggy-dex.html");
+        GREEN.printGenericLn("References");
+        GREEN.printGenericLn("1. https://www.nporadio2.nl/song/3230/grote-mannen-worden-klein");
+        GREEN.printGenericLn("2. https://www.last.fm/music/Diggy+Dex/_/Grote+Mannen+Worden+Klein");
+        GREEN.printGenericLn("3. https://www.metrolyrics.com/grote-mannen-worden-klein-lyrics-diggy-dex.html");
     }
 
     private static ExecutorService call100ThreadsOnConcert(Concert concert) {

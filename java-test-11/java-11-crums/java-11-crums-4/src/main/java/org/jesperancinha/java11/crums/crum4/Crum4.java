@@ -5,8 +5,8 @@ import org.jesperancinha.console.consolerizer.Consolerizer;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum4 {
 
@@ -40,9 +40,7 @@ public class Crum4 {
             .getAnnotations())
             .forEach(Consolerizer::printBrightCyanGenericLn);
 
-        printGreenGenericLn(
-            "We need to be aware that although we made our annotation Boat repeatable, it is not dependent on Boats");
-        printGreenGenericLn(
-            "The code declaration of Boats allow us to use the Boat annotation independently and repeatedly");
+        GREEN.printGenericLn("We need to be aware that although we made our annotation Boat repeatable, it is not dependent on Boats");
+        GREEN.printGenericLn("The code declaration of Boats allow us to use the Boat annotation independently and repeatedly");
     }
 }

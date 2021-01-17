@@ -1,8 +1,5 @@
 package org.jesperancinha.jtd.jee.soul.servlet;
 
-import org.eclipse.persistence.internal.jpa.config.queries.FieldResultImpl;
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -13,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @WebServlet("/corvette")
@@ -38,8 +35,8 @@ public class LittleRedCorvetteServlet extends HttpServlet {
         writer.println(FROM);
         writer.println(BABY_YOU_RE_MUCH_TOO_FAST);
         printYellowGenericLn(BABY_YOU_RE_MUCH_TOO_FAST);
-        printGreenGenericLn("The point here is that in a normal situation the sequence is init -> service -> get -> destroy");
-        printGreenGenericLn("This cycle can be broken if overriding doesn't continue in the super methods");
+        GREEN.printGenericLn("The point here is that in a normal situation the sequence is init -> service -> get -> destroy");
+        GREEN.printGenericLn("This cycle can be broken if overriding doesn't continue in the super methods");
         super.service(req,resp);
 
     }

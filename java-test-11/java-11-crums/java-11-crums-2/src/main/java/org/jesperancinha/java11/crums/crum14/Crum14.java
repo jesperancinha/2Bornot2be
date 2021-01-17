@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum14 {
@@ -52,10 +52,8 @@ public class Crum14 {
         // Type argument cannot be of primitive type
         // List<int> abc = new ArrayList<>();
 
-        printGreenGenericLn(
-            "The first list isn't changed. We must never forget that List.of returns an unmutable ArrayList.");
-        printGreenGenericLn(
-            "The second list changes because ArrayList is mutable and had been created initially from the source array, which stays in memory");
+        GREEN.printGenericLn("The first list isn't changed. We must never forget that List.of returns an unmutable ArrayList.");
+        GREEN.printGenericLn("The second list changes because ArrayList is mutable and had been created initially from the source array, which stays in memory");
 
     }
 }

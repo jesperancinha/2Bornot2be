@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum8;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -18,9 +18,9 @@ public class Crum8 implements B {
         printOrangeGenericLn("We've counted %d sheeps from a total of %d", i, theSheeps);
 
         printYellowGenericLn("And sheeps make this sound %s", B.sheepMakesASound());
-        printGreenGenericLn("An interface can have methods that @Override other methods");
-        printGreenGenericLn("An interface can contain private methods that contain a body");
-        printGreenGenericLn("Static methods are also valida, public by default and must have a body");
+        GREEN.printGenericLn("An interface can have methods that @Override other methods");
+        GREEN.printGenericLn("An interface can contain private methods that contain a body");
+        GREEN.printGenericLn("Static methods are also valida, public by default and must have a body");
     }
 
     @Override

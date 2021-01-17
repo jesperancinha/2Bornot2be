@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum32;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum32 {
@@ -56,8 +56,8 @@ public class Crum32 {
             + "        final short bBB = bB;\n" + "        final char bCB = Character.highSurrogate(bB);\n"
             + "        final int bDB = bB;\n" + "        final long bEB = bB;\n" + "        final float bFB = bB;\n"
             + "        final double bGB = bB;");
-        printGreenGenericLn("Unboxing works in the same way as primitive inter conversions");
-        printGreenGenericLn("There are some exceptions");
-        printGreenGenericLn("If the type to be converted to is shorter or doesn't match the range, unboxing will not happen implicitly");
+        GREEN.printGenericLn("Unboxing works in the same way as primitive inter conversions");
+        GREEN.printGenericLn("There are some exceptions");
+        GREEN.printGenericLn("If the type to be converted to is shorter or doesn't match the range, unboxing will not happen implicitly");
     }
 }

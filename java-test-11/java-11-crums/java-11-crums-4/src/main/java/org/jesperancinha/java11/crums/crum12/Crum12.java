@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum12;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum12 {
@@ -31,7 +31,6 @@ public class Crum12 {
         printOrangeGenericLn(k == ka);
         printOrangeGenericLn(l == la);
 
-        printGreenGenericLn(
-            "Java optimizes values from -128 to 127. The rest of the objects use cache. This is why the equals fails for the last case");
+        GREEN.printGenericLn("Java optimizes values from -128 to 127. The rest of the objects use cache. This is why the equals fails for the last case");
     }
 }

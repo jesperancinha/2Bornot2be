@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 @Path("/kings/{text1}.{text2}.subjects")
 @RequestScoped
@@ -26,9 +26,8 @@ public class KingsRestService {
         @PathParam("text2")
             String text2
     ) {
-        printGreenGenericLn("We can get text1 and text2 as input path params -> %s, %s", text1, text2);
-         printGreenGenericLn(
-            "This happens regardless of how complicated the path is established both on the class or on the method.");
+        GREEN.printGenericLn("We can get text1 and text2 as input path params -> %s, %s", text1, text2);
+        GREEN.printGenericLn("This happens regardless of how complicated the path is established both on the class or on the method.");
         return KINGS_BURGUNDY;
     }
 

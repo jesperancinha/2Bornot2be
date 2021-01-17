@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum13;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
@@ -30,7 +30,7 @@ public class Crum13 {
             printRedThrowableAndExit(e);
         }
 
-        printGreenGenericLn("The rule is always that the method overriding is always more specific if we choose to override the exception");
-        printGreenGenericLn("No exception is always acceptable in the overriding method.");
+        GREEN.printGenericLn("The rule is always that the method overriding is always more specific if we choose to override the exception");
+        GREEN.printGenericLn("No exception is always acceptable in the overriding method.");
     }
 }

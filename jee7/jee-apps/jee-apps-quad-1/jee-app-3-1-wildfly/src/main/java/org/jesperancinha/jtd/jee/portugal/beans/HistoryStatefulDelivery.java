@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Stack;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @Stateful
@@ -23,7 +23,7 @@ public class  HistoryStatefulDelivery implements Serializable {
     final Stack<String> stackOfEvents1 = HistoryContentCreator.stackOfEvents1();
 
     public HistoryStatefulDelivery() {
-        printGreenGenericLn("This is a %s with hash %s", this.getClass()
+        GREEN.printGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
         printYellowGenericLn(stackOfEvents1);
 

@@ -6,8 +6,8 @@ import java.util.Objects;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum6 {
     public static void main(String[] args) {
@@ -28,8 +28,7 @@ public class Crum6 {
             MAGENTA.printGenericLn("Try writing a string now:");
             final String s = console.readLine();
             MAGENTA.printGenericLn("This is your string %s", s);
-            printGreenGenericLn(
-                "Our console always has `readPassword`, `readLine`, a `writer`, a `reader` and we can write to the output via `format`");
+            GREEN.printGenericLn("Our console always has `readPassword`, `readLine`, a `writer`, a `reader` and we can write to the output via `format`");
         }
     }
 }

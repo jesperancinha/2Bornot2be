@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Stack;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 @Singleton
@@ -21,9 +21,9 @@ public class HistorySingletonDelivery implements Serializable {
         printRedGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
 
-        printGreenGenericLn("A @Singleton bean is never passivated and only has two stages:");
-        printGreenGenericLn("Non-existent and ready for activation");
-        printGreenGenericLn("A @Singleton is already @ApplicationScoped");
+        GREEN.printGenericLn("A @Singleton bean is never passivated and only has two stages:");
+        GREEN.printGenericLn("Non-existent and ready for activation");
+        GREEN.printGenericLn("A @Singleton is already @ApplicationScoped");
     }
 
     public List<String> getSomeHistory() {

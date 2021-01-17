@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -47,11 +47,9 @@ public class Crum7 {
         printOrangeGenericLn("And there we go, Camilla Cabello has now index %d in our list",
             singerNames.indexOf("Camilla Cabello"));
 
-        printGreenGenericLn("indexOf and contains accept objects");
-        printGreenGenericLn("Setting a wrong type as a parameter is pointless, but it doesn't cause an exception");
-        printGreenGenericLn(
-            "In both cases this is just a find operation which makes it logic that it does not throw an exception and instead it just returns false");
-        printGreenGenericLn(
-            "As an added curiosity, not that Arrays.asList returns a fixed size list. It is still mutable. List.of is immutable");
+        GREEN.printGenericLn("indexOf and contains accept objects");
+        GREEN.printGenericLn("Setting a wrong type as a parameter is pointless, but it doesn't cause an exception");
+        GREEN.printGenericLn("In both cases this is just a find operation which makes it logic that it does not throw an exception and instead it just returns false");
+        GREEN.printGenericLn("As an added curiosity, not that Arrays.asList returns a fixed size list. It is still mutable. List.of is immutable");
     }
 }

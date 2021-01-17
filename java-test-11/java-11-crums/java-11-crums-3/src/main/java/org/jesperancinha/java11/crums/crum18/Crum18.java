@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum18 {
@@ -85,13 +85,12 @@ public class Crum18 {
             .sorted(comparator3)
             .collect(Collectors.toList()));
 
-        printGreenGenericLn("A Comparator is not a Comparable");
-        printGreenGenericLn("We compare with comparables");
-        printGreenGenericLn("Comparable is an interface");
-        printGreenGenericLn(
-            "Comparator is a functional interface, which receives two arguments of the same type and return an int");
-        printGreenGenericLn("The int represents a form of distance between the two comparable objects");
-        printGreenGenericLn("The original compareTo method is an implementation of the Comparator functional interface");
+        GREEN.printGenericLn("A Comparator is not a Comparable");
+        GREEN.printGenericLn("We compare with comparables");
+        GREEN.printGenericLn("Comparable is an interface");
+        GREEN.printGenericLn("Comparator is a functional interface, which receives two arguments of the same type and return an int");
+        GREEN.printGenericLn("The int represents a form of distance between the two comparable objects");
+        GREEN.printGenericLn("The original compareTo method is an implementation of the Comparator functional interface");
 
     }
 }

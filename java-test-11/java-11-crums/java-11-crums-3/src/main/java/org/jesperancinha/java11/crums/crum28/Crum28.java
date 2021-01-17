@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum28;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum28 {
@@ -18,9 +18,9 @@ public class Crum28 {
         double c = a;
         printOrangeGenericLn("The result %d - %d = %d", a, (int) c, (int) c - a);
 
-        printGreenGenericLn("Note that the reason we don't get 0 on the second exercise is because float loses precision when the number has more than 6 significant digits");
+        GREEN.printGenericLn("Note that the reason we don't get 0 on the second exercise is because float loses precision when the number has more than 6 significant digits");
 
-        printGreenGenericLn("Float can hold 6 to 9 significant digits");
-        printGreenGenericLn("Double can hold 15 to 18 significant digits");
+        GREEN.printGenericLn("Float can hold 6 to 9 significant digits");
+        GREEN.printGenericLn("Double can hold 15 to 18 significant digits");
     }
 }

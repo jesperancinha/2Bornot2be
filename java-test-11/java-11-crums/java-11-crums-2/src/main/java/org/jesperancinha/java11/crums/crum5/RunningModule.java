@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum5;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.java11.crums.crum5.Type.B;
 
@@ -53,12 +53,11 @@ class RunningModule {
 
         MAGENTA.printGenericLn("We can also use instances to access types in the same way -> %s", new RunningModule().getType());
 
-        printGreenGenericLn("What we see is that enums are full of surprised");
-        printGreenGenericLn("An enum is final and cannot be extended");
+        GREEN.printGenericLn("What we see is that enums are full of surprised");
+        GREEN.printGenericLn("An enum is final and cannot be extended");
         final Type cloneA = SubTypeA.AB.getCloneA();
-        printGreenGenericLn("We can also not clone it");
-        printGreenGenericLn(
-            "Note that static imports work, however, if they are not present, we have to use he main enum type to start to reference our enum value");
+        GREEN.printGenericLn("We can also not clone it");
+        GREEN.printGenericLn("Note that static imports work, however, if they are not present, we have to use he main enum type to start to reference our enum value");
     }
 
     public Type getType() {

@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
@@ -54,8 +54,8 @@ public class KingsAndQueensArrival implements Serializable {
         event.setMessage(message);
         setupFastDefault();
         arrivalForCleanerEventEmitter.fire(event);
-        printGreenGenericLn("Note that if you want to simulate  IN_PROGRESS, IF_EXISTS you HAVE TO debug in this method");
-        printGreenGenericLn("This will stop the instance and the context in its tracks and upon resuming, the events will be catched by the processors.");
+        GREEN.printGenericLn("Note that if you want to simulate  IN_PROGRESS, IF_EXISTS you HAVE TO debug in this method");
+        GREEN.printGenericLn("This will stop the instance and the context in its tracks and upon resuming, the events will be catched by the processors.");
         return message;
     }
 

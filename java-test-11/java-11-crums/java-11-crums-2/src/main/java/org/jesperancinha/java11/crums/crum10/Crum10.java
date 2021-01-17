@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum10;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum10 {
     public static void main(String[] args) {
@@ -26,12 +26,10 @@ public class Crum10 {
         MAGENTA.printGenericLn("The result of mismatching a with d should be 4 => %d", Arrays.mismatch(a, d));
         MAGENTA.printGenericLn("The result of mismatching a with e should be 3 => %d", Arrays.mismatch(a, e));
 
-        printGreenGenericLn("Rules to make comparison aren't too simple");
-        printGreenGenericLn(
-            "Best  way to describe is, if all prefixes match, then the return value is the difference between the first size and the second size.");
-        printGreenGenericLn(
-            "If one element differs, then the return value is the compareTo result of the two integers.");
-        printGreenGenericLn("Mismatch returns the insertion point of the first element where a mismatch occurs.");
-        printGreenGenericLn("If all prefixes match, then it returns the size of the smallest array.");
+        GREEN.printGenericLn("Rules to make comparison aren't too simple");
+        GREEN.printGenericLn("Best  way to describe is, if all prefixes match, then the return value is the difference between the first size and the second size.");
+        GREEN.printGenericLn("If one element differs, then the return value is the compareTo result of the two integers.");
+        GREEN.printGenericLn("Mismatch returns the insertion point of the first element where a mismatch occurs.");
+        GREEN.printGenericLn("If all prefixes match, then it returns the size of the smallest array.");
     }
 }

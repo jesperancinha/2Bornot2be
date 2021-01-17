@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Stack;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 @Stateless
@@ -21,9 +21,9 @@ public class HistoryStatelessDeliveryDefault implements Serializable {
         printYellowGenericLn("This is a %s with hash %s", this.getClass()
             .getCanonicalName(), this.hashCode());
         printYellowGenericLn(stackOfEvents1);
-        printGreenGenericLn("A @Stateless bean is never passivated and only has two stages:");
-        printGreenGenericLn("Non-existent and ready for activation");
-        printGreenGenericLn("nonexistent and ready for the invocation of business methods.");
+        GREEN.printGenericLn("A @Stateless bean is never passivated and only has two stages:");
+        GREEN.printGenericLn("Non-existent and ready for activation");
+        GREEN.printGenericLn("nonexistent and ready for the invocation of business methods.");
     }
 
     public List<String> getSomeHistory() {

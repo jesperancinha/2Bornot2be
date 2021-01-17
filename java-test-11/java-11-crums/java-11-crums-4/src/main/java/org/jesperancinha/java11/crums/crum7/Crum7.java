@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGeneric;
 
@@ -32,6 +32,6 @@ public class Crum7 {
         List<List<Integer>> list3 = List.of(list1, list2);
 
         printOrangeGenericLn(list3);
-        printGreenGenericLn("Remember that unlike List.of, unmodifiableLists do allow null values");
+        GREEN.printGenericLn("Remember that unlike List.of, unmodifiableLists do allow null values");
     }
 }

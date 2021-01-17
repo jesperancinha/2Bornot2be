@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum3;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitle;
 
@@ -37,10 +37,10 @@ public class Crum3 {
         }
         printNewLine();
 
-        printGreenGenericLn("In Java 11 a for loop can be a bit complicated to understand at some point");
-        printGreenGenericLn("Important key things to remember");
-        printGreenGenericLn("var cannot be declared inside de for compound");
-        printGreenGenericLn("var can be declared outside and used within the loop");
-        printGreenGenericLn("We can declare multi-variables but we cannot re-declared them");
+        GREEN.printGenericLn("In Java 11 a for loop can be a bit complicated to understand at some point");
+        GREEN.printGenericLn("Important key things to remember");
+        GREEN.printGenericLn("var cannot be declared inside de for compound");
+        GREEN.printGenericLn("var can be declared outside and used within the loop");
+        GREEN.printGenericLn("We can declare multi-variables but we cannot re-declared them");
     }
 }

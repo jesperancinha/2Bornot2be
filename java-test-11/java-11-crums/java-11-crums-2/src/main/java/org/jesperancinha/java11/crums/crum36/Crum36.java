@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum36;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum36 {
@@ -15,8 +15,8 @@ public class Crum36 {
         MAGENTA.printGenericLn("If no exception is thrown we get %s", result1);
         MAGENTA.printGenericLn("If exception is thrown we get %s", result2);
 
-        printGreenGenericLn("We know that finally is the last operation guaranteed to happen");
-        printGreenGenericLn("This is why its return value wins when competing with an thrown catch exception or the successful case");
+        GREEN.printGenericLn("We know that finally is the last operation guaranteed to happen");
+        GREEN.printGenericLn("This is why its return value wins when competing with an thrown catch exception or the successful case");
 
     }
 

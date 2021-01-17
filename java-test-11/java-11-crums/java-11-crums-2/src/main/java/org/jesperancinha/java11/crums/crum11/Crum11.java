@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum11 {
     public static void main(String[] args) {
@@ -71,9 +71,8 @@ public class Crum11 {
         MAGENTA.printGenericLn("We can create wildcard lists in combinastion with diamond notation created instances.");
         MAGENTA.printGenericLn("Note that since the reference is a wildcard, adding is also not an easy option in this case");
 
-        printGreenGenericLn(
-            "Bottom line is that generic are good, use of Object is sloppy, diamond notation saves text and wildcards is better not to use");
-        printGreenGenericLn("Wildcards, can be used if you don't care about type check");
+        GREEN.printGenericLn("Bottom line is that generic are good, use of Object is sloppy, diamond notation saves text and wildcards is better not to use");
+        GREEN.printGenericLn("Wildcards, can be used if you don't care about type check");
         MAGENTA.printGenericLn("Generics are perfect for type safety");
         MAGENTA.printGenericLn("Objects do not guarantee type safety and can create fairly complicated code");
         MAGENTA.printGenericLn("Diamond notation saves text and the diamond is always placed on the right side of the assignment");

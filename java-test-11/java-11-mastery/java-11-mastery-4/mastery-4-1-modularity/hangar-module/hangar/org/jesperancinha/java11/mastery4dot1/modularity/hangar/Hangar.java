@@ -3,7 +3,7 @@ package org.jesperancinha.java11.mastery4dot1.modularity.hangar;
 import org.jesperancinha.java11.mastery4dot1.modularity.pilot.Pilot;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class Hangar {
 
@@ -11,7 +11,7 @@ public class Hangar {
 
     public static void presentHangar() {
         BLUE.printGeneric("***");
-        printGreenGenericLn("--- Starting point was %s ---", new Hangar("Royal Air Force Space at St Pancras, London, UK"));
+        GREEN.printGenericLn("--- Starting point was %s ---", new Hangar("Royal Air Force Space at St Pancras, London, UK"));
         BLUE.printGeneric("***");
         Pilot.presentPilot();
         Plane.transportPilot();

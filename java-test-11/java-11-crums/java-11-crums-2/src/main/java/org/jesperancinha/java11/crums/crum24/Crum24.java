@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum24;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum24 {
 
@@ -52,6 +52,6 @@ public class Crum24 {
         hurray2.showParty();
         happy3.showParty();
 
-        printGreenGenericLn("This means that overriding literaly overwrites the super method.");
+        GREEN.printGenericLn("This means that overriding literaly overwrites the super method.");
     }
 }

@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum12;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -84,12 +84,11 @@ public class Crum12 {
             printRedGenericLn("And this makes sense because there is a check for length in the 'setLength' method.");
             printRedGenericLn(
                 "Either way, always recommended to catch this exception with an IndexOutOfBoundsException -> %s", e);
-        } printGreenGenericLn("Capacity is an optimization measure in place to build strings");
-        printGreenGenericLn("There is no practical effect except when performance tests are done");
-        printGreenGenericLn(
-            "Capacity increases by 2x capacity factor + 2. If this is not enough to hold the new string, the new capacity is the length of the new String");
+        }
+        GREEN.printGenericLn("Capacity is an optimization measure in place to build strings");
+        GREEN.printGenericLn("There is no practical effect except when performance tests are done");
+        GREEN.printGenericLn("Capacity increases by 2x capacity factor + 2. If this is not enough to hold the new string, the new capacity is the length of the new String");
 
-        printGreenGenericLn(
-            "'setLength' can truncate the build, but no changes in capacity happen if it does. Expansion will of course change capacity as usual");
+        GREEN.printGenericLn("'setLength' can truncate the build, but no changes in capacity happen if it does. Expansion will of course change capacity as usual");
     }
 }

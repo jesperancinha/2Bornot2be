@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.lyrics.receipt;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.lyrics.service.LyricsService;
 
 import javax.annotation.Resource;
@@ -18,6 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 @WebServlet(urlPatterns = "/send/random-lyric/receipt")
 public class LyricsServlet extends HttpServlet {
@@ -47,9 +48,9 @@ public class LyricsServlet extends HttpServlet {
                         writer.println("<p>Lyrics has been sent!</p>");
                         writer.println(String.format("<p>%s</p>", randomLyric));
 //                        message.acknowledge();
-                        Consolerizer.printGreenGenericLn("Acknowledge informs the queue that messages have been received");
-                        Consolerizer.printGreenGenericLn("In the case of CLIENT_ACKNOWLEDGE, messages are removed only when the client acknowledges receipt");
-                        Consolerizer.printGreenGenericLn("Check the listener. We are also calling an acknowledge there. This acknowledge is only letting the session know that a message has been sent!");
+                        GREEN.printGenericLn("Acknowledge informs the queue that messages have been received");
+                        GREEN.printGenericLn("In the case of CLIENT_ACKNOWLEDGE, messages are removed only when the client acknowledges receipt");
+                        GREEN.printGenericLn("Check the listener. We are also calling an acknowledge there. This acknowledge is only letting the session know that a message has been sent!");
                     } finally {
                         producer.close();
                     }

@@ -15,6 +15,7 @@ import java.util.Properties;
 import java.util.Vector;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class Mastery1Dot2Runner {
     public static void main(String[] args) throws InterruptedException {
@@ -146,11 +147,11 @@ public class Mastery1Dot2Runner {
         // 9. Conversion information losses
         console.printText("@@ One final sprint!\n");
         int leftSide = 1098765432;
-        Consolerizer.printGreenGeneric("Left side as float %f\n", 1098765432f);
-        Consolerizer.printGreenGeneric("Left side %d\n", leftSide);
+        GREEN.printGeneric("Left side as float %f\n", 1098765432f);
+        GREEN.printGeneric("Left side %d\n", leftSide);
         float rightSide = leftSide;
-        Consolerizer.printGreenGeneric("Right side %f\n", rightSide);
-        Consolerizer.printGreenGeneric("Right side casted to int %d\n", (int) rightSide);
-        Consolerizer.printGreenGeneric(Integer.toString(leftSide - (int) rightSide));
+        GREEN.printGeneric("Right side %f\n", rightSide);
+        GREEN.printGeneric("Right side casted to int %d\n", (int) rightSide);
+        GREEN.printGeneric(Integer.toString(leftSide - (int) rightSide));
     }
 }

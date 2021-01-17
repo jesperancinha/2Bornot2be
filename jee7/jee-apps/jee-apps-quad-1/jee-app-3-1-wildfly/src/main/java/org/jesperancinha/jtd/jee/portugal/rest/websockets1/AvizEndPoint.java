@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 @ServerEndpoint("/aviz")
 public class AvizEndPoint {
@@ -26,7 +26,7 @@ public class AvizEndPoint {
     public void onMessage(Session session, String message) throws IOException {
         BLUE.printGenericTitleLn("OnMessage from %s called!", this.getClass()
             .getCanonicalName());
-        printGreenGenericLn("Message receive is: %s", message);
+        GREEN.printGenericLn("Message receive is: %s", message);
         final var returnMessage = String.format("Q: %s\n A: %s", message, "So you want to be part of the House of Aviz huh!?!");
         session.getBasicRemote()
             .sendText(returnMessage);
@@ -47,9 +47,9 @@ public class AvizEndPoint {
             .sendText("The kings are:");
         session.getBasicRemote()
             .sendObject(KINGS_OF_AVIZ.toString());
-        printGreenGenericLn(KINGS_OF_AVIZ);
-        printGreenGenericLn("from: http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket001.htm");
-        printGreenGenericLn("GET /path/to/websocket/endpoint HTTP/1.1\n" + "Host: localhost\n" + "Upgrade: websocket\n"
+        GREEN.printGenericLn(KINGS_OF_AVIZ);
+        GREEN.printGenericLn("from: http://www.devdoc.net/javaxe/JavaEE-7u2/docs/javaee-tutorial/doc/websocket001.htm");
+        GREEN.printGenericLn("GET /path/to/websocket/endpoint HTTP/1.1\n" + "Host: localhost\n" + "Upgrade: websocket\n"
             + "Connection: Upgrade\n" + "Sec-WebSocket-Key: xqBt3ImNzJbYqRINxEFlkg==\n" + "Origin: http://localhost\n"
             + "Sec-WebSocket-Version: 13");
     }

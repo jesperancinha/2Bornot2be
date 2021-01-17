@@ -8,15 +8,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class SpiceGirlsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final PrintWriter writer = resp.getWriter();
 
-        printGreenGenericLn("This is the servlet that I expect you to hit in your browser");
-        printGreenGenericLn("Analysing the XML config:");
+        GREEN.printGenericLn("This is the servlet that I expect you to hit in your browser");
+        GREEN.printGenericLn("Analysing the XML config:");
         BLUE.printGenericLn("<web-app xmlns=\"http://xmlns.jcp.org/xml/ns/javaee\"\n"
             + "         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
             + "         xsi:schemaLocation=\"http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd\"\n"
@@ -46,9 +46,9 @@ public class SpiceGirlsServlet extends HttpServlet {
             + "        <welcome-file>index.html</welcome-file>\n" + "        <welcome-file>index.jsp</welcome-file>\n"
             + "        <welcome-file>index.jsf</welcome-file>\n" + "        <welcome-file>index.xhtml</welcome-file>\n"
             + "    </welcome-file-list>\n" + "</web-app>");
-        printGreenGenericLn("What this means is that /* overrides them all. / overrides some, but overriding a pattern only happens when the overriding is broader than the previous.");
-        printGreenGenericLn("If the range is the same, then the first servlet seems to be called.");
-        printGreenGenericLn("Depending on the implementation, the order may differ, an error may be thrown or the result may be random.");
+        GREEN.printGenericLn("What this means is that /* overrides them all. / overrides some, but overriding a pattern only happens when the overriding is broader than the previous.");
+        GREEN.printGenericLn("If the range is the same, then the first servlet seems to be called.");
+        GREEN.printGenericLn("Depending on the implementation, the order may differ, an error may be thrown or the result may be random.");
         writer.println("It's the Spice Girls!");
     }
 }

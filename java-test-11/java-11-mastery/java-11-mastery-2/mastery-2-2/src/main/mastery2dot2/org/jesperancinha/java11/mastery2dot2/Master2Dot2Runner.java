@@ -29,8 +29,8 @@ import java.util.stream.Stream;
 import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -57,9 +57,9 @@ public class Master2Dot2Runner {
             missionData.origin = "Earth";
             missionData.mission = "Apollo 13";
             objectOutputStream.writeObject(missionData);
-            printGreenGenericLn("File has been created on this location -> %s", fileName);
-            printGreenGenericLn("Data -> %s", missionData);
-            printGreenGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
+            GREEN.printGenericLn("File has been created on this location -> %s", fileName);
+            GREEN.printGenericLn("Data -> %s", missionData);
+            GREEN.printGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,29 +71,29 @@ public class Master2Dot2Runner {
         var astronauts2 = new String[]{"Jim Lovell", "Jack Swigert", "Fred Haise"};
         var astronauts3 = new String[]{"James A. Lovell", "Jack Swigert", "Fred W. Haise, Jr."};
         printBrightCyanGenericLn("comparing %s with %s -> result is: %s", astronauts1, astronauts2, compare(astronauts1, astronauts2));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts1[0], astronauts2[0], astronauts1[0].compareTo(astronauts2[0]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts1[0], astronauts2[0], astronauts1[0].compareTo(astronauts2[0]));
         printBrightCyanGenericLn("comparing %s with %s -> result is: %s", astronauts1, astronauts3, compare(astronauts1, astronauts3));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts1[1], astronauts3[1], astronauts1[1].compareTo(astronauts3[1]));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts3[1], astronauts1[1], astronauts3[1].compareTo(astronauts1[1]));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts1[2], astronauts3[2], astronauts1[2].compareTo(astronauts3[2]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts1[1], astronauts3[1], astronauts1[1].compareTo(astronauts3[1]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts3[1], astronauts1[1], astronauts3[1].compareTo(astronauts1[1]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts1[2], astronauts3[2], astronauts1[2].compareTo(astronauts3[2]));
         printBrightCyanGenericLn("comparing %s with %s -> result is: %s", astronauts2, astronauts3, compare(astronauts2, astronauts3));
         printYellowGenericLn("### We mismatch two arrays defining the crew and test mismatch and compare");
         printBrightCyanGenericLn("mismatching %s with %s -> result is: %s", astronauts1, astronauts2, mismatch(astronauts1, astronauts2));
-        printGreenGenericLn("mismatching %s with %s -> result is: %s", astronauts1[0], astronauts2[0], astronauts1[0].compareTo(astronauts2[0]));
+        GREEN.printGenericLn("mismatching %s with %s -> result is: %s", astronauts1[0], astronauts2[0], astronauts1[0].compareTo(astronauts2[0]));
         printBrightCyanGenericLn("mismatching %s with %s -> result is: %s", astronauts1, astronauts3, mismatch(astronauts1, astronauts3));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts1[1], astronauts3[1], astronauts1[1].compareTo(astronauts3[1]));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts3[1], astronauts1[1], astronauts3[1].compareTo(astronauts1[1]));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", astronauts1[2], astronauts3[2], astronauts1[2].compareTo(astronauts3[2]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts1[1], astronauts3[1], astronauts1[1].compareTo(astronauts3[1]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts3[1], astronauts1[1], astronauts3[1].compareTo(astronauts1[1]));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", astronauts1[2], astronauts3[2], astronauts1[2].compareTo(astronauts3[2]));
         printBrightCyanGenericLn("mismatching %s with %s -> result is: %s", astronauts2, astronauts3, mismatch(astronauts2, astronauts3));
         printYellowGenericLn("### Note that comparing is different with integers");
         var badCounting = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 1};
         var goodCounting = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
         var badCounting2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 11};
         var badCounting2AndShort = new int[]{1, 2, 3};
-        printGreenGenericLn("comparing %s with %s -> result is: %s", badCounting, goodCounting, Arrays.compare(badCounting, goodCounting));
-        printGreenGenericLn("mismatching %s with %s -> result is: %s", badCounting, goodCounting, Arrays.mismatch(badCounting, goodCounting));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", badCounting2, goodCounting, Arrays.compare(badCounting2, goodCounting));
-        printGreenGenericLn("comparing %s with %s -> result is: %s", badCounting2AndShort, goodCounting, Arrays.compare(badCounting2AndShort, goodCounting));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting, goodCounting, Arrays.compare(badCounting, goodCounting));
+        GREEN.printGenericLn("mismatching %s with %s -> result is: %s", badCounting, goodCounting, Arrays.mismatch(badCounting, goodCounting));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting2, goodCounting, Arrays.compare(badCounting2, goodCounting));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting2AndShort, goodCounting, Arrays.compare(badCounting2AndShort, goodCounting));
 
         printRainbowTitleLn("3. TYPE_USE and TYPE_PARAMETER");
         printRainbowLn("==");
@@ -113,14 +113,14 @@ public class Master2Dot2Runner {
         printRainbowLn("==");
         printYellowGenericLn("### Permitted Values");
         printYellowGenericLn("### short");
-        printGreenGenericLn("%s <= byte <= %s", Byte.MIN_VALUE, Byte.MAX_VALUE);
+        GREEN.printGenericLn("%s <= byte <= %s", Byte.MIN_VALUE, Byte.MAX_VALUE);
         printYellowGenericLn("### byte");
-        printGreenGenericLn("%s <= short <= %s", Short.MIN_VALUE, Short.MAX_VALUE);
+        GREEN.printGenericLn("%s <= short <= %s", Short.MIN_VALUE, Short.MAX_VALUE);
         printYellowGenericLn("### int");
-        printGreenGenericLn("%s <= short <= %s", Integer.MIN_VALUE, Integer.MAX_VALUE);
+        GREEN.printGenericLn("%s <= short <= %s", Integer.MIN_VALUE, Integer.MAX_VALUE);
         printYellowGenericLn("### char");
-        printGreenGenericLn("%d <= char <= %d", (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
-        printGreenGenericLn("%c <= char <= %c", Character.MIN_VALUE, Character.MAX_VALUE);
+        GREEN.printGenericLn("%d <= char <= %d", (int) Character.MIN_VALUE, (int) Character.MAX_VALUE);
+        GREEN.printGenericLn("%c <= char <= %c", Character.MIN_VALUE, Character.MAX_VALUE);
         printRedGenericLn("### Not permitted Values");
         printRedGenericLn("### bool");
         printRedGenericLn("%s <= bool <= %s", Boolean.FALSE, Boolean.TRUE);
@@ -179,12 +179,12 @@ public class Master2Dot2Runner {
         };
         printYellowGenericLn("### A ToDoubleFunction uses an Object parameter, but always returns a primitve");
         printYellowGenericLn("### The name is self-exlanatory. To<>Function's always return a primitive type");
-        printGreenGenericLn(toDoubleFunction.applyAsDouble("SATCAT"));
-        printGreenGenericLn(toDoubleFunction.applyAsDouble("AAAAAA"));
+        GREEN.printGenericLn(toDoubleFunction.applyAsDouble("SATCAT"));
+        GREEN.printGenericLn(toDoubleFunction.applyAsDouble("AAAAAA"));
         printYellowGenericLn("### A DoubleFunction uses an double parameter, but always returns an object");
         printYellowGenericLn("### The name is self-exlanatory. <>Function's always receive a primitive type");
-        printGreenGenericLn(doubleFunction.apply(4371));
-        printGreenGenericLn(doubleFunction.apply(2222));
+        GREEN.printGenericLn(doubleFunction.apply(4371));
+        GREEN.printGenericLn(doubleFunction.apply(2222));
 
         printRainbowTitleLn("9. `--add-exports` and `--add-reads` in modularization");
         printRainbowLn("==");
@@ -211,7 +211,7 @@ public class Master2Dot2Runner {
         FileInputStream fisOut = null;
         try (FileInputStream fis = new FileInputStream(rocketInfoFile)) {
             byte[] bytes = fis.readAllBytes();
-            printGreenGenericLn(new String(bytes));
+            GREEN.printGenericLn(new String(bytes));
             fisOut = fis;
         } catch (IOException e) {
             printRedGenericLn("%s", e);
@@ -236,7 +236,7 @@ public class Master2Dot2Runner {
             printRedGenericLn("%s", e);
             try {
                 allFiles1 = Files.list(Paths.get("/tmp"));
-                printGreenGenericLn("These are the files with list: %s", allFiles1.collect(Collectors.toList()));
+                GREEN.printGenericLn("These are the files with list: %s", allFiles1.collect(Collectors.toList()));
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
@@ -246,7 +246,7 @@ public class Master2Dot2Runner {
         try {
             allFiles1 = Files.find(Paths.get("/tmp/rocket-info.txt"), 0, (p, a)
                     -> p.endsWith("rocket-info.txt") && a.isRegularFile());
-            printGreenGenericLn("These are the files with find: %s", allFiles1.collect(Collectors.toList()));
+            GREEN.printGenericLn("These are the files with find: %s", allFiles1.collect(Collectors.toList()));
         } catch (IOException e) {
             printRedGenericLn("%s", e);
         }
@@ -254,7 +254,7 @@ public class Master2Dot2Runner {
         // allFiles1= Files.walk(Paths.get("/tmp/rocket-info.txt"), "test.txt");
         try {
             allFiles1 = Files.walk(Paths.get("/tmp/rocket-info.txt"), 0);
-            printGreenGenericLn("These are the files with walk: %s", allFiles1.collect(Collectors.toList()));
+            GREEN.printGenericLn("These are the files with walk: %s", allFiles1.collect(Collectors.toList()));
         } catch (IOException e) {
             printRedGenericLn("%s", e);
         }
@@ -288,8 +288,8 @@ public class Master2Dot2Runner {
         try {
             Connection conn = DriverManager.
                     getConnection("jdbc:h2:mem:", "sa", "");
-            printGreenGenericLn("Connection: %s / %s", conn.getMetaData().getDatabaseProductName(), conn.getCatalog());
-            printGreenGenericLn("Current auto-commit setting: %s", conn.getAutoCommit());
+            GREEN.printGenericLn("Connection: %s / %s", conn.getMetaData().getDatabaseProductName(), conn.getCatalog());
+            GREEN.printGenericLn("Current auto-commit setting: %s", conn.getAutoCommit());
             PreparedStatement preparedStatement = conn.prepareStatement("select 1 as value from dual");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -301,7 +301,7 @@ public class Master2Dot2Runner {
                     prepareStatement("CREATE TABLE Blog (ID INTEGER PRIMARY KEY AUTO_INCREMENT,\n" +
                             "TEXT CLOB,\n" +
                             "IMAGE BLOB);");
-            printGreenGenericLn(createBlogs);
+            GREEN.printGenericLn(createBlogs);
             createBlogs.execute();
             Blob blob = conn.createBlob();
             blob.setBytes(1, resourceAsStream.readAllBytes());
@@ -313,7 +313,7 @@ public class Master2Dot2Runner {
                             "IMAGE) VALUES (?,?)");
             insertBlog.setClob(1, clob);
             insertBlog.setBlob(2, blob);
-            printGreenGenericLn(insertBlog);
+            GREEN.printGenericLn(insertBlog);
             insertBlog.execute();
             PreparedStatement selectBlog = conn.prepareStatement("select ID, TEXT, IMAGE from Blog");
             ResultSet resultSet2 = selectBlog.executeQuery();
@@ -369,10 +369,10 @@ public class Master2Dot2Runner {
                         printOrangeGenericLn("We leave the countdown with i=%d, j=%d, k=%d", i, j, k);
                         DODO:
                         do {
-                            printGreenGenericLn("The next text won't print");
+                            GREEN.printGenericLn("The next text won't print");
                             if (true)
                                 break DODO;
-                            printGreenGenericLn("The next text won't print");
+                            GREEN.printGenericLn("The next text won't print");
                         } while (false);
                         break ORBIT;
                         // Undefined label: 'ACCIDENT'

@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum26;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum26 {
     public static void main(String[] args) {
@@ -27,9 +27,8 @@ public class Crum26 {
             .reduce(0, Integer::sum);
         MAGENTA.printGenericLn("When we calculate sum from a stream we get a result int value %d", intStreamSumValueFromAReduceOperation);
 
-        printGreenGenericLn("A few differences between DoubleStream and IntStream");
-        printGreenGenericLn("It should be obvious that and IntStream has range and DoubleStream doesn't.");
-        printGreenGenericLn(
-            "The reason is that we can increment integral numbers. However with floats and doubles, that is just no possible because of the extensive increment possible combinations.");
+        GREEN.printGenericLn("A few differences between DoubleStream and IntStream");
+        GREEN.printGenericLn("It should be obvious that and IntStream has range and DoubleStream doesn't.");
+        GREEN.printGenericLn("The reason is that we can increment integral numbers. However with floats and doubles, that is just no possible because of the extensive increment possible combinations.");
     }
 }

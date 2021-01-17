@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum17 {
     public static void main(String[] args) {
@@ -27,10 +27,9 @@ public class Crum17 {
 
         MAGENTA.printGenericLn("And this is the character list -> %s", collect);
 
-        printGreenGenericLn("Lambda functions are only called once the terminating function is called");
-        printGreenGenericLn(
-            "Mapping is valid as long as uses an element of the stream  as parameter and then returns another, which can be of the desired type");
+        GREEN.printGenericLn("Lambda functions are only called once the terminating function is called");
+        GREEN.printGenericLn("Mapping is valid as long as uses an element of the stream  as parameter and then returns another, which can be of the desired type");
 
-        printGreenGenericLn("Mapping takes an implementation of a Function interface, which we implement on the fly");
+        GREEN.printGenericLn("Mapping takes an implementation of a Function interface, which we implement on the fly");
     }
 }

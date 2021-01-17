@@ -8,6 +8,8 @@ import javax.inject.Named;
 import java.util.Calendar;
 import java.util.Date;
 
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+
 @RequestScoped
 @Named("albumRegistry")
 public class AlumRegistry {
@@ -30,8 +32,8 @@ public class AlumRegistry {
 
     public void register(){
         Consolerizer.printRandomColorGenericLn("%s has been registered!", newAlbum);
-        Consolerizer.printGreenGenericLn("Well sort of");
-        Consolerizer.printGreenGenericLn("This is just to simulate and see what happens between the browser and the server");
-        Consolerizer.printGreenGenericLn("Note that formats much match.");
+        GREEN.printGenericLn("Well sort of");
+        GREEN.printGenericLn("This is just to simulate and see what happens between the browser and the server");
+        GREEN.printGenericLn("Note that formats much match.");
     }
 }

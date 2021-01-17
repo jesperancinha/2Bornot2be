@@ -5,8 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum25 {
     public static void main(String[] args) {
@@ -45,8 +45,8 @@ public class Crum25 {
         //     e.printStackTrace();
         // }
 
-        printGreenGenericLn("An important rule to know is that try with resources needs to know the reference type");
-        printGreenGenericLn("It can be done with a var or with the traditional way of type referencing");
+        GREEN.printGenericLn("An important rule to know is that try with resources needs to know the reference type");
+        GREEN.printGenericLn("It can be done with a var or with the traditional way of type referencing");
 
     }
 }

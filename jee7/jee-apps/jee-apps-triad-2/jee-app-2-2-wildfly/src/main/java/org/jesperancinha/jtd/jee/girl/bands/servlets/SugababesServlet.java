@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConGraphs.getUnicorns;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 
 @WebServlet("/CaghtUpInTheMiddle")
@@ -24,9 +24,8 @@ public class SugababesServlet extends HttpServlet {
         writer.println(NOTE_THAT_BOTH_FILTERS_WERE_ABLE_TO_WRITE_OUTPUT);
         writer.println(FILTERS_CANNOT_BE_USED_AS_SERVLETS_BUT_THEY_CAN_WORK_TOGETHER_WITH_SERVETS_AND_REST_ENDPOINTS);
 
-        printGreenGenericLn(NOTE_THAT_BOTH_FILTERS_WERE_ABLE_TO_WRITE_OUTPUT);
-        printGreenGenericLn(
-            FILTERS_CANNOT_BE_USED_AS_SERVLETS_BUT_THEY_CAN_WORK_TOGETHER_WITH_SERVETS_AND_REST_ENDPOINTS);
+        GREEN.printGenericLn(NOTE_THAT_BOTH_FILTERS_WERE_ABLE_TO_WRITE_OUTPUT);
+        GREEN.printGenericLn(FILTERS_CANNOT_BE_USED_AS_SERVLETS_BUT_THEY_CAN_WORK_TOGETHER_WITH_SERVETS_AND_REST_ENDPOINTS);
         printRandomColorGenericLn("Note the order of the nodes matter in web.xml");
         printRandomColorGenericLn("A Random order is wrong, even if the nodes are correct");
         printRandomColorGenericLn("Best way to get a feel is to think of the order like this:");

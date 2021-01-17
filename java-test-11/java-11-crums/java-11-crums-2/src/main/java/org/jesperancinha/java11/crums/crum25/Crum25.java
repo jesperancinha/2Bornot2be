@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum25 {
     public static void main(String[] args) throws InterruptedException {
@@ -39,11 +39,9 @@ public class Crum25 {
         objectSize = before - after;
         MAGENTA.printGenericLn("This is the estimated byte object size for the second time -> %d bytes", objectSize);
 
-        printGreenGenericLn(
-            "What we need to bear in mind is that, although we are using the same reference, if we set it to null, the object instance loses its references");
-        printGreenGenericLn("Independently of the Garbage collection mechanism used, the basic principle is the same");
-        printGreenGenericLn(
-            "If no references are attached to the instance created, that instance is eligible to be removed by Garbage Collections");
+        GREEN.printGenericLn("What we need to bear in mind is that, although we are using the same reference, if we set it to null, the object instance loses its references");
+        GREEN.printGenericLn("Independently of the Garbage collection mechanism used, the basic principle is the same");
+        GREEN.printGenericLn("If no references are attached to the instance created, that instance is eligible to be removed by Garbage Collections");
 
     }
 

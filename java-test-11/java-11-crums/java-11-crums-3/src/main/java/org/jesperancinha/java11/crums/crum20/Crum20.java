@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum20;
 import java.nio.BufferOverflowException;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -31,10 +31,9 @@ public class Crum20 {
                 "Note that if you get an OutOfMemoryError, that is ok for now, but the code should also be protected against that");
         }
 
-        printGreenGenericLn("It is important that from a security perspective that our code follows certain guideline");
-        printGreenGenericLn(
-            "Important ones are accessibility and extensibility, resource limit checks, and cloning in immutable objects");
-        printGreenGenericLn("Further reading: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        GREEN.printGenericLn("It is important that from a security perspective that our code follows certain guideline");
+        GREEN.printGenericLn("Important ones are accessibility and extensibility, resource limit checks, and cloning in immutable objects");
+        GREEN.printGenericLn("Further reading: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
 
     }
 

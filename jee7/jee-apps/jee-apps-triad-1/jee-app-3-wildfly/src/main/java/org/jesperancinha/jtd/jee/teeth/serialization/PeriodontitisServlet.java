@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 @WebServlet("/periodontitis")
@@ -52,8 +52,8 @@ public class PeriodontitisServlet extends HttpServlet {
                     .getAttribute(PERIODONTITIS_BEAN + beanActivationIndex);
                 request.getSession()
                     .removeAttribute(PERIODONTITIS_BEAN + beanActivationIndex);
-                printGreenGenericLn("TestObject property value: " + periodontitisPassivation1.getPropertyObject()
-                    .getProperty());
+                GREEN.printGenericLn("TestObject property value: " + periodontitisPassivation1.getPropertyObject()
+                            .getProperty());
             } catch (Exception e) {
                 throw new ServletException(e);
             }

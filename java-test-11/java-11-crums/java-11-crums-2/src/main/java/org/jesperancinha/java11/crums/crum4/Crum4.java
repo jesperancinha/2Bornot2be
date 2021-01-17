@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum4;
 import java.util.Random;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum4 {
 
@@ -70,10 +70,9 @@ public class Crum4 {
 
         MAGENTA.printGenericLn("With instance b we can only get 100 with the same method -> %d", b.returnRandom());
         MAGENTA.printGenericLn("Even if we cast it upwards, there is nothing with can do, because overriding removes that possibility -> %d", ((A) b).returnRandom());
-        printGreenGenericLn("Overriding operations mean only one implementation will prevail");
-        printGreenGenericLn("It is the implementation of the most specific class that prevails");
-        printGreenGenericLn("In primitive types, the return type must match exactly");
-        printGreenGenericLn(
-            "If the method name and parameter types match, that also means that overloading is not possible.");
+        GREEN.printGenericLn("Overriding operations mean only one implementation will prevail");
+        GREEN.printGenericLn("It is the implementation of the most specific class that prevails");
+        GREEN.printGenericLn("In primitive types, the return type must match exactly");
+        GREEN.printGenericLn("If the method name and parameter types match, that also means that overloading is not possible.");
     }
 }

@@ -16,6 +16,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -85,9 +86,9 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
                     return "WRONG";
                 }
             }
-            Consolerizer.printGreenGenericLn("Current status:");
+            GREEN.printGenericLn("Current status:");
             final List<String> currentLyrics1 = (List<String>) session.getAttribute("currentLyrics");
-            Consolerizer.printGreenGenericLn(currentLyrics1);
+            GREEN.printGenericLn(currentLyrics1);
             if (currentLyrics1.size() == EXPECTED_LYRICS.length) {
                 BLUE.printGenericTitleLn("Congratulations!! You've guessed the whole intro the Spice Girl's - Say you'll be there!");
                 return "COMPLETED";

@@ -7,8 +7,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum18 {
@@ -48,13 +48,13 @@ public class Crum18 {
             printRedGenericLn("Exception thrown -> %s", e);
         }
 
-        printGreenGenericLn("For the resource bundle to work we have some default hierarchy to follow");
-        printGreenGenericLn("<bundle_name>_<language>_<location>.properties");
-        printGreenGenericLn("If a location is not available, the ResourceBundle will try to look for other default files");
-        printGreenGenericLn("<bundle_name>_<language>.properties");
-        printGreenGenericLn("or <bundle_name>.properties");
-        printGreenGenericLn("If all fails, the ResourceBundle will not load and will throw a MissingResource Exception");
-        printGreenGenericLn("Its important to note that getBundle is a static method which gives back a ResourceBundle");
-        printGreenGenericLn("The builder for Language uses setLanguage and setRegion to define a Locale, which is needed along with the bundle name to create a Resource bundle");
+        GREEN.printGenericLn("For the resource bundle to work we have some default hierarchy to follow");
+        GREEN.printGenericLn("<bundle_name>_<language>_<location>.properties");
+        GREEN.printGenericLn("If a location is not available, the ResourceBundle will try to look for other default files");
+        GREEN.printGenericLn("<bundle_name>_<language>.properties");
+        GREEN.printGenericLn("or <bundle_name>.properties");
+        GREEN.printGenericLn("If all fails, the ResourceBundle will not load and will throw a MissingResource Exception");
+        GREEN.printGenericLn("Its important to note that getBundle is a static method which gives back a ResourceBundle");
+        GREEN.printGenericLn("The builder for Language uses setLanguage and setRegion to define a Locale, which is needed along with the bundle name to create a Resource bundle");
     }
 }

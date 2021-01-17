@@ -1,8 +1,7 @@
 package org.jesperancinha.java11.crums.crum30;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 
 public class Crum30 {
@@ -10,7 +9,7 @@ public class Crum30 {
         BLUE.printGenericTitleLn("Crum 30 - @Repeatable annotation");
         MAGENTA.printGenericLn(new MashedPotatoes());
 
-        Consolerizer.printGreenGenericLn("Remember that the rule is that @Repeatable must have a container class");
-        Consolerizer.printGreenGenericLn("The container class must have an array of the repeating type");
+        GREEN.printGenericLn("Remember that the rule is that @Repeatable must have a container class");
+        GREEN.printGenericLn("The container class must have an array of the repeating type");
     }
 }

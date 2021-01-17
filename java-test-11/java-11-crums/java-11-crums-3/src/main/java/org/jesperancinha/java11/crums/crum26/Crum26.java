@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -34,10 +34,9 @@ public class Crum26 {
             printRedGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s",e);
         }
 
-        printGreenGenericLn("It is important to understand the null values aren't accepted in some list creations.");
-        printGreenGenericLn("The creation of immutable lists require that all elements are filled in.");
-        printGreenGenericLn("A null value does not make since in immutable lists");
-
+        GREEN.printGenericLn("It is important to understand the null values aren't accepted in some list creations.");
+        GREEN.printGenericLn("The creation of immutable lists require that all elements are filled in.");
+        GREEN.printGenericLn("A null value does not make since in immutable lists");
 
 
     }

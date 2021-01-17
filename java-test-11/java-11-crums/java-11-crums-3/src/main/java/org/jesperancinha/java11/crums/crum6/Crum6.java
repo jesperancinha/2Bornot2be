@@ -5,8 +5,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -54,13 +54,11 @@ public class Crum6 {
         final ResourceBundle resourceBundlePtPt = ResourceBundle.getBundle("messages", locale3);
         printOrangeGenericLn(resourceBundlePtPt.getString("goodmorning"));
 
-        printGreenGenericLn("Bundles have simple and very complicated rules");
-        printGreenGenericLn(
-            "A normal message properties file can have this format: <bundle_name>_<language_code>_<country_code>.properties");
-        printGreenGenericLn("If we only have the bundle: <bundle_name>.properties");
-        printGreenGenericLn("If we have the bundle and the language: <bundle_name>_<language_code>.properties");
-        printGreenGenericLn(
-            "If we have the bundle and the country: <bundle_name__<country_code>.properties (notice the two underscores");
+        GREEN.printGenericLn("Bundles have simple and very complicated rules");
+        GREEN.printGenericLn("A normal message properties file can have this format: <bundle_name>_<language_code>_<country_code>.properties");
+        GREEN.printGenericLn("If we only have the bundle: <bundle_name>.properties");
+        GREEN.printGenericLn("If we have the bundle and the language: <bundle_name>_<language_code>.properties");
+        GREEN.printGenericLn("If we have the bundle and the country: <bundle_name__<country_code>.properties (notice the two underscores");
 
     }
 }

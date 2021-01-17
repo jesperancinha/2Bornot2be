@@ -53,9 +53,9 @@ import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -105,9 +105,9 @@ public class Mastery4Dot2Runner {
     private static void exercise19() {
         printBrightCyanGenericLn("--- 19. `try-with-resources` `open` and `close` methods.");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We are at the end of our mastery module");
-        printGreenGenericLn("If you noticed, drums are a part of almost all spanish music");
-        printGreenGenericLn("We'll play one as a closeable instrument. Enjoy!");
+        GREEN.printGenericLn("Case: We are at the end of our mastery module");
+        GREEN.printGenericLn("If you noticed, drums are a part of almost all spanish music");
+        GREEN.printGenericLn("We'll play one as a closeable instrument. Enjoy!");
 
         var drum = new Drums();
         try (drum) {
@@ -116,20 +116,20 @@ public class Mastery4Dot2Runner {
         } catch (DrumException | DrumsIOException e) {
             printRedGenericLn("It's all good! We failed to play, closing failed and this is expected -> %s", e);
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. We can use try-with-resources even after we've created our autocloseable instance");
-        printGreenGenericLn("2. A suppressed exception occurs when closing fails");
-        printGreenGenericLn("3. The suppressed exception is the closing exception when one is thrown in the try block");
-        printGreenGenericLn("4. The main exception is the one thrown during the try scope");
-        printGreenGenericLn("5. If no exception is thrown during the try block, no suppressed exception is thrown");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. We can use try-with-resources even after we've created our autocloseable instance");
+        GREEN.printGenericLn("2. A suppressed exception occurs when closing fails");
+        GREEN.printGenericLn("3. The suppressed exception is the closing exception when one is thrown in the try block");
+        GREEN.printGenericLn("4. The main exception is the one thrown during the try scope");
+        GREEN.printGenericLn("5. If no exception is thrown during the try block, no suppressed exception is thrown");
     }
 
     private static void exercise18() {
         printBrightCyanGenericLn("--- 18. `Arrays` `binarySearch`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We have compiled a list of of all Lori Meyers albums we know");
-        printGreenGenericLn("Lori Meyers started in 1998. You are now in possession of a lot of their records.");
-        printGreenGenericLn("Now you want to organize them!.");
+        GREEN.printGenericLn("Case: We have compiled a list of of all Lori Meyers albums we know");
+        GREEN.printGenericLn("Lori Meyers started in 1998. You are now in possession of a lot of their records.");
+        GREEN.printGenericLn("Now you want to organize them!.");
         final String[] albums = {"Viaje de estudios", "Hostal Pimodán",
                 "Hostal Pimodán (reedición)", "Cronolánea",
                 "Viaje de estudios (reedición)", "Cuando el destino nos alcance",
@@ -141,20 +141,20 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("After sorting, our record collection is:\n%s", Arrays.stream(albums).collect(Collectors.toList()));
         foundIndex = Arrays.binarySearch(albums, "D");
         MAGENTA.printGenericLn("Once sorted, we finally have insertion point %d. This is correct", foundIndex);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. In order to make binarySearch for Arrays, we have to sort them first");
-        printGreenGenericLn("2. Sorting arrays and therefore being able to perform a faster and more accurate binary search isn't specific to Java");
-        printGreenGenericLn("3. The insertion point is an index. It is describe as a negative number");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. In order to make binarySearch for Arrays, we have to sort them first");
+        GREEN.printGenericLn("2. Sorting arrays and therefore being able to perform a faster and more accurate binary search isn't specific to Java");
+        GREEN.printGenericLn("3. The insertion point is an index. It is describe as a negative number");
     }
 
     private static void exercise17() {
         printBrightCyanGenericLn("--- 17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: In the year 2000, spanish singer, Monica Naranjo, came into the music scene with her hit \"Sobreviviré\"");
-        printGreenGenericLn("Given the raw energy of the lyrics of the songs and its meaning, \"Sobreviviré\" became an anthem of those who fight to be understood and accepted");
-        printGreenGenericLn("In the video, Monica Naranjo depics just that.");
-        printGreenGenericLn("We want to copy these lyrics from the source to new files.");
-        printGreenGenericLn("We will do this in two ways. One with a BufferedWriter and the other with a FileOutputStream.");
+        GREEN.printGenericLn("Case: In the year 2000, spanish singer, Monica Naranjo, came into the music scene with her hit \"Sobreviviré\"");
+        GREEN.printGenericLn("Given the raw energy of the lyrics of the songs and its meaning, \"Sobreviviré\" became an anthem of those who fight to be understood and accepted");
+        GREEN.printGenericLn("In the video, Monica Naranjo depics just that.");
+        GREEN.printGenericLn("We want to copy these lyrics from the source to new files.");
+        GREEN.printGenericLn("We will do this in two ways. One with a BufferedWriter and the other with a FileOutputStream.");
         String source = null;
         try (var fis = new FileInputStream("/tmp/monica_naranjo_lyrics.txt")) {
             source = new String(fis.readAllBytes(), Charset.defaultCharset());
@@ -195,11 +195,11 @@ public class Mastery4Dot2Runner {
         } catch (IOException e) {
             printRedThrowableAndExit(e);
         }
-        printGreenGenericLn("Take-away");
+        GREEN.printGenericLn("Take-away");
         readFile("/tmp/mn3.txt");
-        printGreenGenericLn("1. We can specify UTF with FileWriter, OutputStreamWriter and with ObjectOutputStream");
-        printGreenGenericLn("2. It is not mandatory to specify UTF with Writers. CharSet is optional");
-        printGreenGenericLn("3. In the OutputStream we have methods that can write in UTF directly (writeUTF)");
+        GREEN.printGenericLn("1. We can specify UTF with FileWriter, OutputStreamWriter and with ObjectOutputStream");
+        GREEN.printGenericLn("2. It is not mandatory to specify UTF with Writers. CharSet is optional");
+        GREEN.printGenericLn("3. In the OutputStream we have methods that can write in UTF directly (writeUTF)");
     }
 
     private static void readFile(String resultFilename) {
@@ -217,10 +217,10 @@ public class Mastery4Dot2Runner {
     private static void exercise16() {
         printBrightCyanGenericLn("--- 16. NavigableMap and `pollLastEntry` and `pollFirstEntry`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: \"Supersubmarina\" is a band from Spain.");
-        printGreenGenericLn("In 2008 and 2009, they've edited their first two EP(Extended Play)s");
-        printGreenGenericLn("You'll show these vinyls to your friends");
-        printGreenGenericLn("And then you will lend them");
+        GREEN.printGenericLn("Case: \"Supersubmarina\" is a band from Spain.");
+        GREEN.printGenericLn("In 2008 and 2009, they've edited their first two EP(Extended Play)s");
+        GREEN.printGenericLn("You'll show these vinyls to your friends");
+        GREEN.printGenericLn("And then you will lend them");
         final String[] cientoCero = {"Cientocero", "Elástica galáctica", "No es así", "Cientocero (english)", "Cientocero (maqueta)"};
         final String[] supersubmarina = {"Supersubmarina", "Ana", "Supersubmarina", "OCB"};
         final NavigableMap<String, List<String>> albums = new TreeMap<>() {{
@@ -243,19 +243,19 @@ public class Mastery4Dot2Runner {
         final Map.Entry<String, List<String>> lastLending = albums.pollLastEntry();
         MAGENTA.printGenericLn("We just took out the last album: %s", lastLending);
         MAGENTA.printGenericLn("So the our album collection should be empty now: %s", albums);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Navigable maps are very simple");
-        printGreenGenericLn("2. Important methods are pollFirstEntry, pollLastEntry, tailMap and headMaps");
-        printGreenGenericLn("3. Head is exclusive, whiile tail is inclusive");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Navigable maps are very simple");
+        GREEN.printGenericLn("2. Important methods are pollFirstEntry, pollLastEntry, tailMap and headMaps");
+        GREEN.printGenericLn("3. Head is exclusive, whiile tail is inclusive");
     }
 
     private static void exercise15() {
         printBrightCyanGenericLn("--- 15. Iterating through a `CopyOnWriteArrayList` and the `UnsupportedOperationException`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Someone is compiling songs of the band Dorian for you.");
-        printGreenGenericLn("Your other half is waiting impatiently for the mix result.");
-        printGreenGenericLn("You keep getting a list, always updated, but you have to read it at the same time its being filled.");
-        printGreenGenericLn("It's hard to keep up, and so you decide to make multiple reads.");
+        GREEN.printGenericLn("Case: Someone is compiling songs of the band Dorian for you.");
+        GREEN.printGenericLn("Your other half is waiting impatiently for the mix result.");
+        GREEN.printGenericLn("You keep getting a list, always updated, but you have to read it at the same time its being filled.");
+        GREEN.printGenericLn("It's hard to keep up, and so you decide to make multiple reads.");
         final String[] songs = {
                 "Buenas Intenciones",
                 "Duele",
@@ -320,34 +320,34 @@ public class Mastery4Dot2Runner {
         } catch (UnsupportedOperationException e) {
             printRedGenericLn("We cannot! And this is because this iterator is working with an array that is allowed to be copied and discarded -> %s", e);
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. CopyOnWriteArrayList make a copy on every write operation");
-        printGreenGenericLn("2. This way, there will be no concurrent type of exception thrown");
-        printGreenGenericLn("3. The iterator of this type of List's does not support modifications");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. CopyOnWriteArrayList make a copy on every write operation");
+        GREEN.printGenericLn("2. This way, there will be no concurrent type of exception thrown");
+        GREEN.printGenericLn("3. The iterator of this type of List's does not support modifications");
     }
 
     private static void exercise14() {
         printBrightCyanGenericLn("--- 14. Static and instance initialization of final `members`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We know that the band Dorian is mostly classified as being an Indie pop group.");
-        printGreenGenericLn("We'll create its registry and see the many different ways we can initialize final values.");
-        printGreenGenericLn("Have a look in the code. All these fields are mandatory and cannot change because they are final");
+        GREEN.printGenericLn("Case: We know that the band Dorian is mostly classified as being an Indie pop group.");
+        GREEN.printGenericLn("We'll create its registry and see the many different ways we can initialize final values.");
+        GREEN.printGenericLn("Have a look in the code. All these fields are mandatory and cannot change because they are final");
         var dorian = new Indie("Dorian");
         MAGENTA.printGenericLn("This is our band %s", dorian);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. All final fields have to be initialized");
-        printGreenGenericLn("2. There is no difference in this mandatory action between static and instance members");
-        printGreenGenericLn("3. Members can be initialized using accolades");
-        printGreenGenericLn("4. There isn't a lot of reasons to use accolades this way. Just know that they work");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. All final fields have to be initialized");
+        GREEN.printGenericLn("2. There is no difference in this mandatory action between static and instance members");
+        GREEN.printGenericLn("3. Members can be initialized using accolades");
+        GREEN.printGenericLn("4. There isn't a lot of reasons to use accolades this way. Just know that they work");
     }
 
     private static void exercise13() {
         printBrightCyanGenericLn("--- 13. `Float.POSITIVE_INFINITY` vs `Float.NEGATIVE_INFINITY`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Vetusta Morla publish in 2020 its fith studio album entitled \"Mismo Sitio Distinto Lugar - Canciones dentro de canciones\".");
-        printGreenGenericLn("They came up with this original concept of songs within songs.");
-        printGreenGenericLn("When you find a song within a song you are really up to infinity.");
-        printGreenGenericLn("We can represent the infinity of songs Vetusta Morla can make by using Float and Double.");
+        GREEN.printGenericLn("Case: Vetusta Morla publish in 2020 its fith studio album entitled \"Mismo Sitio Distinto Lugar - Canciones dentro de canciones\".");
+        GREEN.printGenericLn("They came up with this original concept of songs within songs.");
+        GREEN.printGenericLn("When you find a song within a song you are really up to infinity.");
+        GREEN.printGenericLn("We can represent the infinity of songs Vetusta Morla can make by using Float and Double.");
         var songs = Float.POSITIVE_INFINITY;
         var nosongs = Float.NEGATIVE_INFINITY;
         printOrangeGenericLn(songs);
@@ -391,17 +391,17 @@ public class Mastery4Dot2Runner {
         } catch (ArithmeticException e) {
             printRedGenericLn("Bingo! -> %s", e);
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. There infinity representations for Float and Double calculations");
-        printGreenGenericLn("2. Numbers without decimals cannot make a division by zero");
-        printGreenGenericLn("3. Division by zero with Float and Double are akin to ∞ (infinity) in math.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. There infinity representations for Float and Double calculations");
+        GREEN.printGenericLn("2. Numbers without decimals cannot make a division by zero");
+        GREEN.printGenericLn("3. Division by zero with Float and Double are akin to ∞ (infinity) in math.");
     }
 
     private static void exercise12() {
         printBrightCyanGenericLn("--- 12. Immutability with Guidelines 7 and 6");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We just made a much safer Cristal Ball for Alaska to use.");
-        printGreenGenericLn("Let's give it a try!.");
+        GREEN.printGenericLn("Case: We just made a much safer Cristal Ball for Alaska to use.");
+        GREEN.printGenericLn("Let's give it a try!.");
         SuperCristalBall superBolaDeCristal = null;
         try {
             superBolaDeCristal = SuperCristalBall.createCristalBall(
@@ -447,25 +447,25 @@ public class Mastery4Dot2Runner {
         }
         System.setSecurityManager(null);
 
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. We've made a few tests here, but this module will not be able to cover all of guidelines 6 and 7");
-        printGreenGenericLn("2. Guideline 6 is about protecting Mutability");
-        printGreenGenericLn("3. Guideline 7 is about protecting Object construction");
-        printGreenGenericLn("4. Some guidelines may fuse with each other");
-        printGreenGenericLn("5. Some are much more important than others");
-        printGreenGenericLn("6. Guideline 7-1 / OBJECT-1: Avoid exposing constructors of sensitive classes");
-        printGreenGenericLn("7. Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes");
-        printGreenGenericLn("8. Guideline 7-4 / OBJECT-4: Prevent constructors from calling methods that can be overridden");
-        printGreenGenericLn("9. Guideline 7-5 / OBJECT-5: Defend against cloning of non-final classes");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. We've made a few tests here, but this module will not be able to cover all of guidelines 6 and 7");
+        GREEN.printGenericLn("2. Guideline 6 is about protecting Mutability");
+        GREEN.printGenericLn("3. Guideline 7 is about protecting Object construction");
+        GREEN.printGenericLn("4. Some guidelines may fuse with each other");
+        GREEN.printGenericLn("5. Some are much more important than others");
+        GREEN.printGenericLn("6. Guideline 7-1 / OBJECT-1: Avoid exposing constructors of sensitive classes");
+        GREEN.printGenericLn("7. Guideline 7-2 / OBJECT-2: Prevent the unauthorized construction of sensitive classes");
+        GREEN.printGenericLn("8. Guideline 7-4 / OBJECT-4: Prevent constructors from calling methods that can be overridden");
+        GREEN.printGenericLn("9. Guideline 7-5 / OBJECT-5: Defend against cloning of non-final classes");
     }
 
     private static void exercise11() {
         printBrightCyanGenericLn("--- 11. Method overloading and overriding with `extends`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Some of us like music \"Rosario Flores\" style, others prefer something more edgy like \"Dorian\".");
-        printGreenGenericLn("We now have to manage the upcoming dates and for that we have created just one BandManager abstraction");
-        printGreenGenericLn("Further we have implemented 3 different ways to override and other two to overload the BandManager method.");
-        printGreenGenericLn("We'll put these methods to the test for different times of music history.");
+        GREEN.printGenericLn("Case: Some of us like music \"Rosario Flores\" style, others prefer something more edgy like \"Dorian\".");
+        GREEN.printGenericLn("We now have to manage the upcoming dates and for that we have created just one BandManager abstraction");
+        GREEN.printGenericLn("Further we have implemented 3 different ways to override and other two to overload the BandManager method.");
+        GREEN.printGenericLn("We'll put these methods to the test for different times of music history.");
         var band = new Band(List.of(
                 "Santi Balmes",
                 "Julián Saldarriaga",
@@ -505,33 +505,33 @@ public class Mastery4Dot2Runner {
         final Map<GenericBand, LocalDateTime> upcomingDates3 = generalBandManager.getUpcomingDates((Band) genericBand, LocalDateTime.now());
         final Map<QuintetBand, LocalDate> upcomingDates4 = quintetBandManager.getUpcomingDates((Band) quintetBand, LocalDate.now());
         BRIGHT_MAGENTA.printGenericLn("Had we used the overriden methods we would have gotten:\n%s\nand\n%s", upcomingDates3, upcomingDates4);
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Overloading and overriding with extends obeys some specific rules");
-        printGreenGenericLn("2. The base type is the parameter you have to use in order to override");
-        printGreenGenericLn("3. Subclass types of the declared base parameter always results in overloading");
-        printGreenGenericLn("4. The return parameters may be subclass types");
-        printGreenGenericLn("5. Since they have to be subclasses or the same, the type cannot be erased when overriding");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Overloading and overriding with extends obeys some specific rules");
+        GREEN.printGenericLn("2. The base type is the parameter you have to use in order to override");
+        GREEN.printGenericLn("3. Subclass types of the declared base parameter always results in overloading");
+        GREEN.printGenericLn("4. The return parameters may be subclass types");
+        GREEN.printGenericLn("5. Since they have to be subclasses or the same, the type cannot be erased when overriding");
     }
 
     private static void exercise10() {
         printBrightCyanGenericLn("--- 10. Evaluation order of conditional operators");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Pepe is a manager that loves going to concerts.");
-        printGreenGenericLn("In your team, you know that he is crazy about \"Vetusta Morla\".");
-        printGreenGenericLn("However, sometimes, Pepe forgets to say to the team that is off.");
-        printGreenGenericLn("Not only that, but at the same time that \"Vetusta Morla\" is playing, \"Sidonie\" is also playing in the same week.");
-        printGreenGenericLn("If any of this is true, then we know that Pepe will be off the whole November of 2011.");
-        printGreenGenericLn("We'll check this:");
+        GREEN.printGenericLn("Case: Pepe is a manager that loves going to concerts.");
+        GREEN.printGenericLn("In your team, you know that he is crazy about \"Vetusta Morla\".");
+        GREEN.printGenericLn("However, sometimes, Pepe forgets to say to the team that is off.");
+        GREEN.printGenericLn("Not only that, but at the same time that \"Vetusta Morla\" is playing, \"Sidonie\" is also playing in the same week.");
+        GREEN.printGenericLn("If any of this is true, then we know that Pepe will be off the whole November of 2011.");
+        GREEN.printGenericLn("We'll check this:");
         var month = 11;
         var year = 2011;
         if (pepeIsOffOn(year, month, 24) || pepeIsOffOn(year, month, 25)) {
             MAGENTA.printGenericLn("Pepe won't be coming to work this november!");
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Logic operators such as || and && can short circuit in Java");
-        printGreenGenericLn("2. Short circuiting does not imply the evaluation of all operands");
-        printGreenGenericLn("3. Since they are evaluated left to right and considering mathematical precedence, the runtime knows when further evaluation is not needed");
-        printGreenGenericLn("4. When not all operands are evaluated, we call this  a short-circuit");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Logic operators such as || and && can short circuit in Java");
+        GREEN.printGenericLn("2. Short circuiting does not imply the evaluation of all operands");
+        GREEN.printGenericLn("3. Since they are evaluated left to right and considering mathematical precedence, the runtime knows when further evaluation is not needed");
+        GREEN.printGenericLn("4. When not all operands are evaluated, we call this  a short-circuit");
     }
 
     private static boolean pepeIsOffOn(int year, int month, int day) {
@@ -555,11 +555,11 @@ public class Mastery4Dot2Runner {
     private static void exercise9() {
         printBrightCyanGenericLn("--- 9. Why use `putIfAbsent`?");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Someone in your group of friends suggested to go to the next concert of Paulina Rubio.");
-        printGreenGenericLn("Unfortunatelly you cannot go.");
-        printGreenGenericLn("However your friends, Paco, Lori, Nere, Cristina, Viktor, Carlos and Andrea, are really excited to go!");
-        printGreenGenericLn("We need to distribute the tickets as fast as possible and store them in a map.");
-        printGreenGenericLn("The best ticket is the front row one, so in spite of being best friends, they will struggle to get the best one first!");
+        GREEN.printGenericLn("Case: Someone in your group of friends suggested to go to the next concert of Paulina Rubio.");
+        GREEN.printGenericLn("Unfortunatelly you cannot go.");
+        GREEN.printGenericLn("However your friends, Paco, Lori, Nere, Cristina, Viktor, Carlos and Andrea, are really excited to go!");
+        GREEN.printGenericLn("We need to distribute the tickets as fast as possible and store them in a map.");
+        GREEN.printGenericLn("The best ticket is the front row one, so in spite of being best friends, they will struggle to get the best one first!");
         printOrangeGenericLn("Ticket office is open!");
         var ticketFrontRow = new Ticket("Paulina Rubio", "Valdemoro - Madrid - España", "ES1028562319",
                 LocalDateTime.of(2010, 5, 8, 0, 0));
@@ -593,7 +593,7 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("The result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
-        printGreenGenericLn("We would get the same result if we had used putIfAbsent:");
+        GREEN.printGenericLn("We would get the same result if we had used putIfAbsent:");
         final var ticketMap2 = new ConcurrentHashMap<Ticket, String>();
         executorService = Executors.newFixedThreadPool(7);
         executorService.submit(tryAssignToNoLog(precedenceTickets, ticketMap2, "Paco"));
@@ -610,7 +610,7 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("The new result is \n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
-        printGreenGenericLn("These operations will not fail for non-thread safe maps:");
+        GREEN.printGenericLn("These operations will not fail for non-thread safe maps:");
         final var ticketMap3 = new HashMap<Ticket, String>();
         executorService = Executors.newFixedThreadPool(7);
         executorService.submit(tryAssignTo(precedenceTickets, ticketMap3, "Paco"));
@@ -627,11 +627,11 @@ public class Mastery4Dot2Runner {
             printRedThrowableAndExit(e);
         }
         MAGENTA.printGenericLn("The new result is also what we are looking for:\n%s", ticketMap.entrySet().stream().map(Object::toString).collect(Collectors.joining("\n")));
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. In order to add to a hashmap in a concurrent way, we should use an atomic operation.");
-        printGreenGenericLn("2. putIfAbsent performs a check if exists and add then if not, it puts an element into the map in an atomic way.");
-        printGreenGenericLn("3. This, also works in a non-thread safe map.");
-        printGreenGenericLn("4. For that we do not have to combine our operation with a ConcurrentHashMap which is thread safe.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. In order to add to a hashmap in a concurrent way, we should use an atomic operation.");
+        GREEN.printGenericLn("2. putIfAbsent performs a check if exists and add then if not, it puts an element into the map in an atomic way.");
+        GREEN.printGenericLn("3. This, also works in a non-thread safe map.");
+        GREEN.printGenericLn("4. For that we do not have to combine our operation with a ConcurrentHashMap which is thread safe.");
     }
 
     private static Runnable tryAssignToNoLog(List<Ticket> precedenceTickets, Map<Ticket, String> ticketMap, String winner) {
@@ -662,11 +662,11 @@ public class Mastery4Dot2Runner {
     private static void exercise8() {
         printBrightCyanGenericLn("--- 8. Overwriting with `FileOutputStream`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: \"Sueño su boca\" was the first big hit of Raúl Cuenca in Spain.");
-        printGreenGenericLn("In the year 2000, this hit was being played all across spanish speaking countries and the rest of the latin world.");
-        printGreenGenericLn("You want to save the lyrics and made it through to copying them to one friend");
-        printGreenGenericLn("Now you you are making the second copy you make a mistake and only copy a bit of it to the same destination file.");
-        printGreenGenericLn("Will there be a change?.");
+        GREEN.printGenericLn("Case: \"Sueño su boca\" was the first big hit of Raúl Cuenca in Spain.");
+        GREEN.printGenericLn("In the year 2000, this hit was being played all across spanish speaking countries and the rest of the latin world.");
+        GREEN.printGenericLn("You want to save the lyrics and made it through to copying them to one friend");
+        GREEN.printGenericLn("Now you you are making the second copy you make a mistake and only copy a bit of it to the same destination file.");
+        GREEN.printGenericLn("Will there be a change?.");
         try (
                 var fis = new FileInputStream("/tmp/raul_lyrics.txt");
                 var fos = new FileOutputStream("/tmp/raul_lyrics2.txt");
@@ -709,23 +709,23 @@ public class Mastery4Dot2Runner {
         } catch (Exception e) {
             printRedThrowableAndExit(e);
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. By default, FileOutputStream is configured to have the appendMode to false.");
-        printGreenGenericLn("2. If appendMode is disable, the file gets overwritten.");
-        printGreenGenericLn("3. Overwriting a file means that the file is written all over again.");
-        printGreenGenericLn("4. When we start again, we remove all original data.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. By default, FileOutputStream is configured to have the appendMode to false.");
+        GREEN.printGenericLn("2. If appendMode is disable, the file gets overwritten.");
+        GREEN.printGenericLn("3. Overwriting a file means that the file is written all over again.");
+        GREEN.printGenericLn("4. When we start again, we remove all original data.");
     }
 
     private static void exercise7() {
         printBrightCyanGenericLn("--- 7. Immutability standards and using `LocalDate` and `LocalDateTime`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Alaska started a show in 1984 based on the writings of Dolores Rico Oliver called \"La bola de cristal\".");
-        printGreenGenericLn("\"La bola de cristal\", if yo haven't guessed already means \"The cristal ball\"");
-        printGreenGenericLn("Cristal balls are always portrayed the same way");
-        printGreenGenericLn("They are magic and they give information about the past, the present and the future.");
-        printGreenGenericLn("Each cristal ball is also unique, but how do cristal balls make sure they are not tampered with?");
-        printGreenGenericLn("In other words, what makes cristal balls immutable?");
-        printGreenGenericLn("For our case we are just interested on the first 5 requirements for security guidelines 6 on Mutable classes: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
+        GREEN.printGenericLn("Case: Alaska started a show in 1984 based on the writings of Dolores Rico Oliver called \"La bola de cristal\".");
+        GREEN.printGenericLn("\"La bola de cristal\", if yo haven't guessed already means \"The cristal ball\"");
+        GREEN.printGenericLn("Cristal balls are always portrayed the same way");
+        GREEN.printGenericLn("They are magic and they give information about the past, the present and the future.");
+        GREEN.printGenericLn("Each cristal ball is also unique, but how do cristal balls make sure they are not tampered with?");
+        GREEN.printGenericLn("In other words, what makes cristal balls immutable?");
+        GREEN.printGenericLn("For our case we are just interested on the first 5 requirements for security guidelines 6 on Mutable classes: https://www.oracle.com/java/technologies/javase/seccodeguide.html");
         CristalBall bolaDeCristal = null;
         try {
             bolaDeCristal = CristalBall.createCristalBall(
@@ -782,21 +782,21 @@ public class Mastery4Dot2Runner {
         } catch (NoSuchAlgorithmException e) {
             printRedThrowableAndExit(e);
         }
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. We followed the Java Security Guidelines for Mutability from point 1 to 5, which are the most common");
-        printGreenGenericLn("1.1 Guideline 6-1 / MUTABLE-1: Prefer immutability for value types");
-        printGreenGenericLn("1.2 Guideline 6-2 / MUTABLE-2: Create copies of mutable output values");
-        printGreenGenericLn("1.3 Guideline 6-3 / MUTABLE-3: Create safe copies of mutable and subclassable input values");
-        printGreenGenericLn("1.4 Guideline 6-4 / MUTABLE-4: Support copy functionality for a mutable class");
-        printGreenGenericLn("1.5 Guideline 6-5 / MUTABLE-5: Do not trust identity equality when overridable on input reference objects");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. We followed the Java Security Guidelines for Mutability from point 1 to 5, which are the most common");
+        GREEN.printGenericLn("1.1 Guideline 6-1 / MUTABLE-1: Prefer immutability for value types");
+        GREEN.printGenericLn("1.2 Guideline 6-2 / MUTABLE-2: Create copies of mutable output values");
+        GREEN.printGenericLn("1.3 Guideline 6-3 / MUTABLE-3: Create safe copies of mutable and subclassable input values");
+        GREEN.printGenericLn("1.4 Guideline 6-4 / MUTABLE-4: Support copy functionality for a mutable class");
+        GREEN.printGenericLn("1.5 Guideline 6-5 / MUTABLE-5: Do not trust identity equality when overridable on input reference objects");
     }
 
     private static void exercise6() {
         printBrightCyanGenericLn("--- 6. Bypassing overloading methods with different return types");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We want to go one of the \"La casa azul\" concerts.");
-        printGreenGenericLn("Time is running out to book them, we don't know to which one we can go to.");
-        printGreenGenericLn("So we decide to buy a bunch of them.");
+        GREEN.printGenericLn("Case: We want to go one of the \"La casa azul\" concerts.");
+        GREEN.printGenericLn("Time is running out to book them, we don't know to which one we can go to.");
+        GREEN.printGenericLn("So we decide to buy a bunch of them.");
         var ticket1 = new Ticket("La casa azul", "El Ejido, " +
                 "ES", "ES23424ES23432", LocalDateTime.of(2019, 4, 27, 0, 0, 0));
         var ticket2 = new Ticket("La casa azul", "El Ejido, " +
@@ -820,20 +820,20 @@ public class Mastery4Dot2Runner {
         final var ticketNumber = allTicketsLaCasaAzul.get(0);
         final var finalTicket = Ticket.getTicket(ticketNumber);
         MAGENTA.printGenericLn("Hurrah! We are going to %s to watch %s with ticket %s on the %s", finalTicket.getVenue(), finalTicket.getBandName(), finalTicket.getTicketNumber(), finalTicket.getLocalDateTime());
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Methods can be overloaded if their parameters are different both in number and in types");
-        printGreenGenericLn("2. The compiler cannot tell two methods apart if they differ only in their return type");
-        printGreenGenericLn("3. This makes sense because if you call a method and do not assign its return value, you also would not be able to tell which method should be called would you?");
-        printGreenGenericLn("4. By the previous point we can also infer that parameter naming will not play a role in overloading since we don't call methods via their parameters name in Java... Not yet at least 😊");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Methods can be overloaded if their parameters are different both in number and in types");
+        GREEN.printGenericLn("2. The compiler cannot tell two methods apart if they differ only in their return type");
+        GREEN.printGenericLn("3. This makes sense because if you call a method and do not assign its return value, you also would not be able to tell which method should be called would you?");
+        GREEN.printGenericLn("4. By the previous point we can also infer that parameter naming will not play a role in overloading since we don't call methods via their parameters name in Java... Not yet at least 😊");
     }
 
     private static void exercise5() {
         printBrightCyanGenericLn("--- 5. Hiding and shadowing instance members");
         printRainbowLn("==");
-        printGreenGenericLn("Case: \"Love of Lesbian\" was founded in 1997.");
-        printGreenGenericLn("Alaska actually started in a band called \"Alaska y los Pegamoides\" in 1979.");
-        printGreenGenericLn("\"Vetusta Morla\" is another band which started in 1998.");
-        printGreenGenericLn("We are going to register them and understand the concept of shadouwing of instance members.");
+        GREEN.printGenericLn("Case: \"Love of Lesbian\" was founded in 1997.");
+        GREEN.printGenericLn("Alaska actually started in a band called \"Alaska y los Pegamoides\" in 1979.");
+        GREEN.printGenericLn("\"Vetusta Morla\" is another band which started in 1998.");
+        GREEN.printGenericLn("We are going to register them and understand the concept of shadouwing of instance members.");
         var band = new Band(List.of(
                 "Santi Balmes",
                 "Julián Saldarriaga",
@@ -860,40 +860,40 @@ public class Mastery4Dot2Runner {
         MAGENTA.printGenericLn("This is band #1 -> %s", band);
         MAGENTA.printGenericLn("This is band #2 -> %s", quintetBand);
         MAGENTA.printGenericLn("This is band #3 -> %s", genericBand);
-        printGreenGenericLn("We notice a few things that may sound odd.");
-        printGreenGenericLn("1. Capacity is different for the subclasses of Band.");
-        printGreenGenericLn("2. Capacity didn't limit the number of allowed members.");
+        GREEN.printGenericLn("We notice a few things that may sound odd.");
+        GREEN.printGenericLn("1. Capacity is different for the subclasses of Band.");
+        GREEN.printGenericLn("2. Capacity didn't limit the number of allowed members.");
         MAGENTA.printGenericLn("Band #1 has %d members", band.capacity);
         MAGENTA.printGenericLn("Band #2 has %d members", ((Band) quintetBand).capacity);
         MAGENTA.printGenericLn("Band #3 has %d members", ((Band) genericBand).capacity);
-        printGreenGenericLn("Well, we know that for the last two bands this is not true. This is why we have our common getters.");
+        GREEN.printGenericLn("Well, we know that for the last two bands this is not true. This is why we have our common getters.");
         MAGENTA.printGenericLn("Band #1 has %d members", band.getCapacity());
         MAGENTA.printGenericLn("Band #2 has %d members", quintetBand.getCapacity());
         MAGENTA.printGenericLn("Band #3 has %d members", genericBand.getCapacity());
-        printGreenGenericLn("This is true, but do methods get overriden?");
+        GREEN.printGenericLn("This is true, but do methods get overriden?");
         MAGENTA.printGenericLn("Band #1 has %d members", band.getCapacity());
         MAGENTA.printGenericLn("Band #2 has %d members", ((Band) quintetBand).getCapacity());
         MAGENTA.printGenericLn("Band #3 has %d members", ((Band) genericBand).getCapacity());
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Shadowing involves covering another variable. There is no limitation on how this can be done");
-        printGreenGenericLn("2. The overshadowing member will also overshadow the scope");
-        printGreenGenericLn("3. Methods do get overridden regardless of @Override");
-        printGreenGenericLn("4. Capacity in an ArrayList only means that the initial capacity of the Array is fixed.");
-        printGreenGenericLn("5. An ArrayList will change size automatically. Capacity is just used in performance and memory usage fine tuning.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Shadowing involves covering another variable. There is no limitation on how this can be done");
+        GREEN.printGenericLn("2. The overshadowing member will also overshadow the scope");
+        GREEN.printGenericLn("3. Methods do get overridden regardless of @Override");
+        GREEN.printGenericLn("4. Capacity in an ArrayList only means that the initial capacity of the Array is fixed.");
+        GREEN.printGenericLn("5. An ArrayList will change size automatically. Capacity is just used in performance and memory usage fine tuning.");
     }
 
     private static void exercise4() {
         printBrightCyanGenericLn("--- 4. The `java.desktop` module");
         printRainbowLn("==");
-        printGreenGenericLn("Case: We want an app that lets us surf the web for short stories about Spanish music");
-        printGreenGenericLn("We'll make our first prototype using the \"Bandido\". A famous spanish album from \"Miguel Bosé\" containing famous anthem \"Amante bandido\"");
-        printGreenGenericLn("We'll use this as the name of our module: amante.bandido");
-        printGreenGenericLn("Please find this module in the sources for mastery-4-3-swing and run it.");
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Java SWING libraries, although part of the JDK, they are not part of the java.base module.");
-        printGreenGenericLn("2. Because they are not part of the java.base module, they have to be required.");
-        printGreenGenericLn("3. To require them, you need to require the java.desktop module. Example:");
-        printGreenGenericLn("module amante.bandido {\n" +
+        GREEN.printGenericLn("Case: We want an app that lets us surf the web for short stories about Spanish music");
+        GREEN.printGenericLn("We'll make our first prototype using the \"Bandido\". A famous spanish album from \"Miguel Bosé\" containing famous anthem \"Amante bandido\"");
+        GREEN.printGenericLn("We'll use this as the name of our module: amante.bandido");
+        GREEN.printGenericLn("Please find this module in the sources for mastery-4-3-swing and run it.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Java SWING libraries, although part of the JDK, they are not part of the java.base module.");
+        GREEN.printGenericLn("2. Because they are not part of the java.base module, they have to be required.");
+        GREEN.printGenericLn("3. To require them, you need to require the java.desktop module. Example:");
+        GREEN.printGenericLn("module amante.bandido {\n" +
                 "    requires java.desktop;\n" +
                 "    requires consolerizer;\n" +
                 "}");
@@ -902,13 +902,13 @@ public class Mastery4Dot2Runner {
     private static void exercise3() {
         printBrightCyanGenericLn("--- 3. The body of `switch`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: \"¿A quién le importa?\" is a single from 1984 sung by Alaska and Dinamara, and edited by Nacho Canut and Carlos Berlanga.");
-        printGreenGenericLn("There have been a lot of switches in styles up until present for this song. Several covers.");
-        printGreenGenericLn("The reason why this song is so popular is because later in the 80's, it found great recognition in marginalized groups.");
-        printGreenGenericLn("Most importantly the LGBT community from spanish speaking countries.");
-        printGreenGenericLn("The song gained such momentum in that community, that it is now celebrated in the same way as \"I will survive\" from Gloria Gaynor is.");
-        printGreenGenericLn("It mainly has to do with the rebelious theme of the song in which it is said:");
-        printGreenGenericLn("\"Who cares as to what to I do? Who cares as to what do I say? I am like this, I will always be like this and I will never change.\"");
+        GREEN.printGenericLn("Case: \"¿A quién le importa?\" is a single from 1984 sung by Alaska and Dinamara, and edited by Nacho Canut and Carlos Berlanga.");
+        GREEN.printGenericLn("There have been a lot of switches in styles up until present for this song. Several covers.");
+        GREEN.printGenericLn("The reason why this song is so popular is because later in the 80's, it found great recognition in marginalized groups.");
+        GREEN.printGenericLn("Most importantly the LGBT community from spanish speaking countries.");
+        GREEN.printGenericLn("The song gained such momentum in that community, that it is now celebrated in the same way as \"I will survive\" from Gloria Gaynor is.");
+        GREEN.printGenericLn("It mainly has to do with the rebelious theme of the song in which it is said:");
+        GREEN.printGenericLn("\"Who cares as to what to I do? Who cares as to what do I say? I am like this, I will always be like this and I will never change.\"");
 
         var i = 1984;
         MAGENTA.printGenericLn("In year %d version %s was released.", i, getYearMusic(i));
@@ -927,7 +927,7 @@ public class Mastery4Dot2Runner {
         m = 7;
         MAGENTA.printGenericLn("In year %d and month %d version %s was released.", i, m, getYearMonthMusic(i, m));
 
-        printGreenGenericLn("Curiosities about switch and other accolades:");
+        GREEN.printGenericLn("Curiosities about switch and other accolades:");
 
         BLUE.printGenericLn("        int k =0;\n" +
                 "        for (; k < 100; k++) ;\n" +
@@ -946,11 +946,11 @@ public class Mastery4Dot2Runner {
         // do while (k<100);
         // Switches without a body are illegal
         // switch(i);k
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Switches must have a body!");
-        printGreenGenericLn("2. Switches only accept int, short, long, byte, char, their boxed counterparts, Short, Long, Byte, Character, and String and enums as parameters.");
-        printGreenGenericLn("3. do while is akin to a switch in the sense that it also cannot be done without a body.");
-        printGreenGenericLn("4. for and while can be done without a body.");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Switches must have a body!");
+        GREEN.printGenericLn("2. Switches only accept int, short, long, byte, char, their boxed counterparts, Short, Long, Byte, Character, and String and enums as parameters.");
+        GREEN.printGenericLn("3. do while is akin to a switch in the sense that it also cannot be done without a body.");
+        GREEN.printGenericLn("4. for and while can be done without a body.");
     }
 
     /**
@@ -1008,9 +1008,9 @@ public class Mastery4Dot2Runner {
     private static void exercise2() {
         printBrightCyanGenericLn("--- 2. Different ways to use `this`");
         printRainbowLn("==");
-        printGreenGenericLn("Case: In 1981, Hispavox edited and published single \"Juntos\" by Paloma San Basilio");
-        printGreenGenericLn("Since then, this song has been sung and remixed by different artists.");
-        printGreenGenericLn("We will register this event and see how can we use `this`.");
+        GREEN.printGenericLn("Case: In 1981, Hispavox edited and published single \"Juntos\" by Paloma San Basilio");
+        GREEN.printGenericLn("Since then, this song has been sung and remixed by different artists.");
+        GREEN.printGenericLn("We will register this event and see how can we use `this`.");
 
         var company = new Company("Hispavox");
         var music = company.new Music("Juntos", "Paloma San Basilio",
@@ -1019,19 +1019,19 @@ public class Mastery4Dot2Runner {
         // Company.this
         BLUE.printGenericLn("The only reason why %s works is because %s is an enclosing class of %s.", "Company.this.company", "Company", "Music");
         MAGENTA.printGenericLn(music.getTheMusic());
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. `this` is more commonly used within a class to refer to the instance members");
-        printGreenGenericLn("2. It cannot be used for static members");
-        printGreenGenericLn("3. Although less common, we can use this to refer to the instance members of an enclosing class");
-        printGreenGenericLn("4. Even though it looks like a static accessor, it is an instance member accessor");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. `this` is more commonly used within a class to refer to the instance members");
+        GREEN.printGenericLn("2. It cannot be used for static members");
+        GREEN.printGenericLn("3. Although less common, we can use this to refer to the instance members of an enclosing class");
+        GREEN.printGenericLn("4. Even though it looks like a static accessor, it is an instance member accessor");
     }
 
     private static void exercise1() {
         printBrightCyanGenericLn("--- 1. Primitives Revised");
         printRainbowLn("==");
-        printGreenGenericLn("Case: Music group Fangoria was created in 1989.");
-        printGreenGenericLn("The name of the group was inspired by the love the group members, Alaska and Nacho Canut have for the magazine of the same name");
-        printGreenGenericLn("We'll have a look at numbers related to that magazine and explore java primitive types with it");
+        GREEN.printGenericLn("Case: Music group Fangoria was created in 1989.");
+        GREEN.printGenericLn("The name of the group was inspired by the love the group members, Alaska and Nacho Canut have for the magazine of the same name");
+        GREEN.printGenericLn("We'll have a look at numbers related to that magazine and explore java primitive types with it");
         printRainbowLn("###");
         final byte issnLeft = 0164;
         printBrightCyanGenericLn("Byte - one byte - 2^8");
@@ -1122,7 +1122,7 @@ public class Mastery4Dot2Runner {
         printBrightCyanGenericLn(parallelUniversePublications2);
         printBrightCyanGenericLn(parallelUniversePublications3);
         printRainbowLn("###");
-        printGreenGenericLn("Curiosities about primitive types:");
+        GREEN.printGenericLn("Curiosities about primitive types:");
         double maxTest = 3.40282353482789473289473289477899659000892042934820984928423804e+38;
         float maxTest2 = 3.40282353482789473289473289477899659000892042934820984928423804e+38f;
         float maxTest3 = 3.4028235e+38f;
@@ -1149,16 +1149,16 @@ public class Mastery4Dot2Runner {
         BRIGHT_MAGENTA.printGenericLn("%f", maxTest6);
         MAGENTA.printGenericLn("Double.toString(Double.MAX_VALUE):");
         BRIGHT_MAGENTA.printGenericLn("%s", Double.toString(Double.MAX_VALUE));
-        printGreenGenericLn("Take-away");
-        printGreenGenericLn("1. Primitive type conversion rules and ranges are not simple");
-        printGreenGenericLn("2. A number without decimal is considered an integer and automatically converted to a lower range if it fits it, but only on instantiation assignment.");
-        printGreenGenericLn("3. A value with a coma is considered a double. An f will specify that it is a float");
-        printGreenGenericLn("4. d is needed when making calculations that result in very large numbers");
-        printGreenGenericLn("5. d is also needed if our number without decimals results to be higher than long");
-        printGreenGenericLn("6. f is also needed if our number without decimals results to be higher than long");
-        printGreenGenericLn("7. f can take in any integer or long");
-        printGreenGenericLn("8. d can take in any integer or long or float");
-        printGreenGenericLn("9. Octals may not have digits higher than 8 otherwise the 0 before the number rule won't work!");
+        GREEN.printGenericLn("Take-away");
+        GREEN.printGenericLn("1. Primitive type conversion rules and ranges are not simple");
+        GREEN.printGenericLn("2. A number without decimal is considered an integer and automatically converted to a lower range if it fits it, but only on instantiation assignment.");
+        GREEN.printGenericLn("3. A value with a coma is considered a double. An f will specify that it is a float");
+        GREEN.printGenericLn("4. d is needed when making calculations that result in very large numbers");
+        GREEN.printGenericLn("5. d is also needed if our number without decimals results to be higher than long");
+        GREEN.printGenericLn("6. f is also needed if our number without decimals results to be higher than long");
+        GREEN.printGenericLn("7. f can take in any integer or long");
+        GREEN.printGenericLn("8. d can take in any integer or long or float");
+        GREEN.printGenericLn("9. Octals may not have digits higher than 8 otherwise the 0 before the number rule won't work!");
         double a;
         long b = 123;
         a = b;
@@ -1176,9 +1176,9 @@ public class Mastery4Dot2Runner {
 
     private static void moduleEnd() {
         printUnicornsLn(100);
-        printGreenGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor to it.");
-        printGreenGenericLn("Please keep coming back as I'll be creating more mastery modules.");
-        printGreenGenericLn("Thank you!");
+        GREEN.printGenericLn("Hope you enjoyed this mastery into Java 11 with some Spanish Indie/Pop flavor to it.");
+        GREEN.printGenericLn("Please keep coming back as I'll be creating more mastery modules.");
+        GREEN.printGenericLn("Thank you!");
         printUnicornsLn(100);
     }
 }

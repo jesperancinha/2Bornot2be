@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum21;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum21 {
@@ -75,8 +75,8 @@ public class Crum21 {
         MAGENTA.printGenericLn("We create an A from plane -> %s", a);
         MAGENTA.printGenericLn("We create an A from flying -> %s", a1);
 
-        printGreenGenericLn("The principle is that the return type, if an an object, it must be of the same type or a subtype of the overriden type.");
-        printGreenGenericLn("Overriding happens with the same type of parameters.");
-        printGreenGenericLn("Always take into consideration the type erasure operation of java to determine if overriding of certain method is legal.");
+        GREEN.printGenericLn("The principle is that the return type, if an an object, it must be of the same type or a subtype of the overriden type.");
+        GREEN.printGenericLn("Overriding happens with the same type of parameters.");
+        GREEN.printGenericLn("Always take into consideration the type erasure operation of java to determine if overriding of certain method is legal.");
     }
 }

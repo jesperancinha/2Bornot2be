@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum3;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum3 {
@@ -60,12 +60,10 @@ public class Crum3 {
         // A
         // b1 = new A();
 
-        printGreenGenericLn("It is very important to distinguish between compile errors and runtime errors");
-        printGreenGenericLn(
-            "When casting, a runtime error happens when the right happens in the code, but the instance does not match the casting type in any way");
-        printGreenGenericLn(
-            "A wrong cast may only happen if the type cast to is the same type or a sub-type of the instance");
-        printGreenGenericLn("Without an explicit casting, the compiler detects immediately that something went wrong");
-        printGreenGenericLn("When we make explicit casting, the compiler leaves that responsibility to us");
+        GREEN.printGenericLn("It is very important to distinguish between compile errors and runtime errors");
+        GREEN.printGenericLn("When casting, a runtime error happens when the right happens in the code, but the instance does not match the casting type in any way");
+        GREEN.printGenericLn("A wrong cast may only happen if the type cast to is the same type or a sub-type of the instance");
+        GREEN.printGenericLn("Without an explicit casting, the compiler detects immediately that something went wrong");
+        GREEN.printGenericLn("When we make explicit casting, the compiler leaves that responsibility to us");
     }
 }

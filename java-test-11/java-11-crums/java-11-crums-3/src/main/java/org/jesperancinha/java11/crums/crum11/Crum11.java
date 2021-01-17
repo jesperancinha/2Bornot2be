@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -81,17 +81,12 @@ public class Crum11 {
         // Required type:
         // capture of ? super CharSequence
         // objects.add(1L);
-        printGreenGenericLn(
-            "You need to be careful with type erasure -> Set<String> and Set<Object> have the same type erasure.");
-        printGreenGenericLn("If they have the same type erasure, the compiler will try to override the two methods.");
-        printGreenGenericLn(
-            "If the sub method return type isn't at least the same type or a sub type of the overridden one, then the compiler will report an error.");
-        printGreenGenericLn(
-            "Using wildcard extends, you cannot add any element to the list. You know that the element is of a specific type or subtype only, but you don't know which");
-        printGreenGenericLn("You can read wildcard extends though with the guarantee of the given type");
-        printGreenGenericLn(
-            "Super in a wildcard generic type, means that every element has a given super type. This also means that adding an element of that type or subtype is allowed");
-        printGreenGenericLn(
-            "Further reading: https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java");
+        GREEN.printGenericLn("You need to be careful with type erasure -> Set<String> and Set<Object> have the same type erasure.");
+        GREEN.printGenericLn("If they have the same type erasure, the compiler will try to override the two methods.");
+        GREEN.printGenericLn("If the sub method return type isn't at least the same type or a sub type of the overridden one, then the compiler will report an error.");
+        GREEN.printGenericLn("Using wildcard extends, you cannot add any element to the list. You know that the element is of a specific type or subtype only, but you don't know which");
+        GREEN.printGenericLn("You can read wildcard extends though with the guarantee of the given type");
+        GREEN.printGenericLn("Super in a wildcard generic type, means that every element has a given super type. This also means that adding an element of that type or subtype is allowed");
+        GREEN.printGenericLn("Further reading: https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java");
     }
 }

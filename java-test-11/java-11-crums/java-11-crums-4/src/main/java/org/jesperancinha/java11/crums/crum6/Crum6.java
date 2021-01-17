@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum6 {
@@ -31,7 +31,7 @@ public class Crum6 {
         printOrangeGenericLn(collect);
         MAGENTA.printGenericLn("We can see that we have two Rooibos teas");
 
-        printGreenGenericLn("It may sound not very intuitive, but grouping by can be very simple and just have the grouping parameter on it");
+        GREEN.printGenericLn("It may sound not very intuitive, but grouping by can be very simple and just have the grouping parameter on it");
 
     }
 }

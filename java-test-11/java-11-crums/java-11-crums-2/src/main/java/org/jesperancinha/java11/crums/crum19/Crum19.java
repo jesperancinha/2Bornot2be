@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum19;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum19 {
     public static void main(String[] args) {
@@ -29,9 +29,9 @@ public class Crum19 {
         atomicInteger1.compareAndSet(40278, 50000);
         MAGENTA.printGenericLn("So now we can check the current values %d and %d", atomicInteger1.get(), atomicInteger2.get());
 
-        printGreenGenericLn("With exception to a few methods, most atomic methods return a value of before or after a change");
-        printGreenGenericLn("Set methods perform operations where a void or a boolean is returned");
-        printGreenGenericLn("Atomic also has compare methods, which change the value if a value matches an expectation");
-        printGreenGenericLn("There is no increment method. All add, increment, decrement, accumulate and update have get and get after counterparts");
+        GREEN.printGenericLn("With exception to a few methods, most atomic methods return a value of before or after a change");
+        GREEN.printGenericLn("Set methods perform operations where a void or a boolean is returned");
+        GREEN.printGenericLn("Atomic also has compare methods, which change the value if a value matches an expectation");
+        GREEN.printGenericLn("There is no increment method. All add, increment, decrement, accumulate and update have get and get after counterparts");
     }
 }

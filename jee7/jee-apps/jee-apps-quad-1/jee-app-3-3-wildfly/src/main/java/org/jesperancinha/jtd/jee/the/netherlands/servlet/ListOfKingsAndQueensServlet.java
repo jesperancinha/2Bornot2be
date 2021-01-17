@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
@@ -29,7 +29,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
 
         final PrintWriter writer = resp.getWriter();
         writer.println("<html><head></head><body");
-        printGreenGenericLn("<p>You are currently logged in as %s</p>", req.getUserPrincipal());
+        GREEN.printGenericLn("<p>You are currently logged in as %s</p>", req.getUserPrincipal());
         writer.println(String.format("<p>You are currently logged in as %s</p>", req.getUserPrincipal()));
 
         try {
@@ -38,8 +38,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
             orangeNassau.forEach(writer::println);
         } catch (Exception e) {
             printRedGenericLn("This may be expected! -> %s", e.getMessage());
-            printGreenGenericLn(
-                "Check your user. It has to have the Manager or Civilian role, otherwise they cannot see the common Orange Nassau list");
+            GREEN.printGenericLn("Check your user. It has to have the Manager or Civilian role, otherwise they cannot see the common Orange Nassau list");
             printRainbowTitleLn("They can, however, use the royal one ;-)");
         }
 
@@ -53,8 +52,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
             nassau.forEach(writer::println);
         } catch (Exception e) {
             printRedGenericLn("This may be expected! -> %s", e.getMessage());
-            printGreenGenericLn(
-                "Check your user. It has to have the OranjeNassau profile, otherwise they cannot see the royal Orange Nassau list");
+            GREEN.printGenericLn("Check your user. It has to have the OranjeNassau profile, otherwise they cannot see the royal Orange Nassau list");
             printRainbowTitleLn("They can, however, use the royal one ;-)");
         }
         try {
@@ -64,8 +62,7 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
 
         } catch (Exception e) {
             printRedGenericLn("This may be expected! -> %s", e.getMessage());
-            printGreenGenericLn(
-                "Check your user. It has to have the Manager role, otherwise they cannot see the Nassau dynasty member list");
+            GREEN.printGenericLn("Check your user. It has to have the Manager role, otherwise they cannot see the Nassau dynasty member list");
         }
 
         writer.println("<p><a href=\"../index.xhtml\">Back</a></p>");

@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 
 public class Crum2 {
@@ -50,17 +50,13 @@ public class Crum2 {
             calculate(arrayList, linkedList);
         }
 
-        printGreenGenericLn(
-            "The idea is that with massive amount of elements, the ArrayList will maintain constant time access");
-        printGreenGenericLn("This is because it implements the RandomAccess interface");
-        printGreenGenericLn(
-            "When it comes to the LinkedList, it is not marked with that, and ths means that it implements its own algorithm");
-        printGreenGenericLn(
-            "In practice, what we do see with our example is that the longer the lists are the longer it takes to add elements");
-        printGreenGenericLn("For the ArrayList, that time doesn't seem to differ much per added element");
-        printGreenGenericLn(
-            "For the LinkedList, there is a noticeable difference. For a small number of elements, a LinkedList may be a better option.");
-        printGreenGenericLn("Try to run with and without the -skipTime flag 😊.");
+        GREEN.printGenericLn("The idea is that with massive amount of elements, the ArrayList will maintain constant time access");
+        GREEN.printGenericLn("This is because it implements the RandomAccess interface");
+        GREEN.printGenericLn("When it comes to the LinkedList, it is not marked with that, and ths means that it implements its own algorithm");
+        GREEN.printGenericLn("In practice, what we do see with our example is that the longer the lists are the longer it takes to add elements");
+        GREEN.printGenericLn("For the ArrayList, that time doesn't seem to differ much per added element");
+        GREEN.printGenericLn("For the LinkedList, there is a noticeable difference. For a small number of elements, a LinkedList may be a better option.");
+        GREEN.printGenericLn("Try to run with and without the -skipTime flag 😊.");
 
     }
 

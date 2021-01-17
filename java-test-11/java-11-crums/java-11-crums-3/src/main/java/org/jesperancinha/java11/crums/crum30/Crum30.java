@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum30;
 import java.util.Arrays;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum30 {
 
@@ -39,7 +39,7 @@ public class Crum30 {
             e.printStackTrace();
         }
 
-        printGreenGenericLn("Important to know is that SafeVarags, Deprecated and FunctionalInterface are all RUNTIME annotations");
-        printGreenGenericLn("This means that we can find them during runtime.");
+        GREEN.printGenericLn("Important to know is that SafeVarags, Deprecated and FunctionalInterface are all RUNTIME annotations");
+        GREEN.printGenericLn("This means that we can find them during runtime.");
     }
 }

@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.girl.bands.rest;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.girl.bands.jaxb.Registry;
 
 import javax.enterprise.context.RequestScoped;
@@ -11,6 +10,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 @Path("/registry")
 @RequestScoped
@@ -25,7 +25,7 @@ public class BandRegistryRestService {
 
         registry.getBandList()
             .forEach(band -> band.getMemberList()
-                .forEach(member -> Consolerizer.printGreenGenericLn(member.getName())));
+                .forEach(member -> GREEN.printGenericLn(member.getName())));
         return registry;
     }
 }

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery2dot1.animals;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public abstract class Bird implements Animal {
 
@@ -9,7 +9,7 @@ public abstract class Bird implements Animal {
 
     @Override
     public void saySomething() {
-        Consolerizer.printGreenGeneric("You still didn't implement me!");
+        GREEN.printGeneric("You still didn't implement me!");
 
     }
 

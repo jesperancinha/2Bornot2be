@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum34;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum34 {
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Crum34 {
         MAGENTA.printGenericLn("This is the value for b:");
         MAGENTA.printGenericLn(b);
 
-        printGreenGenericLn("The point with this crum is just to show that an assignment returns the value the variable is being assigned to");
+        GREEN.printGenericLn("The point with this crum is just to show that an assignment returns the value the variable is being assigned to");
 
     }
 }

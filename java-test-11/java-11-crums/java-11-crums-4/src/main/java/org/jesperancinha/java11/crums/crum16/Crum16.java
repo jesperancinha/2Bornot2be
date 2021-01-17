@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -45,9 +45,9 @@ public class Crum16 {
 
         printOrangeGenericLn(summingAndCollecting);
 
-        printGreenGenericLn("We should always implement a disambiguation method");
-        printGreenGenericLn("Disambiguation is not strictly necessary if we know that no element is repeated");
-        printGreenGenericLn("We can specify the hashmap type if we want to.");
-        printGreenGenericLn("The hash map types must not be immutable because the collector uses a Supplier as a starting point.");
+        GREEN.printGenericLn("We should always implement a disambiguation method");
+        GREEN.printGenericLn("Disambiguation is not strictly necessary if we know that no element is repeated");
+        GREEN.printGenericLn("We can specify the hashmap type if we want to.");
+        GREEN.printGenericLn("The hash map types must not be immutable because the collector uses a Supplier as a starting point.");
     }
 }

@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.mastery4dot1.modularity.pilot;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class Pilot {
 
     public static void presentPilot() {
         BLUE.printGeneric("***");
-        printGreenGenericLn("--- Pilot %s ---", new Pilot("Tom Lecky-Thompson"));
+        GREEN.printGenericLn("--- Pilot %s ---", new Pilot("Tom Lecky-Thompson"));
         BLUE.printGeneric("***");
     }
 

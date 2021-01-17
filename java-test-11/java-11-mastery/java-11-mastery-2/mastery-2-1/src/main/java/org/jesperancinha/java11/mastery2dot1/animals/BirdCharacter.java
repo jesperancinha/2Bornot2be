@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery2dot1.animals;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class BirdCharacter extends Bird {
 
@@ -11,7 +11,7 @@ public class BirdCharacter extends Bird {
 
     @Override
     public void saySomething() {
-        Consolerizer.printGreenGeneric("Quack Quack");
+        GREEN.printGeneric("Quack Quack");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery2dot1.animals;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public abstract class Feline extends Mamal{
 
@@ -13,7 +13,7 @@ public abstract class Feline extends Mamal{
 
     @Override
     public void saySomething() {
-        Consolerizer.printGreenGeneric("Miau!!!!\n");
+        GREEN.printGeneric("Miau!!!!\n");
     }
 
     @Override

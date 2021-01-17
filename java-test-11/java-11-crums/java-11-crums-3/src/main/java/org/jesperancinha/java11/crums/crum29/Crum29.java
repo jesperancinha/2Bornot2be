@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum29;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum29 {
@@ -24,7 +24,7 @@ public class Crum29 {
         printOrangeGenericLn("With isBlank, stringB is actually blank -> %s", stringB.isBlank());
 
 
-        printGreenGenericLn("The idea is that if we want to check for blank Strings, we should use isBlank");
+        GREEN.printGenericLn("The idea is that if we want to check for blank Strings, we should use isBlank");
 
     }
 }

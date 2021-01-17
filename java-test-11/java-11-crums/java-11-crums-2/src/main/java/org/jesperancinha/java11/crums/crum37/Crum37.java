@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum37;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum37 {
@@ -19,11 +19,10 @@ public class Crum37 {
             printRedGenericLn("This is expected -> %s", e);
 
         }
-        printGreenGenericLn("We cannot reassign exceptions coming from a multi catch");
-        printGreenGenericLn("We do not need to memorize this");
-        printGreenGenericLn("The compiler just doesn't know which exception type is going to be thrown");
-        printGreenGenericLn(
-            "Since exceptions in a multi-catch have no relation with each other, the compiler makes them final");
+        GREEN.printGenericLn("We cannot reassign exceptions coming from a multi catch");
+        GREEN.printGenericLn("We do not need to memorize this");
+        GREEN.printGenericLn("The compiler just doesn't know which exception type is going to be thrown");
+        GREEN.printGenericLn("Since exceptions in a multi-catch have no relation with each other, the compiler makes them final");
 
     }
 }

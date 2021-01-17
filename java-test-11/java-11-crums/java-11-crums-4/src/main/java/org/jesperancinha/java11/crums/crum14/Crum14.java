@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightCyanGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
@@ -88,11 +88,10 @@ public class Crum14 {
             printRedGenericLn("This is expected! We cannot change our map and we have free tickets! -> %s", e);
         }
 
-        printGreenGenericLn(
-            "Let's remember that Collectors.toMap uses indexes or whatever value in the stream to setup the keys we need and the values");
-        printGreenGenericLn("We can use these indexes to our advantage but we don't have to.");
-        printGreenGenericLn("A BinaryOperator takes care of operations with the map values");
-        printGreenGenericLn("The Extra supplier value is where the key/value pairs will be stored.");
-        printGreenGenericLn("Pay attention to the Comparators use: Map.Entry.comparingByValue() and Map.Entry.comparingByKey()");
+        GREEN.printGenericLn("Let's remember that Collectors.toMap uses indexes or whatever value in the stream to setup the keys we need and the values");
+        GREEN.printGenericLn("We can use these indexes to our advantage but we don't have to.");
+        GREEN.printGenericLn("A BinaryOperator takes care of operations with the map values");
+        GREEN.printGenericLn("The Extra supplier value is where the key/value pairs will be stored.");
+        GREEN.printGenericLn("Pay attention to the Comparators use: Map.Entry.comparingByValue() and Map.Entry.comparingByKey()");
     }
 }

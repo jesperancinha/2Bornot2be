@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum29;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum29 {
@@ -48,8 +48,8 @@ public class Crum29 {
         final WaillingWall waillingWall = null;
         waillingWall.methodB();
         ((Wall)waillingWall).methodB();
-        printGreenGenericLn("Note that inner classes have to be static in order to have static methods");
-        printGreenGenericLn("There is no overriding static methods and they are accessible via the right casting");
-        printGreenGenericLn("Instance references can be used to access static methods even if they have null value");
+        GREEN.printGenericLn("Note that inner classes have to be static in order to have static methods");
+        GREEN.printGenericLn("There is no overriding static methods and they are accessible via the right casting");
+        GREEN.printGenericLn("Instance references can be used to access static methods even if they have null value");
     }
 }

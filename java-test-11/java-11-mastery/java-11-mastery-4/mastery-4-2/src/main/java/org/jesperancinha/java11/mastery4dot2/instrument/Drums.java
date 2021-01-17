@@ -2,14 +2,16 @@ package org.jesperancinha.java11.mastery4dot2.instrument;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+
 public final class Drums implements AutoCloseable {
 
     public Drums() {
-        Consolerizer.printGreenGenericLn("🥁 ¡Drums created! 🥁");
+        GREEN.printGenericLn("🥁 ¡Drums created! 🥁");
     }
 
     public final void playDrum() {
-        Consolerizer.printGreenGeneric("Playing drums");
+        GREEN.printGeneric("Playing drums");
     }
 
     public final void playWrongDrum() throws DrumException {
@@ -19,7 +21,7 @@ public final class Drums implements AutoCloseable {
 
     @Override
     public final void close() throws DrumsIOException {
-        Consolerizer.printGreenGeneric("Keep playing and let the rhythm guide you! João Esperancinha");
+        GREEN.printGeneric("Keep playing and let the rhythm guide you! João Esperancinha");
         throw new DrumsIOException();
     }
 }

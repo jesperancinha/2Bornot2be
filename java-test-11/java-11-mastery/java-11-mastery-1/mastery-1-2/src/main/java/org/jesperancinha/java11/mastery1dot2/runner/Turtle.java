@@ -1,10 +1,10 @@
 package org.jesperancinha.java11.mastery1dot2.runner;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 
 public class Turtle {
     protected void feelHand() throws InterruptedException {
-        Consolerizer.printGreenGeneric("Feels alive!\n");
+        GREEN.printGeneric("Feels alive!\n");
     }
 
     public void sneakyFeelHand() throws InterruptedException {

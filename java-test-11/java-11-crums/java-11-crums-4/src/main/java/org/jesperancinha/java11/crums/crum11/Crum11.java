@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum11;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum11 {
     public static void main(String[] args) {
@@ -31,8 +31,8 @@ public class Crum11 {
         MAGENTA.printGenericLn("Since they are literals %s is equal to %s, %s == %s = %s", f, g, f, g, f == g);
         MAGENTA.printGenericLn("These are not literals and so %s is not equal to %s, %s == %s = %s", a, e, a, e, a == e);
 
-        printGreenGenericLn("There is a difference and a very functional one between using final and not using final");
-        printGreenGenericLn("When using final, the literals work to create Strings in the String pool");
-        printGreenGenericLn("When not using final, the result becomes a reference and the bitwise == operator does not work.");
+        GREEN.printGenericLn("There is a difference and a very functional one between using final and not using final");
+        GREEN.printGenericLn("When using final, the literals work to create Strings in the String pool");
+        GREEN.printGenericLn("When not using final, the result becomes a reference and the bitwise == operator does not work.");
     }
 }

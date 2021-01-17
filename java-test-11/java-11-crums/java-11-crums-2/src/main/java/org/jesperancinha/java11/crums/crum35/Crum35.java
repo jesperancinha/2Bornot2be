@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum35;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum35 {
@@ -75,12 +75,12 @@ public class Crum35 {
         printOrangeGenericLn("%s, %d", stringE.stripTrailing(), stringE.stripTrailing()
             .length());
 
-        printGreenGenericLn("Trim looks to do the same as strip, but there is a subtle difference");
-        printGreenGenericLn("Trim removes all characters under '\\u001A'");
-        printGreenGenericLn("Strip removes all characters under the UTF standard.");
-        printGreenGenericLn("Strip also uses the Character.isWhiteSpace(codepoint) method");
-        printGreenGenericLn("It must follow these rules:");
-        printGreenGenericLn("It is a Unicode space character (SPACE_SEPARATOR, LINE_SEPARATOR, or PARAGRAPH_SEPARATOR) but is not also a non-breaking space ('\\u00A0', '\\u2007', '\\u202F').\n"
+        GREEN.printGenericLn("Trim looks to do the same as strip, but there is a subtle difference");
+        GREEN.printGenericLn("Trim removes all characters under '\\u001A'");
+        GREEN.printGenericLn("Strip removes all characters under the UTF standard.");
+        GREEN.printGenericLn("Strip also uses the Character.isWhiteSpace(codepoint) method");
+        GREEN.printGenericLn("It must follow these rules:");
+        GREEN.printGenericLn("It is a Unicode space character (SPACE_SEPARATOR, LINE_SEPARATOR, or PARAGRAPH_SEPARATOR) but is not also a non-breaking space ('\\u00A0', '\\u2007', '\\u202F').\n"
             + "It is '\\t', U+0009 HORIZONTAL TABULATION.\n" + "It is '\\n', U+000A LINE FEED.\n"
             + "It is '\\u000B', U+000B VERTICAL TABULATION.\n" + "It is '\\f', U+000C FORM FEED.\n"
             + "It is '\\r', U+000D CARRIAGE RETURN.\n" + "It is '\\u001C', U+001C FILE SEPARATOR.\n"

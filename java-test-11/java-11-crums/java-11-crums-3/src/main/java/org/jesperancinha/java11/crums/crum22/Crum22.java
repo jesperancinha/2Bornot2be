@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum22;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum22 {
     public static void main(String[] args) {
@@ -22,10 +22,9 @@ public class Crum22 {
             sb.append(String.format("%s->%s,", keySet.getKey(), keySet.getValue()));
         }
         MAGENTA.printGenericLn(sb.toString());
-        printGreenGenericLn(
-            "It's important to understand System.getProperties returns a HashTable of all system properties");
-        printGreenGenericLn("A HashTable is synchronized and thread safe.");
-        printGreenGenericLn("The Properties object return is a subtype of a hashtable.");
+        GREEN.printGenericLn("It's important to understand System.getProperties returns a HashTable of all system properties");
+        GREEN.printGenericLn("A HashTable is synchronized and thread safe.");
+        GREEN.printGenericLn("The Properties object return is a subtype of a hashtable.");
 
     }
 }

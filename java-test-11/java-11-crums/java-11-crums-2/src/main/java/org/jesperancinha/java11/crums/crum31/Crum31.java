@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 
 public class Crum31 {
     public static void main(String[] args) {
@@ -54,11 +54,9 @@ public class Crum31 {
             .sorted();
         MAGENTA.printGenericLn("Finally we can sort them with a terminating function");
         MAGENTA.printGenericLn(sorted);
-        printGreenGenericLn("We can make our own comparators");
-        printGreenGenericLn(
-            "If we know we are only using an item to compare or even if we have more we can use Comparator and thenComparing if further must follow suit");
-        printGreenGenericLn("Note that Comparator only knows the type from the left hand side of assignment");
-        printGreenGenericLn(
-            "This means that in the lambda flow declaration, it is not possible to define a Comparator, thenComparing. The lambda will identify an Object only");
+        GREEN.printGenericLn("We can make our own comparators");
+        GREEN.printGenericLn("If we know we are only using an item to compare or even if we have more we can use Comparator and thenComparing if further must follow suit");
+        GREEN.printGenericLn("Note that Comparator only knows the type from the left hand side of assignment");
+        GREEN.printGenericLn("This means that in the lambda flow declaration, it is not possible to define a Comparator, thenComparing. The lambda will identify an Object only");
     }
 }

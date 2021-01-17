@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum9;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
 public class Crum9 extends B implements A {
@@ -23,12 +23,10 @@ public class Crum9 extends B implements A {
 
         new Crum9().fromInstance();
 
-        printGreenGenericLn("Because both a's are at the same level, they do not shadow each other");
-        printGreenGenericLn("This way the compiler doesn't know what to do if only a is given.");
-        printGreenGenericLn(
-            "b's don't have this problem, because b in B overshadows b in C, given they B is a subclass of C");
-        printGreenGenericLn(
-            "As a curiosity we see that the static this doesn't work due to C not being an enclosing class");
+        GREEN.printGenericLn("Because both a's are at the same level, they do not shadow each other");
+        GREEN.printGenericLn("This way the compiler doesn't know what to do if only a is given.");
+        GREEN.printGenericLn("b's don't have this problem, because b in B overshadows b in C, given they B is a subclass of C");
+        GREEN.printGenericLn("As a curiosity we see that the static this doesn't work due to C not being an enclosing class");
     }
 
     private void fromInstance() {

@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum21;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -26,9 +26,9 @@ public class Crum21 {
 
         printOrangeGenericLn(Saxophone.SMOOTH_OPERATOR);
 
-        printGreenGenericLn("The nuance here is that non-static inner classes normally cannot have anything static");
-        printGreenGenericLn("However if static members are marked at final, then it is possible to do so.");
-        printGreenGenericLn("This has mostly to do wth the fact that an inner class is dependent of its container instance and so changes to the static member would introduce a very confusing code");
+        GREEN.printGenericLn("The nuance here is that non-static inner classes normally cannot have anything static");
+        GREEN.printGenericLn("However if static members are marked at final, then it is possible to do so.");
+        GREEN.printGenericLn("This has mostly to do wth the fact that an inner class is dependent of its container instance and so changes to the static member would introduce a very confusing code");
 
     }
 }

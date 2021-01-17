@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum27;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum27 {
@@ -53,9 +53,9 @@ public class Crum27 {
         final String aC = b + "this is a sentence and autoboxing has not happened. It was already pre-done" + c;
         MAGENTA.printGenericLn("This sentence was built with pre-auto-boxing -> %s", a);
 
-        printGreenGenericLn("Auto-boxing is basically the way Java uses auto-version from primitive types to their object counter parts");
-        printGreenGenericLn("Auto-boxing needs to match the type being boxed in");
-        printGreenGenericLn("In a String building, this happens implicitly and all numbers are converted to their object counterparts, where the toString is later being called.");
+        GREEN.printGenericLn("Auto-boxing is basically the way Java uses auto-version from primitive types to their object counter parts");
+        GREEN.printGenericLn("Auto-boxing needs to match the type being boxed in");
+        GREEN.printGenericLn("In a String building, this happens implicitly and all numbers are converted to their object counterparts, where the toString is later being called.");
 
 
     }

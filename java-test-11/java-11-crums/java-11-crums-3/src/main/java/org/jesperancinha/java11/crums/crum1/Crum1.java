@@ -6,8 +6,8 @@ import javax.management.relation.RoleUnresolvedList;
 import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 
 public class Crum1 {
@@ -54,13 +54,13 @@ public class Crum1 {
         MAGENTA.printGenericLn("Finally we can use an RoleUnresolvedList List:");
         printOrangeGenericLn(roleUnresolvedList);
 
-        printGreenGenericLn("We can think of the three sub ArrayList types as just roles and attributes");
-        printGreenGenericLn("We only have one subtype for AttributeList");
-        printGreenGenericLn("We have two subtypes for roles and they are RoleList and RoleUnresolvedList");
-        printGreenGenericLn("So Attributes => AttributeList");
-        printGreenGenericLn("So Roles => RoleList");
-        printGreenGenericLn("So Roles Unresolved => RoleUnresolvedList");
-        printGreenGenericLn("We have created three instance examples of the three different listw");
+        GREEN.printGenericLn("We can think of the three sub ArrayList types as just roles and attributes");
+        GREEN.printGenericLn("We only have one subtype for AttributeList");
+        GREEN.printGenericLn("We have two subtypes for roles and they are RoleList and RoleUnresolvedList");
+        GREEN.printGenericLn("So Attributes => AttributeList");
+        GREEN.printGenericLn("So Roles => RoleList");
+        GREEN.printGenericLn("So Roles Unresolved => RoleUnresolvedList");
+        GREEN.printGenericLn("We have created three instance examples of the three different listw");
 
     }
 }

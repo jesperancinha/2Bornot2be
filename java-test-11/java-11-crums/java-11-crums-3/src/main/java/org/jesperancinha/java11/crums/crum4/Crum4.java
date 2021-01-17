@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
 
 public class Crum4 {
@@ -46,7 +46,6 @@ public class Crum4 {
         }
         Consolerizer.printNewLine();
 
-        printGreenGenericLn(
-            "The point is that a BufferedReader can be creater with all java.io.Reader subtypes and java.io.Reader included");
+        GREEN.printGenericLn("The point is that a BufferedReader can be creater with all java.io.Reader subtypes and java.io.Reader included");
     }
 }

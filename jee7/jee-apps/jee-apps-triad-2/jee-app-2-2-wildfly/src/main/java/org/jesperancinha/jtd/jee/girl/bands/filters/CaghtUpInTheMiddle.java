@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 
 public class CaghtUpInTheMiddle implements Filter {
@@ -47,7 +47,7 @@ public class CaghtUpInTheMiddle implements Filter {
         final String otherSong = this.filterConfig.getInitParameter("otherSong");
         printRandomColorGenericLn("Sugababes did another song called %s", otherSong);
 
-        printGreenGenericLn("We can use a filter as a servlet and we can also specify the order. This is the first");
+        GREEN.printGenericLn("We can use a filter as a servlet and we can also specify the order. This is the first");
         chain.doFilter(request, response);
 
     }

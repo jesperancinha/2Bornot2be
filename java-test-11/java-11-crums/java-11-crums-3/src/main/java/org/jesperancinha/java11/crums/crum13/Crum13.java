@@ -8,8 +8,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 
@@ -41,12 +41,9 @@ public class Crum13 {
                 e);
             printRedGenericLn("Try again with the uncommented constructors to see how this works.");
         }
-        printGreenGenericLn("There is a difference between creating serializable classes in inner classes");
-        printGreenGenericLn(
-            "In a normal case, is the subclass is serializable, the others must have a default empty constructor");
-        printGreenGenericLn(
-            "If the inner class is being serialized, both wrapper class and inner class must be serializable");
-        printGreenGenericLn(
-            "The requirement then changes and being serializable is the must requirement for the upper classes.");
+        GREEN.printGenericLn("There is a difference between creating serializable classes in inner classes");
+        GREEN.printGenericLn("In a normal case, is the subclass is serializable, the others must have a default empty constructor");
+        GREEN.printGenericLn("If the inner class is being serialized, both wrapper class and inner class must be serializable");
+        GREEN.printGenericLn("The requirement then changes and being serializable is the must requirement for the upper classes.");
     }
 }

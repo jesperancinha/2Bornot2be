@@ -3,8 +3,8 @@ package org.jesperancinha.java11.crums.crum8;
 import java.nio.file.Path;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -36,11 +36,9 @@ public class Crum8 {
         printOrangeGenericLn(path1.resolve(path3));
         printOrangeGenericLn(path3.resolve(path1));
 
-        printGreenGenericLn("Relativize is a reference point from A to B");
-        printGreenGenericLn(
-            "Resolve is also a sort of reference point from A to B, but the resolution results in B itself with a full path");
-        printGreenGenericLn(
-            "Resolves always considers all elements of the path to have a directory form and if it needs to append, it will append the full name");
+        GREEN.printGenericLn("Relativize is a reference point from A to B");
+        GREEN.printGenericLn("Resolve is also a sort of reference point from A to B, but the resolution results in B itself with a full path");
+        GREEN.printGenericLn("Resolves always considers all elements of the path to have a directory form and if it needs to append, it will append the full name");
 
     }
 }

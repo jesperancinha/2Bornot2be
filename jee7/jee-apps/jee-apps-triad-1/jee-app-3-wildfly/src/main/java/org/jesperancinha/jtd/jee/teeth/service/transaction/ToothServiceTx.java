@@ -14,8 +14,8 @@ import javax.persistence.PersistenceContextType;
 import javax.persistence.TransactionRequiredException;
 import javax.transaction.TransactionSynchronizationRegistry;
 
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
@@ -83,7 +83,7 @@ public class ToothServiceTx {
 
     @TransactionAttribute(TransactionAttributeType.NEVER)
     public Tooth addToothNever(final Tooth tooth) {
-        printGreenGenericLn(tsr.getTransactionKey());
+        GREEN.printGenericLn(tsr.getTransactionKey());
         try {
             final Tooth merge = entityManager.merge(tooth);
         } catch (TransactionRequiredException ejbException) {
@@ -91,15 +91,15 @@ public class ToothServiceTx {
                 "This is expected! Note that this TransactionRequiredException comes from javax.persistence -> %s",
                 ejbException);
         }
-        printGreenGenericLn(tsr.getTransactionKey());
+        GREEN.printGenericLn(tsr.getTransactionKey());
         return null;
     }
 
     private Tooth mergeTooth(Tooth tooth) {
         printRainbowTitleLn(tooth);
-        printGreenGenericLn(tsr.getTransactionKey());
+        GREEN.printGenericLn(tsr.getTransactionKey());
         final Tooth merge = entityManager.merge(tooth);
-        printGreenGenericLn(tsr.getTransactionKey());
+        GREEN.printGenericLn(tsr.getTransactionKey());
         return merge;
     }
 }

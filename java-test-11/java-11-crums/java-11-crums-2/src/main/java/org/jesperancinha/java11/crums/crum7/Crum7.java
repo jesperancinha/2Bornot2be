@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum7 {
@@ -55,12 +55,9 @@ public class Crum7 {
                 "But we will get this exception or the IndexOutOfBoundsException if we are out of range -> %s", e);
         }
 
-        printGreenGenericLn(
-            "The point is that we can generate NullPointerException if we try to access an indez of something that is already Null");
-        printGreenGenericLn(
-            "If the index of something that is not null falls out of the accepted range we always get and IndexOutOfBoundsException");
-        printGreenGenericLn(
-            "In our example we get an ArrayIndexOutOfBoundsException and a StringIndexOutOfVoundsException");
-        printGreenGenericLn("Both are too specific and in some cases, just too cool for cats");
+        GREEN.printGenericLn("The point is that we can generate NullPointerException if we try to access an indez of something that is already Null");
+        GREEN.printGenericLn("If the index of something that is not null falls out of the accepted range we always get and IndexOutOfBoundsException");
+        GREEN.printGenericLn("In our example we get an ArrayIndexOutOfBoundsException and a StringIndexOutOfVoundsException");
+        GREEN.printGenericLn("Both are too specific and in some cases, just too cool for cats");
     }
 }

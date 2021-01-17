@@ -1,8 +1,8 @@
 package org.jesperancinha.java11.crums.crum3;
 
 import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
 
 public class Crum3 {
@@ -44,9 +44,7 @@ public class Crum3 {
 
         MAGENTA.printGenericLn("We can however assign A1 to B1 -> %s", a1);
 
-        printGreenGenericLn(
-            "The upper in the class in the hierarchy you are the broader are the instances your reference can be assigned to.");
-        printGreenGenericLn(
-            "Also notice that we had to create an instance of Crum3 in order to create the first instances of A and B");
+        GREEN.printGenericLn("The upper in the class in the hierarchy you are the broader are the instances your reference can be assigned to.");
+        GREEN.printGenericLn("Also notice that we had to create an instance of Crum3 in order to create the first instances of A and B");
     }
 }
