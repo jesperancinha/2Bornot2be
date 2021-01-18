@@ -49,6 +49,8 @@ The ones without any notice, are considered done, but they will be subject to im
 5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
 6. `ApplicationException`, `interface`, `rollback`, `@SessionScoped`, `@Named`,
 7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
+8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
+
 ---
 
 ## References
