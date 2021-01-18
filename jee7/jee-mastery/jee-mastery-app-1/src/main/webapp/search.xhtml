@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: jofisaes
+  Date: 18/01/2021
+  Time: 22:54
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+    <ui:composition>
+
+        <h:form id="searchForm">
+            <h1>a <i>param</i> is param to a placeholder of http://xmlns.jcp.org/jsf/core</h1>
+            <p><h:outputFormat value="{0}">
+                <f:param name="placeholder" value="Search Here"/>
+            </h:outputFormat></p>
+            <p><h:inputText value="{placeholder}">
+                <f:param name="placeholder" value="Search Here"/>
+            </h:inputText></p>
+            <h1>a <i>placeholder</i> is not a part of http://java.sun.com/jsf/html</h1>
+            <h:inputText placeholder="Search here"/>
+            <h1>http://xmlns.jcp.org/jsf does not have a placeholder for a normal input control</h1>
+            <input id="search" jsf:placeholder="Search Here"></input>
+
+            <h1>This is correct a placeholder does exist for an input</h1>
+            <input jsf:id="search" placeholder="Search here" jsf:value="search"></input>
+            <h1>http://xmlns.jcp.org/jsf/passthrough has also a correct <i>placeholder</i></h1>
+            <h:inputText pt:placeholder="Search Here"/>
+            <p><h:commandButton value="Search"
+                                action="#{songBean.submit}">
+                <f:param name="artist" value="Moby"/>
+                <f:param name="song" value="Disco Lies"/>
+            </h:commandButton></p>
+        </h:form>
+        <p>Song is: ${songBean.song}</p>
+        <p>Mady by: ${songBean.artist}</p>
+        <p><a href="index.xhtml">Back</a></p>
+    </ui:composition>
+
+</h:body>
+
+</html>

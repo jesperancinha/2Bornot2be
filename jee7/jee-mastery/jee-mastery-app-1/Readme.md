@@ -14,6 +14,7 @@ Topics covered:
 7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
 8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
 9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
+10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
 
 ## Create WAR file with the jar command
 
@@ -62,9 +63,34 @@ ls WEB-INF/lib
 </div>
 
 <div align="center">
-      <a title="Dead or Alive - You Spin Me Round (Like a Record) " href="https://www.youtube.com/watch?v=PGNiXGX2nLU">
+      <a title="Dead or Alive - You Spin Me Round (Like a Record)" href="https://www.youtube.com/watch?v=PGNiXGX2nLU">
      <img 
           src="https://img.youtube.com/vi/PGNiXGX2nLU/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Moby - Disco Lies" href="https://www.youtube.com/watch?v=RjJYznmSjkg">
+     <img 
+          src="https://img.youtube.com/vi/RjJYznmSjkg/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a title="Scissor Sisters - Let's have a Kiki" href="https://www.youtube.com/watch?v=eGCD4xb-Tr8">
+     <img 
+          src="https://img.youtube.com/vi/eGCD4xb-Tr8/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="NERVO feat. Kylie Minogue, Jake Shears & Nile Rodgers - The other boys" href="https://www.youtube.com/watch?v=N62Edu_WIhs">
+     <img 
+          src="https://img.youtube.com/vi/N62Edu_WIhs/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Kylie Minogue - All the lovers" href="https://www.youtube.com/watch?v=frv6FOt1BNI">
+     <img 
+          src="https://img.youtube.com/vi/frv6FOt1BNI/0.jpg" 
           style="width:10%;">
       </a>
 </div>
