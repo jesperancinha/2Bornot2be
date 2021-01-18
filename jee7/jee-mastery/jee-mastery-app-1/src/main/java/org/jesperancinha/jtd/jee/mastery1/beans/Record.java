@@ -1,6 +1,8 @@
 package org.jesperancinha.jtd.jee.mastery1.beans;
 
-public class Record {
+import java.io.Serializable;
+
+public class Record implements Serializable {
     private String name;
 
     private String type;
@@ -39,5 +41,15 @@ public class Record {
 
     public void setArtist(String artist) {
         this.artist = artist;
+    }
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", year='" + year + '\'' +
+                ", artist='" + artist + '\'' +
+                '}';
     }
 }

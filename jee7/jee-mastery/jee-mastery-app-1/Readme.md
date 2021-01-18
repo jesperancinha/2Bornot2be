@@ -9,6 +9,7 @@ Topics covered:
 2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
 3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
 4. `@Inject`, `setter`, `getter`
+5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
 
 ## Context References
 
@@ -54,6 +55,9 @@ Topics covered:
 
 ## References
 
+-   [How to use Message Selectors to filter messages](https://timjansen.github.io/jarfiller/guide/jms/selectors.xhtml)
+-   [JPA issue in combo with @SessionScoped](http://tomee-openejb.979440.n4.nabble.com/JPA-issue-in-combo-with-SessionScoped-td4662268.html)
+-   [JMSContext createContext(int sessionMode)](https://docs.oracle.com/javaee/7/api/javax/jms/ConnectionFactory.html#createContext-int-)
 -   [JSTL - Core <c:forEach>, <c:forTokens> Tag](https://www.tutorialspoint.com/jsp/jstl_core_foreach_tag.htm)
 -   [8.8. Transactional Stateful Session Beans](http://www.cs.ait.ac.th/~on/O/oreilly/java-ent/ebeans/ch08_08.htm)
 -   [Transaction Annotations](http://tomee.apache.org/transaction-annotations.html)

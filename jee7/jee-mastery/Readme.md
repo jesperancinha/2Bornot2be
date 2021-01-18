@@ -45,6 +45,7 @@ The ones without any notice, are considered done, but they will be subject to im
 2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
 3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
 4. `@Inject`, `setter`, `getter`
+5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
 ---
 
 ## References
