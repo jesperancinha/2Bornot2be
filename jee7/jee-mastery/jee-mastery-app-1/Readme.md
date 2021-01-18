@@ -3,8 +3,21 @@
 ## Exercise
 
 In this exercise we will go through music that one way or the other, has been involved in PRIDE events.
+Topics covered:
+
+1. `<h:panelGrid`, `<c:forEach`, `<h:outputLabel`, `<h:inputText`
+2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
+3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
 
 ## Context References
+
+-   [You Spin Me Round (Like a Record)](https://en.wikipedia.org/wiki/You_Spin_Me_Round_(Like_a_Record))
+-   [Farbenspiel](https://en.wikipedia.org/wiki/Farbenspiel)
+-   [Atemlos durch die Nacht](https://en.wikipedia.org/wiki/Atemlos_durch_die_Nacht)
+-   [Divine - You think you're a man](https://en.wikipedia.org/wiki/You_Think_You%27re_a_Man)
+-   [The Story So Far (Divine album)](https://en.wikipedia.org/wiki/The_Story_So_Far_(Divine_album))
+-   [Dead or Alive discography](https://en.wikipedia.org/wiki/Dead_or_Alive_discography)
+
 <div align="center">
       <a title="Divine - You Think You're a Man" href="https://www.youtube.com/watch?v=063RGou-P_8">
      <img 
@@ -17,9 +30,31 @@ In this exercise we will go through music that one way or the other, has been in
           style="width:10%;">
       </a>
 </div>
+<div align="center">
+      <a title="Donna Summer - Could it be magic" href="https://www.youtube.com/watch?v=3G8FJPdhSOY">
+     <img 
+          src="https://img.youtube.com/vi/3G8FJPdhSOY/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Helene Fischer - Atemlos durch die Nacht" href="https://www.youtube.com/watch?v=haECT-SerHk">
+     <img 
+          src="https://img.youtube.com/vi/haECT-SerHk/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a title="Dead or Alive - You Spin Me Round (Like a Record) " href="https://www.youtube.com/watch?v=PGNiXGX2nLU">
+     <img 
+          src="https://img.youtube.com/vi/PGNiXGX2nLU/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ## References
 
+-   [8.8. Transactional Stateful Session Beans](http://www.cs.ait.ac.th/~on/O/oreilly/java-ent/ebeans/ch08_08.htm)
+-   [Transaction Annotations](http://tomee.apache.org/transaction-annotations.html)
 -   [EJB - Transactions](https://www.tutorialspoint.com/ejb/ejb_transactions.htm)
 -   [Programming WebLogic Enterprise JavaBeans](https://docs.oracle.com/cd/E13222_01/wls/docs103/ejb/index.html)
 -   [CDI : WELD-001408 Unsatisfied dependencies, how to resolve it?](https://stackoverflow.com/questions/22191377/cdi-weld-001408-unsatisfied-dependencies-how-to-resolve-it)

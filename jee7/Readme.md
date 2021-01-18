@@ -33,6 +33,8 @@ These modules can be used for education purposes or for certain types of exames 
         - [jee-app-3-2-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain 🇪🇸 - Java 11
         - [jee-app-3-3-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-3-wildfly) - History of The Netherlands 🇳🇱 - Java 11
         - [jee-app-3-4-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-4-wildfly) - History of the United Kingdom 🇬🇧 - Java 11
+-   [JEE Mastery Applications](jee-mastery) - A set of modules with a very deep in-depth approach to architecture
+    - [jee-mastery-app-1](./jee-mastery/jee-mastery-app-1) - PRIDE Edition 1 🏳️‍🌈
 
 I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like.
 For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java).

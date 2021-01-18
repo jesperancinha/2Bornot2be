@@ -2,13 +2,13 @@ package org.jesperancinha.jtd.jee.mastery1.beans;
 
 import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.mastery1.domain.StoreRecord;
-import org.jesperancinha.jtd.jee.mastery1.domain.StoreRecordManagedDao;
+import org.jesperancinha.jtd.jee.mastery1.domain.StoreRecordDao;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,14 +20,29 @@ import java.util.UUID;
 public class RegisterCart implements Serializable {
 
     @Inject
-    private StoreRecordManagedDao storeRecordManagedDao;
+    private StoreRecordDao storeRecordDao;
 
-    private List<Record> allRecords;
+    private List<Record> exampleRecords;
 
     private Record newRecord;
 
     RegisterCart() {
-        this.allRecords = new ArrayList<>();
+        final var record1 = new Record();
+        record1.setArtist("Divine");
+        record1.setName("The story so far");
+        record1.setType("LP");
+        record1.setYear("1984");
+        final var record2 = new Record();
+        record2.setArtist("Helene Fischer");
+        record2.setName("Farbenspiel");
+        record2.setType("LP");
+        record2.setYear("2013");
+        final var record3 = new Record();
+        record3.setArtist("Dead or Alive");
+        record3.setName("Youthquake");
+        record3.setType("LP");
+        record3.setYear("1985");
+        this.exampleRecords = Arrays.asList(record1, record2, record3);
         this.newRecord = new Record();
     }
 
@@ -46,6 +61,14 @@ public class RegisterCart implements Serializable {
         album.setArtist(newRecord.getArtist());
         album.setName(newRecord.getName());
         album.setYear(newRecord.getYear());
-        storeRecordManagedDao.createAlbum(album);
+        storeRecordDao.createAlbum(album);
+    }
+
+    public List<Record> getExampleRecords() {
+        return exampleRecords;
+    }
+
+    public void setExampleRecords(List<Record> exampleRecords) {
+        this.exampleRecords = exampleRecords;
     }
 }

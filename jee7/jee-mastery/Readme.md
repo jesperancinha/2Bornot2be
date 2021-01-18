@@ -36,11 +36,14 @@ The ones without any notice, are considered done, but they will be subject to im
 
 ## Mastery Apps
 
-### [jee-mastery-app-1](./jee-mastery-app-1) - PRIDE Edition 1
+### [jee-mastery-app-1](./jee-mastery-app-1) - PRIDE Edition 1 🏳️‍🌈
 
 #### Subjects:
 
 ---
+1. `<h:panelGrid`, `<c:forEach`, `<h:outputLabel`, `<h:inputText`
+2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
+3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
 
 ---
 

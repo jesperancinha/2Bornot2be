@@ -2,20 +2,17 @@ package org.jesperancinha.jtd.jee.mastery1.domain;
 
 import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.io.Serializable;
 import java.util.List;
 
 @Stateless
-@LocalBean
 @TransactionManagement(TransactionManagementType.CONTAINER)
-public class StoreRecordManagedDao implements StoreRecordDao, Serializable {
+public class StoreRecordManagedDao implements StoreRecordDao {
 
     @Inject
     private EntityManager entityManager;

@@ -80,6 +80,10 @@ public enum ConsolerizerColor {
         colorManager.printThrowableAndExit(e);
     }
 
+    public String getPText(Object text){
+        return Htmlizer.getPTextColor(this.hexColor, "" + text);
+    }
+
     public static List<String> getConsoleRainbow() {
         return Arrays.asList(RED.getConsoleColor(), ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
                 GREEN.getConsoleColor(), BLUE.getConsoleColor(), MAGENTA.getConsoleColor());
