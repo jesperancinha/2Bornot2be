@@ -93,6 +93,18 @@ ls WEB-INF/lib
           src="https://img.youtube.com/vi/frv6FOt1BNI/0.jpg" 
           style="width:10%;">
       </a>
+      <a title="St. Vincent - Fast Slow Disco" href="https://www.youtube.com/watch?v=dNm0b2SCXxY">
+     <img 
+          src="https://img.youtube.com/vi/dNm0b2SCXxY/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Hercules & Love Affair - Do You Feel The Same?" href="https://www.youtube.com/watch?v=JozUoRIbsEE">
+     <img 
+          src="https://img.youtube.com/vi/JozUoRIbsEE/0.jpg" 
+          style="width:10%;">
+      </a>
 </div>
 
 ## References
