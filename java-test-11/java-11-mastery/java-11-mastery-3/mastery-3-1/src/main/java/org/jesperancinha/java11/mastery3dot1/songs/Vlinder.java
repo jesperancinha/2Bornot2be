@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.mastery3dot1.songs;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class Vlinder extends RawVlinder{
     @Override

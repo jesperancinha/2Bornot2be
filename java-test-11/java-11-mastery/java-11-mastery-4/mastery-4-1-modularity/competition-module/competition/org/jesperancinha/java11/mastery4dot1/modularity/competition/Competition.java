@@ -3,8 +3,8 @@ package org.jesperancinha.java11.mastery4dot1.modularity.competition;
 import org.jesperancinha.java11.mastery4dot1.modularity.hangar.Hangar;
 import org.jesperancinha.java11.mastery4dot1.modularity.hangar.Plane;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
 public class Competition {
 

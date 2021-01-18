@@ -2,7 +2,7 @@ package org.jesperancinha.console.consolerizer;
 
 import java.util.List;
 
-public class ConGraphs {
+public class ConsolerizerGraphs {
 
     public static String getUnicorns(int i) {
         final var sb = new StringBuilder();
@@ -26,7 +26,7 @@ public class ConGraphs {
         heightPerColorBar = heightPerColorBar <= 0 ?
                 1 :
                 heightPerColorBar;
-        final List<ConColor> consoleRainbow = ConColor.getConsoleRainbowEnumList();
+        final List<ConsolerizerColor> consoleRainbow = ConsolerizerColor.getConsoleRainbowEnumList();
         final int ranbowColorSize = consoleRainbow.size();
         final int height = ranbowColorSize * heightPerColorBar;
         int iMiddle = height / 2;

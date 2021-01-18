@@ -1,13 +1,20 @@
 package org.jesperancinha.jtd.jee.mastery1.domain;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.List;
 
-@Transactional
+@Stateless
+@LocalBean
+@TransactionManagement(TransactionManagementType.CONTAINER)
 public class StoreRecordManagedDao implements StoreRecordDao, Serializable {
 
     @Inject
@@ -20,6 +27,7 @@ public class StoreRecordManagedDao implements StoreRecordDao, Serializable {
 
     @Override
     public void createAlbum(StoreRecord album) {
+        ConsolerizerColor.BRIGHT_BLUE.printGenericLn("We are using a new transaction bean per session %s because it is stateless -> %s", this.getClass(), this.hashCode());
         entityManager.persist(album);
     }
 

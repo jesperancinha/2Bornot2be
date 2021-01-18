@@ -3,8 +3,8 @@ package org.jesperancinha.jtd.jee.lyrics.service;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 @jakarta.enterprise.inject.Default
 public class LyricsSimpleService implements LyricsService {

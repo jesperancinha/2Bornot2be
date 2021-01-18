@@ -11,14 +11,14 @@ import java.util.stream.Stream;
 
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_WHITE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.WHITE;
 
 public class Consolerizer {
 
@@ -26,8 +26,8 @@ public class Consolerizer {
     private final static int MAX_LINE_CHARS = 0;
     private final static int RAINBOW_LINE_CHARS = 10;
     private final static int TITLE_SPREAD = 100;
-    private final static ConColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
-    private static ConColor currentColor;
+    private final static ConsolerizerColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
+    private static ConsolerizerColor currentColor;
 
     private int typingWait;
 
@@ -37,7 +37,7 @@ public class Consolerizer {
     public static int titleSpread = TITLE_SPREAD;
     public static boolean blackAndWhite;
 
-    private ConColor conColor = CON_COLOR_DEFAULT;
+    private ConsolerizerColor consolerizerColor = CON_COLOR_DEFAULT;
 
     public Consolerizer() {
         typingWait = TYPING_DEFAULT_MS;
@@ -62,11 +62,11 @@ public class Consolerizer {
     }
 
     public static Consolerizer createGreen() {
-        return new Consolerizer().conColor(ConColor.BRIGHT_GREEN);
+        return new Consolerizer().conColor(ConsolerizerColor.BRIGHT_GREEN);
     }
 
-    public Consolerizer conColor(ConColor conColor) {
-        this.conColor = conColor;
+    public Consolerizer conColor(ConsolerizerColor consolerizerColor) {
+        this.consolerizerColor = consolerizerColor;
         return this;
     }
 
@@ -197,7 +197,7 @@ public class Consolerizer {
     }
 
     public static void printOrangeGeneric(String text) {
-        printColor(ConColor.ORANGE);
+        printColor(ConsolerizerColor.ORANGE);
         printPrivateText(text);
     }
 
@@ -211,22 +211,22 @@ public class Consolerizer {
     }
 
     public static void printOrangeGeneric(String text, Object... args) {
-        printColor(ConColor.ORANGE);
+        printColor(ConsolerizerColor.ORANGE);
         printPrivateText(text, args);
     }
 
     public static void printYellowGeneric(Object text) {
-        printColor(ConColor.YELLOW);
+        printColor(ConsolerizerColor.YELLOW);
         printPrivateText(text.toString());
     }
 
     public static void printYellowGeneric(String text, Object... args) {
-        printColor(ConColor.YELLOW);
+        printColor(ConsolerizerColor.YELLOW);
         printPrivateText(text, args);
     }
 
-    public void printColorText(final ConColor conColor, String text) {
-        printColor(conColor);
+    public void printColorText(final ConsolerizerColor consolerizerColor, String text) {
+        printColor(consolerizerColor);
         printPrivateText(text);
     }
 
@@ -297,12 +297,12 @@ public class Consolerizer {
     }
 
     public void printText(String text) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printPrivateText(text);
     }
 
     public void printText(String text, Object... vars) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printPrivateText(text, vars);
     }
 
@@ -493,7 +493,7 @@ public class Consolerizer {
     }
 
     public static void printRainbowTitle(final String title) {
-        List<String> consoleRainbow = ConColor.getConsoleRainbow();
+        List<String> consoleRainbow = ConsolerizerColor.getConsoleRainbow();
         int k = 0;
         int i;
         for (i = 0; i < title.length(); i++) {
@@ -527,7 +527,7 @@ public class Consolerizer {
     }
 
     public static void printRainbow(final String theme) {
-        ConColor.getConsoleRainbow()
+        ConsolerizerColor.getConsoleRainbow()
             .forEach(color -> {
                 System.out.print(color);
                 System.out.print(theme);
@@ -535,7 +535,7 @@ public class Consolerizer {
     }
 
     public static void printRainbowStack(final String theme) {
-        ConColor.getConsoleRainbow()
+        ConsolerizerColor.getConsoleRainbow()
             .forEach(color -> {
                 System.out.print(color);
                 System.out.println(theme);
@@ -570,8 +570,8 @@ public class Consolerizer {
         System.exit(1);
     }
 
-    private static void printColor(ConColor conColor) {
-        currentColor = conColor;
-        System.out.print(conColor.getConsoleColor());
+    private static void printColor(ConsolerizerColor consolerizerColor) {
+        currentColor = consolerizerColor;
+        System.out.print(consolerizerColor.getConsoleColor());
     }
 }

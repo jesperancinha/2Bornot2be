@@ -2,8 +2,8 @@ package org.jesperancinha.java11.crums.crum16;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Long.MIN_VALUE;
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 public class Crum16 {
     public static void main(String[] args) {

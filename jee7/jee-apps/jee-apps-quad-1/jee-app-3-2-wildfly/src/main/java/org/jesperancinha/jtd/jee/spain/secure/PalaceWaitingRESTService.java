@@ -12,8 +12,8 @@ import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Path("/history/palace/rest")
 @RequestScoped

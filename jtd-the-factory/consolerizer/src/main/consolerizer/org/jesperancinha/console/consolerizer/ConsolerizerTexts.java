@@ -1,6 +1,6 @@
 package org.jesperancinha.console.consolerizer;
 
-public class ConTexts {
+public class ConsolerizerTexts {
 
     static String createTitleLineLn(Object text, char limitingChar, boolean newLine) {
         final String fullText = text.toString();

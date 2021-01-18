@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import javax.ejb.Timeout;
 import javax.ejb.Timer;
 
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Stateless
 public class StatelessTimerSessionBean {

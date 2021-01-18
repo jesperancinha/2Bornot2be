@@ -3,7 +3,7 @@ package org.jesperancinha.jtd.jee.united.kingdom.jobs.job1;
 import javax.batch.api.chunk.ItemProcessor;
 import javax.inject.Named;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 @Named
 public class SimpleItemProcessor implements ItemProcessor {

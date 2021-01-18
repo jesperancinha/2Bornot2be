@@ -10,7 +10,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @ServerEndpoint("/aviz/interpreter/mass")

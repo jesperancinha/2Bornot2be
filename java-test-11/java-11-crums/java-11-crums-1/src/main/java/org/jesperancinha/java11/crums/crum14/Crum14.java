@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
-import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 
 public class Crum14 {
     public static void main(String[] args) {

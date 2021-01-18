@@ -17,7 +17,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 
 @Stateless
 @TransactionManagement(javax.ejb.TransactionManagementType.BEAN)

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import javax.websocket.EncodeException;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 class AvizEncoderTest {
 

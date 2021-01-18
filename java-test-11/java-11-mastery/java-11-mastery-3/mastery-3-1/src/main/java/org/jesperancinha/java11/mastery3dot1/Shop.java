@@ -4,7 +4,7 @@ import org.jesperancinha.java11.mastery3dot1.items.Record;
 import org.jesperancinha.java11.mastery3dot1.items.ShopItem;
 import org.jesperancinha.java11.mastery3dot1.items.VinylRecord;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 public class Shop {
     public static void checkItem(ShopItem shopItem) {

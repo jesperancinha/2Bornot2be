@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.girl.bands.soap;
 
-import org.jesperancinha.console.consolerizer.ConGraphs;
+import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
 
 import javax.annotation.Resource;
 import javax.jws.WebService;
@@ -15,11 +15,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @WebService(name = "be-there", endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.BeThereLyricsService")
@@ -44,10 +44,10 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
         Arrays.stream(EXPECTED_LYRICS)
             .forEach(text -> YELLOW.printGenericLn(text));
 
-        ConGraphs.printUnicornsLn(100);
+        ConsolerizerGraphs.printUnicornsLn(100);
         MAGENTA.printGenericLn(wsContext.getMessageContext());
         MAGENTA.printGenericLn(wsContext.getUserPrincipal());
-        ConGraphs.printUnicornsLn(100);
+        ConsolerizerGraphs.printUnicornsLn(100);
 
         final MessageContext mc = this.wsContext.getMessageContext();
         final var sr = mc.get(MessageContext.SERVLET_REQUEST);

@@ -2,8 +2,8 @@ package org.jesperancinha.java11.mastery3dot2.mercado;
 
 import java.io.Serializable;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 public class Building extends Construction implements Serializable {
     float height;

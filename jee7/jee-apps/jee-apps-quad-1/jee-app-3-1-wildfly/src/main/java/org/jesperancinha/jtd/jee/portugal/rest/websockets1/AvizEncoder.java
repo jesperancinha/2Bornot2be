@@ -5,7 +5,7 @@ import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
 public class AvizEncoder implements Encoder.Text<AvizEncodedMessage> {
 

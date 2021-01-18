@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.girl.bands.filters;
 
-import org.jesperancinha.console.consolerizer.ConGraphs;
+import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -11,8 +11,8 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 
 public class CaghtUpInTheMiddle implements Filter {
@@ -37,7 +37,7 @@ public class CaghtUpInTheMiddle implements Filter {
         throws IOException, ServletException {
 
         final PrintWriter writer = response.getWriter();
-        writer.println(ConGraphs.getUnicorns(100));
+        writer.println(ConsolerizerGraphs.getUnicorns(100));
         writer.println(FROM);
         writer.println(LYRIC);
 

@@ -9,10 +9,10 @@ import javax.ejb.Stateless;
 import java.io.Serializable;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 // Caused by: org.jboss.weld.exceptions.DefinitionException:

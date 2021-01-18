@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Vector;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_CYAN;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class Mastery1Dot2Runner {
     public static void main(String[] args) throws InterruptedException {

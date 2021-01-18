@@ -3,7 +3,7 @@ package org.jesperancinha.jtd.jee.united.kingdom.bean;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 @Named
 @RequestScoped

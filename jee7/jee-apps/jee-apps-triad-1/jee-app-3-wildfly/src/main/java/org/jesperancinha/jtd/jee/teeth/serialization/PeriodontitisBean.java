@@ -6,7 +6,7 @@ import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Stateful;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 
 @Stateful
 @Cache("custom-cache")

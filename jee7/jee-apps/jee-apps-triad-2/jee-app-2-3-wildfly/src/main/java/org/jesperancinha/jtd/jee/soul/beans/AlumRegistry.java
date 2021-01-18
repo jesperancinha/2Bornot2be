@@ -8,7 +8,7 @@ import javax.inject.Named;
 import java.util.Calendar;
 import java.util.Date;
 
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
 @RequestScoped
 @Named("albumRegistry")

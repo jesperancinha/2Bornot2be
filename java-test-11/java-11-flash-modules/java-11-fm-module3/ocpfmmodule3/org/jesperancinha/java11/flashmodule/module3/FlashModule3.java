@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.flashmodule.module3;
 
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowStack;
 
 public class FlashModule3 {

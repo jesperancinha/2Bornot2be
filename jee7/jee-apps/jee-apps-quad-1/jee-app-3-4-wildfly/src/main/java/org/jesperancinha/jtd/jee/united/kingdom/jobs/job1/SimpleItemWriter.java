@@ -5,7 +5,7 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 @Named
 public class SimpleItemWriter extends AbstractItemWriter {

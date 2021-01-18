@@ -6,7 +6,7 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.ConColor;
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain2.Tooth;
@@ -25,7 +25,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
@@ -38,7 +38,7 @@ public class ToothService2Test {
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
             .addClasses(ToothService2.class, Tooth.class, Resources.class, UserTransaction.class, EntityManager.class,
-                Consolerizer.class, ConColor.class)
+                Consolerizer.class, ConsolerizerColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
             .addAsWebInfResource("test-ds.xml");

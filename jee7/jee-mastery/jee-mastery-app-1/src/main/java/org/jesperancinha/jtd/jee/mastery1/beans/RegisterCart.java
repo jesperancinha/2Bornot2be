@@ -1,5 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.beans;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.mastery1.domain.StoreRecord;
 import org.jesperancinha.jtd.jee.mastery1.domain.StoreRecordManagedDao;
 
@@ -25,7 +26,7 @@ public class RegisterCart implements Serializable {
 
     private Record newRecord;
 
-    RegisterCart(){
+    RegisterCart() {
         this.allRecords = new ArrayList<>();
         this.newRecord = new Record();
     }
@@ -38,7 +39,8 @@ public class RegisterCart implements Serializable {
         return newRecord;
     }
 
-    public void saveRecord(){
+    public void saveRecord() {
+        ConsolerizerColor.BRIGHT_MAGENTA.printGenericLn("We are using cart %s with hash %s", this.getClass(), this.hashCode());
         final StoreRecord album = new StoreRecord();
         album.setId(UUID.randomUUID());
         album.setArtist(newRecord.getArtist());

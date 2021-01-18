@@ -3,7 +3,7 @@ package org.jesperancinha.console.consolerizer;
 import java.util.Arrays;
 import java.util.List;
 
-public enum ConColor {
+public enum ConsolerizerColor {
     WHITE("FFFFFF", "\033[0m"),
     BLACK("000000", "\033[0;30m"),
     BLUE("0000AA", "\033[0;34m"),
@@ -28,7 +28,7 @@ public enum ConColor {
     private String hexColor;
     private String consoleColor;
 
-    ConColor(String hexColor, String consoleColor) {
+    ConsolerizerColor(String hexColor, String consoleColor) {
         this.hexColor = hexColor;
         this.consoleColor = consoleColor;
     }
@@ -45,6 +45,6 @@ public enum ConColor {
         return Arrays.asList(RED.getConsoleColor(),
                 ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
                 GREEN.getConsoleColor(), BLUE.getConsoleColor(),
-                ConColor.MAGENTA.getConsoleColor());
+                ConsolerizerColor.MAGENTA.getConsoleColor());
     }
 }

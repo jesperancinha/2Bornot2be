@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.mastery3dot2.mercado;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 public class Construction implements Space {
     String mainMaterial;

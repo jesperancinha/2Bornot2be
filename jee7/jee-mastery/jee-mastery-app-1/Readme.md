@@ -20,6 +20,10 @@ In this exercise we will go through music that one way or the other, has been in
 
 ## References
 
+-   [EJB - Transactions](https://www.tutorialspoint.com/ejb/ejb_transactions.htm)
+-   [Programming WebLogic Enterprise JavaBeans](https://docs.oracle.com/cd/E13222_01/wls/docs103/ejb/index.html)
+-   [CDI : WELD-001408 Unsatisfied dependencies, how to resolve it?](https://stackoverflow.com/questions/22191377/cdi-weld-001408-unsatisfied-dependencies-how-to-resolve-it)
+-   [The Java EE 6 Tutorial using scopes](https://docs.oracle.com/javaee/6/tutorial/doc/gjbbk.html)
 -   [JSR 352: Batch Applications for the Java Platform](https://jcp.org/en/jsr/detail?id=352)
 -   [An Overview of Batch Processing in Java EE 7.0](https://www.oracle.com/technical-resources/articles/java/batch-processing-ee-7.html)
 -   [CDI @RequestScoped](https://tomee.apache.org/examples-trunk/cdi-request-scope/)

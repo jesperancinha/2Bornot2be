@@ -6,7 +6,7 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.ConColor;
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.app1.Resources;
 import org.jesperancinha.jtd.jee.app1.data.ArtistProducer;
@@ -28,7 +28,7 @@ public class ManagedBeanAlbumDaoTest {
     public static Archive<?> createTestArchive() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
             .addClasses(Album.class, ManagedBeanAlbumDao.class, Resources.class, ArtistProducer.class, AlbumDao.class,
-                UserTransaction.class, EntityManager.class, Consolerizer.class, ConColor.class)
+                UserTransaction.class, EntityManager.class, Consolerizer.class, ConsolerizerColor.class)
             .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
             .addAsWebInfResource("test-ds.xml");

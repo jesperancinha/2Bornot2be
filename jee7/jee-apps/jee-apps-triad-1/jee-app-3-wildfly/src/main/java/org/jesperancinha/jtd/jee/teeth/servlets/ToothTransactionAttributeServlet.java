@@ -23,9 +23,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 @WebServlet("/tooth/servlet/tx/all")
 public class ToothTransactionAttributeServlet extends HttpServlet {

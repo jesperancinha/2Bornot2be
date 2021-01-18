@@ -11,8 +11,8 @@ import java.util.stream.Stream;
 
 import static java.lang.Thread.sleep;
 import static java.util.stream.Collectors.joining;
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_WHITE;
-import static org.jesperancinha.console.consolerizer.ConColor.WHITE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_WHITE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.WHITE;
 
 public class Consolerizer {
 
@@ -20,8 +20,8 @@ public class Consolerizer {
     private final static int MAX_LINE_CHARS = 0;
     private final static int RAINBOW_LINE_CHARS = 10;
     private final static int TITLE_SPREAD = 100;
-    private final static ConColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
-    private static ConColor currentColor;
+    private final static ConsolerizerColor CON_COLOR_DEFAULT = BRIGHT_WHITE;
+    private static ConsolerizerColor currentColor;
 
     private int typingWait;
 
@@ -31,20 +31,20 @@ public class Consolerizer {
     public static int titleSpread = TITLE_SPREAD;
     public static boolean blackAndWhite;
 
-    private final ConColor conColor;
+    private final ConsolerizerColor consolerizerColor;
 
     public Consolerizer() {
         typingWait = TYPING_DEFAULT_MS;
-        this.conColor = CON_COLOR_DEFAULT;
+        this.consolerizerColor = CON_COLOR_DEFAULT;
     }
 
     public Consolerizer(int typingWait) {
         this.typingWait = typingWait;
-        this.conColor = CON_COLOR_DEFAULT;
+        this.consolerizerColor = CON_COLOR_DEFAULT;
     }
 
-    public Consolerizer(ConColor conColor) {
-        this.conColor = conColor;
+    public Consolerizer(ConsolerizerColor consolerizerColor) {
+        this.consolerizerColor = consolerizerColor;
     }
 
     public static void setupFastDefault() {
@@ -76,27 +76,27 @@ public class Consolerizer {
     }
 
     public static void printRandomColorGeneric(Object text) {
-        printColor(ConColor.getRandomColor());
+        printColor(ConsolerizerColor.getRandomColor());
         printPrivateText(text.toString());
     }
 
     public static void printRandomColorGeneric(String text, Object... args) {
-        printColor(ConColor.getRandomColor());
+        printColor(ConsolerizerColor.getRandomColor());
         printPrivateText(text, args);
     }
 
-    public void printColorText(final ConColor conColor, String text) {
-        printColor(conColor);
+    public void printColorText(final ConsolerizerColor consolerizerColor, String text) {
+        printColor(consolerizerColor);
         printPrivateText(text);
     }
 
     public void printText(String text) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printPrivateText(text);
     }
 
     public void printText(String text, Object... vars) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printPrivateText(text, vars);
     }
 
@@ -209,7 +209,7 @@ public class Consolerizer {
     private static void printPerLine(String printText, int typingWait, int maxLineChars) {
         final List<List<String>> collect = Arrays.stream(printText.split("\n"))
                 .map(paragraph -> Arrays.stream(getSplit(maxLineChars, paragraph))
-                        .map(ConTexts::trim)
+                        .map(ConsolerizerTexts::trim)
                         .collect(Collectors.toList()))
                 .collect(Collectors.toList());
         for (List<String> list : collect) {
@@ -266,12 +266,12 @@ public class Consolerizer {
     }
 
     private static String[] getSplit(int maxLineChars, String printText) {
-        String[] split = ConTexts.trim(printText).split("(?<=\\G.{" + maxLineChars + "})");
+        String[] split = ConsolerizerTexts.trim(printText).split("(?<=\\G.{" + maxLineChars + "})");
         if (split.length > 1 && split[1].length() > maxLineChars) {
             String[] newSplit = getSplit(maxLineChars, split[1]);
             int newLength = newSplit.length + 1;
             String[] newStrings = new String[newLength];
-            newStrings[0] = ConTexts.trim(split[0]);
+            newStrings[0] = ConsolerizerTexts.trim(split[0]);
             System.arraycopy(newSplit, 0, newStrings, 1, newSplit.length);
             return newStrings;
         }
@@ -292,7 +292,7 @@ public class Consolerizer {
     }
 
     public static void printRainbowTitle(final String title) {
-        List<String> consoleRainbow = ConColor.getConsoleRainbow();
+        List<String> consoleRainbow = ConsolerizerColor.getConsoleRainbow();
         var k = 0;
         for (var i = 0; i < title.length(); i++) {
             if (k == consoleRainbow.size()) {
@@ -325,7 +325,7 @@ public class Consolerizer {
     }
 
     public static void printRainbow(final String theme) {
-        ConColor.getConsoleRainbow()
+        ConsolerizerColor.getConsoleRainbow()
                 .forEach(color -> {
                     System.out.print(color);
                     System.out.print(theme);
@@ -333,7 +333,7 @@ public class Consolerizer {
     }
 
     public static void printRainbowStack(final String theme) {
-        ConColor.getConsoleRainbow()
+        ConsolerizerColor.getConsoleRainbow()
                 .forEach(color -> {
                     System.out.print(color);
                     System.out.println(theme);
@@ -349,17 +349,17 @@ public class Consolerizer {
         System.out.print("\n");
     }
 
-    static void printColor(ConColor conColor) {
-        currentColor = conColor;
-        System.out.print(conColor.getConsoleColor());
+    static void printColor(ConsolerizerColor consolerizerColor) {
+        currentColor = consolerizerColor;
+        System.out.print(consolerizerColor.getConsoleColor());
     }
 
     static String createTitleLineLn(Object text, char limitingChar) {
-        return ConTexts.createTitleLineLn(text, limitingChar, true);
+        return ConsolerizerTexts.createTitleLineLn(text, limitingChar, true);
     }
 
     static String createTitleLine(Object text, char limitingChar) {
-        return ConTexts.createTitleLineLn(text, limitingChar, false);
+        return ConsolerizerTexts.createTitleLineLn(text, limitingChar, false);
     }
 
 
@@ -372,28 +372,28 @@ public class Consolerizer {
     }
 
     public void printGeneric(Object text) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printPrivateText(text.toString());
     }
 
     public void printGeneric(Object text, Object... args) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printPrivateText(text.toString(), args);
     }
 
     public void printGenericTitleLn(Object text, Object... args) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printGenericTitleLn(String.format("" + text, args));
     }
 
     public void printGenericTitleLn(Object text) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         final String titleString = Consolerizer.createTitleLineLn(text, '=');
         printGeneric(titleString);
     }
 
     public void printThrowableAndExit(Throwable e) {
-        printColor(conColor);
+        printColor(consolerizerColor);
         printGenericLn("Ooops! This should not have happened. Check your system! -> %s", e);
         printGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
         System.exit(1);

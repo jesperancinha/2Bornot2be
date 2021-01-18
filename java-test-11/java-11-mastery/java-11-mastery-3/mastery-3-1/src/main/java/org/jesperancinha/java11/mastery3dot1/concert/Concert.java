@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot1.concert;
 
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public interface Concert {
     int addConcertGoer() throws ConcerCapacityExceededException;

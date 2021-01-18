@@ -2,9 +2,9 @@ package org.jesperancinha.jtd.jee.girl.bands.soap;
 
 import javax.jws.WebService;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @WebService(name = "underground", endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.UndergroundService")
 public class UndergroundServiceImpl implements UndergroundService {

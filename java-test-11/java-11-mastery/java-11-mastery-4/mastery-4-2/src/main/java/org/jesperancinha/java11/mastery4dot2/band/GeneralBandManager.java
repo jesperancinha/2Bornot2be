@@ -8,7 +8,7 @@ import java.time.temporal.Temporal;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 public class GeneralBandManager extends BandManager {
 

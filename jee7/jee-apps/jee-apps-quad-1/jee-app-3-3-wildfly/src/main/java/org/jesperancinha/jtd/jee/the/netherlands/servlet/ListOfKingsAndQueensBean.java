@@ -5,7 +5,7 @@ import javax.ejb.Stateless;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
 @Stateless
 public class ListOfKingsAndQueensBean {

@@ -19,7 +19,7 @@ import javax.transaction.UserTransaction;
 import java.util.List;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 
 /**
  * Note that var utx = (UserTransaction) context.lookup("java:comp/UserTransaction") is only found because of:

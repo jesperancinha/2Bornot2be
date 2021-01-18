@@ -14,9 +14,9 @@ import javax.persistence.PersistenceContextType;
 import javax.persistence.TransactionRequiredException;
 import javax.transaction.TransactionSynchronizationRegistry;
 
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @Stateless

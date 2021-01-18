@@ -10,8 +10,12 @@ import java.util.logging.Logger;
 
 public class Resources {
     @PersistenceContext
-    @Produces
     private EntityManager em;
+
+    @Produces
+    public EntityManager getEntityManager() {
+        return em;
+    }
 
     @Produces
     public Logger getLogger(InjectionPoint ip) {

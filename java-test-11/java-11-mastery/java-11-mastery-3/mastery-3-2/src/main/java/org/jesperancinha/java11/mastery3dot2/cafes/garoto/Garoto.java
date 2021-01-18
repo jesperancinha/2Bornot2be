@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot2.cafes.garoto;
 
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 // There is no default constructor available in
 // 'org.jesperancinha.java11.mastery3dot2.cafes.galao.Galao'

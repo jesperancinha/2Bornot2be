@@ -12,9 +12,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Stack;
 
-import static org.jesperancinha.console.consolerizer.ConColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Stateful
 public class HistoryStatefulDeliveryDefault implements Serializable {

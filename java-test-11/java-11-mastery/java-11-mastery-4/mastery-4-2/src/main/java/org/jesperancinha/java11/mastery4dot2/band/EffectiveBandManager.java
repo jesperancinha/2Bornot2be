@@ -5,7 +5,7 @@ import org.jesperancinha.java11.mastery4dot2.concert.Band;
 import java.time.temporal.Temporal;
 import java.util.Map;
 
-import static org.jesperancinha.console.consolerizer.ConColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 public class EffectiveBandManager extends BandManager {
     @Override

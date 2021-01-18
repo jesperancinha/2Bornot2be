@@ -1,5 +1,5 @@
 <%@ page import="org.jesperancinha.console.consolerizer.Consolerizer" %>
-<%@ page import="static org.jesperancinha.console.consolerizer.ConColor.RED" %>
+<%@ page import="static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
