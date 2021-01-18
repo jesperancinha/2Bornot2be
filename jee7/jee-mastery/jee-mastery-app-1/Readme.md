@@ -14,6 +14,10 @@ Topics covered:
 7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
 8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
 
+## Endpoints
+
+1. http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/
+
 ## Context References
 
 -   [You Spin Me Round (Like a Record)](https://en.wikipedia.org/wiki/You_Spin_Me_Round_(Like_a_Record))
