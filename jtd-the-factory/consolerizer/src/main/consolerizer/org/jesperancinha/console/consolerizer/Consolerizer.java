@@ -398,4 +398,9 @@ public class Consolerizer {
         printGenericLn("Check if there is a prepare.sh script and if you ran it.", e);
         System.exit(1);
     }
+
+    public void printInstanceLn(Object text) {
+        printColor(consolerizerColor);
+        printGenericLn("This is an instance of type %s with hash %s", text.getClass().getCanonicalName(), text.hashCode());
+    }
 }

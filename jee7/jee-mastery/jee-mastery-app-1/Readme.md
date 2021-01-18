@@ -8,6 +8,7 @@ Topics covered:
 1. `<h:panelGrid`, `<c:forEach`, `<h:outputLabel`, `<h:inputText`
 2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
 3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
+4. `@Inject`, `setter`, `getter`
 
 ## Context References
 
@@ -53,6 +54,7 @@ Topics covered:
 
 ## References
 
+-   [JSTL - Core <c:forEach>, <c:forTokens> Tag](https://www.tutorialspoint.com/jsp/jstl_core_foreach_tag.htm)
 -   [8.8. Transactional Stateful Session Beans](http://www.cs.ait.ac.th/~on/O/oreilly/java-ent/ebeans/ch08_08.htm)
 -   [Transaction Annotations](http://tomee.apache.org/transaction-annotations.html)
 -   [EJB - Transactions](https://www.tutorialspoint.com/ejb/ejb_transactions.htm)
