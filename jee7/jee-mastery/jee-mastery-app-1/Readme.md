@@ -13,6 +13,15 @@ Topics covered:
 6. `ApplicationException`, `interface`, `rollback`, `@SessionScoped`, `@Named`,
 7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
 8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
+9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
+
+## Create WAR file with the jar command
+
+```bash
+cd target/jee-mastery-app-1-1.0.0-SNAPSHOT
+jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *
+ls WEB-INF/lib
+```
 
 ## Endpoints
 
