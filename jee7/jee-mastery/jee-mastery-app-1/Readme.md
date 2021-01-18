@@ -15,6 +15,7 @@ Topics covered:
 8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
 9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
 10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
+11. `JsonGenerator`, `Json`. `createGenerator`, `JsonArrayBuilder`, `createArrayBuilder`, `createObjectBuilder`
 
 ## Create WAR file with the jar command
 
@@ -109,6 +110,7 @@ ls WEB-INF/lib
 
 ## References
 
+-   [Interface JsonReader](https://docs.oracle.com/javaee/7/api/javax/json/JsonReader.html)
 -   [How to use Message Selectors to filter messages](https://timjansen.github.io/jarfiller/guide/jms/selectors.xhtml)
 -   [JPA issue in combo with @SessionScoped](http://tomee-openejb.979440.n4.nabble.com/JPA-issue-in-combo-with-SessionScoped-td4662268.html)
 -   [JMSContext createContext(int sessionMode)](https://docs.oracle.com/javaee/7/api/javax/jms/ConnectionFactory.html#createContext-int-)
