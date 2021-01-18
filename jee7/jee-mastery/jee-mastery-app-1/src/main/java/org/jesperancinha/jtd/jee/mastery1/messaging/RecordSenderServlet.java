@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery1.messaging;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
-
 import javax.annotation.security.RolesAllowed;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
@@ -13,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.getRandomColor;
 
 @WebServlet("/warehouse")

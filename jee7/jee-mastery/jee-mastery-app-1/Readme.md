@@ -10,6 +10,8 @@ Topics covered:
 3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
 4. `@Inject`, `setter`, `getter`
 5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
+6. `ApplicationException`, `interface`, `rollback`, `@SessionScoped`, `@Named`,
+7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
 
 ## Context References
 
