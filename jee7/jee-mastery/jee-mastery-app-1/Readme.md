@@ -194,8 +194,18 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
       </a>
 </div>
 
+<div align="center">
+      <a title="La Prohibida - Baloncesto" href="https://www.youtube.com/watch?v=HSzekat1ajU">
+     <img 
+          src="https://img.youtube.com/vi/HSzekat1ajU/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ## References
 
+-   [ServletConfig Interface](https://www.javatpoint.com/servletconfig)
+-   [JSTL Format Tag fmt:setLocale Example](https://www.codejava.net/java-ee/jstl/jstl-format-tag-setlocale)
 -   [JViews JSF applications globalization and multicultural support](https://help.perforce.com/visualization/jviews/8.10/jviews-charts810/doc/html/en-US/Content/Visualization/Documentation/JViews/JViews_Charts/_pubskel/ps_usrwebcharts476.html)
 -   [Creating Durable Subscriptions](https://docs.oracle.com/cd/E19798-01/821-1841/bncgd/index.html#:~:text=To%20delete%20a%20durable%20subscription,unsubscribe(%22MySub%22)%3B)
 -   [Interface JsonReader](https://docs.oracle.com/javaee/7/api/javax/json/JsonReader.html)
