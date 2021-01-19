@@ -24,6 +24,7 @@ Topics covered:
 17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
 18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
 19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
+20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
 
 ## Extra notes
 
@@ -194,6 +195,7 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [JViews JSF applications globalization and multicultural support](https://help.perforce.com/visualization/jviews/8.10/jviews-charts810/doc/html/en-US/Content/Visualization/Documentation/JViews/JViews_Charts/_pubskel/ps_usrwebcharts476.html)
 -   [Creating Durable Subscriptions](https://docs.oracle.com/cd/E19798-01/821-1841/bncgd/index.html#:~:text=To%20delete%20a%20durable%20subscription,unsubscribe(%22MySub%22)%3B)
 -   [Interface JsonReader](https://docs.oracle.com/javaee/7/api/javax/json/JsonReader.html)
 -   [How to use Message Selectors to filter messages](https://timjansen.github.io/jarfiller/guide/jms/selectors.xhtml)

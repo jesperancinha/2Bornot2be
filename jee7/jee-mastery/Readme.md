@@ -60,6 +60,7 @@ The ones without any notice, are considered done, but they will be subject to im
 17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
 18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
 19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
+20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
 
 ---
 
