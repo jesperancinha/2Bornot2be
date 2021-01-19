@@ -62,6 +62,7 @@ The ones without any notice, are considered done, but they will be subject to im
 19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
 20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
 21.  `<application>`, `<locale-config>`, `<default-locale>`, `<resource-bundle>`,` <base-name>`, `<h:outputText value="#{bundle['title']}"/>`
+22. `<servlet>`, `<init-param>`, `<param-name>`, `<param-value>`, `ServletConfig`, `ServletContext`
 
 ---
 

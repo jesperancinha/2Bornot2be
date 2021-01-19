@@ -6,6 +6,18 @@
         version="4.0">
 
     <servlet>
+        <servlet-name>VariableReaderServlet</servlet-name>
+        <servlet-class>org.jesperancinha.jtd.jee.mastery1.servlet.reader.VariableReaderServlet</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>system</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VariableReaderServlet</servlet-name>
+        <url-pattern>/reader</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <init-param>
@@ -56,7 +68,7 @@
             <form-error-page>/error.xhtml</form-error-page>
         </form-login-config>
     </login-config>
-    
+
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
