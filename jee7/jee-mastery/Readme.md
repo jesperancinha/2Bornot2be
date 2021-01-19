@@ -42,8 +42,7 @@ The ones without any notice, are considered done, but they will be subject to im
 
 ---
 1. `<h:panelGrid`, `<c:forEach`, `<h:outputLabel`, `<h:inputText`
-2. `@SessionSc
-   oped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
+2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
 3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
 4. `@Inject`, `setter`, `getter`
 5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
