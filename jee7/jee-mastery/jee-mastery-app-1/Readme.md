@@ -23,6 +23,7 @@ Topics covered:
 16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
 17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
 18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
+19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
 
 ## Extra notes
 

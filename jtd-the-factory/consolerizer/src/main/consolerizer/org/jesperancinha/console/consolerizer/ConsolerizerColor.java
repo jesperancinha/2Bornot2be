@@ -80,10 +80,15 @@ public enum ConsolerizerColor {
         colorManager.printThrowableAndExit(e);
     }
 
-    public void printInstanceLn(Object text){
+    public void printInstanceLn(Object text) {
         colorManager.printInstanceLn(text);
     }
-    public String getPText(Object text){
+
+    public String getPText(Object text, Object... args) {
+        return getPText(String.format("" + text, args));
+    }
+
+    public String getPText(Object text) {
         return Htmlizer.getPTextColor(this.hexColor, "" + text);
     }
 
