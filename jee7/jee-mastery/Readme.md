@@ -58,8 +58,14 @@ The ones without any notice, are considered done, but they will be subject to im
 15. `createDurableConsumer`, `receive`, `ObjectMessage`
 16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
 17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
+18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
 
 ---
+
+## Extra notes
+
+1. We can use POJO's to implement a REST resource. The only requirement is for it top be annotated with at least one @Path
+
 
 ## References
 

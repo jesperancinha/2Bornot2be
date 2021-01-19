@@ -22,6 +22,11 @@ Topics covered:
 15. `createDurableConsumer`, `receive`, `ObjectMessage`
 16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
 17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
+18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
+
+## Extra notes
+
+1. We can use POJO's to implement a REST resource. The only requirement is for it top be annotated with at least one @Path
 
 ## Create WAR file with the jar command
 
@@ -37,7 +42,7 @@ ls WEB-INF/lib
 
 ## Curl requests
 
-1. O namoric do André
+1. O namorico do André
 
 ```bash
 curl -X HEAD http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
