@@ -17,6 +17,7 @@ Topics covered:
 10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
 11. `JsonGenerator`, `Json`. `createGenerator`, `JsonArrayBuilder`, `createArrayBuilder`, `createObjectBuilder`
 12. `@GET`, `@HEAD`
+13. `Serializable`, ` @TransactionAttribute`, `TransactionAttributeType.REQUIRES_NEW`, `@IdClass`, `@Id`, `@Identity`, `@Column`, `@NonNull`
 
 ## Create WAR file with the jar command
 
@@ -44,6 +45,8 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [Whaler (album)](https://en.wikipedia.org/wiki/Whaler_(album))
+-   [Right Beside You (Sophie B. Hawkins song)](https://en.wikipedia.org/wiki/Right_Beside_You_(Sophie_B._Hawkins_song))
 -   [Lila Fadista - Fado Bicha](https://www.qobuz.com/ie-en/album/lila-fadista-fado-bicha/l390otcj1c1db)
 -   [Fado Bicha](https://www.facebook.com/fadobicha/)
 -   [You Spin Me Round (Like a Record)](https://en.wikipedia.org/wiki/You_Spin_Me_Round_(Like_a_Record))
@@ -53,6 +56,18 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 -   [The Story So Far (Divine album)](https://en.wikipedia.org/wiki/The_Story_So_Far_(Divine_album))
 -   [Dead or Alive discography](https://en.wikipedia.org/wiki/Dead_or_Alive_discography)
 
+<div align="center">
+      <a title="Melissa Etheridge - Angels Would Fall" href="https://www.youtube.com/watch?v=eC8FfGvCFho">
+     <img 
+          src="https://img.youtube.com/vi/eC8FfGvCFho/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Sophie B. Hawkins - Right Beside You" href="https://www.youtube.com/watch?v=VDJSOAYEzPA">
+     <img 
+          src="https://img.youtube.com/vi/VDJSOAYEzPA/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 <div align="center">
       <a title="Divine - You Think You're a Man" href="https://www.youtube.com/watch?v=063RGou-P_8">
      <img 
