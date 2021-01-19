@@ -18,6 +18,8 @@ Topics covered:
 11. `JsonGenerator`, `Json`. `createGenerator`, `JsonArrayBuilder`, `createArrayBuilder`, `createObjectBuilder`
 12. `@GET`, `@HEAD`
 13. `Serializable`, ` @TransactionAttribute`, `TransactionAttributeType.REQUIRES_NEW`, `@IdClass`, `@Id`, `@Identity`, `@Column`, `@NonNull`
+14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
+
 
 ## Create WAR file with the jar command
 
