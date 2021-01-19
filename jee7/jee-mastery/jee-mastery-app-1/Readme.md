@@ -16,6 +16,7 @@ Topics covered:
 9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
 10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
 11. `JsonGenerator`, `Json`. `createGenerator`, `JsonArrayBuilder`, `createArrayBuilder`, `createObjectBuilder`
+12. `@GET`, `@HEAD`
 
 ## Create WAR file with the jar command
 
@@ -29,8 +30,22 @@ ls WEB-INF/lib
 
 1. http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/
 
+## Curl requests
+
+1. O namoric do André
+
+```bash
+curl -X HEAD http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
+curl -X HEAD -I http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
+curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
+curl -X HEAD http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands/head
+curl -X HEAD -I http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands/head
+curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands/head
+```
 ## Context References
 
+-   [Lila Fadista - Fado Bicha](https://www.qobuz.com/ie-en/album/lila-fadista-fado-bicha/l390otcj1c1db)
+-   [Fado Bicha](https://www.facebook.com/fadobicha/)
 -   [You Spin Me Round (Like a Record)](https://en.wikipedia.org/wiki/You_Spin_Me_Round_(Like_a_Record))
 -   [Farbenspiel](https://en.wikipedia.org/wiki/Farbenspiel)
 -   [Atemlos durch die Nacht](https://en.wikipedia.org/wiki/Atemlos_durch_die_Nacht)
@@ -128,6 +143,19 @@ ls WEB-INF/lib
       <a title="Fado Bicha - O Namorico do André" href="https://www.youtube.com/watch?v=GrZv7FJGUKE">
      <img 
           src="https://img.youtube.com/vi/GrZv7FJGUKE/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="In-Grid - Tu Es Foutu (LAMUR)" href="https://www.youtube.com/watch?v=MZqlhQm7hv4">
+     <img 
+          src="https://img.youtube.com/vi/MZqlhQm7hv4/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a title="Faith no more - Easy" href="https://www.youtube.com/watch?v=vPzDTfIb0DU">
+     <img 
+          src="https://img.youtube.com/vi/vPzDTfIb0DU/0.jpg" 
           style="width:10%;">
       </a>
 </div>
