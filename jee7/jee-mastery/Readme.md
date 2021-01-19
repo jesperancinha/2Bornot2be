@@ -61,6 +61,7 @@ The ones without any notice, are considered done, but they will be subject to im
 18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
 19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
 20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
+21.  `<application>`, `<locale-config>`, `<default-locale>`, `<resource-bundle>`,` <base-name>`, `<h:outputText value="#{bundle['title']}"/>`
 
 ---
 

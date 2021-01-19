@@ -10,7 +10,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
     <title>Atemlos durch die Nacht</title>
@@ -37,6 +38,13 @@
         <f:loadBundle basename="messages" var="msg4"/>
         <p>🇳🇱<h:outputText value="#{msg4.title}"/></p>
     </f:view>
+
+    <f:view locale="de_DE">
+        🇩🇪<h:outputText value="#{bundle['title']}"/>
+        <p>In this case the title is associated with the general locale configuration</p>
+        <p>In the previous examples, we could get messages via a property resouorce bundle in a separate language</p>
+    </f:view>
+
     <p><a href="index.xhtml">Back</a></p>
 </h:body>
 </html>
