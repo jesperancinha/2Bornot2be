@@ -57,6 +57,7 @@ The ones without any notice, are considered done, but they will be subject to im
 14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
 15. `createDurableConsumer`, `receive`, `ObjectMessage`
 16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
+17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
 
 ---
 

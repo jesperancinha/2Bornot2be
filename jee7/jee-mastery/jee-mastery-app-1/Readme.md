@@ -21,6 +21,7 @@ Topics covered:
 14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
 15. `createDurableConsumer`, `receive`, `ObjectMessage`
 16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
+17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
 
 ## Create WAR file with the jar command
 
@@ -48,6 +49,8 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [Melissa Etheridge discography](https://en.wikipedia.org/wiki/Melissa_Etheridge_discography)
+-   [Melissa Etheridge](https://en.wikipedia.org/wiki/Melissa_Etheridge)
 -   [Whaler (album)](https://en.wikipedia.org/wiki/Whaler_(album))
 -   [Right Beside You (Sophie B. Hawkins song)](https://en.wikipedia.org/wiki/Right_Beside_You_(Sophie_B._Hawkins_song))
 -   [Lila Fadista - Fado Bicha](https://www.qobuz.com/ie-en/album/lila-fadista-fado-bicha/l390otcj1c1db)
