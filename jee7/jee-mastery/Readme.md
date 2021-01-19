@@ -56,6 +56,7 @@ The ones without any notice, are considered done, but they will be subject to im
 12. `@GET`, `@HEAD`
 13. `Serializable`, ` @TransactionAttribute`, `TransactionAttributeType.REQUIRES_NEW`, `@IdClass`, `@Id`, `@Identity`, `@Column`, `@NonNull`
 14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
+15. `createDurableConsumer`, `receive`, `ObjectMessage`
 
 ---
 

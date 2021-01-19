@@ -19,37 +19,69 @@
 <h:body>
     <h1>🏳️‍🌈 PRIDE Edition I 🏳️‍🌈</h1>
 
-    <h2>Registering Records on a Store</h2>
-    <p><a href="registerrecords.xhtml">Register records</a></p>
-
-    <h2>Students testing setters and direct injection</h2>
-    <p><a href="students.xhtml">Students</a></p>
-
-    <h2>Send Records on a Store</h2>
-    <p><a href="publishrecords.xhtml">Sends records</a></p>
-    <p><a href="warehouse">List sent records</a></p>
-
-    <h2>Questionnaire</h2>
-    <p><a href="questionnaire.xhtml">Sends records</a></p>
-
-    <h2>Searching</h2>
-    <p><a href="search.xhtml">Search Research</a></p>
-
-    <h2>JSON</h2>
-    <p><a href="json">Example in JSON</a></p>
-
-    <h2>Fado Bicha - O Namorico do André</h2>
-    <p><a href="app/fado/bands">Via browser you are makng a GET request. Please try this with a curl request</a></p>
-
-    <h2>Right Beside You Records</h2>
-    <p><a href="registerRecords2.xhtml">Register records with a composite key</a></p>
-
-    <h2>Right Beside You Records with embbedable parameters</h2>
-    <p><a href="registerRecords3.xhtml">Register records with everything embedabble</a></p>
-
-    <h2>Redirect</h2>
-    <h:form>
-        <p><h:commandButton value="Visit My Homepage" action="#{redirectBean.redirect}"/></p>
-    </h:form>
+    <table border="1" bordercolor="#000000">
+        <tr>
+            <td>
+                <h2>Registering Records on a Store</h2>
+                <p><a href="registerrecords.xhtml">Register records</a></p>
+            </td>
+            <td>
+                <h2>Students testing setters and direct injection</h2>
+                <p><a href="students.xhtml">Students</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Send Records on a Store</h2>
+                <p><a href="publishrecords.xhtml">Sends records</a></p>
+                <p><a href="warehouse">List sent records</a></p>
+            </td>
+            <td>
+                <h2>Send Records on a Store via Durable Subscription</h2>
+                <p><a href="publishrecords2.xhtml">Sends records</a></p>
+                <p><a href="warehouse">List sent records</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Questionnaire</h2>
+                <p><a href="questionnaire.xhtml">Sends records</a></p>
+            </td>
+            <td>
+                <h2>Searching</h2>
+                <p><a href="search.xhtml">Search Research</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>JSON</h2>
+                <p><a href="json">Example in JSON</a></p>
+            </td>
+            <td>
+                <h2>Fado Bicha - O Namorico do André</h2>
+                <p>
+                    <a href="app/fado/bands">Via browser you are makng a GET request. Please try this with a curl request</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Right Beside You Records</h2>
+                <p><a href="registerRecords2.xhtml">Register records with a composite key</a></p>
+            </td>
+            <td>
+                <h2>Right Beside You Records with embbedable parameters</h2>
+                <p><a href="registerRecords3.xhtml">Register records with everything embedabble</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Redirect</h2>
+                <h:form>
+                    <p><h:commandButton value="Visit My Homepage" action="#{redirectBean.redirect}"/></p>
+                </h:form>
+            </td>
+        </tr>
+    </table>
 </h:body>
 </html>

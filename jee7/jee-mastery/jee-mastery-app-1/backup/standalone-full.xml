@@ -453,7 +453,9 @@
                 <jms-queue name="LyricsDurableQueue" entries="java:/jms/LyricsDurableQueue" durable="true"/>
                 <jms-topic name="LyricsTopic" entries="java:/jms/LyricsTopic"/>
                 <jms-topic name="RecordsTopic" entries="java:/jms/RecordsTopic"/>
+                <jms-topic name="RecordsDurableTopic" entries="java:/jms/RecordsDurableTopic"/>
                 <connection-factory name="RecordsFactory" entries="java:/jms/RecordsFactory" connectors="in-vm"/>
+                <connection-factory name="RecordsDurableFactory" entries="java:/jms/RecordsDurableFactory" connectors="in-vm"/>
                 <connection-factory name="LyricsQueueFactory" entries="java:/jms/LyricsQueueFactory" connectors="in-vm"/>
                 <connection-factory name="MyConnectionFactory" entries="java:/jms/TestQueueFactory" connectors="in-vm"/>
                 <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactoryLove" connectors="in-vm"/>

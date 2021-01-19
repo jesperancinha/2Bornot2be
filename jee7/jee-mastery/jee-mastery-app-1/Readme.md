@@ -19,7 +19,7 @@ Topics covered:
 12. `@GET`, `@HEAD`
 13. `Serializable`, ` @TransactionAttribute`, `TransactionAttributeType.REQUIRES_NEW`, `@IdClass`, `@Id`, `@Identity`, `@Column`, `@NonNull`
 14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
-
+15. `createDurableConsumer`, `receive`, `ObjectMessage`
 
 ## Create WAR file with the jar command
 
@@ -175,10 +175,16 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
           src="https://img.youtube.com/vi/vPzDTfIb0DU/0.jpg" 
           style="width:10%;">
       </a>
+      <a title="The Young Professionals feat Uriel Yekutiel - D.I.S.C.O." href="https://www.youtube.com/watch?v=VcZnRz7WujA">
+     <img 
+          src="https://img.youtube.com/vi/VcZnRz7WujA/0.jpg" 
+          style="width:10%;">
+      </a>
 </div>
 
 ## References
 
+-   [Creating Durable Subscriptions](https://docs.oracle.com/cd/E19798-01/821-1841/bncgd/index.html#:~:text=To%20delete%20a%20durable%20subscription,unsubscribe(%22MySub%22)%3B)
 -   [Interface JsonReader](https://docs.oracle.com/javaee/7/api/javax/json/JsonReader.html)
 -   [How to use Message Selectors to filter messages](https://timjansen.github.io/jarfiller/guide/jms/selectors.xhtml)
 -   [JPA issue in combo with @SessionScoped](http://tomee-openejb.979440.n4.nabble.com/JPA-issue-in-combo-with-SessionScoped-td4662268.html)
