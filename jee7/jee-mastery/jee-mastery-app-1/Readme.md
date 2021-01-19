@@ -106,6 +106,30 @@ ls WEB-INF/lib
           src="https://img.youtube.com/vi/JozUoRIbsEE/0.jpg" 
           style="width:10%;">
       </a>
+      <a title="Dorian & Pimp Flaco - Dual" href="https://www.youtube.com/watch?v=TBZ52zCD0zk">
+     <img 
+          src="https://img.youtube.com/vi/TBZ52zCD0zk/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Macklemore & Ryan Lewis, Mary Lambert - Same Love" href="https://www.youtube.com/watch?v=hlVBg7_08n0">
+     <img 
+          src="https://img.youtube.com/vi/hlVBg7_08n0/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="P!nk - Raise Your Glass" href="https://www.youtube.com/watch?v=XjVNlG5cZyQ">
+     <img 
+          src="https://img.youtube.com/vi/XjVNlG5cZyQ/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Fado Bicha - O Namorico do André" href="https://www.youtube.com/watch?v=GrZv7FJGUKE">
+     <img 
+          src="https://img.youtube.com/vi/GrZv7FJGUKE/0.jpg" 
+          style="width:10%;">
+      </a>
 </div>
 
 ## References

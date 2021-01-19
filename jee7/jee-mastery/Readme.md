@@ -48,7 +48,7 @@ The ones without any notice, are considered done, but they will be subject to im
 4. `@Inject`, `setter`, `getter`
 5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
 6. `ApplicationException`, `interface`, `rollback`, `@SessionScoped`, `@Named`,
-7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
+7. `@TransactionAttribute`,  `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
 8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
 9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
 10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
