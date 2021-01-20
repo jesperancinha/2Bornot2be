@@ -7,7 +7,7 @@
     <title>FORM based Login</title>
 </head>
 <body>
-    <form method="POST" action="j_security_check">
+<form method="POST" action="j_security_check">
     <h:panelGrid columns="2">
         <h:outputLabel id="userNameLabel" for="j_username"
                        value="Username:"/>
@@ -21,6 +21,17 @@
             <h:commandButton type="reset" value="Clear"/>
         </h:panelGroup>
     </h:panelGrid>
+    <p>A few things to remember</p>
+    <ol>
+        <li>User admin has password admin and it is only allowed to make POST requests in the <b>security</b> servlets
+        </li>
+        <li>User admin2 has password admin and it is only allowed to make GET requests in the <b>security</b> servlets
+        </li>
+        <li>User admin has role Manager</li>
+        <li>User admin2 has role Organizer</li>
+    </ol>
+    <p><a href="/jee-mastery-app-1-1.0.0-SNAPSHOT/index.xhtml">Back</a></p>
+
 </form>
 </body>
 </html>

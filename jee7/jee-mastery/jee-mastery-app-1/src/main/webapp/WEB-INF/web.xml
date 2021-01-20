@@ -48,6 +48,35 @@
         </session-timeout>
     </session-config>
 
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>HtmlAuth</web-resource-name>
+            <url-pattern>/security/one</url-pattern>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>Manager</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>HtmlAuth</web-resource-name>
+            <url-pattern>/security/one</url-pattern>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>Organizer</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>HtmlAuth</web-resource-name>

@@ -135,19 +135,34 @@
         <tr>
             <td>
                 <h2>Sending Binary and String messages via Javascriot. Check your Logs!</h2>
-                <p><button onclick="wsocket.send('This is a String WOW!');">Send String Wow!</button></p>
-                <p><button onclick="wsocket.send(toBinary('This is a binary WOW!'));">Send a Binary Wow!</button></p>
+                <p>
+                    <button onclick="wsocket.send('This is a String WOW!');">Send String Wow!</button>
+                </p>
+                <p>
+                    <button onclick="wsocket.send(toBinary('This is a binary WOW!'));">Send a Binary Wow!</button>
+                </p>
             </td>
             <td>
-
+                <h2>Check the secure zone</h2>
+                <p>
+                    <a href="security/one">In Security ONE we use security configuration via web.xml</a>
+                </p>
+                <p>
+                    <a href="security/two">In Security TWO we use Annotations!</a>
+                </p>
             </td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td>
                 <h2>Redirect</h2>
                 <h:form>
                     <p><h:commandButton value="Visit My Homepage" action="#{redirectBean.redirect}"/></p>
                 </h:form>
+            </td>
+            <td>
+                <p>
+                    <a href="logout.jsp">Force Session Logout</a>
+                </p>
             </td>
         </tr>
     </table>

@@ -479,6 +479,15 @@
         <subsystem xmlns="urn:jboss:domain:sar:1.0"/>
         <subsystem xmlns="urn:jboss:domain:security:2.0">
             <security-domains>
+                <security-domain name="java:/jaas/securedbdomain" cache-type="default">
+                    <authentication>
+                        <login-module code="Database" flag="required">
+                            <module-option name="dsJndiName" value="java:jboss/datasources/PrideDS"/>
+                            <module-option name="principalsQuery" value="select passwd as password from USERS_PRIDE where login=?"/>
+                            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES_PRIDE where login=?"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
                 <security-domain name="securedbdomain" cache-type="default">
                     <authentication>
                         <login-module code="Database" flag="required">

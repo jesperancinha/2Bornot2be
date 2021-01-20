@@ -5,5 +5,4 @@ DELETE from USERS_PRIDE;
 INSERT into USERS_PRIDE values('admin', 'admin');
 INSERT into USERS_PRIDE values('admin2', 'admin');
 INSERT into USER_ROLES_PRIDE values('admin', 'Manager');
-INSERT into USER_ROLES_PRIDE values('admin', 'Organizer');
 INSERT into USER_ROLES_PRIDE values('admin2', 'Organizer');
