@@ -25,7 +25,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 @SessionScoped
 public class MusicServletCookiesServlet extends HttpServlet {
 
-    private static final List<String> MUSIC_LIST = Arrays.asList("Same Love", "You think you're a man", "I need you like Sunday Morning", "I Kissed a  Girl");
+    private static final List<String> MUSIC_LIST = Arrays.asList("Same Love", "You think you're a man", "Easy like Sunday Morning", "I Kissed a  Girl");
 
     private static final List<String> ALBUM_LIST = Arrays.asList("Aphrodite", "The story so far", "Collateral", "One of the Boys", "Easy Like Sunday Morning");
 
