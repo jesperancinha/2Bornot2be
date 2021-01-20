@@ -63,6 +63,7 @@ The ones without any notice, are considered done, but they will be subject to im
 20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
 21.  `<application>`, `<locale-config>`, `<default-locale>`, `<resource-bundle>`,` <base-name>`, `<h:outputText value="#{bundle['title']}"/>`
 22. `<servlet>`, `<init-param>`, `<param-name>`, `<param-value>`, `ServletConfig`, `ServletContext`
+23. `@AccessTimeout(0)`, `@AccessTimeout(-1)`, `@AccessTimeout(1)`
 
 ---
 
