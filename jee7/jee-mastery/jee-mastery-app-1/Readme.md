@@ -30,6 +30,7 @@ Topics covered:
 23. `@AccessTimeout(0)`, `@AccessTimeout(-1)`, `@AccessTimeout(1)`
 24. `ManagedExecutorService`, `submit`
 25. `@WebServlet`, `<%@ page isErrorPage = "true" %>`, `<error-page>`, `<exception-type>`, `<location>`, `<error-code>`
+26. `setMaxAge`, `Cookie`, `setMaxAge(0)`, `setMaxAge(-1)`, `setMaxAge(5)`, `setMaxAge(10)`
 
 ## Extra notes
 
@@ -61,6 +62,8 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [Faith no More](https://en.wikipedia.org/wiki/Faith_No_More)
+-   [Easy (Commodores song)](https://en.wikipedia.org/wiki/Easy_(Commodores_song))
 -   [What is isErrorPage attribute in JSP?](https://www.tutorialspoint.com/what-is-iserrorpage-attribute-in-jsp)
 -   [Error Handler Servlet: how to get exception cause](https://stackoverflow.com/questions/4207586/error-handler-servlet-how-to-get-exception-cause)
 -   [Same Love](https://en.wikipedia.org/wiki/Same_Love)
@@ -206,6 +209,11 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
       <a title="La Prohibida - Baloncesto" href="https://www.youtube.com/watch?v=HSzekat1ajU">
      <img 
           src="https://img.youtube.com/vi/HSzekat1ajU/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Katy Perry - I Kissed a Girl" href="https://www.youtube.com/watch?v=tAp9BKosZXs">
+     <img 
+          src="https://img.youtube.com/vi/tAp9BKosZXs/0.jpg" 
           style="width:10%;">
       </a>
 </div>
