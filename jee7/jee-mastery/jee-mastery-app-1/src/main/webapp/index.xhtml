@@ -17,6 +17,7 @@
 </h:head>
 
 <h:body>
+
     <h1>🏳️‍🌈 PRIDE Edition I 🏳️‍🌈</h1>
 
     <table border="1" bordercolor="#000000">
@@ -132,6 +133,16 @@
             </td>
         </tr>
         <tr>
+            <td>
+                <h2>Sending Binary and String messages via Javascriot. Check your Logs!</h2>
+                <p><button onclick="wsocket.send('This is a String WOW!');">Send String Wow!</button></p>
+                <p><button onclick="wsocket.send(toBinary('This is a binary WOW!'));">Send a Binary Wow!</button></p>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
             <td colspan="2">
                 <h2>Redirect</h2>
                 <h:form>
@@ -140,5 +151,28 @@
             </td>
         </tr>
     </table>
+    <script>
+        var wsocket;
+
+        function connect() {
+            wsocket = new WebSocket("ws://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/lyricsreceiver");
+            wsocket.onmessage = onMessage;
+        }
+
+        function onMessage(evt) {
+            document.getElementById("webSocketResult1Id").innerHTML = evt.data
+        }
+
+        function toBinary(string) {
+            const codeUnits = new Uint16Array(string.length);
+            for (let i = 0; i &lt; codeUnits.length; i++) {
+                codeUnits[i] = string.charCodeAt(i);
+            }
+            // return String.fromCharCode(...new Uint8Array(codeUnits.buffer));
+            return codeUnits;
+        }
+
+        window.addEventListener("load", connect, false);
+    </script>
 </h:body>
 </html>

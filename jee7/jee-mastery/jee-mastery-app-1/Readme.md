@@ -32,6 +32,13 @@ Topics covered:
 25. `@WebServlet`, `<%@ page isErrorPage = "true" %>`, `<error-page>`, `<exception-type>`, `<location>`, `<error-code>`
 26. `setMaxAge`, `Cookie`, `setMaxAge(0)`, `setMaxAge(-1)`, `setMaxAge(5)`, `setMaxAge(10)`
 27. `AttributeConverter`, `@TransactionManagement`, `@Stateless`, `@SessionScoped`, `persist`, `@Entityt`, `@Column`, `@Id`
+28. Javascript `Uint16Array`, `@ServerEndpoint`, `@OnMessage`, `String`, `ByteBuffer`, `PongMessage`
+
+### WebSockets
+
+```bash
+curl --include --no-buffer --header "Connection: Upgrade" --header "Upgrade: websocket" --header "Host: localhost:8080" --header "Origin: http://localhost:8080" --header "Sec-WebSocket-Key: SomeKey==" --header "Sec-WebSocket-Version: 13" http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/lyricsreceiver
+```
 
 ## Extra notes
 
@@ -221,6 +228,7 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [Using the WebSocket API in a Web Application](https://netbeans.apache.org/kb/docs/javaee/maven-websocketapi.html#_sending_binary_data_to_the_endpoint)
 -   [ServletConfig Interface](https://www.javatpoint.com/servletconfig)
 -   [JSTL Format Tag fmt:setLocale Example](https://www.codejava.net/java-ee/jstl/jstl-format-tag-setlocale)
 -   [JViews JSF applications globalization and multicultural support](https://help.perforce.com/visualization/jviews/8.10/jviews-charts810/doc/html/en-US/Content/Visualization/Documentation/JViews/JViews_Charts/_pubskel/ps_usrwebcharts476.html)
