@@ -31,6 +31,7 @@ Topics covered:
 24. `ManagedExecutorService`, `submit`
 25. `@WebServlet`, `<%@ page isErrorPage = "true" %>`, `<error-page>`, `<exception-type>`, `<location>`, `<error-code>`
 26. `setMaxAge`, `Cookie`, `setMaxAge(0)`, `setMaxAge(-1)`, `setMaxAge(5)`, `setMaxAge(10)`
+27. `AttributeConverter`, `@TransactionManagement`, `@Stateless`, `@SessionScoped`, `persist`, `@Entityt`, `@Column`, `@Id`
 
 ## Extra notes
 
