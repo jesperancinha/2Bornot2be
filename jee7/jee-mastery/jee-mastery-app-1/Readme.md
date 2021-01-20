@@ -29,6 +29,7 @@ Topics covered:
 22. `<servlet>`, `<init-param>`, `<param-name>`, `<param-value>`, `ServletConfig`, `ServletContext`
 23. `@AccessTimeout(0)`, `@AccessTimeout(-1)`, `@AccessTimeout(1)`
 24. `ManagedExecutorService`, `submit`
+25. `@WebServlet`, `<%@ page isErrorPage = "true" %>`, `<error-page>`, `<exception-type>`, `<location>`, `<error-code>`
 
 ## Extra notes
 
@@ -60,6 +61,8 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [What is isErrorPage attribute in JSP?](https://www.tutorialspoint.com/what-is-iserrorpage-attribute-in-jsp)
+-   [Error Handler Servlet: how to get exception cause](https://stackoverflow.com/questions/4207586/error-handler-servlet-how-to-get-exception-cause)
 -   [Same Love](https://en.wikipedia.org/wiki/Same_Love)
 -   [The Heist (album)](https://en.wikipedia.org/wiki/The_Heist_(album))
 -   [Melissa Etheridge discography](https://en.wikipedia.org/wiki/Melissa_Etheridge_discography)

@@ -38,34 +38,6 @@ The ones without any notice, are considered done, but they will be subject to im
 
 ### [jee-mastery-app-1](./jee-mastery-app-1) - PRIDE Edition 1 🏳️‍🌈
 
-#### Subjects:
-
----
-1. `<h:panelGrid`, `<c:forEach`, `<h:outputLabel`, `<h:inputText`
-2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
-3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
-4. `@Inject`, `setter`, `getter`
-5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
-6. `ApplicationException`, `interface`, `rollback`, `@SessionScoped`, `@Named`,
-7. `@TransactionAttribute`,  `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
-8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
-9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
-10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
-11. `JsonGenerator`, `Json`. `createGenerator`, `JsonArrayBuilder`, `createArrayBuilder`, `createObjectBuilder`
-12. `@GET`, `@HEAD`
-13. `Serializable`, ` @TransactionAttribute`, `TransactionAttributeType.REQUIRES_NEW`, `@IdClass`, `@Id`, `@Identity`, `@Column`, `@NonNull`
-14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
-15. `createDurableConsumer`, `receive`, `ObjectMessage`
-16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
-17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
-18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
-19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
-20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
-21.  `<application>`, `<locale-config>`, `<default-locale>`, `<resource-bundle>`,` <base-name>`, `<h:outputText value="#{bundle['title']}"/>`
-22. `<servlet>`, `<init-param>`, `<param-name>`, `<param-value>`, `ServletConfig`, `ServletContext`
-23. `@AccessTimeout(0)`, `@AccessTimeout(-1)`, `@AccessTimeout(1)`
-24. `ManagedExecutorService`, `submit`
-
 ---
 
 ## Extra notes
