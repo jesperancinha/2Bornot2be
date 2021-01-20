@@ -28,6 +28,7 @@ Topics covered:
 21. `<application>`, `<locale-config>`, `<default-locale>`, `<resource-bundle>`,` <base-name>`, `<h:outputText value="#{bundle['title']}"/>`
 22. `<servlet>`, `<init-param>`, `<param-name>`, `<param-value>`, `ServletConfig`, `ServletContext`
 23. `@AccessTimeout(0)`, `@AccessTimeout(-1)`, `@AccessTimeout(1)`
+24. `ManagedExecutorService`, `submit`
 
 ## Extra notes
 
@@ -59,6 +60,8 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [Same Love](https://en.wikipedia.org/wiki/Same_Love)
+-   [The Heist (album)](https://en.wikipedia.org/wiki/The_Heist_(album))
 -   [Melissa Etheridge discography](https://en.wikipedia.org/wiki/Melissa_Etheridge_discography)
 -   [Melissa Etheridge](https://en.wikipedia.org/wiki/Melissa_Etheridge)
 -   [Whaler (album)](https://en.wikipedia.org/wiki/Whaler_(album))

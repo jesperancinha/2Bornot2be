@@ -99,6 +99,7 @@ public class AccessTimoutServerBean {
 
         accessImmediateTimeoutExecutorService.shutdown();
         accessImmediateTimeoutExecutorService.awaitTermination(2, TimeUnit.SECONDS);
+
     }
 
     public String getResult() {
