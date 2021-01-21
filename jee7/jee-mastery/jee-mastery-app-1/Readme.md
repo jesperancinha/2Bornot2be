@@ -34,6 +34,7 @@ Topics covered:
 27. `AttributeConverter`, `@TransactionManagement`, `@Stateless`, `@SessionScoped`, `persist`, `@Entityt`, `@Column`, `@Id`
 28. `Javascript` `Uint16Array`, `@ServerEndpoint`, `@OnMessage`, `String`, `ByteBuffer`, `PongMessage`
 29. `@HttpMethodConstraint`, `@ServletSecurity`, `httpMethodConstraints`, `rolesAllowed`, `j_security_check`, `j_username`, `j_password`, `@WebServlet`, `@Override`, `doPost`, `doGet`
+30. `@Version`, `LockModeType.PESSIMISTIC_WRITE`. `LockModeType.OPTIMISTIC`, `LockModeType.NONE`, `persist`
 
 ### WebSockets
 
@@ -71,10 +72,11 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [Last Night (Moby album)](https://en.wikipedia.org/wiki/Last_Night_(Moby_album))
+-   [Disco Lies](https://en.wikipedia.org/wiki/Disco_Lies)
+-   [Hercules and Love Affair](https://en.wikipedia.org/wiki/Hercules_and_Love_Affair)
 -   [Faith no More](https://en.wikipedia.org/wiki/Faith_No_More)
 -   [Easy (Commodores song)](https://en.wikipedia.org/wiki/Easy_(Commodores_song))
--   [What is isErrorPage attribute in JSP?](https://www.tutorialspoint.com/what-is-iserrorpage-attribute-in-jsp)
--   [Error Handler Servlet: how to get exception cause](https://stackoverflow.com/questions/4207586/error-handler-servlet-how-to-get-exception-cause)
 -   [Same Love](https://en.wikipedia.org/wiki/Same_Love)
 -   [The Heist (album)](https://en.wikipedia.org/wiki/The_Heist_(album))
 -   [Melissa Etheridge discography](https://en.wikipedia.org/wiki/Melissa_Etheridge_discography)
@@ -229,6 +231,16 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [42.2 Lock Modes](https://docs.oracle.com/javaee/7/tutorial/persistence-locking002.htm)
+-   [Locking in JPA](https://www.objectdb.com/java/jpa/persistence/lock)
+-   [How does LockModeType.OPTIMISTIC work in JPA and Hibernate](https://vladmihalcea.com/hibernate-locking-patterns-how-does-optimistic-lock-mode-work/)
+-   [JSR 338: JavaTM Persistence API, Version 2.1](https://download.oracle.com/otn-pub/jcp/persistence-2_1-fr-eval-spec/JavaPersistence.pdf?AuthParam=1611180403_428ca418c9306d162b6b4194d54123fe)
+-   [Difference between Shared Lock and Exclusive Lock](https://www.geeksforgeeks.org/difference-between-shared-lock-and-exclusive-lock/#:~:text=Exclusive%20Lock%20(X)%20%3A&text=Also%20called%20write%20lock.,one%20transaction%20at%20a%20time.)
+-   [Optimistic vs. Pessimistic locking](https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking)
+-   [What is isErrorPage attribute in JSP?](https://www.tutorialspoint.com/what-is-iserrorpage-attribute-in-jsp)
+-   [Error Handler Servlet: how to get exception cause](https://stackoverflow.com/questions/4207586/error-handler-servlet-how-to-get-exception-cause)
+-   [Optimistic locking and automatic retry](https://enterprisecraftsmanship.com/posts/optimistic-locking-automatic-retry/#:~:text=Pessimistic%20locking%20is%20when%20you,to%20proceed%20with%20the%20update.)
+-   [Lock Modes](https://docs.oracle.com/javaee/6/tutorial/doc/gkjiu.html)
 -   [Using the WebSocket API in a Web Application](https://netbeans.apache.org/kb/docs/javaee/maven-websocketapi.html#_sending_binary_data_to_the_endpoint)
 -   [ServletConfig Interface](https://www.javatpoint.com/servletconfig)
 -   [JSTL Format Tag fmt:setLocale Example](https://www.codejava.net/java-ee/jstl/jstl-format-tag-setlocale)

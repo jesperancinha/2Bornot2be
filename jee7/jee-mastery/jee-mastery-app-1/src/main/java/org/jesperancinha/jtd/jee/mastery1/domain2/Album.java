@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import javax.persistence.Version;
 
 @Entity(name = "album")
 @IdClass(AlbumCompositeKey.class)
@@ -35,6 +36,8 @@ public class Album {
     @Column
     private Long year;
 
+    @Version
+    private long version;
 
     public String getLyric1() {
         return lyric1;
