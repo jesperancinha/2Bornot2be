@@ -37,7 +37,7 @@ The ones without any notice, are considered done, but they will be subject to im
 ## Mastery Apps
 
 ### [jee-mastery-app-1](./jee-mastery-app-1) - PRIDE Edition 1 🏳️‍🌈
-### [jee-mastery-app-2](./jee-mastery-app-2) - Chorus and Arias
+### [jee-mastery-app-2](./jee-mastery-app-2) - Chorus and Arias 🎶 🔉
 
 ---
 

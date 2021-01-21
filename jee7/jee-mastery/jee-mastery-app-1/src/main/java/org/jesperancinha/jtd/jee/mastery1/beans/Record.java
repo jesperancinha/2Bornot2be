@@ -1,6 +1,8 @@
 package org.jesperancinha.jtd.jee.mastery1.beans;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 public class Record implements Serializable {
     private String name;
@@ -51,5 +53,31 @@ public class Record implements Serializable {
                 ", year='" + year + '\'' +
                 ", artist='" + artist + '\'' +
                 '}';
+    }
+
+    public static List<Record> allRecordExamples() {
+        final var record0 = new Record();
+        record0.setName("Lila Fadista");
+        record0.setArtist("Fado Bicha");
+        record0.setYear("2019");
+        record0.setType("LP");
+        final var record1 = new Record();
+        record1.setArtist("Divine");
+        record1.setName("The story so far");
+        record1.setType("LP");
+        record1.setYear("1984");
+        final var record2 = new Record();
+        record2.setArtist("Helene Fischer");
+        record2.setName("Farbenspiel");
+        record2.setType("LP");
+        record2.setYear("2013");
+        final var record3 = new Record();
+        record3.setArtist("Dead or Alive");
+        record3.setName("Youthquake");
+        record3.setType("LP");
+        record3.setYear("1985");
+        final List<Record> records = Arrays.asList(
+                record0, record1, record2, record3);
+        return records;
     }
 }

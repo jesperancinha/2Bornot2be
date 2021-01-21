@@ -36,6 +36,7 @@ Topics covered:
 29. `@HttpMethodConstraint`, `@ServletSecurity`, `httpMethodConstraints`, `rolesAllowed`, `j_security_check`, `j_username`, `j_password`, `@WebServlet`, `@Override`, `doPost`, `doGet`
 30. `@Version`, `LockModeType.PESSIMISTIC_WRITE`. `LockModeType.OPTIMISTIC`, `LockModeType.NONE`, `persist`
 31. `<h:commandButton`, `actionListener`, `action`, `@Named`, `@SessionScoped`
+32. `@ApplicationScoped`, `@Named`, `@RequestScoped`, `@SessionScoped`, `@ManagedBean`, `@ViewScoped`, `@Inject`
 
 ### WebSockets
 
@@ -233,6 +234,7 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [Difference between View and Request scope in managed beans](https://stackoverflow.com/questions/6025998/difference-between-view-and-request-scope-in-managed-beans)
 -   [42.2 Lock Modes](https://docs.oracle.com/javaee/7/tutorial/persistence-locking002.htm)
 -   [Locking in JPA](https://www.objectdb.com/java/jpa/persistence/lock)
 -   [How does LockModeType.OPTIMISTIC work in JPA and Hibernate](https://vladmihalcea.com/hibernate-locking-patterns-how-does-optimistic-lock-mode-work/)
