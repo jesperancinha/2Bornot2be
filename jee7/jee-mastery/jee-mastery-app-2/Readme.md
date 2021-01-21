@@ -1,46 +1,14 @@
-# jee-mastery-app-1
+# jee-mastery-app-2
 
 ## Exercise
 
-In this exercise we will go through music that one way or the other, has been involved in PRIDE events.
-Topics covered:
+In this exercise we will go through music related to the power of Chorus and Arias.
 
-1. `<h:panelGrid`, `<c:forEach`, `<h:outputLabel`, `<h:inputText`
-2. `@SessionScoped`, `@Named`, `@Local`, `@LocalBean`, `@Stateless`
-3. `@Transactional`, `@RequestScoped`, `@Dependent`, `SessionScoped`, `Serializable`
-4. `@Inject`, `setter`, `getter`
-5. `@MessageDriven`, ` @ActivationConfigProperty`, `acknowledgeMode`, `destinationType`, `destination`, `Topic`
-6. `ApplicationException`, `interface`, `rollback`, `@SessionScoped`, `@Named`,
-7. `@TransactionAttribute`, `TransactionAttributeType.REQUIRED`, `TransactionManagementType.CONTAINER`, `@TransactionManagement`
-8. `ExternalContext`, `redirect`, `FacesContext`, `getCurrentInstance`
-9. `jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *`
-10. `xmlns="http://www.w3.org/1999/xhtml"`, `xmlns:h="http://java.sun.com/jsf/html`, `xmlns:ui="http://java.sun.com/jsf/facelets"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"` `xmlns:f="http://xmlns.jcp.org/jsf/core"` `xmlns:jsf="http://xmlns.jcp.org/jsf"`
-11. `JsonGenerator`, `Json`. `createGenerator`, `JsonArrayBuilder`, `createArrayBuilder`, `createObjectBuilder`
-12. `@GET`, `@HEAD`
-13. `Serializable`, ` @TransactionAttribute`, `TransactionAttributeType.REQUIRES_NEW`, `@IdClass`, `@Id`, `@Identity`, `@Column`, `@NonNull`
-14. `@Embeddable`, `@Entity`, `@Table`, `@Embedded`, `@EmbeddedId`, `@IdClass`
-15. `createDurableConsumer`, `receive`, `ObjectMessage`
-16. `@Singleton`,  `@Schedule`, `second`, `minute`, `hour`, `month`, `dayOfMonth`, `dayOfWeek`, `year`, `timezone`, `info`, `persistent`
-17. `HttpServletRequest`, `HttpServletResponse`, `@WebServlet`, `service`, `doGet`
-18. `http://java.sun.com/jsp/jstl/sql`, `<sql:setDataSource`, `<sql:query`
-19. `JspWriterImpl`, `out`, `<% %>`, `<%= %>`
-20. `<f:view locale="de_DE">`, `<f:loadBundle basename="messages" var="msg"/>`
-21. `<application>`, `<locale-config>`, `<default-locale>`, `<resource-bundle>`,` <base-name>`, `<h:outputText value="#{bundle['title']}"/>`
-22. `<servlet>`, `<init-param>`, `<param-name>`, `<param-value>`, `ServletConfig`, `ServletContext`
-23. `@AccessTimeout(0)`, `@AccessTimeout(-1)`, `@AccessTimeout(1)`
-24. `ManagedExecutorService`, `submit`
-25. `@WebServlet`, `<%@ page isErrorPage = "true" %>`, `<error-page>`, `<exception-type>`, `<location>`, `<error-code>`
-26. `setMaxAge`, `Cookie`, `setMaxAge(0)`, `setMaxAge(-1)`, `setMaxAge(5)`, `setMaxAge(10)`
-27. `AttributeConverter`, `@TransactionManagement`, `@Stateless`, `@SessionScoped`, `persist`, `@Entityt`, `@Column`, `@Id`
-28. `Javascript` `Uint16Array`, `@ServerEndpoint`, `@OnMessage`, `String`, `ByteBuffer`, `PongMessage`
-29. `@HttpMethodConstraint`, `@ServletSecurity`, `httpMethodConstraints`, `rolesAllowed`, `j_security_check`, `j_username`, `j_password`, `@WebServlet`, `@Override`, `doPost`, `doGet`
-30. `@Version`, `LockModeType.PESSIMISTIC_WRITE`. `LockModeType.OPTIMISTIC`, `LockModeType.NONE`, `persist`
-31. `<h:commandButton`, `actionListener`, `action`, `@Named`, `@SessionScoped`
+Topics covered:
 
 ### WebSockets
 
 ```bash
-curl --include --no-buffer --header "Connection: Upgrade" --header "Upgrade: websocket" --header "Host: localhost:8080" --header "Origin: http://localhost:8080" --header "Sec-WebSocket-Key: SomeKey==" --header "Sec-WebSocket-Version: 13" http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/lyricsreceiver
 ```
 
 ## Extra notes
@@ -50,183 +18,27 @@ curl --include --no-buffer --header "Connection: Upgrade" --header "Upgrade: web
 ## Create WAR file with the jar command
 
 ```bash
-cd target/jee-mastery-app-1-1.0.0-SNAPSHOT
-jar -cvf jee-mastery-app-1-1.0.0-SNAPSHOT.war *
+cd target/jee-mastery-app-1-2.0.0-SNAPSHOT
+jar -cvf jee-mastery-app-1-2.0.0-SNAPSHOT.war *
 ls WEB-INF/lib
 ```
 
 ## Endpoints
 
-1. http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/
 
 ## Curl requests
 
-1. O namorico do André
-
-```bash
-curl -X HEAD http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
-curl -X HEAD -I http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
-curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands
-curl -X HEAD http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands/head
-curl -X HEAD -I http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands/head
-curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/bands/head
-```
 ## Context References
 
--   [Dorian (Spanish band)](https://en.wikipedia.org/wiki/Dorian_(Spanish_band))
--   [Last Night (Moby album)](https://en.wikipedia.org/wiki/Last_Night_(Moby_album))
--   [Disco Lies](https://en.wikipedia.org/wiki/Disco_Lies)
--   [Hercules and Love Affair](https://en.wikipedia.org/wiki/Hercules_and_Love_Affair)
--   [Faith no More](https://en.wikipedia.org/wiki/Faith_No_More)
--   [Easy (Commodores song)](https://en.wikipedia.org/wiki/Easy_(Commodores_song))
--   [Same Love](https://en.wikipedia.org/wiki/Same_Love)
--   [The Heist (album)](https://en.wikipedia.org/wiki/The_Heist_(album))
--   [Melissa Etheridge discography](https://en.wikipedia.org/wiki/Melissa_Etheridge_discography)
--   [Melissa Etheridge](https://en.wikipedia.org/wiki/Melissa_Etheridge)
--   [Whaler (album)](https://en.wikipedia.org/wiki/Whaler_(album))
--   [Right Beside You (Sophie B. Hawkins song)](https://en.wikipedia.org/wiki/Right_Beside_You_(Sophie_B._Hawkins_song))
--   [Lila Fadista - Fado Bicha](https://www.qobuz.com/ie-en/album/lila-fadista-fado-bicha/l390otcj1c1db)
--   [Fado Bicha](https://www.facebook.com/fadobicha/)
--   [You Spin Me Round (Like a Record)](https://en.wikipedia.org/wiki/You_Spin_Me_Round_(Like_a_Record))
--   [Farbenspiel](https://en.wikipedia.org/wiki/Farbenspiel)
--   [Atemlos durch die Nacht](https://en.wikipedia.org/wiki/Atemlos_durch_die_Nacht)
--   [Divine - You think you're a man](https://en.wikipedia.org/wiki/You_Think_You%27re_a_Man)
--   [The Story So Far (Divine album)](https://en.wikipedia.org/wiki/The_Story_So_Far_(Divine_album))
--   [Dead or Alive discography](https://en.wikipedia.org/wiki/Dead_or_Alive_discography)
-
 <div align="center">
-      <a title="Melissa Etheridge - Angels Would Fall" href="https://www.youtube.com/watch?v=eC8FfGvCFho">
+      <a title="Marina - Handmade Heaven" href="https://www.youtube.com/watch?v=GiOGlYjKgX8">
      <img 
-          src="https://img.youtube.com/vi/eC8FfGvCFho/0.jpg" 
+          src="https://img.youtube.com/vi/GiOGlYjKgX8/0.jpg" 
           style="width:10%;">
       </a>
-      <a title="Sophie B. Hawkins - Right Beside You" href="https://www.youtube.com/watch?v=VDJSOAYEzPA">
+      <a title="Josh Groban - You Raise Me Up" href="https://www.youtube.com/watch?v=aJxrX42WcjQ">
      <img 
-          src="https://img.youtube.com/vi/VDJSOAYEzPA/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Divine - You Think You're a Man" href="https://www.youtube.com/watch?v=063RGou-P_8">
-     <img 
-          src="https://img.youtube.com/vi/063RGou-P_8/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Full Frontal - You Think You're a Man" href="https://www.youtube.com/watch?v=Esxotxomw8s">
-     <img 
-          src="https://img.youtube.com/vi/Esxotxomw8s/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Donna Summer - Could it be magic" href="https://www.youtube.com/watch?v=3G8FJPdhSOY">
-     <img 
-          src="https://img.youtube.com/vi/3G8FJPdhSOY/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Helene Fischer - Atemlos durch die Nacht" href="https://www.youtube.com/watch?v=haECT-SerHk">
-     <img 
-          src="https://img.youtube.com/vi/haECT-SerHk/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Dead or Alive - You Spin Me Round (Like a Record)" href="https://www.youtube.com/watch?v=PGNiXGX2nLU">
-     <img 
-          src="https://img.youtube.com/vi/PGNiXGX2nLU/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Moby - Disco Lies" href="https://www.youtube.com/watch?v=RjJYznmSjkg">
-     <img 
-          src="https://img.youtube.com/vi/RjJYznmSjkg/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Scissor Sisters - Let's have a Kiki" href="https://www.youtube.com/watch?v=eGCD4xb-Tr8">
-     <img 
-          src="https://img.youtube.com/vi/eGCD4xb-Tr8/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="NERVO feat. Kylie Minogue, Jake Shears & Nile Rodgers - The other boys" href="https://www.youtube.com/watch?v=N62Edu_WIhs">
-     <img 
-          src="https://img.youtube.com/vi/N62Edu_WIhs/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Kylie Minogue - All the lovers" href="https://www.youtube.com/watch?v=frv6FOt1BNI">
-     <img 
-          src="https://img.youtube.com/vi/frv6FOt1BNI/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="St. Vincent - Fast Slow Disco" href="https://www.youtube.com/watch?v=dNm0b2SCXxY">
-     <img 
-          src="https://img.youtube.com/vi/dNm0b2SCXxY/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Hercules & Love Affair - Do You Feel The Same?" href="https://www.youtube.com/watch?v=JozUoRIbsEE">
-     <img 
-          src="https://img.youtube.com/vi/JozUoRIbsEE/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Dorian & Pimp Flaco - Dual" href="https://www.youtube.com/watch?v=TBZ52zCD0zk">
-     <img 
-          src="https://img.youtube.com/vi/TBZ52zCD0zk/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Macklemore & Ryan Lewis, Mary Lambert - Same Love" href="https://www.youtube.com/watch?v=hlVBg7_08n0">
-     <img 
-          src="https://img.youtube.com/vi/hlVBg7_08n0/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="P!nk - Raise Your Glass" href="https://www.youtube.com/watch?v=XjVNlG5cZyQ">
-     <img 
-          src="https://img.youtube.com/vi/XjVNlG5cZyQ/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-<div align="center">
-      <a title="Fado Bicha - O Namorico do André" href="https://www.youtube.com/watch?v=GrZv7FJGUKE">
-     <img 
-          src="https://img.youtube.com/vi/GrZv7FJGUKE/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="In-Grid - Tu Es Foutu (LAMUR)" href="https://www.youtube.com/watch?v=MZqlhQm7hv4">
-     <img 
-          src="https://img.youtube.com/vi/MZqlhQm7hv4/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="Faith no more - Easy" href="https://www.youtube.com/watch?v=vPzDTfIb0DU">
-     <img 
-          src="https://img.youtube.com/vi/vPzDTfIb0DU/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="The Young Professionals feat Uriel Yekutiel - D.I.S.C.O." href="https://www.youtube.com/watch?v=VcZnRz7WujA">
-     <img 
-          src="https://img.youtube.com/vi/VcZnRz7WujA/0.jpg" 
-          style="width:10%;">
-      </a>
-</div>
-
-<div align="center">
-      <a title="La Prohibida - Baloncesto" href="https://www.youtube.com/watch?v=HSzekat1ajU">
-     <img 
-          src="https://img.youtube.com/vi/HSzekat1ajU/0.jpg" 
-          style="width:10%;">
-      </a>
-      <a title="Katy Perry - I Kissed a Girl" href="https://www.youtube.com/watch?v=tAp9BKosZXs">
-     <img 
-          src="https://img.youtube.com/vi/tAp9BKosZXs/0.jpg" 
+          src="https://img.youtube.com/vi/aJxrX42WcjQ/0.jpg" 
           style="width:10%;">
       </a>
 </div>
