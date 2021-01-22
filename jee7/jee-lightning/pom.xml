@@ -12,6 +12,7 @@
     <artifactId>jee-lightning</artifactId>
     <modules>
         <module>jee-lightning-1</module>
+        <module>jee-lightning-2</module>
     </modules>
 
     <properties>

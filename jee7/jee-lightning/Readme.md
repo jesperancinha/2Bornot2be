@@ -1,4 +1,4 @@
-# jee7 Test Drives
+# jee-lightning
 
 ---
 
@@ -7,73 +7,18 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
-
 ## Introduction
 
-This is a set of study modules that I'm using to study JEE7.
-Feel free to use these materials in your studies.
-These modules can be used for education purposes or for certain types of exames like the [1z0-900](https://education.oracle.com/java-se-11-developer/pexam_1Z0-900)
+Fast track easy to deploy modules
 
--   [JEE Crums](jee-crums) - 🍞 A set of modules with quick learning  / fast track exercises without context
--   [JEE Applications](jee-apps) - ⚙️ A set of applications written in JEE using diffeen servers like Glassfish and Weblogic
-    - [jee-apps-triad-1](jee-apps/jee-apps-triad-1) - Triad 1
-        - [jee-app-1-wildfly](jee-apps/jee-apps-triad-1/jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
-        - [jee-app-2-wildfly](jee-apps/jee-apps-triad-1/jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
-        - [jee-app-3-wildfly](jee-apps/jee-apps-triad-1/jee-app-3-wildfly) - A lesson on teeth health and the odd cases - Java 11
-    - [jee-apps-triad-2](jee-apps/jee-apps-triad-2) - Triad 2
-        - [jee-app-2-1-wildfly](jee-apps/jee-apps-triad-2/jee-app-2-1-wildfly) - Boy Bands in the 90's - Java 11
-        - [jee-app-2-2-wildfly](jee-apps/jee-apps-triad-2/jee-app-2-2-wildfly) - Girl Bands - Java 11
-        - [jee-app-2-3-wildfly](jee-apps/jee-apps-triad-2/jee-app-2-3-wildfly) - Soul Music - Java 11
-    - [jee-apps-quad-1](jee-apps/jee-apps-quad-1) - Quad 1
-        - [jee-app-3-1-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-1-wildfly) - History of Portugal 🇵🇹 - Java 11
-        - [jee-app-3-2-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain 🇪🇸 - Java 11
-        - [jee-app-3-3-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-3-wildfly) - History of The Netherlands 🇳🇱 - Java 11
-        - [jee-app-3-4-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-4-wildfly) - History of the United Kingdom 🇬🇧 - Java 11
--   [JEE Mastery Applications](jee-mastery) - ⚔️ A set of modules with a very deep in-depth approach to architecture
-    - [jee-mastery-app-1](jee-mastery/jee-mastery-app-1) - PRIDE Edition 1 🏳️‍🌈
--   [JEE Lightning](jee-lightning) - ⚡️ Fast track easy to deploy modules
-    - [jee-lightning-1](jee-lightning/jee-lightning-1) - No web.xml
-    - [jee-lightning-2](jee-lightning/jee-lightning-2) - SOAP bare minimal
+## References
 
-I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like.
-For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java).
-In these modules I am using <b>java version 8.0.242.hs-adpt</b>. You can try other java 8 versions. I cannot guarantee that you'll be able to execute 100% of the examples though.
-You can also try to use a version of Java SE 7, but I'm almost 100% sure that none of the modules will work as I'll be using lamdas for the code.
-
-<b>NOTE: JEE7 has nothing to do with the actual Java SE version being used. I chose Java 8 in a few projects for compatibility reasons. You can also find apps developed with Java 11 on top of JEE7.</b>
-
-This repo is here because, amongst other reasons, JEE is still pretty much very relevant.
-Alternatives to a [JEE architecture](https://www.oracle.com/java/technologies/java-ee-glance.html), like the [Spring Framework](https://spring.io/) facilitate another way to solve enterprise problems.
-Both are very good architectures, and they differ in their approach.
-This means that many companies are using either one or the other.
-[JEE 7 specifically](https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7), is the only way at the moment to get certified via an [Oracle exam](https://education.oracle.com/java-ee-7-application-developer/pexam_1Z0-900).
-At the same time, this is still a very popular framework to be used.
-[SOAP services and technologies](https://en.wikipedia.org/wiki/SOAP) are also still very much in use these days by many companies and therefore an understanding on how to do this in Java is still very much a necessity.
-
-<i>João Esperancinha, 31st of December 2020</i>
-
----
-
-# Important Specs
-
-1. Java API for WebSocket 1.1
-2. JavaServer Faces (JSF) 2.2
-3. JavaServer Pages (JSP) 2.3
-4. Java API for RESTful Services (JAX-RS) 2.0
-5. Java API for JSON Processing (JSON-P) 1.0
-6. Expression Language (EL) 3.0 
-7. Java Authentication Service Provider Interface for Containers (JASPIC) 1.1
-
-<b style="color: green">Apache Tomcat 9.0.41 and Wildfly 16.0 seem to follow these standards. This is why I am using them.</b>
-
-<b style="color: red">Glassfish for Java EE 7 unfortunately only supports Java 6 and Java 8 in later versions. Newer versions are ready for JEE 8 and above. We will be using Java 11 in our test modules</b>
-
-# References
-
+-   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
+-   [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
+-   [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
 -   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
 -   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
 -   [Pluralsight](https://www.pluralsight.com/)

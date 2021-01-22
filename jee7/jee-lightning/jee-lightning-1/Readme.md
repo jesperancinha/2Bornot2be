@@ -14,6 +14,10 @@
 
 Trying the basic use with no setup files like web.xml.
 
+## Endpoint
+
+1. http://localhost:8080/jee-lightning-1-1.0.0-SNAPSHOT/
+
 ## References
 
 -   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
