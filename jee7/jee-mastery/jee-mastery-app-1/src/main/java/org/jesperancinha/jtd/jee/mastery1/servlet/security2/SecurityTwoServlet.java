@@ -1,5 +1,8 @@
 package org.jesperancinha.jtd.jee.mastery1.servlet.security2;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.HtmlPWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.HttpMethodConstraint;
 import javax.servlet.annotation.ServletSecurity;
@@ -15,8 +18,10 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 
 @WebServlet("/security/two")
 @ServletSecurity(httpMethodConstraints = {
-        @HttpMethodConstraint(value = "GET", rolesAllowed = "Organizer"),
-        @HttpMethodConstraint(value = "POST", rolesAllowed = "Manager") })
+        @HttpMethodConstraint(value = "GET",
+                rolesAllowed = "Organizer"),
+        @HttpMethodConstraint(value = "POST",
+                rolesAllowed = "Manager")})
 public class SecurityTwoServlet extends HttpServlet {
 
     @Override
@@ -25,6 +30,7 @@ public class SecurityTwoServlet extends HttpServlet {
         BRIGHT_RED.printGenericTitleLn(text);
         final PrintWriter writer = resp.getWriter();
         writer.println(BRIGHT_RED.getPText(text));
+        ConsolerizerGraphs.printRainbowFlag(text, new HtmlPWriter(writer));
         writer.println(MAGENTA.getPText("<p><a href=\"../index.xhtml\">Back</a></p>"));
     }
 

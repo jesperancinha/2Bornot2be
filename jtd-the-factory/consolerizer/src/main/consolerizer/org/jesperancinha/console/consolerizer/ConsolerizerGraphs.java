@@ -22,26 +22,30 @@ public class ConsolerizerGraphs {
      * @param flagText The text to be placed at the center of the flag
      */
     public static void printRainbowFlag(String flagText) {
+        printRainbowFlag(flagText, new ConsolerizerConsoleWriter());
+
+    }
+    public static void printRainbowFlag(String flagText, ConsolerizerWriter consolerizerWriter) {
         int heightPerColorBar = (int) ((double) (Consolerizer.titleSpread) * 10d / 19d) / 6 / 4;
         heightPerColorBar = heightPerColorBar <= 0 ?
                 1 :
                 heightPerColorBar;
         final List<ConsolerizerColor> consoleRainbow = ConsolerizerColor.getConsoleRainbowEnumList();
-        final int ranbowColorSize = consoleRainbow.size();
-        final int height = ranbowColorSize * heightPerColorBar;
+        final int rainbowColorSize = consoleRainbow.size();
+        final int height = rainbowColorSize * heightPerColorBar;
         int iMiddle = height / 2;
         iMiddle = height % 2 == 0 ?
                 iMiddle - 1 :
                 iMiddle;
-        for (int i = 0, k = 0; i < ranbowColorSize; i++) {
-            Consolerizer.printColor(consoleRainbow.get(i));
+        for (int i = 0, k = 0; i < rainbowColorSize; i++) {
+            consolerizerWriter.printColor(consoleRainbow.get(i));
             for (int j = 0; j < heightPerColorBar; j++, k++) {
                 if (k == iMiddle || k == iMiddle + 1) {
-                    Consolerizer.printPrivateText(Consolerizer.createTitleLine(flagText, '*'));
+                    consolerizerWriter.printPrivateText(Consolerizer.createTitleLine(flagText, '*'));
                 } else {
-                    Consolerizer.printPrivateText("*".repeat(Consolerizer.titleSpread));
+                    consolerizerWriter.printPrivateText("*".repeat(Consolerizer.titleSpread));
                 }
-                Consolerizer.printNewLine();
+                consolerizerWriter.printNewLine();
             }
         }
     }

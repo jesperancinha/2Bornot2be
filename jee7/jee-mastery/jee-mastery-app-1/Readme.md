@@ -37,6 +37,7 @@ Topics covered:
 30. `@Version`, `LockModeType.PESSIMISTIC_WRITE`. `LockModeType.OPTIMISTIC`, `LockModeType.NONE`, `persist`
 31. `<h:commandButton`, `actionListener`, `action`, `@Named`, `@SessionScoped`
 32. `@ApplicationScoped`, `@Named`, `@RequestScoped`, `@SessionScoped`, `@ManagedBean`, `@ViewScoped`, `@Inject`
+33. `ReadListener`, `AsyncContext`. `HttpServletResponse`, `ServletInputStream`, `onDataAvailable`, `onAllDataRead`, `onError`, `setReadListener`, `getInputStream`
 
 ### WebSockets
 
@@ -234,6 +235,7 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [Demonstrating Async ReadListener / WriteListener processing](https://gist.github.com/joakime/1a77946248e5ff028f99)
 -   [Difference between View and Request scope in managed beans](https://stackoverflow.com/questions/6025998/difference-between-view-and-request-scope-in-managed-beans)
 -   [42.2 Lock Modes](https://docs.oracle.com/javaee/7/tutorial/persistence-locking002.htm)
 -   [Locking in JPA](https://www.objectdb.com/java/jpa/persistence/lock)

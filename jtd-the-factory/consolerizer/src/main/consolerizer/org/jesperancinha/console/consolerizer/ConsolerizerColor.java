@@ -10,7 +10,7 @@ public enum ConsolerizerColor {
     GREEN("00AA00", "\033[0;32m"),
     CYAN("00AAAA", "\033[0;36m"),
     RED("AA0000", "\033[0;31m"),
-    ORANGE("AA0000", "\u001b[38;5;208m"),
+    ORANGE("FFA500", "\u001b[38;5;208m"),
     MAGENTA("AA00AA", "\u001b[38;5;135m"),
     BROWN("AA5500", "\033[0;33m"),
     LIGHT_GREY("AAAAAA", "\033[0;37m"),
@@ -75,6 +75,11 @@ public enum ConsolerizerColor {
 
     public void printGenericTitleLn(Object text, Object... args) {
         colorManager.printGenericTitleLn(text, args);
+    }
+
+    synchronized
+    public void printSyncGenericTitleLn(Object text) {
+        colorManager.printGenericTitleLn(text);
     }
 
     public void printGenericTitleLn(Object text) {
