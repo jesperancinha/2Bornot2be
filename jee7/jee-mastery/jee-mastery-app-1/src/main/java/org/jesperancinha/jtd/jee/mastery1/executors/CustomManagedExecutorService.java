@@ -11,7 +11,7 @@ public abstract class CustomManagedExecutorService extends ThreadPoolExecutor im
     public CustomManagedExecutorService(int nThreads) {
         super(nThreads, nThreads,
                 0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>());
+                new LinkedBlockingQueue<>());
     }
 
     @Override

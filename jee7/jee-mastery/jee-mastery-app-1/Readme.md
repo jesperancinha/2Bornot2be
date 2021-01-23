@@ -39,6 +39,7 @@ Topics covered:
 32. `@ApplicationScoped`, `@Named`, `@RequestScoped`, `@SessionScoped`, `@ManagedBean`, `@ViewScoped`, `@Inject`
 33. `ReadListener`, `AsyncContext`. `HttpServletResponse`, `ServletInputStream`, `onDataAvailable`, `onAllDataRead`, `onError`, `setReadListener`, `getInputStream`
 34. `@ManagedProperty`, `@ManagedBean`, `navigation-rule`, `from-view-id`, `navigation-case`, `from-action`, `from-outcome`, `to-view-id`
+35. `ManagedTaskListener`, `ManagedExecutorService`, `ManagedTask`
 
 ### WebSockets
 

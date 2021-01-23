@@ -56,6 +56,11 @@ public enum ConsolerizerColor {
         colorManager.printGenericLn(text, args);
     }
 
+    synchronized
+    public void printSyncGenericLn(Object text, Object... args) {
+        colorManager.printGenericLn(text, args);
+    }
+
     public void printGenericLn(Object text) {
         colorManager.printGenericLn(text);
     }
