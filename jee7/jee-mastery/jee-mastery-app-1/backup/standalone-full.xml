@@ -454,6 +454,8 @@
                 <jms-topic name="LyricsTopic" entries="java:/jms/LyricsTopic"/>
                 <jms-topic name="RecordsTopic" entries="java:/jms/RecordsTopic"/>
                 <jms-topic name="RecordsDurableTopic" entries="java:/jms/RecordsDurableTopic"/>
+                <jms-queue name="TicketsQueue" entries="java:/jms/TicketsQueue"/>
+                <connection-factory name="TicketFactory" entries="java:/jms/TicketFactory" connectors="in-vm"/>
                 <connection-factory name="RecordsFactory" entries="java:/jms/RecordsFactory" connectors="in-vm"/>
                 <connection-factory name="RecordsDurableFactory" entries="java:/jms/RecordsDurableFactory" connectors="in-vm"/>
                 <connection-factory name="LyricsQueueFactory" entries="java:/jms/LyricsQueueFactory" connectors="in-vm"/>

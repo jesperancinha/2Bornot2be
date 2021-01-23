@@ -40,7 +40,8 @@ Topics covered:
 33. `ReadListener`, `AsyncContext`. `HttpServletResponse`, `ServletInputStream`, `onDataAvailable`, `onAllDataRead`, `onError`, `setReadListener`, `getInputStream`
 34. `@ManagedProperty`, `@ManagedBean`, `navigation-rule`, `from-view-id`, `navigation-case`, `from-action`, `from-outcome`, `to-view-id`
 35. `ManagedTaskListener`, `ManagedExecutorService`, `ManagedTask`
-
+36. `ConnectionFactory`, `Queue`, `Connection`, `Session`, `Message`, `MessageProducer`, `@MessageDriven`, `@ActivationConfigProperty`
+ 
 ### WebSockets
 
 ```bash
@@ -237,6 +238,10 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [45.5 Using the JMS API in Java EE Applications](https://docs.oracle.com/javaee/7/tutorial/jms-concepts005.htm)
+-   [Java Authentication and Authorization Service (JAAS) Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html)
+-   [Receiving Messages 2](https://abhirockzz.gitbooks.io/java-websocket-api-handbook/content/Receiving%20Messages.html)
+-   [Receiving Messages](https://abhishek-gupta.gitbook.io/java-websocket-api-handbook/receiving-messages)
 -   [JSF - Page Navigation](https://www.tutorialspoint.com/jsf/jsf_page_navigation.htm#:~:text=Navigation%20rules%20are%20those%20rules,xml.&text=Navigation%20rules%20can%20contain%20conditions,resulted%20view%20can%20be%20shown.)
 -   [Demonstrating Async ReadListener / WriteListener processing](https://gist.github.com/joakime/1a77946248e5ff028f99)
 -   [Difference between View and Request scope in managed beans](https://stackoverflow.com/questions/6025998/difference-between-view-and-request-scope-in-managed-beans)
