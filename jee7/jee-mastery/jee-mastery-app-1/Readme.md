@@ -38,6 +38,7 @@ Topics covered:
 31. `<h:commandButton`, `actionListener`, `action`, `@Named`, `@SessionScoped`
 32. `@ApplicationScoped`, `@Named`, `@RequestScoped`, `@SessionScoped`, `@ManagedBean`, `@ViewScoped`, `@Inject`
 33. `ReadListener`, `AsyncContext`. `HttpServletResponse`, `ServletInputStream`, `onDataAvailable`, `onAllDataRead`, `onError`, `setReadListener`, `getInputStream`
+34. `@ManagedProperty`, `@ManagedBean`, `navigation-rule`, `from-view-id`, `navigation-case`, `from-action`, `from-outcome`, `to-view-id`
 
 ### WebSockets
 
@@ -235,6 +236,7 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [JSF - Page Navigation](https://www.tutorialspoint.com/jsf/jsf_page_navigation.htm#:~:text=Navigation%20rules%20are%20those%20rules,xml.&text=Navigation%20rules%20can%20contain%20conditions,resulted%20view%20can%20be%20shown.)
 -   [Demonstrating Async ReadListener / WriteListener processing](https://gist.github.com/joakime/1a77946248e5ff028f99)
 -   [Difference between View and Request scope in managed beans](https://stackoverflow.com/questions/6025998/difference-between-view-and-request-scope-in-managed-beans)
 -   [42.2 Lock Modes](https://docs.oracle.com/javaee/7/tutorial/persistence-locking002.htm)
