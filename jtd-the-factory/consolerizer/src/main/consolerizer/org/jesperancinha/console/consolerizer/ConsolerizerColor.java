@@ -116,6 +116,14 @@ public enum ConsolerizerColor {
         return Htmlizer.getPBTextColor(this.hexColor, "" + text);
     }
 
+    public String getPBEscapedText(Object text, Object... args) {
+        return getPBEscapedText(String.format("" + text, args));
+    }
+
+    public String getPBEscapedText(Object text) {
+        return Htmlizer.getPBTextEscapedColor(this.hexColor, "" + text);
+    }
+
     public static List<String> getConsoleRainbow() {
         return Arrays.asList(RED.getConsoleColor(), ORANGE.getConsoleColor(), YELLOW.getConsoleColor(),
                 GREEN.getConsoleColor(), BLUE.getConsoleColor(), MAGENTA.getConsoleColor());

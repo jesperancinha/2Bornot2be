@@ -45,6 +45,7 @@ Topics covered:
 38. `AbstractBatchlet`, `ItemProcessor`, `AbstractItemReader`, `AbstractItemWriter`
 39. `@Resources`, `@Resource`
 40. `JAXBContext`, `marshal`, `unmarshal`, `ValidationEventHandler`
+
 ### WebSockets
 
 ```bash
