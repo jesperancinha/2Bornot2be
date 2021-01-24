@@ -32,6 +32,7 @@ public enum ConsolerizerColor {
         this.hexColor = hexColor;
         this.consoleColor = consoleColor;
         this.colorManager = new Consolerizer(this);
+        Consolerizer.setupFastDefault();
     }
 
     public static ConsolerizerColor getRandomColor() {
@@ -122,5 +123,9 @@ public enum ConsolerizerColor {
 
     public static List<ConsolerizerColor> getConsoleRainbowEnumList() {
         return Arrays.asList(RED, ORANGE, YELLOW, GREEN, BLUE, MAGENTA);
+    }
+
+    public void printExpectedException(String text, Object e) {
+        printGenericLn("This is expected! %s -> %s", text, e);
     }
 }

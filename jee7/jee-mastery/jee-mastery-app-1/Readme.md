@@ -41,7 +41,8 @@ Topics covered:
 34. `@ManagedProperty`, `@ManagedBean`, `navigation-rule`, `from-view-id`, `navigation-case`, `from-action`, `from-outcome`, `to-view-id`
 35. `ManagedTaskListener`, `ManagedExecutorService`, `ManagedTask`
 36. `ConnectionFactory`, `Queue`, `Connection`, `Session`, `Message`, `MessageProducer`, `@MessageDriven`, `@ActivationConfigProperty`
- 
+37. `EJBContext`, `EntityManager`, `UserTransaction`, `begin`, `commit`, `setRollbackOnly`
+
 ### WebSockets
 
 ```bash

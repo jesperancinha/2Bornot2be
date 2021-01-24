@@ -1,0 +1,69 @@
+package org.jesperancinha.jtd.jee.mastery1.servlet.show;
+
+import javax.annotation.Resource;
+import javax.ejb.EJBContext;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.transaction.HeuristicMixedException;
+import javax.transaction.HeuristicRollbackException;
+import javax.transaction.NotSupportedException;
+import javax.transaction.RollbackException;
+import javax.transaction.SystemException;
+import javax.transaction.UserTransaction;
+import java.io.Serializable;
+import java.util.UUID;
+
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+
+@Stateless
+@TransactionManagement(TransactionManagementType.BEAN)
+public class ConcertManagerFail implements Serializable {
+
+    @Resource
+    private EJBContext ejbContext;
+
+    @Inject
+    private EntityManager entityManager;
+
+    @Inject
+    private UserTransaction userTransaction;
+
+    private String concertStatement;
+
+    public String getConcertStatement() {
+        return concertStatement;
+    }
+
+    public void setConcertStatement(String concertStatement) {
+        this.concertStatement = concertStatement;
+    }
+
+    public ConcertEntity goToConcert() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+        final ConcertEntity concertEntity = new ConcertEntity();
+        try {
+            userTransaction.begin();
+            final String statement = "We are going to see P!nk Live!!";
+            this.concertStatement = statement;
+            concertEntity.setStatement(statement);
+            concertEntity.setUuid(UUID.randomUUID());
+            entityManager.persist(concertEntity);
+            ejbContext.setRollbackOnly();
+        } catch (IllegalStateException e) {
+            YELLOW.printExpectedException("Only CONTAINER managed beans can be rolled back via the EJBContext", e.getMessage());
+            YELLOW.printGenericLn("In this case, %s", concertStatement);
+        }
+        userTransaction.commit();
+        return concertEntity;
+    }
+
+    public String getStatement(UUID uuid) throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+        userTransaction.begin();
+        final String statement = entityManager.find(ConcertEntity.class, uuid).getStatement();
+        userTransaction.commit();
+        return statement;
+    }
+
+}

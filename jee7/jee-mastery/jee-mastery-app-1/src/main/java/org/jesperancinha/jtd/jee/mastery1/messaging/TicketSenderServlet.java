@@ -1,5 +1,7 @@
 package org.jesperancinha.jtd.jee.mastery1.messaging;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+
 import javax.annotation.Resource;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
@@ -32,12 +34,13 @@ public class TicketSenderServlet extends HttpServlet {
         try {
             final Connection connection = connectionFactory.createConnection();
             final Session session = connection.createSession(true, Session.AUTO_ACKNOWLEDGE);
-            final Message message = session.createTextMessage("test");
+            final Message message = session.createTextMessage("Sound Check!");
             final MessageProducer producer = session.createProducer(queue);
             connection.start();
             producer.send(message);
             session.commit();
             final PrintWriter writer = resp.getWriter();
+            writer.println(ConsolerizerColor.GREEN.getPBText("Please check your logs!, there is some test checks under way..."));
             writer.println(MAGENTA.getPText("<p><a href=\"index.xhtml\">Back</a></p>"));
         } catch (JMSException e) {
             e.printStackTrace();
