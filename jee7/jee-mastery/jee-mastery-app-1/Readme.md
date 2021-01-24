@@ -43,6 +43,7 @@ Topics covered:
 36. `ConnectionFactory`, `Queue`, `Connection`, `Session`, `Message`, `MessageProducer`, `@MessageDriven`, `@ActivationConfigProperty`
 37. `EJBContext`, `EntityManager`, `UserTransaction`, `begin`, `commit`, `setRollbackOnly`
 38. `AbstractBatchlet`, `ItemProcessor`, `AbstractItemReader`, `AbstractItemWriter`
+39. `@Resources`, `@Resource`
 
 ### WebSockets
 
