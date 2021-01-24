@@ -44,7 +44,7 @@ Topics covered:
 37. `EJBContext`, `EntityManager`, `UserTransaction`, `begin`, `commit`, `setRollbackOnly`
 38. `AbstractBatchlet`, `ItemProcessor`, `AbstractItemReader`, `AbstractItemWriter`
 39. `@Resources`, `@Resource`
-
+40. `JAXBContext`, `marshal`, `unmarshal`, `ValidationEventHandler`
 ### WebSockets
 
 ```bash
@@ -81,6 +81,7 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 ```
 ## Context References
 
+-   [Donna Summer discography](https://en.wikipedia.org/wiki/Donna_Summer_discography)
 -   [Dorian (Spanish band)](https://en.wikipedia.org/wiki/Dorian_(Spanish_band))
 -   [Last Night (Moby album)](https://en.wikipedia.org/wiki/Last_Night_(Moby_album))
 -   [Disco Lies](https://en.wikipedia.org/wiki/Disco_Lies)
