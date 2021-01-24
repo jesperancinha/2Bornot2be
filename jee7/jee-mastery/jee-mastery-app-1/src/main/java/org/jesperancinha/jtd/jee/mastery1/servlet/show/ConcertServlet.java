@@ -65,6 +65,37 @@ public class ConcertServlet extends HttpServlet {
         } catch (RollbackException e) {
             e.printStackTrace();
         }
+
+
+        try {
+            concertEntityFail = concertManagerFail.goToConcertWorking();
+        } catch (SystemException e) {
+            e.printStackTrace();
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+        } catch (RollbackException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            writer.println(BLUE.getPBText("Via another BEAN managed bean we were able to rollback with another method called rollback. We didn't went to see P!nk. 😢 -> %s", concertManagerFail.getStatement(concertEntityFail.getUuid())));
+        } catch (SystemException e) {
+            e.printStackTrace();
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+        } catch (RollbackException e) {
+            e.printStackTrace();
+        }
+
+
         writer.println(MAGENTA.getPText("<p><a href=\"../index.xhtml\">Back</a></p>"));
     }
 }

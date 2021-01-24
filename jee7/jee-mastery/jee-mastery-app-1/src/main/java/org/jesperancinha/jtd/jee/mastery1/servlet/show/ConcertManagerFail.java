@@ -14,8 +14,10 @@ import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.UUID;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Stateless
@@ -59,9 +61,31 @@ public class ConcertManagerFail implements Serializable {
         return concertEntity;
     }
 
+    public ConcertEntity goToConcertWorking() throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+        final ConcertEntity concertEntity = new ConcertEntity();
+        userTransaction.begin();
+        final String statement = "We are going to see P!nk Live!!";
+        this.concertStatement = statement;
+        concertEntity.setStatement(statement);
+        concertEntity.setUuid(UUID.randomUUID());
+        entityManager.persist(concertEntity);
+        userTransaction.rollback();
+        try {
+            userTransaction.commit();
+        } catch (IllegalStateException e) {
+            RED.printExpectedException("In this case, we called the correct rollback. This way, the commit won't work", e.getMessage());
+        }
+        return concertEntity;
+    }
+
     public String getStatement(UUID uuid) throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
         userTransaction.begin();
-        final String statement = entityManager.find(ConcertEntity.class, uuid).getStatement();
+        final ConcertEntity concertEntity = entityManager.find(ConcertEntity.class, uuid);
+        if (Objects.isNull(concertEntity)) {
+            userTransaction.rollback();
+            return null;
+        }
+        final String statement = concertEntity.getStatement();
         userTransaction.commit();
         return statement;
     }
