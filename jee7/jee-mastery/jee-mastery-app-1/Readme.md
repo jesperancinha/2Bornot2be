@@ -42,6 +42,7 @@ Topics covered:
 35. `ManagedTaskListener`, `ManagedExecutorService`, `ManagedTask`
 36. `ConnectionFactory`, `Queue`, `Connection`, `Session`, `Message`, `MessageProducer`, `@MessageDriven`, `@ActivationConfigProperty`
 37. `EJBContext`, `EntityManager`, `UserTransaction`, `begin`, `commit`, `setRollbackOnly`
+38. `AbstractBatchlet`, `ItemProcessor`, `AbstractItemReader`, `AbstractItemWriter`
 
 ### WebSockets
 
@@ -239,6 +240,10 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+-   [Batch Properties](https://jberet.gitbooks.io/jberet-user-guide/content/batch_properties/)
+-   [Create and Invoke a JSR-352 Batchlet Using EJB Timer](http://techtipsjava.blogspot.com/2014/11/create-and-invoke-jsr-352-batchlet.html)
+-   [Java EE 7 Batch (JSR 352)](http://www.jknowledge.de/tutorials/java-batch-jsr-352/)
+-   [CHAPTER 18. JAVA BATCH APPLICATION DEVELOPMENT](https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform_continuous_delivery/17/html/development_guide/java_batch_application_development)
 -   [45.5 Using the JMS API in Java EE Applications](https://docs.oracle.com/javaee/7/tutorial/jms-concepts005.htm)
 -   [Java Authentication and Authorization Service (JAAS) Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html)
 -   [Receiving Messages 2](https://abhirockzz.gitbooks.io/java-websocket-api-handbook/content/Receiving%20Messages.html)
