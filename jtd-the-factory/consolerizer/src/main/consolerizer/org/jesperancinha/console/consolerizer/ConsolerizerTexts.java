@@ -1,5 +1,13 @@
 package org.jesperancinha.console.consolerizer;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 public class ConsolerizerTexts {
 
     static String createTitleLineLn(Object text, char limitingChar, boolean newLine) {
