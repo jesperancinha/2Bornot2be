@@ -6,6 +6,8 @@ In this exercise we will go through music related to the power of Chorus and Ari
 
 Topics covered:
 
+1.
+
 ### WebSockets
 
 ```bash
@@ -18,8 +20,8 @@ Topics covered:
 ## Create WAR file with the jar command
 
 ```bash
-cd target/jee-mastery-app-1-2.0.0-SNAPSHOT
-jar -cvf jee-mastery-app-1-2.0.0-SNAPSHOT.war *
+cd target/jee-mastery-app-2-1.0.0-SNAPSHOT
+jar -cvf jee-mastery-app-2-1.0.0-SNAPSHOT.war *
 ls WEB-INF/lib
 ```
 
@@ -30,6 +32,9 @@ ls WEB-INF/lib
 
 ## Context References
 
+-   [Aria Wikipedia](https://en.wikipedia.org/wiki/Aria)
+-   [Strophic form](https://en.wikipedia.org/wiki/Strophic_form)
+
 <div align="center">
       <a title="Marina - Handmade Heaven" href="https://www.youtube.com/watch?v=GiOGlYjKgX8">
      <img 
@@ -39,6 +44,26 @@ ls WEB-INF/lib
       <a title="Josh Groban - You Raise Me Up" href="https://www.youtube.com/watch?v=aJxrX42WcjQ">
      <img 
           src="https://img.youtube.com/vi/aJxrX42WcjQ/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Faun - Walpurgisnacht" href="https://www.youtube.com/watch?v=nLgM1QJ3S_I">
+     <img 
+          src="https://img.youtube.com/vi/nLgM1QJ3S_I/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Faun Duett mit Santiano - Tanz mit mir" href="https://www.youtube.com/watch?v=beXW5s3ZCB4">
+     <img 
+          src="https://img.youtube.com/vi/beXW5s3ZCB4/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a title="Opera gala: the greatest arias from Mozart, Verdi, Rossini and others" href="https://www.youtube.com/watch?v=qXUMqSWpomA ">
+     <img 
+          src="https://img.youtube.com/vi/qXUMqSWpomA/0.jpg" 
           style="width:10%;">
       </a>
 </div>

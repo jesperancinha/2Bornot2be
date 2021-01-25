@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: jofisaes
+  Date: 17/01/2021
+  Time: 17:52
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+
+    <h1>Arias and Chorus</h1>
+
+    <table border="1" bordercolor="#000000">
+
+        <tr>
+
+        </tr>
+        <tr>
+            <td>
+                <h2>Redirect</h2>
+                <h:form>
+                    <p><h:commandButton value="Visit My Homepage" action="#{redirectBean.redirect}"/></p>
+                </h:form>
+            </td>
+            <td>
+                <p>
+                    <a href="logout.jsp">Force Session Logout</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var wsocket;
+
+        function connect() {
+            wsocket = new WebSocket("ws://localhost:8080/jee-mastery-app-2-1.0.0-SNAPSHOT/chorus");
+            wsocket.onmessage = onMessage;
+        }
+
+        function onMessage(evt) {
+            document.getElementById("webSocketResult1Id").innerHTML = evt.data
+        }
+
+        function toBinary(string) {
+            const codeUnits = new Uint16Array(string.length);
+            for (let i = 0; i &lt; codeUnits.length; i++) {
+                codeUnits[i] = string.charCodeAt(i);
+            }
+            return codeUnits;
+        }
+
+        window.addEventListener("load", connect, false);
+    </script>
+</h:body>
+</html>
