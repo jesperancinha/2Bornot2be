@@ -18,6 +18,7 @@ Topics covered:
 6. `placeholder`, `passthrough`
 7. `<error-page>`, `<error-code>`
 8. `@Inject`, `setter`, `getter`, `member`
+9. `@CookieParam`, `@QueryParam`, `@PathParam`, `@MatrixParam`, `@HeaderParam`, `@FormParam`
 
 ### WebSockets
 
@@ -44,6 +45,7 @@ ls WEB-INF/lib
 
 ## Context References
 
+-   [Luna (Faun album)](https://en.wikipedia.org/wiki/Luna_(Faun_album))
 -   [This Mortal Coil](https://en.wikipedia.org/wiki/This_Mortal_Coil)
 -   [Aria Wikipedia](https://en.wikipedia.org/wiki/Aria)
 -   [Strophic form](https://en.wikipedia.org/wiki/Strophic_form)
