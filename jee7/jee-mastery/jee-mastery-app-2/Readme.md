@@ -17,6 +17,7 @@ Topics covered:
 5. `<c:out value="${requestScope['javax.servlet.error.exception']}"/>`, `exception`, `exception.getMessage()`
 6. `placeholder`, `passthrough`
 7. `<error-page>`, `<error-code>`
+8. `@Inject`, `setter`, `getter`, `member`
 
 ### WebSockets
 
@@ -43,6 +44,7 @@ ls WEB-INF/lib
 
 ## Context References
 
+-   [This Mortal Coil](https://en.wikipedia.org/wiki/This_Mortal_Coil)
 -   [Aria Wikipedia](https://en.wikipedia.org/wiki/Aria)
 -   [Strophic form](https://en.wikipedia.org/wiki/Strophic_form)
 
