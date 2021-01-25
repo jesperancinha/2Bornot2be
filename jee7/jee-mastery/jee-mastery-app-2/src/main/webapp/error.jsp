@@ -30,5 +30,6 @@
     This won't show up (note that e does not exist!): <% System.out.println(exception.getMessage()); %>
 </p>
 
+<p><a href="../index.xhtml">Back</a></p>
 </body>
 </html>

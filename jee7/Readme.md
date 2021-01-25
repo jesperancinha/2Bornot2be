@@ -39,7 +39,7 @@ These modules can be used for education purposes or for certain types of exames 
     - [jee-mastery-app-2](jee-mastery/jee-mastery-app-2) - 🎶 🔉 - Chorus and Arias
 -   [JEE Lightning](jee-lightning) - ⚡️ Fast track easy to deploy modules
     - [jee-lightning-1](jee-lightning/jee-lightning-1) - No web.xml
-    - [jee-lightning-2](jee-lightning/jee-lightning-2) - SOAP bare minimal
+    - [jee-lightning-2](jee-lightning/jee-lightning-2) - 🧼 SOAP bare minimal
 
 I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like.
 For example, you can also use [JEnv](https://www.jenv.be/) or just the regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java).

@@ -15,6 +15,7 @@ Topics covered:
 3. `authorization`, `authentication`, `PAM`
 4. `LoginContext`, `LoginModule`, `CodeSource`, `Configuration`, `Principal`, `Subject`
 5. `<c:out value="${requestScope['javax.servlet.error.exception']}"/>`, `exception`, `exception.getMessage()`
+6.  `placeholder`, `passthrough`
 
 ### WebSockets
 
@@ -90,6 +91,14 @@ ls WEB-INF/lib
       <a title="This mortal coil - Song to the Siren" href="https://www.youtube.com/watch?v=HFWKJ2FUiAQ">
      <img 
           src="https://img.youtube.com/vi/HFWKJ2FUiAQ/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
+<div align="center">
+      <a title="Enya - The Book of Days" href="https://www.youtube.com/watch?v=LiBwr4U59EI">
+     <img 
+          src="https://img.youtube.com/vi/LiBwr4U59EI/0.jpg" 
           style="width:10%;">
       </a>
 </div>
