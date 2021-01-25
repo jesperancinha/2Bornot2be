@@ -4,10 +4,16 @@
 
 In this exercise we will go through music related to the power of Chorus and Arias.
 
+Note that this module is attached to project [jee-flash-1](../../jee-flash/jee-flash-1).
+
+The topics covered will be ther as well.
+
 Topics covered:
 
 1. `JSP`, `JSF`, `Servlet`, `Busines Components`, `Application`, `Applet`, `Decoder.Binary<Lyric2>`, `Decoder.Text<Lyric>`
 2. `@ServerEndpoint`, `@OnMessage`
+3. `authorization`, `authentication`, `PAM`
+4. `LoginContext`, `LoginModule`, `CodeSource`, `Configuration`, `Principal`, `Subject`
 
 ### WebSockets
 
