@@ -15,7 +15,8 @@ Topics covered:
 3. `authorization`, `authentication`, `PAM`
 4. `LoginContext`, `LoginModule`, `CodeSource`, `Configuration`, `Principal`, `Subject`
 5. `<c:out value="${requestScope['javax.servlet.error.exception']}"/>`, `exception`, `exception.getMessage()`
-6.  `placeholder`, `passthrough`
+6. `placeholder`, `passthrough`
+7. `<error-page>`, `<error-code>`
 
 ### WebSockets
 
