@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jee-crums</artifactId>
+    <artifactId>jee-flash</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -19,6 +19,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>jee-crums-1</module>
+        <module>jee-flash-1</module>
     </modules>
 </project>

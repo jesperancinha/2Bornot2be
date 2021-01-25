@@ -54,6 +54,13 @@ public class Consolerizer {
         blackAndWhite = false;
     }
 
+    public static void setupFastDefaultWideTitleSpread() {
+        typingWaitGlobal = 0;
+        maxLineCharsGlobal = 250;
+        titleSpread = maxLineCharsGlobal;
+        blackAndWhite = false;
+    }
+
     public static void setupRetro() {
         typingWaitGlobal = 10;
         maxLineCharsGlobal = 0;
