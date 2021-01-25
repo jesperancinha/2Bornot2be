@@ -12,13 +12,16 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerInteractions.pe
 
 public class Flash1 {
     public static void main(String[] args) {
-        BLUE.printGenericTitleLn("Crum1 - Which are Java EE components ?");
+
+        BLUE.printGenericTitleLn("Flash 1 - Which are Java EE components ?");
         setupFastDefaultWideTitleSpread();
         final String question = "Name all Java EE components that you know";
         int maxFails = 5;
         final var correctAnswers = Arrays.asList("JSF", "JSP", "Servlet", "Application", "Applet", "EJB", "Business Components");
 
-        performQuestion(question, maxFails, correctAnswers);
+        if (!Arrays.asList(args).contains("-d1")) {
+            performQuestion(question, maxFails, correctAnswers);
+        }
 
         GREEN.printGenericLn("More reading");
 

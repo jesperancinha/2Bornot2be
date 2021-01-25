@@ -1,6 +1,7 @@
 package org.jesperancinha.console.consolerizer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
@@ -9,6 +10,12 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class ConsolerizerInteractions {
+    public static void performQuestion(String question, String[] options, int maxFails, java.util.List<String> correctAnswers) {
+        final var questionBlock = question.concat("\n");
+        final var optionsBlock = String.join("\n", Arrays.asList(options));
+        performQuestion(questionBlock.concat(optionsBlock), maxFails, correctAnswers);
+    }
+
     public static void performQuestion(String question, int maxFails, java.util.List<String> correctAnswers) {
         RED.printSyncGenericLn("Q: " + question + ":");
         final var correctResponses = new ArrayList<String>();

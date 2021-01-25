@@ -21,9 +21,32 @@
     <h1>Arias and Chorus</h1>
 
     <table border="1" bordercolor="#000000">
-
         <tr>
+            <td>
+                <h2>Sending with encoders</h2>
+                <p>
+                    <button onclick="cleanAll();wsocket.send(getSong());">Send Handmade Heaven as a TEXT!</button>
+                </p>
+                <p>
+                    <button onclick="cleanAll();wsocket.send(toBinary(getSong()));">Send Handmade Heaven as a BINARY!</button>
+                </p>
+                <div id="webSocketResult1Id"></div>
+                <h2>Sending without encoders</h2>
+                <p>
+                    <button onclick="cleanAll();wsocket2.send(getSong());">Send Handmade Heaven as a TEXT!</button>
+                </p>
+                <p>
+                    <button onclick="cleanAll();wsocket2.send(toBinary(getSong()));">Send Handmade Heaven as a BINARY!</button>
+                </p>
+                <div id="webSocketResult2Id"></div>
+                <p>
+                    <i>You do not need encoders. You can do it, but if you are sending either texts or binaries, you don't need to convert anything</i>
+                </p>
 
+            </td>
+            <td>
+
+            </td>
         </tr>
         <tr>
             <td>
@@ -40,15 +63,12 @@
         </tr>
     </table>
     <script>
-        var wsocket;
-
-        function connect() {
-            wsocket = new WebSocket("ws://localhost:8080/jee-mastery-app-2-1.0.0-SNAPSHOT/chorus");
-            wsocket.onmessage = onMessage;
-        }
-
-        function onMessage(evt) {
-            document.getElementById("webSocketResult1Id").innerHTML = evt.data
+        function getSong() {
+            return JSON.stringify({
+                "artist": "Marina",
+                "song": "Handmade Heaven",
+                "lyricExtract": "In this handmade heaven"
+            });
         }
 
         function toBinary(string) {
@@ -59,7 +79,36 @@
             return codeUnits;
         }
 
+        var wsocket;
+
+        function connect() {
+            wsocket = new WebSocket("ws://localhost:8080/jee-mastery-app-2-1.0.0-SNAPSHOT/ariaschorus/lyrics");
+            wsocket.onmessage = onMessage;
+        }
+
+        function onMessage(evt) {
+            document.getElementById("webSocketResult1Id").innerHTML = evt.data
+        }
+
+        var wsocket2;
+
+        function connect2() {
+            wsocket2 = new WebSocket("ws://localhost:8080/jee-mastery-app-2-1.0.0-SNAPSHOT/ariaschorus/noencoding/lyrics");
+            wsocket2.onmessage = onMessage2;
+        }
+
+        function onMessage2(evt) {
+            document.getElementById("webSocketResult2Id").innerHTML = evt.data
+        }
+
+        function cleanAll() {
+            document.getElementById("webSocketResult1Id").innerHTML = "";
+            document.getElementById("webSocketResult2Id").innerHTML = "";
+        }
+
+
         window.addEventListener("load", connect, false);
+        window.addEventListener("load", connect2, false);
     </script>
 </h:body>
 </html>

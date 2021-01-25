@@ -6,7 +6,8 @@ In this exercise we will go through music related to the power of Chorus and Ari
 
 Topics covered:
 
-1.
+1. `JSP`, `JSF`, `Servlet`, `Busines Components`, `Application`, `Applet`, `Decoder.Binary<Lyric2>`, `Decoder.Text<Lyric>`
+2. `@ServerEndpoint`, `@OnMessage`
 
 ### WebSockets
 
@@ -27,6 +28,7 @@ ls WEB-INF/lib
 
 ## Endpoints
 
+1. http://localhost:8080/jee-mastery-app-2-1.0.0-SNAPSHOT/ - Main Page
 
 ## Curl requests
 
@@ -61,15 +63,33 @@ ls WEB-INF/lib
 </div>
 
 <div align="center">
-      <a title="Opera gala: the greatest arias from Mozart, Verdi, Rossini and others" href="https://www.youtube.com/watch?v=qXUMqSWpomA ">
+      <a title="Opera gala: the greatest arias from Mozart, Verdi, Rossini and others" href="https://www.youtube.com/watch?v=qXUMqSWpomA">
      <img 
           src="https://img.youtube.com/vi/qXUMqSWpomA/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Kyla La Grange - Cut Your Teeth" href="https://www.youtube.com/watch?v=GINpKSkZawk ">
+     <img 
+          src="https://img.youtube.com/vi/GINpKSkZawk/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+<div align="center">
+      <a title="Massive Attack - Four Walls | Paradise Circus" href="https://www.youtube.com/watch?v=t4XxJgRihW8">
+     <img 
+          src="https://img.youtube.com/vi/t4XxJgRihW8/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="This mortal coil - Song to the Siren" href="https://www.youtube.com/watch?v=HFWKJ2FUiAQ">
+     <img 
+          src="https://img.youtube.com/vi/HFWKJ2FUiAQ/0.jpg" 
           style="width:10%;">
       </a>
 </div>
 
 ## References
 
+-   [Java EE HTML5 WebSockets Encoder and Decoder example](https://www.byteslounge.com/tutorials/java-ee-html5-websockets-encoder-and-decoder-example)
 -   [42.2 Lock Modes](https://docs.oracle.com/javaee/7/tutorial/persistence-locking002.htm)
 -   [Locking in JPA](https://www.objectdb.com/java/jpa/persistence/lock)
 -   [How does LockModeType.OPTIMISTIC work in JPA and Hibernate](https://vladmihalcea.com/hibernate-locking-patterns-how-does-optimistic-lock-mode-work/)

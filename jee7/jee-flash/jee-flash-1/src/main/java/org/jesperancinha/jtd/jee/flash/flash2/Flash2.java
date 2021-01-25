@@ -7,7 +7,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 public class Flash2 {
     public static void main(String[] args) {
         setupFastDefaultWideTitleSpread();
-        BLUE.printGenericTitleLn("Crum2 - EJB Business tier");
+        BLUE.printGenericTitleLn("Flash 2 - EJB Business tier");
 
         YELLOW.printGenericLn("from:");
         YELLOW.printGenericLn("https://docs.oracle.com/javaee/7/tutorial/ejb-intro001.htm#GIPMB");
