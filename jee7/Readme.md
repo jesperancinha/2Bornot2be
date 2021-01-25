@@ -36,6 +36,7 @@ These modules can be used for education purposes or for certain types of exames 
         - [jee-app-3-4-wildfly](jee-apps/jee-apps-quad-1/jee-app-3-4-wildfly) - 🇬🇧 History of the United Kingdom - Java 11
 -   [JEE Mastery Applications](jee-mastery) - ⚔️ A set of modules with a very deep in-depth approach to architecture
     - [jee-mastery-app-1](jee-mastery/jee-mastery-app-1) - 🏳️‍🌈 - PRIDE Edition 1
+    - [jee-mastery-app-2](jee-mastery/jee-mastery-app-2) - 🎶 🔉 - Chorus and Arias
 -   [JEE Lightning](jee-lightning) - ⚡️ Fast track easy to deploy modules
     - [jee-lightning-1](jee-lightning/jee-lightning-1) - No web.xml
     - [jee-lightning-2](jee-lightning/jee-lightning-2) - SOAP bare minimal
