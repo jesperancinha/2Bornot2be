@@ -14,6 +14,7 @@ Topics covered:
 2. `@ServerEndpoint`, `@OnMessage`
 3. `authorization`, `authentication`, `PAM`
 4. `LoginContext`, `LoginModule`, `CodeSource`, `Configuration`, `Principal`, `Subject`
+5. `<c:out value="${requestScope['javax.servlet.error.exception']}"/>`, `exception`, `exception.getMessage()`
 
 ### WebSockets
 

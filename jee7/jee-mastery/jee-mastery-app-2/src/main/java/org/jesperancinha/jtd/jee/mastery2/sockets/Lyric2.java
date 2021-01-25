@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.mastery2.redirect.sockets;
+package org.jesperancinha.jtd.jee.mastery2.sockets;
 
 public class Lyric2 {
 

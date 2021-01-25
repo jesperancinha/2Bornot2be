@@ -1,4 +1,4 @@
-package org.jesperancinha.jtd.jee.mastery2.redirect.sockets;
+package org.jesperancinha.jtd.jee.mastery2.sockets;
 
 import javax.json.Json;
 import javax.json.JsonObject;
