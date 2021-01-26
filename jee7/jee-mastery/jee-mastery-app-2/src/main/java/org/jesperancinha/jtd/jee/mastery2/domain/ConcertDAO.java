@@ -20,8 +20,7 @@ public class ConcertDAO implements Serializable {
         throw new Exception();
     }
 
-    public Concert getConcert(UUID uuid){
+    public Concert getConcert(UUID uuid) {
         return entityManager.find(Concert.class, uuid);
     }
-
 }

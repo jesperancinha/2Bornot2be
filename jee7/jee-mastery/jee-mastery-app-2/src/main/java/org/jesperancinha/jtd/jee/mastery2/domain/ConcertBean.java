@@ -17,6 +17,12 @@ public class ConcertBean implements Serializable {
     @Inject
     private ConcertDAO concertDAO;
 
+    @Inject
+    private UserConcertDAO userConcertDAO;
+
+    @Inject
+    private UserLocalConcertDAO userLocalConcertDAO;
+
     private String response;
 
     private Concert concert;
@@ -25,6 +31,7 @@ public class ConcertBean implements Serializable {
 
     public ConcertBean() {
         this.concert = new Concert();
+        this.concert.setName("Acoustic Kirchen Tour");
     }
 
     public void saveConcert() {
@@ -38,6 +45,13 @@ public class ConcertBean implements Serializable {
             response = "Your record has been saved anyways!. Check the database!";
         }
         this.inDatabase = concertDAO.getConcert(uuid);
+    }
+    public void saveConcert1() throws Exception {
+        userConcertDAO.updateConcert(concertDAO.getConcert(this.concert.getUuid()));
+    }
+
+    public void saveConcert2() throws Exception {
+        userLocalConcertDAO.updateConcert2(concertDAO.getConcert(this.concert.getUuid()));
     }
 
     public Concert getConcert() {

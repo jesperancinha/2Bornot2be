@@ -28,7 +28,13 @@
                 <p><i>We can use different parameters @CookieParam, @QueryParam, @PathParam, @MatrixParam, @HeaderParam, @FormParam</i></p>
             </td>
             <td>
-
+                <h2>Watch Faun Live! - Testing Persistence RESOURCE_LOCAL and JTA</h2>
+                <p><a href="concerts.xhtml">Check</a></p>
+                <p><i>A resource local implies that entities are locally managed</i></p>
+                <p><i>This means that they have to be declared in the persistence.xml file</i></p>
+                <p><i>It also means that transactions won't be accessible in the injectable entity manager</i></p>
+                <p><i>They are, however accessible if the EntityManager is created via code</i></p>
+                <p><i>JTA allows for automatic Entity scanning and UserTransaction management or Container management</i></p>
             </td>
         </tr>
         <tr>

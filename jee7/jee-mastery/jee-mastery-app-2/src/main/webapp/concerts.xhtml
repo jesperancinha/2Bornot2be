@@ -38,7 +38,36 @@
         <p><h:outputText value="#{concertBean.inDatabase.uuid}"/></p>
         <p><h:outputText value="#{concertBean.inDatabase.name}"/></p>
         <p><h:outputText value="#{concertBean.inDatabase.date}"/></p>
+        <h2>You can now update using two methods</h2>
+        <ol>
+            <li>Using code to get UserTransaction</li>
+            <li>Merge using UserTransaction from injected EntityManager</li>
+        </ol>
+        <f:form>
+            <h3>UserTransaction Lookup</h3>
+            <p>
+                <h:outputLabel for="concertId2" value="Concert name:"/>
+                <h:inputText id="concertId2" value="#{concertBean.concert.name}"/>
+            </p>
+            <p>
+                <f:commandButton value="Submit" action="#{concertBean.saveConcert1}"/>
+            </p>
+        </f:form>
+        <f:form>
+            <h3>UserTransaction from Entity Manager</h3>
+            <p>
+                <h:outputLabel for="concertId3" value="Concert name:"/>
+                <h:inputText id="concertId3" value="#{concertBean.concert.name}"/>
+            </p>
+            <p>
+                <f:commandButton value="Submit" action="#{concertBean.saveConcert2}"/>
+            </p>
+        </f:form>
     </c:if>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mLNaRUq7CCQ" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+    <p><a href="index.xhtml">Back</a></p>
 </h:body>
 
 </html>

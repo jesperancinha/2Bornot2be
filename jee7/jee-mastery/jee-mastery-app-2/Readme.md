@@ -20,6 +20,7 @@ Topics covered:
 8. `@Inject`, `setter`, `getter`, `member`
 9. `@CookieParam`, `@QueryParam`, `@PathParam`, `@MatrixParam`, `@HeaderParam`, `@FormParam`
 10. `@Stateless`, `@TransactionAttribute`, `@PersistenceContext`, `TransactionAttributeType.REQUIRED`, `EntityManager`
+11. `JTA`, `RESOURCE_LOCAL`, `@PersistenceContext`, `@SessionScoped`, `@PersistenceContext`, `@ApplicationException`
 
 ### WebSockets
 
@@ -46,6 +47,7 @@ ls WEB-INF/lib
 
 ## Context References
 
+-   [Faun Tour dates](https://faune.de/en/tour/)
 -   [Luna (Faun album)](https://en.wikipedia.org/wiki/Luna_(Faun_album))
 -   [This Mortal Coil](https://en.wikipedia.org/wiki/This_Mortal_Coil)
 -   [Aria Wikipedia](https://en.wikipedia.org/wiki/Aria)
@@ -111,6 +113,8 @@ ls WEB-INF/lib
 
 ## References
 
+-   [Tackling RESOURCE_LOCAL Vs. JTA Under Java EE Umbrella and Payara Server](https://dzone.com/articles/resource-local-vs-jta-transaction-types-and-payara)
+-   [JPA 101n](https://tomee.apache.org/jpa-concepts.html)
 -   [Java EE HTML5 WebSockets Encoder and Decoder example](https://www.byteslounge.com/tutorials/java-ee-html5-websockets-encoder-and-decoder-example)
 -   [42.2 Lock Modes](https://docs.oracle.com/javaee/7/tutorial/persistence-locking002.htm)
 -   [Locking in JPA](https://www.objectdb.com/java/jpa/persistence/lock)
