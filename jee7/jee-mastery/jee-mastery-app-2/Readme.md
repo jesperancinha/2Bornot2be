@@ -22,6 +22,7 @@ Topics covered:
 10. `@Stateless`, `@TransactionAttribute`, `@PersistenceContext`, `TransactionAttributeType.REQUIRED`, `EntityManager`
 11. `JTA`, `RESOURCE_LOCAL`, `@PersistenceContext`, `@SessionScoped`, `@PersistenceContext`, `@ApplicationException`
 12. `@IdClass`, `@Embeddable`, `@EmbeddableId`
+13. `AttributeConverter`, `@Convert`, `converter`
 
 ### WebSockets
 
@@ -48,6 +49,7 @@ ls WEB-INF/lib
 
 ## Context References
 
+-   [Royal Albert Hall](https://en.wikipedia.org/wiki/Royal_Albert_Hall)
 -   [Faun Tour dates](https://faune.de/en/tour/)
 -   [Luna (Faun album)](https://en.wikipedia.org/wiki/Luna_(Faun_album))
 -   [This Mortal Coil](https://en.wikipedia.org/wiki/This_Mortal_Coil)
