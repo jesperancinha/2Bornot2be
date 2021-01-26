@@ -23,9 +23,25 @@
     <table border="1" bordercolor="#000000">
         <tr>
             <td>
+                <h2>Create a Music Producer</h2>
+                <a href="producer.xhtml">We'll create it using @Embeddable and using @IdClass </a>
+                <p>
+                    <i>Key things to remember are that @IdClass only applies to TYPE</i>
+                    <i>@Embeddable applies to TYPE</i>
+                    <i>@EmbeddedId applies to METHOD and FIELD</i>
+                </p>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <h2>Walpurgisnacht</h2>
                 <a href="ariaschorus/record;name=Luna;artist=Faun">Let's get the json of this album using Matrix attributes</a>
-                <p><i>We can use different parameters @CookieParam, @QueryParam, @PathParam, @MatrixParam, @HeaderParam, @FormParam</i></p>
+                <p>
+                    <i>We can use different parameters @CookieParam, @QueryParam, @PathParam, @MatrixParam, @HeaderParam, @FormParam</i>
+                </p>
             </td>
             <td>
                 <h2>Watch Faun Live! - Testing Persistence RESOURCE_LOCAL and JTA</h2>
@@ -34,7 +50,9 @@
                 <p><i>This means that they have to be declared in the persistence.xml file</i></p>
                 <p><i>It also means that transactions won't be accessible in the injectable entity manager</i></p>
                 <p><i>They are, however accessible if the EntityManager is created via code</i></p>
-                <p><i>JTA allows for automatic Entity scanning and UserTransaction management or Container management</i></p>
+                <p>
+                    <i>JTA allows for automatic Entity scanning and UserTransaction management or Container management</i>
+                </p>
             </td>
         </tr>
         <tr>

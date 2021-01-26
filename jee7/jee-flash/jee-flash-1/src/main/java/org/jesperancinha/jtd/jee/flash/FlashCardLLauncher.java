@@ -2,6 +2,7 @@ package org.jesperancinha.jtd.jee.flash;
 
 import org.jesperancinha.jtd.jee.flash.flash1.Flash1;
 import org.jesperancinha.jtd.jee.flash.flash10.Flash10;
+import org.jesperancinha.jtd.jee.flash.flash11.Flash11;
 import org.jesperancinha.jtd.jee.flash.flash2.Flash2;
 import org.jesperancinha.jtd.jee.flash.flash3.Flash3;
 import org.jesperancinha.jtd.jee.flash.flash4.Flash4;
@@ -16,7 +17,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 public class FlashCardLLauncher {
     public static void main(String[] args) {
-        final var argsCustom = new String[]{"-d1", "-d2", "-d3", "-d4", "-d5","-d6","-d7","-d8","-d9"};
+        final var argsCustom = new String[]{"-d1", "-d2", "-d3", "-d4", "-d5","-d6","-d7","-d8","-d9","-d10"};
         setupFastDefaultWideTitleSpread();
         BLUE.printGenericTitleLn("Welcome to the Flash Cards module 1 about JEE");
         Flash1.main(argsCustom);
@@ -29,6 +30,7 @@ public class FlashCardLLauncher {
         Flash8.main(argsCustom);
         Flash9.main(argsCustom);
         Flash10.main(argsCustom);
+        Flash11.main(argsCustom);
         BLUE.printGenericTitleLn("This is the end of the Flash Cards module 1 about JEE");
     }
 }

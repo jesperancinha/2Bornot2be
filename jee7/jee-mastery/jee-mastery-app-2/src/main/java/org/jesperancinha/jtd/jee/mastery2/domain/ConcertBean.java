@@ -46,11 +46,12 @@ public class ConcertBean implements Serializable {
         }
         this.inDatabase = concertDAO.getConcert(uuid);
     }
+
     public void saveConcert1() throws Exception {
         userConcertDAO.updateConcert(concertDAO.getConcert(this.concert.getUuid()));
     }
 
-    public void saveConcert2() throws Exception {
+    public void saveConcert2() {
         userLocalConcertDAO.updateConcert2(concertDAO.getConcert(this.concert.getUuid()));
     }
 

@@ -21,6 +21,7 @@ Topics covered:
 9. `@CookieParam`, `@QueryParam`, `@PathParam`, `@MatrixParam`, `@HeaderParam`, `@FormParam`
 10. `@Stateless`, `@TransactionAttribute`, `@PersistenceContext`, `TransactionAttributeType.REQUIRED`, `EntityManager`
 11. `JTA`, `RESOURCE_LOCAL`, `@PersistenceContext`, `@SessionScoped`, `@PersistenceContext`, `@ApplicationException`
+12. `@IdClass`, `@Embeddable`, `@EmbeddableId`
 
 ### WebSockets
 

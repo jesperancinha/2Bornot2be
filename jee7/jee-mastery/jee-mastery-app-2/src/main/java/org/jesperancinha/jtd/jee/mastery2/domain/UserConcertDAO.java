@@ -15,7 +15,7 @@ import javax.transaction.UserTransaction;
 import java.io.Serializable;
 
 @SessionScoped
-public class UserConcertDAO  implements Serializable {
+public class UserConcertDAO implements Serializable {
 
     @PersistenceContext(unitName = "primary")
     private EntityManager entityManager;
