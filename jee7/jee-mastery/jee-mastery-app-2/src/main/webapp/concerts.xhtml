@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: jofisaes
+  Date: 26/01/2021
+  Time: 08:24
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+    <h1>Register a Concert</h1>
+    <h:outputLabel value="Register a Concert"/>
+    <f:form>
+        <p>
+            <h:outputLabel for="concertId" value="Concert name:"/>
+            <h:inputText id="concertId" value="#{concertBean.concert.name}"/>
+        </p>
+        <p>
+            <f:commandButton value="Submit" action="#{concertBean.saveConcert}"/>
+        </p>
+    </f:form>
+    <c:if test="#{concertBean.response != null}">
+        <h2>Response:</h2>
+        <p><h:outputText value="#{concertBean.response}"/></p>
+    </c:if>
+    <c:if test="#{concertBean.inDatabase != null}">
+        <h2>In Database:</h2>
+        <p><h:outputText value="#{concertBean.inDatabase.uuid}"/></p>
+        <p><h:outputText value="#{concertBean.inDatabase.name}"/></p>
+        <p><h:outputText value="#{concertBean.inDatabase.date}"/></p>
+    </c:if>
+</h:body>
+
+</html>

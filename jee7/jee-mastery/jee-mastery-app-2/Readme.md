@@ -19,6 +19,7 @@ Topics covered:
 7. `<error-page>`, `<error-code>`
 8. `@Inject`, `setter`, `getter`, `member`
 9. `@CookieParam`, `@QueryParam`, `@PathParam`, `@MatrixParam`, `@HeaderParam`, `@FormParam`
+10. `@Stateless`, `@TransactionAttribute`, `@PersistenceContext`, `TransactionAttributeType.REQUIRED`, `EntityManager`
 
 ### WebSockets
 
