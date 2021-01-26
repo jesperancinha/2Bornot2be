@@ -13,6 +13,7 @@
     <modules>
         <module>jee-lightning-1</module>
         <module>jee-lightning-2</module>
+        <module>jee-lightning-3</module>
     </modules>
 
     <properties>
