@@ -1,10 +1,14 @@
 package org.jesperancinha.jtd.jee.mastery2.client;
 
-import org.jboss.logmanager.handlers.SocketHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jesperancinha.jtd.jee.mastery2.sockets.ListenerReceiver;
 
+import javax.websocket.ClientEndpoint;
 import javax.websocket.CloseReason;
 import javax.websocket.ContainerProvider;
 import javax.websocket.DeploymentException;
+import javax.websocket.Endpoint;
+import javax.websocket.EndpointConfig;
 import javax.websocket.RemoteEndpoint;
 import javax.websocket.Session;
 import javax.websocket.WebSocketContainer;
@@ -16,10 +20,10 @@ import java.net.URISyntaxException;
 /**
  * ws://www.example.com/api/destination;
  */
-public class WebSocketClient {
+@ClientEndpoint
+public class WebSocketClient  extends Endpoint {
 
     /**
-     *
      * @param object
      * @param address
      * @throws URISyntaxException
@@ -27,11 +31,17 @@ public class WebSocketClient {
      * @throws DeploymentException
      */
     public void send(Object object, String address) throws URISyntaxException, IOException, DeploymentException {
-        URI uri = new URI(address);
-        WebSocketContainer container = ContainerProvider.getWebSocketContainer();
-        Session session = container.connectToServer(new SocketHandler(), uri);
-        RemoteEndpoint.Async remote = session.getAsyncRemote();
-        remote.sendObject(object);
+        final URI uri = new URI(address);
+        final WebSocketContainer container = ContainerProvider.getWebSocketContainer();
+        final Session session = container.connectToServer(WebSocketClient.class, uri);
+        final RemoteEndpoint.Async remote = session.getAsyncRemote();
+        final ObjectMapper objectMapper = new ObjectMapper();
+        remote.sendObject(objectMapper.writeValueAsString(object));
         session.close(new CloseReason(CloseReason.CloseCodes.NORMAL_CLOSURE, "Closing Session"));
+    }
+
+    @Override
+    public void onOpen(Session session, EndpointConfig config) {
+
     }
 }

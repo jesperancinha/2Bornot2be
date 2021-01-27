@@ -23,6 +23,7 @@ Topics covered:
 11. `JTA`, `RESOURCE_LOCAL`, `@PersistenceContext`, `@SessionScoped`, `@PersistenceContext`, `@ApplicationException`
 12. `@IdClass`, `@Embeddable`, `@EmbeddableId`
 13. `AttributeConverter`, `@Convert`, `converter`
+14. `@ClientEndpoint`, `WebSocketContainer`, `ContainerProvider`, `RemoteEndpoint`
 
 ### WebSockets
 
@@ -110,6 +111,11 @@ ls WEB-INF/lib
       <a title="Enya - The Book of Days" href="https://www.youtube.com/watch?v=LiBwr4U59EI">
      <img 
           src="https://img.youtube.com/vi/LiBwr4U59EI/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Enya - So I Could Find My Way" href="https://www.youtube.com/watch?v=aLDLpqZdhX0">
+     <img 
+          src="https://img.youtube.com/vi/aLDLpqZdhX0/0.jpg" 
           style="width:10%;">
       </a>
 </div>
