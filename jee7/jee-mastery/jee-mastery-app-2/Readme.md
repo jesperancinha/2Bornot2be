@@ -133,6 +133,13 @@ ls WEB-INF/lib
           style="width:10%;">
       </a>
 </div>
+<div align="center">
+      <a title="Evening Star: the Eternal Light - Elvish Melodies from the Motion Score : The Lord of the Rings" href="https://www.youtube.com/watch?v=3bY0XO0vuZA">
+     <img 
+          src="https://img.youtube.com/vi/3bY0XO0vuZA/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
 
 ## References
 
