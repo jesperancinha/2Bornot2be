@@ -24,6 +24,7 @@ Topics covered:
 12. `@IdClass`, `@Embeddable`, `@EmbeddableId`
 13. `AttributeConverter`, `@Convert`, `converter`
 14. `@ClientEndpoint`, `WebSocketContainer`, `ContainerProvider`, `RemoteEndpoint`
+15. `@Resource`, `@Timeout`, `TimerService`, `Timer`, `createSingleActionTimer`
 
 ### WebSockets
 
@@ -120,8 +121,22 @@ ls WEB-INF/lib
       </a>
 </div>
 
+<div align="center">
+      <a title="Celtic Woman - Tír na nÓg ft. Oonagh" href="https://www.youtube.com/watch?v=dhW1mh7U6-U">
+     <img 
+          src="https://img.youtube.com/vi/dhW1mh7U6-U/0.jpg" 
+          style="width:10%;">
+      </a>
+      <a title="Sarah Brightman - Scarborough Fair" href="https://www.youtube.com/watch?v=oJLNCTdJKu4">
+     <img 
+          src="https://img.youtube.com/vi/oJLNCTdJKu4/0.jpg" 
+          style="width:10%;">
+      </a>
+</div>
+
 ## References
 
+-   [Teun-Hakvoort article about WebSockets for NLJUG - 2014/05 in Dutch](https://blogs.infosupport.com/wp-content/uploads/2014/05/Artikel-Websockets-en-Java-Teun-Hakvoort.pdf)
 -   [Tackling RESOURCE_LOCAL Vs. JTA Under Java EE Umbrella and Payara Server](https://dzone.com/articles/resource-local-vs-jta-transaction-types-and-payara)
 -   [JPA 101n](https://tomee.apache.org/jpa-concepts.html)
 -   [Java EE HTML5 WebSockets Encoder and Decoder example](https://www.byteslounge.com/tutorials/java-ee-html5-websockets-encoder-and-decoder-example)
