@@ -139,6 +139,11 @@ ls WEB-INF/lib
           src="https://img.youtube.com/vi/3bY0XO0vuZA/0.jpg" 
           style="width:10%;">
       </a>
+      <a title="CeeLo Green - Music To My Soul" href="https://www.youtube.com/watch?v=u3-k-5KOduE">
+     <img 
+          src="https://img.youtube.com/vi/u3-k-5KOduE/0.jpg" 
+          style="width:10%;">
+      </a>
 </div>
 
 ## References
