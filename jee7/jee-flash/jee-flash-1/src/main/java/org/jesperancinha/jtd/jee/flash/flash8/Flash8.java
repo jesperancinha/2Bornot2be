@@ -1,7 +1,6 @@
 package org.jesperancinha.jtd.jee.flash.flash8;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefaultWideTitleSpread;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
@@ -17,7 +16,7 @@ public class Flash8 {
         final String question = "Name the most important REST parameter annotations?";
 
         int maxFails = 5;
-        final var correctAnswers = Arrays.asList("@CookieParam","@QueryParam","@PathParam","@MatrixParam","@HeaderParam","@FormParam");
+        final var correctAnswers = Arrays.asList("@CookieParam", "@QueryParam", "@PathParam", "@MatrixParam", "@HeaderParam", "@FormParam");
 
         if (!Arrays.asList(args).contains("-d8")) {
             performQuestion(question, maxFails, correctAnswers);

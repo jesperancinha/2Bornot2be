@@ -1,7 +1,6 @@
 package org.jesperancinha.jtd.jee.flash.flash10;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefaultWideTitleSpread;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
@@ -17,7 +16,7 @@ public class Flash10 {
         final String question = "In a persistence-unit, we can configure a transaction-type. Which are the most known types?";
 
         int maxFails = 1;
-        final var correctAnswers = Arrays.asList("JTA","RESOURCE_LOCAL");
+        final var correctAnswers = Arrays.asList("JTA", "RESOURCE_LOCAL");
 
         if (!Arrays.asList(args).contains("-d10")) {
             performQuestion(question, maxFails, correctAnswers);
