@@ -3,7 +3,7 @@ package org.jesperancinha.jtd.jee.mastery1.transactional;
 import javax.ejb.ApplicationException;
 import java.lang.annotation.Annotation;
 
-public class QuestionWrongException extends RuntimeException  implements ApplicationException {
+public class QuestionWrongException extends RuntimeException implements ApplicationException {
     @Override
     public boolean rollback() {
         return true;

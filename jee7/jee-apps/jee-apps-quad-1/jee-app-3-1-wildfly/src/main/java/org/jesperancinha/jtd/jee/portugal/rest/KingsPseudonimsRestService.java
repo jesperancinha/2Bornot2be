@@ -17,13 +17,13 @@ public class KingsPseudonimsRestService {
     @GET
     @Path("burgundy/{name}")
     public String getPseudonymByName(
-        @PathParam("name")
-            String name) {
+            @PathParam("name")
+                    String name) {
         BLUE.printGenericTitleLn("Generic REST endpoint");
         MAGENTA.printGenericLn("You've reached the most generic endpoint.");
         GREEN.printGenericLn("The reason is that there is no other more specific endpoint.");
         return String.join(",", HistoryContentCreator.getKingsMap()
-            .get(name));
+                .get(name));
     }
 
     @GET
@@ -33,16 +33,19 @@ public class KingsPseudonimsRestService {
         MAGENTA.printGenericLn("If you've reached this, then you have reached Sancho I fixed enpoint.");
         GREEN.printGenericLn("This means that although the other endpoint could also account for Sancho I, since this is more specific, it gets called first.");
         return String.join(",", HistoryContentCreator.getKingsMap()
-            .get("Sancho I"));
+                .get("Sancho I"));
     }
+
     @GET
     @Path("/burgundy")
-        public String getPseudonymById(@QueryParam("id") Integer id) {
+    public String getPseudonymById(
+            @QueryParam("id")
+                    Integer id) {
         BLUE.printGenericTitleLn("Query param REST endpoint");
         MAGENTA.printGenericLn("If you've reached this, then you have reached QueryParam enpoint.");
         GREEN.printGenericLn("This is how we get query params to enter our REST endpoint.");
         return String.join(",", HistoryContentCreator.getKingsMap()
-            .values().toArray()[id].toString());
+                .values().toArray()[id].toString());
     }
 
 }
