@@ -25,6 +25,7 @@ Topics covered:
 13. `AttributeConverter`, `@Convert`, `converter`
 14. `@ClientEndpoint`, `WebSocketContainer`, `ContainerProvider`, `RemoteEndpoint`
 15. `@Resource`, `@Timeout`, `TimerService`, `Timer`, `createSingleActionTimer`
+16. `dtype`, `abstract`, `@Entity`, `extends`, `@Table`, `@Column`
 
 ### WebSockets
 
