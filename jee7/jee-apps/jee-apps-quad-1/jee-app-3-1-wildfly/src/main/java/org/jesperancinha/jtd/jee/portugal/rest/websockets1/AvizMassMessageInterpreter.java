@@ -10,8 +10,8 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 @ServerEndpoint("/aviz/interpreter/mass")
 public class AvizMassMessageInterpreter {
@@ -19,7 +19,7 @@ public class AvizMassMessageInterpreter {
     @OnOpen
     public void onOpen(Session session, EndpointConfig conf) throws IOException, EncodeException {
         BLUE.printGenericTitleLn("OnOpen from %s called!", this.getClass()
-            .getCanonicalName());
+                .getCanonicalName());
     }
 
     @OnMessage
@@ -27,7 +27,7 @@ public class AvizMassMessageInterpreter {
         printRainbowTitleLn("Text: %s", msg);
         printRainbowTitleLn("Last: %s", last);
         session.getBasicRemote()
-            .sendText("The Interpreter is not available for normal messages - ", false);
+                .sendText("The Interpreter is not available for normal messages - ", false);
         session.getBasicRemote().sendText("This is false - ", false);
         session.getBasicRemote().sendText("And this is true", true);
     }
@@ -41,6 +41,6 @@ public class AvizMassMessageInterpreter {
     @OnMessage
     public void pongMessage(Session session, PongMessage msg) {
         printRainbowTitleLn("Pong: %s" + msg.getApplicationData()
-            .toString());
+                .toString());
     }
 }

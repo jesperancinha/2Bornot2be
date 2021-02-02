@@ -17,26 +17,26 @@ public class RoyalPost {
     @Path("/sendMessage")
     @Consumes("application/text")
     public Response createAccount(
-        @Context
-            HttpServletRequest req, KingdomMessage kingdomMessage) {
+            @Context
+                    HttpServletRequest req, KingdomMessage kingdomMessage) {
         ORANGE.printGenericLn(kingdomMessage);
         return Response.ok()
-            .entity(kingdomMessage)
-            .build();
+                .entity(kingdomMessage)
+                .build();
     }
 
     @POST
     @Path("/sendMessage/form")
     @Consumes("application/x-www-form-urlencoded")
     public Response createAccountViaForm(
-        @Context
-            HttpServletRequest req,
-        @FormParam("message")
-            String kingdomMessage) {
+            @Context
+                    HttpServletRequest req,
+            @FormParam("message")
+                    String kingdomMessage) {
         ORANGE.printGenericLn(kingdomMessage);
         return Response.ok()
-            .entity(kingdomMessage)
-            .build();
+                .entity(kingdomMessage)
+                .build();
     }
 
 }

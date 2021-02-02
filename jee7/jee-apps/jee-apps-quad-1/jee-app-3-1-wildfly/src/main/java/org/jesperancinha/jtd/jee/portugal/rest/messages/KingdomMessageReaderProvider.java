@@ -22,8 +22,8 @@ public class KingdomMessageReaderProvider implements MessageBodyReader<KingdomMe
 
     @Override
     public KingdomMessage readFrom(Class<KingdomMessage> aClass, Type type, Annotation[] annotations,
-        MediaType mediaType, MultivaluedMap<String, String> multivaluedMap, InputStream inputStream)
-        throws IOException, WebApplicationException {
+                                   MediaType mediaType, MultivaluedMap<String, String> multivaluedMap, InputStream inputStream)
+            throws IOException, WebApplicationException {
         try (final var bir = new BufferedInputStream(inputStream)) {
             final byte[] bytes = bir.readAllBytes();
             final String fullMessage = new String(bytes);

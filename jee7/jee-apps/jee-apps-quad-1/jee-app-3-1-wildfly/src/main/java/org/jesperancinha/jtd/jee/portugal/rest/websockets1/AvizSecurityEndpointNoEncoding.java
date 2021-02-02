@@ -12,7 +12,9 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
-@ServerEndpoint(value = "/aviz/security/noencoding", encoders = { AvizEncoder.class }, decoders = { AvizDecoder.class })
+@ServerEndpoint(value = "/aviz/security/noencoding",
+        encoders = {AvizEncoder.class},
+        decoders = {AvizDecoder.class})
 public class AvizSecurityEndpointNoEncoding {
 
     @OnOpen

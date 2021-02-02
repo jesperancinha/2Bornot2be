@@ -19,31 +19,31 @@ public class KingdomMessageWriterProvider implements MessageBodyWriter<KingdomMe
 
     @Override
     public boolean isWriteable(Class<?> type, Type genericType,
-        Annotation[] annotations, MediaType mediaType) {
+                               Annotation[] annotations, MediaType mediaType) {
         return type == KingdomMessage.class;
     }
 
     @Override
     public long getSize(KingdomMessage kingdomMessage, Class<?> aClass, Type type, Annotation[] annotations,
-        MediaType mediaType) {
+                        MediaType mediaType) {
         return 0;
     }
 
     @Override
     public void writeTo(KingdomMessage kingdomMessage, Class<?> aClass, Type type, Annotation[] annotations,
-        MediaType mediaType, MultivaluedMap<String, Object> multivaluedMap, OutputStream outputStream)
-        throws IOException, WebApplicationException {
-            Writer writer = new PrintWriter(outputStream);
-            writer.write("<html>");
-            writer.write("<body>");
-            writer.write("<h1>Your Royal Highness King "+kingdomMessage.getTo() +"</h1>");
-            writer.write("<h2>From: "+ kingdomMessage.getFrom()+"</h2>");
-            writer.write("<h2>Letter content </h2>");
-            writer.write("<p>"+kingdomMessage.getText()+"</p>");
-            writer.write("</body>");
-            writer.write("</html>");
-            writer.flush();
-            writer.close();
+                        MediaType mediaType, MultivaluedMap<String, Object> multivaluedMap, OutputStream outputStream)
+            throws IOException, WebApplicationException {
+        Writer writer = new PrintWriter(outputStream);
+        writer.write("<html>");
+        writer.write("<body>");
+        writer.write("<h1>Your Royal Highness King " + kingdomMessage.getTo() + "</h1>");
+        writer.write("<h2>From: " + kingdomMessage.getFrom() + "</h2>");
+        writer.write("<h2>Letter content </h2>");
+        writer.write("<p>" + kingdomMessage.getText() + "</p>");
+        writer.write("</body>");
+        writer.write("</html>");
+        writer.flush();
+        writer.close();
     }
 
 }

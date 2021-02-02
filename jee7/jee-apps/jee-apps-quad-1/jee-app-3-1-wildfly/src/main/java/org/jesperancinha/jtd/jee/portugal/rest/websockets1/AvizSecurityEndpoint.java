@@ -6,14 +6,15 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
-
 import java.io.IOException;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
-@ServerEndpoint(value = "/aviz/security", encoders = { AvizEncoder.class }, decoders = { AvizDecoder.class })
+@ServerEndpoint(value = "/aviz/security",
+        encoders = {AvizEncoder.class},
+        decoders = {AvizDecoder.class})
 public class AvizSecurityEndpoint {
 
     @OnOpen

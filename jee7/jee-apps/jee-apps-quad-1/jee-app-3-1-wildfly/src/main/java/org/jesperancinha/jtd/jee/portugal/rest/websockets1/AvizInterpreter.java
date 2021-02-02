@@ -10,8 +10,8 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 @ServerEndpoint("/aviz/interpreter")
 public class AvizInterpreter {
@@ -19,7 +19,7 @@ public class AvizInterpreter {
     @OnOpen
     public void onOpen(Session session, EndpointConfig conf) throws IOException, EncodeException {
         BLUE.printGenericTitleLn("OnOpen from %s called!", this.getClass()
-            .getCanonicalName());
+                .getCanonicalName());
     }
 
     @OnMessage
@@ -36,6 +36,6 @@ public class AvizInterpreter {
     @OnMessage
     public void pongMessage(Session session, PongMessage msg) {
         printRainbowTitleLn("Pong: %s" + msg.getApplicationData()
-            .toString());
+                .toString());
     }
 }
