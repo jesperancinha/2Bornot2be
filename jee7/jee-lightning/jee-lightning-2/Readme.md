@@ -19,6 +19,10 @@ It does not do anything.
 
 http://localhost:8080/jee-lightning-2-1.0.0-SNAPSHOT/
 
+```bash
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:helloPortBinding" --data @message1.xml http://localhost:8080/jee-lightning-2-1.0.0-SNAPSHOT/hello?wsdl
+```
+
 ## References
 
 -   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)

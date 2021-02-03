@@ -1,5 +1,7 @@
 package org.jesperancinha.jtd.jee.lightning2;
 
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+
 import javax.jws.WebService;
 
 @WebService(
@@ -9,7 +11,9 @@ public class HelloSoapServiceImpl
         implements HelloSoapService {
 
     public String sayHelloWorld(String name) {
-        return "Hello World ! My name is " + name + ".";
+        ConsolerizerColor.MAGENTA.printGenericLn(name);
+        return "Hello World ! My name is " + name + "." +
+                "\nRemember that youu don't need any annotation to run a @WebService. They all have default names.";
     }
 
 }
