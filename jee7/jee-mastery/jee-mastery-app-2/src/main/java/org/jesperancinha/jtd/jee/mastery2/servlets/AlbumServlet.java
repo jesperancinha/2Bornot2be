@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery2.servlets;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.mastery2.beans.Album;
 import org.jesperancinha.jtd.jee.mastery2.beans.Album2;
 import org.jesperancinha.jtd.jee.mastery2.beans.Album3;
@@ -45,6 +44,5 @@ public class AlbumServlet extends HttpServlet {
         publisher.setPublisher("This publisher isn't right");
         album3.setPublisher(publisher);
         writer.println(MAGENTA.getPText("<p><a href=\"../index.xhtml\">Back</a></p>"));
-
     }
 }

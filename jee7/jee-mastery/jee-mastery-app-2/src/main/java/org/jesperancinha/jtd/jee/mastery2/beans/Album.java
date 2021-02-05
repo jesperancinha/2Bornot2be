@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery2.beans;
 
-import jdk.jfr.Name;
-
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -28,7 +26,7 @@ public class Album {
     public void setPublisher(
             // '@Inject' not applicable to parameter
             // @Inject
-                    Publisher publisher) {
+            Publisher publisher) {
         this.publisher = publisher;
     }
 

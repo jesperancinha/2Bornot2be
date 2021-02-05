@@ -26,6 +26,7 @@ Topics covered:
 14. `@ClientEndpoint`, `WebSocketContainer`, `ContainerProvider`, `RemoteEndpoint`
 15. `@Resource`, `@Timeout`, `TimerService`, `Timer`, `createSingleActionTimer`
 16. `dtype`, `abstract`, `@Entity`, `extends`, `@Table`, `@Column`
+17. `UIViewRoot`, `FacesContext`
 
 ### WebSockets
 

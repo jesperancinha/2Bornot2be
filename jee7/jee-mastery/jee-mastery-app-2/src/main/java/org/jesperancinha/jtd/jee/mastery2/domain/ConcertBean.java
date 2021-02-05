@@ -1,6 +1,8 @@
 package org.jesperancinha.jtd.jee.mastery2.domain;
 
 import javax.enterprise.context.SessionScoped;
+import javax.faces.component.UIViewRoot;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -9,6 +11,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 @Named
 @SessionScoped
@@ -35,6 +38,9 @@ public class ConcertBean implements Serializable {
     }
 
     public void saveConcert() {
+        UIViewRoot view = FacesContext.getCurrentInstance().getViewRoot();
+        view.getChildren().forEach(YELLOW::printGenericLn);
+
         final UUID uuid = UUID.randomUUID();
         concert.setUuid(uuid);
         concert.setDate(new Date(Instant.now().toEpochMilli()));
