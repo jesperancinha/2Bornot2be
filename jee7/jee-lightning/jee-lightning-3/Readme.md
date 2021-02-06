@@ -19,6 +19,7 @@ Topics:
 1. `<h:outputStylesheet library="css" name="styles1.css"/>`
 2. `<h:graphicImage library="images" name="Ijsel_nl.JPG"/>`
 3. `<f:validateLongRange minimum="1" maximum="10"/>`, `<h:message  showSummary="true" showDetail="false" for="numberId"/>`
+4. `<context-param>`, `<param-name>`, `javax.faces.PROJECT_STAGE`, `</param-name>`, `<param-value>`, `Development`, `</param-value>`, `</context-param>`
 
 ## Endpoints
 
