@@ -12,11 +12,15 @@
 ---
 ## Introduction
 
-JSP tests
+JSP / JSF tests
+
+Topics:
+
+1. `h:outputStylesheet`
 
 ## Endpoints
 
-http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT/
+1. http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT
 
 ## References
 
