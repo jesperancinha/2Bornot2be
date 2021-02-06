@@ -3,7 +3,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
     <title>JSF Tutorial!</title>
@@ -21,6 +21,15 @@
 
     <h2>This is what graphicImage can do for you</h2>
     <h:graphicImage library="images" name="Ijsel_nl.JPG"/>
+
+    <h2>This is what message can do for you</h2>
+    <h:form>
+        <p>Enter a number outside the range 1 to 10 to see a message: <h:inputText id="numberId">
+            <f:validateLongRange minimum="1" maximum="10"/>
+        </h:inputText></p>
+        <h:message  showSummary="true" showDetail="false" for="numberId"/>
+    </h:form>
+
 </h:body>
 
 </html>
