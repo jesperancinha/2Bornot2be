@@ -16,7 +16,8 @@ JSP / JSF tests
 
 Topics:
 
-1. `h:outputStylesheet`
+1. `<h:outputStylesheet library="css" name="styles1.css"/>`
+2. `<h:graphicImage library="images" name="Ijsel_nl.JPG"/>`
 
 ## Endpoints
 
