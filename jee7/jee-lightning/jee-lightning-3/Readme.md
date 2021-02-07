@@ -21,10 +21,11 @@ Topics:
 3. `<f:validateLongRange minimum="1" maximum="10"/>`, `<h:message  showSummary="true" showDetail="false" for="numberId"/>`
 4. `<context-param>`, `<param-name>`, `javax.faces.PROJECT_STAGE`, `</param-name>`, `<param-value>`, `Development`, `</param-value>`, `</context-param>`
 5. `<ui:composition template="template1.xhtml">`, `<ui:insert`, `<ui:define`, `template`
+6. `<composite:interface>`, `<composite:implementation>`
 
 ## Endpoints
 
-1. http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT
+1. [http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT](http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT)
 
 ## References
 

@@ -11,6 +11,7 @@
     <li><a href="scriplets.jsp">Scriptlets</a></li>
     <li><a href="facelets.xhtml">Basic Facelets Page</a></li>
     <li><a href="album1.xhtml">Check out template for album1</a></li>
+    <li><a href="market.xhtml">Market composite component</a></li>
 </ul>
 </body>
 </html>
