@@ -22,6 +22,7 @@ Topics:
 4. `<context-param>`, `<param-name>`, `javax.faces.PROJECT_STAGE`, `</param-name>`, `<param-value>`, `Development`, `</param-value>`, `</context-param>`
 5. `<ui:composition template="template1.xhtml">`, `<ui:insert`, `<ui:define`, `template`
 6. `<composite:interface>`, `<composite:implementation>`
+7. `<h:outputScript library="scripts" name="textProcessor.js" target="body"/>`, `head`, `form`
 
 ## Endpoints
 

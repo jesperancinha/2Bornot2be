@@ -12,6 +12,13 @@
     <li><a href="facelets.xhtml">Basic Facelets Page</a></li>
     <li><a href="album1.xhtml">Check out template for album1</a></li>
     <li><a href="market.xhtml">Market composite component</a></li>
+    <li>Relocatable Resources:
+        <ul>
+            <li><a href="resources.body.xhtml">Relocatable Resources - Body Example</a></li>
+            <li><a href="resources.form.xhtml">Relocatable Resources - Form Example</a></li>
+            <li><a href="resources.head.xhtml">Relocatable Resources - Head Example</a></li>
+        </ul>
+    </li>
 </ul>
 </body>
 </html>
