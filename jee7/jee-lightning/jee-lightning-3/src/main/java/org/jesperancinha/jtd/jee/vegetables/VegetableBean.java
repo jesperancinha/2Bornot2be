@@ -12,7 +12,7 @@ public class VegetableBean {
     private Long carrotsWeight;
     private Long riceWeight;
 
-    VegetableBean(){
+   public VegetableBean() {
         this.potatoWeight = 10L;
         this.tomatoWeight = 20L;
         this.chivesWeight = 30L;
@@ -60,7 +60,7 @@ public class VegetableBean {
         this.riceWeight = riceWeight;
     }
 
-    public Map<String,Object> getConfiguration(){
+    public Map<String, Object> getConfiguration() {
         final HashMap<String, Object> configuration = new HashMap<>();
         configuration.put("max", "50");
         configuration.put("min", "0");

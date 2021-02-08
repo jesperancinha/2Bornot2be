@@ -26,6 +26,12 @@
         </ul>
     </li>
     <li><a href="vegetables.xhtml">Order your vegetables with pass-through elements and attributes</a></li>
+    <li>Immediate vs Deferred EL Expression Language:
+        <ul>
+            <li><a href="expression.jsp">Immediate EL</a></li>
+            <li><a href="expression.xhtml">Deferred EL</a></li>
+        </ul>
+    </li>
 </ul>
 </body>
 </html>
