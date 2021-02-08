@@ -19,6 +19,12 @@
             <li><a href="resources.head.xhtml">Relocatable Resources - Head Example</a></li>
         </ul>
     </li>
+    <li>Using contracts:
+        <ul>
+            <li><a href="present.xhtml">Contract Pink using Faces Config 2.2</a></li>
+            <li><a href="rainbow/present.xhtml">Contract Rainbow using Faces Config 2.2</a></li>
+        </ul>
+    </li>
 </ul>
 </body>
 </html>

@@ -1,9 +1,18 @@
-<?xml version="1.0" encoding="windows-1252"?>
-<faces-config version="2.0"
-              xmlns="http://java.sun.com/xml/ns/javaee"
-              xmlns:xi="http://www.w3.org/2001/XInclude"
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
-
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+              version="2.2">
+    <application>
+        <resource-library-contracts>
+            <contract-mapping>
+                <url-pattern>*</url-pattern>
+                <contracts>pink</contracts>
+            </contract-mapping>
+            <contract-mapping>
+                <url-pattern>/rainbow/*</url-pattern>
+                <contracts>rainbow</contracts>
+            </contract-mapping>
+        </resource-library-contracts>
+    </application>
 </faces-config>

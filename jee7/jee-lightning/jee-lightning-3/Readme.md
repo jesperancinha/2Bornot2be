@@ -23,6 +23,7 @@ Topics:
 5. `<ui:composition template="template1.xhtml">`, `<ui:insert`, `<ui:define`, `template`
 6. `<composite:interface>`, `<composite:implementation>`
 7. `<h:outputScript library="scripts" name="textProcessor.js" target="body"/>`, `head`, `form`
+8. `<faces-config>`, `<application>`, `<resource-library-contracts>`, `<contract-mapping>`, `<url-pattern>`, `<contracts>`
 
 ## Endpoints
 
