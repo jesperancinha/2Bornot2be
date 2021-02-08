@@ -26,6 +26,7 @@ Topics:
 8. `<faces-config>`, `<application>`, `<resource-library-contracts>`, `<contract-mapping>`, `<url-pattern>`, `<contracts>`
 9. `<h:form>`, `<h:inputText>`, `max`, `min`, `type`, `required`, `title`, `<f:passThroughAttribute>`, `<f:passThroughAttributes>`
 10. `${vegetables.riceWeight}`, `#{vegetables.riceWeight}`
+11. `EL`, `#{vegetableBean['chivesWeight']}`, `lt`, `le`, `gt`, `ge`, `not`
 
 ## Endpoints
 
