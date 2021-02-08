@@ -25,6 +25,7 @@
             <li><a href="rainbow/present.xhtml">Contract Rainbow using Faces Config 2.2</a></li>
         </ul>
     </li>
+    <li><a href="vegetables.xhtml">Order your vegetables with pass-through elements and attributes</a></li>
 </ul>
 </body>
 </html>
