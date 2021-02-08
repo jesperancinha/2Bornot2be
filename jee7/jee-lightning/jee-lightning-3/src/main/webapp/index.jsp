@@ -32,6 +32,7 @@
             <li><a href="expression.xhtml">Deferred EL</a></li>
         </ul>
     </li>
+    <li><a href="math.xhtml">Check EL Expressions with some Math</a></li>
 </ul>
 </body>
 </html>
