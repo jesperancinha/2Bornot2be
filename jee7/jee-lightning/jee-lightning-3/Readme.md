@@ -27,6 +27,7 @@ Topics:
 9. `<h:form>`, `<h:inputText>`, `max`, `min`, `type`, `required`, `title`, `<f:passThroughAttribute>`, `<f:passThroughAttributes>`
 10. `${vegetables.riceWeight}`, `#{vegetables.riceWeight}`
 11. `EL`, `#{vegetableBean['chivesWeight']}`, `lt`, `le`, `gt`, `ge`, `not`
+12. `binding`, `id`, `immediate`, `rendered`, `style`, `styleClass`
 
 ## Endpoints
 
