@@ -33,6 +33,7 @@
         </ul>
     </li>
     <li><a href="math.xhtml">Check EL Expressions with some Math</a></li>
+    <li><a href="commons.xhtml">Common HTML Tag Components</a></li>
 </ul>
 </body>
 </html>
