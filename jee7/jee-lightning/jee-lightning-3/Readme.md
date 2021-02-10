@@ -31,6 +31,7 @@ Topics:
 13. `<h:inputText>`, `<h:inputTextArea>`, `<h:inputSecret>`, `<h:inputHidden>`, `<h:inputFile>`
 14. `<h:inputText>`, `value`, `converter`, `converterMessage`, `dir`, `RTL`, `LTR`, `label`,`lang`, `required`, `requiredMessage`, `validator`, `valueChangeListener`
 15. `<h:outputText>`, `<h:outputLabel>`, `<h:outputLink>`, `<h:outputFormat>`
+16. `<h:selectBooleanCheckbox>`, `<h:selectManyCheckboc>`, `<h:selectManyListBox>`, `<h:selectManyMenu>`, `<h:selectOneListbox>`, `<h:selectOneMenu>`, `<h:selectOneRadio>`
 
 ## Endpoints
 
