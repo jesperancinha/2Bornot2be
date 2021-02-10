@@ -13,22 +13,16 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRai
 @Named
 @RequestScoped
 public class MagicBean {
-
     private Byte nBeans;
-
     public Byte getnBeans() {
         return nBeans;
     }
-
-
     public void setnBeans(Byte nBeans) {
         this.nBeans = nBeans;
     }
-
     public void activateBeans() {
         BRIGHT_BLUE.printGenericLn("You have activated %s bean(s)", nBeans);
     }
-
     public void magicValidator(javax.faces.context.FacesContext facesContext, javax.faces.component.UIComponent uiComponent, java.lang.Object beanValue) {
         Byte byteBeanValue = (Byte) beanValue;
         int primeCount = 0;
@@ -45,7 +39,6 @@ public class MagicBean {
             throw new ValidatorException(msg);
         }
     }
-
     public void beanChange(ValueChangeEvent valueChangeEvent) {
         RED.printGenericLn("Value has changed from %s to %s", valueChangeEvent.getOldValue(), valueChangeEvent.getNewValue());
         printRainbowFlag(valueChangeEvent.getNewValue().toString());
