@@ -28,7 +28,7 @@ Topics:
 10. `${vegetables.riceWeight}`, `#{vegetables.riceWeight}`
 11. `EL`, `#{vegetableBean['chivesWeight']}`, `lt`, `le`, `gt`, `ge`, `not`
 12. `binding`, `id`, `immediate`, `rendered`, `style`, `styleClass`
-13. `<h:inputText>`, `<h:inputTextArea>`, `<h:inputSecret>`, `<h:inputHidden>`, `<h:inputFile>'
+13. `<h:inputText>`, `<h:inputTextArea>`, `<h:inputSecret>`, `<h:inputHidden>`, `<h:inputFile>`
 14. `<h:inputText>`, `value`, `converter`, `converterMessage`, `dir`, `RTL`, `LTR`, `label`,`lang`, `required`, `requiredMessage`, `validator`, `valueChangeListener`
 15. `<h:outputText>`, `<h:outputLabel>`, `<h:outputLink>`, `<h:outputFormat>`
 
