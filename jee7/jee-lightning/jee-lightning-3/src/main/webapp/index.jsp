@@ -36,6 +36,7 @@
     <li><a href="commons.xhtml">Common HTML Tag Components</a></li>
     <li><a href="inputs.xhtml">Input HTML Tag Component types</a></li>
     <li><a href="inputAttributes.xhtml">Input HTML Tag Common Attribute types</a></li>
+    <li><a href="outputs.xhtml">Output HTML Tag Component Types</a></li>
 </ul>
 </body>
 </html>
