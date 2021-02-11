@@ -9,6 +9,7 @@
 <h2>Contents</h2>
 <ul>
     <li><a href="customComponents.xhtml">Explore the custom component</a></li>
+    <li><a href="placeholders.xhtml">Explore Placeholders</a></li>
 </ul>
 </body>
 </html>

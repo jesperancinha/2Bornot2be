@@ -17,6 +17,7 @@ The All-Together Tests - Part 1
 Topics:
 
 1. `@FacesComponent`, `createTag`, `tagName`, `namespace`, `encodeBegin`, `encodeEnd`
+2. `jsf:id`, `p:placeholder`
 
 ## Endpoints
 
