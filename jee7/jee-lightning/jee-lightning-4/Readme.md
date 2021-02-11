@@ -1,4 +1,4 @@
-# jee-lightning-3
+# jee-lightning-4
 
 ---
 
@@ -12,30 +12,15 @@
 ---
 ## Introduction
 
-JSP / JSF tests
+The All-Together Tests - Part 1
 
 Topics:
 
-1. `<h:outputStylesheet library="css" name="styles1.css"/>`
-2. `<h:graphicImage library="images" name="Ijsel_nl.JPG"/>`
-3. `<f:validateLongRange minimum="1" maximum="10"/>`, `<h:message  showSummary="true" showDetail="false" for="numberId"/>`
-4. `<context-param>`, `<param-name>`, `javax.faces.PROJECT_STAGE`, `</param-name>`, `<param-value>`, `Development`, `</param-value>`, `</context-param>`
-5. `<ui:composition template="template1.xhtml">`, `<ui:insert`, `<ui:define`, `template`
-6. `<composite:interface>`, `<composite:implementation>`
-7. `<h:outputScript library="scripts" name="textProcessor.js" target="body"/>`, `head`, `form`
-8. `<faces-config>`, `<application>`, `<resource-library-contracts>`, `<contract-mapping>`, `<url-pattern>`, `<contracts>`
-9. `<h:form>`, `<h:inputText>`, `max`, `min`, `type`, `required`, `title`, `<f:passThroughAttribute>`, `<f:passThroughAttributes>`
-10. `${vegetables.riceWeight}`, `#{vegetables.riceWeight}`
-11. `EL`, `#{vegetableBean['chivesWeight']}`, `lt`, `le`, `gt`, `ge`, `not`
-12. `binding`, `id`, `immediate`, `rendered`, `style`, `styleClass`
-13. `<h:inputText>`, `<h:inputTextArea>`, `<h:inputSecret>`, `<h:inputHidden>`, `<h:inputFile>`
-14. `<h:inputText>`, `value`, `converter`, `converterMessage`, `dir`, `RTL`, `LTR`, `label`,`lang`, `required`, `requiredMessage`, `validator`, `valueChangeListener`
-15. `<h:outputText>`, `<h:outputLabel>`, `<h:outputLink>`, `<h:outputFormat>`
-16. `<h:selectBooleanCheckbox>`, `<h:selectManyCheckboc>`, `<h:selectManyListBox>`, `<h:selectManyMenu>`, `<h:selectOneListbox>`, `<h:selectOneMenu>`, `<h:selectOneRadio>`
+1. `@FacesComponent`, `createTag`, `tagName`, `namespace`, `encodeBegin`, `encodeEnd`
 
 ## Endpoints
 
-1. [http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT](http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT)
+1. [http://localhost:8080/jee-lightning-4-1.0.0-SNAPSHOT](http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT)
 
 ## References
 
