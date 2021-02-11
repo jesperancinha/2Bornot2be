@@ -11,6 +11,7 @@
     <li><a href="customComponents.xhtml">Explore the custom component</a></li>
     <li><a href="placeholders.xhtml">Explore Placeholders</a></li>
     <li><a href="includes.jsp">Explore Include Directive</a></li>
+    <li><a href="teaqueues.xhtml">Explore Transaction Context</a></li>
 </ul>
 </body>
 </html>

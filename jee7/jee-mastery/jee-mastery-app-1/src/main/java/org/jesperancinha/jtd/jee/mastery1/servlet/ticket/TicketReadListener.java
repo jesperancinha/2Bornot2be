@@ -11,7 +11,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class TicketReadListener implements ReadListener {
-
     private AsyncContext asyncContext;
     private HttpServletResponse resp;
     private final ServletInputStream inputStream;
@@ -23,7 +22,6 @@ public class TicketReadListener implements ReadListener {
         this.resp = resp;
         this.inputStream = inputStream;
     }
-
     @Override
     public void onDataAvailable() throws IOException {
         GREEN.printSyncGenericTitleLn("From onDataAvailable ReadListener");
@@ -51,6 +49,4 @@ public class TicketReadListener implements ReadListener {
         RED.printGenericLn(t);
 
     }
-
-
 }

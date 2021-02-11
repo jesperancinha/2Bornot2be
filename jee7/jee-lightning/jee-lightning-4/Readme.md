@@ -19,10 +19,11 @@ Topics:
 1. `@FacesComponent`, `createTag`, `tagName`, `namespace`, `encodeBegin`, `encodeEnd`
 2. `jsf:id`, `p:placeholder`
 3. `<%@ include file="inclusion.jsp" %>`
+4. `JMSContext`, `JMSConsumer`, `JMSProducer`
 
 ## Endpoints
 
-1. [http://localhost:8080/jee-lightning-4-1.0.0-SNAPSHOT](http://localhost:8080/jee-lightning-3-1.0.0-SNAPSHOT)
+1. [http://localhost:8080/jee-lightning-4-1.0.0-SNAPSHOT](http://localhost:8080/jee-lightning-4-1.0.0-SNAPSHOT)
 
 ## References
 
