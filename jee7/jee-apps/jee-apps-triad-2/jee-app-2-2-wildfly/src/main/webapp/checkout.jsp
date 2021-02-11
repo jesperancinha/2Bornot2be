@@ -1,4 +1,3 @@
-<%@ page import="org.jesperancinha.console.consolerizer.Consolerizer" %>
 <%@ page import="static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>

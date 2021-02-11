@@ -10,6 +10,7 @@
 <ul>
     <li><a href="customComponents.xhtml">Explore the custom component</a></li>
     <li><a href="placeholders.xhtml">Explore Placeholders</a></li>
+    <li><a href="includes.jsp">Explore Include Directive</a></li>
 </ul>
 </body>
 </html>

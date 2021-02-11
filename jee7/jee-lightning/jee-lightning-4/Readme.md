@@ -18,6 +18,7 @@ Topics:
 
 1. `@FacesComponent`, `createTag`, `tagName`, `namespace`, `encodeBegin`, `encodeEnd`
 2. `jsf:id`, `p:placeholder`
+3. `<%@ include file="inclusion.jsp" %>`
 
 ## Endpoints
 
