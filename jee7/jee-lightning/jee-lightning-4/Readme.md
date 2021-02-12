@@ -20,6 +20,7 @@ Topics:
 2. `jsf:id`, `p:placeholder`
 3. `<%@ include file="inclusion.jsp" %>`
 4. `JMSContext`, `JMSConsumer`, `JMSProducer`
+5. `@AroundInvoke`, `@Interceptors({RainInterceptor.class, SunInterceptor.class})`, `interceptor-binding`, `target-name`, `interceptor-class`, `method-name`
 
 ## Endpoints
 
@@ -27,6 +28,7 @@ Topics:
 
 ## References
 
+-   [Sample ejb-jar.xml File](https://docs.oracle.com/cd/E19830-01/819-4721/beajc/index.html)
 -   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
 -   [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
 -   [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)

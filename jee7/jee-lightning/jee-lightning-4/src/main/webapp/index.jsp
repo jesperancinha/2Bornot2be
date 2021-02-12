@@ -12,6 +12,7 @@
     <li><a href="placeholders.xhtml">Explore Placeholders</a></li>
     <li><a href="includes.jsp">Explore Include Directive</a></li>
     <li><a href="teaqueues.xhtml">Explore Transaction Context</a></li>
+    <li><a href="donothing.xhtml">Explore Interceptors</a></li>
 </ul>
 </body>
 </html>
