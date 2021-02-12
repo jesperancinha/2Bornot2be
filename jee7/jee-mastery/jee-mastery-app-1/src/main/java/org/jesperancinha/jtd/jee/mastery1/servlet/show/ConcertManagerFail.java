@@ -54,6 +54,7 @@ public class ConcertManagerFail implements Serializable {
             concertEntity.setStatement(statement);
             concertEntity.setUuid(UUID.randomUUID());
             entityManager.persist(concertEntity);
+//            userTransaction.setRollbackOnly();
             ejbContext.setRollbackOnly();
         } catch (IllegalStateException e) {
             Consolerizer.setupFastDefault();
