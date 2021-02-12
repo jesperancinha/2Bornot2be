@@ -228,7 +228,7 @@ public class Consolerizer {
                                     try {
                                         sleep(typingWait);
                                     } catch (InterruptedException e) {
-                                        RED.printThrowableAndExit(e);
+                                        e.printStackTrace();
                                     }
                                 }
                                 printColor(currentColor);
