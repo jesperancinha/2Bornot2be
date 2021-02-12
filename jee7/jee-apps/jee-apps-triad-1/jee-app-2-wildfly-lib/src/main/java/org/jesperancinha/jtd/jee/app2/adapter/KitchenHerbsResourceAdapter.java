@@ -12,10 +12,11 @@ import javax.resource.spi.endpoint.MessageEndpointFactory;
 import javax.transaction.xa.XAResource;
 
 @Connector(reauthenticationSupport = false,
-    transactionSupport = TransactionSupport.TransactionSupportLevel.NoTransaction)
+        transactionSupport = TransactionSupport.TransactionSupportLevel.NoTransaction)
 public class KitchenHerbsResourceAdapter implements ResourceAdapter {
 
-    @ConfigProperty(defaultValue = "WildFly", supportsDynamicUpdates = true)
+    @ConfigProperty(defaultValue = "WildFly",
+            supportsDynamicUpdates = true)
     private String name;
 
     public KitchenHerbsResourceAdapter() {
@@ -30,7 +31,7 @@ public class KitchenHerbsResourceAdapter implements ResourceAdapter {
     }
 
     public void endpointActivation(MessageEndpointFactory endpointFactory, ActivationSpec spec)
-        throws ResourceException {
+            throws ResourceException {
     }
 
     public void endpointDeactivation(MessageEndpointFactory endpointFactory, ActivationSpec spec) {

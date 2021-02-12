@@ -39,16 +39,16 @@ public class KitchenHerbsConnectionFactoryImpl implements KitchenHerbsConnection
         Consolerizer.setupFastDefault();
         Consolerizer.printUnicornsLn(100);
         Consolerizer.printOrangeGenericLn(
-            "This instance is of a different type because it is being loaded in a different module");
+                "This instance is of a different type because it is being loaded in a different module");
         Consolerizer.printOrangeGenericLn("We are not going to fix this in this module.");
         Consolerizer.printOrangeGenericLn(
-            "This module is here just to give an idea on how different modules can work together");
+                "This module is here just to give an idea on how different modules can work together");
         Consolerizer.printOrangeGenericLn(
-            "Using @Resource, we were able to inject an instance from a different module into our own");
+                "Using @Resource, we were able to inject an instance from a different module into our own");
         Consolerizer.printOrangeGenericLn("We did this, by using JNDI technology");
         Consolerizer.printOrangeGenericLn("JNDI stads for Java Naming and Directory Interface");
         Consolerizer.printOrangeGenericLn(
-            "Our Java Connector API resource is discoverable with the use of the Referenceable interface");
+                "Our Java Connector API resource is discoverable with the use of the Referenceable interface");
         Consolerizer.printOrangeGenericLn("We haven't seen the connector in action in this case.");
         Consolerizer.printUnicornsLn(100);
         return KitchenHerbsConnectionFactoryImpl.class.toString();

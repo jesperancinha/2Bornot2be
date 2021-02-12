@@ -9,7 +9,8 @@
         </session>
         <session>
             <ejb-name>ListOfKingsAndQueensBeanForOrangeNassau</ejb-name>
-            <ejb-class>org.jesperancinha.jtd.jee.the.netherlands.servlet.ListOfKingsAndQueensBeanForOrangeNassau</ejb-class>
+            <ejb-class>org.jesperancinha.jtd.jee.the.netherlands.servlet.ListOfKingsAndQueensBeanForOrangeNassau
+            </ejb-class>
         </session>
     </enterprise-beans>
     <assembly-descriptor>

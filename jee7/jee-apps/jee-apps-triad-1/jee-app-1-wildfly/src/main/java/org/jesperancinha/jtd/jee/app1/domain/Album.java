@@ -24,7 +24,8 @@ public class Album implements java.io.Serializable {
     private Long id;
 
     @Column(unique = true)
-    @Size(min = 1, max = 100)
+    @Size(min = 1,
+            max = 100)
     private String albumName;
 
     @Column
@@ -42,7 +43,8 @@ public class Album implements java.io.Serializable {
 
     @Column
 //    @Null
-    @Digits(fraction = 2, integer = 12)
+    @Digits(fraction = 2,
+            integer = 12)
     private String sales;
 
     public Long getId() {
@@ -88,7 +90,7 @@ public class Album implements java.io.Serializable {
     @Override
     public String toString() {
         return "Album{" + "id=" + id + ", albumName='" + albumName + '\'' + ", artist='" + artist + '\'' + ", year="
-            + year + '}';
+                + year + '}';
     }
 
     public String getSales() {

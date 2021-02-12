@@ -23,6 +23,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MA
 
 /**
  * Note that var utx = (UserTransaction) context.lookup("java:comp/UserTransaction") is only found because of:
+ *
  * @TransactionManagement(TransactionManagementType.BEAN)
  */
 @Stateless
@@ -41,12 +42,12 @@ public class ToothService {
 
     public List<Tooth> findAll() {
         return entityManager.createQuery("from Tooth")
-            .getResultList();
+                .getResultList();
     }
 
     public Tooth updateItRight(final Tooth tooth)
-        throws NamingException, HeuristicMixedException, HeuristicRollbackException, NotSupportedException,
-        SystemException, RollbackException {
+            throws NamingException, HeuristicMixedException, HeuristicRollbackException, NotSupportedException,
+            SystemException, RollbackException {
         var context = new InitialContext();
         var utx = (UserTransaction) context.lookup("java:comp/UserTransaction");
         utx.begin();

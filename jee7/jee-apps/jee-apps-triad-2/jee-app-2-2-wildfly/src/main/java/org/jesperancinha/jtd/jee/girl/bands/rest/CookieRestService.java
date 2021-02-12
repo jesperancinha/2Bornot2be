@@ -16,8 +16,8 @@ public class CookieRestService {
     @GET
     @Produces(APPLICATION_JSON)
     public String doGet(
-        @CookieParam("beThereCookie")
-            Cookie beThereCookie) {
+            @CookieParam("beThereCookie")
+                    Cookie beThereCookie) {
         return beThereCookie.getValue();
     }
 }

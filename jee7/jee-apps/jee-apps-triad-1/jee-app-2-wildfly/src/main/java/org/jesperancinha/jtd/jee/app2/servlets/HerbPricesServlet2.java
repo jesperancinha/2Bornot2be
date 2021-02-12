@@ -57,7 +57,7 @@ public class HerbPricesServlet2 extends HttpServlet {
         List<Herb> herbsList = (List<Herb>) context.getAttribute("herbs");
 
         HttpSession session;
-        if(session2 ==null)
+        if (session2 == null)
             session = req.getSession();
         else
             session = session2;

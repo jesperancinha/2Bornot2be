@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-      
-  <parent>
-    <artifactId>jee7</artifactId>
-    <groupId>org.jesperancinha.jtd</groupId>
-    <version>1.0.0-SNAPSHOT</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <artifactId>jee-apps</artifactId>
-      
-  <modules>
-    <module>jee-apps-triad-1</module>
-    <module>jee-apps-triad-2</module>
-      <module>jee-apps-quad-1</module>
-  </modules>
+    <parent>
+        <artifactId>jee7</artifactId>
+        <groupId>org.jesperancinha.jtd</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
-  <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>jee-apps</artifactId>
+
+    <modules>
+        <module>jee-apps-triad-1</module>
+        <module>jee-apps-triad-2</module>
+        <module>jee-apps-quad-1</module>
+    </modules>
+
+    <packaging>pom</packaging>
 
 </project>

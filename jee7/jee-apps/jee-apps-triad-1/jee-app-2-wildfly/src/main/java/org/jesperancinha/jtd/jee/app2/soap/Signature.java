@@ -26,7 +26,7 @@ public class Signature implements SOAPHandler<SOAPMessageContext> {
             final SOAPMessage message = context.getMessage();
             final SOAPBody body = message.getSOAPBody();
             final String localName = body.getFirstChild()
-                .getLocalName();
+                    .getLocalName();
             Consolerizer.setupFastDefault();
             printOrangeGenericLn("This is the body -> %s", body);
             printOrangeGenericLn("And this is the first node name -> %s", localName);

@@ -11,8 +11,8 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 @Alternative
 public class LyricsCombineService implements LyricsService {
 
-    private final static String[] FILES = { "all.rise.txt", "boys.in.the.band.txt", "could.it.be.magic.txt",
-        "the.one.txt" };
+    private final static String[] FILES = {"all.rise.txt", "boys.in.the.band.txt", "could.it.be.magic.txt",
+            "the.one.txt"};
 
     public String getRandomLyric() {
         BRIGHT_MAGENTA.printGenericLn("This is type %s", this.getClass());
@@ -23,7 +23,7 @@ public class LyricsCombineService implements LyricsService {
         final var resourceAsStream2 = getClass().getResourceAsStream("/" + FILES[j]);
 
         try (final var bis = new BufferedInputStream(resourceAsStream);
-            final var bis2 = new BufferedInputStream(resourceAsStream2)) {
+             final var bis2 = new BufferedInputStream(resourceAsStream2)) {
             return new String(bis.readAllBytes()) + "\n" + new String(bis2.readAllBytes());
         } catch (IOException e) {
             RED.printThrowableAndExit(e);

@@ -24,59 +24,63 @@
 
 #### Modules
 
--   [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Boy Bands in the 90's
+- [jee-app-2-1-wildfly](jee-app-2-1-wildfly) - Boy Bands in the 90's
 
 ### [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands
 
 #### Subjects
 
 1. `URL Rewriting`, `Session`, `Cookie`
-2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
+2. `soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`
+   , `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 3. `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
 4. `@WebParam`, `@WebResult`
 5. `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 6. `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
-7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
+7. `Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`
+   , `<init-param>`
 8. `<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
 9. `Filter`, `web.xml`, `order`, `direct references`
 10. `Session`, `invalidate`, `IllegalStateException`
 
 #### Modules
 
--   [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands - Java 11
--   [jee-app-2-2-wf-light](jee-app-2-2-wf-light) - Girl Bands - Fast track for web.xml curious cases - Java 11
+- [jee-app-2-2-wildfly](jee-app-2-2-wildfly) - Girl Bands - Java 11
+- [jee-app-2-2-wf-light](jee-app-2-2-wf-light) - Girl Bands - Fast track for web.xml curious cases - Java 11
 
 ### [jee-app-3-wildfly](jee-app-2-3-wildfly)
 
 #### Subjects
 
 1. `service`, `doGet`
-2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
+2. `<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`
+   , `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 3. `<error-page>`, `<exception-type>`, `<location>`
-4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
+4. `<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`
+   , `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`
+   , `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
 5. `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
 6. `<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
-7. `<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
+7. `<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`
+   , `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
 
 #### Modules
 
--   [jee-app-2-3-wildfly](jee-app-2-3-wildfly) - Soul Music - Java 11
+- [jee-app-2-3-wildfly](jee-app-2-3-wildfly) - Soul Music - Java 11
 
 ## References
 
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+- [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+- [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+- [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+- [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+- [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+- [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+- [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+- [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ## About me 👨🏽‍💻🚀
 

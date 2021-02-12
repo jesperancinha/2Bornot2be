@@ -38,7 +38,7 @@ public class PopArtistsServlet extends HttpServlet {
         writer.println("<html><head><title>An artists page</title></head><body>");
         writer.println("<h1>" + popArtists + "</h1>");
         final String exercise1 = "Note that in JEE, we do not need to use any extra annotation to inject a Service.\n"
-            + "The service itself, does not use any annotation";
+                + "The service itself, does not use any annotation";
         writer.println("<p>" + exercise1 + "</p>");
         writer.println("<a href=\"index.html\">Back</a>");
         writer.println("<a href=\"./popartists\">Refresh</a>");

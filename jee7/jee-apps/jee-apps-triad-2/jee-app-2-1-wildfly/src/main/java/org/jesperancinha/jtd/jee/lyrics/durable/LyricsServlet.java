@@ -44,7 +44,7 @@ public class LyricsServlet extends HttpServlet {
             JMSContext jmsContext = connectionFactory.createContext();
             try {
                 final String clientID = UUID.randomUUID()
-                    .toString();
+                        .toString();
                 try {
                     jmsContext.setClientID(clientID);
                 } catch (Exception e) {
@@ -80,7 +80,7 @@ public class LyricsServlet extends HttpServlet {
                     writer.println("*********");
                     message = consumer.receive(1000);
                     writer.println(message);
-                    while ((message = consumer.receive(1000))!= null) {
+                    while ((message = consumer.receive(1000)) != null) {
                         writer.println("------------");
                         writer.println(message);
                     }

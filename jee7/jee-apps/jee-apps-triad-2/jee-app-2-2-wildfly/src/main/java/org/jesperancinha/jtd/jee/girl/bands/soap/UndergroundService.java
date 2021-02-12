@@ -18,6 +18,7 @@ public interface UndergroundService {
     @WebResult(name = "lyric")
     @WebMethod(operationName = "underground")
     String getSoundOfTheUnderground(
-        @WebParam(mode = WebParam.Mode.IN, name = "pieceNumber")
-            int piece);
+            @WebParam(mode = WebParam.Mode.IN,
+                    name = "pieceNumber")
+                    int piece);
 }

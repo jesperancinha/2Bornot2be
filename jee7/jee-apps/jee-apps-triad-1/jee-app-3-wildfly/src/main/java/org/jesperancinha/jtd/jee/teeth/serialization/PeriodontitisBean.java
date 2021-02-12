@@ -22,7 +22,7 @@ public class PeriodontitisBean implements PeriodontitisPassivation {
 
     @Override
     public PeriodontitisObject getPropertyObject() {
-            return this.periodontitisObject;
+        return this.periodontitisObject;
     }
 
     @PrePassivate

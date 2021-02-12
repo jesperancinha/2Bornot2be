@@ -6,8 +6,8 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain.AbstractToothType;
 import org.jesperancinha.jtd.jee.teeth.domain.FinalToothType;
@@ -48,18 +48,18 @@ public class ToothServiceTest {
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(FinalToothType.class, InterfaceToothType.class, AbstractToothType.class, ToothType.class,
-                Nerve.class, Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
-                UserTransaction.class, EntityManager.class, Consolerizer.class, ConsolerizerColor.class)
-            .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsWebInfResource("test-ds.xml");
+                .addClasses(FinalToothType.class, InterfaceToothType.class, AbstractToothType.class, ToothType.class,
+                        Nerve.class, Jaw.class, JawService.class, ToothService.class, Tooth.class, Resources.class,
+                        UserTransaction.class, EntityManager.class, Consolerizer.class, ConsolerizerColor.class)
+                .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
+                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+                .addAsWebInfResource("test-ds.xml");
     }
 
     @Test
     public void createTooth_whenGood_thenOk()
-        throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
-        NotSupportedException {
+            throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
+            NotSupportedException {
         Consolerizer.setupFastDefault();
 
         final var tooth = new Tooth();
@@ -79,7 +79,7 @@ public class ToothServiceTest {
         ORANGE.printGenericLn(toothResult);
         assertEquals(tooth1.getUuid(), toothResult.getUuid());
         assertEquals(jaw1.getUuid(), toothResult.getJaw()
-            .getUuid());
+                .getUuid());
         MAGENTA.printGenericLn("from: https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html");
         BRIGHT_MAGENTA.printGenericLn("The class must be annotated with the javax.persistence.Entity annotation.");
         BRIGHT_MAGENTA.printGenericLn("The class must have a public or protected, no-argument constructor. The class may have other constructors.");

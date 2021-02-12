@@ -18,8 +18,9 @@
 
 This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready
+to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to
+improvements from time to time.
 
 You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
 
@@ -55,7 +56,7 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 #### Modules
 
--   [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
+- [jee-app-1-wildfly](jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
 
 ### [jee-app-2-wildfly](jee-app-2-wildfly) - Kitchen Herbs and History
 
@@ -64,7 +65,8 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
-4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to
+   this.
 5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
 6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
 7. Much about `@WebServiceRef`
@@ -72,10 +74,13 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 #### Modules
 
--   [jee-app-2-wildfly (WAR application)](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
--   [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module.
--   [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the library needed for the previous adapter.
--   [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP Webservice.
+- [jee-app-2-wildfly (WAR application)](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
+- [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is
+  the adapter needed for the previous module.
+- [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the
+  library needed for the previous adapter.
+- [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP
+  Webservice.
 
 ### [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases
 
@@ -83,36 +88,37 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 1. `@Entity` and `@Table`
 2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
-3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed
+   won't work)
 4. `@OneToOne` The same rule applies as in point 3.
 5. `@Enumerated` JPA entities
-6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
+6. Abstract and final JPA entities
+   -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
 7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
 8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
-9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()` and `TimerService`
+9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`
+   and `TimerService`
 10. `@TransactionAttribute` and `TransactionAttributeType`
 11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
 12. `Rollback`
 
 #### Modules
 
--   [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases
+- [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases
 
 ## References
 
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+- [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+- [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+- [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+- [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+- [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+- [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+- [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+- [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ## About me 👨🏽‍💻🚀
 

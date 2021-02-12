@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
 @WebServlet("/history/crown")
 public class CheckTheCrownServlet extends HttpServlet {
@@ -45,12 +45,12 @@ public class CheckTheCrownServlet extends HttpServlet {
         writer.println(String.format("<p>%s</p>", heirToTheThrone));
 
         Arrays.stream(CrownOfTheState.class.getDeclaredAnnotations())
-            .forEach(annotation -> {
-                writer.println(String.format("<p>%s</p>", annotation));
-                Arrays.stream(annotation.annotationType()
-                    .getDeclaredAnnotations())
-                    .forEach(annotation1 -> writer.println(String.format("<p>%s</p>", annotation1)));
-            });
+                .forEach(annotation -> {
+                    writer.println(String.format("<p>%s</p>", annotation));
+                    Arrays.stream(annotation.annotationType()
+                            .getDeclaredAnnotations())
+                            .forEach(annotation1 -> writer.println(String.format("<p>%s</p>", annotation1)));
+                });
         writer.println("<p><a href=\"../index.xhtml\">Back</a></p>");
         writer.println("</body></html>");
     }

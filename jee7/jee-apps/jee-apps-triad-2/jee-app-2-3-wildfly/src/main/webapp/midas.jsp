@@ -21,13 +21,29 @@
 </head>
 <body>
 <h1>Midnight Star</h1>
-<p><jsp:getProperty name="midasBean" property="membera"/></p>
-<p><jsp:getProperty name="midasBean" property="memberb"/></p>
-<p><jsp:getProperty name="midasBean" property="memberc"/></p>
-<p><jsp:getProperty name="midasBean" property="memberd"/></p>
-<p><jsp:getProperty name="midasBean" property="membere"/></p>
-<p><jsp:getProperty name="midasBean" property="memberf"/></p>
-<p><jsp:getProperty name="midasBean" property="memberf"/></p>
-<p><jsp:getProperty name="midasBean" property="comment"/></p>
+<p>
+    <jsp:getProperty name="midasBean" property="membera"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="memberb"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="memberc"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="memberd"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="membere"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="memberf"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="memberf"/>
+</p>
+<p>
+    <jsp:getProperty name="midasBean" property="comment"/>
+</p>
 </body>
 </html>

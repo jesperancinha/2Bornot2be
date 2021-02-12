@@ -28,10 +28,10 @@ public class PalaceWaitingRoomServlet extends HttpServlet {
         GREEN.printGenericLn("A principal can be referred to as the representation of that user.");
         writer.println("Hi there!");
         writer.println("I just checked that user" + context.getCallerPrincipal()
-            .getName() + " has profile Manager!");
+                .getName() + " has profile Manager!");
         writer.println("We can get the principle in various ways:");
         writer.println(String.format("One is via the session context.getCallerPrincipal() -> %s", contextProvider.getContext()
-            .getCallerPrincipal()));
+                .getCallerPrincipal()));
         writer.println(String.format("Another is via the servlet request.getUserPrincipal() -> %s", req.getUserPrincipal()));
     }
 }

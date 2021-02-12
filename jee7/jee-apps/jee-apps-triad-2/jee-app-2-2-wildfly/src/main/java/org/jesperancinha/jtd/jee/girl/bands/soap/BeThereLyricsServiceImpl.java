@@ -15,20 +15,21 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
-@WebService(name = "be-there", endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.BeThereLyricsService")
+@WebService(name = "be-there",
+        endpointInterface = "org.jesperancinha.jtd.jee.girl.bands.soap.BeThereLyricsService")
 public class BeThereLyricsServiceImpl implements BeThereLyricsService {
 
-    private static String[] EXPECTED_LYRICS = { "Ah, say you'll be there", "I'm giving you everything",
-        "All that joy can bring, this I swear", "Last time that we had this conversation",
-        "I decided we should be friends, hey", "But now we're going round in circles",
-        "Tell me, will this deja vu never end? Oh" };
+    private static String[] EXPECTED_LYRICS = {"Ah, say you'll be there", "I'm giving you everything",
+            "All that joy can bring, this I swear", "Last time that we had this conversation",
+            "I decided we should be friends, hey", "But now we're going round in circles",
+            "Tell me, will this deja vu never end? Oh"};
 
     @Resource
     private WebServiceContext wsContext;
@@ -39,10 +40,10 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
         printRainbowTitleLn("Welcome to the say you'll be there game!");
         printRainbowTitleLn("To see session management running please send lyric line by lyric line");
         printRainbowTitleLn(
-            "I'll match it to what is stated in https://genius.com/Spice-girls-say-youll-be-there-lyrics");
+                "I'll match it to what is stated in https://genius.com/Spice-girls-say-youll-be-there-lyrics");
 
         Arrays.stream(EXPECTED_LYRICS)
-            .forEach(text -> YELLOW.printGenericLn(text));
+                .forEach(text -> YELLOW.printGenericLn(text));
 
         ConsolerizerGraphs.printUnicornsLn(100);
         MAGENTA.printGenericLn(wsContext.getMessageContext());
@@ -56,8 +57,8 @@ public class BeThereLyricsServiceImpl implements BeThereLyricsService {
         final HttpServletResponse hrerp = (HttpServletResponse) srerp;
 
         printRainbowTitleLn("Current cookies are %s", Arrays.stream(hsr.getCookies())
-            .map(cookie -> String.format("%s=%s", cookie.getName(), cookie.getValue()))
-            .collect(Collectors.joining(",")));
+                .map(cookie -> String.format("%s=%s", cookie.getName(), cookie.getValue()))
+                .collect(Collectors.joining(",")));
 
         if (sr != null && sr instanceof HttpServletRequest) {
             hrerp.addCookie(new javax.servlet.http.Cookie("beThereCookie", line));

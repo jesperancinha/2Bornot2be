@@ -15,7 +15,8 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CY
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
-@WebFilter(urlPatterns = { "/app/secure/*" }, description = "Session Checker Filter")
+@WebFilter(urlPatterns = {"/app/secure/*"},
+        description = "Session Checker Filter")
 public class GirlPowerFilter implements Filter {
 
     public static final String GIRL_POWER_FILTER_IS_BEING_REMOVED = "GirlPowerFilter is being removed";
@@ -26,12 +27,12 @@ public class GirlPowerFilter implements Filter {
     public void init(FilterConfig config) {
         this.config = config;
         config.getServletContext()
-            .log(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
+                .log(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
         BRIGHT_CYAN.printGenericLn(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
     }
 
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
 
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
@@ -43,8 +44,8 @@ public class GirlPowerFilter implements Filter {
         MAGENTA.printGenericLn("However that would mean on specific configuration per servlet.");
 
         if (!request.getRequestURI()
-            .endsWith("/") && request.getSession()
-            .getAttribute("LOGGED_IN") == null) {
+                .endsWith("/") && request.getSession()
+                .getAttribute("LOGGED_IN") == null) {
             response.sendRedirect(request.getContextPath() + "/");
         } else {
             chain.doFilter(req, res);
@@ -53,7 +54,7 @@ public class GirlPowerFilter implements Filter {
 
     public void destroy() {
         config.getServletContext()
-            .log(GIRL_POWER_FILTER_IS_BEING_REMOVED);
+                .log(GIRL_POWER_FILTER_IS_BEING_REMOVED);
         BRIGHT_CYAN.printGenericLn(GIRL_POWER_FILTER_IS_BEING_INITIALIZED);
     }
 }

@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.app2.rest;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.app2.domain.Herb;
 
 import javax.enterprise.context.RequestScoped;
@@ -25,6 +24,7 @@ public class KitchenHerbsResourceRESTService {
         printYellowGenericLn("javax.ws.rs provide REST methods");
         printYellowGenericLn("javax.xml.bind provide the bind methods for the data");
     }
+
     @GET
     @Path("/parsley")
     @Produces(MediaType.APPLICATION_XML)

@@ -14,16 +14,17 @@ import javax.persistence.PersistenceContextType;
 import javax.persistence.TransactionRequiredException;
 import javax.transaction.TransactionSynchronizationRegistry;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
 public class ToothServiceTx {
 
-    @PersistenceContext(unitName = "primary", type = PersistenceContextType.TRANSACTION)
+    @PersistenceContext(unitName = "primary",
+            type = PersistenceContextType.TRANSACTION)
     private EntityManager entityManager;
 
     private int a = 10;
@@ -60,6 +61,7 @@ public class ToothServiceTx {
         MAGENTA.printGenericLn("We just made a=%d", this.a);
         throw new RuntimeException();
     }
+
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public Tooth addTootRequiredNoRollback(final Tooth tooth) {
         this.a = 1000;

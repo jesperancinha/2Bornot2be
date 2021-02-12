@@ -11,10 +11,9 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGeneric;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
 
 public class CaghtUpInTheMiddle2 implements Filter {
 
@@ -23,8 +22,8 @@ public class CaghtUpInTheMiddle2 implements Filter {
     private static final String FROM = "https://genius.com/Sugababes-in-the-middle-lyrics";
 
     private static final String LYRIC =
-        "Night's kind of funny\n" + "Not in it for the money\n" + "But I know that I've got to pay\n"
-            + "Love's gonna get ya\n" + "But only when I let ya\n" + "And I don't wanna turn away";
+            "Night's kind of funny\n" + "Not in it for the money\n" + "But I know that I've got to pay\n"
+                    + "Love's gonna get ya\n" + "But only when I let ya\n" + "And I don't wanna turn away";
 
     @Override
     public void init(FilterConfig filterConfig) {
@@ -34,7 +33,7 @@ public class CaghtUpInTheMiddle2 implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-        throws IOException, ServletException {
+            throws IOException, ServletException {
 
         final PrintWriter writer = response.getWriter();
         writer.println(ConsolerizerGraphs.getUnicorns(100));

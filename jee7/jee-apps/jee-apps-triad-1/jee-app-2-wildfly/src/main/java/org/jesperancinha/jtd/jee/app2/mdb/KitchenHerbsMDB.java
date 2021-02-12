@@ -13,10 +13,13 @@ import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefau
 
 @MessageDriven(activationConfig = {
 
-    @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-    @ActivationConfigProperty(propertyName = "destination", propertyValue = "jboss/activemq/queue/TestQueue")
+        @ActivationConfigProperty(propertyName = "destinationType",
+                propertyValue = "javax.jms.Queue"),
+        @ActivationConfigProperty(propertyName = "destination",
+                propertyValue = "jboss/activemq/queue/TestQueue")
 
-}, messageListenerInterface = MessageListener.class)
+},
+        messageListenerInterface = MessageListener.class)
 public class KitchenHerbsMDB implements MessageListener {
     @Override
     public void onMessage(Message message) {

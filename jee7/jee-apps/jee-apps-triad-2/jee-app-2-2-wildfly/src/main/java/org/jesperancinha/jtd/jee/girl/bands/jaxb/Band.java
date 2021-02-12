@@ -9,11 +9,11 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Band {
 
-    @XmlElement(name="Name")
+    @XmlElement(name = "Name")
     private String name;
 
-    @XmlElementWrapper(name="Members")
-    @XmlElement(name="Member" )
+    @XmlElementWrapper(name = "Members")
+    @XmlElement(name = "Member")
     private List<Member> memberList;
 
     @XmlElementWrapper(name = "Albums")

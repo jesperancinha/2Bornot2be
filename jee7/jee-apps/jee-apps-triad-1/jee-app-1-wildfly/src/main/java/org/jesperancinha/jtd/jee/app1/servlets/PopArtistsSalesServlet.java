@@ -58,22 +58,22 @@ public class PopArtistsSalesServlet extends HttpServlet {
         printMagentaGenericLn("Now we can randomly say that this artist has sold %d records!", totalSales);
 
         printGreenGenericLn(
-            "Note that we were able to inject a 'long' primitive. This can be done, but the type must match!");
+                "Note that we were able to inject a 'long' primitive. This can be done, but the type must match!");
         printGreenGenericLn(
-            "Our injected value is created once. It is application scoped and so it created per application instance");
+                "Our injected value is created once. It is application scoped and so it created per application instance");
 
         resp.setContentType("text/html");
         final PrintWriter writer = resp.getWriter();
         writer.println("<html><head><title>An artists page</title></head><body>");
         writer.println(String.format("<h1>Artist %s has sold %d records!</h1>", chosenArtist, totalSales));
         writer.println(
-            String.format("<h1>Artist %s has sold %d records! -> Nothing dynamic about this right?</h1>", chosenArtist,
-                totalSalesDynamic));
+                String.format("<h1>Artist %s has sold %d records! -> Nothing dynamic about this right?</h1>", chosenArtist,
+                        totalSalesDynamic));
         writer.println(
-            String.format("<h1>Artist %s has sold %d records! -> With Instance<E> it does become dynamic</h1>",
-                chosenArtist, totalDynamicSales.get()));
+                String.format("<h1>Artist %s has sold %d records! -> With Instance<E> it does become dynamic</h1>",
+                        chosenArtist, totalDynamicSales.get()));
         final String exercise1 = "Note that in JEE, we do not need to use any extra annotation to inject a Service.\n"
-            + "The service itself, does not use any annotation";
+                + "The service itself, does not use any annotation";
         writer.println("<p>" + exercise1 + "</p>");
         writer.println("<a href=\"../index.html\">Back</a>");
         writer.println("<a href=\"./sales\">Refresh</a>");

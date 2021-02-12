@@ -3,7 +3,7 @@ package org.jesperancinha.jtd.jee.soul.beans;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 
 public class MidasTouch {
-    
+
     private String membera;
     private String memberb;
     private String memberc;
@@ -13,7 +13,7 @@ public class MidasTouch {
 
     private String comment;
 
-    public MidasTouch(){
+    public MidasTouch() {
         GREEN.printGenericLn("The JSP set function sets parameters according to their name");
         GREEN.printGenericLn("By default, the chosen name is the actual of the instance member");
         GREEN.printGenericLn("It will find a match between the member and the incoming parameter");
@@ -76,7 +76,7 @@ public class MidasTouch {
         this.comment = comment;
     }
 
-    public void midasTouchSoul(){
+    public void midasTouchSoul() {
         throw new RuntimeException();
     }
 }

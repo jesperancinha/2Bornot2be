@@ -26,7 +26,7 @@ public class LittleRedCorvetteServlet extends HttpServlet {
         writer.println(FROM);
         writer.println(LITTLE_RED_CORVETTE);
         YELLOW.printGenericLn(LITTLE_RED_CORVETTE);
-        super.service(req,res);
+        super.service(req, res);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class LittleRedCorvetteServlet extends HttpServlet {
         YELLOW.printGenericLn(BABY_YOU_RE_MUCH_TOO_FAST);
         GREEN.printGenericLn("The point here is that in a normal situation the sequence is init -> service -> get -> destroy");
         GREEN.printGenericLn("This cycle can be broken if overriding doesn't continue in the super methods");
-        super.service(req,resp);
+        super.service(req, resp);
 
     }
 }

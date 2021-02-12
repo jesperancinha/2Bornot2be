@@ -8,8 +8,8 @@ public class KingsAndQueensMB {
 
     private String filterString;
 
-    public List<String> allKingsAndQueensHabsburg(){
-        return List.of("Carlos I","Felipe II", "Felipe III","Felipe IV","Carlos II");
+    public List<String> allKingsAndQueensHabsburg() {
+        return List.of("Carlos I", "Felipe II", "Felipe III", "Felipe IV", "Carlos II");
     }
 
     public String getFilterString() {

@@ -9,11 +9,11 @@ import javax.ejb.Stateless;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 // Caused by: org.jboss.weld.exceptions.DefinitionException:
 // WELD-000082: Scope interface javax.enterprise.context.RequestScoped
@@ -47,7 +47,7 @@ public class PalaceWaitingRoom implements Serializable {
             RED.printGenericLn("This is expected! The AuthorizationManager is indeed not available -> %s", exception.getMessage());
         } finally {
             printRainbowTitleLn(contextProvider.getContext()
-                .getCallerPrincipal());
+                    .getCallerPrincipal());
         }
         try {
             ORANGE.printGenericLn("Is user %s in role %s? Answer: %s", contextProvider.getContext()
@@ -80,7 +80,7 @@ public class PalaceWaitingRoom implements Serializable {
         } finally {
             try {
                 ORANGE.printGenericLn(contextProvider.getContext()
-                            .getCallerPrincipal());
+                        .getCallerPrincipal());
             } catch (Exception exception) {
                 RED.printGenericLn("This is expected! We cannot access call the Principle in a Post Construct phase-> %s", exception.getMessage());
 
@@ -112,7 +112,7 @@ public class PalaceWaitingRoom implements Serializable {
         } finally {
             try {
                 ORANGE.printGenericLn(contextProvider.getContext()
-                            .getCallerPrincipal());
+                        .getCallerPrincipal());
             } catch (Exception exception) {
                 RED.printGenericLn("This is expected! We cannot access call the Principle in a Pre Destroy phase-> %s", exception.getMessage());
             }

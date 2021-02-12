@@ -10,18 +10,17 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
+
 ## Introduction
 
-For a good understanding of JEE I've created different Triads.
-A triad is a basically a set of three applications.
-Each application may also be a set of one or three modules.
-In this document you can see a cloud of topics for every triad and their contexts.
-This way I hope to make your path to JEE certification a fun success! Enjoy!
+For a good understanding of JEE I've created different Triads. A triad is a basically a set of three applications. Each
+application may also be a set of one or three modules. In this document you can see a cloud of topics for every triad
+and their contexts. This way I hope to make your path to JEE certification a fun success! Enjoy!
 
 </i>João Esperancinha, on the 5th of January 2021</i>
 
-Note that the quad module is a conclusion module for the triads.
-We will continue with the [mastery web-apps](../jee-mastery).
+Note that the quad module is a conclusion module for the triads. We will continue with
+the [mastery web-apps](../jee-mastery).
 
 ## Prepare the environment
 
@@ -36,8 +35,9 @@ You can also just run the [Bash script file](installWildFly.sh) and hope that it
 
 This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek.
-The ones without any notice, are considered done, but they will be subject to improvements from time to time.
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready
+to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to
+improvements from time to time.
 
 ## Triads
 
@@ -80,7 +80,8 @@ The ones without any notice, are considered done, but they will be subject to im
 `Abstract`, `final`,  `JPA`,
 `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
 `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
-`@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`, `TimerService`
+`@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`
+, `TimerService`
 `@TransactionAttribute`, `TransactionAttributeType`
 `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` `TransactionAttribute`
 `Rollback`
@@ -89,9 +90,9 @@ The ones without any notice, are considered done, but they will be subject to im
 
 #### Applications:
 
--   [jee-app-1-wildfly](./jee-apps-triad-1/jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
--   [jee-app-2-wildfly](./jee-apps-triad-1/jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
--   [jee-app-3-wildfly](./jee-apps-triad-1/jee-app-3-wildfly) - A lesson on teeth health and the odd cases - Java 11
+- [jee-app-1-wildfly](./jee-apps-triad-1/jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
+- [jee-app-2-wildfly](./jee-apps-triad-1/jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
+- [jee-app-3-wildfly](./jee-apps-triad-1/jee-app-3-wildfly) - A lesson on teeth health and the odd cases - Java 11
 
 ### [jee-apps-triad-2](./jee-apps-triad-2)
 
@@ -102,28 +103,34 @@ The ones without any notice, are considered done, but they will be subject to im
 `<alternatives>`, `@Alternative`, `@Default`
 `JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
 `URL Rewriting`, `Session`, `Cookie`
-`soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
+`soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`
+, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
 `@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
 `@WebParam`, `@WebResult`
 `Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
 `@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
-`Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`, `<init-param>`
+`Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`
+, `<init-param>`
 `<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
 `Filter`, `web.xml`, `order`, `direct references`
 `Session`, `invalidate`, `IllegalStateException`
 `service`, `doGet`
-`<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
+`<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`
+, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
 `<error-page>`, `<exception-type>`, `<location>`
-`<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
+`<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`
+, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`
+, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
 `<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
 `<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
-`<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
+`<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`
+, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
 
 #### Applications:
 
--   [jee-app-2-1-wildfly](./jee-apps-triad-2/jee-app-2-1-wildfly) - Boy bands in the 90's
--   [jee-app-2-2-wildfly](./jee-apps-triad-2/jee-app-2-2-wildfly) - Girl Bands
--   [jee-app-2-3-wildfly](./jee-apps-triad-2/jee-app-2-3-wildfly) - Soul Music
+- [jee-app-2-1-wildfly](./jee-apps-triad-2/jee-app-2-1-wildfly) - Boy bands in the 90's
+- [jee-app-2-2-wildfly](./jee-apps-triad-2/jee-app-2-2-wildfly) - Girl Bands
+- [jee-app-2-3-wildfly](./jee-apps-triad-2/jee-app-2-3-wildfly) - Soul Music
 
 ### [jee-apps-quad-1](./jee-apps-quad-1)
 
@@ -142,9 +149,12 @@ The ones without any notice, are considered done, but they will be subject to im
 `MessageHandler.Partial`, `MessageHandler.Whole`, `@OnMessage`, `isLast`
 `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
 `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
-`xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
+`xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`
+, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
 `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
-`j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
+`j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`
+, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`
+, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
 `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
 `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
@@ -155,29 +165,27 @@ The ones without any notice, are considered done, but they will be subject to im
 
 #### Applications:
 
--   [jee-app-3-1-wildfly](./jee-apps-quad-1/jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
--   [jee-app-3-2-wildfly](./jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain - 🇪🇸
--   [jee-app-3-3-wildfly](./jee-apps-quad-1/jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
--   [jee-app-3-4-wildfly](./jee-apps-quad-1/jee-app-3-4-wildfly) - History of the United Kingdom - 🇬🇧
+- [jee-app-3-1-wildfly](./jee-apps-quad-1/jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
+- [jee-app-3-2-wildfly](./jee-apps-quad-1/jee-app-3-2-wildfly) - History of Spain - 🇪🇸
+- [jee-app-3-3-wildfly](./jee-apps-quad-1/jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
+- [jee-app-3-4-wildfly](./jee-apps-quad-1/jee-app-3-4-wildfly) - History of the United Kingdom - 🇬🇧
 
 ## References
 
--   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
--   [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
--   [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+- [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
+- [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
+- [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
+- [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+- [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+- [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+- [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+- [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+- [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+- [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+- [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ## About me 👨🏽‍💻🚀
 

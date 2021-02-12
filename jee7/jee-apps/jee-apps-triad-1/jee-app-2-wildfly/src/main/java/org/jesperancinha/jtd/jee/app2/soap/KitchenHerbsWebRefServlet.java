@@ -29,10 +29,10 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
     public KitchenHerbsServerImplService helloMessengerServicePure;
 
 
-//    It is an error to combine this annotation with the @SOAPMessageHandlers annotation.
+    //    It is an error to combine this annotation with the @SOAPMessageHandlers annotation.
 //    from: https://docs.oracle.com/javase/7/docs/api/javax/jws/HandlerChain.html
     @WebServiceRef
-    @HandlerChain(file= "handler-chain.xml")
+    @HandlerChain(file = "handler-chain.xml")
     private KitchenHerbsServerImplService kitchenHerbsMessengerHandlerChain;
 
     @WebServiceRef(wsdlLocation = "http://localhost:8080/jee-app-2-wildfly-ws-1.0-SNAPSHOT/kitchen-herbs?wsdl")
@@ -40,7 +40,7 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
@@ -67,15 +67,19 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
     private String sayHello(String name) {
         return KitchenHerbsServerImplService.getKitchenHerbsPort().sayHelloWorld(name);
     }
+
     private String sayHello2(String name) {
         return kitchenHerbsServiceWsdl.getKitchenHerbsPort().sayHelloWorld(name);
     }
+
     private String sayHello3(String name) {
         return helloMessengerServicePure.getKitchenHerbsPort().sayHelloWorld(name);
     }
+
     private String sayHello4(String name) {
         return kitchenHerbsMessengerHandlerChain.getKitchenHerbsPort().sayHelloWorld(name);
     }
+
     private String sayHello5(String name) {
         return kitchenHerbsMessenger.sayHelloWorld(name);
     }

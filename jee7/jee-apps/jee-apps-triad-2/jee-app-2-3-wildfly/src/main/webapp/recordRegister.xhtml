@@ -29,7 +29,7 @@
                 <h:outputLabel
                         for="joinedDate2" value="Publishing Date:"/>
                 <h:inputText id="joinedDate2" value="#{albumRegistry.newAlbum.publishingDate}">
-                        <f:convertDateTime pattern="yyyy-MMM-dd"/>;
+                    <f:convertDateTime pattern="yyyy-MMM-dd"/>;
                 </h:inputText>
             </p>
             <h:commandButton value="Save" action="#{albumRegistry.register}"/>

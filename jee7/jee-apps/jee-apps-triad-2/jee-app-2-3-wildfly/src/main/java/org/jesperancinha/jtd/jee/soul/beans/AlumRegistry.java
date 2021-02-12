@@ -16,10 +16,10 @@ public class AlumRegistry {
 
     private Album newAlbum;
 
-    public AlumRegistry(){
+    public AlumRegistry() {
         this.newAlbum = new Album();
         this.newAlbum.setAlbumName("Unexpected");
-        this.newAlbum.setPublishingDate(new Date(2009-1900, Calendar.NOVEMBER, 23));
+        this.newAlbum.setPublishingDate(new Date(2009 - 1900, Calendar.NOVEMBER, 23));
     }
 
     public Album getNewAlbum() {
@@ -30,7 +30,7 @@ public class AlumRegistry {
         this.newAlbum = newAlbum;
     }
 
-    public void register(){
+    public void register() {
         Consolerizer.printRandomColorGenericLn("%s has been registered!", newAlbum);
         GREEN.printGenericLn("Well sort of");
         GREEN.printGenericLn("This is just to simulate and see what happens between the browser and the server");

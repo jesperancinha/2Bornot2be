@@ -12,7 +12,8 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 @MessageDriven(activationConfig = {
-    @ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/jms/LyricsQueue") })
+        @ActivationConfigProperty(propertyName = "destination",
+                propertyValue = "java:/jms/LyricsQueue")})
 public class LyricsListener implements MessageListener {
     @Override
     public void onMessage(Message message) {

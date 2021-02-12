@@ -10,12 +10,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Table
-public class Tooth  {
+public class Tooth {
 
     private UUID uuid;
 

@@ -84,15 +84,15 @@ public class ManagedBeanAlbumDao implements AlbumDao {
                     throw e;
                 }
                 printOrangeGenericLn(
-                    "You have been assigned id %d. This won't work because it matches an id already in the database",
-                    album.getId());
+                        "You have been assigned id %d. This won't work because it matches an id already in the database",
+                        album.getId());
                 printOrangeGenericLn("We'll start a new transaction to merge this record.");
                 printRedGenericLn(
-                    "This failed now, and that is probably because the H2 database SEQUENCE hasn't passed the initial registries.");
+                        "This failed now, and that is probably because the H2 database SEQUENCE hasn't passed the initial registries.");
                 printRedGenericLn(
-                    "Remember that a direct insert upon initialization does not affect the sequence counters.");
+                        "Remember that a direct insert upon initialization does not affect the sequence counters.");
                 printRedGenericLn(
-                    "A better way to deal with ID's is with UUID's. This will be shown in further implementations.");
+                        "A better way to deal with ID's is with UUID's. This will be shown in further implementations.");
                 utx.begin();
                 entityManager.merge(album);
                 utx.commit();
@@ -115,9 +115,9 @@ public class ManagedBeanAlbumDao implements AlbumDao {
 
     private long getNewId() {
         return getAllAlbums().stream()
-            .max((x, y) -> Math.toIntExact(x.getId() - y.getId()))
-            .map(Album::getId)
-            .orElse(0L) + 1;
+                .max((x, y) -> Math.toIntExact(x.getId() - y.getId()))
+                .map(Album::getId)
+                .orElse(0L) + 1;
     }
 
     @Override

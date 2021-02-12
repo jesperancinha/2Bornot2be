@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @WebServlet("/LogoutGirlBandRecordStoreServlet")
 public class LogoutGirlBandRecordStoreServlet extends HttpServlet {
@@ -25,7 +25,7 @@ public class LogoutGirlBandRecordStoreServlet extends HttpServlet {
                 cookie.setMaxAge(0);
                 response.addCookie(cookie);
                 if (cookie.getName()
-                    .equals("JSESSIONID")) {
+                        .equals("JSESSIONID")) {
                     printRainbowTitleLn("JSESSIONID=" + cookie.getValue());
                 } else {
                     BRIGHT_CYAN.printGenericLn("Found cookie %s!. Invalidating...", cookie);

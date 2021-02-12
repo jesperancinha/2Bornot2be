@@ -28,11 +28,15 @@
 </fmt:bundle>
 
 <h1>In Spanish</h1>
-<fmt:message key = "count.one" bundle = "${lang_es}"/><br/>
-<fmt:message key = "count.two" bundle = "${lang_es}"/><br/>
-<fmt:message key = "count.three" bundle = "${lang_es}"/><br/>
-<p>English context: <jsp:text>${lang_en}</jsp:text></p>
-<p>Spanish context: <jsp:text>${lang_es}</jsp:text></p>
+<fmt:message key="count.one" bundle="${lang_es}"/><br/>
+<fmt:message key="count.two" bundle="${lang_es}"/><br/>
+<fmt:message key="count.three" bundle="${lang_es}"/><br/>
+<p>English context:
+    <jsp:text>${lang_en}</jsp:text>
+</p>
+<p>Spanish context:
+    <jsp:text>${lang_es}</jsp:text>
+</p>
 <p></p>
 </body>
 

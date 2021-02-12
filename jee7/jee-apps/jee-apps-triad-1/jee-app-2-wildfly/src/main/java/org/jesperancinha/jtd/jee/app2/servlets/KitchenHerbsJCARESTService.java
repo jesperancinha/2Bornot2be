@@ -22,7 +22,7 @@ public class KitchenHerbsJCARESTService extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         Consolerizer.setupFastDefault();
         String result = kitchenHerbsConnectionFactory.toString();
 
@@ -33,7 +33,7 @@ public class KitchenHerbsJCARESTService extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         // TODO Auto-generated method stub
         doGet(request, response);
     }

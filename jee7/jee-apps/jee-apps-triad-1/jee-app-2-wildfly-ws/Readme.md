@@ -2,16 +2,16 @@
 
 ## References
 
--   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
--   [JAX-WS Hello World Example – RPC Style](https://examples.javacodegeeks.com/enterprise-java/jws/jax-ws-hello-world-example-rpc-style/)
--   [Hello World JAX-RS Application](https://www.journaldev.com/9191/java-web-services-tutorial)
--   [Create a Java Web Service (SOAP RPC) for WildFly](https://www.learn-it-with-examples.com/development/java/java-web-services/create-simple-java-web-service-soap-rpc-web-app.html)
-    
+- [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
+- [JAX-WS Hello World Example – RPC Style](https://examples.javacodegeeks.com/enterprise-java/jws/jax-ws-hello-world-example-rpc-style/)
+- [Hello World JAX-RS Application](https://www.journaldev.com/9191/java-web-services-tutorial)
+- [Create a Java Web Service (SOAP RPC) for WildFly](https://www.learn-it-with-examples.com/development/java/java-web-services/create-simple-java-web-service-soap-rpc-web-app.html)
+
 ## Running
 
 After deployment you can test the WSDL here:
 
--   http://localhost:8080/jee-app-2-wildfly-ws-1.0-SNAPSHOT/kitchen-herbs?wsdl
+- http://localhost:8080/jee-app-2-wildfly-ws-1.0-SNAPSHOT/kitchen-herbs?wsdl
 
 ## Errors Reported While  Deploying
 
@@ -38,7 +38,7 @@ Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFL
 
 <b>Solution<b>
 
-Add a `proper` `jboss-deployment-structure.xml`. 
+Add a `proper` `jboss-deployment-structure.xml`.
 From [JBoss Application Server](https://cxf.apache.org/docs/application-server-specific-configuration-guide.html):
 
 ```xml

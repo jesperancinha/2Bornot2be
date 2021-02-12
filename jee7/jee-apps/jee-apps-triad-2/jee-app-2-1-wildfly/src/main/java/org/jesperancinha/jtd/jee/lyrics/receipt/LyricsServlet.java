@@ -38,13 +38,13 @@ public class LyricsServlet extends HttpServlet {
         try {
             QueueConnection connection = (QueueConnection) connectionFactory.createConnection();
             try {
-                    QueueSession queueSession = connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);
+                QueueSession queueSession = connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);
                 try {
                     MessageProducer producer = queueSession.createProducer(destination);
                     try {
                         final String randomLyric = lyricsService.getRandomLyric();
                         TextMessage message = queueSession.createTextMessage(randomLyric);
-                        producer.send(  message);
+                        producer.send(message);
                         writer.println("<p>Lyrics has been sent!</p>");
                         writer.println(String.format("<p>%s</p>", randomLyric));
 //                        message.acknowledge();

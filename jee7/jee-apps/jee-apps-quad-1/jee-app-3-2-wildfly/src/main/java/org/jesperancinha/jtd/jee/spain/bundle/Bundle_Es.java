@@ -9,8 +9,8 @@ public class Bundle_Es extends ListResourceBundle {
     }
 
     static final Object[][] contents = {
-        {"count.one", "Uno"},
-        {"count.two", "Dos"},
-        {"count.three", "Tres"},
+            {"count.one", "Uno"},
+            {"count.two", "Dos"},
+            {"count.three", "Tres"},
     };
 }

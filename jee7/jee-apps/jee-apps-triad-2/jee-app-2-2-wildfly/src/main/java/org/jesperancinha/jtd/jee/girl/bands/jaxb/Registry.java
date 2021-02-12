@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlRootElement(name="Registry")
+@XmlRootElement(name = "Registry")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Registry {
 
-    @XmlElementWrapper(name="Bands")
-    @XmlElement(name="Band")
+    @XmlElementWrapper(name = "Bands")
+    @XmlElement(name = "Band")
     private List<Band> bandList;
 
     public List<Band> getBandList() {

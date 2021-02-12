@@ -6,8 +6,8 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.app1.Resources;
 import org.jesperancinha.jtd.jee.app1.data.ArtistProducer;
 import org.junit.AfterClass;
@@ -27,11 +27,11 @@ public class ManagedBeanAlbumDaoTest {
     @Deployment
     public static Archive<?> createTestArchive() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Album.class, ManagedBeanAlbumDao.class, Resources.class, ArtistProducer.class, AlbumDao.class,
-                UserTransaction.class, EntityManager.class, Consolerizer.class, ConsolerizerColor.class)
-            .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsWebInfResource("test-ds.xml");
+                .addClasses(Album.class, ManagedBeanAlbumDao.class, Resources.class, ArtistProducer.class, AlbumDao.class,
+                        UserTransaction.class, EntityManager.class, Consolerizer.class, ConsolerizerColor.class)
+                .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
+                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+                .addAsWebInfResource("test-ds.xml");
     }
 
     @Inject
@@ -99,9 +99,9 @@ public class ManagedBeanAlbumDaoTest {
         printGreenGenericLn("@Email - Means that the member has to have a conventional email form");
         printGreenGenericLn("@Digit - Is specific to numbers in a String form. It can be seen as an extension @Size");
         printGreenGenericLn(
-            "More about @Digit: https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/Digits.html");
+                "More about @Digit: https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/Digits.html");
         printGreenGenericLn("BigDecimal\n" + "BigInteger\n" + "CharSequence\n"
-            + "byte, short, int, long, and their respective wrapper types");
+                + "byte, short, int, long, and their respective wrapper types");
     }
 
 }

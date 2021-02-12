@@ -29,7 +29,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 public class ToothServlet extends HttpServlet {
 
     @Inject
-    private  ToothService toothService;
+    private ToothService toothService;
 
     @Inject
     private JawService jawService;
@@ -49,7 +49,7 @@ public class ToothServlet extends HttpServlet {
 
         tooth.setJaw(jaw);
 
-        var tooth1 = (Tooth)null;
+        var tooth1 = (Tooth) null;
         try {
             tooth1 = toothService.updateItRight(tooth);
         } catch (NamingException e) {

@@ -40,7 +40,7 @@ public class PalaceWaitingRESTService implements Serializable {
     @GET
     @Path("palace")
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed({ "Trastamara" })
+    @RolesAllowed({"Trastamara"})
     public String palaceName() {
         palaceWaitingRoom.getContextProvider().getContext().isCallerInRole("Manager");
         palaceWaitingRoom.isUserInRole("Manager");

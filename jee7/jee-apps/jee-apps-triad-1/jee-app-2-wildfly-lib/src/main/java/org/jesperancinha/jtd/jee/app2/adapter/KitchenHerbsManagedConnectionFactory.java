@@ -14,10 +14,11 @@ import java.util.Iterator;
 import java.util.Set;
 
 @ConnectionDefinition(connectionFactory = KitchenHerbsConnectionFactory.class,
-    connectionFactoryImpl = KitchenHerbsConnectionFactoryImpl.class, connection = KitchenHerbsConnection.class,
-    connectionImpl = KitchenHerbsConnectionImpl.class)
+        connectionFactoryImpl = KitchenHerbsConnectionFactoryImpl.class,
+        connection = KitchenHerbsConnection.class,
+        connectionImpl = KitchenHerbsConnectionImpl.class)
 public class KitchenHerbsManagedConnectionFactory
-    implements ManagedConnectionFactory, ResourceAdapterAssociation {
+        implements ManagedConnectionFactory, ResourceAdapterAssociation {
 
     private static final long serialVersionUID = 1L;
 
@@ -39,12 +40,12 @@ public class KitchenHerbsManagedConnectionFactory
     }
 
     public ManagedConnection createManagedConnection(Subject subject, ConnectionRequestInfo cxRequestInfo)
-        throws ResourceException {
+            throws ResourceException {
         return new KitchenHerbsManagedConnection(this);
     }
 
     public ManagedConnection matchManagedConnections(Set connectionSet, Subject subject,
-        ConnectionRequestInfo cxRequestInfo) throws ResourceException {
+                                                     ConnectionRequestInfo cxRequestInfo) throws ResourceException {
         ManagedConnection result = null;
 
         Iterator it = connectionSet.iterator();

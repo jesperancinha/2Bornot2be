@@ -11,9 +11,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
 @Path("/arrival")
 @SessionScoped
@@ -38,13 +38,13 @@ public class KingsAndQueensArrival implements Serializable {
     @Path("{monarch}")
     @Produces(MediaType.APPLICATION_JSON)
     public String processArrival(
-        @PathParam("monarch")
-            String monarch) throws InterruptedException {
+            @PathParam("monarch")
+                    String monarch) throws InterruptedException {
         setupFastDefault();
         ORANGE.printGenericLn("We will now see what will happen with our %s with hash %s", eventProcessor.getClass()
-            .getCanonicalName(), eventProcessor.hashCode());
+                .getCanonicalName(), eventProcessor.hashCode());
         ORANGE.printGenericLn("In the same way we'll se what happens with %s with hash %s", cleanerProcessor.getClass()
-            .getCanonicalName(), cleanerProcessor.hashCode());
+                .getCanonicalName(), cleanerProcessor.hashCode());
         final ArrivalEvent arrivalEvent = new ArrivalEvent();
         final String message = String.format("Your Majesty King/Queen %s is arriving to the Palace", monarch);
         arrivalEvent.setMessage(message);
@@ -63,12 +63,12 @@ public class KingsAndQueensArrival implements Serializable {
     @Path("transaction/{monarch}")
     @Produces(MediaType.APPLICATION_JSON)
     public String processTransactionArrival(
-        @PathParam("monarch")
-            String monarch) throws Exception {
+            @PathParam("monarch")
+                    String monarch) throws Exception {
         userTransaction.begin();
         setupFastDefault();
         ORANGE.printGenericLn("We will now see what will happen with our %s with hash %s", eventProcessor.getClass()
-            .getCanonicalName(), eventProcessor.hashCode());
+                .getCanonicalName(), eventProcessor.hashCode());
         final ArrivalEvent arrivalEvent = new ArrivalEvent();
         final String message = String.format("Your Majesty King/Queen %s is arriving to the Palace", monarch);
         arrivalEvent.setMessage(message);

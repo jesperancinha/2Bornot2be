@@ -1,5 +1,6 @@
 package org.jesperancinha.jtd.jee.app1.controllers;
 
+import org.jesperancinha.jtd.jee.app1.domain.Artist;
 import org.jesperancinha.jtd.jee.app1.domain.ArtistDao;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +11,6 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
-import org.jesperancinha.jtd.jee.app1.domain.Artist;
 
 import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;

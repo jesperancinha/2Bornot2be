@@ -24,8 +24,8 @@ public class BandRegistryRestService {
         final Registry registry = (Registry) unmarshaller.unmarshal(getClass().getResourceAsStream("/registry.xml"));
 
         registry.getBandList()
-            .forEach(band -> band.getMemberList()
-                .forEach(member -> GREEN.printGenericLn(member.getName())));
+                .forEach(band -> band.getMemberList()
+                        .forEach(member -> GREEN.printGenericLn(member.getName())));
         return registry;
     }
 }

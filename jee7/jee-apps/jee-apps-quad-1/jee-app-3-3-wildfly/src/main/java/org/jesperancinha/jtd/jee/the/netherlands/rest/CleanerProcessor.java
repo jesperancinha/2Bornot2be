@@ -6,16 +6,16 @@ import java.io.Serializable;
 
 import static javax.enterprise.event.Reception.IF_EXISTS;
 import static javax.enterprise.event.TransactionPhase.IN_PROGRESS;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRainbowFlag;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRainbowFlag;
 
 @RequestScoped
 public class CleanerProcessor implements Serializable {
     public void cleanPalace(
-        @Observes(notifyObserver = IF_EXISTS)
-            ArrivalForCleanerEvent event) {
+            @Observes(notifyObserver = IF_EXISTS)
+                    ArrivalForCleanerEvent event) {
         setupFastDefault();
         printRainbowTitleLn("Event received! -> %s, %s, %s", IF_EXISTS, IN_PROGRESS, event);
         printRainbowTitleLn("We get this event only when there is an instance in a related context.");

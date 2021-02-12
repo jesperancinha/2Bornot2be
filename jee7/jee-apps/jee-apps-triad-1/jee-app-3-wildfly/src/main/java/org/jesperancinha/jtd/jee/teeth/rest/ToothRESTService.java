@@ -40,6 +40,7 @@ public class ToothRESTService {
      * It does however if we want to perform operations of this sort only in the back end.
      * Also not the use of transient. We had to use EAGER and that means that an infinite loop would happen.
      * Notice that we don't need Serializable here.
+     *
      * @return A list of all {@link Tooth}
      */
     @GET
@@ -61,7 +62,7 @@ public class ToothRESTService {
         try {
             tooth1 = toothService.updateItRight(tooth);
             jaw1.getToothList()
-                .add(tooth1);
+                    .add(tooth1);
             jaw2 = jawService.updateItRight(jaw1);
         } catch (NamingException e) {
             RED.printThrowableAndExit(e);

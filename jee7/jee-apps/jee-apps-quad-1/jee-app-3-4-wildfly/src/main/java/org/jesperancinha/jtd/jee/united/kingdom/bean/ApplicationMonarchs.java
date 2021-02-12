@@ -12,12 +12,12 @@ public class ApplicationMonarchs implements Serializable {
 
     private Monarch monarch = new Monarch();
 
-    ApplicationMonarchs(){
+    ApplicationMonarchs() {
         monarch.setName("Edward VII");
         monarch.setFamily("Saxe-Coburg and Gotha");
     }
 
-    public void save(){
+    public void save() {
         ORANGE.printGenericLn("You have just recorder monarch -> %s", monarch);
     }
 

@@ -23,7 +23,8 @@ public class Artist {
     private Long id;
 
     @Column
-    @Size(min = 3, max = 100)
+    @Size(min = 3,
+            max = 100)
     private String name;
 
     public Long getId() {

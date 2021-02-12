@@ -24,7 +24,7 @@ public class Tooth {
         this.uuid = uuid;
     }
 
-    public String toString(){
+    public String toString() {
         return uuid.toString();
     }
 }

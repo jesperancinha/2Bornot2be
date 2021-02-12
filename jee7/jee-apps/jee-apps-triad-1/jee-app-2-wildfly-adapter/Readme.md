@@ -1,4 +1,5 @@
 # jee-app-2-wildfly-adapter
+
 ## Technologies used
 
 ---
@@ -15,8 +16,7 @@
 
 ## Exercise
 
-The apps under [jee-apps](../..), cover lots of topics.
-For this app we cover:
+The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
@@ -24,15 +24,17 @@ For this app we cover:
 
 In this web application it is important to understand the basics of these:
 
-1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+   and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
 2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
 3. JMS - Java Message Service
 
-This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access
+Objects, Services, Producers and Observers
 
 The theme of this discovery app is: <b>Kitchen Herbs and History</b>
 
-## How to run       
+## How to run
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
@@ -61,6 +63,7 @@ You can also perform these post requests:
 ```bash
 curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type: application/xml" -d '<herb><name>Parsley</name><color>Green</color><grams>1000</grams></herb>'
 ```
+
 ## Run Arquillian tests
 
 ```bash
@@ -71,31 +74,30 @@ mvn clean install -Parq-wildfly-managed
 
 ## Run Arquillian tests on Intellij
 
-Use Arquillian Managed and you should get a screen like this.
-All options should be the default ones.
+Use Arquillian Managed and you should get a screen like this. All options should be the default ones.
 
 ![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
--   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
--   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
--   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
--   [JCA IronJacamar](http://www.ironjacamar.org/)
--   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
--   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
--   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
--   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
--   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
--   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
--   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
--   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
--   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
--   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
--   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
--   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+- [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
+- [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
+- [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
+- [JCA IronJacamar](http://www.ironjacamar.org/)
+- [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
+- [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
+- [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+- [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
+- [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+- [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
+- [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
+- [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
+- [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
+- [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
+- [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
+- [Wild Fly Downloads](https://www.wildfly.org/downloads/)
 
-##  Context references
+## Context references
 
 ## About me 👨🏽‍💻🚀
 

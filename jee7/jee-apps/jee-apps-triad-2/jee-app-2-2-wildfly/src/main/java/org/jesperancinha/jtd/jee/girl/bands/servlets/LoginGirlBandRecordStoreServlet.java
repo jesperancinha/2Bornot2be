@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 @WebServlet("/LoginGirlBandRecordStoreServlet")
 public class LoginGirlBandRecordStoreServlet extends HttpServlet {
@@ -20,7 +20,7 @@ public class LoginGirlBandRecordStoreServlet extends HttpServlet {
     private static final String PASSWORD = "admin";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
 
         final var user = request.getParameter("username");
         final var pwd = request.getParameter("password");
@@ -30,13 +30,13 @@ public class LoginGirlBandRecordStoreServlet extends HttpServlet {
             httpSession.setAttribute("username", "Sugababes");
             BRIGHT_MAGENTA.printGenericLn("We've put our username in the httpSession object -> %s", httpSession.getAttributeNames());
             httpSession.getAttributeNames()
-                .asIterator()
-                .forEachRemaining(text -> BRIGHT_MAGENTA.printGenericLn(text));
+                    .asIterator()
+                    .forEachRemaining(text -> BRIGHT_MAGENTA.printGenericLn(text));
             Cookie[] cookies = request.getCookies();
             if (cookies != null) {
                 for (Cookie cookie : cookies) {
                     if (cookie.getName()
-                        .equals("JSESSIONID")) {
+                            .equals("JSESSIONID")) {
                         printRainbowTitleLn("JSESSIONID=%s", cookie.getValue());
                     } else {
                         BRIGHT_CYAN.printGenericLn("Found cookie %s!", cookie);

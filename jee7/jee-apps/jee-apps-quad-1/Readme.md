@@ -10,6 +10,7 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
+
 ## Applications
 
 ### [jee-app-3-1-wildfly](jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
@@ -30,7 +31,7 @@
 
 #### Modules
 
--   [jee-app-3-1-wildfly](jee-app-3-1-wildfly)
+- [jee-app-3-1-wildfly](jee-app-3-1-wildfly)
 
 ### [jee-app-3-2-wildfly](jee-app-3-2-wildfly) - History of Spain - 🇪🇸
 
@@ -38,9 +39,12 @@
 
 1. `navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`. `h:commandLink`
 2. `http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
-3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
+3. `xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`
+   , `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
 4. `<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
-5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
+5. `j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`
+   , `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`
+   , `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
 6. `getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
 7. `@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
 8. `SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
@@ -48,20 +52,21 @@
 
 #### Modules
 
--   [jee-app-3-2-wildfly](jee-app-3-2-wildfly)
+- [jee-app-3-2-wildfly](jee-app-3-2-wildfly)
 
 ### [jee-app-3-3-wildfly](jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
 
 #### Subjects
 
-1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`, `ejb-name`, `method-name`,
+1. `ejb-jar.xml`,  `@RolesAllowed`, `ejb-jar`, `assembly-descriptor`, `method-permission`, `role-name`, `method`
+   , `ejb-name`, `method-name`,
 2. `@Named`, `@Default`, `@Any`
 3. `@Observes`, `Reception.IF_EXISTS`, `Reception.ALWAYS`
 4. `@Observes`, `Reception.BEFORE_COMPLETION`, `Reception.AFTER_COMPLETION`,  `Reception.AFTER_SUCCESS`
 
 #### Modules
 
--   [jee-app-3-3-wildfly](jee-app-3-3-wildfly)
+- [jee-app-3-3-wildfly](jee-app-3-3-wildfly)
 
 ### [jee-app-3-4-wildfly](jee-app-3-4-wildfly) - History of The United Kingdom - 🇬🇧
 
@@ -73,24 +78,22 @@
 
 #### Modules
 
--   [jee-app-3-4-wildfly](jee-app-3-4-wildfly)
+- [jee-app-3-4-wildfly](jee-app-3-4-wildfly)
 
 ## References
 
--   [Glassfish server does not start. NullPointeException ](https://stackoverflow.com/questions/47458119/glassfish-server-does-not-start-nullpointeexception)
--   [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
--   [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
--   [Pluralsight](https://www.pluralsight.com/)
--   [Whizlabs](https://www.whizlabs.com/)
--   [Enthuware](https://enthuware.com/)
--   [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
--   [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
--   [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
--   [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
--   [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
--   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-tomcat-4/)
--   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
--   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+- [Glassfish server does not start. NullPointeException ](https://stackoverflow.com/questions/47458119/glassfish-server-does-not-start-nullpointeexception)
+- [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+- [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+- [Pluralsight](https://www.pluralsight.com/)
+- [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+- [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+- [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+- [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+- [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+- [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-tomcat-4/)
+- [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ## About me 👨🏽‍💻🚀
 

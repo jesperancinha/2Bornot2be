@@ -36,7 +36,7 @@ public class ToothService1 {
     }
 
     public Tooth updateItRight(final Tooth tooth)
-        throws NamingException, HeuristicMixedException, HeuristicRollbackException,NotSupportedException, SystemException, RollbackException {
+            throws NamingException, HeuristicMixedException, HeuristicRollbackException, NotSupportedException, SystemException, RollbackException {
         var context = new InitialContext();
 
 
@@ -44,9 +44,9 @@ public class ToothService1 {
         YELLOW.printGenericLn("This get's done by the container itself");
         YELLOW.printGenericLn("And so the code changes a bit to avoid the following error:");
         YELLOW.printGenericLn("javax.naming.NameNotFoundException: UserTransaction\n"
-            + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)\n"
-            + "Caused by: java.lang.IllegalStateException: WFLYEJB0137: Only session and message-driven beans with bean-managed transaction demarcation are allowed to access UserTransaction\n"
-            + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)");
+                + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)\n"
+                + "Caused by: java.lang.IllegalStateException: WFLYEJB0137: Only session and message-driven beans with bean-managed transaction demarcation are allowed to access UserTransaction\n"
+                + "        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)");
         // javax.naming.NameNotFoundException: UserTransaction
         //        at deployment.test.war//org.jesperancinha.jtd.jee.teeth.service.ToothService1Test.findTooth(ToothService1Test.java:53)
         //Caused by: java.lang.IllegalStateException: WFLYEJB0137: Only session and message-driven beans with bean-managed transaction demarcation are allowed to access UserTransaction
@@ -61,7 +61,7 @@ public class ToothService1 {
     }
 
     public Tooth updateToothJustMerge(final Tooth tooth) {
-       return entityManager.merge(tooth);
+        return entityManager.merge(tooth);
     }
 
     // WFLYEJB0034: EJB Invocation failed on component ToothService for method
@@ -72,11 +72,11 @@ public class ToothService1 {
         final var transaction1 = entityManager.getTransaction();
         BRIGHT_MAGENTA.printGenericLn(transaction1);
         transaction1
-            .begin();
+                .begin();
         entityManager.merge(tooth);
         final var transaction2 = entityManager.getTransaction();
         BRIGHT_MAGENTA.printGenericLn(transaction2);
         transaction2
-            .commit();
+                .commit();
     }
 }

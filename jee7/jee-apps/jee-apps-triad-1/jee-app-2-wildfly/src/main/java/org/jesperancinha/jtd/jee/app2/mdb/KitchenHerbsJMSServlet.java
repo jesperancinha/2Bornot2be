@@ -33,7 +33,7 @@ public class KitchenHerbsJMSServlet extends HttpServlet {
     private Queue queue;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
 
         try {
             example();

@@ -34,7 +34,7 @@ public class ToothService2 {
     }
 
     public Tooth updateItRight(final Tooth tooth)
-        throws NamingException, HeuristicMixedException, HeuristicRollbackException,NotSupportedException, SystemException, RollbackException {
+            throws NamingException, HeuristicMixedException, HeuristicRollbackException, NotSupportedException, SystemException, RollbackException {
         var context = new InitialContext();
         var utx = (UserTransaction) context.lookup("java:comp/UserTransaction");
         utx.begin();
@@ -62,11 +62,11 @@ public class ToothService2 {
         final var transaction1 = entityManager.getTransaction();
         BRIGHT_MAGENTA.printGenericLn(transaction1);
         transaction1
-            .begin();
+                .begin();
         entityManager.merge(tooth);
         final var transaction2 = entityManager.getTransaction();
         BRIGHT_MAGENTA.printGenericLn(transaction2);
         transaction2
-            .commit();
+                .commit();
     }
 }

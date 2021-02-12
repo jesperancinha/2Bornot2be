@@ -6,8 +6,8 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain1.Tooth;
 import org.junit.Before;
@@ -37,24 +37,24 @@ public class ToothService1Test {
     ToothService1 toothService;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         Consolerizer.setupFastDefault();
     }
 
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(ToothService1.class, Tooth.class, Resources.class, UserTransaction.class, EntityManager.class,
-                Consolerizer.class, ConsolerizerColor.class)
-            .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsWebInfResource("test-ds.xml");
+                .addClasses(ToothService1.class, Tooth.class, Resources.class, UserTransaction.class, EntityManager.class,
+                        Consolerizer.class, ConsolerizerColor.class)
+                .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
+                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+                .addAsWebInfResource("test-ds.xml");
     }
 
     @Test
     public void findTooth()
-        throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
-        NotSupportedException {
+            throws HeuristicRollbackException, RollbackException, SystemException, NamingException, HeuristicMixedException,
+            NotSupportedException {
         final var tooth = new Tooth();
         final var uuid = UUID.randomUUID();
         tooth.setUuid(uuid);

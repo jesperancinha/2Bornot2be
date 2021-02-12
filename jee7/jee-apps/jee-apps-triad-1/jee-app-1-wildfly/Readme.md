@@ -13,19 +13,18 @@
 
 ## Exercise
 
-The apps under [jee-apps](../..), cover lots of topics.
-For this app we cover:
+The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
 2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
-3. `@ApplicationScoped` 
+3. `@ApplicationScoped`
 4. JSF (Java Server Faces)
 5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
 6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
 7. `@Stateful`, `@Alternative`
 8. `@Model`
-9. `<ui:repeat`, `<h:link` and `<f:param` 
-10. `<h:dataTable`, `<h:column` and `<f:facets` 
+9. `<ui:repeat`, `<h:link` and `<f:param`
+10. `<h:dataTable`, `<h:column` and `<f:facets`
 11. `<h:outputFormat ` and `<f:param`
 12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
 13. Arquillian JUnit tests
@@ -45,11 +44,12 @@ In this web application it is important to understand the basics of these:
 6. Arquillian
 7. JAX - RS
 
-This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access
+Objects, Services, Producers and Observers
 
 The theme of this discovery app is: <b>Pop stars list, music, lyrics and history</b>
 
-## How to run       
+## How to run
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
@@ -67,11 +67,11 @@ After the service is running and deployed you should be able to see pages and JS
 4. http://localhost:8080/jee-app-1-wildfly/app/album/resource/4
 5. http://localhost:8080/jee-app-1-wildfly/
 
-NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. 
-Remember to makes sure that you are making the build with `Java SE 8`.
-Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 11.
-However, this module ensures the study of `JEE7` with both.
-For the current module you are looking at, Java SE 8 is the one being used.
+NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype
+to get beans loaded, that could be that the build was not done with Java 8. Remember to makes sure that you are making
+the build with `Java SE 8`. Java SE 8 isn't strictly necessary to get JEE to work. It can work with Java SE 11. However,
+this module ensures the study of `JEE7` with both. For the current module you are looking at, Java SE 8 is the one being
+used.
 
 ## Run Arquillian tests
 
@@ -83,24 +83,23 @@ mvn clean install -Parq-wildfly-managed
 
 ## Run Arquillian tests on Intellij
 
-Use Arquillian Managed and you should get a screen like this.
-All options should be the default ones.
+Use Arquillian Managed and you should get a screen like this. All options should be the default ones.
 
 ![alt text](docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
--   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
--   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
--   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
--   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
--   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+- [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
+- [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
+- [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
+- [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
+- [Wild Fly Downloads](https://www.wildfly.org/downloads/)
 
-##  Context references
+## Context references
 
--   [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
--   [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
--   [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
+- [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
+- [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
+- [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
 
 ## About me 👨🏽‍💻🚀
 

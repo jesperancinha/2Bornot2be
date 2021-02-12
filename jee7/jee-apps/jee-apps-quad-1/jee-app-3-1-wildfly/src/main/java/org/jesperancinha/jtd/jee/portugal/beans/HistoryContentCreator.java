@@ -23,15 +23,15 @@ public class HistoryContentCreator {
 
     public static Map<String, List<String>> getKingsMap() {
         final var kingsMap = Map.of(
-            "Afonso I", List.of("The Conqueror", "The Great","The Founder","El-Bortukali","Ibn-Arrink"),
-            "Sancho I", List.of("The Populator"),
-            "Afonso II", List.of("The Fat"),
-            "Sancho II",List.of("The Pious"),
-            "Afonso III",List.of("The Boulonnais"),
-            "Dinis I",List.of("The Farmer","The Poet"),
-            "Afonso IV",List.of("The Brave"),
-            "Pedro I",List.of("The Just","The Cruel"),
-            "Fernando I", List.of("The Handsome")
+                "Afonso I", List.of("The Conqueror", "The Great", "The Founder", "El-Bortukali", "Ibn-Arrink"),
+                "Sancho I", List.of("The Populator"),
+                "Afonso II", List.of("The Fat"),
+                "Sancho II", List.of("The Pious"),
+                "Afonso III", List.of("The Boulonnais"),
+                "Dinis I", List.of("The Farmer", "The Poet"),
+                "Afonso IV", List.of("The Brave"),
+                "Pedro I", List.of("The Just", "The Cruel"),
+                "Fernando I", List.of("The Handsome")
         );
         return kingsMap;
     }

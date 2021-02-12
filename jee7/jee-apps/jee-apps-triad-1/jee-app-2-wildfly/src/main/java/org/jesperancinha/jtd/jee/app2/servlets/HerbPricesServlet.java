@@ -56,7 +56,7 @@ public class HerbPricesServlet extends HttpServlet {
         pw.println("<h1><p>Let's see the prices!</p></h1>");
         List<Herb> herbsList = (List<Herb>) context.getAttribute("herbs");
         HttpSession session;
-        if(session2 ==null)
+        if (session2 == null)
             session = req.getSession();
         else
             session = session2;

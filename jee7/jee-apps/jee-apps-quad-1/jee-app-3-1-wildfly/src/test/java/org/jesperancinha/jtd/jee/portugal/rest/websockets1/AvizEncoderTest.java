@@ -20,6 +20,6 @@ class AvizEncoderTest {
         BLUE.printGenericLn(encode);
 
         assertThat(encode).isEqualTo(
-            "wbnb v jnf xvat bs cbeghtny ur vf erpbtavmrq puvrsyl sbe uvf ebyr va cbeghtnyf ivpgbel va n fhpprffvba jne jvgu pnfgvyr cerfreivat uvf pbhagelf vaqrcraqrapr naq rfgnoyvfuvat gur nivm  be wbnavan qlanfgl ba gur cbeghthrfr guebar");
+                "wbnb v jnf xvat bs cbeghtny ur vf erpbtavmrq puvrsyl sbe uvf ebyr va cbeghtnyf ivpgbel va n fhpprffvba jne jvgu pnfgvyr cerfreivat uvf pbhagelf vaqrcraqrapr naq rfgnoyvfuvat gur nivm  be wbnavan qlanfgl ba gur cbeghthrfr guebar");
     }
 }

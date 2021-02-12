@@ -11,12 +11,12 @@ public class RequestMonarchs {
 
     private Monarch monarch = new Monarch();
 
-    RequestMonarchs(){
+    RequestMonarchs() {
         monarch.setName("Anne Stuart");
         monarch.setFamily("Stuart");
     }
 
-    public void save(){
+    public void save() {
         ORANGE.printGenericLn("You have just recorder monarch -> %s", monarch);
     }
 

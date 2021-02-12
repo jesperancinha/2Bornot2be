@@ -3,8 +3,8 @@
     <ear-subdeployments-isolated>false</ear-subdeployments-isolated>
     <deployment>
         <exclude-subsystems>
-<!--            <subsystem name="jaxrs" />-->
-<!--            <subsystem name="webservices" />-->
+            <!--            <subsystem name="jaxrs" />-->
+            <!--            <subsystem name="webservices" />-->
         </exclude-subsystems>
     </deployment>
 </jboss-deployment-structure>

@@ -12,7 +12,8 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
 @MessageDriven(activationConfig = {
-    @ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/jms/LyricsReceiptQueue") })
+        @ActivationConfigProperty(propertyName = "destination",
+                propertyValue = "java:/jms/LyricsReceiptQueue")})
 public class LyricsReceiptListener implements MessageListener {
     @Override
     public void onMessage(Message message) {
@@ -23,7 +24,7 @@ public class LyricsReceiptListener implements MessageListener {
                 ORANGE.printGenericLn(textMessage.getText());
                 ConsolerizerGraphs.printUnicornsLn(100);
                 message.acknowledge();
-            } catch (Exception  ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace(System.err);
             }
         }

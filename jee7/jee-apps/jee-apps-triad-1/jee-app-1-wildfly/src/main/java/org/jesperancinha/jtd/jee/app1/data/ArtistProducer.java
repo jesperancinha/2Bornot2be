@@ -28,7 +28,9 @@ public class ArtistProducer {
         return artistList;
     }
 
-    public void onAlbumListChanged(@Observes(notifyObserver = Reception.ALWAYS) final Album album) {
+    public void onAlbumListChanged(
+            @Observes(notifyObserver = Reception.ALWAYS)
+            final Album album) {
         Consolerizer.printBrightMagentaGenericLn("Producing artist %s from a album %s", album.getArtist(), album);
         final Artist artist = new Artist();
         artist.setName(album.getArtist());
@@ -39,5 +41,5 @@ public class ArtistProducer {
     @PostConstruct
     public void retrieveAllMembersOrderedByName() {
         artistList = managedBeanArtistDao.getAllArtists();
-     }
+    }
 }

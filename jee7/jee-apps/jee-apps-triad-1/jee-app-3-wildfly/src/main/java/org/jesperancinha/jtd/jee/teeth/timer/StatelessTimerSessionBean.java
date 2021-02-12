@@ -16,11 +16,11 @@ public class StatelessTimerSessionBean {
 
     public void createTimer(long duration) {
         context.getTimerService()
-            .createTimer(duration, "I've timed in " + duration + "seconds with a StatelessTimerSessionBean");
+                .createTimer(duration, "I've timed in " + duration + "seconds with a StatelessTimerSessionBean");
     }
 
     @Timeout
-    public void timeOutHandler(Timer timer){
+    public void timeOutHandler(Timer timer) {
         YELLOW.printGenericLn(timer.getInfo());
         timer.cancel();
     }

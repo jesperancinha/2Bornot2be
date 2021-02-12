@@ -1,4 +1,5 @@
 # jee-app-2-wildfly
+
 ## Technologies used
 
 ---
@@ -16,13 +17,13 @@
 
 ## Exercise
 
-The apps under [jee-apps](../..), cover lots of topics.
-For this app we cover:
+The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
-4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to
+   this.
 5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
 6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
 7. Much about `@WebServiceRef`
@@ -30,15 +31,17 @@ For this app we cover:
 
 In this web application it is important to understand the basics of these:
 
-1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html) and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+1. The differences between using [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+   and [JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
 2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
 3. JMS - Java Message Service
 
-This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access
+Objects, Services, Producers and Observers
 
 The theme of this discovery app is: <b>Kitchen Herbs and History</b>
 
-## How to run       
+## How to run
 
 This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
@@ -60,22 +63,25 @@ Be sure to run the automated installation having the sever <b>RUNNING</b>:
 installAll.sh
 ```
 
-Also make sure that you have read the index page of [jee-apps](../..) and that you have previously installed [Wildfly 16](../../installWildFly.sh).
+Also make sure that you have read the index page of [jee-apps](../..) and that you have previously
+installed [Wildfly 16](../../installWildFly.sh).
 
-Afterwards, we still need to configure a messaging system.
-There are many vendors out there.
-We randomly pick [activeMQ](http://activemq.apache.org/).
-Go to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html).
-Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar) file.
-Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.10.0/activemq-rar-5.10.0.rar) file.
-Copy that file into [deployments](../../../wildfly-16.0.0.Final/standalone/deployments):
+Afterwards, we still need to configure a messaging system. There are many vendors out there. We randomly
+pick [activeMQ](http://activemq.apache.org/). Go
+to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html). Then download
+the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar)
+file. Then download
+the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.10.0/activemq-rar-5.10.0.rar)
+file. Copy that file into [deployments](../../../wildfly-16.0.0.Final/standalone/deployments):
 
 ```bash
 curl https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar --output activemq-rar-5.16.0.rar
 cp activemq-rar-5.16.0.rar ../../wildfly-16.0.0.Final/standalone/deployments
 ```
 
-Add the following subsystem to [standalone-full.xml](../../../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
+Add the following subsystem
+to [standalone-full.xml](../../../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
+
 ```xml
 <subsystem xmlns="urn:jboss:domain:resource-adapters:5.0">
 	<resource-adapters>
@@ -172,8 +178,9 @@ Also be sure to update this section:
 </subsystem>
 ```
 
-The important nodes to bear in mind are the whole `resource-adapters` node, `jms-queue` and the `pooled-connection-factory`.
-A complete backup of a successful running ApacheMQ configuration file is located in [standalone-full.xml](backup/standalone-full.xml) for your evaluation.
+The important nodes to bear in mind are the whole `resource-adapters` node, `jms-queue` and
+the `pooled-connection-factory`. A complete backup of a successful running ApacheMQ configuration file is located
+in [standalone-full.xml](backup/standalone-full.xml) for your evaluation.
 
 <b>ALWAYS start WildFly this way:</b>
 
@@ -202,11 +209,10 @@ curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type:
 
 ## Troubleshooting
 
-Installing applications in Application servers can be difficult.
-Although this isn't specific to Java Enterprise knowledge, it is necessary in order to make exercises.
-One place we always have to look at if problems arise is the standalone files.
-In our case we are running the [standalone-full.xml](backup/standalone-full.xml) file.
-Upon successful installation we should have these `deployments` at the end of the file:
+Installing applications in Application servers can be difficult. Although this isn't specific to Java Enterprise
+knowledge, it is necessary in order to make exercises. One place we always have to look at if problems arise is the
+standalone files. In our case we are running the [standalone-full.xml](backup/standalone-full.xml) file. Upon successful
+installation we should have these `deployments` at the end of the file:
 
 ```xml
 <deployments>
@@ -234,42 +240,41 @@ mvn clean install -Parq-wildfly-managed
 
 ## Run Arquillian tests on Intellij
 
-Use Arquillian Managed, and you should get a screen like this.
-All options should be the default ones.
+Use Arquillian Managed, and you should get a screen like this. All options should be the default ones.
 
 ![alt text](../jee-app-1-wildfly/docs/jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
--   [What's in a name? What developers can expect in Jakarta EE 9](https://www.theserverside.com/feature/Whats-in-a-name-What-developers-can-expect-in-Jakarta-EE-9)
--   [@WebService handlers with @HandlerChain](https://tomee.apache.org/examples-trunk/webservice-handlerchain/)
--   [Maven - Generate Jar and War](https://stackoverflow.com/questions/10862980/maven-generate-jar-and-war)
--   [How to use @Resource WebServiceContext injection with Spring's @Transactional](https://stackoverflow.com/questions/5820969/how-to-use-resource-webservicecontext-injection-with-springs-transactional)
--   [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
--   [Create a web service with maven](https://tuttlem.github.io/2015/12/05/create-a-web-service-with-maven.html)
--   [When will I ever need to use @WebServiceRef?](https://stackoverflow.com/questions/15661262/when-will-i-ever-need-to-use-webserviceref)
--   [while starting wildfly 10.1 to work with artemis, jboss.ra.activemq-ra is not installed error persists](https://stackoverflow.com/questions/43179283/while-starting-wildfly-10-1-to-work-with-artemis-jboss-ra-activemq-ra-is-not-in)
--   [WildFly Integration with apache activemq](https://javadev.org/docs/appserv/wildfly/8.2/active-mq/wildfly-activemq-integration-as-application/)
--   [CHAPTER 15. JAVA CONNECTOR ARCHITECTURE (JCA) MANAGEMENT](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/configuration_guide/jca_management)
--   [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
--   [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
--   [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
--   [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
--   [JCA IronJacamar](http://www.ironjacamar.org/)
--   [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
--   [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
--   [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
--   [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
--   [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
--   [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
--   [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
--   [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
--   [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
--   [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
--   [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
--   [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+- [What's in a name? What developers can expect in Jakarta EE 9](https://www.theserverside.com/feature/Whats-in-a-name-What-developers-can-expect-in-Jakarta-EE-9)
+- [@WebService handlers with @HandlerChain](https://tomee.apache.org/examples-trunk/webservice-handlerchain/)
+- [Maven - Generate Jar and War](https://stackoverflow.com/questions/10862980/maven-generate-jar-and-war)
+- [How to use @Resource WebServiceContext injection with Spring's @Transactional](https://stackoverflow.com/questions/5820969/how-to-use-resource-webservicecontext-injection-with-springs-transactional)
+- [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
+- [Create a web service with maven](https://tuttlem.github.io/2015/12/05/create-a-web-service-with-maven.html)
+- [When will I ever need to use @WebServiceRef?](https://stackoverflow.com/questions/15661262/when-will-i-ever-need-to-use-webserviceref)
+- [while starting wildfly 10.1 to work with artemis, jboss.ra.activemq-ra is not installed error persists](https://stackoverflow.com/questions/43179283/while-starting-wildfly-10-1-to-work-with-artemis-jboss-ra-activemq-ra-is-not-in)
+- [WildFly Integration with apache activemq](https://javadev.org/docs/appserv/wildfly/8.2/active-mq/wildfly-activemq-integration-as-application/)
+- [CHAPTER 15. JAVA CONNECTOR ARCHITECTURE (JCA) MANAGEMENT](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/configuration_guide/jca_management)
+- [WildFly 9 - A JMS-oriented tutorial](https://gianlucacosta.info/blog/wildfly-jms-tutorial)
+- [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
+- [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
+- [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
+- [JCA IronJacamar](http://www.ironjacamar.org/)
+- [JCA Connector](http://www.mastertheboss.com/jboss-frameworks/ironjacamar/create-your-first-jca-connector-tutorial#:~:text=The%20Java%20Connector%20Architecture%20(JCA,)%2C%20database%20and%20messaging%20systems.)
+- [JAXB @XmlRootElement annotation example](https://howtodoinjava.com/jaxb/xmlrootelement-annotation/)
+- [JAX-WS JEE 7](https://docs.oracle.com/javaee/7/tutorial/jaxws.htm)
+- [JAXB JEE 5](https://docs.oracle.com/javaee/5/tutorial/doc/bnbay.html)
+- [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/index.html)
+- [JAXP](https://docs.oracle.com/javase/tutorial/jaxp/intro/index.html)
+- [StAX](https://docs.oracle.com/javase/tutorial/jaxp/stax/index.html)
+- [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
+- [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
+- [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
+- [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
+- [Wild Fly Downloads](https://www.wildfly.org/downloads/)
 
-##  Context references
+## Context references
 
 ## About me 👨🏽‍💻🚀
 

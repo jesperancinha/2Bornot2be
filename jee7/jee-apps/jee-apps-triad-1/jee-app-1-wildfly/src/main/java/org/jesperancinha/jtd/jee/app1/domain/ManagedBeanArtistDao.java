@@ -2,7 +2,6 @@ package org.jesperancinha.jtd.jee.app1.domain;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
 
-import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;

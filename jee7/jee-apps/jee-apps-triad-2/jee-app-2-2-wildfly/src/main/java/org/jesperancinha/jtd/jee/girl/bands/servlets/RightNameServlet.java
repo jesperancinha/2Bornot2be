@@ -14,7 +14,7 @@ public class RightNameServlet extends HttpServlet {
             final var writer = response.getWriter();
             final var leftName = request.getParameter("left");
             writer.println("The song is:");
-            writer.println(leftName +" Forever");
+            writer.println(leftName + " Forever");
             writer.close();
         } catch (Exception e) {
             RED.printThrowableAndExit(e);

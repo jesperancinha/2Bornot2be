@@ -9,8 +9,8 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 @jakarta.enterprise.inject.Default
 public class LyricsSimpleService implements LyricsService {
 
-    private final static String[] FILES = { "all.rise.txt", "boys.in.the.band.txt", "could.it.be.magic.txt",
-        "the.one.txt" };
+    private final static String[] FILES = {"all.rise.txt", "boys.in.the.band.txt", "could.it.be.magic.txt",
+            "the.one.txt"};
 
     public String getRandomLyric() {
         BRIGHT_MAGENTA.printGenericLn("This is type %s", this.getClass());

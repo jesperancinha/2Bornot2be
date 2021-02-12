@@ -16,17 +16,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
 
 @Path("/album/resource")
@@ -52,8 +48,8 @@ public class AlbumResourceRESTService {
     @Path("/{id:[0-9]+}")
     @Produces(APPLICATION_JSON)
     public Album lookupAlbumById(
-        @PathParam("id")
-            long id) {
+            @PathParam("id")
+                    long id) {
         Album album = albumRepository.findById(id);
         if (album == null) {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
@@ -75,13 +71,13 @@ public class AlbumResourceRESTService {
             return Response.ok().build();
         } catch (ConstraintViolationException ce) {
             Set<ConstraintViolation<?>> violations = ce.getConstraintViolations();
-            return   Response.status(Response.Status.BAD_REQUEST)
-                .entity(violations.stream()
-                    .collect(Collectors.toMap(t -> t.getPropertyPath()
-                        .toString(), ConstraintViolation::getMessage))).build();
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity(violations.stream()
+                            .collect(Collectors.toMap(t -> t.getPropertyPath()
+                                    .toString(), ConstraintViolation::getMessage))).build();
         } catch (Exception e) {
-            return  Response.status(Response.Status.BAD_REQUEST)
-                .entity(e.getMessage()).build();
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity(e.getMessage()).build();
         }
 
     }

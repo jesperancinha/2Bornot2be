@@ -21,7 +21,7 @@ public class HistoryStatelessDelivery implements Serializable {
 
     public HistoryStatelessDelivery() {
         YELLOW.printGenericLn("This is a %s with hash %s", this.getClass()
-            .getCanonicalName(), this.hashCode());
+                .getCanonicalName(), this.hashCode());
         YELLOW.printGenericLn(stackOfEvents1);
         GREEN.printGenericLn("A @Stateless bean is never passivated and only has two stages:");
         GREEN.printGenericLn("Non-existent and ready for activation");
@@ -34,20 +34,20 @@ public class HistoryStatelessDelivery implements Serializable {
 
     public String getLatestElementOfHistory() {
         BLUE.printGenericLn("This is instance of type %s with hash %s and elements %s", this.getClass()
-            .getCanonicalName(), this.hashCode(), stackOfEvents1);
+                .getCanonicalName(), this.hashCode(), stackOfEvents1);
         return stackOfEvents1.pop();
     }
 
     @PreDestroy
     public void destroy() {
         BLUE.printGenericTitleLn("Bean %s is being destroyed", this.getClass()
-            .getCanonicalName());
+                .getCanonicalName());
     }
 
     @PostConstruct
-    public void postConstruct(){
+    public void postConstruct() {
         Consolerizer.titleSpread = 150;
         BLUE.printGenericTitleLn("Bean %s with hash %s is being passivated", this.getClass()
-            .getCanonicalName(), this.hashCode());
+                .getCanonicalName(), this.hashCode());
     }
 }

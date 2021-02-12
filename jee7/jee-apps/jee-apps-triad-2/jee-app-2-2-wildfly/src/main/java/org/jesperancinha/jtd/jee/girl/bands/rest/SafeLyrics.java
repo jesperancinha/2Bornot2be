@@ -15,8 +15,8 @@ public class SafeLyrics {
     private static final String FROM = "https://genius.com/Spice-girls-spice-up-your-life-lyrics";
 
     private static final String LYRIC =
-        "Flamenco, lambada\n" + "But hip hop is harder\n" + "(We moonwalk the foxtrot)\n" + "(Then polka, the salsa)\n"
-            + "Shake it shake it shake it, haka\n" + "Shake it shake it shake it, haka\n" + "Arriba! Aha";
+            "Flamenco, lambada\n" + "But hip hop is harder\n" + "(We moonwalk the foxtrot)\n" + "(Then polka, the salsa)\n"
+                    + "Shake it shake it shake it, haka\n" + "Shake it shake it shake it, haka\n" + "Arriba! Aha";
 
     @GET
     @Produces(APPLICATION_JSON)
@@ -24,6 +24,6 @@ public class SafeLyrics {
         BRIGHT_MAGENTA.printGenericLn(FROM);
         BRIGHT_MAGENTA.printGenericLn(LYRIC);
         return FROM.concat("\n")
-            .concat(LYRIC);
+                .concat(LYRIC);
     }
 }

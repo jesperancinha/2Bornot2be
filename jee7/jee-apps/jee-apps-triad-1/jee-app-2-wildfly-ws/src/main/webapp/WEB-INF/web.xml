@@ -6,7 +6,8 @@
     <display-name>SOAP Web Service</display-name>
     <listener>
         <listener-class>
-            com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+            com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+        </listener-class>
     </listener>
     <servlet>
         <servlet-name>KitchenHerbsService</servlet-name>

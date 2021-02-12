@@ -27,7 +27,7 @@ public class Herb implements Serializable {
         this.grams = grams;
     }
 
-    public String toString(){
+    public String toString() {
         return String.format("Herb name is %s and has color %s and we have %d grams of it", name, color, grams);
     }
 }
