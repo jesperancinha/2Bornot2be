@@ -13,7 +13,6 @@ public class Wallet extends Merchandise {
         return color;
     }
 
-
     public void setColor(String color) {
         this.color = color;
     }

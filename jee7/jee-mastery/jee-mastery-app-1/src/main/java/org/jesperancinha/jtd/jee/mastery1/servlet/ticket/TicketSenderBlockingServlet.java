@@ -44,7 +44,6 @@ public class TicketSenderBlockingServlet extends HttpServlet {
             asyncContext.complete();
         });
 
-
         asyncContext.addListener(new AsyncListener() {
             @Override
             public void onComplete(AsyncEvent event) throws IOException {
@@ -85,7 +84,7 @@ public class TicketSenderBlockingServlet extends HttpServlet {
             RED.printSyncGenericLn("Got %s on normal Executor!!", o);
             executorService.awaitTermination(1, TimeUnit.SECONDS);
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         MainCustomManagedExecutorService managedExecutorService = new MainCustomManagedExecutorService(1);
         YELLOW.printGenericLn("Remember that we send our task two times with our custom ManagedExecutorService");
@@ -98,7 +97,7 @@ public class TicketSenderBlockingServlet extends HttpServlet {
             managedExecutorService.shutdown();
             managedExecutorService.awaitTermination(1, TimeUnit.SECONDS);
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         final PrintWriter writer = resp.getWriter();

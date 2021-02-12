@@ -372,7 +372,7 @@ public class Mastery4Dot1Runner {
             }
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("Take-away");
         GREEN.printGenericLn("1. In JDBC4.0, available in Java 11, we don't need to load the driver.");

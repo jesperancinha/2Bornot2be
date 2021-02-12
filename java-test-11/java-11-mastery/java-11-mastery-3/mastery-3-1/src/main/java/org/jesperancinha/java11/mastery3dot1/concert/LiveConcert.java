@@ -2,7 +2,6 @@ package org.jesperancinha.java11.mastery3dot1.concert;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 /**
  * This class is 50% thread-safe
  * The write accessors perform unsynchronized changes.
@@ -19,7 +18,6 @@ public class LiveConcert implements Concert {
         this.capacity = capacity;
         this.counter = new AtomicInteger();
     }
-
 
     public int addConcertGoer() throws ConcerCapacityExceededException {
         if (counter.get() >= capacity) {

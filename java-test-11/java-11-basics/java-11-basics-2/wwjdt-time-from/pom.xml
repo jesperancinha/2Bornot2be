@@ -11,6 +11,13 @@
 
     <artifactId>wwjdt-time-from</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.jesperancinha.jtd</groupId>
+            <artifactId>consolerizer</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>
         <plugins>

@@ -27,7 +27,6 @@ public class ToothService1 {
     @PersistenceContext(unitName = "primary")
     private EntityManager entityManager;
 
-
     // WFLYJPA0059: javax.persistence.PersistenceContext injection target is invalid.  Only setter methods are allowed:
     // @PersistenceContext(unitName = "primary")
     // from ResourceInjectionAnnotationParsingProcessor: https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed
@@ -38,7 +37,6 @@ public class ToothService1 {
     public Tooth updateItRight(final Tooth tooth)
             throws NamingException, HeuristicMixedException, HeuristicRollbackException, NotSupportedException, SystemException, RollbackException {
         var context = new InitialContext();
-
 
         YELLOW.printGenericLn("Because we are using %s, this means we cannot perform UserTransaction code.");
         YELLOW.printGenericLn("This get's done by the container itself");

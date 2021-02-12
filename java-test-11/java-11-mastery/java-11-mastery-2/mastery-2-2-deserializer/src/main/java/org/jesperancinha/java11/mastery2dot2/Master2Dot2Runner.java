@@ -8,6 +8,7 @@ import java.io.ObjectInputStream;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -31,7 +32,7 @@ public class Master2Dot2Runner {
             GREEN.printGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
             GREEN.printGenericLn("A new data would look like this -> %s", new MissionData());
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
     }

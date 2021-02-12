@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery1.transactional;
 
-
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;

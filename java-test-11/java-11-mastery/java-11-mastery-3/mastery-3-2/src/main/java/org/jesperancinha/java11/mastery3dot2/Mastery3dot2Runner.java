@@ -510,7 +510,7 @@ public class Mastery3dot2Runner {
             // fis = Mastery3dot2Runner.class.getResourceAsStream("./bacalhau.assado.txt")
             MAGENTA.printGenericLn(new String(fis.readAllBytes()));
         } catch (IOException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("A try clause always creates implicitly final variables");
     }
@@ -639,7 +639,7 @@ public class Mastery3dot2Runner {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(mercadoDeOlhao);
         } catch (IOException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         BLUE.printGenericLn("Data Sent!");
         BLUE.printGenericLn("Retrieving data from file system...");
@@ -648,7 +648,7 @@ public class Mastery3dot2Runner {
             var newMarket = (Market) objectInputStream.readObject();
             MAGENTA.printGenericLn("We read our data back from the file system and it is %s", newMarket);
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         GREEN.printGenericLn("The takeout here, is that the non-serializable class, does not participate in the serializing process.");
         GREEN.printGenericLn("Although its constructor is called, no instance members are set.");

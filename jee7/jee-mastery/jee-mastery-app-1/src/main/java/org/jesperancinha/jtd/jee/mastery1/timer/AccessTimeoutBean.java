@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery1.timer;
 
-
 import javax.ejb.AccessTimeout;
 import javax.ejb.Singleton;
 import java.util.concurrent.TimeUnit;

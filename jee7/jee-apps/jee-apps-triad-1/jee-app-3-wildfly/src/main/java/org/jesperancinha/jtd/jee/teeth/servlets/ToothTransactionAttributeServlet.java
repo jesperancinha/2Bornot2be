@@ -26,6 +26,7 @@ import java.util.UUID;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 @WebServlet("/tooth/servlet/tx/all")
 public class ToothTransactionAttributeServlet extends HttpServlet {
@@ -68,15 +69,15 @@ public class ToothTransactionAttributeServlet extends HttpServlet {
             userTransaction.commit();
 
         } catch (NotSupportedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (SystemException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         BLUE.printGenericLn(tooth1);
 

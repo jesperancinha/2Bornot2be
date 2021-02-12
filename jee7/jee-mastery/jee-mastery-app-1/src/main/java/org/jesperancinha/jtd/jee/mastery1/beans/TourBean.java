@@ -4,7 +4,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
-
 /**
  * The best example on where to us @RequestScoped.
  * For each request you know where to go and you do not need to keep that stage.

@@ -21,7 +21,6 @@ public class AvizEndPoint {
     private static final List<String> KINGS_OF_AVIZ = List.of("João I", "Duarte I", "Afonso V", "João II", "Manuel I",
             "João III", "Sebastião I", "Henrique I", "António I");
 
-
     @OnMessage
     public void onMessage(Session session, String message) throws IOException {
         BLUE.printGenericTitleLn("OnMessage from %s called!", this.getClass()

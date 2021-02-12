@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 @WebServlet("/ticketoffice")
 public class TicketSenderServlet extends HttpServlet {
@@ -43,7 +44,7 @@ public class TicketSenderServlet extends HttpServlet {
             writer.println(ConsolerizerColor.GREEN.getPBText("Please check your logs!, there is some test checks under way..."));
             writer.println(MAGENTA.getPText("<p><a href=\"index.xhtml\">Back</a></p>"));
         } catch (JMSException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
     }

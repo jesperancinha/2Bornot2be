@@ -35,7 +35,6 @@ public class CarFactoryTest {
         assertThat(car3a.rideTheCar()).isEqualTo("Car Constructor is riding up to  3 km/h with a fine -256 color tone");
         assertThat(car4a.rideTheCar()).isEqualTo("Car Pacifist is riding up to  4 km/h with a fine -1 color tone");
 
-
         final FourWheels car1b = carFactory.getFourWheels("Flash");
         final FourWheels car2b = carFactory.getFourWheels("Debunker");
         final FourWheels car3b = carFactory.getFourWheels("Constructor");

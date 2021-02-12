@@ -29,7 +29,6 @@ public class ConstellationMakerTest {
         Handler handler = new StreamHandler(out, formatter);
         logger.addHandler(handler);
 
-
         final ConstellationMaker constellationMaker = new ConstellationMaker();
         final Runnable drawCancer = constellationMaker::drawCancer;
         final ExecutorService service = Executors.newFixedThreadPool(1);

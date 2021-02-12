@@ -2,6 +2,8 @@ package org.jesperancinha.java11.catching.crows;
 
 import java.util.Random;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 public class CatchingCrowsRunner {
 
     private static final Random random = new Random();
@@ -12,12 +14,12 @@ public class CatchingCrowsRunner {
                 catchCrow();
             } catch (SuperSickCrowExcetion e) {
                 System.out.println("Super Sick crow found!");
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             } catch (SickCrowException e) {
                 System.out.println("Sick crow found!");
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             } catch (CrowException e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
         }
 
@@ -28,7 +30,7 @@ public class CatchingCrowsRunner {
                 crowCatcher.catchCrow();
             } catch (CrowException e) {
                 System.out.println("We have found something. Notice that close is next!");
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
         }
     }

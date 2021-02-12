@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery2.domain;
 
-
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -7,6 +7,7 @@ import java.io.IOException;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class Crum25 {
     public static void main(String[] args) {
@@ -17,32 +18,32 @@ public class Crum25 {
         try (var fos = new FileOutputStream("/tmp/tmp.txt")) {
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         try (final FileOutputStream fos = new FileOutputStream("/tmp/tmp.txt")) {
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (IOException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         BLUE.printGenericLn("        // FileOutputStream fos;\n" + "        // Unknown class: 'fos'\n"
             + "        // try(fos = new FileOutputStream(\"tmp.txt\")){\n" + "        // \n"
-            + "        // } catch (FileNotFoundException e) {\n" + "        //     e.printStackTrace();\n"
-            + "        // } catch (IOException e) {\n" + "        //     e.printStackTrace();\n" + "        // }");
+            + "        // } catch (FileNotFoundException e) {\n" + "        //     RED.printThrowableAndExit(e);n"
+            + "        // } catch (IOException e) {\n" + "        //     RED.printThrowableAndExit(e);n" + "        // }");
 
         // FileOutputStream fos;
         // Unknown class: 'fos'
         // try(fos = new FileOutputStream("tmp.txt")){
         //
         // } catch (FileNotFoundException e) {
-        //     e.printStackTrace();
+        //     RED.printThrowableAndExit(e);
         // } catch (IOException e) {
-        //     e.printStackTrace();
+        //     RED.printThrowableAndExit(e);
         // }
 
         GREEN.printGenericLn("An important rule to know is that try with resources needs to know the reference type");

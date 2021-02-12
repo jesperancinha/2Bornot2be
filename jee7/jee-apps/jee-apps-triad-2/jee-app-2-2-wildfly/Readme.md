@@ -55,6 +55,7 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 From this:
 
 ```xml
+
 <service name="BeThereLyricsServiceImplService">
     <port name="be-therePort" binding="tns:be-therePortBinding">
         <soap:address location="http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there"/>
@@ -65,6 +66,7 @@ From this:
 To This:
 
 ```xml
+
 <service name="BeThereLyricsServiceImplService">
     <port name="be-therePort" binding="tns:be-therePortBinding">
         <soap:address location="http://whatever:whateverport/whatever-path/be-there-whatever"/>
@@ -77,7 +79,9 @@ To This:
 #### Envelopes
 
 ```xml
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bt="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:bt="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
     <soapenv:Header/>
     <soapenv:Body>
         <bt:sayYoullBeThere>
@@ -100,6 +104,7 @@ To This:
 ```
 
 ```xml
+
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:underground="http://soap.bands.girl.jee.jtd.jesperancinha.org/">
     <soapenv:Header/>

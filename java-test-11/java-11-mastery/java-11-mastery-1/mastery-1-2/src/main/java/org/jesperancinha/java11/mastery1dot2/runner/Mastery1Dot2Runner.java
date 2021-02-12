@@ -126,7 +126,7 @@ public class Mastery1Dot2Runner {
             System.out.printf("Current auto-commit setting: %s\n", conn.getAutoCommit());
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         // 7. The `protected` nuances

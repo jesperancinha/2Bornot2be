@@ -32,5 +32,4 @@ public class RecordSessionBean implements Serializable {
         return records.get((int) (Math.random() * records.size()));
     }
 
-
 }

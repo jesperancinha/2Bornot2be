@@ -14,6 +14,8 @@ import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.Objects;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 @Transactional
 @TransactionManagement(TransactionManagementType.BEAN)
 public class AlbumLocksDao implements Serializable {
@@ -53,7 +55,7 @@ public class AlbumLocksDao implements Serializable {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
@@ -75,7 +77,7 @@ public class AlbumLocksDao implements Serializable {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
 

@@ -23,7 +23,6 @@ public class SecurityOneServlet extends HttpServlet {
         writer.println(MAGENTA.getPText("<p><a href=\"../index.xhtml\">Back</a></p>"));
     }
 
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final String text = "You have reached the POST method of Security One";

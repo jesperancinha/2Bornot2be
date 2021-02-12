@@ -25,7 +25,6 @@ public class ArmadaAbstractTest extends LoggerInfoTest {
         final String ref = "all fighters!";
         armadaAbstractChain.issueFighters(FORMATION6, ref);
 
-
         assertLogOrder(
                 "Fighter Arado has left the hanger with ref all fighters!",
                 "Fighter Bell left the hanger with ref all fighters!",

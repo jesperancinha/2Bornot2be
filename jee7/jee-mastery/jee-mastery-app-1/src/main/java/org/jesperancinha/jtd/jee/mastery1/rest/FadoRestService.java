@@ -17,7 +17,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 @Path("/fado")
 public class FadoRestService {
 
-
     /**
      * Perform requests to this endpoint with curl.
      * Check the differences between sending just HEAD or a GET request.
@@ -42,7 +41,6 @@ public class FadoRestService {
         YELLOW.printGenericLn(records);
         return records;
     }
-
 
     @HEAD
     @Path("/bands/head")

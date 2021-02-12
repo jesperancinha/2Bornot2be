@@ -41,7 +41,6 @@ public class ListOfKingsAndQueensServlet extends HttpServlet {
             printRainbowTitleLn("They can, however, use the royal one ;-)");
         }
 
-
         try {
             final List<String> orangeNassau = listOfKingsAndQueensBeanForOrangeNassau.getOrangeNassau();
             final List<String> nassau = listOfKingsAndQueensBeanForOrangeNassau.getNassau();

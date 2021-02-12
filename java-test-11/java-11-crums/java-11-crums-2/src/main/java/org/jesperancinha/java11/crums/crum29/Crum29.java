@@ -18,11 +18,9 @@ public class Crum29 {
 
     public static class WaillingWall extends Wall {
 
-
         public static void methodB() {
             ORANGE.printGenericLn("MethodB from WaillingWall");
         }
-
 
         // Static method 'methodA()' in 'org.jesperancinha.java11.crums.crum29.Crum29.WaillingWall'
         // cannot override instance method 'methodA()' in

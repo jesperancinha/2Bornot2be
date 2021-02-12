@@ -16,7 +16,6 @@ public class RecordArtistRunner {
         );
 
 
-
         System.out.println("++++++++++++++++++++++++++ Map Operations ++++++++++++++++++++++++++");
         var mapOfRecords = new TreeMap<>(recordMap);
         var navigationMap = (Map<String, String>) mapOfRecords;

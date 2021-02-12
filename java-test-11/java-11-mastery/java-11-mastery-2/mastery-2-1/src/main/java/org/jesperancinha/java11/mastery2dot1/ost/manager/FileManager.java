@@ -26,7 +26,7 @@ public class FileManager {
                 fileWriter.append("Test");
                 fileWriter.flush();
             } catch (IOException e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
             return file.getName();
         };

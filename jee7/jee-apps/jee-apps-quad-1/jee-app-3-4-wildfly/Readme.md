@@ -128,6 +128,7 @@ installation [module.xml](../../wildfly-16.0.0.Final/modules/postgresql/main/mod
 1. NONE
 
 ```xml
+
 <user-data-constraint>
     <transport-guarantee>NONE</transport-guarantee>
 </user-data-constraint>
@@ -139,6 +140,7 @@ MITM (Man In The Middle) attacks.
 2. INTEGRAL
 
 ```xml
+
 <user-data-constraint>
     <transport-guarantee>INTEGRAL</transport-guarantee>
 </user-data-constraint>
@@ -154,6 +156,7 @@ detected and the message will be rejected.
 3. CONFIDENTIAL
 
 ```xml
+
 <user-data-constraint>
     <transport-guarantee>CONFIDENTIAL</transport-guarantee>
 </user-data-constraint>

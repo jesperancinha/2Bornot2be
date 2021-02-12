@@ -283,7 +283,6 @@ public class Mastery4Dot2Runner {
                 RED.printThrowableAndExit(e);
             }
 
-
         });
         executorService.submit(() -> {
             try {
@@ -989,7 +988,6 @@ public class Mastery4Dot2Runner {
                     default:
                         return "Camila Sodi - RUBÍ 2020, entrada completa a quien le importa - https://www.youtube.com/watch?v=aNMdaRbX_-k";
 
-
                 }
             case 1984:
                 // Unreachable statement
@@ -1002,7 +1000,6 @@ public class Mastery4Dot2Runner {
     private static String getYearMusic(int y) {
         return getYearMonthMusic(y, 0);
     }
-
 
     private static void exercise2() {
         BRIGHT_CYAN.printGenericLn("--- 2. Different ways to use `this`");

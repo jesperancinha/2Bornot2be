@@ -70,7 +70,7 @@ public class RecordUnmarshallerServlet extends HttpServlet {
 
             writer.println(MAGENTA.getPText("<p><a href=\"index.xhtml\">Back</a></p>"));
         } catch (JAXBException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
 }

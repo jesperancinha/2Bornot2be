@@ -7,6 +7,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 public class CallableRunner {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         Callable<Boolean> callable = () -> {
@@ -21,13 +23,13 @@ public class CallableRunner {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
             System.out.println("------ Failing runnable...");
             try {
                 throw new Exception("I don't know what to do with myself");
             } catch (Exception e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
         };
 
@@ -36,9 +38,8 @@ public class CallableRunner {
                 System.out.println("------ Callable was a success!");
             }
 
-
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         runnable.run();

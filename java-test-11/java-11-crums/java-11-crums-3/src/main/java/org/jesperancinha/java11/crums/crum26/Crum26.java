@@ -38,6 +38,5 @@ public class Crum26 {
         GREEN.printGenericLn("The creation of immutable lists require that all elements are filled in.");
         GREEN.printGenericLn("A null value does not make since in immutable lists");
 
-
     }
 }

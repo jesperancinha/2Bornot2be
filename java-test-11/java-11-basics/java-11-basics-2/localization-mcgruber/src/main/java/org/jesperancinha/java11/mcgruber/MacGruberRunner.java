@@ -64,7 +64,6 @@ public class MacGruberRunner {
         SimpleDateFormat simpleDateFormat9 = new SimpleDateFormat("zzzz HHHH SSSS DDDD MMMM", Locale.ENGLISH);
         SimpleDateFormat simpleDateFormat10 = new SimpleDateFormat("zzzzz HHHHHH SSSSSSSS DDDDDDDD MMMMMMMMMM", Locale.ENGLISH);
 
-
         System.out.println("--- We start out with MacGruber's birth date ---");
         System.out.printf("Format: %s\nResult: %s\n", simpleDateFormat1.toPattern(), simpleDateFormat1.format(Date.valueOf(LocalDate.of(1963, 3, 17))));
         System.out.printf("Format: %s\nResult: %s\n", simpleDateFormat2.toPattern(), simpleDateFormat2.format(Date.valueOf(LocalDate.of(1963, 3, 17))));

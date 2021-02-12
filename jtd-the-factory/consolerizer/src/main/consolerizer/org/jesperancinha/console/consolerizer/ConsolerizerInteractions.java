@@ -71,7 +71,6 @@ public class ConsolerizerInteractions {
             final String key = keyValue[0].trim();
             final List<String> value = Arrays.stream(keyValue[1].trim().split(",")).map(String::trim).collect(Collectors.toList());
 
-
             final List<String> correctAnswersList = correctAnswers.get(key);
             if (Objects.nonNull(correctAnswersList) && value.containsAll(correctAnswersList)) {
                 if (correctAnswersList

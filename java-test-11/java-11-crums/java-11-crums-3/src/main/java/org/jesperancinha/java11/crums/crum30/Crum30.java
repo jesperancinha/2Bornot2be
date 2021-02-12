@@ -5,6 +5,7 @@ import java.util.Arrays;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class Crum30 {
 
@@ -36,7 +37,7 @@ public class Crum30 {
                 .getAnnotations())
                 .forEach(annotation -> MAGENTA.printGenericLn(annotation));
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         GREEN.printGenericLn("Important to know is that SafeVarags, Deprecated and FunctionalInterface are all RUNTIME annotations");

@@ -50,7 +50,6 @@ public class NavigationRunner {
         System.out.printf("****** %d elements \n", elementsInSet.size());
         System.out.println(elementsInSet);
 
-
         System.out.println("****** Sorted Set in a natural order. Note that a TreeSet is also a NavigableSet");
         NavigableSet<String> elementsInNavigableSet = Arrays.stream(locations).collect(Collectors.toCollection(ConcurrentSkipListSet::new));
         System.out.printf("****** %d elements \n", elementsInNavigableSet.size());

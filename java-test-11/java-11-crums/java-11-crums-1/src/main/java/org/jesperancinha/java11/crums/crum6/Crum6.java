@@ -22,6 +22,5 @@ public class Crum6 {
             + "        // Cannot resolve method 'size' in 'String'\n"
             + "        // printMagentaGenericLn(\"This string has %s characters\", text.size());");
 
-
     }
 }

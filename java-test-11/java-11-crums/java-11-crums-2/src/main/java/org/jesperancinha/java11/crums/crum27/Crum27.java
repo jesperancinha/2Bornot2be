@@ -57,6 +57,5 @@ public class Crum27 {
         GREEN.printGenericLn("Auto-boxing needs to match the type being boxed in");
         GREEN.printGenericLn("In a String building, this happens implicitly and all numbers are converted to their object counterparts, where the toString is later being called.");
 
-
     }
 }

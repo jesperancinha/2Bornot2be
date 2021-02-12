@@ -18,10 +18,8 @@ import java.util.List;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
-
 @WebServlet("/json")
 public class RecordsJSONServlet extends HttpServlet {
-
 
     @Inject
     private RegisterCart registerCart;

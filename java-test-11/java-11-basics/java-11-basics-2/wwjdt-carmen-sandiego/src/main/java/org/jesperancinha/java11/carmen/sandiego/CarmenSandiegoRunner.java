@@ -10,7 +10,6 @@ import static org.jesperancinha.java11.carmen.sandiego.CarmenSandiegoCGAPrinter.
 public class CarmenSandiegoRunner {
     public static void main(String[] args) throws InterruptedException {
 
-
         printInputText(CarmenSandiegoColor.BRIGHT_BLUE, "---- WHERE IN THE WORLD IS CARMEN SANDIEGO ----\n");
 
         NumberFormat numberFormat = NumberFormat.getNumberInstance(new Locale("fr", "FR"));

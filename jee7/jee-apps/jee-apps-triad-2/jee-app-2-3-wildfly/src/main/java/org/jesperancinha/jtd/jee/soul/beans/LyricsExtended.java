@@ -6,5 +6,4 @@ public class LyricsExtended extends Lyric {
         return String.format("%s sang this song: %s", getArtist(), getLyrics());
     }
 
-
 }

@@ -1,6 +1,5 @@
 package org.jesperancinha.java11.time.from;
 
-
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -8,6 +7,8 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.UnsupportedTemporalTypeException;
 import java.util.Date;
+
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 /**
  * Please note the package types!!
@@ -51,7 +52,6 @@ public class TimeFromRunner {
         LocalDate localDate = LocalDate.of(1955, 11, 5);
         System.out.printf("Marty McFly arrives in Hill Valley on: %s\n", dateTimeFormatter.format(localDate));
 
-
         System.out.println("--------- java.util.Date ---------");
 
         try {
@@ -59,7 +59,7 @@ public class TimeFromRunner {
             // System.out.printf("The Enchantment Under The Sea Dance happens on on: %s\n", df.format(date));
             System.out.printf("The Enchantment Under The Sea Dance happens on: %s\n", dateTimeFormatter.format(date.toInstant()));
         } catch (UnsupportedTemporalTypeException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
             System.out.printf("This fails because Instance does not contain zone information. In the next example we'll use a trick to do so: %s\n", e.getMessage());
         }
 
@@ -73,7 +73,7 @@ public class TimeFromRunner {
             LocalDateTime localDateTime2 = LocalDateTime.ofInstant(date2.toInstant(), ZoneId.systemDefault());
             System.out.printf("1900 - Marty is chased by Libyans on: %s\n", dateTimeFormatter.format(localDateTime2));
         } catch (UnsupportedOperationException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
             System.out.printf("This fails because java.sql.Date does not support time components. In the next example we'll use a trick to do so: %s\n", e.getMessage());
         }
 

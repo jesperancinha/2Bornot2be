@@ -14,7 +14,6 @@ import java.io.Serializable;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 
-
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "acknowledgeMode",
                 propertyValue = "Auto-acknowledge"),

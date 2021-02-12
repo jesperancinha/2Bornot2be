@@ -100,7 +100,6 @@ public class Mastery1Dot1Runner {
         final City city = new City();
         city.neighbourhoodWatch("Dino", flinstones);
 
-
         //  20. Remember the key differences between a thread-safe and atomic enabled Map and the regular one.
         // HashMap -> Does not support atomic operations and will fail on concurrent changes during an iteration. It is not thread-safe.
         // ConcurrentHashMap -> Support atomic operations and does not fail on concurrent changes. It is thread-safe.
@@ -124,7 +123,6 @@ public class Mastery1Dot1Runner {
             }
         });
 
-
         theHatrocks1.forEach((s, s2) -> theHatrocks1.remove("Jethro Hatrock"));
         System.out.println(theHatrocks1);
         try {
@@ -134,7 +132,6 @@ public class Mastery1Dot1Runner {
             System.err.println("See? It's not thread-safe. It also takes longer to fill up during a ramp up.");
         }
     }
-
 
     private static Map<String, String> createTheHatrocks(Map<String, String> theHatRocks) throws InterruptedException {
 

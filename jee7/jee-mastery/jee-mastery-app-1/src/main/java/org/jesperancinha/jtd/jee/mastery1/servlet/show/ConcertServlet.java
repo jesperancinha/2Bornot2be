@@ -19,6 +19,7 @@ import java.io.PrintWriter;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 @WebServlet("/concert/show")
 @SessionScoped
@@ -40,61 +41,59 @@ public class ConcertServlet extends HttpServlet {
         try {
             concertEntityFail = concertManagerFail.goToConcert();
         } catch (SystemException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (NotSupportedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         writer.println(BLUE.getPBText("Via a CONTAINER managed bean we were able to rollback. We didn't went to see P!nk. 😢 -> %s", concertManager.getStatement(concertEntity.getUuid())));
         try {
             writer.println(BLUE.getPBText("Via a BEAN managed bean we were not able to rollback. We are going to see P!nk live! 🎉🎸 -> %s", concertManagerFail.getStatement(concertEntityFail.getUuid())));
         } catch (SystemException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (NotSupportedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
-
 
         try {
             concertEntityFail = concertManagerFail.goToConcertWorking();
         } catch (SystemException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (NotSupportedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         try {
             writer.println(BLUE.getPBText("Via another BEAN managed bean we were able to rollback with another method called rollback. We didn't went to see P!nk. 😢 -> %s", concertManagerFail.getStatement(concertEntityFail.getUuid())));
         } catch (SystemException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (NotSupportedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (HeuristicMixedException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (RollbackException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
-
 
         writer.println(MAGENTA.getPText("<p><a href=\"../index.xhtml\">Back</a></p>"));
     }

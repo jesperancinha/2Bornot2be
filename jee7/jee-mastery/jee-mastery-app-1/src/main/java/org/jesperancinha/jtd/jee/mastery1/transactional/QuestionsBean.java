@@ -5,6 +5,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 @Named
 @SessionScoped
 public class QuestionsBean implements Serializable {
@@ -26,7 +28,7 @@ public class QuestionsBean implements Serializable {
         try {
             question1.answerOneWay(this.myAnswer);
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
 
@@ -34,7 +36,7 @@ public class QuestionsBean implements Serializable {
         try {
             question1.answerTwoWay(this.myAnswer);
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
 

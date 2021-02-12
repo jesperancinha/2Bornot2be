@@ -20,7 +20,6 @@ public class WandaRunner {
         System.out.printf("Guest %s is being hosting by %s but we can't get the show's name\n", guest3.getGuestName(), guest3.getHost());
         System.out.printf("Guest %s is being hosting by %s but we can't get the show's name\n", guest4.getGuestName(), guest4.getHost());
 
-
         System.out.printf("Luckily our opening record shows that the show is %s, episode %d\n", show.getShowName(), show.getEpisode());
     }
 }

@@ -28,7 +28,6 @@ public class KitchenHerbsWebRefServlet extends HttpServlet {
     @WebServiceRef
     public KitchenHerbsServerImplService helloMessengerServicePure;
 
-
     //    It is an error to combine this annotation with the @SOAPMessageHandlers annotation.
 //    from: https://docs.oracle.com/javase/7/docs/api/javax/jws/HandlerChain.html
     @WebServiceRef

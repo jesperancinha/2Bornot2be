@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 public class AlbumCalculator extends Calculator {
 
-
     // 'getAverageByte()' in 'org.jesperancinha.java11.mastery4dot3.record.AlbumCalculator'
     // clashes with 'getAverageByte()'
     // in 'org.jesperancinha.java11.mastery4dot3.record.Calculator';

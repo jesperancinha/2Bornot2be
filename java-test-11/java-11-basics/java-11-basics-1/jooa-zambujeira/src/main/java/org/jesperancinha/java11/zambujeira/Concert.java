@@ -20,7 +20,6 @@ public class Concert {
                 '}';
     }
 
-
     public void start(){
         System.out.printf("Concert %s has started \n", concertName);
     }
@@ -38,7 +37,6 @@ public class Concert {
          * Shadowing occurs
          */
         private final String concertName;
-
 
         Act(String artistName, LocalDate localDate, String concertName) {
             this.artistName = artistName;

@@ -23,7 +23,6 @@ public class Market extends Building implements Serializable {
         YELLOW.printGenericLn("A Market has a UUID");
     }
 
-
     public String getCurrentInfo() {
         return "marketId=" + marketId;
     }

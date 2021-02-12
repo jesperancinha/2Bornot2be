@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery1.websockets;
 
-
 import javax.websocket.OnMessage;
 import javax.websocket.PongMessage;
 import javax.websocket.Session;

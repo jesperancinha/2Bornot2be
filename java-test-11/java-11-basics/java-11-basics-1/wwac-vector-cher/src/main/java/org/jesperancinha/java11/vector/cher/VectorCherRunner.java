@@ -41,7 +41,6 @@ public class VectorCherRunner {
         System.out.println(endList);
         System.out.printf("It took %d milliseconds to complete filling the list\n", startList.until(endList, ChronoUnit.MILLIS));
 
-
         System.out.println(vectorCher.subList(0, 26));
         System.out.println(listCher.subList(0, 26));
     }

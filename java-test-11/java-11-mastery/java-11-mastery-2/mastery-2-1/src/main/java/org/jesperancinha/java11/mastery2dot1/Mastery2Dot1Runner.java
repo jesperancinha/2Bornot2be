@@ -117,7 +117,7 @@ public class Mastery2Dot1Runner {
                 RED.printGenericLn("Mark Not Supported");
             }
         } catch (IOException | URISyntaxException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         // 5. `StringBuilder` vs `StringBuffer`
@@ -258,7 +258,6 @@ public class Mastery2Dot1Runner {
                 });
         GREEN.printGenericLn("We have iterated %d times! This is unpredictable", atomicInteger.get());
         GREEN.printGenericLn("Has the condition matched? %s", allMatchesForA);
-
 
         // 10. provider() in modularity
         printRainbowLn("==");

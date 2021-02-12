@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd;
 
-
 public class InstanceOf {
 
     public static void main(String[] args) {

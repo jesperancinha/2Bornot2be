@@ -20,7 +20,6 @@ public class Crum21 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 21 - Inner classes and static methods");
 
-
         YELLOW.printGenericLn("from https://genius.com/Sade-smooth-operator-lyrics");
         MAGENTA.printGenericLn("We can access SMOOTH_OPERATOR:");
 

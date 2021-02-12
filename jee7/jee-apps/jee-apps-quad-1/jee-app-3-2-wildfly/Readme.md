@@ -66,7 +66,8 @@ duplicated. This is because that for some libraries it is calling `java:/jaas/se
 others `securedbdomain`.
 
 ```xml
- <security-domain name="java:/jaas/securedbdomain" cache-type="default">
+
+<security-domain name="java:/jaas/securedbdomain" cache-type="default">
     <authentication>
         <login-module code="Database" flag="required">
             <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
@@ -76,13 +77,13 @@ others `securedbdomain`.
     </authentication>
 </security-domain>
 <security-domain name="securedbdomain" cache-type="default">
-    <authentication>
-        <login-module code="Database" flag="required">
-            <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
-            <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
-            <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
-        </login-module>
-    </authentication>
+<authentication>
+    <login-module code="Database" flag="required">
+        <module-option name="dsJndiName" value="java:jboss/datasources/KingsAndQueensDS"/>
+        <module-option name="principalsQuery" value="select passwd as password from USERS where login=?"/>
+        <module-option name="rolesQuery" value="select role, 'Roles' from USER_ROLES where login=?"/>
+    </login-module>
+</authentication>
 </security-domain>
 ```
 
@@ -91,6 +92,7 @@ others `securedbdomain`.
 - We make a clean installation by removing the whole h2 configuration:
 
 ```xml
+
 <datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true"
             use-java-context="true"
             statistics-enabled="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}">
@@ -102,16 +104,18 @@ others `securedbdomain`.
     </security>
 </datasource>
 <drivers>
-    <driver name="h2" module="com.h2database.h2">
-        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
-    </driver>
+<driver name="h2" module="com.h2database.h2">
+    <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+</driver>
 </drivers>
 ```
 
 - Then we configure the PostgreSQL installation:
 
 ```xml
-<datasource jndi-name="java:jboss/datasources/KingsAndQueensDS" pool-name="default" enabled="true" use-java-context="true">
+
+<datasource jndi-name="java:jboss/datasources/KingsAndQueensDS" pool-name="default" enabled="true"
+            use-java-context="true">
     <connection-url>jdbc:postgresql://localhost:5432/postgres</connection-url>
     <driver-class>org.postgresql.Driver</driver-class>
     <driver>postgresql</driver>
@@ -123,31 +127,33 @@ others `securedbdomain`.
     <connection-property name="connection-url">jdbc:postgresql://localhost:5432/postgres</connection-property>
 </datasource>
 <drivers>
-    <driver name="postgresql" module="postgresql">
-        <driver-class>org.postgresql.Driver</driver-class>
-        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
-    </driver>
+<driver name="postgresql" module="postgresql">
+    <driver-class>org.postgresql.Driver</driver-class>
+    <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+</driver>
 </drivers>
 ```
 
 ## Domain
 
 ```xml
+
 <subsystem xmlns="urn:jboss:domain:ejb3:5.0">
-...
+    ...
     <default-security-domain value="securedbdomain"/>
 </subsystem>
 ```
 
 ```xml
- <subsystem xmlns="urn:jboss:domain:ee:4.0">
-...
-    <default-bindings 
-            context-service="java:jboss/ee/concurrency/context/default" 
-            datasource="java:jboss/datasources/KingsAndQueensDS" 
-            jms-connection-factory="java:jboss/DefaultJMSConnectionFactory" 
-            managed-executor-service="java:jboss/ee/concurrency/executor/default" 
-            managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default" 
+
+<subsystem xmlns="urn:jboss:domain:ee:4.0">
+    ...
+    <default-bindings
+            context-service="java:jboss/ee/concurrency/context/default"
+            datasource="java:jboss/datasources/KingsAndQueensDS"
+            jms-connection-factory="java:jboss/DefaultJMSConnectionFactory"
+            managed-executor-service="java:jboss/ee/concurrency/executor/default"
+            managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default"
             managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
 </subsystem>
 ```
@@ -155,6 +161,7 @@ others `securedbdomain`.
 ## Secure login
 
 ```xml
+
 <subsystem xmlns="urn:jboss:domain:security:2.0">
     <security-domains>
         <security-domain name="securedbdomain" cache-type="default">
@@ -166,7 +173,7 @@ others `securedbdomain`.
                 </login-module>
             </authentication>
         </security-domain>
-...
+        ...
     </security-domains>
 </subsystem>
 ```
@@ -183,13 +190,17 @@ can make whole difference.
 1. Query for `principalsQuery`:
 
 ```sql
-select passwd as password from USERS where login=?
+select passwd as password
+from USERS
+where login = ?
 ```
 
 2. Query for `rolesQuery`
 
 ```sql
-select role, 'Roles' from USER_ROLES where login=?
+select role, 'Roles'
+from USER_ROLES
+where login = ?
 ```
 
 ## How to run
@@ -288,6 +299,7 @@ We will use users and credentials for this. Our users are kings and queens of Sp
 1. NONE
 
 ```xml
+
 <user-data-constraint>
     <transport-guarantee>NONE</transport-guarantee>
 </user-data-constraint>
@@ -299,6 +311,7 @@ MITM (Man In The Middle) attacks.
 2. INTEGRAL
 
 ```xml
+
 <user-data-constraint>
     <transport-guarantee>INTEGRAL</transport-guarantee>
 </user-data-constraint>
@@ -314,6 +327,7 @@ detected and the message will be rejected.
 3. CONFIDENTIAL
 
 ```xml
+
 <user-data-constraint>
     <transport-guarantee>CONFIDENTIAL</transport-guarantee>
 </user-data-constraint>

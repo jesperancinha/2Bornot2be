@@ -11,12 +11,10 @@ public class Resources {
     @PersistenceContext(unitName = "primary")
     private EntityManager em;
 
-
     @Produces
     private EntityManager getEntityManager() {
         return em;
     }
-
 
     @javax.enterprise.inject.Produces
     @RequestScoped

@@ -23,7 +23,6 @@ public class Crum29 {
         ORANGE.printGenericLn("With isBlank, stringA is not blank -> %s", stringA.isBlank());
         ORANGE.printGenericLn("With isBlank, stringB is actually blank -> %s", stringB.isBlank());
 
-
         GREEN.printGenericLn("The idea is that if we want to check for blank Strings, we should use isBlank");
 
     }

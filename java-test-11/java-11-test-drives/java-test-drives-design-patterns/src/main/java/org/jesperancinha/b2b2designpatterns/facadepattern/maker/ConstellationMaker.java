@@ -14,7 +14,6 @@ public class ConstellationMaker {
     private Constellation pegasus;
     private Constellation sagittarius;
 
-
     public ConstellationMaker() {
         this.cancer = new Cancer();
         this.pegasus = new Pegasus();

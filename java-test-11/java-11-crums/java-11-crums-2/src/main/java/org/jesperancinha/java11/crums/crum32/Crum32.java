@@ -34,7 +34,6 @@ public class Crum32 {
             + "        final byte eU = a.byteValue();\n" + "        final short fU = a.shortValue();\n"
             + "        final char gU = (char) a.shortValue();");
 
-
         MAGENTA.printGenericLn("These are examples of unbxing operations that work as unboxing from an Byte");
         final Byte bB = 123;
         final byte bAB = bB;

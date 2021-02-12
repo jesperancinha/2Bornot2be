@@ -3,6 +3,8 @@ package org.jesperancinha.java11.jdbc.commit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 /**
  * Remember that autocommit is always true by default
  */
@@ -16,7 +18,7 @@ public class JDBCCommitRunner {
             System.out.printf("Current auto-commit setting: %s\n", conn.getAutoCommit());
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
 }

@@ -129,7 +129,6 @@ public final class SuperCristalBall {
         this.comment = comment;
     }
 
-
     @Override
     public String toString() {
         return "CristalBall{" +

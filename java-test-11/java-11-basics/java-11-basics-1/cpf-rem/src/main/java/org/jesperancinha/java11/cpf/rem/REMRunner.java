@@ -13,11 +13,9 @@ public class REMRunner {
         final String albumFromInt = getAlbumInt(i2001);
         System.out.printf("REM published %s in %s\n", albumFromInt, i2001);
 
-
         final int c2004  = 2004;
         final String albumFromChar = getAlbumChar(c2004);
         System.out.printf("REM published %s in %s\n", albumFromChar, c2004);
-
 
         final byte b2011 = 111;
         final String albumFromByte = getAlbumBy(b2011);

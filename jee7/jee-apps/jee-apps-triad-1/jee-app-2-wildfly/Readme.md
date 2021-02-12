@@ -83,76 +83,86 @@ Add the following subsystem
 to [standalone-full.xml](../../../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
 
 ```xml
+
 <subsystem xmlns="urn:jboss:domain:resource-adapters:5.0">
-	<resource-adapters>
-		<resource-adapter id="activemq">
-			<archive>
+    <resource-adapters>
+        <resource-adapter id="activemq">
+            <archive>
                 activemq-rar-5.16.0.rar
-			</archive>
+            </archive>
 
-			<transaction-support>XATransaction</transaction-support>
+            <transaction-support>XATransaction</transaction-support>
 
-			<config-property name="UseInboundSession">
-				false
-			</config-property>
+            <config-property name="UseInboundSession">
+                false
+            </config-property>
 
-			<config-property name="Password">
-				defaultPassword
-			</config-property>
+            <config-property name="Password">
+                defaultPassword
+            </config-property>
 
-			<config-property name="UserName">
-				defaultUser
-			</config-property>
+            <config-property name="UserName">
+                defaultUser
+            </config-property>
 
-			<config-property name="ServerUrl">
-				tcp://localhost:61616
-			</config-property>
+            <config-property name="ServerUrl">
+                tcp://localhost:61616
+            </config-property>
 
-			<connection-definitions>
-				<connection-definition class-name="org.apache.activemq.ra.ActiveMQManagedConnectionFactory" jndi-name="java:/ConnectionFactoryLove" enabled="true" pool-name="ConnectionFactory">
+            <connection-definitions>
+                <connection-definition class-name="org.apache.activemq.ra.ActiveMQManagedConnectionFactory"
+                                       jndi-name="java:/ConnectionFactoryLove" enabled="true"
+                                       pool-name="ConnectionFactory">
 
-					<xa-pool>
-						<min-pool-size>1</min-pool-size>
-						<max-pool-size>20</max-pool-size>
-						<prefill>false</prefill>
-						<is-same-rm-override>false</is-same-rm-override>
-					</xa-pool>
+                    <xa-pool>
+                        <min-pool-size>1</min-pool-size>
+                        <max-pool-size>20</max-pool-size>
+                        <prefill>false</prefill>
+                        <is-same-rm-override>false</is-same-rm-override>
+                    </xa-pool>
 
-				</connection-definition>
-			</connection-definitions>
+                </connection-definition>
+            </connection-definitions>
 
-			<admin-objects>
-				<admin-object class-name="org.apache.activemq.command.ActiveMQQueue" jndi-name="java:jboss/activemq/queue/TestQueue" use-java-context="true" pool-name="TestQueue" enabled="true">
+            <admin-objects>
+                <admin-object class-name="org.apache.activemq.command.ActiveMQQueue"
+                              jndi-name="java:jboss/activemq/queue/TestQueue" use-java-context="true"
+                              pool-name="TestQueue" enabled="true">
 
-					<config-property name="PhysicalName">
-						activemq/queue/TestQueue
-					</config-property>
+                    <config-property name="PhysicalName">
+                        activemq/queue/TestQueue
+                    </config-property>
 
-				</admin-object>
+                </admin-object>
 
-				<admin-object class-name="org.apache.activemq.command.ActiveMQTopic" jndi-name="java:jboss/activemq/topic/TestTopic" use-java-context="true" pool-name="TestTopic" enabled="true">
+                <admin-object class-name="org.apache.activemq.command.ActiveMQTopic"
+                              jndi-name="java:jboss/activemq/topic/TestTopic" use-java-context="true"
+                              pool-name="TestTopic" enabled="true">
 
-					<config-property name="PhysicalName">
-						activemq/topic/TestTopic
-					</config-property>
+                    <config-property name="PhysicalName">
+                        activemq/topic/TestTopic
+                    </config-property>
 
-				</admin-object>
-			</admin-objects>
-		</resource-adapter>
-	</resource-adapters>
+                </admin-object>
+            </admin-objects>
+        </resource-adapter>
+    </resource-adapters>
 </subsystem>
 ```
 
 Also be sure to update this section:
 
 ```xml
+
 <subsystem xmlns="urn:jboss:domain:messaging-activemq:6.0">
     <server name="default">
         <statistics enabled="${wildfly.messaging-activemq.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
         <security-setting name="#">
-            <role name="guest" send="true" consume="true" create-non-durable-queue="true" delete-non-durable-queue="true"/>
+            <role name="guest" send="true" consume="true" create-non-durable-queue="true"
+                  delete-non-durable-queue="true"/>
         </security-setting>
-        <address-setting name="#" dead-letter-address="jms.queue.DLQ" expiry-address="jms.queue.ExpiryQueue" max-size-bytes="10485760" page-size-bytes="2097152" message-counter-history-day-limit="10"/>
+        <address-setting name="#" dead-letter-address="jms.queue.DLQ" expiry-address="jms.queue.ExpiryQueue"
+                         max-size-bytes="10485760" page-size-bytes="2097152" message-counter-history-day-limit="10"/>
         <http-connector name="http-connector" socket-binding="http" endpoint="http-acceptor"/>
         <http-connector name="http-connector-throughput" socket-binding="http" endpoint="http-acceptor-throughput">
             <param name="batch-delay" value="50"/>
@@ -172,8 +182,10 @@ Also be sure to update this section:
         <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
         <jms-queue name="TestQueue" entries="java:jboss/activemq/queue/TestQueue"/>
         <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactoryLove" connectors="in-vm"/>
-        <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
-        <pooled-connection-factory name="activemq" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
+        <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory"
+                            connectors="http-connector"/>
+        <pooled-connection-factory name="activemq" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory"
+                                   connectors="in-vm" transaction="xa"/>
     </server>
 </subsystem>
 ```
@@ -215,15 +227,19 @@ standalone files. In our case we are running the [standalone-full.xml](backup/st
 installation we should have these `deployments` at the end of the file:
 
 ```xml
+
 <deployments>
     <deployment name="jee-app-2-wildfly-ws-1.0-SNAPSHOT.war" runtime-name="jee-app-2-wildfly-ws-1.0-SNAPSHOT.war">
-        <fs-archive path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly-ws/target/jee-app-2-wildfly-ws-1.0-SNAPSHOT.war"/>
+        <fs-archive
+                path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly-ws/target/jee-app-2-wildfly-ws-1.0-SNAPSHOT.war"/>
     </deployment>
     <deployment name="jee-app-2-wildfly-adapter.rar" runtime-name="jee-app-2-wildfly-adapter.rar">
-        <fs-archive path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly-adapter/target/jee-app-2-wildfly-adapter.rar"/>
+        <fs-archive
+                path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly-adapter/target/jee-app-2-wildfly-adapter.rar"/>
     </deployment>
     <deployment name="jee-app-2-wildfly.war" runtime-name="jee-app-2-wildfly.war">
-        <fs-archive path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly/target/jee-app-2-wildfly.war"/>
+        <fs-archive
+                path="/Users/jofisaes/dev/src/jofisaes/java-test-drives/jee7/jee-apps/jee-app-2-wildfly/target/jee-app-2-wildfly.war"/>
     </deployment>
 </deployments>
 ```

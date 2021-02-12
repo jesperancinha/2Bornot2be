@@ -18,7 +18,6 @@ public enum CarmenSandiegoColor {
     YELLOW("FFFF55","\033[0;33m"),
     BRIGHT_WHITE("FFFFFF","\033[1;37m");
 
-
     private String hexColor;
     private String consoleColor;
 

@@ -1,6 +1,5 @@
 package org.jesperancinha.b2b2designpatterns.chainofresponsibility;
 
-
 import java.text.MessageFormat;
 import java.util.logging.Logger;
 

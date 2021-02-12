@@ -38,7 +38,6 @@ public class CheeseTest {
         final Cheese ilhaCheese = new Cheese(25, 30, new IlhaCheese());
         final Cheese serraCheese = new Cheese(35, 40, new SerraCheese());
 
-
         cabralesCheese.makeCheese();
         goudaCheese.makeCheese();
         ilhaCheese.makeCheese();

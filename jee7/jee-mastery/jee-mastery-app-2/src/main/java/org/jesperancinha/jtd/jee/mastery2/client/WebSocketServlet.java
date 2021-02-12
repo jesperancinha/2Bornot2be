@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 @WebServlet("/ariaschorus/socket")
 public class WebSocketServlet extends HttpServlet {
@@ -31,9 +32,9 @@ public class WebSocketServlet extends HttpServlet {
         try {
             webSocketClient.send(lyric, "ws://localhost:8080/jee-mastery-app-2-1.0.0-SNAPSHOT/ariaschorus/lyrics");
         } catch (URISyntaxException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         } catch (DeploymentException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
         final PrintWriter writer = resp.getWriter();
         writer.println(BRIGHT_CYAN.getPBText("Please check your logs! Your lyric is sent!"));

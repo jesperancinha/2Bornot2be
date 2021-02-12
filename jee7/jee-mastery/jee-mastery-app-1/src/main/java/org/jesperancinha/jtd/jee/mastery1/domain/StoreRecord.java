@@ -10,7 +10,6 @@ import java.util.UUID;
 @Table(name = "storeRecord")
 public class StoreRecord {
 
-
     private UUID id;
 
     private String name;
@@ -48,7 +47,6 @@ public class StoreRecord {
     public void setType(String type) {
         this.type = type;
     }
-
 
     @Column
     public String getYear() {

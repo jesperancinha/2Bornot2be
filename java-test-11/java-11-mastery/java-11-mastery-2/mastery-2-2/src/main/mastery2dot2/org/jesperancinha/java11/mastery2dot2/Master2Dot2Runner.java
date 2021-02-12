@@ -60,7 +60,7 @@ public class Master2Dot2Runner {
             GREEN.printGenericLn("Data -> %s", missionData);
             GREEN.printGenericLn("Please run module %s to realize that default fields are read with Java default values and not the assigned ones,\nif they are not part of the serialized data", "mastery-2-2-deserializer");
         } catch (IOException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         printRainbowTitleLn("2. `compare` and `mismatch` in arrays");
@@ -160,7 +160,6 @@ public class Master2Dot2Runner {
                 "    LocalDateTime getBriefingDate();\n" +
                 "    String getOriginLocation();\n" +
                 "}");
-
 
         printRainbowTitleLn("8. `Function`'s and `ToFunction`'s");
         printRainbowLn("==");
@@ -327,7 +326,7 @@ public class Master2Dot2Runner {
             }
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
 
         printRainbowTitleLn("16. Non-deterministic nature of findAny.");

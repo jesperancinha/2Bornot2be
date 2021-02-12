@@ -11,6 +11,8 @@ import javax.xml.bind.Marshaller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 @WebServlet("/marshaller")
 public class RecordMarshallerServlet extends HttpServlet {
 
@@ -29,7 +31,7 @@ public class RecordMarshallerServlet extends HttpServlet {
             final PrintWriter writer = resp.getWriter();
             m.marshal(record, writer);
         } catch (JAXBException e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
         }
     }
 }

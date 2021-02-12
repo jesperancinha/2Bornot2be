@@ -1,5 +1,7 @@
 package org.jesperancinha.java11.charat;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 public class CharAtRunner {
     public static void main(String[] args) {
         var testString = "No more I love you's\n" +
@@ -16,7 +18,7 @@ public class CharAtRunner {
         try {
             testString.charAt(100000);
         } catch (final Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
             System.out.printf("**** Character is off the string. Exception: %s\n", e.getMessage());
             System.out.printf("**** Exception type: %s\n", e.getClass());
         }
@@ -24,7 +26,7 @@ public class CharAtRunner {
         try {
             testString.charAt(testString.length());
         } catch (final Exception e) {
-            e.printStackTrace();
+            RED.printThrowableAndExit(e);
             System.out.printf("**** Character is off the string. Exception: %s\n", e.getMessage());
             System.out.printf("**** Exception type: %s\n", e.getClass());
         }

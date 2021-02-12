@@ -11,7 +11,6 @@ import java.util.UUID;
 @Table
 public class Concert {
 
-
     @Id
     private UUID uuid;
 
@@ -20,7 +19,6 @@ public class Concert {
 
     @Column
     private Date date;
-
 
     public UUID getUuid() {
         return uuid;

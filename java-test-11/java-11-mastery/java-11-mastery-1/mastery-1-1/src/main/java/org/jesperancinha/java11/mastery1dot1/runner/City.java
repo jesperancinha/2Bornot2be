@@ -68,7 +68,6 @@ public class City {
 
     }
 
-
     /**
      *  Neighbourhood watch for the Flinstones City Bedrock!
      * @param dino a character. Mostly Dino {@link String}

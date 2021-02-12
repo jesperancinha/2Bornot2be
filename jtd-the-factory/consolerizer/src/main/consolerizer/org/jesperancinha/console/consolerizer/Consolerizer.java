@@ -228,7 +228,7 @@ public class Consolerizer {
                                     try {
                                         sleep(typingWait);
                                     } catch (InterruptedException e) {
-                                        e.printStackTrace();
+                                        RED.printThrowableAndExit(e);
                                     }
                                 }
                                 printColor(currentColor);
@@ -368,7 +368,6 @@ public class Consolerizer {
     static String createTitleLine(Object text, char limitingChar) {
         return ConsolerizerTexts.createTitleLineLn(text, limitingChar, false);
     }
-
 
     public void printGenericLn(Object text, Object... args) {
         printGeneric(text.toString().concat("\n"), args);

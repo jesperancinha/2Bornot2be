@@ -24,7 +24,6 @@ public enum ConsolerizerColor {
     BRIGHT_WHITE("FFFFFF", "\033[1;37m"),
     BG_ORANGE("AA0000", "\033[48:2:255:165:0m");
 
-
     private String hexColor;
     private String consoleColor;
 

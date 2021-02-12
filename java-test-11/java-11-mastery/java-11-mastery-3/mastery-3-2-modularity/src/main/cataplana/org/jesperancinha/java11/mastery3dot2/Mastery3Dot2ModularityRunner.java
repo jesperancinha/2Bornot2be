@@ -1,6 +1,5 @@
 package org.jesperancinha.java11.mastery3dot2;
 
-
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 
 public class Mastery3Dot2ModularityRunner {

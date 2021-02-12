@@ -77,7 +77,6 @@ public class AccessTimoutServerBean {
         this.result += BLACK.getPText(task21.get());
         this.result += BLACK.getPText(task22.get());
 
-
         final Future<String> task31 = accessImmediateTimeoutExecutorService.submit(() -> {
             try {
                 return accessTimeoutBean.accessOneSecondTimeout();

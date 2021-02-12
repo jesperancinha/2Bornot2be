@@ -16,7 +16,6 @@ public class AudienceItemReader extends AbstractItemReader {
         stack.push("audience");
     }
 
-
     @Override
     public Serializable checkpointInfo() throws Exception {
         return 1;

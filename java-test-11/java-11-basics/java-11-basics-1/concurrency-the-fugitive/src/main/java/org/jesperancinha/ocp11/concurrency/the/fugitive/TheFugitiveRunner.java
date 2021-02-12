@@ -4,6 +4,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+
 public class TheFugitiveRunner {
     private static final ReentrantLock backDoorLock = new ReentrantLock();
     private static final ReentrantLock frontDoorLock = new ReentrantLock();
@@ -39,7 +41,7 @@ public class TheFugitiveRunner {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
             System.out.println("RK - I'm Richard Kimble and I'm going for a stroll!");
             backDoorLock.unlock();
@@ -50,7 +52,7 @@ public class TheFugitiveRunner {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
             // backDoorLock.unlock();
         });
@@ -66,7 +68,7 @@ public class TheFugitiveRunner {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                RED.printThrowableAndExit(e);
             }
             System.out.println("RK - I'm Richard Kimble and I'm going for a stroll!");
             frontDoorLock.unlock();
@@ -77,7 +79,7 @@ public class TheFugitiveRunner {
                try {
                    Thread.sleep(5000);
                } catch (InterruptedException e) {
-                   e.printStackTrace();
+                   RED.printThrowableAndExit(e);
                }
            } else{
                System.out.println("C - Oh Oh, I have to escape, he is still in there!");
