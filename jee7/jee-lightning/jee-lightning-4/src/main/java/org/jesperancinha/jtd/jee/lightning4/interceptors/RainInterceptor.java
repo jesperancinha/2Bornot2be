@@ -6,7 +6,6 @@ import javax.interceptor.InvocationContext;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 
 public class RainInterceptor {
-
     @AroundInvoke
     public Object hereComesTheRain(InvocationContext invocationContext) throws Exception {
         BLUE.printGenericLn("Here comes the rain!");

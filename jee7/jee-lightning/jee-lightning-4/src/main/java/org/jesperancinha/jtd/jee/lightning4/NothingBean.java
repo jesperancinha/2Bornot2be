@@ -9,8 +9,6 @@ import javax.interceptor.Interceptors;
 
 @Named
 public class NothingBean {
-
-
     @Interceptors({RainInterceptor.class, SunInterceptor.class})
     public void doNothing() {
         ConsolerizerGraphs.printRainbowFlag("Method doNothing is called!");

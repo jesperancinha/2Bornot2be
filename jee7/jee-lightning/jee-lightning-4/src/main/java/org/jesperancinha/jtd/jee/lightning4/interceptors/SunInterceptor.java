@@ -6,7 +6,6 @@ import javax.interceptor.InvocationContext;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 public class SunInterceptor {
-
     @AroundInvoke
     public Object hereComesTheSun(InvocationContext invocationContext) throws Exception {
         YELLOW.printGenericLn("The sun is coming!");
