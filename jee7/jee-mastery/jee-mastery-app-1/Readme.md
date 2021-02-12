@@ -66,7 +66,7 @@ ls WEB-INF/lib
 
 ## Endpoints
 
-1. http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/
+1. [http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/](http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT)
 
 ## Curl requests
 

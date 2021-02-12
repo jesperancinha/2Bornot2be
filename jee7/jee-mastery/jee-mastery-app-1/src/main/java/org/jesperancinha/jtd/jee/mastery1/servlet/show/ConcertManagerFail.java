@@ -1,5 +1,7 @@
 package org.jesperancinha.jtd.jee.mastery1.servlet.show;
 
+import org.jesperancinha.console.consolerizer.Consolerizer;
+
 import javax.annotation.Resource;
 import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
@@ -54,6 +56,7 @@ public class ConcertManagerFail implements Serializable {
             entityManager.persist(concertEntity);
             ejbContext.setRollbackOnly();
         } catch (IllegalStateException e) {
+            Consolerizer.setupFastDefault();
             YELLOW.printExpectedException("Only CONTAINER managed beans can be rolled back via the EJBContext", e.getMessage());
             YELLOW.printGenericLn("In this case, %s", concertStatement);
         }
