@@ -55,10 +55,19 @@ It is the support project of the following articles on my blog:
 
 ## References:
 
+### Online
+
 -   [Fitnesse](http://www.fitnesse.org/FrontPage)
 -   [Cucumber](https://cucumber.io/)
 -   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
 -   [Hints & Tricks](./Hints&Tricks.md)
+
+### Books
+
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (Second Edition). Sybex
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (First Edition). Sybex
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 
 ---
 

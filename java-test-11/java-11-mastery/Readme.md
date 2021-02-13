@@ -7,6 +7,13 @@
 -   [Mastery 3](java-11-mastery-3)
 -   [Mastery 4](java-11-mastery-4)
 
+## References
+
+### Books
+
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (Second Edition). Sybex
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (First Edition). Sybex
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)

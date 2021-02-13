@@ -4,6 +4,13 @@
 
 We will use the data from a fairly unknown group from the 80's called [Living in a Box](https://en.wikipedia.org/wiki/Living_in_a_Box).
 
+## References
+
+### Books
+
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (Second Edition). Sybex
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (First Edition). Sybex
+
 ## Output
 
 ```text

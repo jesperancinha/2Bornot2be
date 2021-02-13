@@ -1,5 +1,12 @@
 # java-11-crums-2
 
+## References
+
+### Books
+
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (Second Edition). Sybex
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (First Edition). Sybex
+
 ## Example
 
 ![alt text](docs/java-11-crums-2.png "Crums Module 2")

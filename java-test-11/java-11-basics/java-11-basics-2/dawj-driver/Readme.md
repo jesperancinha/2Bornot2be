@@ -16,6 +16,8 @@ Process finished with exit code 0
 
 ## References
 
+### Online
+
 -   [What the JDBC™ 4.3 API Includes](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/package-summary.html)
 -   How JDBC 4.0 works in a nutshell
    
@@ -28,6 +30,11 @@ Process finished with exit code 0
               style="width:10%;">
       </a> 
 </div>
+
+### Books
+
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (Second Edition). Sybex
+-   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (First Edition). Sybex
 
 ## About me 👨🏽‍💻🚀
 
