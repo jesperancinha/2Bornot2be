@@ -369,6 +369,8 @@ unsafe website like this:
 
 ## References
 
+### Online
+
 - [Fusion Middleware Developing Web Applications, Servlets, and JSPs for Oracle WebLogic Server](https://docs.oracle.com/cd/E24329_01/web.1211/e21049/web_xml.htm#WBAPP502)
 - [Database Authentication](https://docs.jboss.org/author/display/WFLY/Database%20Authentication%20Migration.html)
 - [Securing a web application](https://openliberty.io/guides/security-intro.html)
@@ -418,6 +420,11 @@ unsafe website like this:
 - [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 - [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 - [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 

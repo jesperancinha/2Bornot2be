@@ -33,6 +33,8 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+### Online
+
 - [Why is a JSP converted to Servlet?](https://stackoverflow.com/questions/42203449/why-is-a-jsp-converted-to-servlet)
 - [web.xml Deployment Descriptor Elements](https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039330)
 - [Web.xml Filter Mapping in JSP Servlet with Example](https://www.guru99.com/jsp-filter.html)
@@ -54,6 +56,11 @@ mvn clean install -Parq-wildfly-managed
 - [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 - [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 - [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 

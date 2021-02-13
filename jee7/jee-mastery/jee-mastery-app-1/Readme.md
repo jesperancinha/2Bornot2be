@@ -243,6 +243,8 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 
 ## References
 
+### Online
+
 -   [Batch Properties](https://jberet.gitbooks.io/jberet-user-guide/content/batch_properties/)
 -   [Create and Invoke a JSR-352 Batchlet Using EJB Timer](http://techtipsjava.blogspot.com/2014/11/create-and-invoke-jsr-352-batchlet.html)
 -   [Java EE 7 Batch (JSR 352)](http://www.jknowledge.de/tutorials/java-batch-jsr-352/)
@@ -343,6 +345,11 @@ curl -X GET http://localhost:8080/jee-mastery-app-1-1.0.0-SNAPSHOT/app/fado/band
 -   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 -   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 -   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 

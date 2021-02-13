@@ -113,10 +113,17 @@ mvn clean install -Parq-wildfly-managed
 
 ## References
 
+### Online
+
 - [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
 - [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 - [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 - [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 

@@ -262,6 +262,8 @@ Use Arquillian Managed, and you should get a screen like this. All options shoul
 
 ## References
 
+### Online
+
 - [What's in a name? What developers can expect in Jakarta EE 9](https://www.theserverside.com/feature/Whats-in-a-name-What-developers-can-expect-in-Jakarta-EE-9)
 - [@WebService handlers with @HandlerChain](https://tomee.apache.org/examples-trunk/webservice-handlerchain/)
 - [Maven - Generate Jar and War](https://stackoverflow.com/questions/10862980/maven-generate-jar-and-war)
@@ -289,6 +291,11 @@ Use Arquillian Managed, and you should get a screen like this. All options shoul
 - [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
 - [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
 - [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## Context references
 

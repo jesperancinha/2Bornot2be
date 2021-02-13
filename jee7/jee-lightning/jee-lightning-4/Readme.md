@@ -21,12 +21,15 @@ Topics:
 3. `<%@ include file="inclusion.jsp" %>`
 4. `JMSContext`, `JMSConsumer`, `JMSProducer`
 5. `@AroundInvoke`, `@Interceptors({RainInterceptor.class, SunInterceptor.class})`, `interceptor-binding`, `target-name`, `interceptor-class`, `method-name`
+6. `@ConcurrencyManagement`, `@AccessTimeout`, `@Lock(LockType.READ)`. `@Lock(LockType.WRITE)`
 
 ## Endpoints
 
 1. [http://localhost:8080/jee-lightning-4-1.0.0-SNAPSHOT](http://localhost:8080/jee-lightning-4-1.0.0-SNAPSHOT)
 
 ## References
+
+###  Online
 
 -   [Sample ejb-jar.xml File](https://docs.oracle.com/cd/E19830-01/819-4721/beajc/index.html)
 -   [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
@@ -43,6 +46,11 @@ Topics:
 -   [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
 -   [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
 -   [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 

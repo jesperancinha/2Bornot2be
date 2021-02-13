@@ -2,10 +2,17 @@
 
 ## References
 
+### Online
+
 - [28.1 Creating a Simple Web Service and Clients with JAX-WS](https://docs.oracle.com/javaee/7/tutorial/jaxws001.htm)
 - [JAX-WS Hello World Example – RPC Style](https://examples.javacodegeeks.com/enterprise-java/jws/jax-ws-hello-world-example-rpc-style/)
 - [Hello World JAX-RS Application](https://www.journaldev.com/9191/java-web-services-tutorial)
 - [Create a Java Web Service (SOAP RPC) for WildFly](https://www.learn-it-with-examples.com/development/java/java-web-services/create-simple-java-web-service-soap-rpc-web-app.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## Running
 

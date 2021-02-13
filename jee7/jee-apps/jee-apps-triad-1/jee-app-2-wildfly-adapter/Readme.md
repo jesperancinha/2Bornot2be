@@ -80,6 +80,8 @@ Use Arquillian Managed and you should get a screen like this. All options should
 
 ## References
 
+### Online
+
 - [dlmiles / full-example-ee7-jca-eis](https://github.com/dlmiles/full-example-ee7-jca-eis)
 - [Deployment Descriptors used In WildFly](https://docs.jboss.org/author/display/WFLY8/Deployment%20Descriptors%20used%20In%20WildFly.html)
 - [JCA Master The Boss - GitHub Demo](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
@@ -96,6 +98,11 @@ Use Arquillian Managed and you should get a screen like this. All options should
 - [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
 - [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
 - [Wild Fly Downloads](https://www.wildfly.org/downloads/)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## Context references
 

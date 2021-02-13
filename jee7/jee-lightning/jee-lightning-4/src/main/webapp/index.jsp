@@ -13,6 +13,7 @@
     <li><a href="includes.jsp">Explore Include Directive</a></li>
     <li><a href="teaqueues.xhtml">Explore Transaction Context</a></li>
     <li><a href="donothing.xhtml">Explore Interceptors</a></li>
+    <li><a href="plants.xhtml">Explore Locks (wait 10 seconds)</a></li>
 </ul>
 </body>
 </html>

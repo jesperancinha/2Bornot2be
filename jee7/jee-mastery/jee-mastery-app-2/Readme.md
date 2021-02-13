@@ -150,6 +150,8 @@ ls WEB-INF/lib
 
 ## References
 
+### Online
+
 -   [Teun-Hakvoort article about WebSockets for NLJUG - 2014/05 in Dutch](https://blogs.infosupport.com/wp-content/uploads/2014/05/Artikel-Websockets-en-Java-Teun-Hakvoort.pdf)
 -   [Tackling RESOURCE_LOCAL Vs. JTA Under Java EE Umbrella and Payara Server](https://dzone.com/articles/resource-local-vs-jta-transaction-types-and-payara)
 -   [JPA 101n](https://tomee.apache.org/jpa-concepts.html)
@@ -243,6 +245,11 @@ ls WEB-INF/lib
 -   [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 -   [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 -   [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 

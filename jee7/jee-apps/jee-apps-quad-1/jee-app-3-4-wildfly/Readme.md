@@ -219,6 +219,8 @@ unsafe website like this:
 
 ## References
 
+### Online
+
 - [JSR 352: Batch Applications for the Java Platform](https://jcp.org/en/jsr/detail?id=352)
 - [An Overview of Batch Processing in Java EE 7.0](https://www.oracle.com/technical-resources/articles/java/batch-processing-ee-7.html)
 - [CDI @RequestScoped](https://tomee.apache.org/examples-trunk/cdi-request-scope/)
@@ -282,6 +284,11 @@ unsafe website like this:
 - [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 - [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
 - [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
+
+### Books
+
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 1). Addison Wesley
+-   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). The Java EE 7 Tutorial. (Fifth Edition Volume 2). Addison Wesley
 
 ## About me 👨🏽‍💻🚀
 
