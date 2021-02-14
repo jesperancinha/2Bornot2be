@@ -23,7 +23,7 @@ public class Hidden {
         Object newInstance = aClass.newInstance();
         Method method = aClass.getMethod("getCatch", Integer.class);
         Object invokeResult = method.invoke(newInstance, 10);
-        
+
         System.out.println(invokeResult);
         System.out.println(aClass);
 
