@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.app1.domain;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer8.Consolerizer;
 
 import javax.enterprise.event.Event;
 import javax.faces.application.FacesMessage;
@@ -13,9 +13,10 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.RED;
 
 public class ManagedBeanAlbumDao implements AlbumDao {
 
@@ -41,7 +42,7 @@ public class ManagedBeanAlbumDao implements AlbumDao {
                 query.setParameter("albumName", name);
                 album = (Album) query.getSingleResult();
             } catch (NoResultException e) {
-                printRedGenericLn(e);
+                RED.printGenericLn(e);
                 album = null;
 
             }
@@ -51,7 +52,7 @@ public class ManagedBeanAlbumDao implements AlbumDao {
             try {
                 utx.rollback();
             } catch (SystemException se) {
-                printRedGenericLn(se);
+                RED.printGenericLn(se);
                 throw new RuntimeException(se);
             }
             throw new RuntimeException(e);
@@ -66,32 +67,31 @@ public class ManagedBeanAlbumDao implements AlbumDao {
             try {
                 Consolerizer.typingWaitGlobal = 0;
                 final long newId = getNewId();
-                printOrangeGenericLn("The highest id is %d", newId);
+                ORANGE.printGenericLn("The highest id is %d", newId);
                 utx.begin();
                 entityManager.persist(album);
             } catch (IllegalStateException e) {
-                printOrangeGenericLn(e);
+                ORANGE.printGenericLn(e);
             } finally {
                 utx.commit();
-                Consolerizer.printBrightMagentaGenericLn("Triggering Event for album %s", album);
+                MAGENTA.printGenericLn("Triggering Event for album %s", album);
                 albumEvent.fire(album);
             }
         } catch (Exception e) {
             try {
-
-                printBlueGenericLn(e);
+                BLUE.printGenericLn(e);
                 if (e instanceof IllegalStateException) {
                     throw e;
                 }
-                printOrangeGenericLn(
+                ORANGE.printGenericLn(
                         "You have been assigned id %d. This won't work because it matches an id already in the database",
                         album.getId());
-                printOrangeGenericLn("We'll start a new transaction to merge this record.");
-                printRedGenericLn(
+                ORANGE.printGenericLn("We'll start a new transaction to merge this record.");
+                RED.printGenericLn(
                         "This failed now, and that is probably because the H2 database SEQUENCE hasn't passed the initial registries.");
-                printRedGenericLn(
+                RED.printGenericLn(
                         "Remember that a direct insert upon initialization does not affect the sequence counters.");
-                printRedGenericLn(
+                RED.printGenericLn(
                         "A better way to deal with ID's is with UUID's. This will be shown in further implementations.");
                 utx.begin();
                 entityManager.merge(album);
@@ -130,7 +130,7 @@ public class ManagedBeanAlbumDao implements AlbumDao {
                 Query query = entityManager.createQuery("select a from Album a");
                 albumList = query.getResultList();
             } catch (NoResultException e) {
-                printRedGenericLn(e);
+                RED.printGenericLn(e);
                 albumList = null;
 
             }
@@ -140,7 +140,7 @@ public class ManagedBeanAlbumDao implements AlbumDao {
             try {
                 utx.rollback();
             } catch (SystemException se) {
-                printRedGenericLn(se);
+                RED.printGenericLn(se);
                 throw new RuntimeException(se);
             }
             throw new RuntimeException(e);

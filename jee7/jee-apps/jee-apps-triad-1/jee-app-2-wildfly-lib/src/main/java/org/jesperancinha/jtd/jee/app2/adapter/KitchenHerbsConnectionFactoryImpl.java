@@ -1,11 +1,13 @@
 package org.jesperancinha.jtd.jee.app2.adapter;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.naming.NamingException;
 import javax.naming.Reference;
 import javax.resource.ResourceException;
 import javax.resource.spi.ConnectionManager;
+
+import static org.jesperancinha.console.consolerizer8.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerGraphs.printUnicornsLn;
 
 public class KitchenHerbsConnectionFactoryImpl implements KitchenHerbsConnectionFactory {
     private static final long serialVersionUID = 1L;
@@ -36,21 +38,21 @@ public class KitchenHerbsConnectionFactoryImpl implements KitchenHerbsConnection
     }
 
     public String toString() {
-        Consolerizer.setupFastDefault();
-        Consolerizer.printUnicornsLn(100);
-        Consolerizer.printOrangeGenericLn(
+        setupFastDefault();
+        printUnicornsLn(100);
+        ORANGE.printGenericLn(
                 "This instance is of a different type because it is being loaded in a different module");
-        Consolerizer.printOrangeGenericLn("We are not going to fix this in this module.");
-        Consolerizer.printOrangeGenericLn(
+        ORANGE.printGenericLn("We are not going to fix this in this module.");
+        ORANGE.printGenericLn(
                 "This module is here just to give an idea on how different modules can work together");
-        Consolerizer.printOrangeGenericLn(
+        ORANGE.printGenericLn(
                 "Using @Resource, we were able to inject an instance from a different module into our own");
-        Consolerizer.printOrangeGenericLn("We did this, by using JNDI technology");
-        Consolerizer.printOrangeGenericLn("JNDI stads for Java Naming and Directory Interface");
-        Consolerizer.printOrangeGenericLn(
+        ORANGE.printGenericLn("We did this, by using JNDI technology");
+        ORANGE.printGenericLn("JNDI stads for Java Naming and Directory Interface");
+        ORANGE.printGenericLn(
                 "Our Java Connector API resource is discoverable with the use of the Referenceable interface");
-        Consolerizer.printOrangeGenericLn("We haven't seen the connector in action in this case.");
-        Consolerizer.printUnicornsLn(100);
+        ORANGE.printGenericLn("We haven't seen the connector in action in this case.");
+        printUnicornsLn(100);
         return KitchenHerbsConnectionFactoryImpl.class.toString();
     }
 }

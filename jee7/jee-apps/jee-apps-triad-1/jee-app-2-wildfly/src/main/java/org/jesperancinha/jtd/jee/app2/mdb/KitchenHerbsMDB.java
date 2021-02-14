@@ -7,9 +7,9 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBrightMagentaGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedThrowableAndExit;
-import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.RED;
 
 @MessageDriven(activationConfig = {
 
@@ -25,13 +25,13 @@ public class KitchenHerbsMDB implements MessageListener {
     public void onMessage(Message message) {
         try {
             setupFastDefault();
-            printBrightMagentaGenericLn("We've got this message -> %s", message);
+            MAGENTA.printGenericLn("We've got this message -> %s", message);
             if (message instanceof TextMessage) {
-                printBrightMagentaGenericLn("More specifically: %s", ((TextMessage) message).getText());
+                MAGENTA.printGenericLn("More specifically: %s", ((TextMessage) message).getText());
             }
 
         } catch (JMSException e) {
-            printRedThrowableAndExit(e);
+            RED.printThrowableAndExit(e);
         }
 
     }

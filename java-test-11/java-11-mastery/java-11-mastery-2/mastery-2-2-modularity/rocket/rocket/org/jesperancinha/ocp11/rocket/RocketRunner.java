@@ -7,11 +7,17 @@ import org.jesperancinha.java11.service.module.ServiceInterface;
 
 import java.util.ServiceLoader;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.typingWaitGlobal;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+
 public class RocketRunner {
     public static void main(String[] args) {
-        Consolerizer.typingWaitGlobal = 0;
-        Consolerizer.printBlueGenericLn("============ Welcome to the Apollo 13's mission launch of 1970 ============");
-        Consolerizer.printRainbowTitleLn("Apollo 13 - Rocket Launched!...");
+        typingWaitGlobal = 0;
+        BLUE.printGenericLn("============ Welcome to the Apollo 13's mission launch of 1970 ============");
+        printRainbowTitleLn("Apollo 13 - Rocket Launched!...");
 
         ServiceLoader<ServiceInterface> serviceLoaderServiceModule = ServiceLoader.load(ServiceInterface.class);
         ServiceLoader<LunarInterface> serviceLoaderLunarModule = ServiceLoader.load(LunarInterface.class);
@@ -23,7 +29,7 @@ public class RocketRunner {
         serviceInterface.detachModule();
         lunarInterface.detachModule();
 
-        Consolerizer.printYellowGenericLn("Mission complete");
-        Consolerizer.printGreenGenericLn("Done!!");
+        YELLOW.printGenericLn("Mission complete");
+        GREEN.printGenericLn("Done!!");
     }
 }

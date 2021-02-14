@@ -8,7 +8,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.RED;
 
 @Stateful
 @Alternative
@@ -22,7 +22,7 @@ public class EJBAlbumDao implements AlbumDao {
             query.setParameter(1, username);
             return (Album) query.getSingleResult();
         } catch (NoResultException e) {
-            printRedGenericLn(e);
+            RED.printGenericLn(e);
             return null;
         }
     }

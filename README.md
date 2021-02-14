@@ -51,6 +51,14 @@ It is the support project of the following articles on my blog:
 -   [java-test-15](./java-test-15) - Java 15 study materials and article contents
 -   [JEE 7](./jee7) - Java EE 7 study materials
 
+## Consolerizer
+
+Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
+
+This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jesperancinha.console).
+
+In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
+
 ## Build
 
 Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.

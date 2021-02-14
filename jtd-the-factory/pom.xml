@@ -13,11 +13,6 @@
 
     <packaging>pom</packaging>
 
-    <modules>
-        <module>consolerizer</module>
-        <module>consolerizer8</module>
-    </modules>
-
     <properties>
         <maven-compiler-plugin.source>11</maven-compiler-plugin.source>
         <maven-compiler-plugin.target>11</maven-compiler-plugin.target>

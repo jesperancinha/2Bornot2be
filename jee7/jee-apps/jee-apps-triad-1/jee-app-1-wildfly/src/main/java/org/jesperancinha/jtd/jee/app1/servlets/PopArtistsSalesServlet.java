@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.app1.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer8.Consolerizer;
 import org.jesperancinha.jtd.jee.app1.beans.Sales;
 import org.jesperancinha.jtd.jee.app1.managers.SalesRequest;
 import org.jesperancinha.jtd.jee.app1.service.PopArtistsService;
@@ -15,10 +15,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.ORANGE;
 
 @WebServlet("/popartists/sales")
 public class PopArtistsSalesServlet extends HttpServlet {
@@ -46,20 +46,20 @@ public class PopArtistsSalesServlet extends HttpServlet {
         Consolerizer.maxLineCharsGlobal = 100;
         Consolerizer.titleSpread = 100;
         Consolerizer.blackAndWhite = false;
-        printBlueGenericTitleLn("Application1");
-        printBlueGenericTitleLn(PopArtistsSalesServlet.this.getClass());
-        printMagentaGenericLn("We first pick an artist at random");
+        BLUE.printGenericTitleLn("Application1");
+        BLUE.printGenericTitleLn(PopArtistsSalesServlet.this.getClass());
+        MAGENTA.printGenericTitleLn("We first pick an artist at random");
         final List<String> popArtists = popArtistsService.popArtists();
         final int len = popArtists.size();
         final int i = (int) (Math.random() * len);
-        printOrangeGenericLn("This is our picked artist:");
+        ORANGE.printGenericLn("This is our picked artist:");
         final String chosenArtist = popArtists.get(i);
-        printOrangeGenericLn(chosenArtist);
-        printMagentaGenericLn("Now we can randomly say that this artist has sold %d records!", totalSales);
+        ORANGE.printGenericLn(chosenArtist);
+        MAGENTA.printGenericTitleLn("Now we can randomly say that this artist has sold %d records!", totalSales);
 
-        printGreenGenericLn(
+        GREEN.printGenericLn(
                 "Note that we were able to inject a 'long' primitive. This can be done, but the type must match!");
-        printGreenGenericLn(
+        GREEN.printGenericLn(
                 "Our injected value is created once. It is application scoped and so it created per application instance");
 
         resp.setContentType("text/html");

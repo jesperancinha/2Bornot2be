@@ -6,8 +6,8 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer8.Consolerizer;
+import org.jesperancinha.console.consolerizer8.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.app1.Resources;
 import org.jesperancinha.jtd.jee.app1.data.ArtistProducer;
 import org.junit.AfterClass;
@@ -18,8 +18,10 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.UserTransaction;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printGreenGenericLn;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.CYAN;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.GREEN;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
@@ -45,7 +47,8 @@ public class ManagedBeanAlbumDaoTest {
         album.setYear(2001L);
         managedBeanAlbumDao.createAlbum(album);
         assertNotNull(album.getId());
-        Consolerizer.printBrightCyanGenericLn("TEST-> %s", album);
+
+        BRIGHT_CYAN.printGenericLn("TEST-> %s", album);
     }
 
     @Test(expected = IllegalStateException.class)
@@ -85,22 +88,22 @@ public class ManagedBeanAlbumDaoTest {
         album.setSales("123.12");
         album.setYear(1997L);
         managedBeanAlbumDao.createAlbum(album);
-        Consolerizer.printBrightCyanGenericLn("TEST-> %s", album);
+        CYAN.printGenericLn("TEST-> %s", album);
     }
 
     @AfterClass
     public static void afterAll() {
-        printBlueGenericTitleLn("After test ManagedBeanAlbumDaoTest");
-        printGreenGenericLn("We see a lot of validations here in a layer above the database:");
-        printGreenGenericLn("@Null, @NotNull, @Size, @Email and @Digits");
-        printGreenGenericLn("@Null - Means explicitly that the member must be null");
-        printGreenGenericLn("@NotNull - Means that the member cannot be null");
-        printGreenGenericLn("@Size - Means that the member has to match validation in length");
-        printGreenGenericLn("@Email - Means that the member has to have a conventional email form");
-        printGreenGenericLn("@Digit - Is specific to numbers in a String form. It can be seen as an extension @Size");
-        printGreenGenericLn(
+        BLUE.printGenericTitleLn("After test ManagedBeanAlbumDaoTest");
+        GREEN.printGenericLn("We see a lot of validations here in a layer above the database:");
+        GREEN.printGenericLn("@Null, @NotNull, @Size, @Email and @Digits");
+        GREEN.printGenericLn("@Null - Means explicitly that the member must be null");
+        GREEN.printGenericLn("@NotNull - Means that the member cannot be null");
+        GREEN.printGenericLn("@Size - Means that the member has to match validation in length");
+        GREEN.printGenericLn("@Email - Means that the member has to have a conventional email form");
+        GREEN.printGenericLn("@Digit - Is specific to numbers in a String form. It can be seen as an extension @Size");
+        GREEN.printGenericLn(
                 "More about @Digit: https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/Digits.html");
-        printGreenGenericLn("BigDecimal\n" + "BigInteger\n" + "CharSequence\n"
+        GREEN.printGenericLn("BigDecimal\n" + "BigInteger\n" + "CharSequence\n"
                 + "byte, short, int, long, and their respective wrapper types");
     }
 

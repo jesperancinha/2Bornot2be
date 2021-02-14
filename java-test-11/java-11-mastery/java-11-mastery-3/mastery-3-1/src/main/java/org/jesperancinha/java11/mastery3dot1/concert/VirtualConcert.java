@@ -13,7 +13,7 @@ public class VirtualConcert implements Concert {
     }
 
     public int addConcertGoer() throws ConcerCapacityExceededException {
-//        Consolerizer.printRedGenericLn("VirtualConcert cannot be changed once created!");
+//        RED.printGenericLn("VirtualConcert cannot be changed once created!");
         throw new ConcerCapacityExceededException();
     }
 

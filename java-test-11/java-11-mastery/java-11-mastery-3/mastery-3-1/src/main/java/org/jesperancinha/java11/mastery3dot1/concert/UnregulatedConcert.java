@@ -17,7 +17,7 @@ public class UnregulatedConcert implements Concert {
 
     public int addConcertGoer() throws ConcerCapacityExceededException {
         if (counter >= capacity) {
-//            Consolerizer.printRedGenericLn("UnregulatedConcert has reach is maximum capacity of %d people", capacity);
+//            RED.printGenericLn("UnregulatedConcert has reach is maximum capacity of %d people", capacity);
             throw new ConcerCapacityExceededException();
         }
         sleep();

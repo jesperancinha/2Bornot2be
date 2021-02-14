@@ -12,8 +12,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.YELLOW;
 
 @Named
 @RequestScoped
@@ -31,13 +31,13 @@ public class AlbumController {
 
     public List<Album> getAlbumList() {
         setupFastDefault();
-        printYellowGenericLn("The album list has been called!");
+        YELLOW.printGenericLn("The album list has been called!");
         return albumDao.getAllAlbums();
     }
 
     public void createAlbum() {
         setupFastDefault();
-        printYellowGenericLn("The album %s is going to be created!", newAlbum);
+        YELLOW.printGenericLn("The album %s is going to be created!", newAlbum);
         try {
             albumDao.createAlbum(newAlbum);
         } catch (Exception e) {

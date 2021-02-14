@@ -49,7 +49,7 @@ public class Crum22 {
         // clashes with 'getNumbers(Set<Integer>)' in 'org.jesperancinha.java11.crums.crum22.Crum22.One';
         // attempting to use incompatible return type
         // public List<String> getNumbers(Set<Integer> numberSet) {
-        //     printOrangeGenericLn("List<Integer> getNumbers(Set<Integer> numberSet) called!");
+        //     ORANGE.printGenericLn("List<Integer> getNumbers(Set<Integer> numberSet) called!");
         //     java.util.Random random = new java.util.Random();
         //     numberSet.add(random.nextInt());
         //     return new ArrayList<>(numberSet);

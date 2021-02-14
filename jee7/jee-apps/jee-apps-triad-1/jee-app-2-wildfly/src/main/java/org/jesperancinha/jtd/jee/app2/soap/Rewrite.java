@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.app2.soap;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.xml.namespace.QName;
 import javax.xml.soap.SOAPBody;
 import javax.xml.soap.SOAPException;
@@ -12,7 +10,8 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 import java.util.Collections;
 import java.util.Set;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
+import static org.jesperancinha.console.consolerizer8.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.MAGENTA;
 
 public class Rewrite implements SOAPHandler<SOAPMessageContext> {
     @Override
@@ -23,12 +22,12 @@ public class Rewrite implements SOAPHandler<SOAPMessageContext> {
     @Override
     public boolean handleMessage(SOAPMessageContext context) {
         try {
-            Consolerizer.setupFastDefault();
+            setupFastDefault();
             final SOAPMessage message = context.getMessage();
             final SOAPBody body = message.getSOAPBody();
             final String localName = body.getFirstChild().getLocalName();
-            printMagentaGenericLn("This is the body -> %s", body);
-            printMagentaGenericLn("And this is the first node name -> %s", localName);
+            MAGENTA.printGenericTitleLn("This is the body -> %s", body);
+            MAGENTA.printGenericTitleLn("And this is the first node name -> %s", localName);
             return true;
         } catch (SOAPException e) {
             return false;

@@ -1,6 +1,7 @@
 package org.jesperancinha.jtd.jee.app2.servlets;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer8.Consolerizer;
+import org.jesperancinha.console.consolerizer8.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.app2.domain.Herb;
 
 import javax.servlet.ServletContext;
@@ -15,6 +16,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.RED;
 
 @WebServlet("/herbs/prices")
 public class HerbPricesServlet extends HttpServlet {
@@ -42,7 +46,7 @@ public class HerbPricesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         Consolerizer.setupFastDefault();
-        Consolerizer.printBlueGenericTitleLn("Checking ServletContext");
+        BLUE.printGenericTitleLn("Checking ServletContext");
         res.setContentType("text/html");
         PrintWriter pw = res.getWriter();
         ServletContext context = getServletContext();
@@ -50,7 +54,7 @@ public class HerbPricesServlet extends HttpServlet {
         HttpSession session2 = req.getSession(false);
         if (session2 != null) {
             List<Herb> test = (List<Herb>) session2.getAttribute("herbs");
-            Consolerizer.printRedGenericLn(test);
+            RED.printGenericLn(test);
         }
 
         pw.println("<h1><p>Let's see the prices!</p></h1>");
@@ -80,9 +84,9 @@ public class HerbPricesServlet extends HttpServlet {
             pw.println(String.format("<p>You just bought \"%s\" for %d euros.</p>", pop, (int) (Math.random() * 100)));
 
         }
-        herbsList.forEach(Consolerizer::printOrangeGenericLn);
+        herbsList.forEach(ConsolerizerColor.ORANGE::printGenericLn);
         if (herbsListSession != null) {
-            herbsListSession.forEach(Consolerizer::printBrightCyanGenericLn);
+            herbsListSession.forEach(ConsolerizerColor.BRIGHT_CYAN::printGenericLn);
         }
 
         pw.print("<a href='prices2'>try again!</a>");

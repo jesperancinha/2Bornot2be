@@ -21,7 +21,7 @@ public class SafeLiveConcert implements Concert {
 
     public synchronized int addConcertGoer() throws ConcerCapacityExceededException {
         if (counter.get() >= capacity) {
-//            Consolerizer.printRedGenericLn("SafeLiveConcert has reach is maximum capacity of %d people", capacity);
+//            RED.printGenericLn("SafeLiveConcert has reach is maximum capacity of %d people", capacity);
             throw new ConcerCapacityExceededException();
         }
         sleep();

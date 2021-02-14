@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.app2.soap;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.xml.namespace.QName;
 import javax.xml.soap.SOAPBody;
 import javax.xml.soap.SOAPException;
@@ -12,7 +10,8 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 import java.util.Collections;
 import java.util.Set;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
+import static org.jesperancinha.console.consolerizer8.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.ORANGE;
 
 public class Signature implements SOAPHandler<SOAPMessageContext> {
     @Override
@@ -27,9 +26,9 @@ public class Signature implements SOAPHandler<SOAPMessageContext> {
             final SOAPBody body = message.getSOAPBody();
             final String localName = body.getFirstChild()
                     .getLocalName();
-            Consolerizer.setupFastDefault();
-            printOrangeGenericLn("This is the body -> %s", body);
-            printOrangeGenericLn("And this is the first node name -> %s", localName);
+            setupFastDefault();
+            ORANGE.printGenericLn("This is the body -> %s", body);
+            ORANGE.printGenericLn("And this is the first node name -> %s", localName);
             return true;
         } catch (SOAPException e) {
             return false;

@@ -10,17 +10,17 @@ public class Crum6 {
         BLUE.printGenericTitleLn(text);
         MAGENTA.printGenericLn("This string has %s characters", text.length());
         // Cannot resolve symbol 'length'
-        // printMagentaGenericLn("This string has %s characters", text.length);
+        // MAGENTA.printGenericTitleLn("This string has %s characters", text.length);
         // Cannot resolve method 'size' in 'String'
-        // printMagentaGenericLn("This string has %s characters", text.size());
+        // MAGENTA.printGenericTitleLn("This string has %s characters", text.size());
         MAGENTA.printGenericLn("Note that it is important to understand that length is an instance method of String");
         MAGENTA.printGenericLn("length is not an instance member of String");
         MAGENTA.printGenericLn("size is not an instance method of String");
         YELLOW.printGenericLn("This is what will happen during compile time:\n"
             + "        // Cannot resolve symbol 'length'\n"
-            + "        // printMagentaGenericLn(\"This string has %s characters\", text.length);\n"
+            + "        // MAGENTA.printGenericTitleLn(\"This string has %s characters\", text.length);\n"
             + "        // Cannot resolve method 'size' in 'String'\n"
-            + "        // printMagentaGenericLn(\"This string has %s characters\", text.size());");
+            + "        // MAGENTA.printGenericTitleLn(\"This string has %s characters\", text.size());");
 
     }
 }

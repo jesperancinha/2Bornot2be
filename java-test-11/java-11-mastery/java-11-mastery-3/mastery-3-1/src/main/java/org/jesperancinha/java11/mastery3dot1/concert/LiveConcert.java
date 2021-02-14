@@ -21,7 +21,7 @@ public class LiveConcert implements Concert {
 
     public int addConcertGoer() throws ConcerCapacityExceededException {
         if (counter.get() >= capacity) {
-//            Consolerizer.printRedGenericLn("LiveConcert has reach is maximum capacity of %d people", capacity);
+//            RED.printGenericLn("LiveConcert has reach is maximum capacity of %d people", capacity);
             throw new ConcerCapacityExceededException();
         }
         sleep();

@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.app1.data;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.app1.domain.Album;
 import org.jesperancinha.jtd.jee.app1.domain.Artist;
 import org.jesperancinha.jtd.jee.app1.domain.ManagedBeanArtistDao;
@@ -13,6 +12,8 @@ import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
+
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.MAGENTA;
 
 @RequestScoped
 public class ArtistProducer {
@@ -31,7 +32,7 @@ public class ArtistProducer {
     public void onAlbumListChanged(
             @Observes(notifyObserver = Reception.ALWAYS)
             final Album album) {
-        Consolerizer.printBrightMagentaGenericLn("Producing artist %s from a album %s", album.getArtist(), album);
+        MAGENTA.printGenericLn("Producing artist %s from a album %s", album.getArtist(), album);
         final Artist artist = new Artist();
         artist.setName(album.getArtist());
         managedBeanArtistDao.createArtist(artist);

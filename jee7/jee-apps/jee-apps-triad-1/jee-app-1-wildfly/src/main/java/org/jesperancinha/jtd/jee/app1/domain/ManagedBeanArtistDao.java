@@ -1,6 +1,7 @@
 package org.jesperancinha.jtd.jee.app1.domain;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+
+import org.jesperancinha.console.consolerizer8.Consolerizer;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -10,7 +11,8 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.RED;
+
 
 public class ManagedBeanArtistDao implements ArtistDao {
 
@@ -26,11 +28,11 @@ public class ManagedBeanArtistDao implements ArtistDao {
             Artist album;
             try {
                 utx.begin();
-                Query query = entityManager.createQuery("select a from   Artist a where a.name = :name");
+                Query query = entityManager.createQuery("select a from Artist a where a.name = :name");
                 query.setParameter("name", name);
                 album = (Artist) query.getSingleResult();
             } catch (NoResultException e) {
-                printRedGenericLn(e);
+                RED.printGenericLn(e);
                 album = null;
 
             }
@@ -40,7 +42,7 @@ public class ManagedBeanArtistDao implements ArtistDao {
             try {
                 utx.rollback();
             } catch (SystemException se) {
-                printRedGenericLn(se);
+                RED.printGenericLn(se);
                 throw new RuntimeException(se);
             }
             throw new RuntimeException(e);
@@ -62,10 +64,10 @@ public class ManagedBeanArtistDao implements ArtistDao {
             try {
                 utx.rollback();
             } catch (SystemException se) {
-                printRedGenericLn(se);
+                RED.printGenericLn(se);
                 throw new RuntimeException(se);
             }
-            printRedGenericLn(e);
+            RED.printGenericLn(e);
             throw new RuntimeException(e);
         }
     }
@@ -80,7 +82,7 @@ public class ManagedBeanArtistDao implements ArtistDao {
                 Query query = entityManager.createQuery("select a from Artist a");
                 albumList = query.getResultList();
             } catch (NoResultException e) {
-                printRedGenericLn(e);
+                RED.printGenericLn(e);
                 albumList = null;
 
             }
@@ -90,7 +92,7 @@ public class ManagedBeanArtistDao implements ArtistDao {
             try {
                 utx.rollback();
             } catch (SystemException se) {
-                printRedGenericLn(se);
+                RED.printGenericLn(se);
                 throw new RuntimeException(se);
             }
             throw new RuntimeException(e);

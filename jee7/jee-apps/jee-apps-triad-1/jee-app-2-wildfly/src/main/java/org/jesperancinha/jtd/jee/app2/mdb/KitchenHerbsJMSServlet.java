@@ -1,7 +1,5 @@
 package org.jesperancinha.jtd.jee.app2.mdb;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-
 import javax.annotation.Resource;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
@@ -18,10 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printMagentaGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printOrangeGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRedGenericLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printUnicornsLn;
+import static org.jesperancinha.console.consolerizer8.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer8.ConsolerizerGraphs.printUnicornsLn;
 
 @WebServlet("/jms")
 public class KitchenHerbsJMSServlet extends HttpServlet {
@@ -47,10 +46,10 @@ public class KitchenHerbsJMSServlet extends HttpServlet {
     }
 
     public void example() throws Exception {
-        Consolerizer.setupFastDefault();
+        setupFastDefault();
         printUnicornsLn(100);
-        printOrangeGenericLn("The type of the connection factory is %s", cf);
-        printOrangeGenericLn("The type of the queue is %s", queue);
+        ORANGE.printGenericLn("The type of the connection factory is %s", cf);
+        ORANGE.printGenericLn("The type of the queue is %s", queue);
         printUnicornsLn(100);
         Connection connection = null;
         try {
@@ -69,14 +68,14 @@ public class KitchenHerbsJMSServlet extends HttpServlet {
     }
 
     private void closeConnection(Connection con) {
-        printMagentaGenericLn("Closing connection %s", con);
+        MAGENTA.printGenericTitleLn("Closing connection %s", con);
         try {
             if (con != null) {
                 con.close();
             }
 
         } catch (JMSException jmse) {
-            printRedGenericLn("Could not close connection " + con + " exception was " + jmse);
+            RED.printGenericLn("Could not close connection " + con + " exception was " + jmse);
         }
 
     }

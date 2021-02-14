@@ -20,6 +20,6 @@ public class Vlinder extends RawVlinder{
     // attempting to assign weaker access privileges ('private'); was 'packageLocal'
     // @Override
     // private void playVlinder() {
-    //     printOrangeGenericLn("The original version of `Verdronken vlinder` came about in 1967 as a B-Side recording of Boudewijn de Groot's single `Onder ons`");
+    //     ORANGE.printGenericLn("The original version of `Verdronken vlinder` came about in 1967 as a B-Side recording of Boudewijn de Groot's single `Onder ons`");
     // }
 }
