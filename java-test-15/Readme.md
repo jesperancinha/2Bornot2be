@@ -7,7 +7,16 @@
 1. Go to: http://jdk.java.net/15/
 2. Download: [JDK 15](https://download.java.net/java/early_access/jdk15/23/GPL/openjdk-15-ea+23_osx-x64_bin.tar.gz)
 
+## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
+
+```bash
+sdk install java 15.0.2.hs-adpt
+sdk use java 15.0.2.hs-adpt
+```
+
 ## References
+
+### Online
 
 -   [Исследуем sealed классы в Java 15](https://habr.com/ru/post/505696/)
 -   [JDK 15 Early-Access Builds](http://jdk.java.net/15/)
@@ -15,6 +24,10 @@
 -   [Java 15 by Shibboleth](https://wiki.shibboleth.net/confluence/display/DEV/Java+15)
 -   [Java 15 Text Blocks](https://openjdk.java.net/jeps/378)
 -   [Java 15 – What we know by JaxEnter](https://jaxenter.com/java-15-news-170322.html)
+
+### Books
+
+-   Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
 ## About me 👨🏽‍💻🚀
 

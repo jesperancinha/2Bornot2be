@@ -22,8 +22,14 @@ java --enable-preview -cp src/main/java org.jesperancinha.jtd.shrimps.ShrimpsLau
 
 ## References
 
+### Online
+
 -   [Исследуем sealed классы в Java 15](https://habr.com/ru/post/505696/)
 -   [Healthy Shrimp and Grits with Rosé](https://www.foodandwine.com/seafood/shellfish/shrimp/9-best-shrimp-pastas)
+
+### Books
+
+-   Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
 ## About me 👨🏽‍💻🚀
 

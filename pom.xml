@@ -11,7 +11,7 @@
         <module>java-test-11</module>
         <module>jee7</module>
         <module>jtd-the-factory</module>
-        <!--        <module>java-test-15</module>-->
+        <module>java-test-15</module>
     </modules>
     <name>Java Test Drives</name>
     <properties>
@@ -27,8 +27,6 @@
         <assertj-core.version>3.13.2</assertj-core.version>
 
         <!-- Plugins -->
-        <maven-compiler-plugin.source>11</maven-compiler-plugin.source>
-        <maven-compiler-plugin.target>11</maven-compiler-plugin.target>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     </properties>

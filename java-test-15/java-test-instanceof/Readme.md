@@ -11,6 +11,12 @@
 ~/Downloads/jdk-15.jdk/Contents/Home/bin/java -jar --enable-preview java-test-15/java-test-instanceof/target/java-test-instanceof-1.0.0-SNAPSHOT.jar
 ```
 
+## References
+
+### Books
+
+-   Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
+
 ## About me 👨🏽‍💻🚀
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
