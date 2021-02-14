@@ -35,6 +35,7 @@ public class AccessTimoutServerBean {
         accessImmediateTimeoutExecutorService.shutdown();
         accessImmediateTimeoutExecutorService.awaitTermination(2, TimeUnit.SECONDS);
     }
+
     public void startTest() throws ExecutionException, InterruptedException {
 
         result = "";

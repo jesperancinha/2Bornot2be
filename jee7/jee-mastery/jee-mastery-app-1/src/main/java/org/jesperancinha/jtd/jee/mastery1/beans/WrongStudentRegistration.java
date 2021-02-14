@@ -16,7 +16,7 @@ public class WrongStudentRegistration implements Serializable {
     @Inject
     private StudentBean studentBean;
 
-    WrongStudentRegistration(){
+    WrongStudentRegistration() {
         YELLOW.printGenericTitleLn("Starting with %s", this.getClass().getCanonicalName());
         GREEN.printGenericLn("Notice what happens to this instance");
         GREEN.printGenericLn(this);

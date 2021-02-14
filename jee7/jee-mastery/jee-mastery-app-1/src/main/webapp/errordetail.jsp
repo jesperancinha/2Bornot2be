@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page isErrorPage = "true" %>
+<%@ page isErrorPage="true" %>
 
 <%--
   Created by IntelliJ IDEA.

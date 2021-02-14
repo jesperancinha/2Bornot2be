@@ -79,7 +79,7 @@ public class RecordHighBean {
         return requestRecord;
     }
 
-    public void submit(){
+    public void submit() {
         // Dummy
     }
 }

@@ -11,7 +11,7 @@ import java.io.Serializable;
 @TransactionManagement(TransactionManagementType.CONTAINER)
 public class Question1 implements Serializable {
 
-    private static String RIGHT_ANSWER = "1980";
+    private static final String RIGHT_ANSWER = "1980";
 
     private boolean correctAnswer;
 

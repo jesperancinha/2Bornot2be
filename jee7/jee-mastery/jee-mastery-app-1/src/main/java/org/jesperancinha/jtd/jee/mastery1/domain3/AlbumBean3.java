@@ -90,7 +90,7 @@ public class AlbumBean3 implements Serializable {
 
     public List<Album> getExamples() {
         final var album = new Album();
-        final AlbumDetails albumDetails = new AlbumDetails() ;
+        final AlbumDetails albumDetails = new AlbumDetails();
         album.setAlbumDetails(albumDetails);
         albumDetails.setAlbum("Whaler");
         albumDetails.setArtist("Sophie B. Hawkins");

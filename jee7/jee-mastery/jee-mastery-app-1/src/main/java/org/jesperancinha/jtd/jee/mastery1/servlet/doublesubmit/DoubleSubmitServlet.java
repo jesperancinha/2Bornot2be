@@ -1,8 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.servlet.doublesubmit;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.mastery1.beans.Record;
-import org.jesperancinha.jtd.jee.mastery1.domain3.Album;
 
 import javax.enterprise.concurrent.ManagedExecutorService;
 import javax.inject.Inject;
@@ -14,8 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -36,6 +32,7 @@ public class DoubleSubmitServlet extends HttpServlet {
         ALBUM.setYear("2012");
         ALBUM.setType("LP");
     }
+
     @Inject
     private ManagedExecutorService managedExecutorService;
 

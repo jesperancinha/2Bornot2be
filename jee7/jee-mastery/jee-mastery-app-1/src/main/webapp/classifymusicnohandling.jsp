@@ -1,6 +1,6 @@
 <%@ page import="org.jesperancinha.jtd.jee.mastery1.exception.NotIndieMusicException" %>
 <%@ taglib prefix="h" uri="http://java.sun.com/jsf/html" %>
-<%@ page errorPage = "errordetailnohandling.jsp" %>
+<%@ page errorPage="errordetailnohandling.jsp" %>
 <%--
   Created by IntelliJ IDEA.
   User: jofisaes

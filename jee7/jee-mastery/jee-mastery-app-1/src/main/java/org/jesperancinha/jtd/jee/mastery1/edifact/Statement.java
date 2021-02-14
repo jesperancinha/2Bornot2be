@@ -1,7 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.edifact;
 
 import org.jesperancinha.jtd.jee.mastery1.beans.Record;
-import org.jesperancinha.jtd.jee.mastery1.domain2.Album;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

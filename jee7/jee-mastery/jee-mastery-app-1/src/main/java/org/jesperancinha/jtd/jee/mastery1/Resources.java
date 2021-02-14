@@ -20,8 +20,8 @@ public class Resources {
     @Produces
     public Logger getLogger(InjectionPoint ip) {
         String category = ip.getMember()
-            .getDeclaringClass()
-            .getName();
+                .getDeclaringClass()
+                .getName();
         return Logger.getLogger(category);
     }
 

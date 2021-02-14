@@ -43,9 +43,6 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    <!--    <login-config>-->
-    <!--        <auth-method>BASIC</auth-method>-->
-    <!--    </login-config>-->
     <security-role>
         <role-name>Manager</role-name>
     </security-role>

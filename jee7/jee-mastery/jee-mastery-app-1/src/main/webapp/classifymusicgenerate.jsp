@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page errorPage = "errordetail.jsp" %>
+<%@ page errorPage="errordetail.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="h" uri="http://java.sun.com/jsf/html" %>
 <%@ page import="org.jesperancinha.jtd.jee.mastery1.exception.NotPopMusicException" %>

@@ -17,11 +17,11 @@ public class AlbumDao implements Serializable {
     private EntityManager entityManager;
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void createAlbum(Album album){
+    public void createAlbum(Album album) {
         entityManager.persist(album);
     }
 
-    public Album getAlbum(String l1, String l2, String l3){
+    public Album getAlbum(String l1, String l2, String l3) {
         final AlbumCompositeKey primaryKey = new AlbumCompositeKey();
         primaryKey.setLyric1(l1);
         primaryKey.setLyric2(l2);

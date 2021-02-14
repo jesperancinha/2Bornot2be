@@ -1,8 +1,8 @@
 package org.jesperancinha.jtd.jee.mastery1.messaging;
 
-import javax.enterprise.context.ApplicationScoped;
 import org.jesperancinha.jtd.jee.mastery1.beans.Record;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class RecordWarehouse {
 
     private List<Record> recordList;
 
-    RecordWarehouse(){
+    RecordWarehouse() {
         this.recordList = new ArrayList<>();
     }
 

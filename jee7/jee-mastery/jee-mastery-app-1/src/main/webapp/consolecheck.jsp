@@ -15,7 +15,8 @@
 
 <p><% out.println(new java.util.Date()); %></p>
 
-<p><%= new java.util.Date() %></p>
+<p><%= new java.util.Date() %>
+</p>
 
 <p><a href="index.xhtml">Back</a></p>
 

@@ -49,9 +49,9 @@ public class ConcertManager implements Serializable {
     }
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public String getStatement(UUID uuid){
+    public String getStatement(UUID uuid) {
         final ConcertEntity concertEntity = entityManager.find(ConcertEntity.class, uuid);
-        if(Objects.isNull(concertEntity)){
+        if (Objects.isNull(concertEntity)) {
             return null;
         }
         return concertEntity.getStatement();

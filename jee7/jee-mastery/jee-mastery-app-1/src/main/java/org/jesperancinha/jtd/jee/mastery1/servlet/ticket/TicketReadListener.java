@@ -11,8 +11,8 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 public class TicketReadListener implements ReadListener {
-    private AsyncContext asyncContext;
-    private HttpServletResponse resp;
+    private final AsyncContext asyncContext;
+    private final HttpServletResponse resp;
     private final ServletInputStream inputStream;
 
     public TicketReadListener(AsyncContext asyncContext,
@@ -22,16 +22,16 @@ public class TicketReadListener implements ReadListener {
         this.resp = resp;
         this.inputStream = inputStream;
     }
+
     @Override
     public void onDataAvailable() throws IOException {
         GREEN.printSyncGenericTitleLn("From onDataAvailable ReadListener");
 
         int len = -1;
-        byte b[] = new byte[1024];
+        byte[] b = new byte[1024];
 
-        while (inputStream.isReady() && (len = inputStream.read(b)) != -1)
-        {
-            String data = new String(b,0,len);
+        while (inputStream.isReady() && (len = inputStream.read(b)) != -1) {
+            String data = new String(b, 0, len);
             RED.printGenericLn((data));
         }
     }

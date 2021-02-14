@@ -17,6 +17,7 @@ public class EdifactishConverter implements AttributeConverter<Record, String> {
                 "+" +
                 record.getType();
     }
+
     @Override
     public Record convertToEntityAttribute(String dbData) {
         final String[] split = dbData.split("\\+");

@@ -35,7 +35,7 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 For all of these pages, please pick a user from the table below and login. You can always log in via `admin`/`admin`
 , `username`/`password` combination:
 
-1. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/index.xhtml
+1. [http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/index.xhtml](http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/index.xhtml)
 2. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/messages.jsp - Localization context
 3. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/history/palace/servlet - isCallerInRole
 4. http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/waitingroom.jsp - Calling protected bean directly via JSP.

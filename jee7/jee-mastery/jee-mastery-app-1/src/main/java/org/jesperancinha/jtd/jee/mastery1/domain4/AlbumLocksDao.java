@@ -58,6 +58,7 @@ public class AlbumLocksDao implements Serializable {
             RED.printThrowableAndExit(e);
         }
     }
+
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void saveWithPessimisticLock(Album a1) {
         final AlbumCompositeKey primaryKey = new AlbumCompositeKey();

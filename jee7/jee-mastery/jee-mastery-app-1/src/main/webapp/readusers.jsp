@@ -13,15 +13,15 @@
     <title>Title</title>
 </head>
 <body>
-<sql:setDataSource var = "snapshot" driver = "org.postgresql.Driver"
-                   url = "jdbc:postgresql://localhost:5432/postgres"
-                   user = "postgres"  password = "admin"/>
+<sql:setDataSource var="snapshot" driver="org.postgresql.Driver"
+                   url="jdbc:postgresql://localhost:5432/postgres"
+                   user="postgres" password="admin"/>
 <sql:query var="users" dataSource="${snapshot}">
     select * from public.users_pride
 </sql:query>
 
 <c:forEach var="row" items="${users.rows}">
-     <p>${row}</p>
+    <p>${row}</p>
 </c:forEach>
 <p><a href="index.xhtml">Back</a></p>
 </body>

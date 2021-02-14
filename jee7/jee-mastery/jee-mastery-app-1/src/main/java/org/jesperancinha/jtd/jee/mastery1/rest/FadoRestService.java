@@ -1,6 +1,5 @@
 package org.jesperancinha.jtd.jee.mastery1.rest;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.mastery1.beans.Record;
 
 import javax.ws.rs.GET;
