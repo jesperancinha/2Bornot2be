@@ -2,9 +2,8 @@
 
 ## Exercise
 
-Carmen Sandiego was a show from the early 90's, which had a recend re-run in 2019.
-We are going to explore the world of i18n (short for internationalization) using data from the episodes.
-More concretely we will look at the [NumberFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/NumberFormat.html) and [DateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DateFormat.html) class types.
+Carmen Sandiego was a show from the early 90's, which had a recend re-run in 2019. We are going to explore the world of i18n (short for internationalization) using data from the episodes. More concretely we will look at
+the [NumberFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/NumberFormat.html) and [DateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DateFormat.html) class types.
 
 ## Output
 
@@ -28,14 +27,14 @@ Process finished with exit code 0
 
 ## References
 
--   [Becoming Carmen Sandiego Part I Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_I)
--   [Becoming Carmen Sandiego Part II Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_II)
--   [The Sticky Rice Caper](https://transcripts.fandom.com/wiki/The_Sticky_Rice_Caper)
--   [Carmen Sandiego Transcripts](https://transcripts.fandom.com/wiki/Carmen_Sandiego)
--   [Carmen Sandiego](https://en.wikipedia.org/wiki/Carmen_Sandiego)
--   [Where in the World Is Carmen Sandiego? (game show)](https://en.wikipedia.org/wiki/Where_in_the_World_Is_Carmen_Sandiego%3F_(game_show))
--   [GGA](https://nl.wikipedia.org/wiki/Color_Graphics_Adapter)
--   [FLOZz' MISC » bash:tip_colors_and_formatting](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+- [Becoming Carmen Sandiego Part I Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_I)
+- [Becoming Carmen Sandiego Part II Transcripts](https://transcripts.fandom.com/wiki/Becoming_Carmen_Sandiego_Part_II)
+- [The Sticky Rice Caper](https://transcripts.fandom.com/wiki/The_Sticky_Rice_Caper)
+- [Carmen Sandiego Transcripts](https://transcripts.fandom.com/wiki/Carmen_Sandiego)
+- [Carmen Sandiego](https://en.wikipedia.org/wiki/Carmen_Sandiego)
+- [Where in the World Is Carmen Sandiego? (game show)](https://en.wikipedia.org/wiki/Where_in_the_World_Is_Carmen_Sandiego%3F_(game_show))
+- [GGA](https://nl.wikipedia.org/wiki/Color_Graphics_Adapter)
+- [FLOZz' MISC » bash:tip_colors_and_formatting](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=f_j3CRmyPxI">

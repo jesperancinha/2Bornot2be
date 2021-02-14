@@ -69,8 +69,9 @@ public class City {
     }
 
     /**
-     *  Neighbourhood watch for the Flinstones City Bedrock!
-     * @param dino a character. Mostly Dino {@link String}
+     * Neighbourhood watch for the Flinstones City Bedrock!
+     *
+     * @param dino       a character. Mostly Dino {@link String}
      * @param flinstones a family member list. Mostly The Flinstones {@link java.util.Arrays}
      * @throws InterruptedException Something wrong may happen
      */
@@ -111,8 +112,8 @@ public class City {
                         try {
                             Thread.sleep(1000);
                         } catch (InterruptedException e) {
-                          System.out.println("Stop! Go home!");
-                          break;
+                            System.out.println("Stop! Go home!");
+                            break;
                         }
                     } finally {
                         readLock.unlock();

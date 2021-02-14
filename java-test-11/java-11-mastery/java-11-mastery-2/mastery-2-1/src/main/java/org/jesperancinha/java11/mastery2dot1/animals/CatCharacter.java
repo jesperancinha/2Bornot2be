@@ -4,7 +4,7 @@ public class CatCharacter extends Feline {
 
     public CatCharacter(String name) {
         super("Clarinet");
-        this.name =  name;
+        this.name = name;
     }
 
     @Override

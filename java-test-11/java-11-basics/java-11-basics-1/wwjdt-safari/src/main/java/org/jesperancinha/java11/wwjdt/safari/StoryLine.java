@@ -2,7 +2,7 @@ package org.jesperancinha.java11.wwjdt.safari;
 
 public class StoryLine {
 
-    public static  String getStory(Object d1, Object d2, Object d3, Object d4, Object d5) {
+    public static String getStory(Object d1, Object d2, Object d3, Object d4, Object d5) {
         return
                 "Palesa lives in South Africa. Palesa will visit her sister Nyarai in the winery of Helderberg.\n" +
                         "There Palesa will chat for a while before going on an amazing adventure.\n" +
@@ -19,7 +19,7 @@ public class StoryLine {
                         "In the distancem, she sees a very large and mellow crocodile approaching, and so Palesa leaves terrified.\n" +
                         "It's been 30 consecutive days of walking, and Palesa is now tired.\n" +
                         "Finally Palesa decides to go back to Cape Town.\n" +
-                        "With so much baggage on her and the muscles much stronger than ever, the walk of "+d5+" km, seem peanuts for her now.\n"+
+                        "With so much baggage on her and the muscles much stronger than ever, the walk of " + d5 + " km, seem peanuts for her now.\n" +
                         "First, she takes another glass of whine, with her sister Nyarai, and finally Palesa returns home to her beloved Raithby district.\n" +
                         "The Helderberg mountain in the distance gives her a very heart warming feeling during the sunset.\n";
     }

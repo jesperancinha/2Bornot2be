@@ -27,17 +27,17 @@ public class Crum9 {
         //
         // }
 
-        for(;;){
-           break;
+        for (; ; ) {
+            break;
         }
 
-        for(;true;){
+        for (; true; ) {
             break;
 
         }
 
         boolean a = false;
-        for(;a & false;){
+        for (; a & false; ) {
             YELLOW.printGenericLn(a);
         }
 

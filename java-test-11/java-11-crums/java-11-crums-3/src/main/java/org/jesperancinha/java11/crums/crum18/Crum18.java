@@ -41,14 +41,14 @@ public class Crum18 {
         BLUE.printGenericTitleLn("Crum 18 - Understanding Comparator and Comparable");
 
         final Comparator<Plate> comparator = (p1, p2) -> p1.getDesign()
-            .compareTo(p2.getDesign());
+                .compareTo(p2.getDesign());
         final Comparator<Plate> comparator2 = Comparator.comparing(Plate::getDesign);
         final Comparator<Plate> comparator3 = comparator2.thenComparing(Comparator.comparing(Plate::getLocalDateTime));
 
         final var streamOfInts = IntStream.of(12, 44, 22, 73, 94, 12, 54);
         final Comparator<Integer> compareTo = Integer::compareTo;
         streamOfInts.boxed()
-            .max(compareTo);
+                .max(compareTo);
 
         MAGENTA.printGenericLn("The first thing to understand is that Numberic Object and Strings are comparables:");
         Object[] args7 = new Object[]{Integer.valueOf(100) instanceof Comparable};
@@ -73,24 +73,24 @@ public class Crum18 {
         MAGENTA.printGenericLn("In our list of plates we have:");
 
         var plateList = List.of(new Plate("Chinese Porcelain", LocalDateTime.now()),
-            new Plate("Delft Porcelain", LocalDateTime.now()), new Plate("Braga Porcelain", LocalDateTime.now()));
+                new Plate("Delft Porcelain", LocalDateTime.now()), new Plate("Braga Porcelain", LocalDateTime.now()));
 
         ORANGE.printGenericLn(plateList);
 
         MAGENTA.printGenericLn("If we sort by the first comparator we've made, we find:");
         ORANGE.printGenericLn(plateList.stream()
-            .sorted(comparator)
-            .collect(Collectors.toList()));
+                .sorted(comparator)
+                .collect(Collectors.toList()));
 
         MAGENTA.printGenericLn("If we sort by the second comparator we've made, we find:");
         ORANGE.printGenericLn(plateList.stream()
-            .sorted(comparator2)
-            .collect(Collectors.toList()));
+                .sorted(comparator2)
+                .collect(Collectors.toList()));
 
         MAGENTA.printGenericLn("If we sort by the third comparator we've made, we find:");
         ORANGE.printGenericLn(plateList.stream()
-            .sorted(comparator3)
-            .collect(Collectors.toList()));
+                .sorted(comparator3)
+                .collect(Collectors.toList()));
 
         GREEN.printGenericLn("A Comparator is not a Comparable");
         GREEN.printGenericLn("We compare with comparables");

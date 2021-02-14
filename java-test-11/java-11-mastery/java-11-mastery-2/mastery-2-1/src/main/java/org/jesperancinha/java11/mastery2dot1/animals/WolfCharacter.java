@@ -12,7 +12,7 @@ public class WolfCharacter extends Wolf {
         return name;
     }
 
-    public static class Food{
+    public static class Food {
 
     }
 }

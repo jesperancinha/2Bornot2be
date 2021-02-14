@@ -72,7 +72,7 @@ public class RecordArtistRunner {
         System.out.println(navigationSortedMap.headMap("Disco"));
         System.out.println(navigationSortedMap.keySet());
         System.out.println(navigationSortedMap.lastKey());
-        System.out.println(navigationSortedMap.subMap("Club Future Nostalgia","Song Machine: Season One - Strange Timez"));
+        System.out.println(navigationSortedMap.subMap("Club Future Nostalgia", "Song Machine: Season One - Strange Timez"));
         System.out.println(navigationSortedMap.tailMap("Song Machine: Season One - Strange Timez"));
         System.out.println(navigationSortedMap.values());
 
@@ -98,8 +98,8 @@ public class RecordArtistRunner {
         System.out.println(navigationSortedNavigableMap.pollFirstEntry());
         System.out.println(navigationSortedNavigableMap.pollLastEntry());
         System.out.println(navigationSortedNavigableMap);
-        System.out.println(navigationSortedNavigableMap.subMap("Cyr",true, "Song Machine: Season One - Strange Timez",true));
-        System.out.println(navigationSortedNavigableMap.subMap("Cyr",false, "Song Machine: Season One - Strange Timez",false));
+        System.out.println(navigationSortedNavigableMap.subMap("Cyr", true, "Song Machine: Season One - Strange Timez", true));
+        System.out.println(navigationSortedNavigableMap.subMap("Cyr", false, "Song Machine: Season One - Strange Timez", false));
         System.out.println(navigationSortedNavigableMap.tailMap("Cyr", true));
         System.out.println(navigationSortedNavigableMap.tailMap("Cyr", false));
 
@@ -125,8 +125,8 @@ public class RecordArtistRunner {
         System.out.println(navigationSortedTreeMap.pollFirstEntry());
         System.out.println(navigationSortedTreeMap.pollLastEntry());
         System.out.println(navigationSortedTreeMap);
-        System.out.println(navigationSortedTreeMap.subMap("Cyr",true, "Song Machine: Season One - Strange Timez",true));
-        System.out.println(navigationSortedTreeMap.subMap("Cyr",false, "Song Machine: Season One - Strange Timez",false));
+        System.out.println(navigationSortedTreeMap.subMap("Cyr", true, "Song Machine: Season One - Strange Timez", true));
+        System.out.println(navigationSortedTreeMap.subMap("Cyr", false, "Song Machine: Season One - Strange Timez", false));
         System.out.println(navigationSortedTreeMap.tailMap("Cyr", true));
         System.out.println(navigationSortedTreeMap.tailMap("Cyr", false));
     }

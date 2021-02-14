@@ -9,7 +9,7 @@ public class Crum17 {
         BLUE.printGenericTitleLn("Crum 17 - Multiple classes in one file");
 
         MainOne.main(null);
-        MainTwo.main(null );
+        MainTwo.main(null);
 
         MAGENTA.printGenericLn("Notice that we are able to create two classes in one file");
         MAGENTA.printGenericLn("For this to be possible, they have to be package protected");

@@ -2,10 +2,8 @@
 
 ## Exercises
 
-We can create inner classes and we can create them inside inner static classes as well.
-The important thing to consider is the encapsulating class.
-Static classes do not encapsulate while simple ones do.
-In our example, we'll see a break in access data using as data source [The Wanda Sykes Show](https://www.imdb.com/title/tt1441222/).
+We can create inner classes and we can create them inside inner static classes as well. The important thing to consider is the encapsulating class. Static classes do not encapsulate while simple ones do. In our example, we'll see a break in access data using as data
+source [The Wanda Sykes Show](https://www.imdb.com/title/tt1441222/).
 
 ## Output
 
@@ -21,7 +19,7 @@ Process finished with exit code 0
 
 ## References
 
--    [The Wanda Sykes Show](https://www.imdb.com/title/tt1441222/)
+- [The Wanda Sykes Show](https://www.imdb.com/title/tt1441222/)
 
 <div align="center">
     <a href="https://www.youtube.com/watch?v=_y5LcDulGPE">

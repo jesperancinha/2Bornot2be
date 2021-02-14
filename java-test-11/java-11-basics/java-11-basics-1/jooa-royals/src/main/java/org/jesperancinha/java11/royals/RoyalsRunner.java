@@ -9,7 +9,7 @@ public class RoyalsRunner {
         var civilian = new Civilian();
         var person = new People();
         var reallyCommonPeople = new ReallyCommonPeople();
-        var princess =  new Princess();
+        var princess = new Princess();
         var queen = new Queen();
 
         System.out.println("A queen can wave, which is a protected action, show the martians and do whatever princesses do. A Queen cannot specifically make furniture. It is a private method");

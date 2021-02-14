@@ -60,12 +60,12 @@ public class Crum11 {
         bandListObject.add(1234567890);
         MAGENTA.printGenericLn("If we create a list of objects, we can create big mess -> %s", bandListObject);
         MAGENTA.printGenericLn("And if we analyze its types -> %s", bandListObject.stream()
-            .map(Object::getClass)
-            .collect(Collectors.toList()));
+                .map(Object::getClass)
+                .collect(Collectors.toList()));
 
         final List<?> bandListWildcardDiamond = new ArrayList<>(
-            Arrays.asList("Vampire Weekend", "Los Campesinos!", "The Cure", "PJ Harvey",
-                "Nick Cave and the bad seeds"));
+                Arrays.asList("Vampire Weekend", "Los Campesinos!", "The Cure", "PJ Harvey",
+                        "Nick Cave and the bad seeds"));
         final Object o = bandListWildcardDiamond.get(0);
         BRIGHT_CYAN.printGenericLn(o);
         MAGENTA.printGenericLn("We can create wildcard lists in combinastion with diamond notation created instances.");

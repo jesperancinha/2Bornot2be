@@ -75,7 +75,7 @@ Process finished with exit code 0
 
 ## References
 
--   [Teenage Mutant Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles)
+- [Teenage Mutant Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=AxuvUAjHYWQ">

@@ -1,13 +1,13 @@
 package org.jesperancinha.java11.constructor;
 
-public class GroupBand extends Band{
+public class GroupBand extends Band {
     protected String name;
 
     public String getName() {
         return name;
     }
 
-    public String getActivity(){
+    public String getActivity() {
         return activity;
     }
 

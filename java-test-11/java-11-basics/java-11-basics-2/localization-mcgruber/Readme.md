@@ -2,10 +2,9 @@
 
 ## Exercise
 
-We are looking at the different types of date and time formats.
-To make it fun, we will present [MacGruber](https://en.wikipedia.org/wiki/MacGruber) 's [film](https://www.imdb.com/title/tt1470023/) timeline in different formats.
+We are looking at the different types of date and time formats. To make it fun, we will present [MacGruber](https://en.wikipedia.org/wiki/MacGruber) 's [film](https://www.imdb.com/title/tt1470023/) timeline in different formats.
 
-## Output 
+## Output
 
 ```text
 Note that 'e' is not accepted in SimpledDateFormat resulting in exception
@@ -44,10 +43,10 @@ Process finished with exit code 0
 
 ## References
 
--   [The Movie Timeline - MacGruber](http://www.themovietimeline.com/film8353)
--   [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html)
--   [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
--   [Making life saving inventions out of household materials](https://www.youtube.com/watch?v=jsWs5Kd-qD8)
+- [The Movie Timeline - MacGruber](http://www.themovietimeline.com/film8353)
+- [SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html)
+- [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
+- [Making life saving inventions out of household materials](https://www.youtube.com/watch?v=jsWs5Kd-qD8)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=xQHHHBkigDY">

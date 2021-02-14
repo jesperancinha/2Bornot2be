@@ -2,10 +2,8 @@
 
 ## Exercise
 
-How do we work with constructors?
-It sounds simple right?
-Let's make it more complex shall we?
-We'll use the hit singles [We Built This City](https://en.wikipedia.org/wiki/We_Built_This_City) from [Starship](https://en.wikipedia.org/wiki/Starship_(band)) and [Manic Monday](https://en.wikipedia.org/wiki/Manic_Monday) from the [The Bangles](https://nl.wikipedia.org/wiki/The_Bangles) for our data source.
+How do we work with constructors? It sounds simple right? Let's make it more complex shall we? We'll use the hit singles [We Built This City](https://en.wikipedia.org/wiki/We_Built_This_City) from [Starship](https://en.wikipedia.org/wiki/Starship_(band))
+and [Manic Monday](https://en.wikipedia.org/wiki/Manic_Monday) from the [The Bangles](https://nl.wikipedia.org/wiki/The_Bangles) for our data source.
 
 ## Output
 
@@ -18,8 +16,8 @@ GroupBand{name='Starships', activity='building this city'}  - activity=building 
 
 ## References
 
--   [Starship - We Built This City (Na, sowas!, 11.01.1986)](https://www.youtube.com/watch?v=Diroq2sYMOw)
--   [The Bangles - Manic Monday](https://www.youtube.com/watch?v=SsmVgoXDq2w)
+- [Starship - We Built This City (Na, sowas!, 11.01.1986)](https://www.youtube.com/watch?v=Diroq2sYMOw)
+- [The Bangles - Manic Monday](https://www.youtube.com/watch?v=SsmVgoXDq2w)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=Diroq2sYMOw">

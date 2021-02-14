@@ -32,9 +32,9 @@ public class Crum25 {
         }
 
         BLUE.printGenericLn("        // FileOutputStream fos;\n" + "        // Unknown class: 'fos'\n"
-            + "        // try(fos = new FileOutputStream(\"tmp.txt\")){\n" + "        // \n"
-            + "        // } catch (FileNotFoundException e) {\n" + "        //     RED.printThrowableAndExit(e);n"
-            + "        // } catch (IOException e) {\n" + "        //     RED.printThrowableAndExit(e);n" + "        // }");
+                + "        // try(fos = new FileOutputStream(\"tmp.txt\")){\n" + "        // \n"
+                + "        // } catch (FileNotFoundException e) {\n" + "        //     RED.printThrowableAndExit(e);n"
+                + "        // } catch (IOException e) {\n" + "        //     RED.printThrowableAndExit(e);n" + "        // }");
 
         // FileOutputStream fos;
         // Unknown class: 'fos'

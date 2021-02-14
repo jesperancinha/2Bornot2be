@@ -15,7 +15,7 @@ public class Crum33 {
         MAGENTA.printGenericLn("We can list all enumerates if we just call values");
         MAGENTA.printGenericLn("The printed value is exactly the same key we define in the code");
         Arrays.stream(CashContainer.values())
-            .forEach(text -> ORANGE.printGenericLn(text));
+                .forEach(text -> ORANGE.printGenericLn(text));
 
         MAGENTA.printGenericLn("We can also retrieve the value per key String:");
         ORANGE.printGenericLn("%s has index %s", "KITTENACCOUNT", CashContainer.valueOf("KITTENACCOUNT"));

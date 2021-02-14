@@ -4,9 +4,9 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 public class Lingueirao {
 
-   static  {
-       YELLOW.printGenericLn("Lingueirão comes out to clean up his house! 🪒");
-       if (true) {
+    static {
+        YELLOW.printGenericLn("Lingueirão comes out to clean up his house! 🪒");
+        if (true) {
             throw new RuntimeException("Oh no! A bird just caught him! We won't fish this one! 🦅");
         }
     }

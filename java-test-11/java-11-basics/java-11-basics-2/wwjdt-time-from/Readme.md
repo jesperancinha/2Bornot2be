@@ -2,9 +2,7 @@
 
 ## Exercise
 
-Do you remember Earth Angel from Back to the Future I?
-This exercise will focus on some very important dates from the movie [Back to the Future I](https://www.imdb.com/title/tt0088763/).
-We will examine three different packages.
+Do you remember Earth Angel from Back to the Future I? This exercise will focus on some very important dates from the movie [Back to the Future I](https://www.imdb.com/title/tt0088763/). We will examine three different packages.
 
 The old and the new:
 
@@ -42,8 +40,8 @@ Process finished with exit code 0
 
 ## References
 
--   [Back to the Future I - Timeline](http://www.themovietimeline.com/film106)
--   [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
+- [Back to the Future I - Timeline](http://www.themovietimeline.com/film106)
+- [DateTimeFormatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=T_WSXXPQYeY">

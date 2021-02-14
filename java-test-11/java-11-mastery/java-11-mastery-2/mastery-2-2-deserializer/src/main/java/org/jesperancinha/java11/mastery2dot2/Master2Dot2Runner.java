@@ -6,12 +6,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 public class Master2Dot2Runner {
     public static void main(String[] args) {

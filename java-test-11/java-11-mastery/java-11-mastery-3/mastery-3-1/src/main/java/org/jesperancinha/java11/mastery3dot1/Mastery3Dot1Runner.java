@@ -42,6 +42,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printSameLine;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
@@ -49,10 +53,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printSameLine;
 import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
 
 public class Mastery3Dot1Runner {

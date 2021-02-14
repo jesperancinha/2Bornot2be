@@ -72,11 +72,11 @@ public class Crum11 {
         MAGENTA.printGenericLn("10 - %s", new BaseSuper().areYouOutOfTouch(Arrays.asList("You're out of touch")));
         MAGENTA.printGenericLn("11 - %s", new BaseSuper().areYouOutOfTouch(Arrays.asList(1123443432342L)));
         final Collection<? super CharSequence> objects = new BaseSuper().areYouOutOfTouch(
-            new ArrayList<>(Arrays.asList("I'm out of time!")));
+                new ArrayList<>(Arrays.asList("I'm out of time!")));
         MAGENTA.printGenericLn("12 - %s", objects);
         objects.add(new StringBuilder());
         final Object next = objects.iterator()
-            .next();
+                .next();
         MAGENTA.printGenericLn("Notice that '%s' is an Object! Using super in a wildcard allows us to write only specific types but offers no guarantee about the read type", next);
         // Required type:
         // capture of ? super CharSequence

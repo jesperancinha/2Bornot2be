@@ -2,8 +2,7 @@
 
 ## Exercise
 
-Let's check polymorphism, inheritance and most important scopes.
-From more restrictive to less restrictive:
+Let's check polymorphism, inheritance and most important scopes. From more restrictive to less restrictive:
 
 1. private
 2. default or package

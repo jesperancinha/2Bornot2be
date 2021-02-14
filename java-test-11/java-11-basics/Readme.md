@@ -2,23 +2,23 @@
 
 ## Topics and coverage
 
--   [Basics 1](java-11-basics-1)
--   [Basics 2](java-11-basics-2)
+- [Basics 1](java-11-basics-1)
+- [Basics 2](java-11-basics-2)
 
 ## References
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ## About me 👨🏽‍💻🚀
 

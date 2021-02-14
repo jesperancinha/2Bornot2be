@@ -9,14 +9,18 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 
 public class Crum4 {
 
-    @Boat(value = "Armonense", type = BoatType.PASSENGER)
-    @Boat(value = "Ferreirinha", type = BoatType.FISHING)
+    @Boat(value = "Armonense",
+            type = BoatType.PASSENGER)
+    @Boat(value = "Ferreirinha",
+            type = BoatType.FISHING)
     private class ArmonaBoat {
 
     }
 
-    @Boats({ @Boat(value = "Armonense", type = BoatType.PASSENGER),
-        @Boat(value = "Ferreirinha", type = BoatType.FISHING) })
+    @Boats({@Boat(value = "Armonense",
+            type = BoatType.PASSENGER),
+            @Boat(value = "Ferreirinha",
+                    type = BoatType.FISHING)})
     private class TourBoat {
 
     }
@@ -32,12 +36,12 @@ public class Crum4 {
 
         MAGENTA.printGenericLn("For the %s boat we have:", armonaBoat.getClass());
         Arrays.stream(armonaBoat.getClass()
-            .getAnnotations())
-            .forEach(text1 -> BRIGHT_CYAN.printGenericLn(text1));
+                .getAnnotations())
+                .forEach(text1 -> BRIGHT_CYAN.printGenericLn(text1));
         MAGENTA.printGenericLn("For the %s boat we have:", tourBoat.getClass());
         Arrays.stream(tourBoat.getClass()
-            .getAnnotations())
-            .forEach(text -> BRIGHT_CYAN.printGenericLn(text));
+                .getAnnotations())
+                .forEach(text -> BRIGHT_CYAN.printGenericLn(text));
 
         GREEN.printGenericLn("We need to be aware that although we made our annotation Boat repeatable, it is not dependent on Boats");
         GREEN.printGenericLn("The code declaration of Boats allow us to use the Boat annotation independently and repeatedly");

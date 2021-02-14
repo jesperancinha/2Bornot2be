@@ -2,8 +2,7 @@
 
 ## Exercise
 
-This module is the deserializer module with an upgraded class in the same package.
-It answers question one of module [mastery-2-2](../mastery-2-2).
+This module is the deserializer module with an upgraded class in the same package. It answers question one of module [mastery-2-2](../mastery-2-2).
 
 ## Output
 

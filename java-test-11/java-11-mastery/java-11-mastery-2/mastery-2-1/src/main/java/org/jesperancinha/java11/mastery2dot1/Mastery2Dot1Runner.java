@@ -40,12 +40,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 
 public class Mastery2Dot1Runner {
     public static void main(String[] args) throws Exception {
@@ -85,16 +85,16 @@ public class Mastery2Dot1Runner {
                         new File(Mastery2Dot1Runner
                                 .class.getResource("/lyrics.txt").toURI())))) {
             BRIGHT_CYAN.printGenericLn("The Reader class does not support mark %s", new Reader() {
-                    @Override
-                    public int read(char[] cbuf, int off, int len) throws IOException {
-                        return 0;
-                    }
+                @Override
+                public int read(char[] cbuf, int off, int len) throws IOException {
+                    return 0;
+                }
 
-                    @Override
-                    public void close() throws IOException {
+                @Override
+                public void close() throws IOException {
 
-                    }
-                }.markSupported());
+                }
+            }.markSupported());
             BLUE.printGenericLn("The BufferedReader class does support mark %s", r.markSupported());
             if (r.markSupported()) {
                 BufferedReader in = (BufferedReader) r;

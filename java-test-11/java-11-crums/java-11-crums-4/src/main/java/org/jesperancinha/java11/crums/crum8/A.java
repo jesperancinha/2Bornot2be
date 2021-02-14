@@ -9,7 +9,7 @@ interface A {
 
     default int countSheeps() {
         return theSheepsAreAlright() ?
-            200 :
-            100;
+                200 :
+                100;
     }
 }

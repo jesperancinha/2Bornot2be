@@ -29,7 +29,7 @@ public class LaCasaAzulRunner {
                         stringListEntry.getKey(), band, String.join(", ", stringListEntry.getValue())));
 
         System.out.println("////////////////////// Hashtable //////////////////////");
-        var hashtable = new Hashtable<String, List<String>>(){{
+        var hashtable = new Hashtable<String, List<String>>() {{
             put("2004", List.of("Superguay"));
             put("2005", List.of("Como un fan"));
             put("2006", List.of("El sol no brilará nunca más"));
@@ -47,7 +47,7 @@ public class LaCasaAzulRunner {
                         stringListEntry.getKey(), band, String.join(", ", stringListEntry.getValue())));
 
         System.out.println("////////////////////// LinkedHashMap //////////////////////");
-        var linkedHashMap = new LinkedHashMap<String, List<String>>(){{
+        var linkedHashMap = new LinkedHashMap<String, List<String>>() {{
             put("2005", List.of("Como un fan"));
             put("2004", List.of("Superguay"));
             put("2006", List.of("El sol no brilará nunca más"));
@@ -65,7 +65,7 @@ public class LaCasaAzulRunner {
                         stringListEntry.getKey(), band, String.join(", ", stringListEntry.getValue())));
 
         System.out.println("////////////////////// TreeMap //////////////////////");
-        var treeMap = new TreeMap<String, List<String>>(){{
+        var treeMap = new TreeMap<String, List<String>>() {{
             put("2005", List.of("Como un fan"));
             put("2004", List.of("Superguay"));
             put("2006", List.of("El sol no brilará nunca más"));

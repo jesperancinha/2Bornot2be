@@ -6,12 +6,12 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 
 public class Crum15 {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Crum15 {
 
         final List<String> plantsInDutch = List.of("Rhododendrons", "Camile", "tulpen");
         final Map<String, Integer> initPlants = plantsInDutch.stream()
-            .collect(Collectors.toUnmodifiableMap(s -> s, t -> plantsInDutch.size()));
+                .collect(Collectors.toUnmodifiableMap(s -> s, t -> plantsInDutch.size()));
 
         MAGENTA.printGenericLn("We've just created a list with some flowers we've initialized to %d", plantsInDutch.size());
 
@@ -35,7 +35,7 @@ public class Crum15 {
         MAGENTA.printGenericLn("We can also make a concurrent Map and give it another try:");
 
         final ConcurrentMap<String, Integer> initPlants2 = plantsInDutch.stream()
-            .collect(Collectors.toConcurrentMap(s -> s, t -> plantsInDutch.size()));
+                .collect(Collectors.toConcurrentMap(s -> s, t -> plantsInDutch.size()));
 
         ORANGE.printGenericLn("We now have a map that seems to be the same:");
         ORANGE.printGenericLn(initPlants2);
@@ -47,12 +47,12 @@ public class Crum15 {
         MAGENTA.printGenericLn("We can try that!");
 
         final Iterator<Map.Entry<String, Integer>> iterator = initPlants2.entrySet()
-            .iterator();
+                .iterator();
 
-       while(iterator.hasNext()){
-           initPlants2.put("Woestijnviolier", plantsInDutch.size());
-           printRainbowTitleLn(iterator.next());
-       }
+        while (iterator.hasNext()) {
+            initPlants2.put("Woestijnviolier", plantsInDutch.size());
+            printRainbowTitleLn(iterator.next());
+        }
 
         MAGENTA.printGenericLn("And this is our final result!");
         ORANGE.printGenericLn(initPlants2);

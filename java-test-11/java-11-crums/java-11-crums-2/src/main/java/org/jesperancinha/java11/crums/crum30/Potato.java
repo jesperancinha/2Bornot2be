@@ -8,5 +8,6 @@ import java.lang.annotation.RetentionPolicy;
 @Repeatable(Potatos.class)
 public @interface Potato {
     int id() default 0;
+
     String name();
 }

@@ -3,7 +3,7 @@ package org.jesperancinha.java11.crums.crum10;
 public enum DocesPortugueses {
 
     FAROFIAS(12.4),
-    DOMRODRIGO(2234.0){
+    DOMRODRIGO(2234.0) {
         @Override
         String getDescription() {
             return "We don't know anything about Dom Rodrigo";

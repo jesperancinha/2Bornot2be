@@ -12,24 +12,24 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 public class Crum25 {
     public static void main(String[] args) throws InterruptedException {
         final List<String> options = Arrays.stream(args)
-            .collect(Collectors.toList());
+                .collect(Collectors.toList());
         final boolean skipTime = options.contains("-skipTime");
 
         BLUE.printGenericTitleLn("Crum 25 - When does GC washes away an object");
 
         String a = IntStream.range(0, Integer.MAX_VALUE / 1000)
-            .boxed()
-            .map(Object::toString)
-            .collect(Collectors.joining());
+                .boxed()
+                .map(Object::toString)
+                .collect(Collectors.joining());
         long before = getMemoryAllocation(skipTime);
         a = null;
         long after = getMemoryAllocation(skipTime);
         long objectSize = before - after;
         MAGENTA.printGenericLn("This is the estimated byte object size -> %d bytes", objectSize);
         a = IntStream.range(0, Integer.MAX_VALUE / 1000)
-            .boxed()
-            .map(Object::toString)
-            .collect(Collectors.joining());
+                .boxed()
+                .map(Object::toString)
+                .collect(Collectors.joining());
         before = getMemoryAllocation(skipTime);
         MAGENTA.printGenericLn("This is the estimated byte object size doing the same test -> %d bytes", objectSize);
         after = getMemoryAllocation(skipTime);
@@ -48,11 +48,11 @@ public class Crum25 {
     private static long getMemoryAllocation(boolean skipTime) throws InterruptedException {
         System.gc();
         System.runFinalization();
-        if(!skipTime) {
+        if (!skipTime) {
             Thread.sleep(1000);
         }
         return Runtime.getRuntime()
-            .totalMemory() - Runtime.getRuntime()
-            .freeMemory();
+                .totalMemory() - Runtime.getRuntime()
+                .freeMemory();
     }
 }

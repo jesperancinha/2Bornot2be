@@ -26,16 +26,15 @@ import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
 
 public class Master2Dot2Runner {
@@ -409,7 +408,7 @@ public class Master2Dot2Runner {
         // Cannot resolve method 'transform(java.util.ArrayList<java.lang.Long>)'
         // moonBase.transform(new ArrayList<Long>());
         moonBase.translateData(new ArrayList<>());
-        moonBase.translateData((Collection)new Vector<>());
+        moonBase.translateData((Collection) new Vector<>());
         printUnicornsLn(100);
     }
 }

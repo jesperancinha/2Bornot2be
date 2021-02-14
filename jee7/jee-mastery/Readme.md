@@ -13,8 +13,7 @@
 
 ## Introduction
 
-To further deepen our understanding of JEE7, we will go through mastery modules. These modules serve the purpose of
-exploring in depth, the knowledge acquired from buiilding the [jee-apps](../jee-apps).
+To further deepen our understanding of JEE7, we will go through mastery modules. These modules serve the purpose of exploring in depth, the knowledge acquired from buiilding the [jee-apps](../jee-apps).
 
 </i>João Esperancinha, on the 17th of January 2021</i>
 
@@ -31,9 +30,7 @@ You can also just run the [Bash script file](installWildFly.sh) and hope that it
 
 This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready
-to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to
-improvements from time to time.
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to improvements from time to time.
 
 ## Mastery Apps
 
@@ -45,8 +42,7 @@ improvements from time to time.
 
 ## Extra notes
 
-1. We can use POJO's to implement a REST resource. The only requirement is for it top be annotated with at least one
-   @Path
+1. We can use POJO's to implement a REST resource. The only requirement is for it top be annotated with at least one @Path
 
 ## References
 
@@ -68,10 +64,8 @@ improvements from time to time.
 
 ### Books
 
-- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison
-  Wesley
-- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison
-  Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 - Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
 - Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
 - Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress

@@ -40,7 +40,7 @@ public class Crum16 {
         colors8.add(new Role("blue", List.of()));
         final RoleUnresolvedList colors9 = new RoleUnresolvedList();
         colors9.add(new RoleUnresolved("green", List.of(), RoleStatus.NO_ROLE_WITH_NAME));
-        final Stack<String>  colors10 = new Stack<>();
+        final Stack<String> colors10 = new Stack<>();
         colors10.push("rose");
         colors10.push("yellow");
         final Vector<String> colors11 = new Vector<>(colors1);

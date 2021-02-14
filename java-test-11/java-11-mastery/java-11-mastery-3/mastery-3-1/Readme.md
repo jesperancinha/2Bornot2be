@@ -1,15 +1,12 @@
 # mastery-3-1 - Mastery Module 3.1.
 
-In this fifth master module on route to the Java 11 certification, we are going to use data from some of the most amazing singers who sing in dutch.
-Regardless of my musical preferences and of yours, it is undeniable that it is through their music that I ended up learning this amazing language.
-I sang these songs from my heart and little by little my dutch speaking goal became a reality.
-It should be no surprise that my story would end up being a part of my study materials of some sort and this is their debut.
+In this fifth master module on route to the Java 11 certification, we are going to use data from some of the most amazing singers who sing in dutch. Regardless of my musical preferences and of yours, it is undeniable that it is through their music that I ended up learning this amazing language. I
+sang these songs from my heart and little by little my dutch speaking goal became a reality. It should be no surprise that my story would end up being a part of my study materials of some sort and this is their debut.
 
 ## Preparation
 
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh). If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there. The point is that you need to have a `/tmp`
+folder at this point.
 
 ```bash
 ./prepare.sh
@@ -32,8 +29,8 @@ The point is that you need to have a `/tmp` folder at this point.
 13. How to guarantee Immutability - [Java Security Guidelines](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 14. Accessing `static` `interface` methods
 15. `java.lang.OutOfMemoryError` and `Error` classes
-16. Accessibility `@Override` 
- 
+16. Accessibility `@Override`
+
 ## Output
 
 ```text
@@ -270,18 +267,19 @@ Thank you!
 
 Process finished with exit code 0
 ```
+
 ## References
 
--   [Ode aan Boudewijn: Maaike Ouboter - Verdronken Vlinder - 17-1-2014](https://www.bnnvara.nl/dewerelddraaitdoor/videos/257725)
--   [Verdronken vlinder - Wikipedia NL](https://nl.wikipedia.org/wiki/Verdronken_vlinder)
--   [100% NL TOP 20](https://www.100p.nl/muziek/charts/100-nl-top-20)
--   [Vinyl Record Sizes and Speeds – What does 33 – 45- 78 RPM mean?](https://blog.electrohome.com/vinyl-record-speeds-33-45-78-mean/)
--   [Maaike Ouboter](https://nl.wikipedia.org/wiki/Maaike_Ouboter)
--   [Musixmatch - Abel, Onderweg, Lyrics](https://www.musixmatch.com/lyrics/Abel/Onderweg)
--   [Glob pattern](https://en.wikipedia.org/wiki/Glob_(programming))
--   [De Jeugd van Tegenwoordig - Wikipedia NL](https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep))
--   [Diggy Dex - Wikipedia NL](https://nl.wikipedia.org/wiki/Diggy_Dex)
--   [Jan Willem Roy - Wikipedia NL](https://nl.wikipedia.org/wiki/JW_Roy)
+- [Ode aan Boudewijn: Maaike Ouboter - Verdronken Vlinder - 17-1-2014](https://www.bnnvara.nl/dewerelddraaitdoor/videos/257725)
+- [Verdronken vlinder - Wikipedia NL](https://nl.wikipedia.org/wiki/Verdronken_vlinder)
+- [100% NL TOP 20](https://www.100p.nl/muziek/charts/100-nl-top-20)
+- [Vinyl Record Sizes and Speeds – What does 33 – 45- 78 RPM mean?](https://blog.electrohome.com/vinyl-record-speeds-33-45-78-mean/)
+- [Maaike Ouboter](https://nl.wikipedia.org/wiki/Maaike_Ouboter)
+- [Musixmatch - Abel, Onderweg, Lyrics](https://www.musixmatch.com/lyrics/Abel/Onderweg)
+- [Glob pattern](https://en.wikipedia.org/wiki/Glob_(programming))
+- [De Jeugd van Tegenwoordig - Wikipedia NL](https://nl.wikipedia.org/wiki/De_Jeugd_van_Tegenwoordig_(rapgroep))
+- [Diggy Dex - Wikipedia NL](https://nl.wikipedia.org/wiki/Diggy_Dex)
+- [Jan Willem Roy - Wikipedia NL](https://nl.wikipedia.org/wiki/JW_Roy)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=bY-F4sCQz1E">
@@ -326,18 +324,18 @@ Process finished with exit code 0
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

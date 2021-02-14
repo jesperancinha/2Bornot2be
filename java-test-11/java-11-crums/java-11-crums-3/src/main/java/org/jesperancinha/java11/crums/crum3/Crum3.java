@@ -41,7 +41,7 @@ public class Crum3 {
         MAGENTA.printGenericLn("Up until this point everything is pretty much what we expect");
 
         BLUE.printGenericLn("        var a = new A();\n" + "        a = new B1();\n" + "        a = new B2();\n"
-            + "        var b1 = new B1();\n" + "        var b2 = new B2();");
+                + "        var b1 = new B1();\n" + "        var b2 = new B2();");
 
         MAGENTA.printGenericLn(a);
         MAGENTA.printGenericLn(b1);

@@ -2,12 +2,8 @@
 
 ## Exercise
 
-We will explore these operators <<, >> and >>>.
-These are the left shift, right shift and right shift unsigned operator.
-To understand this, the unsigned right shift operator, shifts the binary sequence regardless.
-The others move one position while keeping the sign. 
-This means that the 1's sequence before the actual number is maintained to keep the actual negative sign.
-These are after all smooth operators...
+We will explore these operators <<, >> and >>>. These are the left shift, right shift and right shift unsigned operator. To understand this, the unsigned right shift operator, shifts the binary sequence regardless. The others move one position while keeping the sign. This means that the 1's sequence
+before the actual number is maintained to keep the actual negative sign. These are after all smooth operators...
 
 ## References
 
@@ -23,9 +19,9 @@ These are after all smooth operators...
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ## About me 👨🏽‍💻🚀
 

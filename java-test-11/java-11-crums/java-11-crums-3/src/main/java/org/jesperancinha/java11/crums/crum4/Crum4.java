@@ -21,7 +21,7 @@ public class Crum4 {
         MAGENTA.printGenericLn("This is actually the reason why a BufferedReader can be initialized with any reader, including itself");
 
         var bufferedReader1 = new BufferedReader(
-            new InputStreamReader(new ByteArrayInputStream("This is a good String".getBytes())));
+                new InputStreamReader(new ByteArrayInputStream("This is a good String".getBytes())));
 
         int read;
         try {
@@ -34,7 +34,7 @@ public class Crum4 {
 
         Consolerizer.printNewLine();
         bufferedReader1 = new BufferedReader(
-            new InputStreamReader(new ByteArrayInputStream("This is a good String".getBytes())));
+                new InputStreamReader(new ByteArrayInputStream("This is a good String".getBytes())));
 
         var bufferedReader2 = new BufferedReader(bufferedReader1);
 

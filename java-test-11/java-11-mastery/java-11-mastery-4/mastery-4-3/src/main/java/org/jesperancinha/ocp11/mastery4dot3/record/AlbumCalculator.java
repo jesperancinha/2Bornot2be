@@ -22,38 +22,38 @@ public class AlbumCalculator extends Calculator {
 
     @Override
     public byte getAverageByte() {
-        return (byte) songsPerAlbum.values().stream().mapToInt(i->i).average().orElse(0);
+        return (byte) songsPerAlbum.values().stream().mapToInt(i -> i).average().orElse(0);
     }
 
     @Override
     public short getAverageShort() {
-        return songsPerAlbum.values().stream().collect(Collectors.averagingInt(i->i)).shortValue();
+        return songsPerAlbum.values().stream().collect(Collectors.averagingInt(i -> i)).shortValue();
     }
 
     @Override
     public char getAverageCharacter() {
-        return (char)songsPerAlbum.values().stream().collect(Collectors.averagingInt(i->i)).shortValue();
+        return (char) songsPerAlbum.values().stream().collect(Collectors.averagingInt(i -> i)).shortValue();
     }
 
     @Override
     public int getAverageInt() {
-        return songsPerAlbum.values().stream().collect(Collectors.averagingInt(i->i)).intValue();
+        return songsPerAlbum.values().stream().collect(Collectors.averagingInt(i -> i)).intValue();
     }
 
     @Override
     public long getAverageLong() {
-        return  songsPerAlbum.values().stream().mapToInt(i->i).sum()/songsPerAlbum.size();
+        return songsPerAlbum.values().stream().mapToInt(i -> i).sum() / songsPerAlbum.size();
     }
 
     @Override
     public float getAverageFloat() {
-        return songsPerAlbum.values().stream().collect(Collectors.averagingDouble(i->i)).floatValue();
+        return songsPerAlbum.values().stream().collect(Collectors.averagingDouble(i -> i)).floatValue();
 
     }
 
     @Override
     public double getAverageDouble() {
-        return songsPerAlbum.values().stream().collect(Collectors.averagingDouble(i->i));
+        return songsPerAlbum.values().stream().collect(Collectors.averagingDouble(i -> i));
     }
 
     @Override

@@ -2,8 +2,7 @@
 
 ## Exercise
 
-Strings have a lot of lesser known methods which we will dive in.
-A song lyric has a lot of strings and we will use [Dire Straits](https://en.wikipedia.org/wiki/Dire_Straits), [Twisting By The Pool](https://www.youtube.com/watch?v=DsJ5aYK-S6Y) to fill in our jvm's pool of strings.
+Strings have a lot of lesser known methods which we will dive in. A song lyric has a lot of strings and we will use [Dire Straits](https://en.wikipedia.org/wiki/Dire_Straits), [Twisting By The Pool](https://www.youtube.com/watch?v=DsJ5aYK-S6Y) to fill in our jvm's pool of strings.
 
 ## Output
 
@@ -24,10 +23,11 @@ Although we write differently, if we say "Dance to the Euro beat" or if we say "
 
 Process finished with exit code 0
 ```
+
 ## References
 
--   [Dire Straits](https://en.wikipedia.org/wiki/Dire_Straits)
--   [Dire Straits - Twisting By The Pool](https://www.youtube.com/watch?v=DsJ5aYK-S6Y)
+- [Dire Straits](https://en.wikipedia.org/wiki/Dire_Straits)
+- [Dire Straits - Twisting By The Pool](https://www.youtube.com/watch?v=DsJ5aYK-S6Y)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=DsJ5aYK-S6Y">

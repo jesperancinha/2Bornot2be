@@ -74,16 +74,16 @@ public class TheFugitiveRunner {
             frontDoorLock.unlock();
         });
         executorServiceFrontDoor.submit(() -> {
-           if(frontDoorLock.tryLock()) {
-               System.out.println("C - I'm the criminal and I've locked the door! Won't unlock it until I'm done");
-               try {
-                   Thread.sleep(5000);
-               } catch (InterruptedException e) {
-                   RED.printThrowableAndExit(e);
-               }
-           } else{
-               System.out.println("C - Oh Oh, I have to escape, he is still in there!");
-           }
+            if (frontDoorLock.tryLock()) {
+                System.out.println("C - I'm the criminal and I've locked the door! Won't unlock it until I'm done");
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    RED.printThrowableAndExit(e);
+                }
+            } else {
+                System.out.println("C - Oh Oh, I have to escape, he is still in there!");
+            }
             // backDoorLock.unlock();
         });
 

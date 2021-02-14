@@ -2,17 +2,15 @@
 
 ## Exercise
 
-We will revise here the concepts of shadowing within the inner and outer classes realm.
-Our data will be coming from the worldwide well known [MEO Sudoeste](https://sudoeste.meo.pt/en) and we will be looking at the predicted listings for 2021.
-This data was taken on the 27th October 2020.
+We will revise here the concepts of shadowing within the inner and outer classes realm. Our data will be coming from the worldwide well known [MEO Sudoeste](https://sudoeste.meo.pt/en) and we will be looking at the predicted listings for 2021. This data was taken on the 27th October 2020.
 
 ## References
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ## Output
 
@@ -43,8 +41,8 @@ Process finished with exit code 0
 
 ## References
 
--   [Zambujeira do Mar - Portugal](https://goo.gl/maps/qoBx2ZHSGeLHWEGb9)
--   [MEO Sudoeste](https://sudoeste.meo.pt/en)
+- [Zambujeira do Mar - Portugal](https://goo.gl/maps/qoBx2ZHSGeLHWEGb9)
+- [MEO Sudoeste](https://sudoeste.meo.pt/en)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=iUgIL5pbb0M">

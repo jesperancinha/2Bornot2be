@@ -102,7 +102,7 @@ Process finished with exit code 0
 
 ## References
 
--   [The Flinstones](https://en.wikipedia.org/wiki/The_Flintstones)
+- [The Flinstones](https://en.wikipedia.org/wiki/The_Flintstones)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=cBco_DApZVY">

@@ -19,7 +19,7 @@ public class Crum8 {
 
         try (final Connection connection = DriverManager.getConnection("jdbc:h2:mem:", "sa", "")) {
             final PreparedStatement preparedStatement = connection.prepareStatement(
-                "CREATE TABLE PAINTING (" + "ID INT AUTO_INCREMENT, AUTHOR VARCHAR(500))");
+                    "CREATE TABLE PAINTING (" + "ID INT AUTO_INCREMENT, AUTHOR VARCHAR(500))");
             preparedStatement.executeUpdate();
             PreparedStatement ps = connection.prepareStatement(query);
             ps.setString(0, "Favourite Author");

@@ -8,16 +8,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 
 public class Crum2 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 2 - java.util.RandomAccess interface");
         final List<String> options = Arrays.stream(args)
-            .collect(Collectors.toList());
+                .collect(Collectors.toList());
         final boolean skipTime = options.contains("-skipTime");
         MAGENTA.printGenericLn("We know that ArrayList implements the RandomAccessInterface");
         MAGENTA.printGenericLn("We know that LinkedList does not implement the RandomAccessInterface");

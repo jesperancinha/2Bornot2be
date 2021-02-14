@@ -8,5 +8,5 @@ public interface InterfaceVariableHolder {
     short variableE = 10;
     byte variableF = 100;
     boolean variableG = true;
-    char variableH =  32;
+    char variableH = 32;
 }

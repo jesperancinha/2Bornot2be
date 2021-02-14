@@ -43,8 +43,8 @@ public class Crum2 {
         // Cannot resolve constructor 'ArrayDeque(java.util.List<capture<? super java.lang.CharSequence>>)'
         // final ArrayDeque<String> arrayDeque = new ArrayDeque<String>(boats);
         final ArrayDeque<String> arrayDeque = new ArrayDeque<String>(boats.stream()
-            .map(x -> (String) x)
-            .collect(Collectors.toList()));
+                .map(x -> (String) x)
+                .collect(Collectors.toList()));
 
         ORANGE.printGenericLn(arrayDeque);
 

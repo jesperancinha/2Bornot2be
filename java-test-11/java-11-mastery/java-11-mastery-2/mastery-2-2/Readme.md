@@ -232,12 +232,12 @@ Process finished with exit code 0
 
 ## References
 
--   [Apollo 13 (film)](https://nl.wikipedia.org/wiki/Apollo_13_(film))
--   [Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
--   [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
--   [Creative Commons](https://creativecommons.org/)
--   [Five Command Line Options To Hack The Java Module System](https://nipafx.dev/five-command-line-options-hack-java-module-system)
--   [Secure Coding Guidelines for Java SE](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+- [Apollo 13 (film)](https://nl.wikipedia.org/wiki/Apollo_13_(film))
+- [Apollo_13](https://en.wikipedia.org/wiki/Apollo_13)
+- [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing)
+- [Creative Commons](https://creativecommons.org/)
+- [Five Command Line Options To Hack The Java Module System](https://nipafx.dev/five-command-line-options-hack-java-module-system)
+- [Secure Coding Guidelines for Java SE](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=MdvoA-sjs0A">

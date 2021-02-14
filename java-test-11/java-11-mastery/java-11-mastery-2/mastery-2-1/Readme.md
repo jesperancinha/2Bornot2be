@@ -191,10 +191,10 @@ Process finished with exit code 0
 
 ## References
 
--   [Peter and The Wolf Lyrics](https://www.azlyrics.com/lyrics/weirdalyankovic/peterandthewolf.html)
--   [Scientific Classification of Wolves](https://wolf.org/wolf-info/basic-wolf-info/types-of-wolves/)
--   [Peter and the Wolf](https://en.wikipedia.org/wiki/Peter_and_the_Wolf)
--   [Build your own Command Line with ANSI escape codes](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html#256-colors)
+- [Peter and The Wolf Lyrics](https://www.azlyrics.com/lyrics/weirdalyankovic/peterandthewolf.html)
+- [Scientific Classification of Wolves](https://wolf.org/wolf-info/basic-wolf-info/types-of-wolves/)
+- [Peter and the Wolf](https://en.wikipedia.org/wiki/Peter_and_the_Wolf)
+- [Build your own Command Line with ANSI escape codes](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html#256-colors)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=2EPl8zAsq8A">

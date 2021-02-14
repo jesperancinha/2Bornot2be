@@ -1,9 +1,7 @@
 # mastery-4-2 - Mastery Module 4.2.
 
-Welcome to my 8th mastery module.
-For this module we will master our Java knowledge with Java exercises based on the data of Spanish Pop Music.
-In this case we will have a look at some of the music that really had an influence on my life during my Spanish years.
-This is all about the spanish pop/indie music history between the 70's going through the 80's, 90's and early 2000's.
+Welcome to my 8th mastery module. For this module we will master our Java knowledge with Java exercises based on the data of Spanish Pop Music. In this case we will have a look at some of the music that really had an influence on my life during my Spanish years. This is all about the spanish
+pop/indie music history between the 70's going through the 80's, 90's and early 2000's.
 
 ## Exercise
 
@@ -26,12 +24,11 @@ This is all about the spanish pop/indie music history between the 70's going thr
 17. `writeUTF` and where it is possible with `BufferedWriter` and `FileOutputWriter`
 18. `Arrays` `binarySearch`
 19. `try-with-resources` `open` and `close` methods.
- 
+
 ## Preparation
 
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh). If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there. The point is that you need to have a `/tmp`
+folder at this point.
 
 ```bash
 ./prepare.sh
@@ -735,55 +732,57 @@ Process finished with exit code 0
 
 ## References
 
--   [Implementig a Class Loader](https://docstore.mik.ua/orelly/java-ent/security/ch03_04.htm)
--   [Installing Your Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/installSMgr.html)
--   [Writing a Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/writingSMgr.html)
--   [SecurityManager checkPackageAccess() Method](https://www.tutorialspoint.com/java/lang/securitymanager_checkpackageaccess.htm)
--   [Rapid Tables](https://www.rapidtables.com/convert/number/decimal-to-octal.html)
--   [Definition of Double in C, C++ and C#](https://www.thoughtco.com/definition-of-double-958065#:~:text=Double%20vs.&text=Its%20range%20is%20approximately%201.5,to%201.7%20%C3%97%2010308.)
--   [Size of Floats](https://chortle.ccsu.edu/java5/Notes/chap11/ch11_2.html)
--   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
--   [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
--   [Primitive Data Types by Docs@Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
--   [Java: Primitive data types](https://cs.fit.edu/~ryan/java/language/java-data.html)
--   [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
--   [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
+- [Implementig a Class Loader](https://docstore.mik.ua/orelly/java-ent/security/ch03_04.htm)
+- [Installing Your Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/installSMgr.html)
+- [Writing a Security Manager](https://www.cis.upenn.edu/~bcpierce/courses/629/papers/Java-tutorial/networking/security/writingSMgr.html)
+- [SecurityManager checkPackageAccess() Method](https://www.tutorialspoint.com/java/lang/securitymanager_checkpackageaccess.htm)
+- [Rapid Tables](https://www.rapidtables.com/convert/number/decimal-to-octal.html)
+- [Definition of Double in C, C++ and C#](https://www.thoughtco.com/definition-of-double-958065#:~:text=Double%20vs.&text=Its%20range%20is%20approximately%201.5,to%201.7%20%C3%97%2010308.)
+- [Size of Floats](https://chortle.ccsu.edu/java5/Notes/chap11/ch11_2.html)
+- [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+- [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
+- [Primitive Data Types by Docs@Oracle](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+- [Java: Primitive data types](https://cs.fit.edu/~ryan/java/language/java-data.html)
+- [Examples of Formatting Float or Double Numbers to String in Java](https://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html)
+- [Floating-Point Types, Formats, and Values](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
+
 ---
--   [Lori Meyers](https://en.wikipedia.org/wiki/Lori_Meyers)
--   [Sobreviviré (canción)](https://es.wikipedia.org/wiki/Sobrevivir%C3%A9_(canci%C3%B3n))
--   [Sobreviviré - Monica Naranjo](https://www.letras.mus.br/monica-naranjo/130411/)
--   [Supersubmarina](https://es.wikipedia.org/wiki/Supersubmarina)
--   [TOP 15 MEJORES CANCIONES DE DORIAN](https://culturadiversa.es/2018/05/mejores-canciones-de-dorian.html)
--   [Dorian_(banda)](https://es.wikipedia.org/wiki/Dorian_(banda))
--   [Vetusta Morla y la infinidad de canciones que hay en una canción](https://www.elindependiente.com/tendencias/musica/2020/06/13/vetusta-morla-y-la-infinidad-de-canciones-que-hay-en-una-cancion/)
--   [Rosario Flores](https://en.wikipedia.org/wiki/Rosario_Flores)
--   [Paulina Rubio](https://nl.wikipedia.org/wiki/Paulina_Rubio)
--   [Sidonie (2011) Teatro Circo Price. Madrid](https://www.mercadeopop.com/sidonie-2011-teatro-circo-price-madrid/)
--   [Vetusta Morla en Concierto en Granada](https://www.granadamarcha.com/2011/11/07/vetusta-morla-en-concierto-en-granada/)
--   [Arranca la gira española de Paulina Rubio](https://www.20minutos.es/noticia/700639/0/paulina/rubio/gira/)
--   [Raúl - Sueño su boca](https://genius.com/Raul-sueno-su-boca-lyrics)
--   [Raúl Fuentes Cuenca](https://en.wikipedia.org/wiki/Ra%C3%BAl_Fuentes_Cuenca)
--   [La Bola de Cristal](https://en.wikipedia.org/wiki/La_Bola_de_Cristal)
--   [La Casa Azul](https://en.wikipedia.org/wiki/La_Casa_Azul)
--   [Alaska y los Pegamoides](https://es.wikipedia.org/wiki/Alaska_y_los_Pegamoides)
--   [Vetusta Morla](https://es.wikipedia.org/wiki/Vetusta_Morla)
--   [La Casa Azul](https://nl.wikipedia.org/wiki/La_Casa_Azul)
--   [Love of Lesbian](https://en.wikipedia.org/wiki/Love_of_Lesbian)
--   [RUBÍ 2020, entrada completa a quien le importa](https://www.youtube.com/watch?v=aNMdaRbX_-k)
--   [Rosa López · A quién le importa - 2020](https://www.youtube.com/watch?v=NxlfzjWX2Z4)
--   [A QUIÉN LE IMPORTA - Grupal | Gala 7 | OT 2017](https://www.youtube.com/watch?v=hoH6OXQpmQY)
--   [Himno World Pride Madrid 2017 - A quien le importa 2017](https://www.lasexta.com/especiales/world-pride-madrid/orgullo-lgtbi/a-quien-le-importa-asi-suena-el-himno-oficial-del-world-pride-madrid-2017_201706285953f2d20cf2a25c00ab7737.html)
--   [Fangoria - A quien le importa 2011](https://www.youtube.com/watch?v=XX_hWpPnd3I)
--   [Thalia - A Quien Le Importa - Video Oficial 2002](https://www.youtube.com/watch?v=s0MG5mdwweU)
--   [Alaska y Dinarama A Quién Le Importa (1984)](https://www.youtube.com/watch?v=N2L7cRsUA0E)
--   [¿A quién le importa?](https://en.wikipedia.org/wiki/%C2%BFA_qui%C3%A9n_le_importa%3F)
--   [Paloma San Basilio](https://nl.wikipedia.org/wiki/Paloma_San_Basilio)
--   [Juntos Sencillo Paloma San Basilio @ Chordify](https://chordify.net/chords/juntos-sencillo-juntos-paloma-san-basilio-arturo-baez-velasquez)
--   [Juntos (canción)](https://es.wikipedia.org/wiki/Juntos_(canci%C3%B3n))
--   [Analysis of Fangoria by Prezi](https://prezi.com/goxtiwbslbm1/analysis-of-fangoria/)
--   [The Bloody History of Fangoria, the Magazine That Changed the Way We View Horror Movies](https://www.mentalfloss.com/article/560144/how-fangoria-magazine-changed-horror-movies)
--   [Fangoria magazine](https://en.wikipedia.org/wiki/Fangoria)
--   [Fangoria band](https://en.wikipedia.org/wiki/Fangoria_(band))
+
+- [Lori Meyers](https://en.wikipedia.org/wiki/Lori_Meyers)
+- [Sobreviviré (canción)](https://es.wikipedia.org/wiki/Sobrevivir%C3%A9_(canci%C3%B3n))
+- [Sobreviviré - Monica Naranjo](https://www.letras.mus.br/monica-naranjo/130411/)
+- [Supersubmarina](https://es.wikipedia.org/wiki/Supersubmarina)
+- [TOP 15 MEJORES CANCIONES DE DORIAN](https://culturadiversa.es/2018/05/mejores-canciones-de-dorian.html)
+- [Dorian_(banda)](https://es.wikipedia.org/wiki/Dorian_(banda))
+- [Vetusta Morla y la infinidad de canciones que hay en una canción](https://www.elindependiente.com/tendencias/musica/2020/06/13/vetusta-morla-y-la-infinidad-de-canciones-que-hay-en-una-cancion/)
+- [Rosario Flores](https://en.wikipedia.org/wiki/Rosario_Flores)
+- [Paulina Rubio](https://nl.wikipedia.org/wiki/Paulina_Rubio)
+- [Sidonie (2011) Teatro Circo Price. Madrid](https://www.mercadeopop.com/sidonie-2011-teatro-circo-price-madrid/)
+- [Vetusta Morla en Concierto en Granada](https://www.granadamarcha.com/2011/11/07/vetusta-morla-en-concierto-en-granada/)
+- [Arranca la gira española de Paulina Rubio](https://www.20minutos.es/noticia/700639/0/paulina/rubio/gira/)
+- [Raúl - Sueño su boca](https://genius.com/Raul-sueno-su-boca-lyrics)
+- [Raúl Fuentes Cuenca](https://en.wikipedia.org/wiki/Ra%C3%BAl_Fuentes_Cuenca)
+- [La Bola de Cristal](https://en.wikipedia.org/wiki/La_Bola_de_Cristal)
+- [La Casa Azul](https://en.wikipedia.org/wiki/La_Casa_Azul)
+- [Alaska y los Pegamoides](https://es.wikipedia.org/wiki/Alaska_y_los_Pegamoides)
+- [Vetusta Morla](https://es.wikipedia.org/wiki/Vetusta_Morla)
+- [La Casa Azul](https://nl.wikipedia.org/wiki/La_Casa_Azul)
+- [Love of Lesbian](https://en.wikipedia.org/wiki/Love_of_Lesbian)
+- [RUBÍ 2020, entrada completa a quien le importa](https://www.youtube.com/watch?v=aNMdaRbX_-k)
+- [Rosa López · A quién le importa - 2020](https://www.youtube.com/watch?v=NxlfzjWX2Z4)
+- [A QUIÉN LE IMPORTA - Grupal | Gala 7 | OT 2017](https://www.youtube.com/watch?v=hoH6OXQpmQY)
+- [Himno World Pride Madrid 2017 - A quien le importa 2017](https://www.lasexta.com/especiales/world-pride-madrid/orgullo-lgtbi/a-quien-le-importa-asi-suena-el-himno-oficial-del-world-pride-madrid-2017_201706285953f2d20cf2a25c00ab7737.html)
+- [Fangoria - A quien le importa 2011](https://www.youtube.com/watch?v=XX_hWpPnd3I)
+- [Thalia - A Quien Le Importa - Video Oficial 2002](https://www.youtube.com/watch?v=s0MG5mdwweU)
+- [Alaska y Dinarama A Quién Le Importa (1984)](https://www.youtube.com/watch?v=N2L7cRsUA0E)
+- [¿A quién le importa?](https://en.wikipedia.org/wiki/%C2%BFA_qui%C3%A9n_le_importa%3F)
+- [Paloma San Basilio](https://nl.wikipedia.org/wiki/Paloma_San_Basilio)
+- [Juntos Sencillo Paloma San Basilio @ Chordify](https://chordify.net/chords/juntos-sencillo-juntos-paloma-san-basilio-arturo-baez-velasquez)
+- [Juntos (canción)](https://es.wikipedia.org/wiki/Juntos_(canci%C3%B3n))
+- [Analysis of Fangoria by Prezi](https://prezi.com/goxtiwbslbm1/analysis-of-fangoria/)
+- [The Bloody History of Fangoria, the Magazine That Changed the Way We View Horror Movies](https://www.mentalfloss.com/article/560144/how-fangoria-magazine-changed-horror-movies)
+- [Fangoria magazine](https://en.wikipedia.org/wiki/Fangoria)
+- [Fangoria band](https://en.wikipedia.org/wiki/Fangoria_(band))
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=qSkcpM0zDnU">
@@ -938,17 +937,18 @@ Process finished with exit code 0
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

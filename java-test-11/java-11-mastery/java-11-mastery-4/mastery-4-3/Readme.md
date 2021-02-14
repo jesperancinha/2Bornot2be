@@ -22,13 +22,12 @@ Welcome to my 9th Mastery Module: "And then Indie"
 16. Overriding methods returning primitives
 17. `jdeps` `--module-path` `-cp` `--class-path` and `-classpath`
 18. Abstract classes and the `new` keyword
-19. `String` `replace` old/new 
+19. `String` `replace` old/new
 
 ## Preparation
 
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh). If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there. The point is that you need to have a `/tmp`
+folder at this point.
 
 ```bash
 ./prepare.sh
@@ -570,22 +569,25 @@ Process finished with exit code
 
 ## References
 
--   [Type Erasure](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)
+- [Type Erasure](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)
+
 ---
--   [Animal Collective Lyrics FloriDada](https://www.azlyrics.com/lyrics/animalcollective/floridada.html)
--   [Animal Collective discography](https://en.wikipedia.org/wiki/Animal_Collective_discography)
--   [Animal Collective](https://en.wikipedia.org/wiki/Animal_Collective)
--   [Capital Cities - What's the password?](https://www.youtube.com/watch?v=w7JFSLu8OHI)
--   [Capital Cities (band)](https://en.wikipedia.org/wiki/Capital_Cities_(band))
--   [Hercules and Love Affair (album)](https://en.wikipedia.org/wiki/Hercules_and_Love_Affair_(album))
--   [Hercules and Love Affair Homepage](https://www.herculesandloveaffair.net/home/)
--   [VAMPIRE WEEKEND @ The Grammys](https://www.grammy.com/grammys/artists/vampire-weekend/10722)
--   [Vampire Weekend release new album ‘Father of the Bride’](https://www.sonymusic.co.uk/vampire-weekend-release-new-album-father-of-the-bride/)
--   [MGMT discography](https://en.wikipedia.org/wiki/MGMT_discography)
--   [Electric Feel](https://en.wikipedia.org/wiki/Electric_Feel)
--   [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
--   [Time to Pretend](https://en.wikipedia.org/wiki/Time_to_Pretend)
--   [MGMT and their Little Dark Age](https://www.youtube.com/watch?v=IMMlwjWyHxA)
+
+- [Animal Collective Lyrics FloriDada](https://www.azlyrics.com/lyrics/animalcollective/floridada.html)
+- [Animal Collective discography](https://en.wikipedia.org/wiki/Animal_Collective_discography)
+- [Animal Collective](https://en.wikipedia.org/wiki/Animal_Collective)
+- [Capital Cities - What's the password?](https://www.youtube.com/watch?v=w7JFSLu8OHI)
+- [Capital Cities (band)](https://en.wikipedia.org/wiki/Capital_Cities_(band))
+- [Hercules and Love Affair (album)](https://en.wikipedia.org/wiki/Hercules_and_Love_Affair_(album))
+- [Hercules and Love Affair Homepage](https://www.herculesandloveaffair.net/home/)
+- [VAMPIRE WEEKEND @ The Grammys](https://www.grammy.com/grammys/artists/vampire-weekend/10722)
+- [Vampire Weekend release new album ‘Father of the Bride’](https://www.sonymusic.co.uk/vampire-weekend-release-new-album-father-of-the-bride/)
+- [MGMT discography](https://en.wikipedia.org/wiki/MGMT_discography)
+- [Electric Feel](https://en.wikipedia.org/wiki/Electric_Feel)
+- [Kids (MGMT song)](https://en.wikipedia.org/wiki/Kids_(MGMT_song))
+- [Time to Pretend](https://en.wikipedia.org/wiki/Time_to_Pretend)
+- [MGMT and their Little Dark Age](https://www.youtube.com/watch?v=IMMlwjWyHxA)
+
 <div align="center">
       <a href="https://www.youtube.com/watch?v=GJ78MJg3UdE">
          <img 
@@ -689,18 +691,18 @@ Process finished with exit code
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

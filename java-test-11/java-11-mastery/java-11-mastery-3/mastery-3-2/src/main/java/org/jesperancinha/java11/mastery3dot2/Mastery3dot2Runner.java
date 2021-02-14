@@ -1,11 +1,11 @@
 package org.jesperancinha.java11.mastery3dot2;
 
 import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.java11.mastery3dot2.marisco.Lingueirao;
 import org.jesperancinha.java11.mastery3dot2.cafes.galao.Galao;
 import org.jesperancinha.java11.mastery3dot2.cafes.garoto.Garoto;
 import org.jesperancinha.java11.mastery3dot2.festival.Artist;
 import org.jesperancinha.java11.mastery3dot2.marisco.Caranguejo;
+import org.jesperancinha.java11.mastery3dot2.marisco.Lingueirao;
 import org.jesperancinha.java11.mastery3dot2.mercado.Building;
 import org.jesperancinha.java11.mastery3dot2.mercado.Construction;
 import org.jesperancinha.java11.mastery3dot2.mercado.Market;
@@ -38,6 +38,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
@@ -45,7 +46,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
 
 public class Mastery3dot2Runner {

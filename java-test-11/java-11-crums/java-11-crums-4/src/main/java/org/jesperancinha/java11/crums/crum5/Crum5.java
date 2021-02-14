@@ -27,12 +27,12 @@ public class Crum5 {
         }
 
         BLUE.printGenericLn(" Crum35 crum35 = new Crum35();\n" + "        try {\n" + "            crum35.method1();\n"
-            + "        } catch (CustomException e) {\n"
-            + "            // Please comment the try catch to see the effect.\n" + "            try {\n"
-            + "                // Unhandled exception: org.jesperancinha.java11.crums.crum35.CustomException\n"
-            + "                crum35.method1();\n" + "            } catch (CustomException customException) {\n"
-            + "                customException.printStackTrace();\n" + "            }\n" + "        } finally {\n"
-            + "            crum35.method2();\n" + "        }");
+                + "        } catch (CustomException e) {\n"
+                + "            // Please comment the try catch to see the effect.\n" + "            try {\n"
+                + "                // Unhandled exception: org.jesperancinha.java11.crums.crum35.CustomException\n"
+                + "                crum35.method1();\n" + "            } catch (CustomException customException) {\n"
+                + "                customException.printStackTrace();\n" + "            }\n" + "        } finally {\n"
+                + "            crum35.method2();\n" + "        }");
 
         GREEN.printGenericLn("In this case, there isn't much to do than to exercise our eyes");
         GREEN.printGenericLn("In the catch of this try/cath, there is another exception being thrown that is not easy to spot.");

@@ -4,7 +4,7 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
 
 public interface Container {
 
-    static void describeMe(){
+    static void describeMe() {
         YELLOW.printGenericLn("I'm a container interface -> %s", Container.class.getName());
     }
 }

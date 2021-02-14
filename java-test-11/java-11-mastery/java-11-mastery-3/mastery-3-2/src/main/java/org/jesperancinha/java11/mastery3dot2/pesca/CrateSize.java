@@ -6,6 +6,7 @@ public enum CrateSize {
     TYPE3(20, 30);
     private int min;
     private int max;
+
     CrateSize(int min, int max) {
         this.min = min;
         this.max = max;

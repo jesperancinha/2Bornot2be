@@ -15,12 +15,12 @@ public class Crum27 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 27 - Partition by is partitioned via a boolean value");
 
-        final String[] bands = { "The Pogues", "Nick Cave and The Bad Seeds", "Henry Rollings Band", "Faith No More" };
+        final String[] bands = {"The Pogues", "Nick Cave and The Bad Seeds", "Henry Rollings Band", "Faith No More"};
 
         final Stream<String> bandStream = Arrays.stream(bands);
 
         final Map<Boolean, List<String>> partitionMap = bandStream.collect(
-            Collectors.partitioningBy(s -> s.split(" ").length > 2));
+                Collectors.partitioningBy(s -> s.split(" ").length > 2));
 
         MAGENTA.printGenericLn("We have found this map:");
         ORANGE.printGenericLn(partitionMap);

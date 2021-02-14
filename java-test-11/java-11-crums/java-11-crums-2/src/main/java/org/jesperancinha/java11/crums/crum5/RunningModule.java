@@ -13,7 +13,8 @@ interface ISubTypeA {
 }
 
 enum SubTypeA implements ISubTypeA {
-    AA, AB;
+    AA,
+    AB;
 
     private final Type A = Type.A;
 
@@ -32,7 +33,10 @@ enum SubTypeA implements ISubTypeA {
 }
 
 enum Type {
-    A, B, C, D
+    A,
+    B,
+    C,
+    D
 }
 
 class RunningModule {

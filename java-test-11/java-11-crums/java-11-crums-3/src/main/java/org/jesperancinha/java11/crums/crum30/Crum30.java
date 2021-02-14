@@ -30,12 +30,12 @@ public class Crum30 {
         BLUE.printGenericTitleLn("Crum 30 - RUNTIME annotations");
 
         Arrays.stream(Table.class.getAnnotations())
-            .forEach(annotation -> MAGENTA.printGenericLn(annotation));
+                .forEach(annotation -> MAGENTA.printGenericLn(annotation));
 
         try {
             Arrays.stream(BigTable.class.getMethod("test", String[].class)
-                .getAnnotations())
-                .forEach(annotation -> MAGENTA.printGenericLn(annotation));
+                    .getAnnotations())
+                    .forEach(annotation -> MAGENTA.printGenericLn(annotation));
         } catch (NoSuchMethodException e) {
             RED.printThrowableAndExit(e);
         }

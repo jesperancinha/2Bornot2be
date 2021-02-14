@@ -28,16 +28,16 @@ public class Crum16 {
 
         try {
             final Map<String, Double> collect = IntStream.range(0, cups.size())
-                .boxed()
-                .collect(Collectors.toMap(cups::get, prices::get));
+                    .boxed()
+                    .collect(Collectors.toMap(cups::get, prices::get));
         } catch (IllegalStateException e) {
             RED.printGenericLn("This is expected! We did not implement a disambiguation! Black Cup exists more than once in the list -> %s", e);
         }
 
         MAGENTA.printGenericLn("So let's disambiguate now:");
         final Map<String, Double> summingAndCollecting = IntStream.range(0, cups.size())
-            .boxed()
-            .collect(Collectors.toMap(cups::get, prices::get, Double::sum));
+                .boxed()
+                .collect(Collectors.toMap(cups::get, prices::get, Double::sum));
 
         MAGENTA.printGenericLn("We now have the price sum of all cups per type");
 

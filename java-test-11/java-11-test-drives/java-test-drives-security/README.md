@@ -1,8 +1,9 @@
-#2b2bsecurity
+# 2b2bsecurity
 
 ## CredentialsReader example
 
 * Generate key store
+
 ```
 $ openssl genrsa 1024 > server.key
 $ openssl req -new -x509 -nodes -sha1 -days 365 -key server.key > server.cert
@@ -10,6 +11,7 @@ $ openssl pkcs12 -export -out keyStore.p12 -in server.cert -inkey server.key
 ```
 
 * Check your data
+
 ```
 $ keytool -list -v -keystore keyStore.p12 -storetype PKCS12
 $ keytool -list -keystore keyStore.p12

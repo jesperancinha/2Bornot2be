@@ -10,7 +10,8 @@ public class Crum21 {
     private class A {
 
         int a;
-        public A(int  a) {
+
+        public A(int a) {
             ORANGE.printGenericLn("Created A");
             this.a = a;
         }
@@ -23,6 +24,7 @@ public class Crum21 {
 
     private class B extends A {
         long a;
+
         public B(long a) {
             super((int) a);
             ORANGE.printGenericLn("Created B");

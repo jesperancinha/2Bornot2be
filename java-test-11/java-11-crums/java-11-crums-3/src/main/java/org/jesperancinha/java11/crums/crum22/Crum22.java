@@ -10,7 +10,7 @@ public class Crum22 {
 
         StringBuilder sb = new StringBuilder();
         for (var key : System.getProperties()
-            .keySet()) {
+                .keySet()) {
             sb.append(key);
             sb.append(" ");
         }
@@ -18,7 +18,7 @@ public class Crum22 {
         sb.setLength(0);
 
         for (var keySet : System.getProperties()
-            .entrySet()) {
+                .entrySet()) {
             sb.append(String.format("%s->%s,", keySet.getKey(), keySet.getValue()));
         }
         MAGENTA.printGenericLn(sb.toString());

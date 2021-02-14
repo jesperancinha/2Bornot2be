@@ -17,14 +17,14 @@ public class Frenemy {
         return name;
     }
 
-    public void lendAlbum(Album album){
+    public void lendAlbum(Album album) {
         BLUE.printGenericLn("Thanks for the album!");
         BLUE.printGenericLn(album);
         scratchAlbum(album);
     }
 
-    private void scratchAlbum(Album album){
-        album.getSongs().forEach(song-> Arrays.fill(song, (byte) 0));
+    private void scratchAlbum(Album album) {
+        album.getSongs().forEach(song -> Arrays.fill(song, (byte) 0));
     }
 
     @Override

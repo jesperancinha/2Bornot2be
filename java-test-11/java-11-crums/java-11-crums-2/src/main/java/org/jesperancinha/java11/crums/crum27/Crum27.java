@@ -20,9 +20,9 @@ public class Crum27 {
 
         MAGENTA.printGenericLn("These are the basic boxing operations:");
         BLUE.printGenericLn("        final Boolean aBoolean = true;\n" + "        final Byte aByte = 127;\n"
-            + "        final Short aShort = 32767;\n" + "        final Integer aInteger = 1122334455;\n"
-            + "        final Long aLong = 2233445566778899L;\n" + "        final Float aFloat = 1881.1881f;\n"
-            + "        final Double aDouble = 1881.1881;");
+                + "        final Short aShort = 32767;\n" + "        final Integer aInteger = 1122334455;\n"
+                + "        final Long aLong = 2233445566778899L;\n" + "        final Float aFloat = 1881.1881f;\n"
+                + "        final Double aDouble = 1881.1881;");
         MAGENTA.printGenericLn("Some boxing operations aren't that simple:");
 
         final String iAmANumberInAString = 12345 + " - This is a number. Did you notice the boxing operation?";

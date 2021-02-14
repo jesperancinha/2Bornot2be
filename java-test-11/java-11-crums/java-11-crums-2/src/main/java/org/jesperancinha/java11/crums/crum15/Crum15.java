@@ -12,6 +12,7 @@ public class Crum15 {
     // private static int a;
 
     private static int b;
+
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 15 - Coexistence of instance and static members");
         MAGENTA.printGenericLn("Note that we could not create a static member named a");

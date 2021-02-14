@@ -2,18 +2,18 @@
 
 ## Topics and coverage
 
--   [Mastery 1](java-11-mastery-1)
--   [Mastery 2](java-11-mastery-2)
--   [Mastery 3](java-11-mastery-3)
--   [Mastery 4](java-11-mastery-4)
+- [Mastery 1](java-11-mastery-1)
+- [Mastery 2](java-11-mastery-2)
+- [Mastery 3](java-11-mastery-3)
+- [Mastery 4](java-11-mastery-4)
 
 ## References
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ## About me 👨🏽‍💻🚀
 

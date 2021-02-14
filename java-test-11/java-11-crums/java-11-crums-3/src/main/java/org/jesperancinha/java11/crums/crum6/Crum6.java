@@ -21,7 +21,7 @@ public class Crum6 {
         ORANGE.printGenericLn("We have set the default Locale to -> %s", Locale.getDefault());
 
         final Locale locale = new Locale.Builder().setLanguage("pt")
-            .build();
+                .build();
         ORANGE.printGenericLn("We will use, however a Locale with just a language %s", locale);
 
         ResourceBundle resourceBundlePt = ResourceBundle.getBundle("messages", locale);
@@ -38,14 +38,14 @@ public class Crum6 {
         }
 
         var locale2 = new Locale.Builder().setRegion("ES")
-            .build();
+                .build();
         MAGENTA.printGenericLn("We can also read a bundle file, if we only have the country code of it -> %s. This is only possible with two underscores though", locale2);
         final ResourceBundle resourceBundleEs = ResourceBundle.getBundle("messages", locale2);
         ORANGE.printGenericLn(resourceBundleEs.getString("goodnight"));
 
         var locale3 = new Locale.Builder().setLanguage("pt")
-            .setRegion("PT")
-            .build();
+                .setRegion("PT")
+                .build();
         MAGENTA.printGenericLn("We can also read a bundle file, if we have the language and the country code -> %s", locale3);
         final ResourceBundle resourceBundlePtPt = ResourceBundle.getBundle("messages", locale3);
         ORANGE.printGenericLn(resourceBundlePtPt.getString("goodmorning"));

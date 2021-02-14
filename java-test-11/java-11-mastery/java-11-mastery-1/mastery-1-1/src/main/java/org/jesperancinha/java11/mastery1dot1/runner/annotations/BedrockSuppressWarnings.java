@@ -7,7 +7,7 @@ public class BedrockSuppressWarnings {
     private int b;
 
     @SuppressWarnings("unchecked")
-    public BedrockSuppressWarnings(){
+    public BedrockSuppressWarnings() {
 
     }
 
@@ -22,7 +22,7 @@ public class BedrockSuppressWarnings {
             @SuppressWarnings("removal")
             final String sring,
             @SuppressWarnings("unchecked")
-            final int integer){
+            final int integer) {
 
         @SuppressWarnings("removal")
         int b;

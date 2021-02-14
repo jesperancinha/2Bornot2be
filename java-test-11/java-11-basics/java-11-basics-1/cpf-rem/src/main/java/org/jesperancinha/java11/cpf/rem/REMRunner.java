@@ -9,11 +9,11 @@ public class REMRunner {
         final String albumFromString = getAlbumFromString(s1994);
         System.out.printf("REM published %s in %s\n", albumFromString, s1994);
 
-        final Integer i2001  = 2001;
+        final Integer i2001 = 2001;
         final String albumFromInt = getAlbumInt(i2001);
         System.out.printf("REM published %s in %s\n", albumFromInt, i2001);
 
-        final int c2004  = 2004;
+        final int c2004 = 2004;
         final String albumFromChar = getAlbumChar(c2004);
         System.out.printf("REM published %s in %s\n", albumFromChar, c2004);
 
@@ -24,86 +24,147 @@ public class REMRunner {
     }
 
     private static String getAlbumBy(byte byteYear) {
-        switch (byteYear){
-            case 83: return getRecords().get("1983");
-            case 84: return getRecords().get("1984");
-            case 85: return getRecords().get("1985");
-            case 86: return getRecords().get("1986");
-            case 87: return getRecords().get("1987");
-            case 88: return getRecords().get("1988");
-            case 91: return getRecords().get("1991");
-            case 92: return getRecords().get("1992");
-            case 94: return getRecords().get("1994");
-            case 96: return getRecords().get("1996");
-            case 98: return getRecords().get("1998");
-            case 101: return getRecords().get("2001");
-            case 104: return getRecords().get("2004");
-            case 108: return getRecords().get("2008");
-            case 111: return getRecords().get("2011");
+        switch (byteYear) {
+            case 83:
+                return getRecords().get("1983");
+            case 84:
+                return getRecords().get("1984");
+            case 85:
+                return getRecords().get("1985");
+            case 86:
+                return getRecords().get("1986");
+            case 87:
+                return getRecords().get("1987");
+            case 88:
+                return getRecords().get("1988");
+            case 91:
+                return getRecords().get("1991");
+            case 92:
+                return getRecords().get("1992");
+            case 94:
+                return getRecords().get("1994");
+            case 96:
+                return getRecords().get("1996");
+            case 98:
+                return getRecords().get("1998");
+            case 101:
+                return getRecords().get("2001");
+            case 104:
+                return getRecords().get("2004");
+            case 108:
+                return getRecords().get("2008");
+            case 111:
+                return getRecords().get("2011");
         }
 
-        return "Not found!!";    }
+        return "Not found!!";
+    }
 
     private static String getAlbumFromString(String year) {
-        switch (year){
-            case "1983": return getRecords().get("1983");
-            case "1984": return getRecords().get("1984");
-            case "1985": return getRecords().get("1985");
-            case "1986": return getRecords().get("1986");
-            case "1987": return getRecords().get("1987");
-            case "1988": return getRecords().get("1988");
-            case "1991": return getRecords().get("1991");
-            case "1992": return getRecords().get("1992");
-            case "1994": return getRecords().get("1994");
-            case "1996": return getRecords().get("1996");
-            case "1998": return getRecords().get("1998");
-            case "2001": return getRecords().get("2001");
-            case "2004": return getRecords().get("2004");
-            case "2008": return getRecords().get("2008");
-            case "2011": return getRecords().get("2011");
+        switch (year) {
+            case "1983":
+                return getRecords().get("1983");
+            case "1984":
+                return getRecords().get("1984");
+            case "1985":
+                return getRecords().get("1985");
+            case "1986":
+                return getRecords().get("1986");
+            case "1987":
+                return getRecords().get("1987");
+            case "1988":
+                return getRecords().get("1988");
+            case "1991":
+                return getRecords().get("1991");
+            case "1992":
+                return getRecords().get("1992");
+            case "1994":
+                return getRecords().get("1994");
+            case "1996":
+                return getRecords().get("1996");
+            case "1998":
+                return getRecords().get("1998");
+            case "2001":
+                return getRecords().get("2001");
+            case "2004":
+                return getRecords().get("2004");
+            case "2008":
+                return getRecords().get("2008");
+            case "2011":
+                return getRecords().get("2011");
         }
         return "Not found!!";
     }
 
     private static String getAlbumInt(Integer year) {
-        switch (year){
-            case 1983: return getRecords().get("1983");
-            case 1984: return getRecords().get("1984");
-            case 1985: return getRecords().get("1985");
-            case 1986: return getRecords().get("1986");
-            case 1987: return getRecords().get("1987");
-            case 1988: return getRecords().get("1988");
-            case 1991: return getRecords().get("1991");
-            case 1992: return getRecords().get("1992");
-            case 1994: return getRecords().get("1994");
-            case 1996: return getRecords().get("1996");
-            case 1998: return getRecords().get("1998");
-            case 2001: return getRecords().get("2001");
-            case 2004: return getRecords().get("2004");
-            case 2008: return getRecords().get("2008");
-            case 2011: return getRecords().get("2011");
+        switch (year) {
+            case 1983:
+                return getRecords().get("1983");
+            case 1984:
+                return getRecords().get("1984");
+            case 1985:
+                return getRecords().get("1985");
+            case 1986:
+                return getRecords().get("1986");
+            case 1987:
+                return getRecords().get("1987");
+            case 1988:
+                return getRecords().get("1988");
+            case 1991:
+                return getRecords().get("1991");
+            case 1992:
+                return getRecords().get("1992");
+            case 1994:
+                return getRecords().get("1994");
+            case 1996:
+                return getRecords().get("1996");
+            case 1998:
+                return getRecords().get("1998");
+            case 2001:
+                return getRecords().get("2001");
+            case 2004:
+                return getRecords().get("2004");
+            case 2008:
+                return getRecords().get("2008");
+            case 2011:
+                return getRecords().get("2011");
         }
 
         return "Not found!!";
     }
 
     private static String getAlbumChar(int year) {
-        switch (year - 1900){
-            case 'S': return getRecords().get("1983");
-            case 'T': return getRecords().get("1984");
-            case 'U': return getRecords().get("1985");
-            case 'V': return getRecords().get("1986");
-            case 'W': return getRecords().get("1987");
-            case 'X': return getRecords().get("1988");
-            case '[': return getRecords().get("1991");
-            case '\\': return getRecords().get("1992");
-            case '^': return getRecords().get("1994");
-            case '`': return getRecords().get("1996");
-            case 'b': return getRecords().get("1998");
-            case 'e': return getRecords().get("2001");
-            case 'h': return getRecords().get("2004");
-            case 'l': return getRecords().get("2008");
-            case 'o': return getRecords().get("2011");
+        switch (year - 1900) {
+            case 'S':
+                return getRecords().get("1983");
+            case 'T':
+                return getRecords().get("1984");
+            case 'U':
+                return getRecords().get("1985");
+            case 'V':
+                return getRecords().get("1986");
+            case 'W':
+                return getRecords().get("1987");
+            case 'X':
+                return getRecords().get("1988");
+            case '[':
+                return getRecords().get("1991");
+            case '\\':
+                return getRecords().get("1992");
+            case '^':
+                return getRecords().get("1994");
+            case '`':
+                return getRecords().get("1996");
+            case 'b':
+                return getRecords().get("1998");
+            case 'e':
+                return getRecords().get("2001");
+            case 'h':
+                return getRecords().get("2004");
+            case 'l':
+                return getRecords().get("2008");
+            case 'o':
+                return getRecords().get("2011");
         }
 
         return "Not found!!";

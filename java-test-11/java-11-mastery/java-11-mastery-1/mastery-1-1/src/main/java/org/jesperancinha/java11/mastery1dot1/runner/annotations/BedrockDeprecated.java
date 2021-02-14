@@ -13,7 +13,8 @@ public class BedrockDeprecated {
 
     @Deprecated
     public void testAnnotation(
-            @Deprecated int b) {
+            @Deprecated
+                    int b) {
 
         @Deprecated
         int a;

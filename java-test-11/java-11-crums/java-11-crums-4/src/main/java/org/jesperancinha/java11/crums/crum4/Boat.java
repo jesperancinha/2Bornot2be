@@ -8,5 +8,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Boat {
     String value();
+
     BoatType type();
 }

@@ -3,6 +3,7 @@
 ## Exercise
 
 Examining default configurations for the JDBC libraries provided in the SDK
+
 ## Output
 
 ```text

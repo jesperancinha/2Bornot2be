@@ -8,6 +8,6 @@ import static java.lang.annotation.ElementType.TYPE_USE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Retention(value = RUNTIME)
-@Target(value = {TYPE_USE,TYPE_PARAMETER })
+@Target(value = {TYPE_USE, TYPE_PARAMETER})
 public @interface Rocket {
 }

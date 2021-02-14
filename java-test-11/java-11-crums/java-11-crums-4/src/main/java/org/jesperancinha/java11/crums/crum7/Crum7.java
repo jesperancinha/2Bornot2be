@@ -13,7 +13,7 @@ public class Crum7 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 7 - unmodifiableList");
 
-        var numA = new Integer[] { 11, 22 };
+        var numA = new Integer[]{11, 22};
         var list1 = new ArrayList<Integer>(List.of(numA));
         list1.add(null);
         list1.add(null);

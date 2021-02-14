@@ -15,12 +15,12 @@ public class Crum7 {
 
         try {
             list.add(4, "peanuts");
-        } catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             RED.printGenericLn("This exception happens because the list isn't that big yet, so 0 is our only option in the beginning -> %s", e);
         }
 
         list.add(0, "peanuts");
-        list.add(0,"almonds");
+        list.add(0, "almonds");
         MAGENTA.printGenericLn(list);
     }
 }

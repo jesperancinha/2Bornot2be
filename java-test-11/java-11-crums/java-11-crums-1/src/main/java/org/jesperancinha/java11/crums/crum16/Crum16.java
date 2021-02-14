@@ -14,8 +14,8 @@ public class Crum16 {
 
         BLUE.printGenericLn("This is how import static is done. Notice the order:");
         BLUE.printGenericLn("import static java.lang.Integer.MAX_VALUE;\n" + "import static java.lang.Long.MIN_VALUE;\n"
-            + "import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;\n"
-            + "import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;\n"
-            + "import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;");
+                + "import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;\n"
+                + "import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;\n"
+                + "import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;");
     }
 }

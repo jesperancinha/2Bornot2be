@@ -30,9 +30,9 @@ public class Crum32 {
 
         MAGENTA.printGenericLn("These are examples of unbxing operations that work as unboxing from an Integer");
         BLUE.printGenericLn("        final Integer a = 123;\n" + "        final int aU = a;\n"
-            + "        final long bU = a;\n" + "        final float cU = a;\n" + "        final double dU = a;\n"
-            + "        final byte eU = a.byteValue();\n" + "        final short fU = a.shortValue();\n"
-            + "        final char gU = (char) a.shortValue();");
+                + "        final long bU = a;\n" + "        final float cU = a;\n" + "        final double dU = a;\n"
+                + "        final byte eU = a.byteValue();\n" + "        final short fU = a.shortValue();\n"
+                + "        final char gU = (char) a.shortValue();");
 
         MAGENTA.printGenericLn("These are examples of unbxing operations that work as unboxing from an Byte");
         final Byte bB = 123;
@@ -52,9 +52,9 @@ public class Crum32 {
         ORANGE.printGenericLn(bFB);
         ORANGE.printGenericLn(bGB);
         BLUE.printGenericLn("        final Byte bB = 123;\n" + "        final byte bAB = bB;\n"
-            + "        final short bBB = bB;\n" + "        final char bCB = Character.highSurrogate(bB);\n"
-            + "        final int bDB = bB;\n" + "        final long bEB = bB;\n" + "        final float bFB = bB;\n"
-            + "        final double bGB = bB;");
+                + "        final short bBB = bB;\n" + "        final char bCB = Character.highSurrogate(bB);\n"
+                + "        final int bDB = bB;\n" + "        final long bEB = bB;\n" + "        final float bFB = bB;\n"
+                + "        final double bGB = bB;");
         GREEN.printGenericLn("Unboxing works in the same way as primitive inter conversions");
         GREEN.printGenericLn("There are some exceptions");
         GREEN.printGenericLn("If the type to be converted to is shorter or doesn't match the range, unboxing will not happen implicitly");

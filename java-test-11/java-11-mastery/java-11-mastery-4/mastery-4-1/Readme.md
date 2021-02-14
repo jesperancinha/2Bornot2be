@@ -22,9 +22,8 @@ In this 7th mastery module on route to the Java 11 certification, we are going t
 
 ## Preparation
 
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh). If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there. The point is that you need to have a `/tmp`
+folder at this point.
 
 ```bash
 ./prepare.sh
@@ -302,24 +301,24 @@ Process finished with exit code 0
 
 ## References
 
--   [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
--   [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
+- [Java Security Practices Code Guide](https://www.oracle.com/java/technologies/javase/seccodeguide.html)
+- [Naming of Automatic Module](https://www.tutorialspoint.com/what-are-automatic-modules-in-java-9)
 
--   [Woodstock](https://en.wikipedia.org/wiki/Woodstock)
--   [List of performances and events at Woodstock Festival](https://en.wikipedia.org/wiki/List_of_performances_and_events_at_Woodstock_Festival)
--   [1960s in LGBT rights](https://en.wikipedia.org/wiki/1960s_in_LGBT_rights)
--   [Frank Kameny](https://en.wikipedia.org/wiki/Frank_Kameny)
--   [Pentagon Papers](https://en.wikipedia.org/wiki/Pentagon_Papers)
--   [Operation Rolling Thunder](https://en.wikipedia.org/wiki/Operation_Rolling_Thunder)
--   [1968 United States presidential election](https://en.wikipedia.org/wiki/1968_United_States_presidential_election)
--   [Richard Nixon](https://www.biography.com/us-president/richard-nixon)
--   [Voting Rights Act of 1965](https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965)
--   [Civil Rights Act of 1964](https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964)
--   [Great Society](https://en.wikipedia.org/wiki/Great_Society)
--   [Stonewall riots](https://en.wikipedia.org/wiki/Stonewall_riots)
--   [Lyndon B. Johnson](https://en.wikipedia.org/wiki/Lyndon_B._Johnson)
--   [John F. Kennedy Biography(1917–1963)](https://www.biography.com/us-president/john-f-kennedy)
--   [The 1960s History by The History Channel](https://www.history.com/topics/1960s/1960s-history)
+- [Woodstock](https://en.wikipedia.org/wiki/Woodstock)
+- [List of performances and events at Woodstock Festival](https://en.wikipedia.org/wiki/List_of_performances_and_events_at_Woodstock_Festival)
+- [1960s in LGBT rights](https://en.wikipedia.org/wiki/1960s_in_LGBT_rights)
+- [Frank Kameny](https://en.wikipedia.org/wiki/Frank_Kameny)
+- [Pentagon Papers](https://en.wikipedia.org/wiki/Pentagon_Papers)
+- [Operation Rolling Thunder](https://en.wikipedia.org/wiki/Operation_Rolling_Thunder)
+- [1968 United States presidential election](https://en.wikipedia.org/wiki/1968_United_States_presidential_election)
+- [Richard Nixon](https://www.biography.com/us-president/richard-nixon)
+- [Voting Rights Act of 1965](https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965)
+- [Civil Rights Act of 1964](https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964)
+- [Great Society](https://en.wikipedia.org/wiki/Great_Society)
+- [Stonewall riots](https://en.wikipedia.org/wiki/Stonewall_riots)
+- [Lyndon B. Johnson](https://en.wikipedia.org/wiki/Lyndon_B._Johnson)
+- [John F. Kennedy Biography(1917–1963)](https://www.biography.com/us-president/john-f-kennedy)
+- [The 1960s History by The History Channel](https://www.history.com/topics/1960s/1960s-history)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=pD3Vn44F7as">
@@ -388,18 +387,18 @@ Process finished with exit code 0
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

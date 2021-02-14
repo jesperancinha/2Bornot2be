@@ -41,11 +41,11 @@ public class Crum29 {
         Wall.methodB();
         WaillingWall.methodB();
 
-        final Wall wall =null;
+        final Wall wall = null;
         wall.methodB();
         final WaillingWall waillingWall = null;
         waillingWall.methodB();
-        ((Wall)waillingWall).methodB();
+        ((Wall) waillingWall).methodB();
         GREEN.printGenericLn("Note that inner classes have to be static in order to have static methods");
         GREEN.printGenericLn("There is no overriding static methods and they are accessible via the right casting");
         GREEN.printGenericLn("Instance references can be used to access static methods even if they have null value");

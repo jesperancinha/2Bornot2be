@@ -14,7 +14,7 @@ public class Crum26 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 26 - List.of and List.copyOf do not support null elements");
 
-        var strings = new String[]{"Paul Simon","PJ Harvey","Courtney Love",null,"Roy Orbinson"};
+        var strings = new String[]{"Paul Simon", "PJ Harvey", "Courtney Love", null, "Roy Orbinson"};
 
         ORANGE.printGenericLn("We have a list of artists:");
 
@@ -24,13 +24,13 @@ public class Crum26 {
 
         try {
             List.of(strings);
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             RED.printGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s", e);
         }
 
         try {
             List.copyOf(Arrays.asList(strings));
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             RED.printGenericLn("This is expected! The NullPointerException is thrown because there is a null element -> %s", e);
         }
 

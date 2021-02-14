@@ -11,20 +11,20 @@ public class Crum26 {
         BLUE.printGenericTitleLn("Crum 26 - Making arithmetic calculations with streams");
 
         final int intStream1Value = IntStream.range(0, 1000)
-            .sum();
+                .sum();
 
         MAGENTA.printGenericLn("When we calculate sum from an intStream we get a result int value %d", intStream1Value);
 
         final double doubleStreamValue = IntStream.range(0, 1000)
-            .asDoubleStream()
-            .average()
-            .orElse(0);
+                .asDoubleStream()
+                .average()
+                .orElse(0);
 
         MAGENTA.printGenericLn("When we calculate the average from a double stream we get a result int value %f", doubleStreamValue);
 
         final int intStreamSumValueFromAReduceOperation = IntStream.range(0, 1000)
-            .boxed()
-            .reduce(0, Integer::sum);
+                .boxed()
+                .reduce(0, Integer::sum);
         MAGENTA.printGenericLn("When we calculate sum from a stream we get a result int value %d", intStreamSumValueFromAReduceOperation);
 
         GREEN.printGenericLn("A few differences between DoubleStream and IntStream");

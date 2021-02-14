@@ -4,7 +4,7 @@ public interface Habitat {
 
     String CITY_0 = "Bedrock";
 
-    static void yabadabadu(){
+    static void yabadabadu() {
         System.out.println("Yabadabadoo!!");
     }
 

@@ -12,7 +12,7 @@ public class Crum7 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 7 - Generating exceptions from arrays");
 
-        var arrayInt = new int[][] { { 1, 2, 3 }, null };
+        var arrayInt = new int[][]{{1, 2, 3}, null};
 
         MAGENTA.printGenericLn("First we generate a NullPointerException");
 
@@ -30,10 +30,10 @@ public class Crum7 {
             RED.printGenericLn("And so we get a IndexOutOfBoundsException -> %s", e);
         }
 
-        var strings = new String[] { "all", "I", "want", "for", "xmas", "is", "you" };
+        var strings = new String[]{"all", "I", "want", "for", "xmas", "is", "you"};
 
         MAGENTA.printGenericLn("If we have an array of strings -> %s", Arrays.stream(strings)
-            .collect(Collectors.toList()));
+                .collect(Collectors.toList()));
 
         try {
             var value = strings[-1];

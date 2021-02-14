@@ -47,7 +47,7 @@ public class RunAllCrums2 {
         Consolerizer.maxLineCharsGlobal = 150;
         Consolerizer.titleSpread = 150;
         Consolerizer.blackAndWhite = Arrays.asList(args)
-            .contains("-bw");
+                .contains("-bw");
         Crum1.main(args);
         Crum2.main(args);
         Crum3.main(args);

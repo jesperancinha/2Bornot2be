@@ -2,10 +2,7 @@
 
 ## Exercise
 
-Let's venture and don't press the switch.
-Just checking constant switches.
-Why? Because we can.
-Why not? Because it has virtually no use.
+Let's venture and don't press the switch. Just checking constant switches. Why? Because we can. Why not? Because it has virtually no use.
 
 ## Output
 
@@ -18,7 +15,7 @@ Process finished with exit code 0
 
 ## References
 
--   [Mabinogion](https://en.wikipedia.org/wiki/Mabinogion)
+- [Mabinogion](https://en.wikipedia.org/wiki/Mabinogion)
 
 ## About me 👨🏽‍💻🚀
 

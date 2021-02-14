@@ -10,8 +10,8 @@ public class Crum5 {
 
         final int i = 10;
         switch (i) {
-        default:
-            YELLOW.printGenericLn("Default");
+            default:
+                YELLOW.printGenericLn("Default");
             case 1:
                 YELLOW.printGenericLn("1");
             case 2:

@@ -2,8 +2,7 @@
 
 ## Exercise
 
-How can we load the driver with the new JDBC 4.0 framework?
-For this module we keep it simple.
+How can we load the driver with the new JDBC 4.0 framework? For this module we keep it simple.
 
 ## Output
 
@@ -18,11 +17,12 @@ Process finished with exit code 0
 
 ### Online
 
--   [What the JDBC™ 4.3 API Includes](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/package-summary.html)
--   How JDBC 4.0 works in a nutshell
-   
-       [![alt text](../../../../docs/jtd-sql-driver-jdbc-4.png "Java")](../../../../docs/jtd-sql-driver-jdbc-4.png)
--   [Powerful MongoDB JDBC Driver](https://www.progress.com/jdbc/mongodb)
+- [What the JDBC™ 4.3 API Includes](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/package-summary.html)
+- How JDBC 4.0 works in a nutshell
+
+  [![alt text](../../../../docs/jtd-sql-driver-jdbc-4.png "Java")](../../../../docs/jtd-sql-driver-jdbc-4.png)
+- [Powerful MongoDB JDBC Driver](https://www.progress.com/jdbc/mongodb)
+
 <div align="center">
       <a href="https://www.youtube.com/watch?v=0vPt7GI-2kc">
          <img 
@@ -33,9 +33,9 @@ Process finished with exit code 0
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ## About me 👨🏽‍💻🚀
 

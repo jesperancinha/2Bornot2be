@@ -3,7 +3,7 @@ package org.jesperancinha.java11.mastery3dot1.songs;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
-public class Vlinder extends RawVlinder{
+public class Vlinder extends RawVlinder {
     @Override
     public void playVlinder() {
         ORANGE.printGenericLn("Maaike Ouboter sang a cover version of `Verdronken Vlinder in dutch TV show `De Dereld Draait Door`");

@@ -2,10 +2,8 @@
 
 ## Exercise
 
-We will now have a look at how retention works. 
-`@Retention` by itself, is not a difficult annotation to learn.
-It's important though to know what is the scope of the basic ones.
-The most common retention scopes are:
+We will now have a look at how retention works.
+`@Retention` by itself, is not a difficult annotation to learn. It's important though to know what is the scope of the basic ones. The most common retention scopes are:
 
 1. `SOURCE`
 2. `RUNTIME`

@@ -33,9 +33,10 @@ RK - I'm Richard Kimble and I'm going for a stroll!
 
 Process finished with exit code 0
 ```
+
 ## References
 
--   [The Fugitive](https://www.imdb.com/title/tt0106977/)
+- [The Fugitive](https://www.imdb.com/title/tt0106977/)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=ETPVU0acnrE">

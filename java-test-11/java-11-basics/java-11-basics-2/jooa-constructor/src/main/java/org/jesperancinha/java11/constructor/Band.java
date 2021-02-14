@@ -4,7 +4,7 @@ public class Band {
 
     protected String activity = "building this city";
 
-    public Band(){
+    public Band() {
         System.out.println("See, I get called anyway!! No need for super!");
     }
 

@@ -8,9 +8,9 @@ We will use the data from a fairly unknown group from the 80's called [Living in
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ## Output
 
@@ -36,8 +36,8 @@ Process finished with exit code 0
 
 ## References
 
--   [Living In A Box - Living In A Box (Official Video)](https://www.youtube.com/watch?v=mHzfhU8t5i8)
--   [WHERE ARE THEY NOW? LIVING IN A BOX](https://talkaboutpopmusic.com/2019/02/16/where-are-they-now-living-in-a-box/)
+- [Living In A Box - Living In A Box (Official Video)](https://www.youtube.com/watch?v=mHzfhU8t5i8)
+- [WHERE ARE THEY NOW? LIVING IN A BOX](https://talkaboutpopmusic.com/2019/02/16/where-are-they-now-living-in-a-box/)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=mHzfhU8t5i8">

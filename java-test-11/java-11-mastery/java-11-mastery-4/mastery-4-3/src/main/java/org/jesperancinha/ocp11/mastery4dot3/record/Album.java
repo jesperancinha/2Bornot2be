@@ -32,15 +32,15 @@ public final class Album {
     @Override
     public String toString() {
         final String songsToString = songs.stream()
-            .map(song -> new String(song, Charset.defaultCharset()))
-            .collect(Collectors.joining(", "));
+                .map(song -> new String(song, Charset.defaultCharset()))
+                .collect(Collectors.joining(", "));
         return "Album{" + "albumName='" + albumName + '\'' + ", band='" + band + '\'' + ", songs=" + songsToString
-            + '}';
+                + '}';
     }
 
     public final Album copy() {
         return new Album(albumName, band, songs.stream()
-            .map(byte[]::clone)
-            .collect(Collectors.toList()));
+                .map(byte[]::clone)
+                .collect(Collectors.toList()));
     }
 }

@@ -1,8 +1,6 @@
 # mastery-4-1-modularity - Mastery Module 4.1. Modularity
 
-Thid modularity module uses as a datasource, The Daily Mail Transatlantic Air Race commemoration of the 50th anniversary of Alcock and Brown's crossing. 
-It is won by a Royal Navy F-4 Phantom II, taking 4 hours 47 minutes.
-This competition took place between the 4th and the 11th 1969.
+Thid modularity module uses as a datasource, The Daily Mail Transatlantic Air Race commemoration of the 50th anniversary of Alcock and Brown's crossing. It is won by a Royal Navy F-4 Phantom II, taking 4 hours 47 minutes. This competition took place between the 4th and the 11th 1969.
 
 ## Exercise
 
@@ -17,9 +15,8 @@ javac -encoding utf-8 --module-path plane/target:out --module-source-path hangar
 
 ## Take-away
 
-It is important to notice that automatic modules, the ones that come from unamed modules, export all packages.
-However, these packages are only visibile to the modularized packages accessible via requires.
-In our example, we would have no been able to access a `plane` if it was not placed in the `hangar`.
+It is important to notice that automatic modules, the ones that come from unamed modules, export all packages. However, these packages are only visibile to the modularized packages accessible via requires. In our example, we would have no been able to access a `plane` if it was not placed in
+the `hangar`.
 
 ## Output
 
@@ -41,9 +38,9 @@ In our example, we would have no been able to access a `plane` if it was not pla
 
 ## References
 
--   [Those magnificent men in their flying machines: Fascinating pictures commemorate the 50th anniversary of the Daily Mail Great Transatlantic Air Race that gripped the world](https://www.dailymail.co.uk/news/article-6989763/Daily-Mail-Great-Transatlantic-Air-Race-images-commemorate-50th-anniversary-event.html)
--   [Daily Mail Trans-Atlantic Air Race](https://en.wikipedia.org/wiki/Daily_Mail_Trans-Atlantic_Air_Race)
--   [1969 in aviation](https://en.wikipedia.org/wiki/1969_in_aviation)
+- [Those magnificent men in their flying machines: Fascinating pictures commemorate the 50th anniversary of the Daily Mail Great Transatlantic Air Race that gripped the world](https://www.dailymail.co.uk/news/article-6989763/Daily-Mail-Great-Transatlantic-Air-Race-images-commemorate-50th-anniversary-event.html)
+- [Daily Mail Trans-Atlantic Air Race](https://en.wikipedia.org/wiki/Daily_Mail_Trans-Atlantic_Air_Race)
+- [1969 in aviation](https://en.wikipedia.org/wiki/1969_in_aviation)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=Dt45BENU7_0">
@@ -76,18 +73,18 @@ In our example, we would have no been able to access a `plane` if it was not pla
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

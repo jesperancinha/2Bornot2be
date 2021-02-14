@@ -2,9 +2,7 @@
 
 ## Exercise
 
-A callable doesn't have to know what to do with itself. Neither does a runnable.
-However a callable can be, as the name implies, called! 📞
-A Runnable cannot ✋.
+A callable doesn't have to know what to do with itself. Neither does a runnable. However a callable can be, as the name implies, called! 📞 A Runnable cannot ✋.
 
 ## Output
 
@@ -49,7 +47,7 @@ Caused by: java.lang.Exception: I don't know what to do with myself
 
 ## References
 
--   [Dusty Springfield - I don't know what to do with myself](https://www.youtube.com/watch?v=aNdOlOXPtRI)
+- [Dusty Springfield - I don't know what to do with myself](https://www.youtube.com/watch?v=aNdOlOXPtRI)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=aNdOlOXPtRI">

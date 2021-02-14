@@ -2,17 +2,16 @@
 
 ## Introduction
 
-In this project you will find all my study materials for my Java 11 learning journey.
-Feel free to use these materials in your studies.
-These modules can be used for education purposes or for certain types of exames like the [1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+In this project you will find all my study materials for my Java 11 learning journey. Feel free to use these materials in your studies. These modules can be used for education purposes or for certain types of exames like the [1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
 
 ## Topics and coverage
 
--   [Basic](./java-11-basics) - Basic concept precision modules
--   [Mastery](./java-11-mastery) - Extremely theoretical modules with a context
--   [Crums](./java-11-crums) - Lightning/Fast track practice exercises without a context
--   [Flash Modules](./java-11-flash-modules) - Lightning/Fast track practice module exercises without a context
--   [Test Drives](./java-11-test-drives) - Experimental applications built with Java 11
+- [Basic](./java-11-basics) - Basic concept precision modules
+- [Mastery](./java-11-mastery) - Extremely theoretical modules with a context
+- [Crums](./java-11-crums) - Lightning/Fast track practice exercises without a context
+- [Flash Modules](./java-11-flash-modules) - Lightning/Fast track practice module exercises without a context
+- [Test Drives](./java-11-test-drives) - Experimental applications built with Java 11
+
 ---
 
 ## References
@@ -21,24 +20,24 @@ These modules can be used for education purposes or for certain types of exames 
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

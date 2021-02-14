@@ -64,8 +64,8 @@ public class Crum1 {
                 ORANGE.printGenericLn(f2.apply(pathname));
                 return null;
             }
-        }, new AccessControlContext(new ProtectionDomain[] { new ProtectionDomain(null, perms),
-            new ProtectionDomain(null, permissionCollection) }));
+        }, new AccessControlContext(new ProtectionDomain[]{new ProtectionDomain(null, perms),
+                new ProtectionDomain(null, permissionCollection)}));
 
         try {
             System.setSecurityManager(securityManager);

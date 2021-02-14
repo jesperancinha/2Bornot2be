@@ -15,31 +15,31 @@ public class Crum18 {
         BLUE.printGenericTitleLn("Crum 18 - Locale building and resources");
 
         final Locale locale = new Locale.Builder().setLanguage("portunol")
-            .setRegion("ZZ")
-            .build();
+                .setRegion("ZZ")
+                .build();
 
         final Locale locale2 = new Locale.Builder().setLanguage("portunol")
-            .setRegion("WW")
-            .build();
+                .setRegion("WW")
+                .build();
 
         MAGENTA.printGenericLn("We first try a happy case with locale -> %s", locale);
         ResourceBundle resourceBundle = ResourceBundle.getBundle("dictionary", locale);
         resourceBundle.getKeys()
-            .asIterator()
-            .forEachRemaining(key -> ORANGE.printGenericLn(resourceBundle.getString(key)));
+                .asIterator()
+                .forEachRemaining(key -> ORANGE.printGenericLn(resourceBundle.getString(key)));
         resourceBundle.getKeys()
-            .asIterator()
-            .forEachRemaining(text1 -> ORANGE.printGenericLn(text1));
+                .asIterator()
+                .forEachRemaining(text1 -> ORANGE.printGenericLn(text1));
 
         MAGENTA.printGenericLn("Now we first try an unhappy case with locale -> %s", locale2);
         try {
             ResourceBundle resourceBundle2 = ResourceBundle.getBundle("dictionary", locale2);
             resourceBundle2.getKeys()
-                .asIterator()
-                .forEachRemaining(key -> ORANGE.printGenericLn(resourceBundle.getString(key)));
+                    .asIterator()
+                    .forEachRemaining(key -> ORANGE.printGenericLn(resourceBundle.getString(key)));
             resourceBundle2.getKeys()
-                .asIterator()
-                .forEachRemaining(text -> ORANGE.printGenericLn(text));
+                    .asIterator()
+                    .forEachRemaining(text -> ORANGE.printGenericLn(text));
         } catch (final MissingResourceException e) {
             RED.printGenericLn("This is expected. In this case we should have some files that do not exist");
             RED.printGenericLn("We should have had dictionary_portunol_WW.properties or any of the default files");

@@ -34,9 +34,9 @@ public class Crum12 {
         MAGENTA.printGenericLn("If you run with this following code, you'll get the following error. This happens upon compilation but not the one from your IDE. You need to complete a full compilation from the command line or just do a normal run to generate the following error.");
         MAGENTA.printGenericLn("Before running you need to switch the commmented lines");
         BLUE.printGenericLn("             Crum12.java:21:20\n" + "             java: reference to color is ambiguous\n"
-            + "             both variable color in org.jesperancinha.java11.crums.crum12.Crum12.RoundBerry and variable color\n"
-            + "             in org.jesperancinha.java11.crums.crum12.Crum12.Berry match\n"
-            + "             return color;");
+                + "             both variable color in org.jesperancinha.java11.crums.crum12.Crum12.RoundBerry and variable color\n"
+                + "             in org.jesperancinha.java11.crums.crum12.Crum12.Berry match\n"
+                + "             return color;");
         MAGENTA.printGenericLn(new BlueBerry().getColor());
 
         GREEN.printGenericLn("The point here is that both the interface and the class are implementing the same static member");

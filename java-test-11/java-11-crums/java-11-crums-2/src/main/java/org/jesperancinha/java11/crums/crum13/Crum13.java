@@ -1,11 +1,11 @@
 package org.jesperancinha.java11.crums.crum13;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowStack;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowStack;
 
 public class Crum13 {
 

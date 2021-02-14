@@ -2,11 +2,8 @@
 
 ## Exercise
 
-In this exercise we will try to catch Crow exceptions and understand how the catch chains work.
-We will also have a look at how the auto closeable interface(s) work and the order all possible blocks are executed.
-Our data is inspired by dutch crows (known as kraaien in dutch 🇳🇱), and a hypothetical case of walking down the Museum Quarter in Amsterdam.
-We are scientists walking around in this are close to the [Rijksmuseum](https://www.youtube.com/user/RijksmuseumAmsterdam).
-We need to catch some crows to understand how they are doing healthwise and study their behaviour.
+In this exercise we will try to catch Crow exceptions and understand how the catch chains work. We will also have a look at how the auto closeable interface(s) work and the order all possible blocks are executed. Our data is inspired by dutch crows (known as kraaien in dutch 🇳🇱), and a
+hypothetical case of walking down the Museum Quarter in Amsterdam. We are scientists walking around in this are close to the [Rijksmuseum](https://www.youtube.com/user/RijksmuseumAmsterdam). We need to catch some crows to understand how they are doing healthwise and study their behaviour.
 
 ## Output
 
@@ -59,7 +56,7 @@ Process finished with exit code 0
 
 ## References
 
--   [Amsterdam, Museum Quarter (Museumplein) - 🇳🇱 Netherlands - 4K Walking Tour](https://www.youtube.com/watch?v=dh4l1qQ5RUs)
+- [Amsterdam, Museum Quarter (Museumplein) - 🇳🇱 Netherlands - 4K Walking Tour](https://www.youtube.com/watch?v=dh4l1qQ5RUs)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=dh4l1qQ5RUs">
@@ -68,8 +65,8 @@ Process finished with exit code 0
       style="width:10%;">
       </a>
     </div>
-    
--   [Kraai gebruikt stenen om beloning te verkrijgen](https://www.youtube.com/watch?v=Td4vwrIdBjU)
+
+- [Kraai gebruikt stenen om beloning te verkrijgen](https://www.youtube.com/watch?v=Td4vwrIdBjU)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=Td4vwrIdBjU">

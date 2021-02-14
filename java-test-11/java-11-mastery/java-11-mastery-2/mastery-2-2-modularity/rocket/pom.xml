@@ -13,7 +13,7 @@
 
     <build>
         <defaultGoal>install</defaultGoal>
-<!--        <sourceDirectory>rocket</sourceDirectory>-->
+        <!--        <sourceDirectory>rocket</sourceDirectory>-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

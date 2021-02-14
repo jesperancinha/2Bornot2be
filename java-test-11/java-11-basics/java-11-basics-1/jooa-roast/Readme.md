@@ -2,9 +2,8 @@
 
 ## Exercise
 
-On this exercise we will understand whats are inner classes, inner static classes and multiple instances of inner classes.
-For our data source we will use all protagonists of [Comedy Central Roast of Rob Lowe](https://www.imdb.com/title/tt6038506).
-We will use all the roaster names, the roastee, and [Comedy Central](http://www.cc.com/) itself to structure our data.
+On this exercise we will understand whats are inner classes, inner static classes and multiple instances of inner classes. For our data source we will use all protagonists of [Comedy Central Roast of Rob Lowe](https://www.imdb.com/title/tt6038506). We will use all the roaster names, the roastee,
+and [Comedy Central](http://www.cc.com/) itself to structure our data.
 
 ## Output
 
@@ -29,8 +28,8 @@ Process finished with exit code 0
 
 ## References
 
--   [Comedy Central Roast of Rob Lowe](https://www.imdb.com/title/tt6038506)
--   [Jeff Ross](https://en.wikipedia.org/wiki/Jeff_Ross)
+- [Comedy Central Roast of Rob Lowe](https://www.imdb.com/title/tt6038506)
+- [Jeff Ross](https://en.wikipedia.org/wiki/Jeff_Ross)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=m1Or4LA3fNo">

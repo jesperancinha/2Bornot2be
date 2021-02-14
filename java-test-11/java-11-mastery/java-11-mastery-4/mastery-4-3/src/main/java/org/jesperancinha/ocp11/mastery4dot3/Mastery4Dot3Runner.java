@@ -47,6 +47,7 @@ import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
+import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
@@ -54,7 +55,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printUnicornsLn;
 
 public class Mastery4Dot3Runner {
@@ -251,12 +251,12 @@ public class Mastery4Dot3Runner {
         GREEN.printGenericLn("Do we need to flush it?");
 
         var lyrics =
-            "from: https://www.azlyrics.com/lyrics/animalcollective/floridada.html\nChild\n" + "Of limousines\n"
-                + "What's the best place\n" + "That you have seen\n" + "All of the hands\n" + "That you have shook\n"
-                + "Home of the queen of everything fancy\n" + "Is there a smell\n" + "That you can tell\n"
-                + "Gives you some peace\n" + "Sends you to hell\n" + "All of the beds\n" + "That you have yearned\n"
-                + "Is there a dream to\n" + "Where you'd return\n" + "Where is the plight\n" + "With the most stars\n"
-                + "Where do you drink";
+                "from: https://www.azlyrics.com/lyrics/animalcollective/floridada.html\nChild\n" + "Of limousines\n"
+                        + "What's the best place\n" + "That you have seen\n" + "All of the hands\n" + "That you have shook\n"
+                        + "Home of the queen of everything fancy\n" + "Is there a smell\n" + "That you can tell\n"
+                        + "Gives you some peace\n" + "Sends you to hell\n" + "All of the beds\n" + "That you have yearned\n"
+                        + "Is there a dream to\n" + "Where you'd return\n" + "Where is the plight\n" + "With the most stars\n"
+                        + "Where do you drink";
         try (final BufferedWriter bfw = new BufferedWriter(new FileWriter("/tmp/floridada.txt"))) {
             bfw.write(lyrics, 0, lyrics.length());
         } catch (IOException e) {
@@ -279,28 +279,28 @@ public class Mastery4Dot3Runner {
         printRainbowLn('=');
         GREEN.printGenericLn("Case: We will examine the position on the charts for Animal Collective at present: 2020/12/06");
         GREEN.printGenericLn("Specifically we'll look at peal positions for the \"Merriweather Post Pavilion\" album.");
-        final var peakPositionsMPP = new int[] { 13, 4, 63, 31, 25, 46, 58, 21, 37, 26 };
+        final var peakPositionsMPP = new int[]{13, 4, 63, 31, 25, 46, 58, 21, 37, 26};
         MAGENTA.printGenericLn("These are the peak positions for differenct countries:");
         MAGENTA.printGenericLn(Arrays.stream(peakPositionsMPP)
-            .boxed()
-            .collect(Collectors.toList()));
+                .boxed()
+                .collect(Collectors.toList()));
         final IntPredicate topTen = position -> position <= 10;
         final IntPredicate topTen1 = (int position) -> position <= 10;
         final var topTenCount = IntStream.of(peakPositionsMPP)
-            .filter(topTen)
-            .count();
+                .filter(topTen)
+                .count();
         MAGENTA.printGenericLn("This many counties reached the top ten:");
         MAGENTA.printGenericLn(topTenCount);
         final var topTenCount1 = IntStream.of(peakPositionsMPP)
-            .filter(topTen1)
-            .count();
+                .filter(topTen1)
+                .count();
         MAGENTA.printGenericLn("If we want to specify type, we can, but its not needed:");
         MAGENTA.printGenericLn(topTenCount1);
         IntUnaryOperator takeItToNumberOne = a -> a - 3;
         final var toNumberOne = IntStream.of(peakPositionsMPP)
-            .map(takeItToNumberOne)
-            .parallel()
-            .collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
+                .map(takeItToNumberOne)
+                .parallel()
+                .collect(ArrayList<Integer>::new, ArrayList::add, ArrayList::addAll);
         MAGENTA.printGenericLn("We can also pretend that they reached number 1 with a mapping trick:");
         MAGENTA.printGenericLn(toNumberOne);
         GREEN.printGenericLn("Take-away");
@@ -370,7 +370,7 @@ public class Mastery4Dot3Runner {
             MAGENTA.printGenericLn("You've typed '%s' as a password", passwordString);
             if (!passwordString.equals("More than a mystery")) {
                 RED.printThrowableAndExit(new Exception(
-                            String.format("Your password '%s' is wrong! We have to stop here. Please try again",
+                        String.format("Your password '%s' is wrong! We have to stop here. Please try again",
                                 passwordString)));
             }
             MAGENTA.printGenericLn("You got it right!");
@@ -390,12 +390,12 @@ public class Mastery4Dot3Runner {
         GREEN.printGenericLn("Can we still collect this into a Map?");
 
         var recordList = List.of(new AlbumForSale("In a Tidal Wave of Mystery", 2016L),
-            new AlbumForSale("Solarize", 2019L), new AlbumForSale("Solarize", 2018L));
+                new AlbumForSale("Solarize", 2019L), new AlbumForSale("Solarize", 2018L));
         MAGENTA.printGenericLn("Our album list:");
         MAGENTA.printGenericLn(recordList);
         try {
             final Map<String, Long> collect = recordList.stream()
-                .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase));
+                    .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase));
         } catch (IllegalStateException e) {
             RED.printGenericLn("This is expected. We have two elements of the same key. The runtime does not know how to solve these ambiguities -> %s", e);
         }
@@ -403,7 +403,7 @@ public class Mastery4Dot3Runner {
         MAGENTA.printGenericLn("We do that with a merge function which is a BinaryOperator.");
         MAGENTA.printGenericLn("We'll consider the most recent purchase year.");
         final Map<String, Long> collect = recordList.stream()
-            .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase, Math::max));
+                .collect(Collectors.toMap(AlbumForSale::getName, AlbumForSale::getYearOfPurchase, Math::max));
         MAGENTA.printGenericLn("We finally get our disambiguated map:");
         MAGENTA.printGenericLn(collect);
         GREEN.printGenericLn("Take-away");
@@ -547,38 +547,38 @@ public class Mastery4Dot3Runner {
 
         final Predicate<Album> predicateWithType = (Album a) -> {
             if (a.getAlbumName()
-                .toLowerCase()
-                .startsWith("Father Of The Bride".toLowerCase())) {
+                    .toLowerCase()
+                    .startsWith("Father Of The Bride".toLowerCase())) {
                 return true;
             }
             return a.getAlbumName()
-                .toLowerCase()
-                .startsWith("Modern Vampires Of The City".toLowerCase());
+                    .toLowerCase()
+                    .startsWith("Modern Vampires Of The City".toLowerCase());
         };
 
         final Predicate<Album> predicateWithTypeOnlyOnReference = (a) -> {
             if (a.getAlbumName()
-                .toLowerCase()
-                .startsWith("Father Of The Bride".toLowerCase())) {
+                    .toLowerCase()
+                    .startsWith("Father Of The Bride".toLowerCase())) {
                 return true;
             }
             return a.getAlbumName()
-                .toLowerCase()
-                .startsWith("Modern Vampires Of The City".toLowerCase());
+                    .toLowerCase()
+                    .startsWith("Modern Vampires Of The City".toLowerCase());
         };
 
         final Predicate predicateWithoutType = (a) -> {
             if (((Album) a).getAlbumName()
-                .toLowerCase()
-                .startsWith("Father Of The Bride".toLowerCase())) {
+                    .toLowerCase()
+                    .startsWith("Father Of The Bride".toLowerCase())) {
                 return true;
             }
             return ((Album) a).getAlbumName()
-                .toLowerCase()
-                .startsWith("Modern Vampires Of The City".toLowerCase());
+                    .toLowerCase()
+                    .startsWith("Modern Vampires Of The City".toLowerCase());
         };
         var fatherOfTheBride = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
-            List.of());
+                List.of());
         var modernVampiresOfTheCity = new Album("Modern Vampires of The City", "Vampire Weekend", List.of());
         var contra = new Album("Contra", "Vampire Weekend", List.of());
         MAGENTA.printGenericLn("Albunm %s won the grammys -> %s", fatherOfTheBride, predicateWithType.test(fatherOfTheBride));
@@ -601,9 +601,9 @@ public class Mastery4Dot3Runner {
         GREEN.printGenericLn("file will be located in /tmp/contra.txt");
         printRainbowLn('-');
         var allLines = List.of("https://www.songteksten.nl/songteksten/302818/vampire-weekend/i-think-ur-a-contra.html",
-            "Never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
-            "Said never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
-            "I think you're a contra", "I think that you've lied", "Don't call me a contra", "Till you've tried");
+                "Never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
+                "Said never pick sides", "Never choose between two", "But I just wanted you", "I just wanted you",
+                "I think you're a contra", "I think that you've lied", "Don't call me a contra", "Till you've tried");
 
         final Iterator<String> iterator = allLines.iterator();
         final String name = "/tmp/contra.txt";
@@ -656,8 +656,8 @@ public class Mastery4Dot3Runner {
         printRainbowLn('-');
         var friend = new Frenemy("Frenemy");
         var orangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
-            List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
-                "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
+                List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
+                        "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
         MAGENTA.printGenericLn("This is the album you were about to lend:");
         MAGENTA.printGenericLn(orangeAlbum);
         MAGENTA.printGenericLn("If you had lend it to %s", friend);
@@ -667,8 +667,8 @@ public class Mastery4Dot3Runner {
         printRainbowLn('-');
         MAGENTA.printGenericLn("But since you are pretty safe in what you do, you are going to lend:");
         var yourOrangeAlbum = new Album("Father of the Bride (Vinyl - Orange, Limited Edition)", "Vampire Weekend",
-            List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
-                "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
+                List.of("I know the reason why you think you gotta leave".getBytes(StandardCharsets.UTF_8),
+                        "We took a vow in summertime".getBytes(StandardCharsets.UTF_8)));
         final Album copy = yourOrangeAlbum.copy();
         friend.lendAlbum(copy);
         MAGENTA.printGenericLn("And so, although your friend did this to your copy:");
@@ -688,7 +688,7 @@ public class Mastery4Dot3Runner {
         GREEN.printGenericLn("Case: Oracular Spectacular reached interesting top positions world-wide.");
         GREEN.printGenericLn("Let's have a look at the math behind it");
         var peakPositionsPerCountry = Map.of("US", 38, "AUS", 6, "BEL", 10, "CAN", 24, "FRA", 22, "GER", 65, "IRL", 5,
-            "NZ", 13, "SWI", 68, "UK", 8);
+                "NZ", 13, "SWI", 68, "UK", 8);
         MAGENTA.printGenericLn("This is their peak register on the charts on the  16th November 2020");
         MAGENTA.printGenericLn(peakPositionsPerCountry);
         printRainbowLn('-');
@@ -696,52 +696,52 @@ public class Mastery4Dot3Runner {
         // ObjIntConsumer<R> accumulator,
         // BiConsumer<R, R> combiner);
         final List<Integer> list01 = peakPositionsPerCountry.values()
-            .stream()
-            .mapToInt(i -> i)
-            .collect(ArrayList::new, new ObjIntConsumer<ArrayList<Integer>>() {
-                @Override
-                public void accept(ArrayList<Integer> integers, int value) {
-                    MAGENTA.printGenericLn("When our stream is sequential, we can see things nicely, but performance goes away:");
-                    MAGENTA.printGenericLn("Adding value %d", value);
-                    integers.add(value);
-                }
-            }, ArrayList::addAll);
+                .stream()
+                .mapToInt(i -> i)
+                .collect(ArrayList::new, new ObjIntConsumer<ArrayList<Integer>>() {
+                    @Override
+                    public void accept(ArrayList<Integer> integers, int value) {
+                        MAGENTA.printGenericLn("When our stream is sequential, we can see things nicely, but performance goes away:");
+                        MAGENTA.printGenericLn("Adding value %d", value);
+                        integers.add(value);
+                    }
+                }, ArrayList::addAll);
         printRainbowLn('-');
         final List<Integer> list02 = peakPositionsPerCountry.values()
-            .stream()
-            .mapToInt(i -> i)
-            .parallel()
-            .collect(ArrayList::new, (integers, value) -> {
-                integers.add(value);
-                BRIGHT_MAGENTA.printGeneric(value);
-            }, (integers, integers2) -> {
-                MAGENTA.printGeneric("I'm reaching this now, because I'm a parallel stream!");
-                MAGENTA.printGeneric(integers);
-                MAGENTA.printGeneric(integers2);
-                integers.addAll(integers2);
-            });
+                .stream()
+                .mapToInt(i -> i)
+                .parallel()
+                .collect(ArrayList::new, (integers, value) -> {
+                    integers.add(value);
+                    BRIGHT_MAGENTA.printGeneric(value);
+                }, (integers, integers2) -> {
+                    MAGENTA.printGeneric("I'm reaching this now, because I'm a parallel stream!");
+                    MAGENTA.printGeneric(integers);
+                    MAGENTA.printGeneric(integers2);
+                    integers.addAll(integers2);
+                });
         printRainbowLn('-');
         MAGENTA.printGenericLn("Sequential list result -> %s", list01);
         MAGENTA.printGenericLn("Sequential list result -> %s", list02);
         printRainbowLn('-');
         MAGENTA.printGenericLn("If we want to calculate the average this way and with high performance, we can!");
         final double avg = peakPositionsPerCountry.values()
-            .stream()
-            .mapToInt(i -> i)
-            .parallel()
-            .collect(() -> new DoubleAccumulator(Double::sum, 0), new ObjIntConsumer<DoubleAccumulator>() {
-                @Override
-                public void accept(DoubleAccumulator atomicInteger, int value) {
-                    atomicInteger.accumulate(value);
-                }
-            }, new BiConsumer<DoubleAccumulator, DoubleAccumulator>() {
-                @Override
-                public void accept(DoubleAccumulator doubleAccumulator, DoubleAccumulator doubleAccumulator2) {
-                    doubleAccumulator.accumulate(doubleAccumulator2.doubleValue());
-                }
-            })
-            .doubleValue() / peakPositionsPerCountry.values()
-            .size();
+                .stream()
+                .mapToInt(i -> i)
+                .parallel()
+                .collect(() -> new DoubleAccumulator(Double::sum, 0), new ObjIntConsumer<DoubleAccumulator>() {
+                    @Override
+                    public void accept(DoubleAccumulator atomicInteger, int value) {
+                        atomicInteger.accumulate(value);
+                    }
+                }, new BiConsumer<DoubleAccumulator, DoubleAccumulator>() {
+                    @Override
+                    public void accept(DoubleAccumulator doubleAccumulator, DoubleAccumulator doubleAccumulator2) {
+                        doubleAccumulator.accumulate(doubleAccumulator2.doubleValue());
+                    }
+                })
+                .doubleValue() / peakPositionsPerCountry.values()
+                .size();
 
         MAGENTA.printGenericLn("This is the result -> %f", avg);
         printRainbowLn('-');
@@ -784,17 +784,17 @@ public class Mastery4Dot3Runner {
                 .getAsDouble());
         printRainbowLn('-');
         MAGENTA.printGenericLn("Curiosity 1 (Forcing Doubles) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i3 -> i3)
-            .collect(Collectors.averagingDouble(i3 -> i3)));
+                .mapToObj(i3 -> i3)
+                .collect(Collectors.averagingDouble(i3 -> i3)));
         MAGENTA.printGenericLn("Curiosity 2 (Forcing Longs) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i2 -> i2)
-            .collect(Collectors.averagingLong(Double::longValue)));
+                .mapToObj(i2 -> i2)
+                .collect(Collectors.averagingLong(Double::longValue)));
         MAGENTA.printGenericLn("Curiosity 3 (Forcing Ints) ->  %f", DoubleStream.of(11.45, 12.43, 14.56)
-            .mapToObj(i1 -> i1)
-            .collect(Collectors.averagingInt(Double::intValue)));
+                .mapToObj(i1 -> i1)
+                .collect(Collectors.averagingInt(Double::intValue)));
         MAGENTA.printGenericLn("Curiosity 4 (no values) ->  %f", DoubleStream.of()
-            .mapToObj(i -> i)
-            .collect(Collectors.averagingInt(Double::intValue)));
+                .mapToObj(i -> i)
+                .collect(Collectors.averagingInt(Double::intValue)));
         MAGENTA.printGenericLn("Note that the double average is more accurate because Long and Int have round up the decimals to unit.");
         printRainbowLn('-');
         GREEN.printGenericLn("Take-away");
@@ -831,8 +831,8 @@ public class Mastery4Dot3Runner {
         try {
             assert connection != null;
             preparedStatementCreate = connection.prepareStatement(
-                "CREATE TABLE Song (" + "   id INT AUTO_INCREMENT NOT NULL, \n" + "   SONG VARCHAR(50) NOT NULL, \n"
-                    + "   BAND VARCHAR(50) NOT NULL, \n" + "   HITYEAR INT " + ");");
+                    "CREATE TABLE Song (" + "   id INT AUTO_INCREMENT NOT NULL, \n" + "   SONG VARCHAR(50) NOT NULL, \n"
+                            + "   BAND VARCHAR(50) NOT NULL, \n" + "   HITYEAR INT " + ");");
         } catch (SQLException e) {
             RED.printThrowableAndExit(e);
         }
@@ -852,11 +852,11 @@ public class Mastery4Dot3Runner {
         allSongs.forEach(song -> {
             try {
                 final PreparedStatement statement = finalConnection.prepareStatement(
-                    "INSERT INTO Song (SONG, BAND, HITYEAR) VALUES(?,?,?);");
+                        "INSERT INTO Song (SONG, BAND, HITYEAR) VALUES(?,?,?);");
                 statement.setString(1, song.getSong());
                 statement.setString(2, song.getBand());
                 statement.setLong(3, song.getHitLocalDate()
-                    .getYear());
+                        .getYear());
                 if (statement.execute()) {
                     MAGENTA.printGeneric("Inserted song %s", song);
                 }

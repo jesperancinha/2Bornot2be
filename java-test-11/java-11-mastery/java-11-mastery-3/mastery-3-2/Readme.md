@@ -1,14 +1,11 @@
 # mastery-3-2 - Mastery Module 3.2.
 
-On this 6th mastery module, we will explore Java with a taste of the sea and where I proudly grew up.
-We are going to explore all 4 corners of the amazing city of Olhão, its festivals and its sea life.
-All the while studying for Java 11.
+On this 6th mastery module, we will explore Java with a taste of the sea and where I proudly grew up. We are going to explore all 4 corners of the amazing city of Olhão, its festivals and its sea life. All the while studying for Java 11.
 
 ## Preparation
 
-If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh).
-If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there.
-The point is that you need to have a `/tmp` folder at this point.
+If you are on a Unix based system or if you are running any sort of BSD, MAC-OS, then you are fine using filr [prepare.sh](prepare.sh). If you are using windows, then this will maybe work. I seldom use windows and not always I can test my work there. The point is that you need to have a `/tmp`
+folder at this point.
 
 ```bash
 ./prepare.sh
@@ -489,27 +486,27 @@ Thank you!
 
 ## References
 
--   [Bird watching in Ria Formosa - Quinta de Marim - Olhão](http://birdwatching.spea.pt/en/where-to-watch/ria-formosa/)
--   [DocaPesca - Olhão](http://www.docapesca.pt/pt/rede-lotas-e-postos-vendagem/item/olhao.html)
--   [Caranguejo - Wikipedia - PT](https://pt.wikipedia.org/wiki/Caranguejo)
--   [Razor Clam](https://en.wikipedia.org/wiki/Razor_clam)
--   [Solen marginatus](https://pt.wikipedia.org/wiki/Solen_marginatus)
--   [Lingueirão à bulhão pato](https://pt.petitchef.com/receitas/entrada/lingueirao-a-bulhao-pato-fid-1547851)
--   [Split a string to equal length substrings in Java](https://www.techiedelight.com/split-string-to-equal-length-substrings-java/)
--   [Garoto (café)](https://pt.wikipedia.org/wiki/Garoto_(caf%C3%A9))
--   [Galão (café)](https://pt.wikipedia.org/wiki/Gal%C3%A3o_(caf%C3%A9))
--   [Koffiecultuur in Portugal](https://zininportugal.com/2015/05/17/koffie-wordt-het-een-bica-meia-de-leite-direita-americano-abatanado-galao-of-garoto/)
--   [Olhão](https://pt.wikipedia.org/wiki/Olh%C3%A3o)
--   [BACALHAU À BRÁS RECEPT](https://salinto.nl/blog/bacalhau-a-bras-recept/)
--   [Saudades de Portugal - Recept Bacalhau à Brás](https://saudadesdeportugal.nl/bacalhau-a-bras/)
--   [Difference between the File and RandomAccessFile classes](https://www.careerride.com/Java-file-vs-RandomAccessFile-classes.aspx#:~:text=%2D%20The%20File%20class%20encapsulates%20the,%2D%20The%20java.&text=%2D%20Unlike%20the%20input%20and%20output,inherit%20from%20InputStream%20or%20OutputStream.)
--   [Castanhas assadas no forno - SAPO - Lifestyle](https://lifestyle.sapo.pt/sabores/receitas/castanhas-assadas-no-forno)
--   [Castanhas assadas e Feira de São Martinho prometem atrair milhares a Portimão](https://postal.pt/economia/2019-10-31-Castanhas-assadas-e-Feira-de-Sao-Martinho-prometem-atrair-milhares-a-Portimao)
--   [Festival do Marisco 2019](http://www.festivaldomarisco.com/artistas)
--   [Portugese ‘ontdekking’ in onze keuken: chuchu](https://campersmuikjegaatlos.nl/portugese-ontdekking-in-onze-keuken-chuchu/)
--   [Mercados De Olhão, E.E.M](https://www.visitalgarve.pt/pt/7353/mercados-de-olhao-eem.aspx)
--   [Mercado de Olhao](https://www.tripadvisor.nl/Attraction_Review-g312714-d3923506-Reviews-Mercado_de_Olhao-Olhao_Faro_District_Algarve.html)
--   [MUNICÍPIO - Espaços Municipais - Mercados Municipais - Olhão](http://www.cm-olhao.pt/pt/municipio/espacos-municipais/mercados-municipais)
+- [Bird watching in Ria Formosa - Quinta de Marim - Olhão](http://birdwatching.spea.pt/en/where-to-watch/ria-formosa/)
+- [DocaPesca - Olhão](http://www.docapesca.pt/pt/rede-lotas-e-postos-vendagem/item/olhao.html)
+- [Caranguejo - Wikipedia - PT](https://pt.wikipedia.org/wiki/Caranguejo)
+- [Razor Clam](https://en.wikipedia.org/wiki/Razor_clam)
+- [Solen marginatus](https://pt.wikipedia.org/wiki/Solen_marginatus)
+- [Lingueirão à bulhão pato](https://pt.petitchef.com/receitas/entrada/lingueirao-a-bulhao-pato-fid-1547851)
+- [Split a string to equal length substrings in Java](https://www.techiedelight.com/split-string-to-equal-length-substrings-java/)
+- [Garoto (café)](https://pt.wikipedia.org/wiki/Garoto_(caf%C3%A9))
+- [Galão (café)](https://pt.wikipedia.org/wiki/Gal%C3%A3o_(caf%C3%A9))
+- [Koffiecultuur in Portugal](https://zininportugal.com/2015/05/17/koffie-wordt-het-een-bica-meia-de-leite-direita-americano-abatanado-galao-of-garoto/)
+- [Olhão](https://pt.wikipedia.org/wiki/Olh%C3%A3o)
+- [BACALHAU À BRÁS RECEPT](https://salinto.nl/blog/bacalhau-a-bras-recept/)
+- [Saudades de Portugal - Recept Bacalhau à Brás](https://saudadesdeportugal.nl/bacalhau-a-bras/)
+- [Difference between the File and RandomAccessFile classes](https://www.careerride.com/Java-file-vs-RandomAccessFile-classes.aspx#:~:text=%2D%20The%20File%20class%20encapsulates%20the,%2D%20The%20java.&text=%2D%20Unlike%20the%20input%20and%20output,inherit%20from%20InputStream%20or%20OutputStream.)
+- [Castanhas assadas no forno - SAPO - Lifestyle](https://lifestyle.sapo.pt/sabores/receitas/castanhas-assadas-no-forno)
+- [Castanhas assadas e Feira de São Martinho prometem atrair milhares a Portimão](https://postal.pt/economia/2019-10-31-Castanhas-assadas-e-Feira-de-Sao-Martinho-prometem-atrair-milhares-a-Portimao)
+- [Festival do Marisco 2019](http://www.festivaldomarisco.com/artistas)
+- [Portugese ‘ontdekking’ in onze keuken: chuchu](https://campersmuikjegaatlos.nl/portugese-ontdekking-in-onze-keuken-chuchu/)
+- [Mercados De Olhão, E.E.M](https://www.visitalgarve.pt/pt/7353/mercados-de-olhao-eem.aspx)
+- [Mercado de Olhao](https://www.tripadvisor.nl/Attraction_Review-g312714-d3923506-Reviews-Mercado_de_Olhao-Olhao_Faro_District_Algarve.html)
+- [MUNICÍPIO - Espaços Municipais - Mercados Municipais - Olhão](http://www.cm-olhao.pt/pt/municipio/espacos-municipais/mercados-municipais)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=sfAE1ojKrPw">
@@ -609,18 +606,18 @@ Thank you!
 
 ### Online
 
--   [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
--   [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
--   [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
--   [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ---
 
 ## Java 11 Specs
 
--   [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
--   [The modular JDK](https://openjdk.java.net/jeps/200)
--   [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
 
 ---
 

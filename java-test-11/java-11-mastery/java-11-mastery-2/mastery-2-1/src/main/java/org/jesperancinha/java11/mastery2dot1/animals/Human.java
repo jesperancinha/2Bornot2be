@@ -9,7 +9,7 @@ public abstract class Human extends Mamal {
 
     public Human(String instrument) throws NoBlahException {
         this.instrument = instrument;
-        if(instrument.equals("blah")){
+        if (instrument.equals("blah")) {
             throw new NoBlahBlahBlahException();
         }
     }

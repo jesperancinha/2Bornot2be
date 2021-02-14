@@ -14,13 +14,13 @@ public class Crum14 {
     public static void main(String[] args) {
         BLUE.printGenericTitleLn("Crum 14 - Creating a list from an array");
 
-        final Integer[] array = new Integer[] { 1, 2, 3, 4, 5, 6, 7 };
+        final Integer[] array = new Integer[]{1, 2, 3, 4, 5, 6, 7};
 
         var listOfArray1 = List.of(array);
         var listOfArray2 = Arrays.asList(array);
 
         MAGENTA.printGenericLn("We start out from array %s", Arrays.stream(array)
-            .collect(Collectors.toList()));
+                .collect(Collectors.toList()));
         BRIGHT_MAGENTA.printGenericLn("We have these lists:");
         YELLOW.printGenericLn(listOfArray1);
         YELLOW.printGenericLn(listOfArray2);
@@ -28,13 +28,13 @@ public class Crum14 {
         MAGENTA.printGenericLn("If we change the source array:");
         array[0] = 9;
         MAGENTA.printGenericLn(Arrays.stream(array)
-            .collect(Collectors.toList()));
+                .collect(Collectors.toList()));
 
         BRIGHT_MAGENTA.printGenericLn("Checking any of our lists again we should not have the same values:");
         YELLOW.printGenericLn(listOfArray1);
         YELLOW.printGenericLn(listOfArray2);
 
-        final int array2[] = new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        final int array2[] = new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         var listOfArray3 = List.of(array2);
         var listOfArray4 = Arrays.asList(array2);
