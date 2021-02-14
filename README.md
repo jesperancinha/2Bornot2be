@@ -51,6 +51,19 @@ It is the support project of the following articles on my blog:
 -   [java-test-15](./java-test-15) - Java 15 study materials and article contents
 -   [JEE 7](./jee7) - Java EE 7 study materials
 
+## Build
+
+Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
+
+<i>See details below</i>
+
+## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
+
+```bash
+sdk install java 15.0.2.hs-adpt
+sdk use java 15.0.2.hs-adpt
+```
+
 ---
 
 ## References:
