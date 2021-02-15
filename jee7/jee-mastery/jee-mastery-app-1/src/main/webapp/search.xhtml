@@ -16,27 +16,50 @@
       xmlns:jsf="http://xmlns.jcp.org/jsf">
 
 <h:head>
-    <title>Title</title>
+    <title>Searching for a trade-pff</title>
 </h:head>
 
 <h:body>
+    <h1>Rare records store</h1>
     <h:form id="searchForm">
-        <h1>a <i>param</i> is param to a placeholder of http://xmlns.jcp.org/jsf/core</h1>
+        <h2>a
+            <i>param</i> is param to a text format. It doesn't change attributes. It is part of http://xmlns.jcp.org/jsf/core
+        </h2>
+        <h3>This is an example of an output format with argument 0</h3>
         <p><h:outputFormat value="{0}">
-            <f:param name="placeholder" value="Search Here"/>
+            <f:param name="placeholder" value="Search Rare Records Here"/>
         </h:outputFormat></p>
-        <p><h:inputText value="{placeholder}">
-            <f:param name="placeholder" value="Search Here"/>
+        <p><h:inputText value="{0}">
+            <f:param name="placeholder" value="Search Rare Records Here"/>
         </h:inputText></p>
-        <h1>a <i>placeholder</i> is not a part of http://java.sun.com/jsf/html</h1>
-        <h:inputText placeholder="Search here"/>
-        <h1>http://xmlns.jcp.org/jsf does not have a placeholder for a normal input control. This is because it is an elements library</h1>
-        <input id="search" jsf:placeholder="Search Here"></input>
 
-        <h1>This is correct a placeholder does exist for an input</h1>
-        <input jsf:id="search" placeholder="Search here" jsf:value="search"></input>
-        <h1>http://xmlns.jcp.org/jsf/passthrough has also a correct <i>placeholder</i></h1>
-        <h:inputText p:placeholder="Search Here"/>
+        <h2>a <i>placeholder</i> is not a part of http://xmlns.jcp.org/jsf/html</h2>
+        <h:inputText placeholder="Search Rare Records Here"/>
+        <h2>http://xmlns.jcp.org/jsf does not have a placeholder for a normal input control. This is because it is an elements library</h2>
+        <h2>It also does not have a title. Check the page results. Title and placeholder should not have been rendered</h2>
+        <input id="recordId" jsf:placeholder="Search Rare Records Here"
+               jsf:title="You won't see this in the webpage"> </input>
+        <h2>Plain HTML also works</h2>
+        <p>
+            <input type="text" placeholder="Search Rare Records Here"/>
+        </p>
+
+        <h2>This is correct a placeholder does exist for an input</h2>
+        <input jsf:id="recordCorrectId" placeholder="Search Rare Records Here" jsf:value="search"></input>
+
+        <h2>http://xmlns.jcp.org/jsf/passthrough has also a correct <i>placeholder</i></h2>
+        <h:inputText p:placeholder="Search Rare Records Here" p:title="You can also put a record here...."/>
+
+
+        <h2>You can also do this with a passThroughAttribute from http://xmlns.jcp.org/jsf/passthrough</h2>
+        <p>
+            <h:inputText>
+                <f:passThroughAttribute name="placeholder" value="Search Rare Records Here"/>
+            </h:inputText>
+        </p>
+
+
+        <p>We will send Moby - Disco Lies when pressing this button:</p>
         <p><h:commandButton value="Search"
                             action="#{songBean.submit}">
             <f:param name="artist" value="Moby"/>

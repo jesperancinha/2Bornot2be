@@ -13,6 +13,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
 >
 
 <h:head>
@@ -22,12 +23,22 @@
 <h:body>
     <h:form>
         <p>
+            Placeholder in pure html
+            <input type="text" placeholder="# Tables"/>
+        </p>
+        <p>
             When an element has an id tagged with JSF, the component becomes a JSF component. The placeholder is then used the same way as in the passthrough tag library.
             <input jsf:id="search" placeholder="# Sofas"></input>
         </p>
         <p>
-            When an HTML component is created, we can still JSF attributes like the placeholde.
+            When an HTML component is created, we can use JSF attributes as a placeholder.
             <h:inputText p:placeholder="# Beds"/>
+        </p>
+        <p>
+            Core has a passThroughAttribute annotation which allows to add extra attributes to the rendered parameter
+            <h:inputText>
+                <f:passThroughAttribute name="placeholder" value="# Closets"/>
+            </h:inputText>
         </p>
     </h:form>
     <p>
