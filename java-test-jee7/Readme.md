@@ -55,6 +55,18 @@ framework to be used.
 
 ---
 
+# How to run
+
+In general modules have a few bash scripts and if they have all of them, then this is the list of TODO's before starting wildfly, assing you have it already installed in [jee-apps/wildfly-16.0.0.Final](./jee-apps/wildfly-16.0.0.Final):
+
+1. Start Wildfly
+2. Run [installModules.sh](./installModules.sh)
+3. Stop Wildfly
+4. run [setup.sh](./setup.sh)
+5. Run wildfly with `-c standalone-full.xml`
+6. Start Wildfly
+7. Deploy app
+
 # Important Specs
 
 1. Java API for WebSocket 1.1

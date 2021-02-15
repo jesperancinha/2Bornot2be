@@ -9,23 +9,16 @@ import java.io.Serializable;
 import java.util.UUID;
 
 @Stateless
-public class ConcertDAO implements Serializable {
-
+public class BiographyDAO implements Serializable {
     @PersistenceContext(unitName = "primary")
     private EntityManager entityManager;
 
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
-    public void createConcertAndThenNot(Concert concert) throws Exception {
-        entityManager.persist(concert);
-        throw new Exception();
+    public void createBiography(Biography biography) {
+        entityManager.persist(biography);
     }
 
-    public Concert getConcert(UUID uuid) {
-        return entityManager.find(Concert.class, uuid);
-    }
-
-    @TransactionAttribute(TransactionAttributeType.REQUIRED)
-    public void createConcert(Concert concert) {
-        entityManager.persist(concert);
+    public Biography getBiography(UUID uuid) {
+        return entityManager.find(Biography.class, uuid);
     }
 }

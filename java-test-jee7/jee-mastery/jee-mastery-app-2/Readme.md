@@ -27,11 +27,22 @@ Topics covered:
 15. `@Resource`, `@Timeout`, `TimerService`, `Timer`, `createSingleActionTimer`
 16. `dtype`, `abstract`, `@Entity`, `extends`, `@Table`, `@Column`
 17. `UIViewRoot`, `FacesContext`
+18. `<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>`, `@Cacheable`
 
 ### WebSockets
 
 ```bash
 ```
+
+## To install
+
+1. Start Wildfly
+2. Run [installModules.sh](./installModules.sh)
+3. Stop Wildfly
+4. run [setup.sh](./setup.sh)
+5. Run wildfly with `-c standalone-full.xml`
+6. Start Wildfly
+7. Deploy app
 
 ## Extra notes
 
@@ -53,6 +64,7 @@ ls WEB-INF/lib
 
 ## Context References
 
+- [Madonna: An Intimate Biography](https://en.wikipedia.org/wiki/Madonna:_An_Intimate_Biography)
 - [Royal Albert Hall](https://en.wikipedia.org/wiki/Royal_Albert_Hall)
 - [Faun Tour dates](https://faune.de/en/tour/)
 - [Luna (Faun album)](https://en.wikipedia.org/wiki/Luna_(Faun_album))
