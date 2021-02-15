@@ -1,7 +1,7 @@
 # java-test-drives
 
 [![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives) 
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
@@ -34,9 +34,7 @@
 
 Java study project.
 
-This project is intended as a study tool for different java versions and frameworks.
-They contain original content that I have created with the help of the referenced documentation and websites.
-Please feel free to use this project for your education and exams.
+This project is intended as a study tool for different java versions and frameworks. They contain original content that I have created with the help of the referenced documentation and websites. Please feel free to use this project for your education and exams.
 
 It is the support project of the following articles on my blog:
 
@@ -47,9 +45,9 @@ It is the support project of the following articles on my blog:
 
 ## Contents
 
--   [java-test-11](./java-test-11) - Java 11 study materials
--   [java-test-15](./java-test-15) - Java 15 study materials and article contents
--   [JEE 7](./jee7) - Java EE 7 study materials
+- [java-test-11](./java-test-11) - Java 11 study materials
+- [java-test-15](./java-test-15) - Java 15 study materials and article contents
+- [JEE 7](./jee7) - Java EE 7 study materials
 
 ## Consolerizer
 
@@ -78,21 +76,21 @@ sdk use java 15.0.2.hs-adpt
 
 ### Online
 
--   [Fitnesse](http://www.fitnesse.org/FrontPage)
--   [Cucumber](https://cucumber.io/)
--   [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
--   [Hints & Tricks](./Hints&Tricks.md)
+- [Fitnesse](http://www.fitnesse.org/FrontPage)
+- [Cucumber](https://cucumber.io/)
+- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
+- [Hints & Tricks](./Hints&Tricks.md)
 
 ### Books
 
--   Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
--   Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
--   Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress-   Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
+- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
+- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
+- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
 ---
 
