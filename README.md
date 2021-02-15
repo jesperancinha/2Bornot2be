@@ -76,8 +76,6 @@ sdk use java 15.0.2.hs-adpt
 
 ### Online
 
-- [Fitnesse](http://www.fitnesse.org/FrontPage)
-- [Cucumber](https://cucumber.io/)
 - [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
 - [Hints & Tricks](./Hints&Tricks.md)
 

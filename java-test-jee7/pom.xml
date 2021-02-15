@@ -13,7 +13,6 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>jee-flash</module>
         <module>jee-apps</module>
         <module>jee-mastery</module>
         <module>jee-lightning</module>
