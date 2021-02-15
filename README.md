@@ -83,7 +83,9 @@ sdk use java 15.0.2.hs-adpt
 
 - Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
 - Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
+- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 - Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing

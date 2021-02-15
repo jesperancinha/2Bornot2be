@@ -29,7 +29,9 @@ In this project you will find all my study materials for my Java 11 learning jou
 
 - Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
 - Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
+- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
+- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
 
 ---
 
