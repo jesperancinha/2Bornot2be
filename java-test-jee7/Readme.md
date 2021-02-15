@@ -1,4 +1,4 @@
-# jee7 Test Drives
+# java-test-jee7 Test Drives
 
 ---
 

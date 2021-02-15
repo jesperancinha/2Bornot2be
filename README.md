@@ -47,7 +47,7 @@ It is the support project of the following articles on my blog:
 
 - [java-test-11](./java-test-11) - Java 11 study materials
 - [java-test-15](./java-test-15) - Java 15 study materials and article contents
-- [JEE 7](./jee7) - Java EE 7 study materials
+- [java-test-jee7](./java-test-jee7) - Java EE 7 study materials
 
 ## Consolerizer
 

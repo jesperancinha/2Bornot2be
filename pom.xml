@@ -8,10 +8,10 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>java-test-11</module>
-        <module>jee7</module>
         <module>jtd-the-factory</module>
+        <module>java-test-11</module>
         <module>java-test-15</module>
+        <module>java-test-jee7</module>
     </modules>
     <name>Java Test Drives</name>
     <properties>
