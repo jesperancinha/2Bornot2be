@@ -26,6 +26,7 @@ import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.Arrays.compare;
 import static java.util.Arrays.mismatch;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowLn;
 import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
@@ -88,10 +89,10 @@ public class Master2Dot2Runner {
         var goodCounting = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
         var badCounting2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 11};
         var badCounting2AndShort = new int[]{1, 2, 3};
-        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting, goodCounting, Arrays.compare(badCounting, goodCounting));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting, goodCounting, compare(badCounting, goodCounting));
         GREEN.printGenericLn("mismatching %s with %s -> result is: %s", badCounting, goodCounting, Arrays.mismatch(badCounting, goodCounting));
-        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting2, goodCounting, Arrays.compare(badCounting2, goodCounting));
-        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting2AndShort, goodCounting, Arrays.compare(badCounting2AndShort, goodCounting));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting2, goodCounting, compare(badCounting2, goodCounting));
+        GREEN.printGenericLn("comparing %s with %s -> result is: %s", badCounting2AndShort, goodCounting, compare(badCounting2AndShort, goodCounting));
 
         printRainbowTitleLn("3. TYPE_USE and TYPE_PARAMETER");
         printRainbowLn("==");
