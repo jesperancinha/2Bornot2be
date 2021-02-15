@@ -345,7 +345,7 @@ public class Mastery4Dot3Runner {
             RED.printThrowableAndExit(new Exception(String.format("Unfortunately your guess %d, isn't correct. Please try again...", guess)));
         }
         GREEN.printGenericLn("Take-away");
-        GREEN.printGenericLn("1. Operand evaluation is difficult. Keep an eye out for module java11-mastery-logics for more exercises like this.");
+        GREEN.printGenericLn("1. Operand evaluation is difficult. Keep an eye out for module java-11-mastery-logics for more exercises like this.");
         GREEN.printGenericLn("2. Operations follow typical Math operation and follow accolade definitions.");
         GREEN.printGenericLn("3. Operands get evaluated first, before the operations.");
         GREEN.printGenericLn("4. Disambiguation happens from left to right.");
