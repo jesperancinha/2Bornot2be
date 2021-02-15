@@ -7,17 +7,28 @@
 <f:view>
     <h:outputLabel value="Register records with a composite key"/>
     <h:form>
-        <p><h:outputLabel for="albumId" value="Album name:"/>
-            <h:inputText id="albumId" value="${albumBean.albumName}"/></p>
-        <p><h:outputLabel for="artistId" value="Artist name:"/>
-            <h:inputText id="artistId" value="${albumBean.artist}"/></p>
-        <p><h:outputLabel for="yearId" value="Year:"/>
-            <h:inputText id="yearId" value="${albumBean.year}"/></p>
-        <p><h:outputLabel for="l1Id" value="Lyric 1:"/>
-            <h:inputText id="l1Id" value="${albumBean.lyric1}"/></p>
-        <p><h:outputLabel for="l2Id" value="Lyric 2:"/>
-            <h:inputText id="l2Id" value="${albumBean.lyric2}"/></p>
-        <p><h:outputLabel for="l3Id" value="Lyric 3:"/>
+        <p>
+            <h:outputLabel for="albumId" value="Album name:"/>
+            <h:inputText id="albumId" value="${albumBean.albumName}"/>
+        </p>
+        <p>
+            <h:outputLabel for="artistId" value="Artist name:"/>
+            <h:inputText id="artistId" value="${albumBean.artist}"/>
+        </p>
+        <p>
+            <h:outputLabel for="yearId" value="Year:"/>
+            <h:inputText id="yearId" value="${albumBean.year}"/>
+        </p>
+        <p>
+            <h:outputLabel for="l1Id" value="Lyric 1:"/>
+            <h:inputText id="l1Id" value="${albumBean.lyric1}"/>
+        </p>
+        <p>
+            <h:outputLabel for="l2Id" value="Lyric 2:"/>
+            <h:inputText id="l2Id" value="${albumBean.lyric2}"/>
+        </p>
+        <p>
+            <h:outputLabel for="l3Id" value="Lyric 3:"/>
             <h:inputText id="l3Id" value="${albumBean.lyric3}"/></p>
         <p>
             <h:commandButton action="${albumBean.submit()}" value="Submit"/>
@@ -40,12 +51,18 @@
     </table>
 
     <h:form>
-        <p><h:outputLabel for="sl1Id" value="Lyric 1:"/>
-            <h:inputText id="sl1Id" value="${albumBean.lyric1}"/></p>
-        <p><h:outputLabel for="sl2Id" value="Lyric 2:"/>
-            <h:inputText id="sl2Id" value="${albumBean.lyric2}"/></p>
-        <p><h:outputLabel for="sl3Id" value="Lyric 3:"/>
-            <h:inputText id="sl3Id" value="${albumBean.lyric3}"/></p>
+        <p>
+            <h:outputLabel for="sl1Id" value="Lyric 1:"/>
+            <h:inputText id="sl1Id" value="${albumBean.lyric1}"/>
+        </p>
+        <p>
+            <h:outputLabel for="sl2Id" value="Lyric 2:"/>
+            <h:inputText id="sl2Id" value="${albumBean.lyric2}"/>
+        </p>
+        <p>
+            <h:outputLabel for="sl3Id" value="Lyric 3:"/>
+            <h:inputText id="sl3Id" value="${albumBean.lyric3}"/>
+        </p>
         <p>
             <h:commandButton action="${albumBean.getAlbum()}" value="Search"/>
         </p>

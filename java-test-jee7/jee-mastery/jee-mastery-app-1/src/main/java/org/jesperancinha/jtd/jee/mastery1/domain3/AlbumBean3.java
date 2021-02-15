@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -100,7 +101,7 @@ public class AlbumBean3 implements Serializable {
         lyric.setLyric1("right");
         lyric.setLyric2("beside");
         lyric.setLyric3("you");
-        return Arrays.asList(album);
+        return Collections.singletonList(album);
     }
 
     public void submit() {

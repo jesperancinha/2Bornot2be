@@ -32,7 +32,7 @@ public class DiscographyServletBroken extends HttpServlet {
     }
 
     protected void service(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
+            throws IOException {
         PrintWriter writer = res.getWriter();
         writer.println(GREEN.getPText("service"));
         writer.print(BLUE.getPText(record2));

@@ -15,7 +15,6 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 
 @WebServlet("/marshaller")
 public class RecordMarshallerServlet extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JAXBContext jc = null;

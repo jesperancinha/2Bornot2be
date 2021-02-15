@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLACK;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
 import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
@@ -54,7 +53,6 @@ public class DoubleSubmitServlet extends HttpServlet {
             RED.printThrowableAndExit(e);
         }
         writer.println(ORANGE.getPText(albumList));
-        writer.println(BLACK.getPText("if you don't know the details of a ManagedExecutorService, you cannot predict what it does"));
         writer.println(MAGENTA.getPText("<p><a href=\"index.xhtml\">Back</a></p>"));
     }
 }

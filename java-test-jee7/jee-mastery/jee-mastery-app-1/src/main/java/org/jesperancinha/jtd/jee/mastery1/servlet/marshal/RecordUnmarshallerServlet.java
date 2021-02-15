@@ -30,7 +30,6 @@ public class RecordUnmarshallerServlet extends HttpServlet {
         try {
             JAXBContext jc = JAXBContext.newInstance(Record.class);
             Unmarshaller unmarshaller = jc.createUnmarshaller();
-
             unmarshaller.setEventHandler(new RecordValidatorEventHandler());
             final var recordString = "<record>\n" +
                     "<artist>Donna Summer</artist>\n" +
@@ -38,7 +37,6 @@ public class RecordUnmarshallerServlet extends HttpServlet {
                     "<type>LP</type>\n" +
                     "<year>1974</year>\n" +
                     "</record>";
-
             InputStream in = new ByteArrayInputStream(recordString.getBytes(StandardCharsets.UTF_8));
             final Record record = (Record) unmarshaller.unmarshal(in);
             BRIGHT_GREEN.printGenericTitleLn(record);

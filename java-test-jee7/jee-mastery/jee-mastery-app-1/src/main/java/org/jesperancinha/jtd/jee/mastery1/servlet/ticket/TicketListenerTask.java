@@ -21,7 +21,7 @@ public class TicketListenerTask implements ManagedTask, Callable<String> {
     }
 
     @Override
-    public String call() throws Exception {
+    public String call() {
         GREEN.printSyncGenericTitleLn("TicketListenerTask call");
         final String name = req.getParameter("name");
         ORANGE.printSyncGenericLn(name);

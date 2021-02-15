@@ -78,8 +78,8 @@ public class Record implements Serializable {
         record3.setName("Youthquake");
         record3.setType("LP");
         record3.setYear("1985");
-        final List<Record> records = Arrays.asList(
-                record0, record1, record2, record3);
+        final List<Record> records =
+                Arrays.asList(record0, record1, record2, record3);
         return records;
     }
 }

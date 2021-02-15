@@ -36,9 +36,15 @@
     </c:if>
     <c:if test="#{concertBean.inDatabase != null}">
         <h2>In Database:</h2>
-        <p><h:outputText value="#{concertBean.inDatabase.uuid}"/></p>
-        <p><h:outputText value="#{concertBean.inDatabase.name}"/></p>
-        <p><h:outputText value="#{concertBean.inDatabase.date}"/></p>
+        <p>
+            <h:outputText value="#{concertBean.inDatabase.uuid}"/>
+        </p>
+        <p>
+            <h:outputText value="#{concertBean.inDatabase.name}"/>
+        </p>
+        <p>
+            <h:outputText value="#{concertBean.inDatabase.date}"/>
+        </p>
         <h2>You can now update using two methods</h2>
         <ol>
             <li>Using code to get UserTransaction</li>
