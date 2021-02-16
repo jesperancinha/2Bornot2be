@@ -18,9 +18,7 @@
 
 This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready
-to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to
-improvements from time to time.
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to improvements from time to time.
 
 You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
 
@@ -65,8 +63,7 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
-4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to
-   this.
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
 5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
 6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
 7. Much about `@WebServiceRef`
@@ -75,12 +72,9 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 #### Modules
 
 - [jee-app-2-wildfly (WAR application)](jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
-- [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is
-  the adapter needed for the previous module.
-- [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the
-  library needed for the previous adapter.
-- [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP
-  Webservice.
+- [jee-app-2-wildfly-adapter (RAR adpter)](jee-app-2-wildfly-adapter) - Kitchen Herbs and History - Java 11 - This is the adapter needed for the previous module.
+- [jee-app-2-wildfly-lib (JAR library)](jee-app-2-wildfly-lib) - Kitchen Herbs and History - Java 11 - This is the library needed for the previous adapter.
+- [jee-app-2-wildfly-lib-ws (WAR application)](jee-app-2-wildfly-ws) - Kitchen Herbs and History - Java 11 - SOAP Webservice.
 
 ### [jee-app-3-wildfly](jee-app-3-wildfly) - A lesson on teeth health and the odd cases
 
@@ -88,12 +82,10 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 1. `@Entity` and `@Table`
 2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
-3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed
-   won't work)
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
 4. `@OneToOne` The same rule applies as in point 3.
 5. `@Enumerated` JPA entities
-6. Abstract and final JPA entities
-   -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
+6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
 7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
 8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
 9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`
@@ -123,11 +115,14 @@ tar -xvzf wildfly-16.0.0.Final.tar.gz
 
 ### Books
 
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 
 ## About me 👨🏽‍💻🚀
 

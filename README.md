@@ -72,7 +72,7 @@ sdk use java 15.0.2.hs-adpt
 
 ---
 
-## References:
+## References
 
 ### Online
 
@@ -92,6 +92,8 @@ sdk use java 15.0.2.hs-adpt
 - Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
 - Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
 - R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 - Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
 ---

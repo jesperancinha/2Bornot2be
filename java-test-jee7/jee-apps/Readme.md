@@ -13,14 +13,12 @@
 
 ## Introduction
 
-For a good understanding of JEE I've created different Triads. A triad is a basically a set of three applications. Each
-application may also be a set of one or three modules. In this document you can see a cloud of topics for every triad
-and their contexts. This way I hope to make your path to JEE certification a fun success! Enjoy!
+For a good understanding of JEE I've created different Triads. A triad is a basically a set of three applications. Each application may also be a set of one or three modules. In this document you can see a cloud of topics for every triad and their contexts. This way I hope to make your path to JEE
+certification a fun success! Enjoy!
 
 </i>João Esperancinha, on the 5th of January 2021</i>
 
-Note that the quad module is a conclusion module for the triads. We will continue with
-the [mastery web-apps](../jee-mastery).
+Note that the quad module is a conclusion module for the triads. We will continue with the [mastery web-apps](../jee-mastery).
 
 ## Prepare the environment
 
@@ -35,9 +33,7 @@ You can also just run the [Bash script file](installWildFly.sh) and hope that it
 
 This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready
-to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to
-improvements from time to time.
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to improvements from time to time.
 
 ## Triads
 
@@ -190,11 +186,14 @@ improvements from time to time.
 
 ### Books
 
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 
 ## About me 👨🏽‍💻🚀
 

@@ -52,9 +52,7 @@ mvn clean install -Parq-wildfly-managed
 
 ### Security Domain, users, and roles
 
-Note that in the full working example [standalone-full.xm](backup/standalone-full.xml), we have this security domain
-duplicated. This is because that for some libraries it is calling `java:/jaas/securedbdomain` and for
-others `securedbdomain`.
+Note that in the full working example [standalone-full.xm](backup/standalone-full.xml), we have this security domain duplicated. This is because that for some libraries it is calling `java:/jaas/securedbdomain` and for others `securedbdomain`.
 
 ```xml
 
@@ -170,14 +168,12 @@ others `securedbdomain`.
 </subsystem>
 ```
 
-NOTE: It is extremely important that the return parameters match ther expectation of the `j_` authentication parameters.
-We NEED to:
+NOTE: It is extremely important that the return parameters match ther expectation of the `j_` authentication parameters. We NEED to:
 
 - return `password` for `principalsQuery`
 - return `role`, `Roles` for `rolesQuery`
 
-These two parameters can be difficult to find in new and old Wildfly documentation, the come, the casts and small things
-can make whole difference.
+These two parameters can be difficult to find in new and old Wildfly documentation, the come, the casts and small things can make whole difference.
 
 1. Query for `principalsQuery`:
 
@@ -235,11 +231,9 @@ Be sure to run the automated installation having the sever <b>RUNNING</b>:
 
 ## PostgreSQL
 
-For this module, you'll need a ready available database. We make our security tests with a running database. It cannot
-be done with H2 because of WilflyInitialization and because we want to see records being affected in the database
+For this module, you'll need a ready available database. We make our security tests with a running database. It cannot be done with H2 because of WilflyInitialization and because we want to see records being affected in the database
 
-Please install a compatible version to your system
-via [postgres-postgresql-downloads](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
+Please install a compatible version to your system via [postgres-postgresql-downloads](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
 
 Also make sure your postgres default user has password admin/admin.
 
@@ -253,8 +247,7 @@ rm -r ../modules/postgresql
 ./jboss-cli.sh -c --command="module add --name=postgresql --resources=postgresql-42.2.18.jar"
 ```
 
-A file like this will show up in your
-installation [module.xml](../../wildfly-16.0.0.Final/modules/postgresql/main/module.xml):
+A file like this will show up in your installation [module.xml](../../wildfly-16.0.0.Final/modules/postgresql/main/module.xml):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -272,8 +265,7 @@ installation [module.xml](../../wildfly-16.0.0.Final/modules/postgresql/main/mod
 
 ## Login credentials
 
-You probably noticed through the code, that the admin user is available and that its password is admin. For this module
-we are not doing any encryption on purpose. The idea is to master security annotations.
+You probably noticed through the code, that the admin user is available and that its password is admin. For this module we are not doing any encryption on purpose. The idea is to master security annotations.
 
 We will use users and credentials for this. Our users are kings and queens of Spain:
 
@@ -294,8 +286,7 @@ We will use users and credentials for this. Our users are kings and queens of Sp
 </user-data-constraint>
 ```
 
-This is a `no worries` configuration where data is exchanged in plain sight. Data is thus exposed to redirection and
-MITM (Man In The Middle) attacks.
+This is a `no worries` configuration where data is exchanged in plain sight. Data is thus exposed to redirection and MITM (Man In The Middle) attacks.
 
 2. INTEGRAL
 
@@ -306,12 +297,8 @@ MITM (Man In The Middle) attacks.
 </user-data-constraint>
 ```
 
-For this configuration, certificates need to be installed in the client. If we go
-to http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml as an example, we are immediately
-redirected to https://localhost:8443/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml. We are now trying a
-secure connection SSL/TLS. Since we do not have a right certificate at the moment, we won't be able to check the page.
-This is a check for the integrity of the message. This means that if the data is changed in transit, that will be
-detected and the message will be rejected.
+For this configuration, certificates need to be installed in the client. If we go to http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml as an example, we are immediately redirected to https://localhost:8443/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml. We are
+now trying a secure connection SSL/TLS. Since we do not have a right certificate at the moment, we won't be able to check the page. This is a check for the integrity of the message. This means that if the data is changed in transit, that will be detected and the message will be rejected.
 
 3. CONFIDENTIAL
 
@@ -322,17 +309,13 @@ detected and the message will be rejected.
 </user-data-constraint>
 ```
 
-For this configuration, certificates need to be installed in the client. If we go
-to http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml as an example, we are immediately
-redirected to https://localhost:8443/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml. We are now trying a
-secure connection SSL/TLS. Since we do not have a right certificate at the moment, we won't be able to check the page.
-This is a check for the confidentiality of the message. This means that it is not possible to check the data in transit.
-Only the receiver can decrypt the message and read it.
+For this configuration, certificates need to be installed in the client. If we go to http://localhost:8080/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml as an example, we are immediately redirected to https://localhost:8443/jee-app-3-2-wildfly-1.0.0-SNAPSHOT/kingsPageAction.xhtml. We are
+now trying a secure connection SSL/TLS. Since we do not have a right certificate at the moment, we won't be able to check the page. This is a check for the confidentiality of the message. This means that it is not possible to check the data in transit. Only the receiver can decrypt the message and
+read it.
 
 --- 
 
-In both previous cases, without the correct certificate installation, your browser should alert you of a potential
-unsafe website like this:
+In both previous cases, without the correct certificate installation, your browser should alert you of a potential unsafe website like this:
 
 ![alt text](./docs/jee-app-3-2-wildfly-unsafe.png)
 
@@ -433,11 +416,14 @@ unsafe website like this:
 
 ### Books
 
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 
 ## About me 👨🏽‍💻🚀
 

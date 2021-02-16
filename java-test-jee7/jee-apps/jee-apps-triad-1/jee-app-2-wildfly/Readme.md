@@ -22,8 +22,7 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 1. `@XmlRootElement(name = "herb")` and `@XmlAccessorType(XmlAccessType.FIELD)`
 2. `@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes` and `MediaType.APPLICATION_XML`
 3. `ServletContext`, `HttpSession` and `doGet`
-4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to
-   this.
+4. A very complicated JCA example, that doesn't work. Only `JNDI` works - Follow-up modules may provide solution to this.
 5. `javax.ejb.MessageDriven`, `@ActivationConfigProperty` and `javax.jms.MessageListener`.
 6. ApacheMQ, queues and [standalone-full.xml](backup/standalone-full.xml) configuration
 7. Much about `@WebServiceRef`
@@ -36,8 +35,7 @@ In this web application it is important to understand the basics of these:
 2. JCA - [Java Connector Architecture](https://github.com/fmarchioni/mastertheboss/tree/master/jca-demo)
 3. JMS - Java Message Service
 
-This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access
-Objects, Services, Producers and Observers
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
 The theme of this discovery app is: <b>Kitchen Herbs and History</b>
 
@@ -63,15 +61,11 @@ Be sure to run the automated installation having the sever <b>RUNNING</b>:
 installAll.sh
 ```
 
-Also make sure that you have read the index page of [jee-apps](../..) and that you have previously
-installed [Wildfly 16](../../installWildFly.sh).
+Also make sure that you have read the index page of [jee-apps](../..) and that you have previously installed [Wildfly 16](../../installWildFly.sh).
 
-Afterwards, we still need to configure a messaging system. There are many vendors out there. We randomly
-pick [activeMQ](http://activemq.apache.org/). Go
-to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html). Then download
+Afterwards, we still need to configure a messaging system. There are many vendors out there. We randomly pick [activeMQ](http://activemq.apache.org/). Go to [the resource adapter ActiveMQ page](http://activemq.apache.org/resource-adapter.html). Then download
 the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.16.0/activemq-rar-5.16.0.rar)
-file. Then download
-the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.10.0/activemq-rar-5.10.0.rar)
+file. Then download the [rar](https://search.maven.org/remotecontent?filepath=org/apache/activemq/activemq-rar/5.10.0/activemq-rar-5.10.0.rar)
 file. Copy that file into [deployments](../../../wildfly-16.0.0.Final/standalone/deployments):
 
 ```bash
@@ -79,8 +73,7 @@ curl https://search.maven.org/remotecontent?filepath=org/apache/activemq/activem
 cp activemq-rar-5.16.0.rar ../../wildfly-16.0.0.Final/standalone/deployments
 ```
 
-Add the following subsystem
-to [standalone-full.xml](../../../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
+Add the following subsystem to [standalone-full.xml](../../../wildfly-16.0.0.Final/standalone/configuration/standalone-full.xml)
 
 ```xml
 
@@ -190,9 +183,7 @@ Also be sure to update this section:
 </subsystem>
 ```
 
-The important nodes to bear in mind are the whole `resource-adapters` node, `jms-queue` and
-the `pooled-connection-factory`. A complete backup of a successful running ApacheMQ configuration file is located
-in [standalone-full.xml](backup/standalone-full.xml) for your evaluation.
+The important nodes to bear in mind are the whole `resource-adapters` node, `jms-queue` and the `pooled-connection-factory`. A complete backup of a successful running ApacheMQ configuration file is located in [standalone-full.xml](backup/standalone-full.xml) for your evaluation.
 
 <b>ALWAYS start WildFly this way:</b>
 
@@ -221,10 +212,8 @@ curl -X POST http://localhost:8080/jee-app-2-wildfly/app/herbs -H "Content-Type:
 
 ## Troubleshooting
 
-Installing applications in Application servers can be difficult. Although this isn't specific to Java Enterprise
-knowledge, it is necessary in order to make exercises. One place we always have to look at if problems arise is the
-standalone files. In our case we are running the [standalone-full.xml](backup/standalone-full.xml) file. Upon successful
-installation we should have these `deployments` at the end of the file:
+Installing applications in Application servers can be difficult. Although this isn't specific to Java Enterprise knowledge, it is necessary in order to make exercises. One place we always have to look at if problems arise is the standalone files. In our case we are running
+the [standalone-full.xml](backup/standalone-full.xml) file. Upon successful installation we should have these `deployments` at the end of the file:
 
 ```xml
 
@@ -294,11 +283,14 @@ Use Arquillian Managed, and you should get a screen like this. All options shoul
 
 ### Books
 
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 
 ## Context references
 

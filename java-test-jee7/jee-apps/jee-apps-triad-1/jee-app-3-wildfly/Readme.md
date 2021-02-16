@@ -17,12 +17,10 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 1. `@Entity` and `@Table`
 2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
-3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed
-   won't work)
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
 4. `@OneToOne` The same rule applies as in point 3.
 5. `@Enumerated` JPA entities
-6. Abstract and final JPA entities
-   -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
+6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
 7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
 8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
 9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`
@@ -41,10 +39,8 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 1. http://localhost:8080/jee-app-3-wildfly/periodontitis - Passivation Exercise
 2. http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1 - Passivation Exercise
-3. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from
-   Entitiy
-4. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from
-   Entitiy
+3. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
+4. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
 5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
 6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
 7. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
@@ -63,8 +59,9 @@ mvn clean install -Parq-wildfly-managed
 ### EJB sub system
 
 ```xml
+
 <subsystem xmlns="urn:jboss:domain:ejb3:5.0">
-    ... 
+    ...
 </subsystem>
 ```
 
@@ -85,6 +82,7 @@ mvn clean install -Parq-wildfly-managed
 1. Caches
 
 ```xml
+
 <caches>
     <cache name="simple" aliases="NoPassivationCache"/>
     <cache name="passivating" passivation-store-ref="file" aliases="SimpleStatefulCache"/>
@@ -96,6 +94,7 @@ mvn clean install -Parq-wildfly-managed
 2. Passivation Stores
 
 ```xml
+
 <passivation-stores>
     <file-passivation-store name="file" idle-timeout="30" idle-timeout-unit="SECONDS"/>
     <file-passivation-store name="custom-store" idle-timeout="30" idle-timeout-unit="SECONDS" max-size="500"/>
@@ -122,11 +121,14 @@ mvn clean install -Parq-wildfly-managed
 
 ### Books
 
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 
 ## About me 👨🏽‍💻🚀
 

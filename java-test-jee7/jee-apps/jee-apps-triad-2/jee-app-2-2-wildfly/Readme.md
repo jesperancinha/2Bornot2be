@@ -32,22 +32,17 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 1. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/
 2. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/left?leftName=Viva - URL Rewriting Session Management
-3. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/store_main.jsp - URL Rewriting, Http Session and Cookie
-   Management
-4. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there - SOAP Session management (note that this is only
-   pulling the HTTP session out.)
-5. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl - SOAP Session management (note that this is
-   only pulling the HTTP session out.)
-6. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/cookie - Sending cookies via SOAP Session Management and
-   JAX-WS (notice that it's WS and not RS.)
+3. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/store_main.jsp - URL Rewriting, Http Session and Cookie Management
+4. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there - SOAP Session management (note that this is only pulling the HTTP session out.)
+5. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/be-there?wsdl - SOAP Session management (note that this is only pulling the HTTP session out.)
+6. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/cookie - Sending cookies via SOAP Session Management and JAX-WS (notice that it's WS and not RS.)
 7. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground - @Webparam and @WebResult
 8. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/underground?wsdl - @Webparam and @WebResult
 9. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/registry - Random access and JAXB
 10. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/app/secure/lyrics/spice - @WebFilter studies
 11. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle - Filter, web.xml and order
 12. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/love.jsp - JSP and Servlet
-13. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle2 - Filter, web.xml, order and direct
-    references
+13. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/CaghtUpInTheMiddle2 - Filter, web.xml, order and direct references
 14. http://localhost:8080/jee-app-2-2-wildfly-1.0.0-SNAPSHOT/spice - Session invalidation exercise
 
 - Note that URL rewriting can happen via SOAP by using proxies that change the port definition as in the example:
@@ -211,11 +206,14 @@ mvn clean install -Parq-wildfly-managed
 
 ### Books
 
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
--   Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
--   Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
--   Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
--   Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
+- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
+- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
+- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
+- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
+- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
+- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
+- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 
 ## About me 👨🏽‍💻🚀
 
