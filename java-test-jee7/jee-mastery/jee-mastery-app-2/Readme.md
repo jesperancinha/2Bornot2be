@@ -28,6 +28,7 @@ Topics covered:
 16. `dtype`, `abstract`, `@Entity`, `extends`, `@Table`, `@Column`
 17. `UIViewRoot`, `FacesContext`
 18. `<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>`, `@Cacheable`
+19. `@MappedSuperclass`
 
 ### WebSockets
 
