@@ -28,7 +28,7 @@ public class Album implements java.io.Serializable {
             max = 100)
     private String albumName;
 
-    @Column
+    @Column(updatable = false)
     @NotNull
     private String artist;
 

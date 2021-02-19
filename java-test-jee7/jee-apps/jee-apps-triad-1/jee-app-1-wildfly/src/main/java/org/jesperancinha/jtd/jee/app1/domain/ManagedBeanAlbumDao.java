@@ -32,6 +32,8 @@ public class ManagedBeanAlbumDao implements AlbumDao {
     @Inject
     private FacesContext facesContext;
 
+    private Long lastId;
+
     @Override
     public Album getAlbumForName(String name) {
         try {
@@ -145,5 +147,13 @@ public class ManagedBeanAlbumDao implements AlbumDao {
             }
             throw new RuntimeException(e);
         }
+    }
+
+    public Long getLastId() {
+        return lastId;
+    }
+
+    public void setLastId(Long lastId) {
+        this.lastId = lastId;
     }
 }

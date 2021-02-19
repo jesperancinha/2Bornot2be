@@ -29,6 +29,8 @@ public class AlbumController {
     @Named
     private Album newAlbum;
 
+    private Long lastId;
+
     public List<Album> getAlbumList() {
         setupFastDefault();
         YELLOW.printGenericLn("The album list has been called!");
