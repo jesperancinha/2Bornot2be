@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jeorg-java-test-drives</artifactId>
+        <groupId>org.jesperancinha.jtd</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>jeorg-java-test-15</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Java 15 Test Drives</name>
+
+    <modules>
+        <module>jeorg-java-test-instanceof</module>
+        <module>jeorg-java-test-hidden</module>
+        <module>jeorg-java-test-hidden-gen</module>
+        <module>jeorg-java-test-text-blocks</module>
+<!--        <module>jeorg-java-test-sealed-classes</module>-->
+    </modules>
+</project>

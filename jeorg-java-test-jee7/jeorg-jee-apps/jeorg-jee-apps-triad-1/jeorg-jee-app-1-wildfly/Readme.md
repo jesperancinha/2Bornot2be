@@ -1,22 +1,4 @@
-# java-test-drives
-
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
-
-## Technologies used
+# jeorg-jee-app-1-wildfly
 
 ---
 
@@ -25,67 +7,95 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
 
-## Description
+## Exercise
 
-Java study project.
+The apps under [jeorg-jee-apps](../..), cover lots of topics. For this app we cover:
 
-This project is intended as a study tool for different java versions and frameworks. They contain original content that I have created with the help of the referenced documentation and websites. Please feel free to use this project for your education and exams.
+1. `Servlet` -> [17 Java Servlet Technology](https://docs.oracle.com/javaee/7/tutorial/servlets.htm)
+2. `@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`
+3. `@ApplicationScoped`
+4. JSF (Java Server Faces)
+5. `javax.enterprise.inject.Instance` - How to inject an instance and re-inject
+6. `@PersistenceContext`, `InjectionPoint` and `@RequestScoped`
+7. `@Stateful`, `@Alternative`
+8. `@Model`
+9. `<ui:repeat`, `<h:link` and `<f:param`
+10. `<h:dataTable`, `<h:column` and `<f:facets`
+11. `<h:outputFormat ` and `<f:param`
+12. `@Resource` -> [4.1 Resource Injection](https://docs.oracle.com/javaee/7/tutorial/injection001.htm)
+13. Arquillian JUnit tests
+14. `@Null`, `@NotNull`, `@Size`, `@Email` and `@Digits` validations
+15. `UserTransaction`, `Event<T>`
+16. `FacesContext`
+17. `@Path`, `@ApplicationPath`, `Application`
+18. `@Observes` and `Reception.ALWAYS`
+19. `@Column(updatable = false)`
 
-It is the support project of the following articles on my blog:
+In this web application it is important to understand the basics of these:
 
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
+1. CDI -> Context Dependency Injection
+2. JSF -> Java Server Faces
+3. JTA -> Java Transaction API
+4. EJB -> Enterprise Java Bean
+5. Bean Validation
+6. Arquillian
+7. JAX - RS
 
-## Contents
+This application offers you a fun overview in a very basic way about Resources, Controllers, Managed Beans, Data Access Objects, Services, Producers and Observers
 
-- [jeorg-java-test-11](./jeorg-java-test-11) - Java 11 study materials
-- [jeorg-java-test-15](./jeorg-java-test-15) - Java 15 study materials and article contents
-- [jeorg-java-test-jee7](./jeorg-java-test-jee7) - Java EE 7 study materials
+The theme of this discovery app is: <b>Pop stars list, music, lyrics and history</b>
 
-## Consolerizer
+## How to run
 
-Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
-
-This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jespverancinha.console).
-
-In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
-
-## Build
-
-Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
-
-<i>See details below</i>
-
-## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
+This has been tested with Wildfly 16. Please install it and deploy this using your IDE.
 
 ```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
+jenv local system
+sdk use java 8.0.242.hs-adpt
+java -version
 ```
 
----
+After the service is running and deployed you should be able to see pages and JSON's in these addresses:
+
+1. http://localhost:8080/jeorg-jee-app-1-wildfly/app/album/resource/1
+2. http://localhost:8080/jeorg-jee-app-1-wildfly/app/album/resource/2
+3. http://localhost:8080/jeorg-jee-app-1-wildfly/app/album/resource/3
+4. http://localhost:8080/jeorg-jee-app-1-wildfly/app/album/resource/4
+5. [http://localhost:8080/jeorg-jee-app-1-wildfly/](http://localhost:8080/jeorg-jee-app-1-wildfly/)
+
+NOTE: If you start having errors about beans not being available or that you need to use `@Model` or another stereotype to get beans loaded, that could be that the build was not done with Java 8. Remember to makes sure that you are making the build with `Java SE 8`. Java SE 8 isn't strictly
+necessary to get JEE to work. It can work with Java SE 11. However, this module ensures the study of `JEE7` with both. For the current module you are looking at, Java SE 8 is the one being used.
+
+## Run Arquillian tests
+
+```bash
+jenv local system
+sdk use java 8.0.242.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
+
+## Run Arquillian tests on Intellij
+
+Use Arquillian Managed and you should get a screen like this. All options should be the default ones.
+
+![alt text](docs/jeorg-jee-app-1-wildfly-IntelliJ-test-config.png)
 
 ## References
 
 ### Online
 
-- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
-- [Hints & Tricks](./Hints&Tricks.md)
+- [CDI @RequestScoped](https://openejb.apache.org/examples-trunk/cdi-request-scope/)
+- [Wildfly - Quickstart repo](https://github.com/wildfly/quickstart)
+- [Getting Started Developing Applications Guide - WildFly team Version 20.0.0.Final, 2020-06-05T20:49:23Z](https://docs.wildfly.org/20/Getting_Started_Developing_Applications_Guide.html)
+- [DEVELOPING EJB APPLICATIONS](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/developing_ejb_applications/index)
+- [Wild Fly Downloads](https://www.wildfly.org/downloads/)
 
 ### Books
 
-- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
-- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
-- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
-- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 - Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
@@ -94,9 +104,12 @@ sdk use java 15.0.2.hs-adpt
 - R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
 - Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
 - Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
-- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
----
+## Context references
+
+- [Cardi B Discography](https://en.wikipedia.org/wiki/Cardi_B_discography)
+- [Sia Discography](https://en.wikipedia.org/wiki/Sia_discography)
+- [Nicky Minaj Discography](https://en.wikipedia.org/wiki/Nicki_Minaj_discography)
 
 ## About me 👨🏽‍💻🚀
 

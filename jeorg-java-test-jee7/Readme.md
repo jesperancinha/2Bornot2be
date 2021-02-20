@@ -1,22 +1,4 @@
-# java-test-drives
-
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
-
-## Technologies used
+# java-test-jee7 Test Drives
 
 ---
 
@@ -30,62 +12,92 @@
 
 ---
 
-## Description
+## Introduction
 
-Java study project.
+This is a set of study modules that I'm using to study JEE7. Feel free to use these materials in your studies. These modules can be used for education purposes or for certain types of exams like the [1z0-900](https://education.oracle.com/java-se-11-developer/pexam_1Z0-900)
 
-This project is intended as a study tool for different java versions and frameworks. They contain original content that I have created with the help of the referenced documentation and websites. Please feel free to use this project for your education and exams.
+- [JEE Applications](jeorg-jee-apps) - ⚙️ A set of applications written in JEE using different servers like Glassfish and WebLogic
+    - [jeorg-jee-apps-triad-1](jeorg-jee-apps/jeorg-jee-apps-triad-1) - Triad 1
+        - [jeorg-jee-app-1-wildfly](jeorg-jee-apps/jeorg-jee-apps-triad-1/jeorg-jee-app-1-wildfly) - 🎤 Pop stars list, music, lyrics and history - Java 8
+        - [jeorg-jee-app-2-wildfly](jeorg-jee-apps/jeorg-jee-apps-triad-1/jeorg-jee-app-2-wildfly) - 🌿 Kitchen Herbs and History - Java 11
+        - [jeorg-jee-app-3-wildfly](jeorg-jee-apps/jeorg-jee-apps-triad-1/jeorg-jee-app-3-wildfly) - 🦷 A lesson on teeth health and the odd cases - Java 11
+    - [jeorg-jee-apps-triad-2](jeorg-jee-apps/jeorg-jee-apps-triad-2) - Triad 2
+        - [jeorg-jee-app-2-1-wildfly](jeorg-jee-apps/jeorg-jee-apps-triad-2/jeorg-jee-app-2-1-wildfly) - 🕺🏻 Boy Bands in the 90's - Java 11
+        - [jeorg-jee-app-2-2-wildfly](jeorg-jee-apps/jeorg-jee-apps-triad-2/jeorg-jee-app-2-2-wildfly) - 💃 Girl Bands - Java 11
+        - [jee-app-2-3-wildfly](jeorg-jee-apps/jeorg-jee-apps-triad-2/jeorg-jee-app-2-3-wildfly) - 🎙 Soul Music - Java 11
+    - [jee-apps-quad-1](jeorg-jee-apps/jeorg-jee-apps-quad-1) - Quad 1
+        - [jee-app-3-1-wildfly](jeorg-jee-apps/jeorg-jee-apps-quad-1/jeorg-jee-app-3-1-wildfly) - 🇵🇹 History of Portugal - Java 11
+        - [jee-app-3-2-wildfly](jeorg-jee-apps/jeorg-jee-apps-quad-1/jeorg-jee-app-3-2-wildfly) - 🇪🇸 History of Spain - Java 11
+        - [jee-app-3-3-wildfly](jeorg-jee-apps/jeorg-jee-apps-quad-1/jeorg-jee-app-3-3-wildfly) - 🇳🇱 History of The Netherlands - Java 11
+        - [jee-app-3-4-wildfly](jeorg-jee-apps/jeorg-jee-apps-quad-1/jeorg-jee-app-3-4-wildfly) - 🇬🇧 History of the United Kingdom - Java 11
+- [JEE Mastery Applications](jeorg-jee-mastery) - ⚔️ A set of modules with a very deep in-depth approach to architecture
+    - [jee-mastery-app-1](jeorg-jee-mastery/jeorg-jee-mastery-app-1) - 🏳️‍🌈 - PRIDE Edition 1
+    - [jee-mastery-app-2](jeorg-jee-mastery/jeorg-jee-mastery-app-2) - 🎶 🔉 - Chorus and Arias
+- [JEE Lightning](jeorg-jee-lightning) - ⚡️ Fast track easy to deploy modules
+    - [jee-lightning-1](jeorg-jee-lightning/jeorg-jee-lightning-1) - ☕️ No web.xml
+    - [jee-lightning-2](jeorg-jee-lightning/jeorg-jee-lightning-2) - 🧼 SOAP bare minimal
+    - [jee-lightning-3](jeorg-jee-lightning/jeorg-jee-lightning-3) - ☕️ JSP exercises
+    - [jee-lightning-4](jeorg-jee-lightning/jeorg-jee-lightning-4) - 🛼 The All-Together
 
-It is the support project of the following articles on my blog:
+I switch java versions in this module and sub-modules with [SDK-MAN](https://sdkman.io/), but you can use whichever you like. For example, you can also use [JEnv](https://www.jenv.be/) or just the
+regular [update-java-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java) or [update-alternatives](https://askubuntu.com/questions/315646/update-java-alternatives-vs-update-alternatives-config-java). In these modules I am using <b>java
+version 8.0.242.hs-adpt</b>. You can try other java 8 versions. I cannot guarantee that you'll be able to execute 100% of the examples though. You can also try to use a version of Java SE 7, but I'm almost 100% sure that none of the modules will work as I'll be using lambdas for the code.
 
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
+<b>NOTE: JEE7 has nothing to do with the actual Java SE version being used. I chose Java 8 in a few projects for compatibility reasons. You can also find apps developed with Java 11 on top of JEE7.</b>
 
-## Contents
+This repo is here because, amongst other reasons, JEE is still pretty much very relevant. Alternatives to a [JEE architecture](https://www.oracle.com/java/technologies/java-ee-glance.html), like the [Spring Framework](https://spring.io/) facilitate another way to solve enterprise problems. Both are
+very good architectures, and they differ in their approach. This means that many companies are using either one or the other.
+[JEE 7 specifically](https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7) is the only way at the moment to get certified via an [Oracle exam](https://education.oracle.com/java-ee-7-application-developer/pexam_1Z0-900). At the same time, this is still a very popular
+framework to be used.
+[SOAP services and technologies](https://en.wikipedia.org/wiki/SOAP) are also still very much in use these days by many companies and therefore an understanding on how to do this in Java is still very much a necessity.
 
-- [jeorg-java-test-11](./jeorg-java-test-11) - Java 11 study materials
-- [jeorg-java-test-15](./jeorg-java-test-15) - Java 15 study materials and article contents
-- [jeorg-java-test-jee7](./jeorg-java-test-jee7) - Java EE 7 study materials
-
-## Consolerizer
-
-Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
-
-This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jespverancinha.console).
-
-In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
-
-## Build
-
-Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
-
-<i>See details below</i>
-
-## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
-
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
+<i>João Esperancinha, 31st of December 2020</i>
 
 ---
+
+# How to run
+
+In general modules have a few bash scripts and if they have all of them, then this is the list of TODO's before starting wildfly, assuming you have it already installed in [jee-apps/wildfly-16.0.0.Final](./jeorg-jee-apps/wildfly-16.0.0.Final):
+
+1. Start Wildfly
+2. Run `installModules.sh`
+3. Stop Wildfly
+4. run `setup.sh`
+5. Run wildfly with `-c standalone-full.xml`
+6. Start Wildfly
+7. Deploy app
+
+# Important Specs
+
+1. Java API for WebSocket 1.1
+2. JavaServer Faces (JSF) 2.2
+3. JavaServer Pages (JSP) 2.3
+4. Java API for RESTful Services (JAX-RS) 2.0
+5. Java API for JSON Processing (JSON-P) 1.0
+6. Expression Language (EL) 3.0
+7. Java Authentication Service Provider Interface for Containers (JASPIC) 1.1
+
+<b style="color: green">Apache Tomcat 9.0.41 and Wildfly 16.0 seem to follow these standards. This is why I am using them.</b>
+
+<b style="color: red">Glassfish for Java EE 7 unfortunately only supports Java 6 and Java 8 in later versions. Newer versions are ready for JEE 8 and above. We will be using Java 11 in our test modules</b>
 
 ## References
 
 ### Online
 
-- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
-- [Hints & Tricks](./Hints&Tricks.md)
+- [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+- [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+- [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+- [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+- [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+- [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+- [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+- [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+- [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ### Books
 
-- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
-- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
-- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
-- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 - Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
@@ -94,9 +106,6 @@ sdk use java 15.0.2.hs-adpt
 - R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
 - Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
 - Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
-- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
-
----
 
 ## About me 👨🏽‍💻🚀
 

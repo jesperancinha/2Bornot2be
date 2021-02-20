@@ -1,22 +1,4 @@
-# java-test-drives
-
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
-
-## Technologies used
+# jee-app-3-wildfly
 
 ---
 
@@ -25,67 +7,158 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
 
-## Description
+## Exercise
 
-Java study project.
+The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
-This project is intended as a study tool for different java versions and frameworks. They contain original content that I have created with the help of the referenced documentation and websites. Please feel free to use this project for your education and exams.
+1. `@Entity` and `@Table`
+2. `javax.ejb.TransactionManagementType.BEAN` vs `javax.ejb.TransactionManagementType.CONTAINER`
+3. `@OneToMany` and `@ManyToOne` (NOTE: They have to be either all member instances, either all member methods. mixed won't work)
+4. `@OneToOne` The same rule applies as in point 3.
+5. `@Enumerated` JPA entities
+6. Abstract and final JPA entities -> [Requirements for Entity Classes](https://docs.oracle.com/javaee/5/tutorial/doc/bnbqa.html)
+7. `@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
+8. `transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
+9. `@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`
+   and `TimerService`
+10. `@TransactionAttribute` and `TransactionAttributeType`
+11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
+12. `Rollback`
+13. `@Enumerated(EnumType.STRING)`, `@Enumerated(EnumType.ORDINAL)`
 
-It is the support project of the following articles on my blog:
+## Domains in detail
 
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
+- [Domain](src/main/java/org/jesperancinha/jtd/jee/teeth/domain) - `@OneToMany` and `@ManyToOne`
+- [Domain1](src/main/java/org/jesperancinha/jtd/jee/teeth/domain1) - TransactionManagementType.BEAN
+- [Domain2](src/main/java/org/jesperancinha/jtd/jee/teeth/domain2) - TransactionManagementType.CONTAINER
 
-## Contents
+## Test Endpoints
 
-- [jeorg-java-test-11](./jeorg-java-test-11) - Java 11 study materials
-- [jeorg-java-test-15](./jeorg-java-test-15) - Java 15 study materials and article contents
-- [jeorg-java-test-jee7](./jeorg-java-test-jee7) - Java EE 7 study materials
+1. [http://localhost:8080/jeorg-jee-app-3-wildfly/periodontitis](http://localhost:8080/jeorg-jee-app-3-wildfly/periodontitis) - Passivation Exercise
+2. [http://localhost:8080/jeorg-jee-app-3-wildfly/periodontitis?count=700&activate=1](http://localhost:8080/jeorg-jee-app-3-wildfly/periodontitis?count=700&activate=1) - Passivation Exercise
+3. [http://localhost:8080/jeorg-jee-app-3-wildfly/tooth/servlet/all](http://localhost:8080/jeorg-jee-app-3-wildfly/tooth/servlet/all) - Domain Data, use of EAGER and JSON generation from Entity
+4. [http://localhost:8080/jeorg-jee-app-3-wildfly/app/tooth/rest/all](http://localhost:8080/jeorg-jee-app-3-wildfly/app/tooth/rest/all) - Domain Data, use of EAGER and JSON generation from Entity
+5. http://localhost:8080/jeorg-jee-app-3-wildfly/timer/servlet/stateless - TimeService
+6. http://localhost:8080/jeorg-jee-app-3-wildfly/timer/servlet/stateful - TimeService
+7. http://localhost:8080/jeorg-jee-app-3-wildfly/timer/servlet/singleton - TimeService
+8. http://localhost:8080/jeorg-jee-app-3-wildfly/tooth/servlet/tx/all - Transaction type
 
-## Consolerizer
+## How to run
 
-Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
+1. Stop your wildfly server
+2. Run setup.sh
+3. Start Wildfly with switch `-c standalone-full.xml`
 
-This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jespverancinha.console).
+## How to check your database in Intellj:
 
-In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
 
-## Build
+![alt img](./docs/h2-database-config.png)
 
-Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
+Database connection properties:
 
-<i>See details below</i>
+1. URL -> `jdbc:h2:file:~/records;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE`
+2. Username -> `sa`
+3. Password -> `sa`
 
-## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
+> Path details must be absolut in IntelliJ versions up until 2020.3. At least, this is how I experienced it.
+
+If you run the arquillian tests, very little changes:
+
+![alt img](./docs/h2-test-database-config.png)
+
+Database connection properties:
+
+1. URL -> `jdbc:h2:file:mem:records;AUTO_SERVER=TRUE`
+2. Username -> `sa`
+3. Password -> `sa`
+
+
+## Run Arquillian tests
+
+Make sure port 9990 is available:
 
 ```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
+lsof -i :9990
 ```
 
----
+```bash
+jenv local system
+sdk use java 11.0.9.hs-adpt
+mvn clean install -Parq-wildfly-managed
+```
+
+## Troubleshooting
+
+### EJB sub system
+
+```xml
+
+<subsystem xmlns="urn:jboss:domain:ejb3:5.0">
+    ...
+</subsystem>
+```
+
+#### Bean session timeout [configuration](https://access.redhat.com/documentation/en-us/jboss_enterprise_application_platform/6.2/html/administration_and_configuration_guide/set_default_session_bean_access_timeout_values1)
+
+```xml 
+<session-bean>
+    <stateless>
+        <bean-instance-pool-ref pool-name="slsb-strict-max-pool"/>
+    </stateless>
+    <stateful default-access-timeout="5000" cache-ref="simple"/>
+    <singleton default-access-timeout="5000"/>
+</session-bean>
+```
+
+#### Passivation [configuration](http://www.mastertheboss.com/jboss-server/jboss-cluster/jboss-as-7-custom-caches-configuration)
+
+1. Caches
+
+```xml
+
+<caches>
+    <cache name="simple" aliases="NoPassivationCache"/>
+    <cache name="passivating" passivation-store-ref="file" aliases="SimpleStatefulCache"/>
+    <cache name="clustered" passivation-store-ref="infinispan" aliases="StatefulTreeCache"/>
+    <cache name="custom-cache" passivation-store-ref="custom-store"/>
+</caches>
+```
+
+2. Passivation Stores
+
+```xml
+
+<passivation-stores>
+    <file-passivation-store name="file" idle-timeout="30" idle-timeout-unit="SECONDS"/>
+    <file-passivation-store name="custom-store" idle-timeout="30" idle-timeout-unit="SECONDS" max-size="500"/>
+    <cluster-passivation-store name="infinispan" idle-timeout="30" idle-timeout-unit="SECONDS" cache-container="ejb"/>
+</passivation-stores>
+```
+
+## Context References
+
+- [Mandible by Wikipedia](https://en.wikipedia.org/wiki/Mandible)
+- [Tooth Decay](https://www.nidcr.nih.gov/health-info/tooth-decay/more-info#:~:text=Tooth%20decay%20(dental%20caries)%20is,a%20tooth%2C%20called%20a%20cavity.)
+- [Wisdom teeth](https://www.webmd.com/oral-health/wisdom-teeth#1)
+- [Wisdom tooh by Wikipedia](https://en.wikipedia.org/wiki/Wisdom_tooth)
+- [Trigeminal Nerve Overview](https://www.healthline.com/human-body-maps/trigeminal-nerve)
 
 ## References
 
 ### Online
 
-- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
-- [Hints & Tricks](./Hints&Tricks.md)
+- [WildFly custom caches configuration for Stateful Beans](http://www.mastertheboss.com/jboss-server/jboss-cluster/jboss-as-7-custom-caches-configuration)
+- [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
+- [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
+- [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)
+- [http://tomee.apache.org/testing-transactions-example.html](http://tomee.apache.org/testing-transactions-example.html)
 
 ### Books
 
-- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
-- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
-- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
-- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 - Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
@@ -94,9 +167,6 @@ sdk use java 15.0.2.hs-adpt
 - R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
 - Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
 - Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
-- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
-
----
 
 ## About me 👨🏽‍💻🚀
 

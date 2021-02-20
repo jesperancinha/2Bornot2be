@@ -1,22 +1,4 @@
-# java-test-drives
-
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
-
-## Technologies used
+# jeorg-jee-apps
 
 ---
 
@@ -25,67 +7,185 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
 
 ---
 
-## Description
+## Introduction
 
-Java study project.
+For a good understanding of JEE I've created different Triads. A triad is a basically a set of three applications. Each application may also be a set of one or three modules. In this document you can see a cloud of topics for every triad and their contexts. This way I hope to make your path to JEE
+certification a fun success! Enjoy!
 
-This project is intended as a study tool for different java versions and frameworks. They contain original content that I have created with the help of the referenced documentation and websites. Please feel free to use this project for your education and exams.
+</i>João Esperancinha, on the 5th of January 2021</i>
 
-It is the support project of the following articles on my blog:
+Note that the quad module is a conclusion module for the triads. We will continue with the [mastery web-apps](../jeorg-jee-mastery).
 
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
+## Prepare the environment
 
-## Contents
+### Wildfly 16.0
 
-- [jeorg-java-test-11](./jeorg-java-test-11) - Java 11 study materials
-- [jeorg-java-test-15](./jeorg-java-test-15) - Java 15 study materials and article contents
-- [jeorg-java-test-jee7](./jeorg-java-test-jee7) - Java EE 7 study materials
+1. Download [Wilfly 16](https://www.wildfly.org/downloads/)
+2. Unpack the contents of that package to this root.
 
-## Consolerizer
+You can also just run the [Bash script file](installWildFly.sh) and hope that it works on your computer:
 
-Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
+### End Installation notes
 
-This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jespverancinha.console).
+This should be enough. Maven files inside the application list will refer to this folder in order to start the server.
 
-In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
+Important to take note is that none of the modules is static. The ones marked with <b>(coming soon...)</b>, aren't ready to be used, but you can take a peek. The ones without any notice, are considered done, but they will be subject to improvements from time to time.
 
-## Build
+## Triads
 
-Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
+### [jeorg-jee-apps-triad-1](./jeorg-jee-apps-triad-1)
 
-<i>See details below</i>
+#### Subjects:
 
-## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
+----
 
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
+`Servlet`
+`@Target({ TYPE, METHOD, PARAMETER, FIELD })`, `@Retention(RUNTIME)`,`@Documented`,`@Qualifier`,
+`@ApplicationScoped`, `JSF`
+`javax.enterprise.inject.Instance`,
+`@PersistenceContext`, `InjectionPoint`, `@RequestScoped`
+`@Stateful`, `@Alternative`
+`@Model`
+`<ui:repeat`, `<h:link`, `<f:param`
+`<h:dataTable`, `<h:column`, `<f:facets`
+`<h:outputFormat` `<f:param`
+`@Resource`,
+`Arquillian` `JUnit` `tests`
+`@Null`, `@NotNull`, `@Size`, `@Email`, `@Digits`
+`UserTransaction`, `Event<T>`,
+`FacesContext`,
+`@Path`, `@ApplicationPath`, `Application`
+`@Observes`, `Reception.ALWAYS`
+`@XmlRootElement(name = "herb")`, `@XmlAccessorType(XmlAccessType.FIELD)`
+`@Path`, `@RequestScoped`, `@POST`, `@GET`, `@Produces`, `@Consumes`, `MediaType.APPLICATION_XML`
+`ServletContext`, `HttpSession`, `doGet`
+`JCA`, `JNDI`,
+`javax.ejb.MessageDriven`, `@ActivationConfigProperty`, `javax.jms.MessageListener`.
+`ApacheMQ`, `queues`, `standalone-full.xml`,
+`@WebServiceRef`
+`@WebServlet`, `@WebServiceRef`, `@HandlerChain`, `@WebServiceClient`, `SOAP WS - JAX-WS`
+`@Entity`, `@Table`
+`javax.ejb.TransactionManagementType.BEAN`,`javax.ejb.TransactionManagementType.CONTAINER`
+`@OneToMany`, `@ManyToOne`
+`@OneToOne`
+`@Enumerated`,`entities`
+`Abstract`, `final`,  `JPA`,
+`@Stateful`, `@Cache`, `@PrePassivate`, `@PostActivate`, `Serializable`, `@Local`, `java:module`, `InitialContext`
+`transient`, `@OneToMany(fetch = FetchType.EAGER)`,  `@OneToMany(fetch = FetchType.LAZY)`
+`@Singleton`, `@Stateful`, `@Stateless,` `SessionContext`,  `@Timeout`, `@Resource`, `context.getTimerService()`
+, `TimerService`
+`@TransactionAttribute`, `TransactionAttributeType`
+`MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` `TransactionAttribute`
+`Rollback`
 
 ---
+
+#### Applications:
+
+- [jeorg-jee-app-1-wildfly](./jeorg-jee-apps-triad-1/jeorg-jee-app-1-wildfly) - Pop stars list, music, lyrics and history - Java 8
+- [jeorg-jee-app-2-wildfly](./jeorg-jee-apps-triad-1/jeorg-jee-app-2-wildfly) - Kitchen Herbs and History - Java 11
+- [jeorg-jee-app-3-wildfly](./jeorg-jee-apps-triad-1/jeorg-jee-app-3-wildfly) - A lesson on teeth health and the odd cases - Java 11
+
+### [jeorg-jee-apps-triad-2](./jeorg-jee-apps-triad-2)
+
+#### Subjects:
+
+`@MessageDriven(activationConfig`, `@ActivationConfigProperty`, `ConnectionFactory`, `Destination`, `JNDI`
+`acknowledge`, `connection.createQueueSession(false, Session.CLIENT_ACKNOWLEDGE);`
+`<alternatives>`, `@Alternative`, `@Default`
+`JMSContext`, `JMSConsumer`, `JMSProducer`, `createDurableConsumer`
+`URL Rewriting`, `Session`, `Cookie`
+`soapenv:Envelope`, `soapenv:Header`, `soapenv:Body`, ` @Resource`, `@WebService`, `endpointInterface`
+, `@SOAPBinding(style = SOAPBinding.Style.RPC)`
+`@CookieParam`, `JAX-WS`, `Cookie`, `WebServiceContext`
+`@WebParam`, `@WebResult`
+`Random Access`, `JAXB`, `Memory footprint`, `Multiple times processing`
+`@WebFilter`, `HttpSession`, `@SessionScoped`, `@Named`, `FilterChain`
+`Filter`, `web.xml`, `order`, `WebFilter`, `<filter>`, `<filter-mapping>`, `<filter-name>`, `<filter-class>`
+, `<init-param>`
+`<jsp:useBean`, `JSP`, `Servlet`, `HttpServlet`
+`Filter`, `web.xml`, `order`, `direct references`
+`Session`, `invalidate`, `IllegalStateException`
+`service`, `doGet`
+`<jsp:getProperty`, `<jsp:setProperty`, `<jsp:useBean`
+, `<jsp:setProperty name="midasBean" property="comment" param="review"/>`
+`<error-page>`, `<exception-type>`, `<location>`
+`<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>`, `javax.servlet.error.exception`
+, `javax.servlet.error.exception_type`, `javax.servlet.error.message`, `javax.servlet.error.request_uri`
+, `javax.servlet.error.servlet_name`, `javax.servlet.error.status_code`
+`<%@ page errorPage="soulexception.jsp" %>`, `<%@ page isErrorPage="true" %>`, `pageContext.errorData`
+`<jsp:useBean id="simpleLyricBean2" scope="page" type="org.jesperancinha.jtd.jee.soul.beans.LyricsExtended" class="org.jesperancinha.jtd.jee.soul.beans.Lyric">`
+`<context-param>`, `<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>`
+, `<f:convertDateTime pattern="yyyy-MMM-dd"/>`
+
+#### Applications:
+
+- [jeorg-jee-app-2-1-wildfly](./jeorg-jee-apps-triad-2/jeorg-jee-app-2-1-wildfly) - Boy bands in the 90's
+- [jeorg-jee-app-2-2-wildfly](./jeorg-jee-apps-triad-2/jeorg-jee-app-2-2-wildfly) - Girl Bands
+- [jeorg-jee-app-2-3-wildfly](./jeorg-jee-apps-triad-2/jeorg-jee-app-2-3-wildfly) - Soul Music
+
+### [jeorg-jee-apps-quad-1](./jeorg-jee-apps-quad-1)
+
+#### Subjects:
+
+`@PathParam`, `@RequestScoped`, `@Path`, `@GET`, `@Produces`, `MediaType`, `APPLICATION_JSON`
+`RegEx`, `@PathParam`, `@GET`
+`@Stateless`, `@Stateful`, `@Singleton`, `@RequestScoped`, `@Dependent`, `@ApplicationScoped`
+`Scope`, `@RequestScoped`
+`Specific`, `Generic`, `@GET`, `@Path`
+`@QueryParam`
+`MessageBodyReader`
+`MessageBodyWritter`
+`@ServerEndpoint`, `@OnMessage`, `@OnOpen`, `@OnError`, `@OnClose`, `getBasicRemote`, `sendText`
+`Encoder.Text`, `Decoder.Text`, `init`, `destroy`, `decode`, `encode`, `encoders`, `decoders`
+`MessageHandler.Partial`, `MessageHandler.Whole`, `@OnMessage`, `isLast`
+`navigation-rule`, `from-view-id`, `navigation-case`, `from-outcome`, `to-view-id`, `from-action`, `h:commandLink`
+`http://java.sun.com/jsp/jstl/core`, `forEach`, `EL`, `Expression Language`
+`xmlns:h="http://xmlns.jcp.org/jsf/html"`, `xmlns:jsf="http://xmlns.jcp.org/jsf"`
+, `xmlns:f="http://xmlns.jcp.org/jsf/core"`, `xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"`
+`<fmt:bundle`, `<fmt:message`, `<fmt:setBundle`, `<fmt:setLocale`
+`j_security_check`, `j_username`, `j_password`, `security-constraint`, `web-resource-collection`, `web-resource-name`
+, `description`, `url-pattern`, `http-method`, `auth-constraint`, `role-name`, `security-role`, `login-config`
+, `auth-method`, `form-login-config`, `form-login-page`, `form-error-page`
+`getCallerPrincipal`, `isCallerInRole`, `SessionContext`, `@EJB`, `@Resource`
+`@Stateless`, `Stateful`, `isCallerInRole`, `@PreDestroy`, `@PostConstruct`
+`SessionContext.getCallerPrincial`, `HttpServletRequest.getUserPrincipal`
+`NONE`, `INTEGRAL`, `CONFIDENTIAL`
+`<job`, `<step`, `<chunk`, `<end on`, `AbstractItemReader`, `AbstractItemWriter`, `ItemProcessor`, `@Named`
+`BatchRuntime`, `JobOperator`, `getRunningExecutions`, `getJobExecution`, `getBatchStatus`
+`@RequestScoped`, `@SessionScoped`, `@ApplicationScoped`
+
+#### Applications:
+
+- [jeorg-jee-app-3-1-wildfly](./jeorg-jee-apps-quad-1/jeorg-jee-app-3-1-wildfly) - History of Portugal - 🇵🇹
+- [jeorg-jee-app-3-2-wildfly](./jeorg-jee-apps-quad-1/jeorg-jee-app-3-2-wildfly) - History of Spain - 🇪🇸
+- [jeorg-jee-app-3-3-wildfly](./jeorg-jee-apps-quad-1/jeorg-jee-app-3-3-wildfly) - History of The Netherlands - 🇳🇱
+- [jeorg-jee-app-3-4-wildfly](./jeorg-jee-apps-quad-1/jeorg-jee-app-3-4-wildfly) - History of the United Kingdom - 🇬🇧
 
 ## References
 
 ### Online
 
-- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
-- [Hints & Tricks](./Hints&Tricks.md)
+- [Java EE 7 full platform and Web Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/covr_javaee7.html)
+- [JSR 342: JavaTM Platform, Enterprise Edition 7 (Java EE 7) Specification](https://jcp.org/en/jsr/detail?id=342)
+- [JEE7 Spec document](https://download.oracle.com/otn-pub/jcp/java_ee-7-fr-spec/JavaEE_Platform_Spec.pdf?AuthParam=1610297053_dc338cf9ac2f643c005b280582ab4052)
+- [Oracle 1Z0-900 Exam: Rise and Shine as an Application Developer with Oracle Certification](https://www.dbexam.com/blog/oracle-1z0-900-exam-rise-and-shine-application-developer-oracle-certification)
+- [1Z0-900: Java EE 7 Application Developer](https://www.dbexam.com/oracle/1z0-900-java-ee-7-application-developer)
+- [Building and Running a Java EE Application by Using Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_EE/MavenEE.html)
+- [Run Maven Java Web Application in Jetty Maven Plugin](https://o7planning.org/en/10335/run-maven-java-web-application-in-jetty-maven-plugin)
+- [Getting Started With Jetty Server](https://www.jrebel.com/blog/jetty-server)
+- [jetty Maven Jetty plugin](https://riptutorial.com/jetty/example/22209/maven-jetty-plugin)
+- [Chapter 6. Getting started with Weld](https://docs.jboss.org/weld/reference/3.0.0.CR1/en-US/html/gettingstarted.html)
+- [Creating a Chat Application using Java EE 7, Websockets and GlassFish 4](https://www.hascode.com/2013/08/creating-a-chat-application-using-java-ee-7-websockets-and-glassfish-4/)
+- [JAVA EE 7 – THE STANDARD FOR ENTERPRISE JAVA](https://turngeek.github.io/javaee7inaweek/chapter/i-1-java-ee-7-the-standard-for-enterprise-java/)
+- [Java Platform, Enterprise Edition (Java EE) 7](https://docs.oracle.com/javaee/7/index.html)
 
 ### Books
 
-- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
-- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
-- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
-- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
 - Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
 - Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
@@ -94,9 +194,6 @@ sdk use java 15.0.2.hs-adpt
 - R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
 - Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
 - Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
-- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
-
----
 
 ## About me 👨🏽‍💻🚀
 

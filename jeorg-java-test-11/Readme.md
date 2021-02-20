@@ -1,74 +1,16 @@
-# java-test-drives
+# Java 11 Test Drives
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
+## Introduction
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
+In this project you will find all my study materials for my Java 11 learning journey. Feel free to use these materials in your studies. These modules can be used for education purposes or for certain types of exames like the [1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
+## Topics and coverage
 
-## Technologies used
-
----
-
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
-
----
-
-## Description
-
-Java study project.
-
-This project is intended as a study tool for different java versions and frameworks. They contain original content that I have created with the help of the referenced documentation and websites. Please feel free to use this project for your education and exams.
-
-It is the support project of the following articles on my blog:
-
-| Location | Title |
-|----------|-------|
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24) | [JDK 15 is coming! Sealing classes is great!](http://joaofilipesabinoesperancinha.nl/blog/blog3-jdk15-24)
-|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "joaofilipesabinoesperancinha.nl")](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15) | [JDK 15 is coming! Let's have a look at the code changes!](http://joaofilipesabinoesperancinha.nl/blog/blog2-jdk15)
-
-## Contents
-
-- [jeorg-java-test-11](./jeorg-java-test-11) - Java 11 study materials
-- [jeorg-java-test-15](./jeorg-java-test-15) - Java 15 study materials and article contents
-- [jeorg-java-test-jee7](./jeorg-java-test-jee7) - Java EE 7 study materials
-
-## Consolerizer
-
-Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
-
-This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jespverancinha.console).
-
-In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
-
-## Build
-
-Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
-
-<i>See details below</i>
-
-## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
-
-```bash
-sdk install java 15.0.2.hs-adpt
-sdk use java 15.0.2.hs-adpt
-```
+- [Basic](./jeorg-java-11-basics) - Basic concept precision modules
+- [Mastery](./jeorg-java-11-mastery) - Extremely theoretical modules with a context
+- [Crums](./jeorg-java-11-crums) - Lightning/Fast track practice exercises without a context
+- [Flash Modules](./jeorg-java-11-flash-modules) - Lightning/Fast track practice module exercises without a context
+- [Test Drives](./jeorg-java-11-test-drives) - Experimental applications built with Java 11
 
 ---
 
@@ -76,8 +18,12 @@ sdk use java 15.0.2.hs-adpt
 
 ### Online
 
-- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
-- [Hints & Tricks](./Hints&Tricks.md)
+### Online
+
+- [OCP11 1z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817)
+- [OCP11 1z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819)
+- [OCP 11 study guide](https://www.goodreads.com/book/show/51132641-ocp-oracle-certified-professional-java-se-11-programmer-i-study-guide)
+- [A JDeps Tutorial - Analyze Your Project's Dependencies](https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies)
 
 ### Books
 
@@ -86,15 +32,74 @@ sdk use java 15.0.2.hs-adpt
 - Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
 - Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
 - Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
-- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
-- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
-- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
-- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
-- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
-- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
-- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
-- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
-- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
+
+---
+
+## Java 11 Specs
+
+- [Qualified Exports](https://www.logicbig.com/tutorials/core-java-tutorial/modules/qualified-exports.html)
+- [The modular JDK](https://openjdk.java.net/jeps/200)
+- [JLink](https://docs.oracle.com/javase/9/tools/jlink.htm)
+
+---
+
+## The module graph
+
+[![alt text](https://bugs.openjdk.java.net/secure/attachment/72525/jdk.png "The module graph")](https://openjdk.java.net/jeps/200)
+
+---
+
+## 1z0-819 Guidelines
+
+From Oracle [Java Platform, Standard Edition 11, Java SE 11 Developer, Exam Number: 1Z0-819](https://education.oracle.com/java-se-11-developer/pexam_1Z0-819):
+
+Subjects covered:
+
+1. Working with Java data types
+    - Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting
+    - Handle text using String and StringBuilder classes
+    - Use local variable type inference, including as lambda parameters
+2. Java Object-Oriented Approach
+    - Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection)
+    - Define and use fields and methods, including instance, static and overloaded methods
+    - Initialize objects and their members using instance and static initialiser statements and constructors
+    - Understand variable scopes, apply encapsulation and make objects immutable
+    - Create and use subclasses and superclasses, including abstract classes
+    - Utilize polymorphism and casting to call methods, differentiate object type versus reference type
+    - Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods
+    - Create and use enumerations
+3. Working with Arrays and Collections
+    - Use generics, including wildcards
+    - Use a Java array and List, Set, Map and Deque collections, including convenience methods
+    - Sort collections and arrays using Comparator and Comparable interfaces
+4. Java Platform Module System
+    - Deploy and execute modular applications, including automatic modules
+    - Declare, use, and expose modules, including the use of services
+5. Java I/O API
+    - Read and write console and file data using I/O Streams
+    - Implement serialization and deserialization techniques on Java objects
+    - Handle file system objects using java.nio.file API
+6. Database Applications with JDBC
+    - Connect to and perform database SQL operations, process query results using JDBC API
+7. Annotations
+    - Create, apply, and process annotations
+8. Controlling Program Flow
+    - Create and use loops, if/else, and switch statements
+9. Exception Handling
+    - Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
+    - Create and use custom exceptions
+10. Working with Streams and Lambda expressions
+    - Implement functional interfaces using lambda expressions, including interfaces from the java.util.function package
+    - Use Java Streams to filter, transform and process data
+    - Perform decomposition and reduction, including grouping and partitioning on sequential and parallel streams
+11. Concurrency
+    - Create worker threads using Runnable and Callable, and manage concurrency using an ExecutorService and java.util.concurrent API
+    - Develop thread-safe code, using different locking mechanisms and java.util.concurrent API
+12. Secure Coding in Java SE Application
+    - Develop code that mitigates security threats such as denial of service, code injection, input validation and ensure data integrity
+    - Secure resource access including filesystems, manage policies and execute privileged code
+13. Localization
+    - Implement Localization using Locale, resource bundles, and Java APIs to parse and format messages, dates, and numbers
 
 ---
 

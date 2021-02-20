@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jesperancinha.jtd</groupId>
-    <artifactId>java-test-drives</artifactId>
+    <artifactId>jeorg-java-test-drives</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>jtd-the-factory</module>
-        <module>java-test-11</module>
-        <module>java-test-15</module>
-        <module>java-test-jee7</module>
+        <module>jeorg-jtd-the-factory</module>
+        <module>jeorg-java-test-11</module>
+        <module>jeorg-java-test-15</module>
+        <module>jeorg-java-test-jee7</module>
     </modules>
     <name>Java Test Drives</name>
     <properties>
@@ -20,7 +20,7 @@
         <mockito.all>1.9.5</mockito.all>
 
         <!-- Internal -->
-        <b2b2common>1.0.0-SNAPSHOT</b2b2common>
+        <java-test-drives-commons>1.0.0-SNAPSHOT</java-test-drives-commons>
 
         <!-- Test -->
         <junit-jupiter.version>5.5.1</junit-jupiter.version>
@@ -36,8 +36,8 @@
             <!-- Internal Dependencies -->
             <dependency>
                 <groupId>org.jesperancinha.jtd</groupId>
-                <artifactId>java-test-drives-commons</artifactId>
-                <version>${b2b2common}</version>
+                <artifactId>jeorg-java-test-drives-commons</artifactId>
+                <version>${java-test-drives-commons}</version>
             </dependency>
             <!-- External Dependencies -->
             <dependency>
