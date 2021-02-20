@@ -1,5 +1,6 @@
 package org.jesperancinha.jtd.jee.teeth.service.transaction;
 
+import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 
 import javax.annotation.Resource;
@@ -22,6 +23,10 @@ import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
 public class ToothServiceTx {
+
+    public ToothServiceTx(){
+        Consolerizer.setupFastDefault();
+    }
 
     @PersistenceContext(unitName = "primary",
             type = PersistenceContextType.TRANSACTION)

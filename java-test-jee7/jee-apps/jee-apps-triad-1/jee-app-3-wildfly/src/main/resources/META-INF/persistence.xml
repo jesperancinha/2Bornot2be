@@ -12,6 +12,7 @@
                       value="create-drop"/>
             <property name="hibernate.show_sql"
                       value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
         </properties>
     </persistence-unit>
 </persistence>

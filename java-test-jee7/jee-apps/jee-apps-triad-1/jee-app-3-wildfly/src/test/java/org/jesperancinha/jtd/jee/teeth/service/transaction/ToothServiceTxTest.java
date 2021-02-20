@@ -9,6 +9,8 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jesperancinha.console.consolerizer.Consolerizer;
 import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.ConsolerizerTexts;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain.AbstractToothType;
 import org.jesperancinha.jtd.jee.teeth.domain.FinalToothType;
@@ -46,7 +48,7 @@ public class ToothServiceTxTest extends TestCase {
         return ShrinkWrap.create(WebArchive.class, "test.war")
                 .addClasses(ToothServiceTx.class, Tooth.class, Jaw.class, Nerve.class, AbstractToothType.class,
                         ToothType.class, FinalToothType.class, Resources.class, UserTransaction.class, EntityManager.class,
-                        Consolerizer.class, ConsolerizerColor.class)
+                        Consolerizer.class, ConsolerizerTexts.class, ConsolerizerColor.class, ConsolerizerGraphs.class)
                 .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
                 .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
                 .addAsWebInfResource("test-ds.xml");

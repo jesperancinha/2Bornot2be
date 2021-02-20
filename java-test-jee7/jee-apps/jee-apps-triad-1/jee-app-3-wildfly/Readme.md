@@ -28,6 +28,7 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 10. `@TransactionAttribute` and `TransactionAttributeType`
 11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
 12. `Rollback`
+13. ` @Enumerated(EnumType.STRING)`. `@Enumerated(EnumType.ORDINAL)`
 
 ## Domains in detail
 
@@ -37,16 +38,52 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 
 ## Test Endpoints
 
-1. http://localhost:8080/jee-app-3-wildfly/periodontitis - Passivation Exercise
-2. http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1 - Passivation Exercise
-3. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all - Domain Data, use of EAGER and JSON generation from Entitiy
-4. http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all - Domain Data, use of EAGER and JSON generation from Entitiy
+1. [http://localhost:8080/jee-app-3-wildfly/periodontitis](http://localhost:8080/jee-app-3-wildfly/periodontitis) - Passivation Exercise
+2. [http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1](http://localhost:8080/jee-app-3-wildfly/periodontitis?count=700&activate=1) - Passivation Exercise
+3. [http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all](http://localhost:8080/jee-app-3-wildfly/tooth/servlet/all) - Domain Data, use of EAGER and JSON generation from Entity
+4. [http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all](http://localhost:8080/jee-app-3-wildfly/app/tooth/rest/all) - Domain Data, use of EAGER and JSON generation from Entity
 5. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateless - TimeService
 6. http://localhost:8080/jee-app-3-wildfly/timer/servlet/stateful - TimeService
 7. http://localhost:8080/jee-app-3-wildfly/timer/servlet/singleton - TimeService
 8. http://localhost:8080/jee-app-3-wildfly/tooth/servlet/tx/all - Transaction type
 
+## How to run
+
+1. Stop your wildfly server
+2. Run setup.sh
+3. Start Wildfly with switch `-c standalone-full.xml`
+
+## How to check your database in Intellj:
+
+
+![alt img](./docs/h2-database-config.png)
+
+Database connection properties:
+
+1. URL -> `jdbc:h2:file:~/records;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE`
+2. Username -> `sa`
+3. Password -> `sa`
+
+> Path details must be absolut in IntelliJ versions up until 2020.3. At least, this is how I experienced it.
+
+If you run the arquillian tests, very little changes:
+
+![alt img](./docs/h2-test-database-config.png)
+
+Database connection properties:
+
+1. URL -> `jdbc:h2:file:mem:records;AUTO_SERVER=TRUE`
+2. Username -> `sa`
+3. Password -> `sa`
+
+
 ## Run Arquillian tests
+
+Make sure port 9990 is available:
+
+```bash
+lsof -i :9990
+```
 
 ```bash
 jenv local system
@@ -114,6 +151,7 @@ mvn clean install -Parq-wildfly-managed
 
 ### Online
 
+- [WildFly custom caches configuration for Stateful Beans](http://www.mastertheboss.com/jboss-server/jboss-cluster/jboss-as-7-custom-caches-configuration)
 - [Transaction management: EJB3 vs Spring](https://blog.frankel.ch/transaction-management-ejb3-vs-spring/)
 - [EJB passivation and activation example](https://www.javacodegeeks.com/2013/08/ejb-passivation-and-activation-example.html)
 - [@Resource injection target is invalid. Only setter methods are allowed](https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed)

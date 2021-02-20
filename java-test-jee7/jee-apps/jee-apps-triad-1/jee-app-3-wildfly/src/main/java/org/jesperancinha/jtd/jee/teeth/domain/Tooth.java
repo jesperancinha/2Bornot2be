@@ -24,13 +24,13 @@ public class Tooth {
 
     private Boolean nerveHit;
 
-    private ToothType toothType;
-
     private AbstractToothType abstractToothType;
 
-    private FinalToothType finalToothType;
+    private ToothType toothType;
 
-//    private InterfaceToothType interfaceToothType;
+    private ToothType toothTypeNumber;
+
+    private FinalToothType finalToothType;
 
     @ManyToOne(fetch = FetchType.EAGER)
     public Jaw getJaw() {
@@ -52,9 +52,6 @@ public class Tooth {
         this.uuid = uuid;
     }
 
-    public String toString() {
-        return uuid.toString();
-    }
 
     // org.jboss.arquillian.container.spi.client.container.DeploymentException:
     // Cannot deploy test.war:
@@ -74,15 +71,6 @@ public class Tooth {
 
     public void setNerve(Nerve nerve) {
         this.nerve = nerve;
-    }
-
-    @Enumerated(EnumType.STRING)
-    public ToothType getToothType() {
-        return toothType;
-    }
-
-    public void setToothType(ToothType toothType) {
-        this.toothType = toothType;
     }
 
     @Column
@@ -132,4 +120,40 @@ public class Tooth {
     // public void setInterfaceToothType(InterfaceToothType interfaceToothType) {
     //     this.interfaceToothType = interfaceToothType;
     // }`
+
+
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    public ToothType getToothType() {
+        return toothType;
+    }
+
+    public void setToothType(ToothType toothType) {
+        this.toothType = toothType;
+    }
+
+    @Column
+    @Enumerated(EnumType.ORDINAL)
+    public ToothType getToothTypeNumber() {
+        return toothTypeNumber;
+    }
+
+    public void setToothTypeNumber(ToothType toothTypeNumber) {
+        this.toothTypeNumber = toothTypeNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Tooth{" +
+                "uuid=" + uuid +
+                ", jaw=" + jaw +
+                ", nerve=" + nerve +
+                ", nerveHit=" + nerveHit +
+                ", toothType=" + toothType +
+                ", toothTypeNumber=" + toothTypeNumber +
+                ", abstractToothType=" + abstractToothType +
+                ", finalToothType=" + finalToothType +
+                '}';
+    }
 }

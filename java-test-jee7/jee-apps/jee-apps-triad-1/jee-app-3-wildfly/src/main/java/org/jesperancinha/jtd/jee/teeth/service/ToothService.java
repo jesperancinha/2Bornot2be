@@ -1,6 +1,9 @@
 package org.jesperancinha.jtd.jee.teeth.service;
 
+import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
+import org.jesperancinha.jtd.jee.teeth.domain.ToothType;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
@@ -33,6 +36,10 @@ public class ToothService {
     @PersistenceContext(unitName = "primary")
     private EntityManager entityManager;
 
+    public ToothService(){
+        Consolerizer.setupFastDefault();
+    }
+
     // WFLYJPA0059: javax.persistence.PersistenceContext injection target is invalid.  Only setter methods are allowed:
     // @PersistenceContext(unitName = "primary")
     // from ResourceInjectionAnnotationParsingProcessor: https://stackoverflow.com/questions/18019947/resource-injection-target-is-invalid-only-setter-methods-are-allowed
@@ -51,11 +58,14 @@ public class ToothService {
         var context = new InitialContext();
         var utx = (UserTransaction) context.lookup("java:comp/UserTransaction");
         utx.begin();
-        final Tooth merge = entityManager.merge(tooth);
-        entityManager.lock(merge, LockModeType.NONE);
-        final Tooth mergeResult2 = entityManager.merge(merge);
+        final Tooth mergedTooth = entityManager.merge(tooth);
+        BRIGHT_MAGENTA.printGenericLn("Tooth %s has been created!", tooth);
+        mergedTooth.setToothType(ToothType.getRandom());
+        mergedTooth.setToothTypeNumber(ToothType.getRandom());
+        entityManager.lock(mergedTooth, LockModeType.NONE);
+        final Tooth reMergedTooth = entityManager.merge(mergedTooth);
         utx.commit();
-        return mergeResult2;
+        return reMergedTooth;
     }
 
     // WFLYEJB0034: EJB Invocation failed on component ToothService for method
