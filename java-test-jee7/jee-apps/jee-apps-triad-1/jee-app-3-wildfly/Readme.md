@@ -28,7 +28,7 @@ The apps under [jee-apps](../..), cover lots of topics. For this app we cover:
 10. `@TransactionAttribute` and `TransactionAttributeType`
 11. `MANDATORY`, `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, `NEVER` TransactionAttribute
 12. `Rollback`
-13. ` @Enumerated(EnumType.STRING)`. `@Enumerated(EnumType.ORDINAL)`
+13. `@Enumerated(EnumType.STRING)`, `@Enumerated(EnumType.ORDINAL)`
 
 ## Domains in detail
 
