@@ -9,7 +9,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.StringReader;
 import java.nio.ByteBuffer;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 @ServerEndpoint(value = "/ariaschorus/noencoding/lyrics")
 public class ListenerNoCodingReceiver {

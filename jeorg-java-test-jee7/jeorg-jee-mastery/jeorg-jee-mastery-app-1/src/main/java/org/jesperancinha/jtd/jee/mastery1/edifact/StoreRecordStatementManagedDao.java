@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.edifact;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.mastery1.beans.Record;
 
 import javax.ejb.Stateless;

@@ -3,8 +3,8 @@ package org.jesperancinha.java11.mastery4dot3.family;
 import org.jesperancinha.java11.mastery4dot3.cousins.Cousins;
 import org.jesperancinha.java11.mastery4dot3.yourcousins.YourCousins;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 
 public class FamilyRunner {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.flashmodule.module2;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 
 public class FlashModule2 {
     public static void main(String[] args) {

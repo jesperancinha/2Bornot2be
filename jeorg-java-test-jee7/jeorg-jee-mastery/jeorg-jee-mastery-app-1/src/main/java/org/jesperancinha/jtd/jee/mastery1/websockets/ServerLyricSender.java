@@ -6,9 +6,9 @@ import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 import java.nio.ByteBuffer;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @ServerEndpoint("/lyricsreceiver")
 public class ServerLyricSender {

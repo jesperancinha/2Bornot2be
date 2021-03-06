@@ -4,8 +4,8 @@ import javax.enterprise.inject.Alternative;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @jakarta.enterprise.inject.Alternative
 @Alternative

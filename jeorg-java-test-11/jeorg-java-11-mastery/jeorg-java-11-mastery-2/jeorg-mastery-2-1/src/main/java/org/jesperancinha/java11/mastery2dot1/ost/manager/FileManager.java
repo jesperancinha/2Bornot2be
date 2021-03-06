@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_CYAN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_CYAN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public class FileManager {
 

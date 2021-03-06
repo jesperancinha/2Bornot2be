@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.java11.crums.crum1.Crum1;
 import org.jesperancinha.java11.crums.crum10.Crum10;
 import org.jesperancinha.java11.crums.crum11.Crum11;

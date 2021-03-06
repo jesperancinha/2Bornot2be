@@ -2,8 +2,8 @@ package org.jesperancinha.java11.db.driver;
 
 import java.sql.DriverManager;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public class DbDriver {
     public static void main(String[] args) {

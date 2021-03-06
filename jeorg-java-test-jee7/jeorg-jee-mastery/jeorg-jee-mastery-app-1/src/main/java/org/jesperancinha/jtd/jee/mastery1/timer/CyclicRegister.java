@@ -4,8 +4,8 @@ import javax.ejb.Schedule;
 import javax.ejb.Singleton;
 import java.time.LocalDateTime;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 @Singleton
 public class CyclicRegister {

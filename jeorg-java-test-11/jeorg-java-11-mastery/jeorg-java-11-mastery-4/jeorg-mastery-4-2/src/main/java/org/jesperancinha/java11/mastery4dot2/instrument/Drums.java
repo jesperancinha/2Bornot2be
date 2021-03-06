@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.mastery4dot2.instrument;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public final class Drums implements AutoCloseable {
 

@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery2.redirect;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.ExternalContext;

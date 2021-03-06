@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.lightning2;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 
 import javax.jws.WebService;
 

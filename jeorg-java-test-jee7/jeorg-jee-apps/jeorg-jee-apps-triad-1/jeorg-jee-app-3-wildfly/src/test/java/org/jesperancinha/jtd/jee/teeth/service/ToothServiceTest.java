@@ -6,10 +6,10 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
-import org.jesperancinha.console.consolerizer.ConsolerizerTexts;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerTexts;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain.AbstractToothType;
 import org.jesperancinha.jtd.jee.teeth.domain.FinalToothType;
@@ -33,9 +33,9 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)

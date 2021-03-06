@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery2.schedule;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;

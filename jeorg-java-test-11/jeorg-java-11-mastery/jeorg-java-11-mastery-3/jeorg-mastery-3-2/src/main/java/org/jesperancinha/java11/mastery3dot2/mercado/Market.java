@@ -3,8 +3,8 @@ package org.jesperancinha.java11.mastery3dot2.mercado;
 import java.io.Serializable;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 public class Market extends Building implements Serializable {
 

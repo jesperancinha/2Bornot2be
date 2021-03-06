@@ -1,9 +1,9 @@
-package org.jesperancinha.java11.annotations.books;
+package org.jesperancinha.java11.crums.crum19;
 
 import java.util.List;
 
 @FunctionalInterface
 @Deprecated
-public interface SdkRealBook {
+public interface SdkRealDiamond {
     void varagSafeMethod(List<String>... stringLists);
 }

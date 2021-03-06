@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import javax.websocket.DecodeException;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
 
 class AvizDecoderTest {
 

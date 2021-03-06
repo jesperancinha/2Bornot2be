@@ -5,7 +5,7 @@ import javax.inject.Named;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_BLUE;
 
 @Named
 @RequestScoped

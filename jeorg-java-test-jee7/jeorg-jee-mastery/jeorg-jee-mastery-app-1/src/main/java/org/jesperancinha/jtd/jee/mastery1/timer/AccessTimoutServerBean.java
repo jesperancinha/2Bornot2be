@@ -9,8 +9,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLACK;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLACK;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 @Named
 @Singleton

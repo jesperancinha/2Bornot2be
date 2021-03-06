@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.spain.secure;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
@@ -12,8 +12,8 @@ import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Path("/history/palace/rest")
 @RequestScoped

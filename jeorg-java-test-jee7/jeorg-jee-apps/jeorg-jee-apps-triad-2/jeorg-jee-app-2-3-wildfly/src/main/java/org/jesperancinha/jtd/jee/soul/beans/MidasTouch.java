@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.soul.beans;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 public class MidasTouch {
 

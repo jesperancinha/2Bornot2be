@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.charat;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public class CharAtRunner {
     public static void main(String[] args) {

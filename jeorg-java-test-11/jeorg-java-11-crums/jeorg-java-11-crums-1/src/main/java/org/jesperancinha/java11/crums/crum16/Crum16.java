@@ -2,8 +2,8 @@ package org.jesperancinha.java11.crums.crum16;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Long.MIN_VALUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 public class Crum16 {
     public static void main(String[] args) {
@@ -14,8 +14,8 @@ public class Crum16 {
 
         BLUE.printGenericLn("This is how import static is done. Notice the order:");
         BLUE.printGenericLn("import static java.lang.Integer.MAX_VALUE;\n" + "import static java.lang.Long.MIN_VALUE;\n"
-                + "import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericLn;\n"
-                + "import static org.jesperancinha.console.consolerizer.Consolerizer.printBlueGenericTitleLn;\n"
-                + "import static org.jesperancinha.console.consolerizer.Consolerizer.printYellowGenericLn;");
+                + "import static org.jesperancinha.console.consolerizer.console.Consolerizer.printBlueGenericLn;\n"
+                + "import static org.jesperancinha.console.consolerizer.console.Consolerizer.printBlueGenericTitleLn;\n"
+                + "import static org.jesperancinha.console.consolerizer.console.Consolerizer.printYellowGenericLn;");
     }
 }

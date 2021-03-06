@@ -6,8 +6,8 @@ import javax.ejb.Stateful;
 import javax.ejb.Timeout;
 import javax.ejb.Timer;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Stateful
 public class StatefulTimerSessionBean {

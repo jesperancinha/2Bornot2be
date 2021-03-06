@@ -6,10 +6,10 @@ import java.io.Serializable;
 
 import static javax.enterprise.event.Reception.IF_EXISTS;
 import static javax.enterprise.event.TransactionPhase.IN_PROGRESS;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRainbowFlag;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printRainbowFlag;
 
 @RequestScoped
 public class CleanerProcessor implements Serializable {

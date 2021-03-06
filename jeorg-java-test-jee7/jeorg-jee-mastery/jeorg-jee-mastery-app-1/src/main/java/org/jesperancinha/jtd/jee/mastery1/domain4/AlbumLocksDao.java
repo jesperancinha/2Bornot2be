@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.Objects;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @Transactional
 @TransactionManagement(TransactionManagementType.BEAN)

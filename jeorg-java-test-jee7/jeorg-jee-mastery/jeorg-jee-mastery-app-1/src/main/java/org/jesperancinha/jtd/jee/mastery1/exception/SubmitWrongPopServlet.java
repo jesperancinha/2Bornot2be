@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_GREEN;
 
 @WebServlet("wrongpopsubmit")
 public class SubmitWrongPopServlet extends HttpServlet {

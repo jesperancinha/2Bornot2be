@@ -3,7 +3,7 @@ package org.jesperancinha.jtd.jee.lightning4.interceptors;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 public class RainInterceptor {
     @AroundInvoke

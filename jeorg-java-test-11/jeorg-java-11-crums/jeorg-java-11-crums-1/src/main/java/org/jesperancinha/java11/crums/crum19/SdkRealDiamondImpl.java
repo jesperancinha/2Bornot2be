@@ -1,8 +1,8 @@
-package org.jesperancinha.java11.annotations.books;
+package org.jesperancinha.java11.crums.crum19;
 
 import java.util.List;
 
-public class SdkRealBookImpl implements SdkRealBook {
+public class SdkRealDiamondImpl implements SdkRealDiamond {
     @Override
     @SafeVarargs
     public final void varagSafeMethod(List<String>... stringLists) {

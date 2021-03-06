@@ -4,7 +4,7 @@ import javax.batch.api.chunk.AbstractItemReader;
 import javax.inject.Named;
 import java.io.Serializable;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 @Named
 public class SimpleItemReader extends AbstractItemReader {

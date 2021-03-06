@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.servlet.show;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 
 import javax.annotation.Resource;
 import javax.ejb.EJBContext;
@@ -19,8 +19,8 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.BEAN)

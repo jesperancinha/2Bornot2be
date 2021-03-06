@@ -2,7 +2,7 @@ package org.jesperancinha.java11.catching.crows;
 
 import java.util.Random;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public class CatchingCrowsRunner {
 

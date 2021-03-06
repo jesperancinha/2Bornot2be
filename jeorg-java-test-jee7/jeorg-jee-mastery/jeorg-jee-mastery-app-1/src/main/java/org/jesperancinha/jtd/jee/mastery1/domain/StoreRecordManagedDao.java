@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.domain;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;

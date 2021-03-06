@@ -3,7 +3,7 @@ package org.jesperancinha.java11.mastery4dot2;
 import javax.swing.*;
 import java.awt.*;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 public class Jetuber extends JFrame {
 

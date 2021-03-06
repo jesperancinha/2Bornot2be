@@ -11,8 +11,8 @@ import static javax.enterprise.event.TransactionPhase.AFTER_COMPLETION;
 import static javax.enterprise.event.TransactionPhase.AFTER_SUCCESS;
 import static javax.enterprise.event.TransactionPhase.BEFORE_COMPLETION;
 import static javax.enterprise.event.TransactionPhase.IN_PROGRESS;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRainbowFlag;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printRainbowFlag;
 
 @RequestScoped
 public class EventProcessor implements Serializable {

@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.girl.bands.filters;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -11,9 +11,9 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRandomColorGenericLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 public class CaghtUpInTheMiddle implements Filter {
 

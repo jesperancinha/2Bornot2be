@@ -1,10 +1,10 @@
 package org.jesperancinha.java11.crums.crum3;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printNewLine;
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitle;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printNewLine;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitle;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 
 public class Crum3 {
     public static void main(String[] args) {

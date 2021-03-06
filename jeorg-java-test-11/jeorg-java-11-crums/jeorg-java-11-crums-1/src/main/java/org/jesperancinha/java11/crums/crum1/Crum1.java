@@ -1,7 +1,7 @@
 package org.jesperancinha.java11.crums.crum1;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 public class Crum1 {
     public static void main(String[] args) {

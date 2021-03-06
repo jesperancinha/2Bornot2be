@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRandomColorGenericLn;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.getUnicorns;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRandomColorGenericLn;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.getUnicorns;
 
 @WebServlet("/CaghtUpInTheMiddle")
 public class SugababesServlet extends HttpServlet {

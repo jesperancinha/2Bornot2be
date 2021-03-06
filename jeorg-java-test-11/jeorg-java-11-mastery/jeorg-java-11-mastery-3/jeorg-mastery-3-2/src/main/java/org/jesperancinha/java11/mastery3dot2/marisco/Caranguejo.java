@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot2.marisco;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 public class Caranguejo {
     {

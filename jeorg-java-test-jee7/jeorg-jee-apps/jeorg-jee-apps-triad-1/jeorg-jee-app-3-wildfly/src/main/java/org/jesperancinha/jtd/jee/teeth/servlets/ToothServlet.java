@@ -22,8 +22,8 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @WebServlet("/tooth/servlet/all")
 public class ToothServlet extends HttpServlet {

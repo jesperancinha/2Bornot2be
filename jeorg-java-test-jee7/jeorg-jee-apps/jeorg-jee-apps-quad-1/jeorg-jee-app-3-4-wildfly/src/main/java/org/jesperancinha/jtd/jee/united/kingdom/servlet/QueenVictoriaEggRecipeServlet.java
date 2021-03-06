@@ -13,9 +13,9 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.Properties;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
-import static org.jesperancinha.console.consolerizer.ConsolerizerGraphs.printRainbowFlag;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs.printRainbowFlag;
 
 @WebServlet("/history/victoria/cooking")
 public class QueenVictoriaEggRecipeServlet extends HttpServlet {

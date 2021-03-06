@@ -1,7 +1,7 @@
 package org.jesperancinha.jtd.jee.teeth.service;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 import org.jesperancinha.jtd.jee.teeth.domain.ToothType;
 
@@ -22,7 +22,7 @@ import javax.transaction.UserTransaction;
 import java.util.List;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
 
 /**
  * Note that var utx = (UserTransaction) context.lookup("java:comp/UserTransaction") is only found because of:
@@ -36,7 +36,7 @@ public class ToothService {
     @PersistenceContext(unitName = "primary")
     private EntityManager entityManager;
 
-    public ToothService(){
+    public ToothService() {
         Consolerizer.setupFastDefault();
     }
 
@@ -47,6 +47,7 @@ public class ToothService {
         return entityManager.find(Tooth.class, uuid);
     }
 
+    @SuppressWarnings("unchecked")
     public List<Tooth> findAll() {
         return entityManager.createQuery("from Tooth")
                 .getResultList();

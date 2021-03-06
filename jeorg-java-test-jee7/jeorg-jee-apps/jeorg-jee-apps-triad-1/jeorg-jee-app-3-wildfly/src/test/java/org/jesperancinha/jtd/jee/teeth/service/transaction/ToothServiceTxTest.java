@@ -7,10 +7,11 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jesperancinha.console.consolerizer.Consolerizer;
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
-import org.jesperancinha.console.consolerizer.ConsolerizerTexts;
+
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerTexts;
 import org.jesperancinha.jtd.jee.teeth.Resources;
 import org.jesperancinha.jtd.jee.teeth.domain.AbstractToothType;
 import org.jesperancinha.jtd.jee.teeth.domain.FinalToothType;
@@ -29,10 +30,10 @@ import javax.ejb.EJBTransactionRequiredException;
 import javax.persistence.EntityManager;
 import javax.transaction.UserTransaction;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @RunWith(Arquillian.class)
 public class ToothServiceTxTest extends TestCase {

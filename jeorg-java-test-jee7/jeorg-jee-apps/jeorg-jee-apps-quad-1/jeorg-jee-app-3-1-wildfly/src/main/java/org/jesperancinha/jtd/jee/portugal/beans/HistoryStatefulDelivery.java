@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.portugal.beans;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -13,9 +13,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Stack;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Stateful
 @SessionScoped

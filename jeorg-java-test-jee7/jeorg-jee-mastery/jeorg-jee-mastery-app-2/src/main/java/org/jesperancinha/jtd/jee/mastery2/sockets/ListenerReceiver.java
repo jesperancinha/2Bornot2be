@@ -5,7 +5,7 @@ import javax.websocket.RemoteEndpoint;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 @ServerEndpoint(value = "/ariaschorus/lyrics",
         decoders = {LyricTextDecoder.class, LyricBinaryDecoder.class})

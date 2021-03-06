@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
 import java.io.Serializable;
 import java.util.List;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
 
 @Path("/history")
 @SessionScoped

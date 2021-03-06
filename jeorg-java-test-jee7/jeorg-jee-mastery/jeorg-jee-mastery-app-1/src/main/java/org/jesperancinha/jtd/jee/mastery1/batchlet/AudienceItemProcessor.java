@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.batchlet;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerColor;
+import org.jesperancinha.console.consolerizer.common.ConsolerizerColor;
 
 import javax.batch.api.chunk.ItemProcessor;
 import javax.inject.Named;

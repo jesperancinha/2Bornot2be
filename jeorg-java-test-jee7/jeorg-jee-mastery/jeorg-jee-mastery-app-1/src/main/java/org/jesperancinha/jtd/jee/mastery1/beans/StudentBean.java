@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.beans;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 public class StudentBean {
 

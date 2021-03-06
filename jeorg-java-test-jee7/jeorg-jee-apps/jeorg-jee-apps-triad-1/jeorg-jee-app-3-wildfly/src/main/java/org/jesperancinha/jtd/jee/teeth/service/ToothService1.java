@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.teeth.service;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain.ToothType;
 import org.jesperancinha.jtd.jee.teeth.domain1.Tooth;
 
@@ -19,8 +19,8 @@ import javax.transaction.RollbackException;
 import javax.transaction.SystemException;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)

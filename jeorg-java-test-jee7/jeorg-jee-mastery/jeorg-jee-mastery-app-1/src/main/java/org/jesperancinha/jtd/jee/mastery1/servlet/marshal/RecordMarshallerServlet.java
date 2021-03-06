@@ -11,7 +11,7 @@ import javax.xml.bind.Marshaller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 @WebServlet("/marshaller")
 public class RecordMarshallerServlet extends HttpServlet {

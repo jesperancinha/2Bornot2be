@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.crums.crum1;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.printRainbowTitleLn;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.printRainbowTitleLn;
 
 public class Leaf {
 

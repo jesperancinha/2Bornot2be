@@ -6,7 +6,7 @@ import javax.inject.Named;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
 
 @Named("girlPowerBean")
 @SessionScoped

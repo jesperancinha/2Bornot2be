@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.mastery1.messaging;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.jesperancinha.jtd.jee.mastery1.beans.Record;
 
 import javax.ejb.ActivationConfigProperty;
@@ -11,8 +11,8 @@ import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
 import java.io.Serializable;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "acknowledgeMode",

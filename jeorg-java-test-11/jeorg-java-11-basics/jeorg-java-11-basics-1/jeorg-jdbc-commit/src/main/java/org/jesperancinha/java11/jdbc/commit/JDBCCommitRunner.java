@@ -3,7 +3,7 @@ package org.jesperancinha.java11.jdbc.commit;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.RED;
 
 /**
  * Remember that autocommit is always true by default

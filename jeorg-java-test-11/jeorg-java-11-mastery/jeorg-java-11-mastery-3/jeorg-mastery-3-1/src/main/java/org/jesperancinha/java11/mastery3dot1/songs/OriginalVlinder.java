@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot1.songs;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 public class OriginalVlinder extends RawVlinder {
 

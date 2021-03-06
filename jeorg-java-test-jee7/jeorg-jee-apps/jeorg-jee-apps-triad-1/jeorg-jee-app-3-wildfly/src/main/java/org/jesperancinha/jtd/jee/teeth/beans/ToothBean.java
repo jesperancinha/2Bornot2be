@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.teeth.beans;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain.Jaw;
 import org.jesperancinha.jtd.jee.teeth.domain.Tooth;
 import org.jesperancinha.jtd.jee.teeth.service.JawService;

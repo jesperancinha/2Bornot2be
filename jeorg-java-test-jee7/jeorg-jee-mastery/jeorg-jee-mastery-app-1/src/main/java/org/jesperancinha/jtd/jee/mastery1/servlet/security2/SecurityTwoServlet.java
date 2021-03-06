@@ -1,7 +1,7 @@
 package org.jesperancinha.jtd.jee.mastery1.servlet.security2;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
-import org.jesperancinha.console.consolerizer.HtmlPWriter;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.html.HtmlPWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.HttpMethodConstraint;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_RED;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_RED;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
 
 @WebServlet("/security/two")
 @ServletSecurity(httpMethodConstraints = {

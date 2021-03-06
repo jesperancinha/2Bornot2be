@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery3dot2.cafes.galao;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.YELLOW;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.YELLOW;
 
 public class Galao {
 

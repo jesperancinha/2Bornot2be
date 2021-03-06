@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.soul.beans;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.jtd.jee.soul.domain.Album;
 
 import javax.enterprise.context.RequestScoped;
@@ -8,7 +8,7 @@ import javax.inject.Named;
 import java.util.Calendar;
 import java.util.Date;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 @RequestScoped
 @Named("albumRegistry")

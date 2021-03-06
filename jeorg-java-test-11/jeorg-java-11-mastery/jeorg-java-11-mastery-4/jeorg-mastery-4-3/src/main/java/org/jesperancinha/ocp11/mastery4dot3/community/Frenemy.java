@@ -4,7 +4,7 @@ import org.jesperancinha.java11.mastery4dot3.record.Album;
 
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BLUE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BLUE;
 
 public class Frenemy {
     private final String name;

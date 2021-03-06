@@ -1,6 +1,6 @@
 package org.jesperancinha.java11.mastery1dot2.runner;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 //4. Default methods multi-implementation
 public class Shell implements CalcifiedFrame, SkinFrame {

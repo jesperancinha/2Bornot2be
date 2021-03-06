@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-import static org.jesperancinha.console.consolerizer.Consolerizer.setupFastDefault;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.GREEN;
+import static org.jesperancinha.console.consolerizer.console.Consolerizer.setupFastDefault;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.GREEN;
 
 @WebServlet("/history/crown")
 public class CheckTheCrownServlet extends HttpServlet {

@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.lightning4;
 
-import org.jesperancinha.console.consolerizer.ConsolerizerGraphs;
+import org.jesperancinha.console.consolerizer.console.ConsolerizerGraphs;
 import org.jesperancinha.jtd.jee.lightning4.interceptors.RainInterceptor;
 import org.jesperancinha.jtd.jee.lightning4.interceptors.SunInterceptor;
 

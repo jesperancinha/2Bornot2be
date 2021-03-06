@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.teeth.service;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 import org.jesperancinha.jtd.jee.teeth.domain.ToothType;
 import org.jesperancinha.jtd.jee.teeth.domain2.Tooth;
 
@@ -19,7 +19,7 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.UUID;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.BRIGHT_MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.BRIGHT_MAGENTA;
 
 @Stateless
 @TransactionManagement(javax.ejb.TransactionManagementType.BEAN)

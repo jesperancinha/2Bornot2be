@@ -17,7 +17,6 @@
         <module>jeorg-concurrency-callable</module>
         <module>jeorg-jdbc-commit</module>
         <module>jeorg-jooa-roast</module>
-        <module>jeorg-annotations-books</module>
         <module>jeorg-cpf-bills</module>
         <module>jeorg-jooa-zambujeira</module>
         <module>jeorg-wwjdt-safari</module>

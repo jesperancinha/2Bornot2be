@@ -1,6 +1,6 @@
 package org.jesperancinha.jtd.jee.lightning4;
 
-import org.jesperancinha.console.consolerizer.Consolerizer;
+import org.jesperancinha.console.consolerizer.console.Consolerizer;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
@@ -14,8 +14,8 @@ import javax.jms.Message;
 import javax.jms.ObjectMessage;
 import javax.jms.Topic;
 
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.MAGENTA;
-import static org.jesperancinha.console.consolerizer.ConsolerizerColor.ORANGE;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.MAGENTA;
+import static org.jesperancinha.console.consolerizer.common.ConsolerizerColor.ORANGE;
 
 @Named
 @RequestScoped
