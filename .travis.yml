@@ -1,4 +1,4 @@
-os: osx
+os: linux
 language: java
 jdk: openjdk15
 script:
