@@ -1,3 +1,0 @@
-3. Valid module names
-Numbers are not advised and not legal to use as a prefix. Notice that this is not a package.
-Rather, it is a folder.

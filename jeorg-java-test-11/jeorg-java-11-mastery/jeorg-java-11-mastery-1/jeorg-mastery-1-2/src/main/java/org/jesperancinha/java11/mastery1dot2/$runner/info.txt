@@ -1,2 +1,0 @@
-3. Valid module names
-You can use $ as a prefix

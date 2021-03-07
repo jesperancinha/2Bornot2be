@@ -4,14 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jesperancinha.jtd</groupId>
-    <artifactId>jeorg-java-test-drives</artifactId>
+    <artifactId>jeorg-java-15-test-drives</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>jeorg-jtd-the-factory</module>
-        <module>jeorg-java-test-11</module>
-        <module>jeorg-java-test-15</module>
-        <module>jeorg-java-test-jee7</module>
+        <module>jeorg-java-test-instanceof</module>
+        <module>jeorg-java-test-hidden</module>
+        <module>jeorg-java-test-hidden-gen</module>
+        <module>jeorg-java-test-text-blocks</module>
+        <!--        <module>jeorg-java-test-sealed-classes</module>-->
     </modules>
     <name>Java Test Drives</name>
     <properties>

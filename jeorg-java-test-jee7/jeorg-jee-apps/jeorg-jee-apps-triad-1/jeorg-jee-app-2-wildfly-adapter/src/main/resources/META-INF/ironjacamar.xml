@@ -1,7 +1,0 @@
-<ironjacamar>
-    <connection-definitions>
-        <connection-definition
-                class-name="org.jesperancinha.jtd.jee.app2.adapter.KitchenHerbsManagedConnectionFactory"
-                jndi-name="java:/eis/KitchenHerbs"/>
-    </connection-definitions>
-</ironjacamar>

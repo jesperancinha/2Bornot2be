@@ -1,32 +1,27 @@
-# java-test-drives
+# jeorg-java-15-test-drives
 
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/java-test-drives)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/java-test-drives)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/java-test-drives.svg)](#)
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/jeorg-java-15-test-drives)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-15-test-drives)
+[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-java-15-test-drives.svg)](#)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/java-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/java-test-drives&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-java-test-drives-master)
-[![CircleCI](https://circleci.com/gh/jesperancinha/java-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/java-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/java-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/java-test-drives)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/java-test-drives?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/java-test-drives)
-[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/java-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/java-test-drives)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89cc4b270cda4a448ce4fa895b30ec55)](https://www.codacy.com/manual/jofisaes/jeorg-java-15-test-drives?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-java-15-test-drives&amp;utm_campaign=Badge_Grade)
+[![codebeat badge](https://codebeat.co/badges/70235530-f5e9-4254-a0d1-9dc7950c12cc)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-java-15-test-drives-master)
+[![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-java-15-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-java-15-test-drives)
+[![Build Status](https://travis-ci.org/jesperancinha/jeorg-java-15-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/jeorg-java-15-test-drives)
+[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-java-15-test-drives?branch=master)](https://bettercodehub.com/)
+[![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-java-15-test-drives)
+[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/jeorg-java-15-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/jeorg-java-15-test-drives)
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/java-test-drives.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/java-test-drives.svg)](#)
+[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/jeorg-java-15-test-drives.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/jeorg-java-15-test-drives.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/jeorg-java-15-test-drives.svg)](#)
 
 ## Technologies used
 
 ---
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png "Java")](https://www.oracle.com/nl/java/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sdk-man-50.png "SdkMAN!")](https://sdkman.io/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openjdk-50.png "OpenJDK")](https://openjdk.java.net/projects/jdk/15/)
 
 ---
 
@@ -45,23 +40,29 @@ It is the support project of the following articles on my blog:
 
 ## Contents
 
-- [jeorg-java-test-11](./jeorg-java-test-11) - Java 11 study materials
-- [jeorg-java-test-15](./jeorg-java-test-15) - Java 15 study materials and article contents
-- [jeorg-java-test-jee7](./jeorg-java-test-jee7) - Java EE 7 study materials
+-   [jeorg-java-test-hidden](./jeorg-java-test-hidden) - Hidden classes test
+-   [jeorg-java-test-hidden-gen](./jeorg-java-test-hidden-gen) - Hidden classes test
+-   [jeorg-java-test-instanceof](./jeorg-java-test-instanceof) - Instance Of Expressions
+-   [jeorg-java-test-sealed-classes](./jeorg-java-test-sealed-classes) - Non compilable sealed classes test
+-   [jeorg-java-test-text-blocks](./jeorg-java-test-text-blocks) - Text blocks
 
-## Consolerizer
+## Install JDK 15 [EAB](http://jdk.java.net/15/)
 
-Consolerizer was a module available in [jtd-the-factory](./jtd-the-factory) moddule folder.
+1. Go to: http://jdk.java.net/15/
+2. Download: [JDK 15](https://download.java.net/java/early_access/jdk15/23/GPL/openjdk-15-ea+23_osx-x64_bin.tar.gz)
 
-This module has been made into an official release now available in [Maven - org.jesperancinha.console](https://search.maven.org/search?q=g:org.jespverancinha.console).
+## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
 
-In the Official [GitHub repository](https://github.com/JEsperancinhaOrg/consolerizer-root), you can find more info on how to install it in your own project. Enjoy!
+```bash
+sdk install java 15.0.2.hs-adpt
+sdk use java 15.0.2.hs-adpt
+```
 
 ## Build
 
 Note that if you want to build this project from the root, you need to use one of the JDK 15 or upper versions.
 
-<i>See details below</i>
+<i>See [Hints&Tricks](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/Hints%26Tricks.md) document for more details</i>
 
 ## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
 
@@ -74,26 +75,15 @@ sdk use java 15.0.2.hs-adpt
 
 ## References
 
-### Online
-
-- [Design Patterns](http://www.tutorialspoint.com/design_pattern/bridge_pattern.htm)
-- [Hints & Tricks](./Hints&Tricks.md)
+-   [Исследуем sealed классы в Java 15](https://habr.com/ru/post/505696/)
+-   [JDK 15 Early-Access Builds](http://jdk.java.net/15/)
+-   [JDK 15 Early-Access Release Notes](http://jdk.java.net/15/release-notes)
+-   [Java 15 by Shibboleth](https://wiki.shibboleth.net/confluence/display/DEV/Java+15)
+-   [Java 15 Text Blocks](https://openjdk.java.net/jeps/378)
+-   [Java 15 – What we know by JaxEnter](https://jaxenter.com/java-15-news-170322.html)
 
 ### Books
 
-- Boyarsky, J. Selikoff, S. (2020). <i>OCP Oracle Certified Professional Java SE 11 Programmer II Study Guide</i>. (First Edition). Sybex
-- Boyarsky, J. Selikoff, S. (2019). <i>OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide</i>. (Second Edition). Sybex
-- Parlog, N. (23rd July 2019). <i>The Java Module System</i>. (First Edition). Manning Publications
-- Jecan, A. (2017). <i>Java 9 Modularity Revealed</i>. (First Edition). Apress
-- Mak, S. Bakker, P. (September 2017)<i> Java 9 Modularity - Patterns And Practices for Developing Maintainable Applications </i>. (First Edition). O'Reilly 
-- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 1). Addison Wesley
-- Jendrock, E. Cervera-Navarro, R. Evans, I. (2014). <i>The Java EE 7 Tutorial</i>. (Fifth Edition Volume 2). Addison Wesley
-- Ćmil, M. (29th December 2014). <i>Java EE 7 Development with WildFly</i>. (First Edition). Packt Publishing
-- Mihalcea, V. (October 2016). <i>High-Performance Java Persistence</i>. (First Edition). Vlad Mihalcea
-- Gonçalves, A. (June 2013). <i>Beginning Java EE 7</i> (First Edition). Apress
-- R. Allen, P. J. Bambara, J. (2014). <i>OCM Java EE 6 Enterprise Architect Exam Guide</i>. (First Edition). McGraw-Hill
-- Gupta, A. (August 2013). <i>Java EE 7 Essentials</i>. (First Edition). O'Reilly
-- Dr Coward, D. (August 2013). <i>Java EE 7 The Big Picture</i>. (First Edition). McGraw-Hill
 - Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
 ---
