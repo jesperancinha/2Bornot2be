@@ -7,7 +7,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8ade93e5d0f646508674dbc0045f7317)](https://www.codacy.com/gh/jesperancinha/jeorg-java-15-test-drives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-java-15-test-drives&amp;utm_campaign=Badge_Grade)
 [![codebeat badge](https://codebeat.co/badges/cb02d43f-0510-453b-b63e-2864e52542bd)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-java-15-test-drives-master)
 [![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-java-15-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-java-15-test-drives)
-[![Build Status](https://travis-ci.org/jesperancinha/jeorg-java-15-test-drives.svg?branch=master)](https://travis-ci.org/jesperancinha/jeorg-java-15-test-drives)
+[![Build Status](https://travis-ci.com/jesperancinha/jeorg-java-15-test-drives.svg?branch=master)](https://travis-ci.com/jesperancinha/jeorg-java-15-test-drives)
 [![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-java-15-test-drives?branch=master)](https://bettercodehub.com/)
 [![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-java-15-test-drives)
 [![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/jeorg-java-15-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/jeorg-java-15-test-drives)
@@ -48,8 +48,8 @@ It is the support project of the following articles on my blog:
 
 ## Install JDK 15 [EAB](http://jdk.java.net/15/)
 
-1. Go to: http://jdk.java.net/15/
-2. Download: [JDK 15](https://download.java.net/java/early_access/jdk15/23/GPL/openjdk-15-ea+23_osx-x64_bin.tar.gz)
+1.  Go to: http://jdk.java.net/15/
+2.  Download: [JDK 15](https://download.java.net/java/early_access/jdk15/23/GPL/openjdk-15-ea+23_osx-x64_bin.tar.gz)
 
 ## Install JDK 15 using [SDK-MAN](https://sdkman.io/)
 
@@ -84,7 +84,7 @@ sdk use java 15.0.2.hs-adpt
 
 ### Books
 
-- Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
+-   Smiley, J. (4th February 2021). <i>Learn to Program with Java JDK 15.0</i>. (First Edition). John Smiley Publishing
 
 ---
 
