@@ -7,7 +7,6 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8ade93e5d0f646508674dbc0045f7317)](https://www.codacy.com/gh/jesperancinha/jeorg-java-15-test-drives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/jeorg-java-15-test-drives&amp;utm_campaign=Badge_Grade)
 [![codebeat badge](https://codebeat.co/badges/cb02d43f-0510-453b-b63e-2864e52542bd)](https://codebeat.co/projects/github-com-jesperancinha-jeorg-java-15-test-drives-master)
 [![CircleCI](https://circleci.com/gh/jesperancinha/jeorg-java-15-test-drives.svg?style=svg)](https://circleci.com/gh/jesperancinha/jeorg-java-15-test-drives)
-[![Build Status](https://travis-ci.com/jesperancinha/jeorg-java-15-test-drives.svg?branch=master)](https://travis-ci.com/jesperancinha/jeorg-java-15-test-drives)
 [![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/jeorg-java-15-test-drives?branch=master)](https://bettercodehub.com/)
 [![Build status](https://ci.appveyor.com/api/projects/status/eka55ffpbjkxq55p?svg=true)](https://ci.appveyor.com/project/jesperancinha/jeorg-java-15-test-drives)
 [![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/jeorg-java-15-test-drives/badge.svg)](https://snyk.io/test/github/jesperancinha/jeorg-java-15-test-drives)
